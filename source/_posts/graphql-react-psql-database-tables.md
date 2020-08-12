@@ -1,8 +1,8 @@
 ---
-title: {{ title }}
-date: {{ date }}
+title: 'GraphQL & React: PSQL Database & Tables'
+date: 2020-08-11 16:44:04
 tags:
-categories: 
+categories:
 ---
 
 <!-- Step Content Start -->

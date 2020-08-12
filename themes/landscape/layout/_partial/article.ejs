@@ -42,3 +42,22 @@
   </div>
 </section>
 <% } %>
+
+<!-- HYVOR from here -->
+
+<% if (!index && post.comments){ %>
+  <div id="hyvor-talk-view"></div>
+  <script type="text/javascript">
+      var HYVOR_TALK_WEBSITE = 1583; // DO NOT CHANGE THIS
+      var HYVOR_TALK_CONFIG = {
+          url: '<%= page.permalink %>' || false,
+          id: '<%= page.path %>' || false,
+          // loadMode: "scroll"
+      }
+
+      console.log("object log here:", HYVOR_TALK_CONFIG);
+  </script>
+  <script type="text/javascript" src="//talk.hyvor.com/web-api/embed"></script>
+  <% } %>
+
+<!-- helpers below here -->

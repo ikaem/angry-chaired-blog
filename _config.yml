@@ -3,19 +3,20 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle: ''
-description: ''
-keywords:
-author: John Doe
+title: Angry Chaired Blog
+subtitle: 'Writing about my Web Development learning...'
+description: 'Inexperienced and curious forrays into the sprawling world of Web Development '
+keywords: ['blog', 'web', "development", "learning"]
+author: kaem
 language: en
 timezone: ''
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
-root: /
-permalink: :year/:month/:day/:title/
+url: https://ikaem.github.io/angry-chaired-blog
+root: /angry-chaired-blog
+# permalink: :year/:month/:day/:title/
+permalink: :title/
 permalink_defaults:
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
@@ -34,14 +35,14 @@ skip_render:
 # Writing
 new_post_name: :title.md # File name of new posts
 default_layout: post
-titlecase: false # Transform title into titlecase
+titlecase: true # Transform title into titlecase
 external_link:
   enable: true # Open external links in new tab
   field: site # Apply to the whole site
   exclude: ''
-filename_case: 0
+filename_case: 1
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true
 relative_link: false
 future: true
 highlight:
@@ -63,7 +64,7 @@ prismjs:
 # order_by: Posts order. (Order by date descending by default)
 index_generator:
   path: ''
-  per_page: 10
+  per_page: 5
   order_by: -date
 
 # Category & Tag
@@ -73,13 +74,12 @@ tag_map:
 
 # Metadata elements
 ## https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta
-meta_generator: true
 
 # Date / Time format
 ## Hexo uses Moment.js to parse and display date
 ## You can customize the date format as defined in
 ## http://momentjs.com/docs/#/displaying/format/
-date_format: YYYY-MM-DD
+date_format: DD/MM/YYYY
 time_format: HH:mm:ss
 ## updated_option supports 'mtime', 'date', 'empty'
 updated_option: 'mtime'
@@ -102,5 +102,30 @@ theme: landscape
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
+# deploy:
+#   type: ''
+
 deploy:
-  type: ''
+  type: git
+  repo: https://github.com/ikaem/angry-chaired-blog.git
+  # repo: https://github.com/<username>/<project>
+  # example, https://github.com/hexojs/hexojs.github.io
+  branch: gh-pages
+
+# hexo-generator-feed
+feed:
+  type: ["atom"]
+  # type: ["rss2"]
+  # type: ["atom", "rss2"]
+  path: atom.xml
+  # path: rss2.xml
+  # path: ["atom.xml", "rss2.xml"]
+  limit: 20
+  hub:
+  content:
+  content_limit: 140
+  content_limit_delim: ' '
+  order_by: -date
+  icon: icon.png
+  autodiscovery: true
+  template:
