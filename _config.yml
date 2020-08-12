@@ -14,6 +14,7 @@ timezone: ''
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: https://ikaem.github.io/angry-chaired-blog
+# url: http://0.0.0.0:4000/angry-chaired-blog
 root: /angry-chaired-blog
 # permalink: :year/:month/:day/:title/
 permalink: :title/
@@ -21,6 +22,14 @@ permalink_defaults:
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
   trailing_html: true # Set to false to remove trailing '.html' from permalinks
+
+# generator-json-content
+# jsonContent: {
+#     posts: {
+#         featured_image: true,
+#         thumbnail: true # if you want thumbnail to be added as well
+#     }
+# }
 
 # Directory
 source_dir: source
@@ -71,6 +80,14 @@ index_generator:
 default_category: uncategorized
 category_map:
 tag_map:
+
+
+# Archive generator
+archive_generator:
+    per_page: 0
+    yearly: false
+    monthly: false
+    daily: false
 
 # Metadata elements
 ## https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta

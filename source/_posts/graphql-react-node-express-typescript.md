@@ -12,6 +12,11 @@ categories:
 - [typescript]
 
 comments: true
+photos: 
+# - code-styled-comp.jpg
+# - atletico.jpg
+- morata.jpg
+
 #permalink: my-new-post/index.html
 ---
 #### Part 1 of 10 in [GraphQL & React](/angry-chaired-blog/categories/grapqhl-react/)
@@ -19,7 +24,7 @@ comments: true
 <!-- Step Content Start -->
 
 <!-- tag plugin for relative path -->
-{% asset_img featured-image code-styled-comp.jpg '"alt text - this will be shown in index excerpt" "title text the image path here is relative to the post folder"' %}
+<!-- {% asset_img featured-image code-styled-comp.jpg '"alt text - this will be shown in index excerpt" "title text the image path here is relative to the post folder"' %} -->
 
 I thought TS setup will be more complicated on the backend side, but it was actually quite simple.
 I used the brief and convenient guide by [Traversy Media, titled TypeScript Setup With Node & Express, and got the thing up in minutes.](https://www.youtube.com/watch?v=zRo2tvQpus8)
