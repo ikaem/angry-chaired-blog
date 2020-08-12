@@ -38,13 +38,13 @@
     <link href="https://ikaem.github.io/angry-chaired-blog/graphql-react-node-express-typescript/"/>
     <id>https://ikaem.github.io/angry-chaired-blog/graphql-react-node-express-typescript/</id>
     <published>2020-08-11T13:36:27.000Z</published>
-    <updated>2020-08-12T10:19:19.130Z</updated>
+    <updated>2020-08-12T14:23:43.517Z</updated>
     
     
     <summary type="html">&lt;h4 id=&quot;Part-1-of-10-in-GraphQL-amp-React&quot;&gt;&lt;a href=&quot;#Part-1-of-10-in-GraphQL-amp-React&quot; class=&quot;headerlink&quot; title=&quot;Part 1 of 10 in GraphQL &amp;amp; React&quot;&gt;&lt;/a&gt;Part 1 of 10 in &lt;a href=&quot;/angry-chaired-blog/categories/grapqhl-react/&quot;&gt;GraphQL &amp;amp; React&lt;/a&gt;&lt;/h4&gt;&lt;!-- Step Content Start --&gt;
 
 &lt;!-- tag plugin for relative path --&gt;
-&lt;img src=&quot;/angry-chaired-blog/graphql-react-node-express-typescript/code-styled-comp.jpg&quot; class=&quot;featured-image&quot; title=&quot;alt text - this will be shown in index excerpt&quot; alt=&quot;title text the image path here is relative to the post folder&quot;&gt;
+&lt;!-- &lt;img src=&quot;/angry-chaired-blog/graphql-react-node-express-typescript/code-styled-comp.jpg&quot; class=&quot;featured-image&quot; title=&quot;alt text - this will be shown in index excerpt&quot; alt=&quot;title text the image path here is relative to the post folder&quot;&gt; --&gt;
 
 &lt;p&gt;I thought TS setup will be more complicated on the backend side, but it was actually quite simple.&lt;br&gt;I used the brief and convenient guide by &lt;a href=&quot;https://www.youtube.com/watch?v=zRo2tvQpus8&quot;&gt;Traversy Media, titled TypeScript Setup With Node &amp;amp; Express, and got the thing up in minutes.&lt;/a&gt;&lt;br&gt;It seems to me that the key part here is the ts-node package. I am not sure what exactly does, but it did get the TS working.&lt;/p&gt;</summary>
     
