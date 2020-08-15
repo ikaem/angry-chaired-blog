@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Angry Chaired Blog</title>
   <icon>https://ikaem.github.io/angry-chaired-blog/icon.png</icon>
-  <subtitle>Writing about my Web Development learning...</subtitle>
+  <subtitle>Writing about my web development learning...</subtitle>
   <link href="https://ikaem.github.io/angry-chaired-blog/atom.xml" rel="self"/>
   
   <link href="https://ikaem.github.io/angry-chaired-blog/"/>
-  <updated>2020-08-11T19:20:45.775Z</updated>
+  <updated>2020-08-14T14:17:49.610Z</updated>
   <id>https://ikaem.github.io/angry-chaired-blog/</id>
   
   <author>
@@ -17,16 +17,12 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>GraphQL &amp; React: PSQL Database &amp; Tables</title>
-    <link href="https://ikaem.github.io/angry-chaired-blog/graphql-react-psql-database-tables/"/>
-    <id>https://ikaem.github.io/angry-chaired-blog/graphql-react-psql-database-tables/</id>
-    <published>2020-08-11T14:44:04.000Z</published>
-    <updated>2020-08-11T19:20:45.775Z</updated>
+    <title>Just a test post</title>
+    <link href="https://ikaem.github.io/angry-chaired-blog/2020/just-a-test-post/"/>
+    <id>https://ikaem.github.io/angry-chaired-blog/2020/just-a-test-post/</id>
+    <published>2020-08-14T14:17:49.000Z</published>
+    <updated>2020-08-14T14:17:49.610Z</updated>
     
-    
-    <summary type="html">&lt;!-- Step Content Start --&gt;
-
-&lt;h4 id=&quot;Part-0-of-0-in-Project-Name&quot;&gt;&lt;a href=&quot;#Part-0-of-0-in-Project-Name&quot; class=&quot;headerlink&quot; title=&quot;Part [0] of [0] in [Project Name]&quot;&gt;&lt;/a&gt;Part [0] of [0] in [Project Name]&lt;/h4&gt;&lt;p&gt;[Excerpt / Intro Here]&lt;/p&gt;</summary>
     
     
     
@@ -34,86 +30,31 @@
   </entry>
   
   <entry>
-    <title>GraphQL &amp; React: Node, Express &amp; Typescript</title>
-    <link href="https://ikaem.github.io/angry-chaired-blog/graphql-react-node-express-typescript/"/>
-    <id>https://ikaem.github.io/angry-chaired-blog/graphql-react-node-express-typescript/</id>
-    <published>2020-08-11T13:36:27.000Z</published>
-    <updated>2020-08-12T14:23:43.517Z</updated>
+    <title>Welcome to Angry Chaired Blog</title>
+    <link href="https://ikaem.github.io/angry-chaired-blog/2020/welcome-to-angry-chaired-blog/"/>
+    <id>https://ikaem.github.io/angry-chaired-blog/2020/welcome-to-angry-chaired-blog/</id>
+    <published>2020-08-13T20:16:35.000Z</published>
+    <updated>2020-08-15T19:30:47.007Z</updated>
     
     
-    <summary type="html">&lt;h4 id=&quot;Part-1-of-10-in-GraphQL-amp-React&quot;&gt;&lt;a href=&quot;#Part-1-of-10-in-GraphQL-amp-React&quot; class=&quot;headerlink&quot; title=&quot;Part 1 of 10 in GraphQL &amp;amp; React&quot;&gt;&lt;/a&gt;Part 1 of 10 in &lt;a href=&quot;/angry-chaired-blog/categories/grapqhl-react/&quot;&gt;GraphQL &amp;amp; React&lt;/a&gt;&lt;/h4&gt;&lt;!-- Step Content Start --&gt;
-
-&lt;!-- tag plugin for relative path --&gt;
-&lt;!-- &lt;img src=&quot;/angry-chaired-blog/graphql-react-node-express-typescript/code-styled-comp.jpg&quot; class=&quot;featured-image&quot; title=&quot;alt text - this will be shown in index excerpt&quot; alt=&quot;title text the image path here is relative to the post folder&quot;&gt; --&gt;
-
-&lt;p&gt;I thought TS setup will be more complicated on the backend side, but it was actually quite simple.&lt;br&gt;I used the brief and convenient guide by &lt;a href=&quot;https://www.youtube.com/watch?v=zRo2tvQpus8&quot;&gt;Traversy Media, titled TypeScript Setup With Node &amp;amp; Express, and got the thing up in minutes.&lt;/a&gt;&lt;br&gt;It seems to me that the key part here is the ts-node package. I am not sure what exactly does, but it did get the TS working.&lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;Angry Chaired Blog is a chronicle of my learning of web development. It is a collection of posts, usually belonging to a bigger project. While each project does have an idea and a set of overarching goals, posts are usually concerned with solving a specific problem.&lt;/p&gt;</summary>
     
     
     
-    <category term="grapqhl &amp; react" scheme="https://ikaem.github.io/angry-chaired-blog/categories/grapqhl-react/"/>
+    <category term="angry chaired" scheme="https://ikaem.github.io/angry-chaired-blog/categories/angry-chaired/"/>
     
-    <category term="graphql" scheme="https://ikaem.github.io/angry-chaired-blog/categories/graphql/"/>
+    <category term="random rant" scheme="https://ikaem.github.io/angry-chaired-blog/categories/angry-chaired/random-rant/"/>
     
-    <category term="react" scheme="https://ikaem.github.io/angry-chaired-blog/categories/react/"/>
-    
-    <category term="node" scheme="https://ikaem.github.io/angry-chaired-blog/categories/node/"/>
-    
-    <category term="express" scheme="https://ikaem.github.io/angry-chaired-blog/categories/express/"/>
-    
-    <category term="typescript" scheme="https://ikaem.github.io/angry-chaired-blog/categories/typescript/"/>
+    <category term="feature introduction" scheme="https://ikaem.github.io/angry-chaired-blog/categories/angry-chaired/feature-introduction/"/>
     
     
-    <category term="react" scheme="https://ikaem.github.io/angry-chaired-blog/tags/react/"/>
+    <category term="angry chair" scheme="https://ikaem.github.io/angry-chaired-blog/tags/angry-chair/"/>
     
-    <category term="graphql" scheme="https://ikaem.github.io/angry-chaired-blog/tags/graphql/"/>
+    <category term="introduction" scheme="https://ikaem.github.io/angry-chaired-blog/tags/introduction/"/>
     
-    <category term="node" scheme="https://ikaem.github.io/angry-chaired-blog/tags/node/"/>
+    <category term="about" scheme="https://ikaem.github.io/angry-chaired-blog/tags/about/"/>
     
-    <category term="express" scheme="https://ikaem.github.io/angry-chaired-blog/tags/express/"/>
-    
-    <category term="typescript" scheme="https://ikaem.github.io/angry-chaired-blog/tags/typescript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Testing</title>
-    <link href="https://ikaem.github.io/angry-chaired-blog/testing/"/>
-    <id>https://ikaem.github.io/angry-chaired-blog/testing/</id>
-    <published>2020-08-11T13:36:27.000Z</published>
-    <updated>2020-08-12T10:20:54.805Z</updated>
-    
-    
-    <summary type="html">&lt;h4 id=&quot;Part-1-of-10-in-GraphQL-amp-React&quot;&gt;&lt;a href=&quot;#Part-1-of-10-in-GraphQL-amp-React&quot; class=&quot;headerlink&quot; title=&quot;Part 1 of 10 in GraphQL &amp;amp; React&quot;&gt;&lt;/a&gt;Part 1 of 10 in &lt;a href=&quot;/angry-chaired-blog/categories/grapqhl-react/&quot;&gt;GraphQL &amp;amp; React&lt;/a&gt;&lt;/h4&gt;&lt;!-- Step Content Start --&gt;
-
-&lt;!-- tag plugin for relative path --&gt;
-&lt;img src=&quot;/angry-chaired-blog/testing/code-styled-comp.jpg&quot; class=&quot;featured-image&quot; title=&quot;alt text - this will be shown in index excerpt&quot; alt=&quot;title text the image path here is relative to the post folder&quot;&gt;
-
-&lt;p&gt;I thought TS setup will be more complicated on the backend side, but it was actually quite simple.&lt;br&gt;I used the brief and convenient guide by &lt;a href=&quot;https://www.youtube.com/watch?v=zRo2tvQpus8&quot;&gt;Traversy Media, titled TypeScript Setup With Node &amp;amp; Express, and got the thing up in minutes.&lt;/a&gt;&lt;br&gt;It seems to me that the key part here is the ts-node package. I am not sure what exactly does, but it did get the TS working.&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="grapqhl &amp; react" scheme="https://ikaem.github.io/angry-chaired-blog/categories/grapqhl-react/"/>
-    
-    <category term="graphql" scheme="https://ikaem.github.io/angry-chaired-blog/categories/graphql/"/>
-    
-    <category term="react" scheme="https://ikaem.github.io/angry-chaired-blog/categories/react/"/>
-    
-    <category term="node" scheme="https://ikaem.github.io/angry-chaired-blog/categories/node/"/>
-    
-    <category term="express" scheme="https://ikaem.github.io/angry-chaired-blog/categories/express/"/>
-    
-    <category term="typescript" scheme="https://ikaem.github.io/angry-chaired-blog/categories/typescript/"/>
-    
-    
-    <category term="react" scheme="https://ikaem.github.io/angry-chaired-blog/tags/react/"/>
-    
-    <category term="graphql" scheme="https://ikaem.github.io/angry-chaired-blog/tags/graphql/"/>
-    
-    <category term="node" scheme="https://ikaem.github.io/angry-chaired-blog/tags/node/"/>
-    
-    <category term="express" scheme="https://ikaem.github.io/angry-chaired-blog/tags/express/"/>
-    
-    <category term="typescript" scheme="https://ikaem.github.io/angry-chaired-blog/tags/typescript/"/>
+    <category term="blog" scheme="https://ikaem.github.io/angry-chaired-blog/tags/blog/"/>
     
   </entry>
   
