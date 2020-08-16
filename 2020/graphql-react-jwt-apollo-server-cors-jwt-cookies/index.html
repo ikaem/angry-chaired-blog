@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="Inexperienced and curious pokes into the sprawling world of web development "/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="kaem"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="GraphQL &amp; React &amp; JWT: Apollo Server, Cors, JWT &amp; Cookies"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Inexperienced and curious pokes into the sprawling world of web development "/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Angry Chaired Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://ikaem.github.io/angry-chaired-blog/angry-chaired-blog/images/header-image.jpg"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://ikaem.github.io/angry-chaired-blog/angry-chaired-blog/images/header-image.jpg"/>
+    
+
+    <!-- Title -->
+    
+    <title>GraphQL &amp; React &amp; JWT: Apollo Server, Cors, JWT &amp; Cookies - Angry Chaired Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/angry-chaired-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+    <link rel="icon" href="/angry-chaired-blog/images/favicon.ico"/>
+    
+
+<meta name="generator" content="Hexo 5.0.2"><link rel="alternate" href="/angry-chaired-blog/atom.xml" title="Angry Chaired Blog" type="application/atom+xml">
+</head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/angry-chaired-blog/">Angry Chaired Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/about">
+                            
+                                About
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a target="_blank" rel="noopener" href="https://angrychaired.surge.sh">
+                            
+                                <i class="fa fa-user fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a target="_blank" rel="noopener" href="https://github.com/ikaem/">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a href="/angry-chaired-blog/atom.xml">
+                            
+                                <i class="fa fa-rss fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('kuan-fang-WaQ5xQq2E6g-unsplash.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>GraphQL & React & JWT: Apollo Server, Cors, JWT & Cookies</h1>
+
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            16/08/2020
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/angry-chaired-blog/categories/graphql-react-jwt/">graphql & react & jwt</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <!-- Step Content Start -->
+
+<h4 id="Part-4-of-12-in-GraphQL-amp-React-amp-JWT"><a href="#Part-4-of-12-in-GraphQL-amp-React-amp-JWT" class="headerlink" title="Part 4 of 12 in GraphQL &amp; React &amp; JWT"></a>Part 4 of 12 in GraphQL &amp; React &amp; JWT</h4><p>Now when we have made sure that our requests are inspected for access token for validity on their arrival to the backend, we want to make sure that our resolvers can actually work with both requests and responses. Mainly, we want to be able to have them deal with cookies and set tokens on responses.<br>In addition to this, we want to make sure our server is actually allowed to read and set cookies on clients that access backend resources.</p>
+<a id="more"></a>
+
+<h4 id="See-Project-Information"><a href="#See-Project-Information" class="headerlink" title="See Project Information"></a>See <a href="#Project-Information">Project Information</a></h4><h2 id="Step-4-Set-up-Cors-and-Apollo-Express-be-able-to-deal-with-tokens-and-cookies"><a href="#Step-4-Set-up-Cors-and-Apollo-Express-be-able-to-deal-with-tokens-and-cookies" class="headerlink" title="Step 4. Set up Cors and Apollo Express be able to deal with tokens and cookies"></a>Step 4. Set up Cors and Apollo Express be able to deal with tokens and cookies</h2><p>Here is what we will do: </p>
+<ol>
+<li>We will install a package that will help us work with cookies</li>
+<li>We will tweak our CORS package to specify how our frontend and backend should communicate</li>
+<li>We will also tweak our Apollo Server Express instance to setup both its context and CORS further</li>
+</ol>
+<h3 id="Install-cookie-parser-to-work-with-cookies"><a href="#Install-cookie-parser-to-work-with-cookies" class="headerlink" title="Install cookie-parser to work with cookies"></a>Install cookie-parser to work with cookies</h3><p>Cookie Parser is an npm package that intercepts requests coming to the backend, and populates a <strong>cookies</strong> object on the <strong>request</strong> object with cookies that exist on the request. </p>
+<p>It is a middleware, similar to the one we used to inspect headers for access token. </p>
+<p>We install it with: </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm intall cookie-parser</span><br></pre></td></tr></table></figure>
+
+<p>Again, we also install TS types for this pacakge:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i -D @types/cookie-parser</span><br></pre></td></tr></table></figure>
+
+<p>Once we have it installed, we just have to import the package into our <strong>server.ts</strong> file, and use it as a middleware:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// server.ts</span></span><br><span class="line"><span class="keyword">import</span> cookieParser <span class="keyword">from</span> <span class="string">&quot;cookie-parser&quot;</span>;</span><br><span class="line">...</span><br><span class="line">app.use(cookieParser());</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<h3 id="Tweak-CORS-in-our-app"><a href="#Tweak-CORS-in-our-app" class="headerlink" title="Tweak CORS in our app"></a>Tweak CORS in our app</h3><p>I am not really familiar with CORS. I know it stands for <strong>Cross Origin Resource Sharing</strong>, and that it has to do with allowing an application running on one origin to have access to resources on a different origin.<br>Origin, too, is a vague concept to me, but from what I understand, is a combination of web protocol (http, for instance), domain (google.com) and port (:3000). </p>
+<p>In our case, with CORS we define which origins (there where our app runs) can access our server, running on some origin.<br>Currently, our frontend runs on <strong><a target="_blank" rel="noopener" href="http://localhost:3000/">http://localhost:3000</a></strong>, while the backend runs on <strong><a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000</a></strong>.<br>Since ports of our two ends are different, they do not have the same origin.<br>So much for that.</p>
+<p>We have already used the <strong>cors</strong> package in our last series.<br>Now, we want to enable our backend to read cookies, and cookies coming from our front end.<br>To do this, we will pass an object to the <strong>cors</strong> middleware, and have that object hold 2 properties:</p>
+<ul>
+<li>origin</li>
+<li>credentials</li>
+</ul>
+<p><strong>Origin</strong> will specify which origins we want want to access our backend. In our case, we will put the origin of our frontend</p>
+<p><strong>Credentials</strong> controls use of HTTP cookies, which we need for our refresh tokens. We will set this to <strong>true</strong></p>
+<p>Here is the implementation of the middleware:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// server.ts</span></span><br><span class="line"><span class="keyword">import</span> cors <span class="keyword">from</span> <span class="string">&quot;cors&quot;</span>;</span><br><span class="line">...</span><br><span class="line">app.use(</span><br><span class="line">    cors(&#123;</span><br><span class="line">        origin: [<span class="string">&quot;http://localhost:3000&quot;</span>],</span><br><span class="line">        credentials: <span class="literal">true</span>,</span><br><span class="line">    &#125;)</span><br><span class="line">);</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<h3 id="Tweak-Apollo-Server-Express-instance"><a href="#Tweak-Apollo-Server-Express-instance" class="headerlink" title="Tweak Apollo Server Express instance"></a>Tweak Apollo Server Express instance</h3><p>Our resolvers will eventually have to read HTTP requests to work with that <strong>user</strong> property that houses access token payload. They will also need to set a cookie to hold our refresh tokens, and for this they will need access to the <strong>response</strong> object. </p>
+<p>First, however, lets deal with an odd issue that I found out about by chance. It turns our that the Apollo Express Server has its own cors implementation. With both our own <strong>cors</strong>, and the Apollo one enabled, we need to disable one to prevent any conflicts.<br>Of course, we will disable the Apollo one.</p>
+<p>It is pretty simple - we do it by including a <strong>cors</strong> property in the object passed to the <strong>applyMiddleware</strong> method on our instance of the Apollo Express Server. Long sentence. We set the property value to <strong>false</strong>.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// server.ts</span></span><br><span class="line">server.applyMiddleware(&#123; app, <span class="attr">path</span>: <span class="string">&quot;/grapqhl&quot;</span>, <span class="attr">cors</span>: <span class="literal">false</span> &#125;);</span><br></pre></td></tr></table></figure>
+
+<p>Now, regarding those HTTP request and response objects which our resolvers need. Obviously, we will provide them via the <strong>context</strong> object which we set up in our instance of Apollo Express Server.<br>The object passed to the context method is automatically passed <strong>request</strong> and <strong>response</strong> arguments, and we can return them from the method to make them available for resolvers.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// server.ts</span></span><br><span class="line">...</span><br><span class="line"><span class="keyword">const</span> server = <span class="keyword">new</span> ApolloServer(&#123;</span><br><span class="line">    typeDefs,</span><br><span class="line">    resolvers,</span><br><span class="line">    context: <span class="function">(<span class="params">&#123; req, res &#125;: &#123; req: express.Request; res: express.Response &#125;</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> &#123;</span><br><span class="line">            pgPool,</span><br><span class="line">            req,</span><br><span class="line">            res,</span><br><span class="line">        &#125;;</span><br><span class="line">    &#125;,</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>This should be it. Our resolvers now have access to cookies and headers, and we can finally define resolvers to be able to authenticate users.</p>
+<!-- End Step Content -->
+
+<!-- Project Information -->
+
+<h2 id="Project-Information"><a href="#Project-Information" class="headerlink" title="Project Information"></a>Project Information</h2><h3 id="Available-at"><a href="#Available-at" class="headerlink" title="Available at"></a>Available at</h3><p><a target="_blank" rel="noopener" href="https://github.com/ikaem/graphql-jwt-react.git">Github</a> </p>
+<h3 id="Goals"><a href="#Goals" class="headerlink" title="Goals"></a>Goals</h3><ol>
+<li>Create an app that uses GraphQL and JWT to log in and log out users</li>
+<li>Use PSQL for database</li>
+<li>Use Typescript on both ends</li>
+<li>Use Apollo Client Cache features to store JWT and user info on front end</li>
+<li>Implement protected routes, so that only logged users can access certain pages</li>
+</ol>
+<h3 id="Steps"><a href="#Steps" class="headerlink" title="Steps"></a>Steps</h3><ol>
+<li>Create types and queries</li>
+<li>Create functions to generate JSON Web Tokens</li>
+<li>Set up middleware to check if tokens are valid</li>
+<li><strong>Set up Cors and Apollo Express be able to deal with tokens and cookies</strong></li>
+<li>Create resolvers</li>
+<li>Set up Apollo Client so we can work with cookies and headers</li>
+<li>Set up Apollo Client cache</li>
+<li>Create login functionality</li>
+<li>Create logout functionality</li>
+<li>Create functionality to automatically log in user if they return to our app</li>
+<li>Enable silent refresh of access token when it reaches its expiry period</li>
+<li>Create register functionality</li>
+</ol>
+<h3 id="Tech-and-Tools"><a href="#Tech-and-Tools" class="headerlink" title="Tech and Tools"></a>Tech and Tools</h3><ol>
+<li>React</li>
+<li>Node</li>
+<li>PSQL</li>
+<li>GraphQL</li>
+<li>Apollo Server Express</li>
+<li>Apollo Client</li>
+<li>Bcrypt</li>
+<li>TypeScript</li>
+<li>Express</li>
+<li>JWT</li>
+</ol>
+<h3 id="Experience-with-Tech-amp-Tools"><a href="#Experience-with-Tech-amp-Tools" class="headerlink" title="Experience with Tech &amp; Tools"></a>Experience with Tech &amp; Tools</h3><p>This project is a continuation of the <a href="categories/graphql-react-psql/">Graphql &amp; React &amp; Psql series</a>. There, I worked with TS, PSQL and GQL, so I’m ok with that, I guess.<br>I have done some JWT things before, and here I wanted to try it with GQL.</p>
+<h2 id="DISCLAIMER"><a href="#DISCLAIMER" class="headerlink" title="DISCLAIMER"></a>DISCLAIMER</h2><p>Don’t take any of this seriously and as a matter-of-fact. These are my notes. It might look like I am trying to teach something to someone. I am not.</p>
+
+
+                
+
+
+                <!-- Cover image credit -->
+                
+                    <p class="image-credit-link">
+                        Cover image by <strong>
+                            <a target="_blank" rel="noopener" href="https://unsplash.com/@fangkuan?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
+                                Kuan Fang
+                            </a>
+                        </strong>
+                    </p>
+
+                
+
+  
+
+            </div>
+            
+            <!-- Custom placed tags -->
+            <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                
+                    
+
+
+<a href="/angry-chaired-blog/tags/cookies/">#cookies</a> <a href="/angry-chaired-blog/tags/jwt/">#jwt</a> <a href="/angry-chaired-blog/tags/cors/">#cors</a> <a href="/angry-chaired-blog/tags/apollo/">#apollo</a> <a href="/angry-chaired-blog/tags/server/">#server</a> <a href="/angry-chaired-blog/tags/express/">#express</a>
+
+
+                
+            </div>
+            <!--  -->
+
+
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+
+            <!-- Hyvor comments -->
+
+            <!-- End of Hyvor comments -->
+        </div>
+    </div>
+</article>
+
+
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2020 kaem<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

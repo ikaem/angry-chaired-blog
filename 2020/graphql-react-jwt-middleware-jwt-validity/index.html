@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="Inexperienced and curious pokes into the sprawling world of web development "/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="kaem"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="GraphQL &amp; React &amp; JWT: Middleware &amp;&amp; JWT Validity"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Inexperienced and curious pokes into the sprawling world of web development "/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Angry Chaired Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://ikaem.github.io/angry-chaired-blog/angry-chaired-blog/images/header-image.jpg"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://ikaem.github.io/angry-chaired-blog/angry-chaired-blog/images/header-image.jpg"/>
+    
+
+    <!-- Title -->
+    
+    <title>GraphQL &amp; React &amp; JWT: Middleware &amp;&amp; JWT Validity - Angry Chaired Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/angry-chaired-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+    <link rel="icon" href="/angry-chaired-blog/images/favicon.ico"/>
+    
+
+<meta name="generator" content="Hexo 5.0.2"><link rel="alternate" href="/angry-chaired-blog/atom.xml" title="Angry Chaired Blog" type="application/atom+xml">
+</head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/angry-chaired-blog/">Angry Chaired Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/about">
+                            
+                                About
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a target="_blank" rel="noopener" href="https://angrychaired.surge.sh">
+                            
+                                <i class="fa fa-user fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a target="_blank" rel="noopener" href="https://github.com/ikaem/">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a href="/angry-chaired-blog/atom.xml">
+                            
+                                <i class="fa fa-rss fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('arseny-togulev-GKLQ8PJuCzI-unsplash.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>GraphQL & React & JWT: Middleware && JWT Validity</h1>
+
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            16/08/2020
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/angry-chaired-blog/categories/graphql-react-jwt/">graphql & react & jwt</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <!-- Step Content Start -->
+
+<h4 id="Part-3-of-12-in-GraphQL-amp-React-amp-JWT"><a href="#Part-3-of-12-in-GraphQL-amp-React-amp-JWT" class="headerlink" title="Part 3 of 12 in GraphQL &amp; React &amp; JWT"></a>Part 3 of 12 in GraphQL &amp; React &amp; JWT</h4><p>When a user sends a request to our backend, we want to check if their access token is valid.<br>We will set up requests to have a place for access token in their headers. This way access token will be sent to the backend with every request.<br>The only thing we need to do on backend is to inspect the token - does it exist at all, and if yes, is it valid. </p>
+<a id="more"></a>
+
+<h4 id="See-Project-Information"><a href="#See-Project-Information" class="headerlink" title="See Project Information"></a>See <a href="#Project-Information">Project Information</a></h4><h2 id="Step-3-Setu-up-middleware-to-check-if-tokens-are-valid"><a href="#Step-3-Setu-up-middleware-to-check-if-tokens-are-valid" class="headerlink" title="Step 3. Setu up middleware to check if tokens are valid"></a>Step 3. Setu up middleware to check if tokens are valid</h2><p>We could do this in our resolvers, by accessing the <strong>headers</strong> property on our request, searching for a specific header that holds our token, and extracting and verifying it. </p>
+<p>We can also use a middleware in our server.ts file. Middlewares intercept requests made to the server, do something, and then pass requests on, to wherever they need to go. </p>
+<p>We will two middlewares in our case:</p>
+<ol>
+<li>A middleware to check if access token is valid</li>
+<li>A middleware to check if the middleware above threw a specific error, and handle the error</li>
+</ol>
+<p>The first middleware, a package called <strong>express-jwt</strong>, creates a <strong>user</strong> property on our request, and stores token payload inside it. This only happens if the access token is verified. If the verification fails, the middleware throws an error, and our app breaks.<br>I didn’t want this, so we will use the second middleware to deal with this.</p>
+<p>We will also need to adjust a TS type (interface, actually) for the Express requests, so we get a TS support for that <strong>user</strong> property created on our requests.</p>
+<p>So here is what we do:</p>
+<ol>
+<li>Implement <strong>express-jwt</strong> middleware</li>
+<li>Implement middleware to handle a specific token-related request error</li>
+<li>Adjust Express request type to get better Typescript support</li>
+</ol>
+<h3 id="Implement-express-jwt-middleware"><a href="#Implement-express-jwt-middleware" class="headerlink" title="Implement express-jwt middleware"></a>Implement <strong>express-jwt</strong> middleware</h3><p>First, we need to install <strong>express-jwt</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install express-jwt</span><br></pre></td></tr></table></figure>
+
+<p>Since we are using TypeScript, and epxress-jwt doesn’t come with included types, we need to install those as well.<br>We install them as a dev dependency</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i -D @types/express-jwt</span><br></pre></td></tr></table></figure>
+
+<p>Next, we need to actually include the package in our app.</p>
+<p>We will import it into our <strong>server.ts</strong>:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// server.ts</span></span><br><span class="line"><span class="keyword">import</span> expressJwt <span class="keyword">from</span> <span class="string">&quot;express-jwt&quot;</span>;</span><br></pre></td></tr></table></figure>
+
+<p>To use the package, we have have to pass the <strong>expressJwt</strong> to our express instance, <strong>app</strong></p>
+<p>The <strong>expressJwt</strong> accepts an argument itself - an object which holds multiple properties. We will have it hold 3:</p>
+<ol>
+<li><strong>secret</strong>, a string holding the secret key that we used to actually generate an access token</li>
+<li><strong>algorithms</strong>, an array specifying algorithmas we used to sign the token. In our case we have a default one - “HS256”</li>
+<li><strong>credentialsIsRequired</strong>, a boolean to specify whether the middleware will throw an error in case there is no token in the header. We will use <strong>false</strong> to let the middleware know that no token is fine.</li>
+</ol>
+<p>Here is the code</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// server.ts</span></span><br><span class="line">...</span><br><span class="line">app.use(</span><br><span class="line">    expressJwt(&#123;</span><br><span class="line">        secret: process.env.JWT_ACCESS_TOKEN_SECRET!,</span><br><span class="line">        algorithms: [<span class="string">&quot;HS256&quot;</span>],</span><br><span class="line">        credentialsRequired: <span class="literal">false</span>,</span><br><span class="line">    &#125;)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<p>With this setup, our requests should first be intercepted by the middleware to check for a valid access token. If the token is valid, the middleware will create a <strong>user</strong> property on the request, and we will have our user id in this object.<br>If there is no access token in the headers (the value of “” - empty string), this is fine too.</p>
+<p>And, if the access token is not valid, such as being expired, or maybe incomplete, or invalid in any other way, the middleware will throw an error, halting our application. </p>
+<h3 id="Implement-middleware-to-handle-a-specific-token-related-request-error"><a href="#Implement-middleware-to-handle-a-specific-token-related-request-error" class="headerlink" title="Implement middleware to handle a specific token-related request error"></a>Implement middleware to handle a specific token-related request error</h3><p>Now, I don’t want the middleware to halt my application just because the access token was invalid. Invalid tokens happen - they can expire, and why should the whole app suffer for it?</p>
+<p>To avoid breaking the app, we will introduce another middleware - an error handling middleware.<br>Same as with the <strong>express-jwt</strong>, we will pass it as an argument to the express instance, <strong>app</strong>. This way, if any of the middlewares throw an error, this error will be automatically passed to our error handling middleware, in which we decide what to do about it.</p>
+<p>In this case, we will check if the error is an <strong>UnauthorizedError</strong> - a type of error thrown by the <strong>express-jwt</strong> in case a token is invalid.<br>If the thrown error is a such error indeed, we will create a <strong>user</strong> property on the request, give it a value of <strong>null</strong>, and move on.<br>With this approach, we will get a <strong>user</strong> property on each request, no matter what. Then, we can simply check that propery in our resolvers, and act accordingly.</p>
+<p>To move on with the code execution, we call the <strong>next()</strong> function, which is passed to middlewares as a way to pass requests on to wherewer they need to go.</p>
+<p>Error handling middleware accepts four arguments. The first one has to be an <strong>error</strong> argument, of type <strong>Error</strong>, to indicate this is indeed an error handling middleware.<br>Others are <strong>request</strong>, <strong>response</strong>, and the already-mentioned <strong>next</strong> arguments, each of their own matching types.</p>
+<p>Here is the code:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// server.ts</span></span><br><span class="line">app.use(</span><br><span class="line">(</span><br><span class="line">    err: <span class="built_in">Error</span>,</span><br><span class="line">    req: express.Request,</span><br><span class="line">    res: express.Response,</span><br><span class="line">    next: express.NextFunction</span><br><span class="line">) =&gt; &#123;</span><br><span class="line">    <span class="keyword">if</span> (err.name === <span class="string">&quot;UnauthorizedError&quot;</span>) &#123;</span><br><span class="line">        req.user = <span class="literal">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    next();</span><br><span class="line">&#125;</span><br><span class="line">);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="3-Adjust-Express-request-type-to-get-better-Typescript-support"><a href="#3-Adjust-Express-request-type-to-get-better-Typescript-support" class="headerlink" title="3. Adjust Express request type to get better Typescript support"></a>3. Adjust Express request type to get better Typescript support</h3><p>With both of our middlewares worked into the app, we will always get a <strong>user</strong> property on our requests.<br>But, the <strong>Express</strong>‘ default** <strong>Request</strong> type does not specify this property as a part of requests coming to the server. </p>
+<p>Because of this, us assigning <strong>req.user</strong> to have a value of <strong>null</strong> in the error handler will make TS complain that this property does not exist on the <strong>Request</strong> type. </p>
+<p>To fix this, we can adjust the <strong>Request</strong> type to actually have this property, and remove the TS error. Additionaly, we will get a nice autocompletion bonus that will list all properties avaialble on the <strong>request</strong> object, when accessing it.</p>
+<p>To adjust the type, we will make use of something called <strong>declaration merging</strong>. It is a way to merge multiple definition of the same interface into one, complete interface, extending an object with properties that we require.</p>
+<p>There are 2 ways to do this:</p>
+<ol>
+<li>We can declare a new defintion in the actual file that we are working in</li>
+<li>Or we can declare a new defition in a new, separate file, making it kind of specialized for this particular task. </li>
+</ol>
+<p>Both of these appraches have a global effect, meaning new properties will be recongized by TS in any file in the app. </p>
+<p>Here is the <strong>first approach</strong>. What we do is declaring a global namespace called <strong>express</strong>, and adding an interface called <strong>Request</strong> to it.<br>Inside <strong>Request</strong> interface we define that the <strong>user</strong> property can be either <strong>null</strong>, or an object containing:</p>
+<ul>
+<li><strong>userId</strong>, which is a number</li>
+<li><strong>iat</strong>, again a number type,</li>
+<li>and <strong>exp</strong> property, which is a number again</li>
+</ul>
+<p>The <strong>iat</strong> and <strong>exp</strong> properties are added to the token payload object by default - <strong>iat</strong> holds is a number indicating when the token was created, and <strong>exp</strong> holds a number indicating when the token expires.<br><strong>userId</strong> is a property that we added to the token’s payload.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// server.ts</span></span><br><span class="line">declare <span class="built_in">global</span> &#123;</span><br><span class="line">    namespace Express &#123;</span><br><span class="line">        interface Request &#123;</span><br><span class="line">            user: &#123;</span><br><span class="line">                userId: number,</span><br><span class="line">                iat: number,</span><br><span class="line">                exp: number</span><br><span class="line">            &#125; | <span class="literal">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> express <span class="keyword">from</span> <span class="string">&quot;express&quot;</span>;</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<p>The <strong>second approach</strong>, the <strong>declaration merging</strong>, uses the same code. However, we place the code in a separate file.</p>
+<p>Let’s create a folder called <strong>@types</strong> in the root of our project, and then create another folder called <strong>express</strong> inside it.<br>Inside the <strong>express</strong> folder, we create a new file called <strong>index.d.ts</strong>, to specify that this is where we store our TS defitionitions for extending default Express types.</p>
+<p>Note that this folder and file structure mimics the default folder structure for TS types that exists in the <strong>node_modules</strong> folder. There too, we have a folder called <strong>@types</strong> which houses the an <strong>express</strong> folder, which in turn holds a file called <strong>index.d.ts</strong>.<br>This is the key to the apprach. Our folder structure has to match the default one in order for the mergining to work.</p>
+<p>Now, in the newly created <strong>index.d.ts</strong> file, we place the same code as above (sans the express import, ofc):</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// index.d.ts</span></span><br><span class="line">declare <span class="built_in">global</span> &#123;</span><br><span class="line">    namespace Express &#123;</span><br><span class="line">        interface Request &#123;</span><br><span class="line">            user: &#123;</span><br><span class="line">                userId: number,</span><br><span class="line">                iat: number,</span><br><span class="line">                exp: number</span><br><span class="line">            &#125; | <span class="literal">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> &#123;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Note that we added an export statement at the end of the file. The export makes the file become a module, which is necessary for the .ts file to actually be used by TS (if I understand the whole thing correctly). We can, but we do not need to actually export anything - having an export statement there is enough.<br>This part could also be omitted if we actually imported something to this module. For instance, we could have imported a type definition for the <strong>user</strong> property. This import would then be enough to make the file a module. </p>
+<p>Finally, we have to let TS know that we have a folder with type definitions in our project.<br>We do this in the <strong>tsconfig.json</strong> file, where we enable the <strong>typeRoots</strong> property, and add names of folders with type defitions to its array.<br>In this case, we first add our own <strong>@types</strong> folder, and then we add the originial <strong>node_modules/@types</strong> folder, both relative to the location of the <strong>tsconfig.json</strong> file.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// tsconfig.json</span></span><br><span class="line">...</span><br><span class="line"><span class="string">&quot;typeRoots&quot;</span>: [<span class="string">&quot;./@types&quot;</span>, <span class="string">&quot;./node_modules/@types&quot;</span>] <span class="comment">/* List of folders to include type definitions from. */</span>,</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<p>With this setup, TS should be able to recongize the <strong>user</strong> property as a part of the <strong>request</strong> object. Further, it also knows that it could be of <strong>null</strong> type, or an object that contains three properties - <strong>userid</strong>, <strong>iat</strong>, and <strong>exp</strong>.</p>
+<!-- End Step Content -->
+
+<!-- Project Information -->
+
+<h2 id="Project-Information"><a href="#Project-Information" class="headerlink" title="Project Information"></a>Project Information</h2><h3 id="Available-at"><a href="#Available-at" class="headerlink" title="Available at"></a>Available at</h3><p><a target="_blank" rel="noopener" href="https://github.com/ikaem/graphql-jwt-react.git">Github</a> </p>
+<h3 id="Goals"><a href="#Goals" class="headerlink" title="Goals"></a>Goals</h3><ol>
+<li>Create an app that uses GraphQL and JWT to log in and log out users</li>
+<li>Use PSQL for database</li>
+<li>Use Typescript on both ends</li>
+<li>Use Apollo Client Cache features to store JWT and user info on front end</li>
+<li>Implement protected routes, so that only logged users can access certain pages</li>
+</ol>
+<h3 id="Steps"><a href="#Steps" class="headerlink" title="Steps"></a>Steps</h3><ol>
+<li>Create types and queries</li>
+<li>Create functions to generate JSON Web Tokens</li>
+<li><strong>Set up middleware to check if tokens are valid</strong></li>
+<li>Set up Cors and Apollo Express be able to deal with tokens and cookies</li>
+<li>Create resolvers</li>
+<li>Set up Apollo Client so we can work with cookies and headers</li>
+<li>Set up Apollo Client cache</li>
+<li>Create login functionality</li>
+<li>Create logout functionality</li>
+<li>Create functionality to automatically log in user if they return to our app</li>
+<li>Enable silent refresh of access token when it reaches its expiry period</li>
+<li>Create register functionality</li>
+</ol>
+<h3 id="Tech-and-Tools"><a href="#Tech-and-Tools" class="headerlink" title="Tech and Tools"></a>Tech and Tools</h3><ol>
+<li>React</li>
+<li>Node</li>
+<li>PSQL</li>
+<li>GraphQL</li>
+<li>Apollo Server Express</li>
+<li>Apollo Client</li>
+<li>Bcrypt</li>
+<li>TypeScript</li>
+<li>Express</li>
+<li>JWT</li>
+</ol>
+<h3 id="Experience-with-Tech-amp-Tools"><a href="#Experience-with-Tech-amp-Tools" class="headerlink" title="Experience with Tech &amp; Tools"></a>Experience with Tech &amp; Tools</h3><p>This project is a continuation of the <a href="categories/graphql-react-psql/">Graphql &amp; React &amp; Psql series</a>. There, I worked with TS, PSQL and GQL, so I’m ok with that, I guess.<br>I have done some JWT things before, and here I wanted to try it with GQL.</p>
+<h2 id="DISCLAIMER"><a href="#DISCLAIMER" class="headerlink" title="DISCLAIMER"></a>DISCLAIMER</h2><p>Don’t take any of this seriously and as a matter-of-fact. These are my notes. It might look like I am trying to teach something to someone. I am not.</p>
+
+
+                
+
+
+                <!-- Cover image credit -->
+                
+                    <p class="image-credit-link">
+                        Cover image by <strong>
+                            <a target="_blank" rel="noopener" href="https://unsplash.com/@tetrakiss?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
+                                Arseny Togulev
+                            </a>
+                        </strong>
+                    </p>
+
+                
+
+  
+
+            </div>
+            
+            <!-- Custom placed tags -->
+            <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                
+                    
+
+
+<a href="/angry-chaired-blog/tags/jwt/">#jwt</a> <a href="/angry-chaired-blog/tags/express/">#express</a> <a href="/angry-chaired-blog/tags/middleware/">#middleware</a>
+
+
+                
+            </div>
+            <!--  -->
+
+
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+
+            <!-- Hyvor comments -->
+
+            <!-- End of Hyvor comments -->
+        </div>
+    </div>
+</article>
+
+
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2020 kaem<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

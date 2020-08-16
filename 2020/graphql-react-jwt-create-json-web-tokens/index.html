@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="Inexperienced and curious pokes into the sprawling world of web development "/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="kaem"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="GraphQL &amp; React &amp; JWT: Create JSON Web Tokens"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Inexperienced and curious pokes into the sprawling world of web development "/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Angry Chaired Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://ikaem.github.io/angry-chaired-blog/angry-chaired-blog/images/header-image.jpg"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://ikaem.github.io/angry-chaired-blog/angry-chaired-blog/images/header-image.jpg"/>
+    
+
+    <!-- Title -->
+    
+    <title>GraphQL &amp; React &amp; JWT: Create JSON Web Tokens - Angry Chaired Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/angry-chaired-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+    <link rel="icon" href="/angry-chaired-blog/images/favicon.ico"/>
+    
+
+<meta name="generator" content="Hexo 5.0.2"><link rel="alternate" href="/angry-chaired-blog/atom.xml" title="Angry Chaired Blog" type="application/atom+xml">
+</head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/angry-chaired-blog/">Angry Chaired Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/about">
+                            
+                                About
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a target="_blank" rel="noopener" href="https://angrychaired.surge.sh">
+                            
+                                <i class="fa fa-user fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a target="_blank" rel="noopener" href="https://github.com/ikaem/">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a href="/angry-chaired-blog/atom.xml">
+                            
+                                <i class="fa fa-rss fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('abigail-keenan-8-s5QuUBtyM-unsplash.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>GraphQL & React & JWT: Create JSON Web Tokens</h1>
+
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            16/08/2020
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/angry-chaired-blog/categories/graphql-react-jwt/">graphql & react & jwt</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <!-- Step Content Start -->
+
+<h4 id="Part-2-of-12-in-GraphQL-amp-React-amp-JWT"><a href="#Part-2-of-12-in-GraphQL-amp-React-amp-JWT" class="headerlink" title="Part 2 of 12 in GraphQL &amp; React &amp; JWT"></a>Part 2 of 12 in GraphQL &amp; React &amp; JWT</h4><p>We will stray from the GQL path a bit, to get introduced to JSON Web Tokens and figure out how to create them.<br>From what I understand, JWT are signed strings that hold data. They are used to prove certain claims on both ends of our app. For instance, we would have our server create a JWT, which would claim that a user for which this token is created is in fact logged into their account. Our client would then accept this claim as a proof of successful login, and would treat current user as logged in.<br>This is a very simple and very limited explanation. It works for me, however, so let’s move on.</p>
+<a id="more"></a>
+
+<h4 id="See-Project-Information"><a href="#See-Project-Information" class="headerlink" title="See Project Information"></a>See <a href="#Project-Information">Project Information</a></h4><h2 id="Step-2-Create-functions-to-generate-JSON-Web-Tokens"><a href="#Step-2-Create-functions-to-generate-JSON-Web-Tokens" class="headerlink" title="Step 2. Create functions to generate JSON Web Tokens"></a>Step 2. Create functions to generate JSON Web Tokens</h2><p>When we create a JWT, we can:</p>
+<ol>
+<li>Choose which data it will hold</li>
+<li>Specify when it will expire</li>
+<li>Choose a secret key with which we will sign </li>
+</ol>
+<p>To do the above things, we will use a package called <strong>jsonwebtoken</strong>.<br>We will also use the package to <strong>verify</strong> that our tokens are in fact valid.</p>
+<p>Ok, so in this part we will </p>
+<ol>
+<li>Install jsonwebtoken</li>
+<li>Create utility functions to generate access and refresh tokens</li>
+</ol>
+<h3 id="Install-jsonwebtoken"><a href="#Install-jsonwebtoken" class="headerlink" title="Install jsonwebtoken"></a>Install jsonwebtoken</h3><p>Easy, this one really. In the root folder of our project, we just intall the package from npm</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i jsonwebtoken</span><br></pre></td></tr></table></figure>
+
+<p>As jsonwebtoken package doesn’t come TS ready, and we are using TS in our app, we also need to install types so that TS compiler can work with the package.<br>We install this as a dev dependency, because we only need the types during developing phase.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i -D @types/jsonwebtoken</span><br></pre></td></tr></table></figure>
+
+<h3 id="Create-utility-functions-to-generate-access-and-refresh-tokens"><a href="#Create-utility-functions-to-generate-access-and-refresh-tokens" class="headerlink" title="Create utility functions to generate access and refresh tokens"></a>Create utility functions to generate access and refresh tokens</h3><p>To create a token, jsonwebtoken package provides the <strong>sign</strong> method. We get this method as a named import from the jsonwebtoken package</p>
+<p>The method accepts 4 arguments:</p>
+<ol>
+<li>Payload, or the data that we want our JWT to hold</li>
+<li>A key used to sign, and later verify the token</li>
+<li>An object holding additional options such as expiration period</li>
+<li>Optional callback function. In case a callback function is provided, the sign method acts asynchronously, returning a type <strong>void</strong>. The actuall callback gets passed an error and token arguments, which we can work with. With no callback, the sign function returns the actual token, of <strong>string</strong> type.</li>
+</ol>
+<p>Here are examples of both sync and async implementations:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; sign &#125; <span class="keyword">from</span> <span class="string">&quot;jsonwebtoken&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> syncSign = sign(</span><br><span class="line">    &#123; <span class="attr">userId</span>: <span class="number">3</span> &#125;, <span class="comment">// payload</span></span><br><span class="line">    <span class="string">&quot;hello&quot;</span>, <span class="comment">// secret key</span></span><br><span class="line">    &#123; <span class="attr">expiresIn</span>: <span class="string">&quot;30min&quot;</span> &#125; <span class="comment">// options</span></span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> asyncSign = sign(</span><br><span class="line">    &#123; <span class="attr">userId</span>: <span class="number">3</span> &#125;, <span class="comment">// payload</span></span><br><span class="line">    <span class="string">&quot;hello&quot;</span>, <span class="comment">// secret key</span></span><br><span class="line">    &#123; <span class="attr">expiresIn</span>: <span class="string">&quot;30min&quot;</span> &#125;, <span class="comment">// options</span></span><br><span class="line">    (err, token) =&gt; &#123;</span><br><span class="line">        <span class="keyword">if</span>(err) thrown <span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">&quot;some message&quot;</span>);</span><br><span class="line">        <span class="built_in">console</span>.log(token);</span><br><span class="line">    &#125; <span class="comment">// the callback</span></span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<p>To check if a token is valid, we can use the <strong>verify</strong> method provided by the jsonwebtoken package.</p>
+<p>The <strong>verify</strong> method accepts 3 arugments;</p>
+<ol>
+<li>Actual token that we want to verify</li>
+<li>The key that we used to create the token in the first place</li>
+<li>Optional callback function which, if provided, makes the <strong>verify</strong> an async method. It accepts an error and a decoded arguments. With no callback, the <strong>verify</strong> method returns a decoded object holding data that we originally included in the token, while the callback makes the method return the <strong>void</strong> type</li>
+</ol>
+<p>Here are the examples: </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; verify &#125; <span class="keyword">from</span> <span class="string">&quot;jsonwebtoken&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> decoded = verify( <span class="comment">// returning string | object</span></span><br><span class="line">    test, <span class="comment">// token</span></span><br><span class="line">    <span class="string">&quot;hello&quot;</span> <span class="comment">// secret key</span></span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> decoded = verify( <span class="comment">// returning &quot;void&quot;</span></span><br><span class="line">    test, <span class="comment">// token</span></span><br><span class="line">    <span class="string">&quot;hello&quot;</span>, <span class="comment">// secret key</span></span><br><span class="line">    (err, decoded) =&gt; &#123;</span><br><span class="line">        <span class="keyword">if</span>(err) <span class="keyword">return</span> <span class="built_in">console</span>.log(err);</span><br><span class="line">        <span class="built_in">console</span>.log(decoded);</span><br><span class="line">    &#125; <span class="comment">// the callback</span></span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<p>Now that we have that figured out, lets create functions to generate access and refresh tokens. We will use these functions to generate new tokens withing resolvers for this project’s mutations.</p>
+<p>To briefly introduce access and refresh tokens, the two are both valid tokens, used for authentication, and created in pretty much the same way.<br>They do, however, serve different purposes in the flow of user authentication. </p>
+<p>The access token is used to log in a user, and to prove that they are authorized to access certain resources. For example, we use it to allow a user to create a new user, or edit an existing user.</p>
+<p>Refresh token, on other hand, is used to prove that a user has been logged into their account at some point during the refresh token’s validity period. It is used, in our case at least, to seamlessly keep a user logged in during their time spent using the app. It is also used to automatically log in a user should they return to our app, without them needing to actually log back in manually.</p>
+<h4 id="Function-to-generate-access-token"><a href="#Function-to-generate-access-token" class="headerlink" title="Function to generate access token"></a>Function to generate access token</h4><p>Prior to creating functions, we will generate secret keys as environmental variables. This way we will always have them available for signing and verifying tokens. </p>
+<p>We can use any string for a secret key, but we will generate one by using Node’s <strong>crypto</strong> module. This way we get a neat combination of random characters (I guess).</p>
+<p>To get a string, we just enter Node console in the terminal:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node</span><br></pre></td></tr></table></figure>
+
+<p>Then, we require the crypto module, call the <strong>randomBytes</strong> function on it, and covert the result to string in <strong>Base64</strong> form.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">require(<span class="string">&quot;crypto&quot;</span>).randomBytes(64).toString(<span class="string">&quot;base64&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+<p>The output is our string, and we can use it as a secret key.</p>
+<p>We will get two of these, and assigned them as values for JWT_ACCESS_TOKEN_SECRET and JWT_REFRESH_TOKEN_SECRET in our already existing <strong>.env</strong> file in the root of the project:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&#x2F;&#x2F; .env</span><br><span class="line"></span><br><span class="line">    PORT &#x3D; 4000</span><br><span class="line"></span><br><span class="line">    JWT_ACCESS_TOKEN_SECRET &#x3D; Vjn65E5O4d5N3SZ080fspfIywWu8TTHQXyqDBo329NJrYBlDfPjL2ePanhgoxdv25YeaVqbUIpgTd8NF0vxXmw&#x3D;&#x3D;</span><br><span class="line">    JWT_REFRESH_TOKEN_SECRET &#x3D; Bf3FZPE6zoxnocrNtVjzeKqa7RAw6cIifksAeYZ3eU4Y0R++QQvHA3CmMjaZ2iddUHIUZ7lMITzLnujJkkIhoA&#x3D;&#x3D;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>Now on to creating the function.</p>
+<p>We create another folder in the <strong>src</strong> folcer of our project, and we call it <strong>utils</strong>.<br>Inside, we create a file called <strong>tokens.ts</strong></p>
+<p>Now, in the file, we will import two things from the <strong>jsonwebokenpackage</strong>:</p>
+<ol>
+<li>The <strong>sign</strong> method,</li>
+<li>And the <strong>Secret</strong> TS type</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// utils/ tokens.ts</span></span><br><span class="line"><span class="keyword">import</span> &#123; sign, Secret &#125; <span class="keyword">from</span> <span class="string">&quot;jsonwebtoken&quot;</span>;</span><br></pre></td></tr></table></figure>
+
+<p>Next, we will create two constants in which to store our environmental variables we just created.<br>We will cast these expressions as <strong>Secret</strong>, to make sure the secret constants don’t have a possible <strong>undefined</strong> value.<br>Passing a possbile <strong>undefined</strong> value as a key to the <strong>sign</strong> method would cause TS to throw an error, telling us that undefined cannot be used as a parameter of type <strong>Secret</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// utils/ tokens.ts</span></span><br><span class="line">...</span><br><span class="line"><span class="keyword">const</span> ACCESS_SECRET = process.env.JWT_ACCESS_TOKEN_SECRET <span class="keyword">as</span> Secret;</span><br><span class="line"><span class="keyword">const</span> REFRESH_SECRET = process.env.JWT_REFRESH_TOKEN_SECRET <span class="keyword">as</span> Secret;</span><br></pre></td></tr></table></figure>
+
+<p>Finally, we create the function. It is a simple function that just accepts a single parameter, and return the result of the <strong>sign</strong> method.<br>We will also export it as a named export.</p>
+<p>The token inside will:</p>
+<ul>
+<li>Hold a user id</li>
+<li>Be signed with <strong>ACCESS_SECRET</strong></li>
+<li>Last for 30 minutes</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// utils/ tokens.ts</span></span><br><span class="line">...</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> generateAccessToken = <span class="function">(<span class="params">userId: number</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> sign(&#123; userId &#125;, ACCESS_SECRET, &#123; <span class="attr">expiresIn</span>: <span class="string">&quot;30min&quot;</span> &#125;);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>The validity period of this token will cause it to become invalid 30 minutes after it was generated. Any attempt to access a backend resource that requires authentication after this period will fail, and user will need to login again.</p>
+<p>Of course, we don’t want the user to be logging in every 30 minutes. </p>
+<h4 id="Function-to-generate-refresh-token"><a href="#Function-to-generate-refresh-token" class="headerlink" title="Function to generate refresh token"></a>Function to generate refresh token</h4><p>Refresh token comes in to the rescue. </p>
+<p>The function that generates a refresh token is pretty much the same as the above one. The only difference is that the token it generates is valid for 10 days.<br>This way, if a user has a valid refresh token stored somewhere in the app, we can use it to automatically log them in. </p>
+<p>Here is the function:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// utils/ tokens.ts</span></span><br><span class="line">...</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> generateRefreshToken = <span class="function">(<span class="params">userId: number</span>) =&gt;</span> &#123;</span><br><span class="line"><span class="keyword">return</span> sign(&#123; userId &#125;, REFRESH_SECRET, &#123; <span class="attr">expiresIn</span>: <span class="string">&quot;10 days&quot;</span> &#125;);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<!-- End Step Content -->
+
+<!-- Project Information -->
+
+<h2 id="Project-Information"><a href="#Project-Information" class="headerlink" title="Project Information"></a>Project Information</h2><h3 id="Available-at"><a href="#Available-at" class="headerlink" title="Available at"></a>Available at</h3><p><a target="_blank" rel="noopener" href="https://github.com/ikaem/graphql-jwt-react.git">Github</a> </p>
+<h3 id="Goals"><a href="#Goals" class="headerlink" title="Goals"></a>Goals</h3><ol>
+<li>Create an app that uses GraphQL and JWT to log in and log out users</li>
+<li>Use PSQL for database</li>
+<li>Use Typescript on both ends</li>
+<li>Use Apollo Client Cache features to store JWT and user info on front end</li>
+<li>Implement protected routes, so that only logged users can access certain pages</li>
+</ol>
+<h3 id="Steps"><a href="#Steps" class="headerlink" title="Steps"></a>Steps</h3><ol>
+<li>Create types and mutations</li>
+<li><strong>Create functions to generate JSON Web Tokens</strong></li>
+<li>Create resolvers</li>
+<li>Create middleware to check if tokens are valid</li>
+<li>Set up Apollo Express be able to deal with tokens and cookies</li>
+<li>Set up Apollo Client so we can work with cookies and headers</li>
+<li>Set up Apollo Client cache</li>
+<li>Create login functionality</li>
+<li>Create logout functionality</li>
+<li>Create functionality to automatically log in user if they return to our app</li>
+<li>Enable silent refresh of access token when it reaches its expiry period</li>
+<li>Create register functionality</li>
+</ol>
+<h3 id="Tech-and-Tools"><a href="#Tech-and-Tools" class="headerlink" title="Tech and Tools"></a>Tech and Tools</h3><ol>
+<li>React</li>
+<li>Node</li>
+<li>PSQL</li>
+<li>GraphQL</li>
+<li>Apollo Server Express</li>
+<li>Apollo Client</li>
+<li>Bcrypt</li>
+<li>TypeScript</li>
+<li>Express</li>
+<li>JWT</li>
+</ol>
+<h3 id="Experience-with-Tech-amp-Tools"><a href="#Experience-with-Tech-amp-Tools" class="headerlink" title="Experience with Tech &amp; Tools"></a>Experience with Tech &amp; Tools</h3><p>This project is a continuation of the <a href="categories/graphql-react-psql/">Graphql &amp; React &amp; Psql series</a>. There, I worked with TS, PSQL and GQL, so I’m ok with that, I guess.<br>I have done some JWT things before, and here I wanted to try it with GQL.</p>
+<h2 id="DISCLAIMER"><a href="#DISCLAIMER" class="headerlink" title="DISCLAIMER"></a>DISCLAIMER</h2><p>Don’t take any of this seriously and as a matter-of-fact. These are my notes. It might look like I am trying to teach something to someone. I am not.</p>
+
+
+                
+
+
+                <!-- Cover image credit -->
+                
+                    <p class="image-credit-link">
+                        Cover image by <strong>
+                            <a target="_blank" rel="noopener" href="https://unsplash.com/@akeenster?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
+                                Abigail Keenan
+                            </a>
+                        </strong>
+                    </p>
+
+                
+
+  
+
+            </div>
+            
+            <!-- Custom placed tags -->
+            <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                
+                    
+
+
+<a href="/angry-chaired-blog/tags/jwt/">#jwt</a>
+
+
+                
+            </div>
+            <!--  -->
+
+
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+
+            <!-- Hyvor comments -->
+
+            <!-- End of Hyvor comments -->
+        </div>
+    </div>
+</article>
+
+
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2020 kaem<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

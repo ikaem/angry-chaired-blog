@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="Inexperienced and curious pokes into the sprawling world of web development "/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="kaem"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="GraphQL &amp; React &amp; JWT: Authentication &amp; GQL Resolvers"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Inexperienced and curious pokes into the sprawling world of web development "/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Angry Chaired Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://ikaem.github.io/angry-chaired-blog/angry-chaired-blog/images/header-image.jpg"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://ikaem.github.io/angry-chaired-blog/angry-chaired-blog/images/header-image.jpg"/>
+    
+
+    <!-- Title -->
+    
+    <title>GraphQL &amp; React &amp; JWT: Authentication &amp; GQL Resolvers - Angry Chaired Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/angry-chaired-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+    <link rel="icon" href="/angry-chaired-blog/images/favicon.ico"/>
+    
+
+<meta name="generator" content="Hexo 5.0.2"><link rel="alternate" href="/angry-chaired-blog/atom.xml" title="Angry Chaired Blog" type="application/atom+xml">
+</head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/angry-chaired-blog/">Angry Chaired Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/about">
+                            
+                                About
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a target="_blank" rel="noopener" href="https://angrychaired.surge.sh">
+                            
+                                <i class="fa fa-user fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a target="_blank" rel="noopener" href="https://github.com/ikaem/">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a href="/angry-chaired-blog/atom.xml">
+                            
+                                <i class="fa fa-rss fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('greta-scholderle-moller-xe07ZDGZ-2Q-unsplash.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>GraphQL & React & JWT: Authentication & GQL Resolvers</h1>
+
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            16/08/2020
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/angry-chaired-blog/categories/graphql-react-jwt/">graphql & react & jwt</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <!-- Step Content Start -->
+
+<h4 id="Part-5-of-12-in-GraphQL-amp-React-amp-JWT"><a href="#Part-5-of-12-in-GraphQL-amp-React-amp-JWT" class="headerlink" title="Part 5 of 12 in GraphQL &amp; React &amp; JWT"></a>Part 5 of 12 in GraphQL &amp; React &amp; JWT</h4><p>Ok, this one is long. But, resolvers that we need to create largely follow the same logic as the ones we created in the last series. So that’s good.</p>
+<p>Resolvers are just functions which are (I guess) called by their matching mutations or queries. They need to return data in the the shape that their mutations or queries specify. They also get passed certain parameters, and have access to context that is provided by the Apollo Express Server.</p>
+<a id="more"></a>
+
+<h4 id="See-Project-Information"><a href="#See-Project-Information" class="headerlink" title="See Project Information"></a>See <a href="#Project-Information">Project Information</a></h4><h2 id="Step-5-Create-resolvers"><a href="#Step-5-Create-resolvers" class="headerlink" title="Step 5. Create resolvers"></a>Step 5. Create resolvers</h2><p>Few special things about these resolvers, however:</p>
+<ol>
+<li>They need to set and clear cookies</li>
+<li>They need to read and set request and response headers</li>
+<li>They need to deal with situations when authentication is not possible - due to invalid tokens or incorrect user inputs. We will handle these situations with errors provided by Apollo.</li>
+</ol>
+<p>Ok, so we neet to make resolvers for 4 mutations:</p>
+<ol>
+<li>login</li>
+<li>refreshAccessToken</li>
+<li>register</li>
+<li>logout</li>
+</ol>
+<p>Additionally, we want to adjust resolvers for <strong>editUser</strong>, <strong>deleteUser</strong>, and <strong>newUser</strong>, to make sure that only logged in users can access resources returned by those resolvers.</p>
+<h3 id="Login-resolver"><a href="#Login-resolver" class="headerlink" title="Login resolver"></a>Login resolver</h3><p>What does the login reolver need to do? Briefly, it needs to check if a user exists in the database. If it does, it needs to check the provided password, and if all good, it needs to return the user’s first name, avatar link and access token.</p>
+<p>It also needs to generate that token, as well as a refresh one, which it needs to set as a cookie.</p>
+<p>So, in order:</p>
+<ol>
+<li>Get mutation arguments and grab a client from PSQL pool</li>
+<li>Make sure a user exists and they have a valid password</li>
+<li>Deal with cases when no matching user or invalid password</li>
+<li>Grab user data required by the mutation.</li>
+<li>Generate tokens and store refresh token in the database</li>
+<li>Set cookie and return data from the resolver</li>
+<li>Deal with possible errors</li>
+</ol>
+<p>We already went through most of this stuff in the last series, so I will focus on the new things.<br>Note that we are using a transaction while accessing and working with the database.</p>
+<p><strong>Getting arguments and grabbing a client from the connection pool</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// mutation.ts</span></span><br><span class="line">...</span><br><span class="line">login: <span class="keyword">async</span> (</span><br><span class="line">    parent: any,</span><br><span class="line">    args: &#123; <span class="attr">email</span>: string; password: string &#125;,</span><br><span class="line">    context: &#123; <span class="attr">pgPool</span>: Pool; req: Request; res: Response &#125;</span><br><span class="line">) =&gt; &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123; email, password &#125; = args;</span><br><span class="line">    <span class="keyword">const</span> client = <span class="keyword">await</span> context.pgPool.connect();</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<p><strong>Make sure a user exists and they have a valid password</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// mutation.ts</span></span><br><span class="line">...</span><br><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">  <span class="keyword">await</span> client.query(<span class="string">&quot;BEGIN&quot;</span>);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> userExistQuery = <span class="string">`</span></span><br><span class="line"><span class="string">            SELECT</span></span><br><span class="line"><span class="string">                users_login.hash</span></span><br><span class="line"><span class="string">            FROM</span></span><br><span class="line"><span class="string">                users_login</span></span><br><span class="line"><span class="string">            WHERE</span></span><br><span class="line"><span class="string">                users_login.email = &#x27;<span class="subst">$&#123;email&#125;</span>&#x27;</span></span><br><span class="line"><span class="string">        `</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> &#123; rows &#125;: QueryResult&lt;&#123; <span class="attr">hash</span>: string &#125;&gt; = <span class="keyword">await</span> client.query(</span><br><span class="line">    userExistQuery</span><br><span class="line">  );</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> (!rows[<span class="number">0</span>]) <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">&quot;No such user&quot;</span>);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> isPasswordValid = <span class="keyword">await</span> compare(password, rows[<span class="number">0</span>].hash);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> (!isPasswordValid) <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">&quot;Invalid password&quot;</span>);</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<h4 id="Deal-with-cases-when-no-matching-user-or-invalid-password"><a href="#Deal-with-cases-when-no-matching-user-or-invalid-password" class="headerlink" title="Deal with cases when no matching user or invalid password"></a>Deal with cases when no matching user or invalid password</h4><p>This one is new in that we will use errors provided by Apollo. Those will repalce the simple, generic errors included aboice.<br>By using Apollo errors, we get better experience on the frontend, I think. These errors have more appropriate names, and include data specific to situations in which errors happened, making it easier to react to them on the frontend.</p>
+<p>Anyway, Apollo errors come in 4 flavors:</p>
+<ol>
+<li>AuthenticationError,</li>
+<li>UserInputError,</li>
+<li>ForbiddenError,</li>
+<li>ApolloError</li>
+</ol>
+<p>We will use the first two errors. I guess we could use the third one as well, for cases when a user attempts to edit or add a new user, but we will skip it this time.</p>
+<p>For this particular resolver, we will use the <strong>UserInputError</strong>. We wil use it for cases when we cannot find a user with the email address that was provided, as well as when the password provided is not valid.</p>
+<p>My implementation is very simple. In case when a condition is not true, I throw the said error, and include two arguments:</p>
+<ol>
+<li>Generic message to be attached to the error</li>
+<li>An object to be added to the error object, holding more info about the error</li>
+</ol>
+<p>Prior to using the errors, we have to import them from “apollo-server-express”.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// mutation.ts</span></span><br><span class="line">...</span><br><span class="line"><span class="keyword">import</span> &#123; UserInputError, AuthenticationError &#125; <span class="keyword">from</span> <span class="string">&quot;apollo-server-express&quot;</span>;</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<p>Here is the errors code:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// mutation.ts</span></span><br><span class="line">...</span><br><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">...</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> &#123; rows &#125;: QueryResult&lt;&#123; <span class="attr">hash</span>: string &#125;&gt; = <span class="keyword">await</span> client.query(</span><br><span class="line">    userExistQuery</span><br><span class="line">  );</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> (!rows[<span class="number">0</span>])</span><br><span class="line">    <span class="keyword">throw</span> <span class="keyword">new</span> UserInputError(<span class="string">&quot;Failed to login due to validation error&quot;</span>, &#123;</span><br><span class="line">      type: <span class="string">&quot;EMAIL_NOT_IN_USE&quot;</span>,</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> isPasswordValid = <span class="keyword">await</span> compare(password, rows[<span class="number">0</span>].hash);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> (!isPasswordValid)</span><br><span class="line">    <span class="keyword">throw</span> <span class="keyword">new</span> UserInputError(<span class="string">&quot;Failed to login due to validation error&quot;</span>, &#123;</span><br><span class="line">      type: <span class="string">&quot;INCORRECT_PASSWORD&quot;</span>,</span><br><span class="line">    &#125;);</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<p>This way, as soon as an error is thrown, the <strong>try</strong> block breaks, and code execution jumps to the <strong>catch</strong> block.</p>
+<p>Moving on to <strong>grab user data required by the mutation.</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// mutation.ts</span></span><br><span class="line">...</span><br><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">...</span><br><span class="line"><span class="keyword">const</span> userLoginDataQuery = <span class="string">`</span></span><br><span class="line"><span class="string">    SELECT</span></span><br><span class="line"><span class="string">        users_login.user_id,</span></span><br><span class="line"><span class="string">        users_info.first_name,</span></span><br><span class="line"><span class="string">        users_info.avatar_link</span></span><br><span class="line"><span class="string">    FROM</span></span><br><span class="line"><span class="string">        users_login</span></span><br><span class="line"><span class="string">    JOIN</span></span><br><span class="line"><span class="string">        users_info</span></span><br><span class="line"><span class="string">    ON</span></span><br><span class="line"><span class="string">        users_login.user_id = users_info.user_info_id</span></span><br><span class="line"><span class="string">    WHERE</span></span><br><span class="line"><span class="string">        users_login.email = &#x27;<span class="subst">$&#123;email&#125;</span>&#x27;;</span></span><br><span class="line"><span class="string">`</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> &#123;</span><br><span class="line">    user_id,</span><br><span class="line">    first_name,</span><br><span class="line">    avatar_link,</span><br><span class="line">&#125;: &#123;</span><br><span class="line">    user_id: number;</span><br><span class="line">    first_name: string;</span><br><span class="line">    avatar_link: string;</span><br><span class="line">&#125; = <span class="keyword">await</span> client.query(userLoginDataQuery).then(<span class="function">(<span class="params">&#123; rows &#125;</span>) =&gt;</span> rows[<span class="number">0</span>]);</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<h4 id="Generate-tokens-and-store-refresh-token-in-the-database"><a href="#Generate-tokens-and-store-refresh-token-in-the-database" class="headerlink" title="Generate tokens and store refresh token in the database"></a>Generate tokens and store refresh token in the database</h4><p>While we haven’t done this before, it is a pretty straightforward thing.<br>We import our two functions for generating tokens, and then use previously acquired <strong>user_id</strong> to actually generate access and refresh tokens.</p>
+<p>Then, we will access our database again, to store the newly generated refresh token into the user’s account. This way we will have a valid token to compare against, when a request to refresh access token arrives to our server.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// mutation.ts</span></span><br><span class="line">...</span><br><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">...</span><br><span class="line"><span class="keyword">const</span> accessToken = generateAccessToken(user_id);</span><br><span class="line"><span class="keyword">const</span> refreshToken = generateRefreshToken(user_id);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> storeRefreshTokenQuery = <span class="string">`</span></span><br><span class="line"><span class="string">    UPDATE users_login</span></span><br><span class="line"><span class="string">    SET</span></span><br><span class="line"><span class="string">        refresh_token = &#x27;<span class="subst">$&#123;refreshToken&#125;</span>&#x27;</span></span><br><span class="line"><span class="string">    WHERE</span></span><br><span class="line"><span class="string">        user_id = <span class="subst">$&#123;user_id&#125;</span></span></span><br><span class="line"><span class="string">    RETURNING</span></span><br><span class="line"><span class="string">        refresh_token;</span></span><br><span class="line"><span class="string">`</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> &#123;</span><br><span class="line">    refresh_token: storedRefreshToken,</span><br><span class="line">&#125;: &#123; <span class="attr">refresh_token</span>: string &#125; = <span class="keyword">await</span> client</span><br><span class="line">    .query(storeRefreshTokenQuery)</span><br><span class="line">    .then(<span class="function">(<span class="params">&#123; rows &#125;</span>) =&gt;</span> rows[<span class="number">0</span>]);</span><br><span class="line"></span><br><span class="line"><span class="keyword">await</span> client.query(<span class="string">&quot;COMMIT&quot;</span>);</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<h4 id="Set-cookie-and-return-data-from-the-resolver"><a href="#Set-cookie-and-return-data-from-the-resolver" class="headerlink" title="Set cookie and return data from the resolver"></a>Set cookie and return data from the resolver</h4><p>We will use a cookie to store our refresh token on front end. We will use a <strong>http-only</strong> cookie, which is apparantely safe against …some type of attacks… I really am not sure, and this is something to dive into sometime in the future.<br>For our purposes, cookies fit well into the flow of authentication, and they are easy to work with.</p>
+<p>Once we set a cookie, its contents, and its validity period, the cookie will stay in the user’s browser until it expires, even if the user closes their browser. Because of this, we can simply use this cookie to retrieve its refresh token, and automatically log a user back in when they return to our app. We will create a part of this mechanism with the <strong>refreshAcessToken</strong> resolver, and we will finish it when we switch to work on the frontend.</p>
+<p>Few notes on the expiration period of a cookie:</p>
+<ul>
+<li>If we do not set the expiration of a cookie, browsers will delete it once they close. Obviously, this is not what we want.</li>
+<li>The <strong>expires</strong> property that we use in this case accepts a date in GMT format (Mon, 26 Mar 2018 17:04:05 UTC). JS <strong>new Date</strong> constructor returns this format by default, it seems.</li>
+<li>We have set the cookie to expire in 10 days from the time of its creation. You will remember that this is the same validity period as the one of our actual refresh token. The code to get this date uses <strong>new Date</strong> constructor to get the date right now, and then sets hours of that date to current hours + 240 hours. This results in a date ten days in future from now.</li>
+</ul>
+<p>Finally, let’s set that cookie. We will use the <strong>cookie</strong> method available on the HTTP <strong>response</strong> object.<br>The method accepts 3 arguments:</p>
+<ol>
+<li>Name of our cookie - we will name it <strong>refreshToken</strong></li>
+<li>The actual data we want to store in the cookie - we store our refresh cookie</li>
+<li>Options object - this one can hold several properties to define the cookie in more details. We will use only 2 - the already mentioned <strong>expires</strong>, and <strong>http-only</strong>, which we set to <strong>true</strong></li>
+</ol>
+<p>By making the cookie http-only, we make sure that this cookie is available only to the server, and not to the client.</p>
+<p>Ok, here is the code:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// mutation.ts</span></span><br><span class="line">...</span><br><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">...</span><br><span class="line"><span class="keyword">await</span> client.query(<span class="string">&quot;COMMIT&quot;</span>);</span><br><span class="line">...</span><br><span class="line">context.res.cookie(<span class="string">&quot;refreshToken&quot;</span>, refreshToken, &#123;</span><br><span class="line">    expires: <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="keyword">new</span> <span class="built_in">Date</span>().setHours(<span class="keyword">new</span> <span class="built_in">Date</span>().getHours() + <span class="number">240</span>)),</span><br><span class="line">    httpOnly: <span class="literal">true</span>,</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>Once we have set the cookie, we can return data from the resolver:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// mutation.ts</span></span><br><span class="line">...</span><br><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">...</span><br><span class="line"><span class="keyword">return</span> &#123;</span><br><span class="line">    first_name: first_name,</span><br><span class="line">    avatar_link: avatar_link,</span><br><span class="line">    access_token: accessToken,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h4 id="Deal-with-possible-errors"><a href="#Deal-with-possible-errors" class="headerlink" title="Deal with possible errors"></a>Deal with possible errors</h4><p>Our <strong>catch</strong> block should catch all errors that arise in the <strong>try</strong> block. I found it useful to actually return that error too. This way, the frontend gets more info on what actually happened in terms of errors, and then it can provide better feedback to the user</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// mutation.ts</span></span><br><span class="line">...</span><br><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">...</span><br><span class="line">&#125; <span class="keyword">catch</span> (error) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(error);</span><br><span class="line">    <span class="keyword">await</span> client.query(<span class="string">&quot;ROLLBACK&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> error;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Ok, this should be it.</p>
+<p>Let’s test our resolver now.<br>We can start our backend’s developer server:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run dev</span><br></pre></td></tr></table></figure>
+
+<p>This will make our app’s GraphQL Playground be available on <strong><a target="_blank" rel="noopener" href="http://localhost:4000/grapqhl">http://localhost:4000/grapqhl</a></strong></p>
+<p>Now, lets try to login.<br>Providing the two arguments, and existing email and a valid password, our login mutation should look like this:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">mutation &#123;</span><br><span class="line">    login(</span><br><span class="line">        email:&quot;karlo@email.com&quot;,</span><br><span class="line">        password:&quot;karlo&quot;</span><br><span class="line">    )&#123;</span><br><span class="line">        first_name,</span><br><span class="line">        avatar_link</span><br><span class="line">        access_token</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>And here is the GQL response:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">&quot;data&quot;</span>: &#123;</span><br><span class="line">        <span class="string">&quot;login&quot;</span>: &#123;</span><br><span class="line">            <span class="string">&quot;first_name&quot;</span>: <span class="string">&quot;karlo&quot;</span>,</span><br><span class="line">            <span class="string">&quot;avatar_link&quot;</span>: <span class="string">&quot;https://source.unsplash.com/225x225/?portrait&quot;</span>,</span><br><span class="line">            <span class="string">&quot;access_token&quot;</span>: <span class="string">&quot;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjcsImlhdCI6MTU5NTA2MDI3NSwiZXhwIjoxNTk1MDYyMDc1fQ.XvLbxh7goEP0qawkdOAy5OujLyaY_ZaHxVzmSh6YyRo&quot;</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>You see that our resolver returned name and avatar link, and it also returned our access token to us. Very cool.</p>
+<p>Remember that we also set a refresh cookie in the resolver? Let’s see how that turned out.<br>Open your browser’s developer tools (CTRL + SHIFT + I), and go to the <strong>Application</strong> (Chrome) or <strong>Storage</strong> (FIrefox) tab. On the left hand side you should see a menu with the <strong>cookies</strong> option. Open it and see that there is …no cookies?<br>This is ok. GraphQL Playground doesn’t set cookies in your browser by default. We can change this, however, by visiting its settings (the wheel icon on the top right), and changing the value of <strong>request.credentials</strong> from <strong>omit</strong> to <strong>include</strong>.</p>
+<p>Save the settings, try to login, and voila - your new cookie is here, complete with http-only check-mark and an expiration date. Lovely.</p>
+<p>Now, let’s try to error a bit.</p>
+<p>Let’s adjust our login mutation, and provide an incorrect email.</p>
+<p>This is what we get:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line"><span class="string">&quot;errors&quot;</span>: [</span><br><span class="line">    &#123;</span><br><span class="line">    <span class="string">&quot;message&quot;</span>: <span class="string">&quot;Failed to login due to validation error&quot;</span>,</span><br><span class="line">    <span class="string">&quot;locations&quot;</span>: [</span><br><span class="line">        &#123;</span><br><span class="line">        <span class="string">&quot;line&quot;</span>: <span class="number">2</span>,</span><br><span class="line">        <span class="string">&quot;column&quot;</span>: <span class="number">3</span></span><br><span class="line">        &#125;</span><br><span class="line">    ],</span><br><span class="line">    <span class="string">&quot;path&quot;</span>: [</span><br><span class="line">        <span class="string">&quot;login&quot;</span></span><br><span class="line">    ],</span><br><span class="line">    <span class="string">&quot;extensions&quot;</span>: &#123;</span><br><span class="line">        <span class="string">&quot;type&quot;</span>: <span class="string">&quot;EMAIL_NOT_IN_USE&quot;</span>,</span><br><span class="line">        <span class="string">&quot;code&quot;</span>: <span class="string">&quot;BAD_USER_INPUT&quot;</span>,</span><br><span class="line">        <span class="string">&quot;exception&quot;</span>: &#123;</span><br><span class="line">            <span class="string">&quot;type&quot;</span>: <span class="string">&quot;EMAIL_NOT_IN_USE&quot;</span>,</span><br><span class="line">            <span class="string">&quot;stacktrace&quot;</span>: [</span><br><span class="line">                <span class="string">&quot;UserInputError: Failed to login due to validation error&quot;</span>,</span><br><span class="line">                <span class="string">&quot;    at D:\\WebDev\\Ja\\quickies\\GrapQL JWT\\graphql-jwt-api\\src\\gql\\resolvers\\mutation.ts:186:15&quot;</span>,</span><br><span class="line">                <span class="string">&quot;    at step (D:\\WebDev\\Ja\\quickies\\GrapQL JWT\\graphql-jwt-api\\src\\gql\\resolvers\\mutation.ts:44:23)&quot;</span>,</span><br><span class="line">                <span class="string">&quot;    at Object.next (D:\\WebDev\\Ja\\quickies\\GrapQL JWT\\graphql-jwt-api\\src\\gql\\resolvers\\mutation.ts:25:53)&quot;</span>,</span><br><span class="line">                <span class="string">&quot;    at fulfilled (D:\\WebDev\\Ja\\quickies\\GrapQL JWT\\graphql-jwt-api\\src\\gql\\resolvers\\mutation.ts:16:58)&quot;</span>,</span><br><span class="line">                <span class="string">&quot;    at processTicksAndRejections (internal/process/task_queues.js:97:5)&quot;</span></span><br><span class="line">            ]</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    &#125;</span><br><span class="line">],</span><br><span class="line"><span class="string">&quot;data&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;login&quot;</span>: <span class="literal">null</span></span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>This looks pretty cool to me. With this, we can see exaclty what went wrong on the backend, and provide good feedback to the user.</p>
+<h3 id="refreshAccessToken-resolver"><a href="#refreshAccessToken-resolver" class="headerlink" title="refreshAccessToken resolver"></a>refreshAccessToken resolver</h3><p>Out of all the functionality of the app, I find this one the most fun.<br>Think about it. This resolver will log you in if you return to the website (provided you haven’t actually logged out), and it will also keep you logged in during your time on the website. It is a heavy duty resolver, and it was fun to wrap my head around it.</p>
+<p>So let’s do that - let’s wrap our heads around it.<br>The resolver needs only the refresh token. It doesn’t get any arguments.<br>It fetches the refresh token from the cookie, and extracts the <strong>user id</strong> from it.<br>It then goes to find that user, and compare the cookie’s refresh token with the token stored in the user’s account. If they match, we are in business. The resolver generates new access and refresh tokens, stores new refresh token in the user’s account, and retrieve’s the user’s name and avatar link. It then sets the cookie again to hold the new refresh token, and returns all data that its muatation requires.<br>That’s it.</p>
+<p>Alright, in a bit more organized order:</p>
+<ol>
+<li>We extract refreshToken cookie from cookies if it exists, and handle the error if there is no refreshToken cookie</li>
+<li>We verify the refresh token, extract user id, and handle a possible error if no user id.</li>
+<li>We grab a client from the connection pool and start a transaction</li>
+<li>We get refresh token from the database, and throw an error if there is no refresh token in the database, or if the database refresh token is not the same as the cookie refresh token</li>
+<li>We generate new tokens and update the database refresh token and get user data from the database</li>
+<li>We set the refreshToken cookie, close the transaction and return data from the resolver.</li>
+<li>We deal with any possible errors in the catch block</li>
+</ol>
+<h4 id="Extract-refreshToken-cookie-from-cookies-if-it-exists-and-handle-the-error-if-there-is-no-refreshToken-cookie"><a href="#Extract-refreshToken-cookie-from-cookies-if-it-exists-and-handle-the-error-if-there-is-no-refreshToken-cookie" class="headerlink" title="Extract refreshToken cookie from cookies if it exists, and handle the error if there is no refreshToken cookie"></a>Extract refreshToken cookie from cookies if it exists, and handle the error if there is no refreshToken cookie</h4><p>Our <strong>refreshToken</strong> cookie lives in the <strong>cookies</strong> object on the <strong>request</strong> object, made available to resolvers via the <strong>context</strong> argument.</p>
+<p>The <strong>cookie-parser</strong> middleware that we installed and implemeneted in our Express app makes this possible, and now we can simply access our refreshToken cookie.</p>
+<p>It is also possible that our refreshToken cookie does not exist. This would happen if, for instance, a user has never logged in before, or they logged out last time when they used the app (we will implement this functionality later).<br>In case the refreshToken cookie is not found, we will throw an <strong>AuthenticationError</strong>, notifying the client that its loging session has expired.<br>This means that no refreshToken was found (maybe 10 days passed), and we need the client to login again, to receive a new refresh token.</p>
+<p>Note that the <strong>AuthenticationError</strong> doesn’t get passed a second argument, like we did with the <strong>UserInputError</strong>. It is becuase AuthenticationError doesn’t accept the second argument, so we work with what we have.</p>
+<p>Ok, here is the code:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// mutation.ts</span></span><br><span class="line">...</span><br><span class="line">refreshAccessToken: <span class="keyword">async</span> (</span><br><span class="line">    parent: any,</span><br><span class="line">    args: any,</span><br><span class="line">    context: &#123; <span class="attr">pgPool</span>: Pool; req: Request; res: Response &#125;</span><br><span class="line">) =&gt; &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123; refreshToken &#125; = &lt;&#123; refreshToken?: string &#125;&gt;context.req.cookies;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (!refreshToken) <span class="keyword">throw</span> <span class="keyword">new</span> AuthenticationError(<span class="string">&quot;Your session has expired. Please login again&quot;</span>);</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<h4 id="Verify-the-refresh-token-extract-user-id-and-handle-a-possible-error-if-no-user-id"><a href="#Verify-the-refresh-token-extract-user-id-and-handle-a-possible-error-if-no-user-id" class="headerlink" title="Verify the refresh token, extract user id, and handle a possible error if no user id."></a>Verify the refresh token, extract user id, and handle a possible error if no user id.</h4><p>Next up is actually getting that user id from the token.<br>We will use the <strong>jsonwebtoken</strong>‘s <strong>verify</strong> method to do this. The method checks out token to make sure it is valid, and if everything is good, it decodes the payload and returns an object with the payload.<br>If there is an issue with verification, the method will throw an error, which will be returned by the resolver.</p>
+<p>We already saw the <strong>verify</strong> method in action when we created functions to generate tokens, so we won’t go into it much.</p>
+<p>The user id that we get return is just one property in the returned object, so we destructure it, and then also check if it actually has a truthy value, before we move on to work with the database.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// mutation.ts</span></span><br><span class="line">...</span><br><span class="line"><span class="keyword">const</span> &#123; userId &#125; = &lt;&#123; <span class="attr">userId</span>: number | <span class="literal">undefined</span> &#125;&gt;(</span><br><span class="line">  verify(refreshToken, process.env.JWT_REFRESH_TOKEN_SECRET!)</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="comment">// const &#123; userId &#125; = &lt;&#123; userId: number | undefined &#125;&gt;(</span></span><br><span class="line"><span class="comment">//   verify(refreshToken, &quot;incorrect secret&quot;)</span></span><br><span class="line"><span class="comment">// );</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>(!userId) <span class="keyword">throw</span> <span class="keyword">new</span> AuthenticationError(<span class="string">&quot;Unknown user. Please login again&quot;</span>);</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<p><strong>Grab a client from the connection pool and start a transaction</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// mutation.ts</span></span><br><span class="line">...</span><br><span class="line"><span class="keyword">const</span> client = <span class="keyword">await</span> context.pgPool.connect();</span><br><span class="line"></span><br><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">  <span class="keyword">await</span> client.query(<span class="string">&quot;BEGIN&quot;</span>);</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<p><strong>Get refresh token from the database, and throw an error if there is no refresh token in the database, or if the database refresh token is not the same as the cookie refresh token</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// mutation.ts</span></span><br><span class="line">...</span><br><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">  <span class="keyword">await</span> client.query(<span class="string">&quot;BEGIN&quot;</span>);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> getUserRefreshTokenQuery = <span class="string">`</span></span><br><span class="line"><span class="string">    SELECT</span></span><br><span class="line"><span class="string">      users_login.refresh_token</span></span><br><span class="line"><span class="string">    FROM</span></span><br><span class="line"><span class="string">      users_login</span></span><br><span class="line"><span class="string">    WHERE</span></span><br><span class="line"><span class="string">      user_id = <span class="subst">$&#123;userId&#125;</span></span></span><br><span class="line"><span class="string">  `</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> &#123; <span class="attr">refresh_token</span>: dbRefreshToken &#125; = &lt;</span><br><span class="line">    &#123; <span class="attr">refresh_token</span>: string | <span class="literal">undefined</span> &#125;</span><br><span class="line">  &gt;<span class="keyword">await</span> client.query(getUserRefreshTokenQuery).then(<span class="function">(<span class="params">&#123; rows &#125;</span>) =&gt;</span> rows[<span class="number">0</span>]);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span>(!dbRefreshToken) <span class="keyword">throw</span> <span class="keyword">new</span> AuthenticationError(<span class="string">&quot;Your session has expired. Please login again.&quot;</span>)</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> (refreshToken !== dbRefreshToken)</span><br><span class="line">    <span class="keyword">throw</span> <span class="keyword">new</span> AuthenticationError(</span><br><span class="line">      <span class="string">&quot;Your session has expired. Please login again.&quot;</span></span><br><span class="line">    );</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<p><strong>Generate new tokens and update the database refresh token and get user data from the database</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// mutation.ts</span></span><br><span class="line">...</span><br><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">...</span><br><span class="line">    <span class="keyword">const</span> newAccessToken = generateAccessToken(userId);</span><br><span class="line">    <span class="keyword">const</span> newRefreshToken = generateRefreshToken(userId);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> updateUserRefreshTokenQuery = <span class="string">`</span></span><br><span class="line"><span class="string">        UPDATE users_login</span></span><br><span class="line"><span class="string">        SET</span></span><br><span class="line"><span class="string">        refresh_token = &#x27;<span class="subst">$&#123;newRefreshToken&#125;</span>&#x27;</span></span><br><span class="line"><span class="string">        WHERE</span></span><br><span class="line"><span class="string">        user_id = <span class="subst">$&#123;userId&#125;</span></span></span><br><span class="line"><span class="string">        RETURNING</span></span><br><span class="line"><span class="string">        user_id,</span></span><br><span class="line"><span class="string">        refresh_token;</span></span><br><span class="line"><span class="string">    `</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">await</span> client.query(updateUserRefreshTokenQuery);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> getUserInfoQuery = <span class="string">`</span></span><br><span class="line"><span class="string">        SELECT</span></span><br><span class="line"><span class="string">        first_name,</span></span><br><span class="line"><span class="string">        avatar_link</span></span><br><span class="line"><span class="string">        FROM</span></span><br><span class="line"><span class="string">        users_info</span></span><br><span class="line"><span class="string">        WHERE</span></span><br><span class="line"><span class="string">        user_info_id = <span class="subst">$&#123;userId&#125;</span></span></span><br><span class="line"><span class="string">    `</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> &#123; <span class="attr">first_name</span>: refreshFirstName, <span class="attr">avatar_link</span>: refreshAvatarLink &#125; = &lt;</span><br><span class="line">    &#123; <span class="attr">first_name</span>: string; avatar_link: string &#125;</span><br><span class="line">    &gt;<span class="keyword">await</span> client.query(getUserInfoQuery).then(<span class="function">(<span class="params">&#123; rows &#125;</span>) =&gt;</span> rows[<span class="number">0</span>]);</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<p><strong>Set the refreshToken cookie, close the transaction and return data from the resolver.</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// mutation.ts</span></span><br><span class="line">...</span><br><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">...</span><br><span class="line">context.res.cookie(<span class="string">&quot;refreshToken&quot;</span>, newRefreshToken, &#123;</span><br><span class="line">    expires: <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="keyword">new</span> <span class="built_in">Date</span>().setHours(<span class="keyword">new</span> <span class="built_in">Date</span>().getHours() + <span class="number">240</span>)),</span><br><span class="line">    httpOnly: <span class="literal">true</span>,</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">await</span> client.query(<span class="string">&quot;COMMIT&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">return</span> &#123;</span><br><span class="line">    first_name: refreshFirstName,</span><br><span class="line">    avatar_link: refreshAvatarLink,</span><br><span class="line">    access_token: newAccessToken,</span><br><span class="line">&#125;;</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<p><strong>Deal with any possible errors in the catch block</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// mutation.ts</span></span><br><span class="line">...</span><br><span class="line"><span class="keyword">catch</span> (error) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(error);</span><br><span class="line">    <span class="keyword">await</span> client.query(<span class="string">&quot;ROLLBACK&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> error;</span><br><span class="line">&#125;</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<p>Ok, that’s it. Let’s test this resolver too.</p>
+<p>To successfully test it, we just need to have a valid refreshToken cookie stored on our client. We can use the <strong>login</strong> mutation to get one, and then we can call the <strong>refreshAccessToken</strong> too.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">mutation &#123;</span><br><span class="line">    refreshAccessToken &#123;</span><br><span class="line">        first_name,</span><br><span class="line">        avatar_link,</span><br><span class="line">        access_token</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>The response we get is the same as the one for the <strong>login</strong> mutation, and this is exactly what we want:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">&quot;data&quot;</span>: &#123;</span><br><span class="line">        <span class="string">&quot;refreshAccessToken&quot;</span>: &#123;</span><br><span class="line">            <span class="string">&quot;first_name&quot;</span>: <span class="string">&quot;karlo&quot;</span>,</span><br><span class="line">            <span class="string">&quot;avatar_link&quot;</span>: <span class="string">&quot;https://source.unsplash.com/225x225/?portrait&quot;</span>,</span><br><span class="line">            <span class="string">&quot;access_token&quot;</span>: <span class="string">&quot;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjcsImlhdCI6MTU5NTA3NjI0NiwiZXhwIjoxNTk1MDc4MDQ2fQ.r9j1Uc-9IYXRJyjO3_7avb22HPVxCzqvwarWJehX7u8&quot;</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Should we test an error? Let’s do it. Let’s try to call this mutation with no refreshToken cookie present on our client.<br>We can delete the cookie by going to the browser’s developer tools, then to <strong>Application/Storage</strong> tab, <strong>Cookies</strong> option, select the url there (probably <strong>localhost:4000</strong>), and then right click on the refreshToken in the right-hand panel and delete the cookie.</p>
+<p>Try to run the mutation now.<br>Here is the response:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&#123;</span><br><span class="line"><span class="string">&quot;errors&quot;</span>: [</span><br><span class="line">    &#123;</span><br><span class="line">    <span class="string">&quot;message&quot;</span>: <span class="string">&quot;Your session has expired. Please login again&quot;</span>,</span><br><span class="line">    <span class="string">&quot;locations&quot;</span>: [</span><br><span class="line">        &#123;</span><br><span class="line">        <span class="string">&quot;line&quot;</span>: <span class="number">2</span>,</span><br><span class="line">        <span class="string">&quot;column&quot;</span>: <span class="number">3</span></span><br><span class="line">        &#125;</span><br><span class="line">    ],</span><br><span class="line">    <span class="string">&quot;path&quot;</span>: [</span><br><span class="line">        <span class="string">&quot;refreshAccessToken&quot;</span></span><br><span class="line">    ],</span><br><span class="line">    <span class="string">&quot;extensions&quot;</span>: &#123;</span><br><span class="line">        <span class="string">&quot;code&quot;</span>: <span class="string">&quot;UNAUTHENTICATED&quot;</span>,</span><br><span class="line">        <span class="string">&quot;exception&quot;</span>: &#123;</span><br><span class="line">        <span class="string">&quot;stacktrace&quot;</span>: [</span><br><span class="line">            <span class="string">&quot;AuthenticationError: Your session has expired. Please login again&quot;</span>,</span><br><span class="line">            <span class="string">&quot;    at D:\\WebDev\\Ja\\quickies\\GrapQL JWT\\graphql-jwt-api\\src\\gql\\resolvers\\mutation.ts:411:13&quot;</span>,</span><br><span class="line">            <span class="string">&quot;    at step (D:\\WebDev\\Ja\\quickies\\GrapQL JWT\\graphql-jwt-api\\src\\gql\\resolvers\\mutation.ts:44:23)&quot;</span>,</span><br><span class="line">            <span class="string">&quot;    at Object.next (D:\\WebDev\\Ja\\quickies\\GrapQL JWT\\graphql-jwt-api\\src\\gql\\resolvers\\mutation.ts:25:53)&quot;</span>,</span><br><span class="line">            <span class="string">&quot;    at D:\\WebDev\\Ja\\quickies\\GrapQL JWT\\graphql-jwt-api\\src\\gql\\resolvers\\mutation.ts:19:71&quot;</span>,</span><br><span class="line">            <span class="string">&quot;    at new Promise (&lt;anonymous&gt;)&quot;</span>,</span><br><span class="line">            <span class="string">&quot;    at __awaiter (D:\\WebDev\\Ja\\quickies\\GrapQL JWT\\graphql-jwt-api\\src\\gql\\resolvers\\mutation.ts:15:12)&quot;</span>,</span><br><span class="line">            <span class="string">&quot;    at refreshAccessToken (D:\\WebDev\\Ja\\quickies\\GrapQL JWT\\graphql-jwt-api\\src\\gql\\resolvers\\mutation.ts:404:59)&quot;</span>,</span><br><span class="line">            <span class="string">&quot;    at field.resolve (D:\\WebDev\\Ja\\quickies\\GrapQL JWT\\graphql-jwt-api\\node_modules\\graphql-extensions\\src\\index.ts:274:18)&quot;</span>,</span><br><span class="line">            <span class="string">&quot;    at field.resolve (D:\\WebDev\\Ja\\quickies\\GrapQL JWT\\graphql-jwt-api\\node_modules\\apollo-server-core\\src\\utils\\schemaInstrumentation.ts:103:18)&quot;</span>,</span><br><span class="line">            <span class="string">&quot;    at resolveFieldValueOrError (D:\\WebDev\\Ja\\quickies\\GrapQL JWT\\graphql-jwt-api\\node_modules\\graphql\\execution\\execute.js:486:18)&quot;</span></span><br><span class="line">        ]</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    &#125;</span><br><span class="line">],</span><br><span class="line"><span class="string">&quot;data&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;refreshAccessToken&quot;</span>: <span class="literal">null</span></span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Beautiful. It is exactly what we need.</p>
+<h3 id="Register-resolver"><a href="#Register-resolver" class="headerlink" title="Register resolver"></a>Register resolver</h3><p>The <strong>register</strong> resolver is not much more complicated than the <strong>login</strong> one.<br>We want it to check the database to see if there is a user using a provided email, we generate tokens, we set a cookie an store a refresh token in database, and we return the same data.</p>
+<p>Few differences that we have concern not allowing a new user to use an already used email address (we don’t neccessarily need to do this - we could aim to have a unique combination of a name and email, and set a constraing in PSQL to reflect that) and hashing and storing password. So not that much really.</p>
+<p>Let’s go over it:</p>
+<ol>
+<li>Destructure arguments and grab a client form the connection pool</li>
+<li>Make sure that the provided email is not in use</li>
+<li>Hash and store password, store email, and retrieve the new user’s id</li>
+<li>Generate refresh and access tokens, and store refesh token and user data in database</li>
+<li>Set cookie and return data from the resolver</li>
+<li>Deal with any possible errors</li>
+</ol>
+<p><strong>Destructure arguments and grab a client form the connection pool</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// mutation.ts</span></span><br><span class="line">...</span><br><span class="line">register: <span class="keyword">async</span> (</span><br><span class="line">    parent: any,</span><br><span class="line">    args: &#123;</span><br><span class="line">        email: string;</span><br><span class="line">        password: string;</span><br><span class="line">        first_name: string;</span><br><span class="line">        last_name: string;</span><br><span class="line">    &#125;,</span><br><span class="line">    context: &#123; <span class="attr">pgPool</span>: Pool; req: Request; res: Response &#125;</span><br><span class="line">) =&gt; &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123; email, password, first_name, last_name &#125; = args;</span><br><span class="line">    <span class="keyword">const</span> client = <span class="keyword">await</span> context.pgPool.connect();</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<p><strong>Make sure that the provided email is not in use</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// mutation.ts</span></span><br><span class="line">...</span><br><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">  <span class="keyword">await</span> client.query(<span class="string">&quot;BEGIN&quot;</span>);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> isUserExistQuery = <span class="string">`</span></span><br><span class="line"><span class="string">    SELECT</span></span><br><span class="line"><span class="string">      users_login.user_id</span></span><br><span class="line"><span class="string">    FROM</span></span><br><span class="line"><span class="string">      users_login</span></span><br><span class="line"><span class="string">    WHERE</span></span><br><span class="line"><span class="string">      users_login.email = &#x27;<span class="subst">$&#123;email&#125;</span>&#x27;;</span></span><br><span class="line"><span class="string">  `</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> isUserExistResponse: QueryResult&lt;&#123;</span><br><span class="line">    user_id: number;</span><br><span class="line">  &#125;&gt; = <span class="keyword">await</span> client.query(isUserExistQuery);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> (isUserExistResponse.rows.length &gt; <span class="number">0</span>)</span><br><span class="line">    <span class="keyword">throw</span> <span class="keyword">new</span> UserInputError(<span class="string">&quot;This email address is already in use.&quot;</span>, &#123;</span><br><span class="line">      type: <span class="string">&quot;EMAIL_IN_USE&quot;</span>,</span><br><span class="line">    &#125;);</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<p><strong>Hash and store password, store email, and retrieve the new user’s id</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// mutation.ts</span></span><br><span class="line">...</span><br><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">...</span><br><span class="line"><span class="keyword">const</span> hashedPassword = <span class="keyword">await</span> hash(password, <span class="number">10</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> registerUserLoginQuery = <span class="string">`</span></span><br><span class="line"><span class="string">    INSERT INTO</span></span><br><span class="line"><span class="string">      users_login(email, hash)</span></span><br><span class="line"><span class="string">    VALUES</span></span><br><span class="line"><span class="string">      (</span></span><br><span class="line"><span class="string">        &#x27;<span class="subst">$&#123;email&#125;</span>&#x27;,</span></span><br><span class="line"><span class="string">        &#x27;<span class="subst">$&#123;hashedPassword&#125;</span>&#x27;</span></span><br><span class="line"><span class="string">      )</span></span><br><span class="line"><span class="string">    RETURNING</span></span><br><span class="line"><span class="string">        user_id;</span></span><br><span class="line"><span class="string">`</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> &#123; user_id &#125;: &#123; <span class="attr">user_id</span>: number &#125; = <span class="keyword">await</span> client</span><br><span class="line">    .query(registerUserLoginQuery)</span><br><span class="line">    .then(<span class="function">(<span class="params">&#123; rows &#125;</span>) =&gt;</span> rows[<span class="number">0</span>]);</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<p><strong>Generate refresh and access tokens, and store refesh token and user data in database</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// mutation.ts</span></span><br><span class="line">...</span><br><span class="line"><span class="keyword">const</span> accessToken = generateAccessToken(user_id);</span><br><span class="line"><span class="keyword">const</span> refreshToken = generateRefreshToken(user_id);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> insertRefreshTokenQuery = <span class="string">`</span></span><br><span class="line"><span class="string">    UPDATE</span></span><br><span class="line"><span class="string">        users_login</span></span><br><span class="line"><span class="string">    SET</span></span><br><span class="line"><span class="string">        refresh_token = &#x27;<span class="subst">$&#123;refreshToken&#125;</span>&#x27;</span></span><br><span class="line"><span class="string">    WHERE</span></span><br><span class="line"><span class="string">        email = &#x27;<span class="subst">$&#123;email&#125;</span>&#x27;;</span></span><br><span class="line"><span class="string">`</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">await</span> client.query(insertRefreshTokenQuery);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> registerUserInfoQuery = <span class="string">`</span></span><br><span class="line"><span class="string">    INSERT INTO</span></span><br><span class="line"><span class="string">        users_info(user_info_id, first_name, last_name, avatar_link)</span></span><br><span class="line"><span class="string">    VALUES</span></span><br><span class="line"><span class="string">        (</span></span><br><span class="line"><span class="string">        <span class="subst">$&#123;user_id&#125;</span>,</span></span><br><span class="line"><span class="string">        &#x27;<span class="subst">$&#123;first_name&#125;</span>&#x27;,</span></span><br><span class="line"><span class="string">        &#x27;<span class="subst">$&#123;last_name&#125;</span>&#x27;,</span></span><br><span class="line"><span class="string">        &#x27;https://api.adorable.io/avatars/225/abott@adorable&#x27;</span></span><br><span class="line"><span class="string">        )</span></span><br><span class="line"><span class="string">    RETURNING</span></span><br><span class="line"><span class="string">        first_name as registered_first_name,</span></span><br><span class="line"><span class="string">        avatar_link as registered_avatar_link;</span></span><br><span class="line"><span class="string">`</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> &#123;</span><br><span class="line">registered_first_name,</span><br><span class="line">registered_avatar_link,</span><br><span class="line">&#125; = <span class="keyword">await</span> client.query(registerUserInfoQuery).then(<span class="function">(<span class="params">&#123; rows &#125;</span>) =&gt;</span> rows[<span class="number">0</span>]);</span><br><span class="line"></span><br><span class="line"><span class="keyword">await</span> client.query(<span class="string">&quot;COMMIT&quot;</span>);</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<p><strong>Set cookie and return data from the resolver</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// mutation.ts</span></span><br><span class="line">...</span><br><span class="line">context.res.cookie(<span class="string">&quot;refreshToken&quot;</span>, refreshToken, &#123;</span><br><span class="line">    expires: <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="keyword">new</span> <span class="built_in">Date</span>().setHours(<span class="keyword">new</span> <span class="built_in">Date</span>().getHours() + <span class="number">240</span>)),</span><br><span class="line">    httpOnly: <span class="literal">true</span>,</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">return</span> &#123;</span><br><span class="line">    first_name: registered_first_name,</span><br><span class="line">    avatar_link: registered_avatar_link,</span><br><span class="line">    access_token: accessToken,</span><br><span class="line">&#125;;</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<p><strong>Deal with any possible errors</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// mutation.ts</span></span><br><span class="line">...</span><br><span class="line">&#125; <span class="keyword">catch</span> (error) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(error);</span><br><span class="line">  <span class="keyword">await</span> client.query(<span class="string">&quot;ROLLBACK&quot;</span>);</span><br><span class="line">  <span class="keyword">return</span> error;</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<p>Another one down.</p>
+<p>You can go and test it yourself. You need to call <strong>register</strong> mutation, provide 4 arguments, and request some data back - <strong>first_name</strong>, <strong>avatar_link</strong>, or <strong>access_token</strong>, or all of them.<br>Go for it.</p>
+<h3 id="Logout-resolver"><a href="#Logout-resolver" class="headerlink" title="Logout resolver"></a>Logout resolver</h3><p>Logout resolver is very simple and short. Id doesn’t require any arguments, instead getting its data from the access token.</p>
+<p>It does only 3 things:</p>
+<ol>
+<li>Delete refresh token from the user’s account</li>
+<li>Delete refreshToken cookie</li>
+<li>Returns true or false</li>
+</ol>
+<p>Since it is very short and simple, here is the whole thing here.</p>
+<p>Note how we delete the <strong>refreshToken</strong> cookie: we set the value to empty string, and we backdate the <strong>expires</strong> property in the options object. This will cause the browser to remove the token.</p>
+<p>Also, see that <strong>AuthenticationError</strong>? It is thrown when the <strong>user</strong> property (made by <strong>express-jwt</strong> middleware) on the <strong>request</strong> object is null. It means that there is no access token in headers, or the access token is invalid. </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// nmutation.ts</span></span><br><span class="line">...</span><br><span class="line">logout: <span class="keyword">async</span> (</span><br><span class="line">    parent: any,</span><br><span class="line">    args: any,</span><br><span class="line">    context: &#123; <span class="attr">pgPool</span>: Pool; req: Request; res: Response &#125;</span><br><span class="line">) =&gt; &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123;</span><br><span class="line">    req: &#123; user &#125;,</span><br><span class="line">    &#125; = context;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (!user) <span class="keyword">throw</span> <span class="keyword">new</span> AuthenticationError(<span class="string">&quot;User is already logged out&quot;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> client = <span class="keyword">await</span> context.pgPool.connect();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">    <span class="keyword">await</span> client.query(<span class="string">&quot;BEGIN&quot;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> LOGOUT_QUERY = <span class="string">`</span></span><br><span class="line"><span class="string">        UPDATE users_login</span></span><br><span class="line"><span class="string">        SET</span></span><br><span class="line"><span class="string">        refresh_token = &#x27;d&#x27;</span></span><br><span class="line"><span class="string">        WHERE</span></span><br><span class="line"><span class="string">        user_id = <span class="subst">$&#123;user.userId&#125;</span></span></span><br><span class="line"><span class="string">    `</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">await</span> client.query(LOGOUT_QUERY);</span><br><span class="line"></span><br><span class="line">    context.res.cookie(<span class="string">&quot;refreshToken&quot;</span>, <span class="string">&quot;&quot;</span>, &#123;</span><br><span class="line">        expires: <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="keyword">new</span> <span class="built_in">Date</span>().setHours(<span class="keyword">new</span> <span class="built_in">Date</span>().getHours() - <span class="number">240</span>)),</span><br><span class="line">        httpOnly: <span class="literal">true</span>,</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">await</span> client.query(<span class="string">&quot;COMMIT&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line">    &#125; <span class="keyword">catch</span> (error) &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(error);</span><br><span class="line">        <span class="keyword">await</span> client.query(<span class="string">&quot;ROLLBACK&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line">    &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">        client.release();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<p>Let’s test the logout mutation. Since the mutuation requires request headers to have an access token, we need to supply one. </p>
+<p>So make the login mutation first, and copy that access_token from the response. Nice. We are logged in now.<br>Then open the <strong>HTTP HEADERS</strong> bar on the bottom of your GraphQL playground window, and enter the following in the code area:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">&quot;authorization&quot;</span>: <span class="string">&quot;Bearer &lt;YOUR_ACCESS_TOKEN_WITHOUT_THESE_POINTY_BRACKETS&gt;&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>In the same GraphQL Playground tab make a logout mutation:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mutation &#123;</span><br><span class="line">    logout</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>And what do we get? </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">&quot;data&quot;</span>: &#123;</span><br><span class="line">        <span class="string">&quot;logout&quot;</span>: <span class="literal">true</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Adjust-existing-resolvers"><a href="#Adjust-existing-resolvers" class="headerlink" title="Adjust existing resolvers"></a>Adjust existing resolvers</h3><p>To adjust <strong>editUser</strong>, <strong>deleteUser</strong>, and <strong>newUser</strong> resolvers, we just have to make sure there is a valid <strong>user</strong> object on the <strong>request</strong> object. The <strong>express-jwt</strong> does majority work for us, and we only have to check to make sure this object is not null, to allow the resolver to proceed with its code. </p>
+<p>Here are relevant snippets from all resolvers combined:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// mutation.ts</span></span><br><span class="line">...</span><br><span class="line">newUser: <span class="keyword">async</span> (</span><br><span class="line">    parent: any,</span><br><span class="line">    args: newUserArgs,</span><br><span class="line">    context: &#123; <span class="attr">pgPool</span>: Pool; req: Request; res: Response &#125;</span><br><span class="line">) =&gt; &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123; <span class="attr">req</span>: &#123; user &#125; &#125; = context;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> (user === <span class="literal">null</span>) <span class="keyword">throw</span> <span class="keyword">new</span> AuthenticationError(<span class="string">&quot;Please login to add a new profile&quot;</span>);</span><br><span class="line">...</span><br><span class="line">editUser: <span class="keyword">async</span> (</span><br><span class="line">    parent: any,</span><br><span class="line">    args: editUserArgs,</span><br><span class="line">    context: &#123; <span class="attr">pgPool</span>: Pool; req: Request &#125;</span><br><span class="line">) =&gt; &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123; <span class="attr">req</span>: &#123; user &#125; &#125; = context;</span><br><span class="line">    <span class="keyword">if</span> (user === <span class="literal">null</span>) <span class="keyword">throw</span> <span class="keyword">new</span> AuthenticationError(<span class="string">&quot;Please login to edit profile&quot;</span>);</span><br><span class="line">...</span><br><span class="line">deleteUser: <span class="keyword">async</span> (</span><br><span class="line">    parent: any,</span><br><span class="line">    args: &#123; <span class="attr">user_id</span>: number &#125;,</span><br><span class="line">    context: &#123; <span class="attr">pgPool</span>: Pool; req: Request &#125;</span><br><span class="line">) =&gt; &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123; <span class="attr">req</span>: &#123; user &#125; &#125; = context;</span><br><span class="line">    <span class="keyword">if</span> (user === <span class="literal">null</span>) <span class="keyword">throw</span> <span class="keyword">new</span> AuthenticationError(<span class="string">&quot;Please login to edit profile&quot;</span>);</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<p>Thats it. Go and test these resolvers with and without access tokens.</p>
+<!-- End Step Content -->
+
+<!-- Project Information -->
+
+<h2 id="Project-Information"><a href="#Project-Information" class="headerlink" title="Project Information"></a>Project Information</h2><h3 id="Available-at"><a href="#Available-at" class="headerlink" title="Available at"></a>Available at</h3><p><a target="_blank" rel="noopener" href="https://github.com/ikaem/graphql-jwt-react.git">Github</a> </p>
+<h3 id="Goals"><a href="#Goals" class="headerlink" title="Goals"></a>Goals</h3><ol>
+<li>Create an app that uses GraphQL and JWT to log in and log out users</li>
+<li>Use PSQL for database</li>
+<li>Use Typescript on both ends</li>
+<li>Use Apollo Client Cache features to store JWT and user info on front end</li>
+<li>Implement protected routes, so that only logged users can access certain pages</li>
+</ol>
+<h3 id="Steps"><a href="#Steps" class="headerlink" title="Steps"></a>Steps</h3><ol>
+<li>Create types and queries</li>
+<li>Create functions to generate JSON Web Tokens</li>
+<li>Set up middleware to check if tokens are valid</li>
+<li>Set up Cors and Apollo Express be able to deal with tokens and cookies</li>
+<li><strong>Create resolvers</strong></li>
+<li>Set up Apollo Client so we can work with cookies and headers</li>
+<li>Set up Apollo Client cache</li>
+<li>Create login functionality</li>
+<li>Create logout functionality</li>
+<li>Create functionality to automatically log in user if they return to our app</li>
+<li>Enable silent refresh of access token when it reaches its expiry period</li>
+<li>Create register functionality</li>
+</ol>
+<h3 id="Tech-and-Tools"><a href="#Tech-and-Tools" class="headerlink" title="Tech and Tools"></a>Tech and Tools</h3><ol>
+<li>React</li>
+<li>Node</li>
+<li>PSQL</li>
+<li>GraphQL</li>
+<li>Apollo Server Express</li>
+<li>Apollo Client</li>
+<li>Bcrypt</li>
+<li>TypeScript</li>
+<li>Express</li>
+<li>JWT</li>
+</ol>
+<h3 id="Experience-with-Tech-amp-Tools"><a href="#Experience-with-Tech-amp-Tools" class="headerlink" title="Experience with Tech &amp; Tools"></a>Experience with Tech &amp; Tools</h3><p>This project is a continuation of the <a href="categories/graphql-react-psql/">Graphql &amp; React &amp; Psql series</a>. There, I worked with TS, PSQL and GQL, so I’m ok with that, I guess.<br>I have done some JWT things before, and here I wanted to try it with GQL.</p>
+<h2 id="DISCLAIMER"><a href="#DISCLAIMER" class="headerlink" title="DISCLAIMER"></a>DISCLAIMER</h2><p>Don’t take any of this seriously and as a matter-of-fact. These are my notes. It might look like I am trying to teach something to someone. I am not.</p>
+
+
+                
+
+
+                <!-- Cover image credit -->
+                
+                    <p class="image-credit-link">
+                        Cover image by <strong>
+                            <a target="_blank" rel="noopener" href="https://unsplash.com/@schoelderle?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
+                                Greta Schölderle Møller
+                            </a>
+                        </strong>
+                    </p>
+
+                
+
+  
+
+            </div>
+            
+            <!-- Custom placed tags -->
+            <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                
+                    
+
+
+<a href="/angry-chaired-blog/tags/jwt/">#jwt</a> <a href="/angry-chaired-blog/tags/graphql/">#graphql</a> <a href="/angry-chaired-blog/tags/resolvers/">#resolvers</a>
+
+
+                
+            </div>
+            <!--  -->
+
+
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+
+            <!-- Hyvor comments -->
+
+            <!-- End of Hyvor comments -->
+        </div>
+    </div>
+</article>
+
+
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2020 kaem<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
