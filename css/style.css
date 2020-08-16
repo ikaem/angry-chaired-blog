@@ -228,7 +228,6 @@ hr.small {
 }
 .intro-header .post-heading h1 {
   font-size: 35px;
-  text-shadow: 2px 1px 1px #808080;
 }
 .intro-header .post-heading .subheading,
 .intro-header .post-heading .meta {
@@ -244,7 +243,6 @@ hr.small {
   font-style: italic;
   font-weight: 300;
   font-size: 20px;
-  text-shadow: 1px 1px 1px #808080;
 }
 .intro-header .post-heading .meta a {
   color: #fff;
@@ -301,9 +299,6 @@ hr.small {
     font-size: 36px;
   }
 }
-p.post-meta {
-  margin: 10px 0 20px;
-}
 div.post-preview__featured-image-container {
   width: 100%;
   height: 200px;
@@ -349,19 +344,6 @@ div.post-preview__featured-image-container > img {
 .post-categories a:active {
   text-decoration: none;
   border-bottom: none;
-}
-.image-credit-link {
-  text-transform: uppercase;
-  font-size: 16px;
-  font-style: italic;
-  text-align: left;
-  border-top: 1px solid #000;
-  display: inline-block;
-  padding-top: 4px;
-  padding-right: 8px;
-}
-.image-credit-link a {
-  text-decoration: none;
 }
 .archive-before-pagination {
   height: 30px;
