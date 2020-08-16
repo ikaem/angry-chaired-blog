@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="Inexperienced and curious pokes into the sprawling world of web development "/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="kaem"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="GraphQL &amp; React &amp; PSQL: Using node-postgres"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Inexperienced and curious pokes into the sprawling world of web development "/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Angry Chaired Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://ikaem.github.io/angry-chaired-blog/angry-chaired-blog/images/header-image.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://ikaem.github.io/angry-chaired-blog/angry-chaired-blog/images/header-image.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>GraphQL &amp; React &amp; PSQL: Using node-postgres - Angry Chaired Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/angry-chaired-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+    <link rel="icon" href="/angry-chaired-blog/images/favicon.ico"/>
+    
+
+<meta name="generator" content="Hexo 5.0.2"><link rel="alternate" href="/angry-chaired-blog/atom.xml" title="Angry Chaired Blog" type="application/atom+xml">
+</head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/angry-chaired-blog/">Angry Chaired Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/about">
+                            
+                                About
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a target="_blank" rel="noopener" href="https://angrychaired.surge.sh">
+                            
+                                <i class="fa fa-user fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a target="_blank" rel="noopener" href="https://github.com/ikaem/">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a href="/angry-chaired-blog/atom.xml">
+                            
+                                <i class="fa fa-rss fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/angry-chaired-blog/images/header-image.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>GraphQL & React & PSQL: Using node-postgres</h1>
+
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            16/08/2020
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/angry-chaired-blog/categories/graphql-react-psql/">graphql & react & psql</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <!-- Step Content Start -->
+
+<h4 id="Part-3-of-10-in-GraphQL-amp-React-amp-PSQL"><a href="#Part-3-of-10-in-GraphQL-amp-React-amp-PSQL" class="headerlink" title="Part 3 of 10 in GraphQL &amp; React &amp; PSQL"></a>Part 3 of 10 in GraphQL &amp; React &amp; PSQL</h4><p>Node-postgres is a tool to connect Node.js with PSQL database and interact with it. That is what I know about it in terms of describing it. It is very easy to use, and it uses PSQL syntax for queries.<br>There is another tool that I tried called Knex. Knext has its methods for inserting, selecting, updating, transactions and so on. It feels like I have to learn another language.<br>With node-postgres, I can just use PSQL knowledge that I have. </p>
+<a id="more"></a>
+
+<h4 id="See-Project-Information"><a href="#See-Project-Information" class="headerlink" title="See Project Information"></a>See <a href="#Project-Information">Project Information</a></h4><h2 id="Step-1-Use-node-postgres-to-connect-backend-to-database"><a href="#Step-1-Use-node-postgres-to-connect-backend-to-database" class="headerlink" title="Step 1: Use node-postgres to connect backend to database"></a>Step 1: Use node-postgres to connect backend to database</h2><p>Here is what we will do:</p>
+<ol>
+<li>Install node-postgres</li>
+<li>Setup a connection</li>
+<li>Create test REST routes to get all users, and create a new user</li>
+</ol>
+<h3 id="Install-node-postgres"><a href="#Install-node-postgres" class="headerlink" title="Install node-postgres"></a>Install node-postgres</h3><p>Install node-pg with:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i pg</span><br></pre></td></tr></table></figure>
+
+<p>Install pg TS types as a dev dependency</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i -D @types/pg</span><br></pre></td></tr></table></figure>
+
+<h3 id="Setup-a-connection-between-Express-server-and-PSQL-database"><a href="#Setup-a-connection-between-Express-server-and-PSQL-database" class="headerlink" title="Setup a connection between Express server and PSQL database"></a>Setup a connection between Express server and PSQL database</h3><p>Ok, so node-postgres gives us two options to create a connection to a database</p>
+<p><strong>Client connection</strong></p>
+<ul>
+<li>It creates a client on the server every time a request to the database is created</li>
+<li>Once the request is done, the client needs to close the connection to the server</li>
+<li>Apparently, there is an issue with this approach, that the server has hard time coping with large number of requests, bc it needs to create lot of connections. Or something like that.</li>
+</ul>
+<p><strong>Pool connection</strong></p>
+<ul>
+<li>Apparently, this is a better approach. It creates a pool of clients to connect to the database, and then randomly assigns those clients to frontend requests that come to the server. Once the request is done, it automatically closes connection, and returns that client to the pool of connections. Or something like that. This is the approach we will use. </li>
+</ul>
+<p>We will create a new folder inside ‘src’ folder, and we will call it ‘pg’. We will use this folder to store all database related files.<br>Spoiler: it is just this one file for now. </p>
+<p>Inside this folder we create a file pg-connection.ts, and put the following data in it, and export it to create a module:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// pg/pg-connection.ts</span></span><br><span class="line"><span class="keyword">import</span> &#123; Pool &#125; <span class="keyword">from</span> <span class="string">&quot;pg&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> pgPool: Pool = <span class="keyword">new</span> Pool(&#123;</span><br><span class="line">    host: <span class="string">&quot;localhost&quot;</span>,</span><br><span class="line">    port: <span class="number">5432</span>,</span><br><span class="line">    user: <span class="string">&quot;postgres&quot;</span>,</span><br><span class="line">    password: <span class="string">&quot;karlo&quot;</span>,</span><br><span class="line">    database: <span class="string">&quot;gql&quot;</span>,</span><br><span class="line">    max: <span class="number">20</span>,</span><br><span class="line">    idleTimeoutMillis: <span class="number">30000</span>,</span><br><span class="line">    connectionTimeoutMillis: <span class="number">20000</span>,</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> pgPool;</span><br></pre></td></tr></table></figure>
+
+<p>So:<br>We import the Pool class from the node-postgres package</p>
+<p>Then we create a new instance of the Pool class, which is our connection to the db now<br>Pool class accepts an argument of an object, with the following properties</p>
+<ol>
+<li>host - indicating the url of our database - something like that</li>
+<li>port - on which the database is</li>
+<li>user - username with which we access our database</li>
+<li>password - password with whih we access the database. Note that we should not put the password directly in the code. Instead, it would probably be much better to put the password in an environmental variable, and get it from there. We will not go into it here. </li>
+<li>database - name of the database we will be using</li>
+<li>max - number of client connections the pool will hold</li>
+<li>idleTimeoutMillis - number of miliseconds a client that is connected must sit in a pool and not be used, before it is disconnected from the database and returned to the pool?</li>
+<li>connectionTimeoutMillis - according to the documenttion, this is a number of miliseconds to wait before timing out when connecting a new client. In my words, it is time to wait for a free client from the pool before giving up. </li>
+</ol>
+<p>Next, we import module with the created pool into our server.ts, to be used for connecting to the database.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// server.ts</span></span><br><span class="line"><span class="keyword">import</span> cors <span class="keyword">from</span> <span class="string">&quot;cors&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> express <span class="keyword">from</span> <span class="string">&quot;express&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> pgPool <span class="keyword">from</span> <span class="string">&quot;./pg/pg-connection&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> app = express();</span><br><span class="line"></span><br><span class="line">app.use(cors());</span><br><span class="line"></span><br><span class="line">app.listen(<span class="number">4000</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">`the server is listening on port 4000`</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>Great, now we can access the database.</p>
+<h3 id="Create-test-REST-routes-to-get-all-users-and-create-a-new-user"><a href="#Create-test-REST-routes-to-get-all-users-and-create-a-new-user" class="headerlink" title="Create test REST routes to get all users, and create a new user"></a>Create test REST routes to get all users, and create a new user</h3><h4 id="Bcrypt"><a href="#Bcrypt" class="headerlink" title="Bcrypt"></a>Bcrypt</h4><p>Prior to actually making a few simple REST routes, we will make a quick stop to learn how to work with bcrypt.<br>Bcrypt is a package commonly used to hash (encrypt?) password so they are stored as a string of random characters instead of a human readable text that the user provides when registering. This way they are more secure.  </p>
+<p>The way it is normally used, is that it provides few methods to deal with passwords. For instance, its <strong>hash</strong> method is used to create encrypted (hashed) passwords. It accepts an argument of the actual password we are trying to hash, and a number of salt rounds. A salt round is, way I understand it, time used to calculate the hash - the encrypted string that represents the password. I am probably wrong about it. </p>
+<p>With bcrypt, async way of generated a password is the recommended one, and used in an async/await function, it looks like this:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> bcrypt <span class="keyword">from</span> <span class="string">&quot;bcrypt&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> wrapperAsyncFunction = <span class="keyword">async</span>() =&gt; &#123;</span><br><span class="line">    <span class="comment">// &quot;karlo&quot; is our password in human readable form, and 10 is the number of salt rounds. </span></span><br><span class="line">    <span class="comment">// 10 is the default number of salt rounds</span></span><br><span class="line">    <span class="keyword">const</span> hashedPassword = <span class="keyword">await</span> bcrypt.hash(<span class="string">&quot;karlo&quot;</span>, <span class="number">10</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// now we can store the password in a database</span></span><br><span class="line">    someDatabase.someMethodForStoringPassword(hashedPassword);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>We can also use bcrypt to check if the password that a user provides (for instance, when logging in), matches that one that is stored in their profile - if it is a valid password.</p>
+<p>We use the async <strong>compare</strong> method for this, and again, we can use it inside the async/await function. </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> bcrypt <span class="keyword">from</span> <span class="string">&quot;bcrypt&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> wrapperAsyncFunction = <span class="keyword">async</span>() =&gt; &#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// compare method returns true or false in this case</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> isPasswordValid = <span class="keyword">await</span> bcrypt.compare(userProvidedPassword, hashFromDatabase);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// now we can login the user if the password is true, and login the user, or not login</span></span><br><span class="line">    <span class="keyword">if</span>(isPasswordValid) login();</span><br><span class="line">    <span class="keyword">if</span>(!isPasswordValid) <span class="built_in">console</span>.log(<span class="string">&quot;passwords do not match&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="REST-Router-module"><a href="#REST-Router-module" class="headerlink" title="REST Router module"></a>REST Router module</h4><p>Ok, lets make a few simple REST routes, and use them to access the database and send the data to the client asking for it. </p>
+<p>We could create the routes directly in the server.ts file, but lets put them in their own module as well, to have clearer code. </p>
+<ol>
+<li>Create file rest-router.ts in src folder</li>
+<li>Import Router from express into it and initialize it into a router variable</li>
+<li>We will also import out Pool module into it. I know there is already one in the server.ts, but we will not use that one for the test REST routes.<br>(Even though we could. There is a <a id="q1-ctx" href="#q1">question</a> for you?)</li>
+<li>We are also importing hash method from bcrypt that we will use when creating a new user, to encrypt password before we store it into database.</li>
+<li>Next, we create routes - two routes in this case, and use the pool to get or send data from and to the database.</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// rest-router.ts</span></span><br><span class="line"><span class="keyword">import</span> &#123; Router &#125; <span class="keyword">from</span> <span class="string">&quot;express&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; hash, hashSync, compare &#125; <span class="keyword">from</span> <span class="string">&quot;bcrypt&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> pgPool <span class="keyword">from</span> <span class="string">&quot;./pg/pg-connection&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> router = Router();</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> getUser = router.get(<span class="string">&quot;/user/:id&quot;</span>, <span class="keyword">async</span>(req, res) =&gt; &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123; id &#125; = req.params;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">const</span> userQuery = <span class="string">`</span></span><br><span class="line"><span class="string">            SELECT </span></span><br><span class="line"><span class="string">                users_login.user_id,</span></span><br><span class="line"><span class="string">                users_login.email,</span></span><br><span class="line"><span class="string">                users_info.first_name,</span></span><br><span class="line"><span class="string">                users_info.last_name,</span></span><br><span class="line"><span class="string">                users_info.city,</span></span><br><span class="line"><span class="string">                users_info.website,</span></span><br><span class="line"><span class="string">                users_info.&quot;age&quot;,</span></span><br><span class="line"><span class="string">                users_info.hobbies,</span></span><br><span class="line"><span class="string">                countries.country_id,</span></span><br><span class="line"><span class="string">                countries.country_name</span></span><br><span class="line"><span class="string">            FROM </span></span><br><span class="line"><span class="string">                users_login</span></span><br><span class="line"><span class="string">            </span></span><br><span class="line"><span class="string">            JOIN </span></span><br><span class="line"><span class="string">                users_info</span></span><br><span class="line"><span class="string">            ON </span></span><br><span class="line"><span class="string">                users_login.user_id = users_info.user_info_id</span></span><br><span class="line"><span class="string">            </span></span><br><span class="line"><span class="string">            JOIN </span></span><br><span class="line"><span class="string">                countries </span></span><br><span class="line"><span class="string">            ON </span></span><br><span class="line"><span class="string">                users_info.country = countries.country_id </span></span><br><span class="line"><span class="string">            </span></span><br><span class="line"><span class="string">            WHERE</span></span><br><span class="line"><span class="string">                users_login.user_id = <span class="subst">$&#123;+id&#125;</span>;</span></span><br><span class="line"><span class="string">    </span></span><br><span class="line"><span class="string">        `</span></span><br><span class="line">        <span class="keyword">const</span> userSelect = <span class="keyword">await</span> pgPool.query(userQuery);</span><br><span class="line">        res.json(&#123;<span class="attr">data</span>: userSelect.rows[<span class="number">0</span>]&#125;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">catch</span>(error) &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(error);</span><br><span class="line">        res.json(error);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> newUser = router.post(<span class="string">&quot;/newuser&quot;</span>, <span class="keyword">async</span>(req, res) =&gt; &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123; email, password, first_name, last_name, country, city, website, age, hobbies &#125; = req.body;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> client = <span class="keyword">await</span> pgPool.connect();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        <span class="keyword">const</span> hashed = <span class="keyword">await</span> hash(password, <span class="number">10</span>);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">await</span> client.query(<span class="string">&quot;BEGIN&quot;</span>);</span><br><span class="line">        <span class="keyword">const</span> users_loginQuery = <span class="string">`</span></span><br><span class="line"><span class="string">            INSERT INTO users_login (email, hash)</span></span><br><span class="line"><span class="string">            VALUES (&#x27;<span class="subst">$&#123;email&#125;</span>&#x27;, &#x27;<span class="subst">$&#123;hashed&#125;</span>&#x27;)</span></span><br><span class="line"><span class="string">            RETURNING user_id, email, hash;</span></span><br><span class="line"><span class="string">        `</span>;</span><br><span class="line">        <span class="keyword">const</span> users_loginInsert = <span class="keyword">await</span> client.query(users_loginQuery);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">const</span> users_infoQuery = <span class="string">`</span></span><br><span class="line"><span class="string">            INSERT INTO users_info(    </span></span><br><span class="line"><span class="string">                user_info_id,</span></span><br><span class="line"><span class="string">                first_name,</span></span><br><span class="line"><span class="string">                last_name,</span></span><br><span class="line"><span class="string">                country,</span></span><br><span class="line"><span class="string">                city,</span></span><br><span class="line"><span class="string">                website,</span></span><br><span class="line"><span class="string">                &quot;age&quot;,</span></span><br><span class="line"><span class="string">                hobbies</span></span><br><span class="line"><span class="string">            )</span></span><br><span class="line"><span class="string">            VALUES (</span></span><br><span class="line"><span class="string">                <span class="subst">$&#123;users_loginInsert.rows[<span class="number">0</span>].user_id&#125;</span>,</span></span><br><span class="line"><span class="string">                &#x27;<span class="subst">$&#123;first_name&#125;</span>&#x27;,</span></span><br><span class="line"><span class="string">                &#x27;<span class="subst">$&#123;last_name&#125;</span>&#x27;,</span></span><br><span class="line"><span class="string">                <span class="subst">$&#123;+country&#125;</span>,</span></span><br><span class="line"><span class="string">                &#x27;<span class="subst">$&#123;city&#125;</span>&#x27;,</span></span><br><span class="line"><span class="string">                &#x27;<span class="subst">$&#123;website&#125;</span>&#x27;,</span></span><br><span class="line"><span class="string">                <span class="subst">$&#123;+age&#125;</span>,</span></span><br><span class="line"><span class="string">                &#x27;&#123;<span class="subst">$&#123;hobbies&#125;</span>&#125;&#x27;</span></span><br><span class="line"><span class="string">            )</span></span><br><span class="line"><span class="string">            RETURNING                 </span></span><br><span class="line"><span class="string">                first_name,</span></span><br><span class="line"><span class="string">                last_name,</span></span><br><span class="line"><span class="string">                country,</span></span><br><span class="line"><span class="string">                city,</span></span><br><span class="line"><span class="string">                website,</span></span><br><span class="line"><span class="string">                &quot;age&quot;,</span></span><br><span class="line"><span class="string">                hobbies;</span></span><br><span class="line"><span class="string">        `</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">const</span> users_infoInsert = <span class="keyword">await</span> client.query(users_infoQuery);</span><br><span class="line">        <span class="keyword">await</span> client.query(<span class="string">&quot;COMMIT&quot;</span>);</span><br><span class="line"></span><br><span class="line">        res.json(&#123; <span class="attr">data</span>: &#123;...users_loginInsert.rows[<span class="number">0</span>], ...users_infoInsert.rows[<span class="number">0</span>] &#125;&#125;);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">catch</span>(error)&#123;</span><br><span class="line">        <span class="keyword">await</span> client.query(<span class="string">&quot;ROLLBACK&quot;</span>);</span><br><span class="line">        <span class="built_in">console</span>.log(error);</span><br><span class="line">        res.json(error);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">finally</span> &#123;</span><br><span class="line">        client.release();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> [</span><br><span class="line">    getUser,</span><br><span class="line">    newUser</span><br><span class="line">];</span><br></pre></td></tr></table></figure>
+
+<p>Ok, so summary is in order. I am skiping creation of the actual REST routes, and go to dealing with PSQL.</p>
+<p>We use try and catch blocks to put our async code in. </p>
+<p>First we have the getUser route, which returns a specific user. </p>
+<p>We create a variable that will hold our query. It is a variable that evaluates to a string, but wrapped in backticks, so we can use variables in it as well. </p>
+<ol>
+<li>The string holds query to select user information from users_login</li>
+<li>Joins users_info table via user_login.user_id and user_info.user_info_id - PRIMARY KEY and FOREIGN KEY relationship between the tables to make sure we get information about the same user</li>
+<li>Then it also joins country information via country_id PRIMARY KEY - FOREIGN KEY relationship between countries and user_info tables. </li>
+<li>Finaly, it users id variable (cast as a number) to specify user_id of the user we are looking for.</li>
+</ol>
+<p>Then, we use <strong>query</strong> method available on our pool connection. It accepts our query variable, and returns data we need.<br>Our data is actually contained in the <strong>rows</strong> array available on our response, and in this case it is the first (and only) item in the array. If there were more rows to return, we would have had more items in the rows array. </p>
+<p>The <strong>catch</strong> block catches any errors which might happen in the <strong>try</strong> block.</p>
+<p>In case of the newUser route, we do things a bit differently.<br>We actually pick one of the connection clients from the connection pool, and assign it to variable <strong>client</strong>.</p>
+<ol>
+<li>We do this because of the transaction we use to insert the user data into different tables. </li>
+<li>We want to make sure to use the same client to do the whole transaction process.</li>
+<li>If we did not do this, and used <strong>pool.query</strong> for each transaction part, we would get a new, random client, for each transaction part. And that is not good. Apparently. </li>
+</ol>
+<p>Inside try block, we created hashed password with bcrypt’s <strong>hash</strong> method.<br>Then, we start transaction via client.query.</p>
+<p>Next, we create a query string for the first insert</p>
+<ol>
+<li>There is a RETURNING keyword at the end of this query. </li>
+<li>RETURNING just returns data we specify after our insert. In this case, we want user_id, email, and hash.</li>
+</ol>
+<p>We didn’t use RETURNING in the DBeaver’s SQL editor, because, frankly, I couldn’t figure out if I could return stuff after each insert, so I could use them in next insert.</p>
+<p>Now we can do actual query with our client, passing our query variable to the client’s query method.</p>
+<ol>
+<li>Because of RETURNING, our users_loginInsert variable now contains (if no error) user_id, email and hash</li>
+<li>We can now use the user_id in the users_loginInsert to insert it into the users_info table, and have the user’s data connected accross the two tables.</li>
+</ol>
+<p>Next query string and actual query is obvious<br>Next, we finish the transaction with COMMIT</p>
+<p>Now, in case of error, we do ROLLBACK in the <strong>catch</strong> block<br>Finally, we use <strong>finally</strong> block to release the used connection client back to the client pool.</p>
+<p>And, second finally, we create the module, by exporting the create routes as an array of routes</p>
+<ol>
+<li>I discovered this by chance. First I tried it as an object, to have the module export multiple routes, but it didn’t work. Array of routes worked fine.</li>
+</ol>
+<p>Finally, we import our module into the server.ts, and can now get specific user, or create user via postman application, for instance. </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// src/server.ts</span></span><br><span class="line">app.use(restRouter);</span><br></pre></td></tr></table></figure>
+
+<!-- End Step Content -->
+<!-- Project Information -->
+
+<h2 id="Project-Information"><a href="#Project-Information" class="headerlink" title="Project Information"></a>Project Information</h2><h3 id="Available-at"><a href="#Available-at" class="headerlink" title="Available at"></a>Available at</h3><p><a target="_blank" rel="noopener" href="https://github.com/ikaem/graphql-jwt-react.git">Github</a> </p>
+<h3 id="Goals"><a href="#Goals" class="headerlink" title="Goals"></a>Goals</h3><ol>
+<li>Create an app that uses GrapqhQL on frontend and backend</li>
+<li>Use PSQL for database</li>
+<li>Use Typescript on both ends</li>
+<li>The app should be hold a list of users that can be created, viewed, edited, and deleted.</li>
+</ol>
+<h3 id="Steps"><a href="#Steps" class="headerlink" title="Steps"></a>Steps</h3><ol>
+<li>Make simple Node and Express server with TypeScript</li>
+<li>Create a PostgreSQL database and tables that hold user info</li>
+<li><strong>Use node-postgres to connect backend to database</strong></li>
+<li>Set Apollo Express Server</li>
+<li>Create GQL types, queries and resolvers on backend</li>
+<li>Pause</li>
+<li>Make simple frontend with React and TS</li>
+<li>Set Apollo Client on frontend</li>
+<li>Establish frontend and backend communication via Apollo Client</li>
+<li>Create pagination</li>
+</ol>
+<h3 id="Tech-and-Tools"><a href="#Tech-and-Tools" class="headerlink" title="Tech and Tools"></a>Tech and Tools</h3><ol>
+<li>React</li>
+<li>React Router</li>
+<li>Styled Components</li>
+<li>Node</li>
+<li>PSQL</li>
+<li>GraphQL</li>
+<li>Apollo Server Express</li>
+<li>Apollo Client</li>
+<li>Bcrypt</li>
+<li>TypeScript</li>
+<li>Express</li>
+</ol>
+<h3 id="Experience-with-Tech-amp-Tools"><a href="#Experience-with-Tech-amp-Tools" class="headerlink" title="Experience with Tech &amp; Tools"></a>Experience with Tech &amp; Tools</h3><p>I am new to Typescript, have super little experience with PSQL and GQL and just a tiny bit more skills with Node and Express.<br>I am relatively ok with JS, React and other frontend stuff from the list but I am no way even close to be a seasoned frontend person.</p>
+<h2 id="DISCLAIMER"><a href="#DISCLAIMER" class="headerlink" title="DISCLAIMER"></a>DISCLAIMER</h2><p>Don’t take any of this seriously and as a matter-of-fact. These are my notes. It might look like I am trying to teach something to someone. I am not.</p>
+
+
+                
+            </div>
+            
+            <!-- Custom placed tags -->
+            <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                
+                    
+
+
+<a href="/angry-chaired-blog/tags/psql/">#psql</a> <a href="/angry-chaired-blog/tags/node/">#node</a> <a href="/angry-chaired-blog/tags/express/">#express</a> <a href="/angry-chaired-blog/tags/backend/">#backend</a> <a href="/angry-chaired-blog/tags/node-posgres/">#node-posgres</a>
+
+
+                
+            </div>
+            <!--  -->
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+
+            <!-- Hyvor comments -->
+
+            <!-- End of Hyvor comments -->
+        </div>
+    </div>
+</article>
+
+
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2020 kaem<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="Inexperienced and curious pokes into the sprawling world of web development "/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="kaem"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="GraphQL &amp; React &amp; PSQL: Apollo Client &amp; Frontend"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Inexperienced and curious pokes into the sprawling world of web development "/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Angry Chaired Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://ikaem.github.io/angry-chaired-blog/angry-chaired-blog/images/header-image.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://ikaem.github.io/angry-chaired-blog/angry-chaired-blog/images/header-image.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>GraphQL &amp; React &amp; PSQL: Apollo Client &amp; Frontend - Angry Chaired Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/angry-chaired-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+    <link rel="icon" href="/angry-chaired-blog/images/favicon.ico"/>
+    
+
+<meta name="generator" content="Hexo 5.0.2"><link rel="alternate" href="/angry-chaired-blog/atom.xml" title="Angry Chaired Blog" type="application/atom+xml">
+</head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/angry-chaired-blog/">Angry Chaired Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/about">
+                            
+                                About
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a target="_blank" rel="noopener" href="https://angrychaired.surge.sh">
+                            
+                                <i class="fa fa-user fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a target="_blank" rel="noopener" href="https://github.com/ikaem/">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a href="/angry-chaired-blog/atom.xml">
+                            
+                                <i class="fa fa-rss fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/angry-chaired-blog/images/header-image.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>GraphQL & React & PSQL: Apollo Client & Frontend</h1>
+
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            16/08/2020
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/angry-chaired-blog/categories/graphql-react-psql/">graphql & react & psql</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <!-- Step Content Start -->
+
+<h4 id="Part-7-of-9-in-GraphQL-amp-React-amp-PSQL"><a href="#Part-7-of-9-in-GraphQL-amp-React-amp-PSQL" class="headerlink" title="Part 7 of 9 in GraphQL &amp; React &amp; PSQL"></a>Part 7 of 9 in GraphQL &amp; React &amp; PSQL</h4><p>Previously, we have set up Apollo Server on the backend. Now we have to find a way to get backend GraphQL data to the frontend side.<br>We will use Apollo Client for this. To be more specific, we will use Apollo Client 3 beta. The client provides tools to send queries and mutations to the backend, as well as to cache received data to keep it in memory, and use it throughout the application - sort of a state management.</p>
+<a id="more"></a>
+
+<h4 id="See-Project-Information"><a href="#See-Project-Information" class="headerlink" title="See Project Information"></a>See <a href="#Project-Information">Project Information</a></h4><h2 id="Step-7-Set-Apollo-Client-on-frontend"><a href="#Step-7-Set-Apollo-Client-on-frontend" class="headerlink" title="Step 7. Set Apollo Client on frontend"></a>Step 7. Set Apollo Client on frontend</h2><p>Here is the plan:</p>
+<ol>
+<li>Install Apollo Client and GrapqhQL</li>
+<li>Create environmental variables for the frontedn, to be used to access GQL Server</li>
+<li>Create instance of Apollo Client</li>
+<li>Create and use Apollo provider component, which will make the Apollo Client instance available to all React components</li>
+</ol>
+<h3 id="Install-Apollo-Client-and-GrapqhQL"><a href="#Install-Apollo-Client-and-GrapqhQL" class="headerlink" title="Install Apollo Client and GrapqhQL"></a>Install Apollo Client and GrapqhQL</h3><p>Easy, this: </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i @apollo/client grapqhl</span><br></pre></td></tr></table></figure>
+
+<h3 id="Create-environmental-variables-for-the-frontedn-to-be-used-to-access-GQL-Server"><a href="#Create-environmental-variables-for-the-frontedn-to-be-used-to-access-GQL-Server" class="headerlink" title="Create environmental variables for the frontedn, to be used to access GQL Server"></a>Create environmental variables for the frontedn, to be used to access GQL Server</h3><p>Create-react-app gives us an option to create env variables for frontend. I am not too familiar with what is exactly going on, but here are the basics: </p>
+<ul>
+<li>Env variables in React apps created with create-react-app need to have shape of “REACT_APP_VARIABLE_NAME”, meaning that they start with “REACT_APP”.</li>
+<li>We can create .env file in the root directory, where we put our env variables. Ceate-react-app will include those in the production build, once the build is made</li>
+<li>We can also specify which env variables are used in development, and which in production, by creating <strong>.env.development</strong> and <strong>env.production</strong> files in the root folder, and placing corresponding env variables in these files. Create-react-app is will automatically pickup appropriate env variables, depending on the build being executed. </li>
+</ul>
+<p>Ok, so now we create both <strong>env.development</strong> and <strong>env.production</strong>, and put same variables in it, as shown below.<br>We will adjust the production variable later, at some point, in the future, maybe. </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">REACT_APP_GQL_API &#x3D; “http:&#x2F;&#x2F;localhost:4000&#x2F;grapqhl”</span><br></pre></td></tr></table></figure>
+
+<h3 id="Create-instance-of-Apollo-Client"><a href="#Create-instance-of-Apollo-Client" class="headerlink" title="Create instance of Apollo Client"></a>Create instance of Apollo Client</h3><p>Lets create a new filder inside <strong>src</strong> folder, and name it <strong>apollo</strong>. I am not sure if this is a good practice, but it seems a tidy way to go about the thing. </p>
+<p>Inside the folder, create a new file and call it <strong>apollo-client.ts</strong>. Define a varible to use our env variable that we previously defined.</p>
+<p>Now, we need to import few things from <strong>“@apollo/client</strong>:</p>
+<ul>
+<li><strong>ApolloClient</strong>, a class, same as ApolloServer that we used on the backedn. We need to import it into the file where we want the instance, and give it few properties.</li>
+<li><strong>createHttpLink</strong>, method used to connect to grqphql api on backend. It will be used to provide a value for <strong>link</strong> property inside the ApolloClient class</li>
+<li><strong>inMemoryCache</strong>, a class used to create gql cache in our front end app</li>
+</ul>
+<p>Next, we will created an instance of ApolloClient. ApolloClient accepts an argument, that is an object holding, for now, 2 properties: </p>
+<ul>
+<li><strong>cache</strong>, which is an object created from the <strong>inMemoryCache</strong> class</li>
+<li><strong>link</strong>, holding value of the <strong>createHttpLink</strong> with argument <strong>uri</strong>, which is the endpoint of our GQL server.</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// apollo-client.ts</span></span><br><span class="line"><span class="keyword">import</span> &#123; ApolloClient, createHttpLink, InMemoryCache &#125; <span class="keyword">from</span> <span class="string">&quot;@apollo/client&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> gqlEndpoint = process.env.REACT_APP_GQL_ENDPOINT;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> client = <span class="keyword">new</span> ApolloClient(&#123;</span><br><span class="line">    cache: <span class="keyword">new</span> InMemoryCache(),</span><br><span class="line">    link: createHttpLink(&#123;</span><br><span class="line">        uri: gqlEndpoint</span><br><span class="line">    &#125;),</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> client;</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-Create-and-use-ApolloProvider-component-which-will-make-the-Apollo-Client-instance-available-to-all-React-components"><a href="#4-Create-and-use-ApolloProvider-component-which-will-make-the-Apollo-Client-instance-available-to-all-React-components" class="headerlink" title="4. Create and use ApolloProvider component, which will make the Apollo Client instance available to all React components"></a>4. Create and use ApolloProvider component, which will make the Apollo Client instance available to all React components</h3><p>ApolloProvider is similar to React’s Context Provider, at least according to Apollo’s documentation. In short, ApolloProvider puts the created ApolloClient instance into Context, so that other components have access to it.<br>Apollo Client provides a ready component called <strong>ApolloProvider</strong> for this purpose. </p>
+<p>Here, we will:</p>
+<ol>
+<li>Create the provider</li>
+<li>Wrap the provider around our app</li>
+</ol>
+<h4 id="Create-the-provider"><a href="#Create-the-provider" class="headerlink" title="Create the provider"></a>Create the provider</h4><p>I personally like to put ApolloProvider component inside my own component, and then export that one to be used throughout the app. </p>
+<p>Here is what I mean:</p>
+<p>I create a new file inside the <strong>apollo</strong> folder, and I call it <strong>apollo-provider.tsx</strong>, and inside I import <strong>ApolloProvider</strong> from “@apollo/client”.<br>Note that we use .tsx extension, because this is a React component.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; ApolloProvider &#125; <span class="keyword">from</span> <span class="string">&quot;@apollo/client&quot;</span>;</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<p>Then, I import the client module that we just created with <strong>apollo-client.ts</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> client <span class="keyword">from</span> <span class="string">&quot;./apollo-client&quot;</span>;</span><br></pre></td></tr></table></figure>
+
+<p>Next I create my own React component called <strong>Apollo</strong> ApolloClientProvider, and pass it <strong>children props</strong>.<br>Note that I need to type the props, and this can be done in several ways:</p>
+<ul>
+<li>I directly type the <strong>children</strong> prop. This is the one I choose to go with.</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> ApolloClientProvider = <span class="function">(<span class="params">&#123; children &#125;: &#123; children: React.ReactNode &#125;</span>) =&gt;</span> &#123;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>I type the component, and TS infers type of props. I think, at least, this is what happens.</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> ApolloClientProvider: React.FC = <span class="function">(<span class="params">&#123; children &#125;</span>) =&gt;</span> &#123;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>Or, and I am honestly not sure what is going on here, I think I specify the shape of the argument that the typed component accepts?:</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> ApolloClientProvider: React.FC&lt;&#123; <span class="attr">children</span>: React.ReactNode &#125;&gt; = <span class="function">(<span class="params">&#123; children &#125;</span>) =&gt;</span> &#123;</span><br></pre></td></tr></table></figure>
+
+<p>Then, I return the actual <strong>ApolloProvider</strong> component, provided by Apollo. I give its <strong>client</strong> prop the value of my own client which I imported into this module.<br>The Apollo’s provider component will render the <strong>children</strong> prop.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// apollo-provider.tsx</span></span><br><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">&quot;react&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; ApolloProvider &#125; <span class="keyword">from</span> <span class="string">&quot;@apollo/client&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> client <span class="keyword">from</span> <span class="string">&quot;./apollo-client&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> ApolloClientProvider: React.FC&lt;&#123; <span class="attr">children</span>: React.ReactNode &#125;&gt; = <span class="function">(<span class="params">&#123; children &#125;</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">    &lt;ApolloProvider client=&#123;client&#125;&gt;</span><br><span class="line">        &#123; children &#125;</span><br><span class="line">    &lt;/ApolloProvider&gt;</span><br><span class="line">    );</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> ApolloClientProvider;</span><br></pre></td></tr></table></figure>
+
+<h4 id="Wrap-the-provider-around-our-app"><a href="#Wrap-the-provider-around-our-app" class="headerlink" title="Wrap the provider around our app"></a>Wrap the provider around our app</h4><p>I choose to place the ApolloClientProvider in the <strong>index.tsx</strong> component, to have it wrap the application. I considered doing it in <strong>App.tsx</strong> as well, but I wanted to keep that component as clean as possible, and render only my own, and React Router components. </p>
+<p>It is quite simple, really.<br>The <strong>ApolloClientProvider</strong> is imported into index.tsx, and then used to wrap the <strong>App</strong> component. </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// index.tsx</span></span><br><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">&#x27;react&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> ReactDOM <span class="keyword">from</span> <span class="string">&#x27;react-dom&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; BrowserRouter <span class="keyword">as</span> Router &#125; <span class="keyword">from</span> <span class="string">&quot;react-router-dom&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> <span class="string">&quot;./index.css&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">&#x27;./App&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> ApolloClientProvider <span class="keyword">from</span> <span class="string">&#x27;./apollo/apollo-provider&#x27;</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">ReactDOM.render(</span><br><span class="line">&lt;React.StrictMode&gt;</span><br><span class="line">    &lt;Router&gt;</span><br><span class="line">    &lt;ApolloClientProvider&gt;</span><br><span class="line">        &lt;App /&gt;</span><br><span class="line">    &lt;/ApolloClientProvider&gt;</span><br><span class="line">    &lt;/Router&gt;</span><br><span class="line">&lt;/React.StrictMode&gt;,</span><br><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">&#x27;root&#x27;</span>)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<!-- End Step Content -->
+<!-- Project Information -->
+
+<h2 id="Project-Information"><a href="#Project-Information" class="headerlink" title="Project Information"></a>Project Information</h2><h3 id="Available-at"><a href="#Available-at" class="headerlink" title="Available at"></a>Available at</h3><p><a target="_blank" rel="noopener" href="https://github.com/ikaem/graphql-jwt-react.git">Github</a> </p>
+<h3 id="Goals"><a href="#Goals" class="headerlink" title="Goals"></a>Goals</h3><ol>
+<li>Create an app that uses GrapqhQL on frontend and backend</li>
+<li>Use PSQL for database</li>
+<li>Use Typescript on both ends</li>
+<li>The app should be hold a list of users that can be created, viewed, edited, and deleted.</li>
+</ol>
+<h3 id="Steps"><a href="#Steps" class="headerlink" title="Steps"></a>Steps</h3><ol>
+<li>Make simple Node and Express server with TypeScript</li>
+<li>Create a PostgreSQL database and tables that hold user info</li>
+<li>Use node-postgres to connect backend to database</li>
+<li>Set up Apollo Express Server</li>
+<li>Create GQL types, queries and resolvers on backend</li>
+<li>Make simple frontend with React and TS</li>
+<li><strong>Set Apollo Client on frontend</strong></li>
+<li>Establish frontend and backend communication via Apollo Client</li>
+<li>Create pagination</li>
+</ol>
+<h3 id="Tech-and-Tools"><a href="#Tech-and-Tools" class="headerlink" title="Tech and Tools"></a>Tech and Tools</h3><ol>
+<li>React</li>
+<li>React Router</li>
+<li>Styled Components</li>
+<li>Node</li>
+<li>PSQL</li>
+<li>GraphQL</li>
+<li>Apollo Server Express</li>
+<li>Apollo Client</li>
+<li>Bcrypt</li>
+<li>TypeScript</li>
+<li>Express</li>
+</ol>
+<h3 id="Experience-with-Tech-amp-Tools"><a href="#Experience-with-Tech-amp-Tools" class="headerlink" title="Experience with Tech &amp; Tools"></a>Experience with Tech &amp; Tools</h3><p>I am new to Typescript, have super little experience with PSQL and GQL and just a tiny bit more skills with Node and Express.<br>I am relatively ok with JS, React and other frontend stuff from the list but I am no way even close to be a seasoned frontend person.</p>
+<h2 id="DISCLAIMER"><a href="#DISCLAIMER" class="headerlink" title="DISCLAIMER"></a>DISCLAIMER</h2><p>Don’t take any of this seriously and as a matter-of-fact. These are my notes. It might look like I am trying to teach something to someone. I am not.</p>
+
+
+                
+            </div>
+            
+            <!-- Custom placed tags -->
+            <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                
+                    
+
+
+<a href="/angry-chaired-blog/tags/frontend/">#frontend</a> <a href="/angry-chaired-blog/tags/apollo/">#apollo</a> <a href="/angry-chaired-blog/tags/react/">#react</a>
+
+
+                
+            </div>
+            <!--  -->
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+
+            <!-- Hyvor comments -->
+
+            <!-- End of Hyvor comments -->
+        </div>
+    </div>
+</article>
+
+
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2020 kaem<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

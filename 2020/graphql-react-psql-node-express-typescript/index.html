@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="Inexperienced and curious pokes into the sprawling world of web development "/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="kaem"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="GraphQL &amp; React &amp; PSQL: Node, Express &amp; TypeScript"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Inexperienced and curious pokes into the sprawling world of web development "/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Angry Chaired Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://ikaem.github.io/angry-chaired-blog/angry-chaired-blog/images/header-image.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://ikaem.github.io/angry-chaired-blog/angry-chaired-blog/images/header-image.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>GraphQL &amp; React &amp; PSQL: Node, Express &amp; TypeScript - Angry Chaired Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/angry-chaired-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+    <link rel="icon" href="/angry-chaired-blog/images/favicon.ico"/>
+    
+
+<meta name="generator" content="Hexo 5.0.2"><link rel="alternate" href="/angry-chaired-blog/atom.xml" title="Angry Chaired Blog" type="application/atom+xml">
+</head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/angry-chaired-blog/">Angry Chaired Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/about">
+                            
+                                About
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a target="_blank" rel="noopener" href="https://angrychaired.surge.sh">
+                            
+                                <i class="fa fa-user fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a target="_blank" rel="noopener" href="https://github.com/ikaem/">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a href="/angry-chaired-blog/atom.xml">
+                            
+                                <i class="fa fa-rss fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/angry-chaired-blog/images/header-image.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>GraphQL & React & PSQL: Node, Express & TypeScript</h1>
+
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            16/08/2020
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/angry-chaired-blog/categories/graphql-react-psql/">graphql & react & psql</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <!-- Step Content Start -->
+
+<h4 id="Part-1-of-10-in-GraphQL-amp-React-amp-PSQL"><a href="#Part-1-of-10-in-GraphQL-amp-React-amp-PSQL" class="headerlink" title="Part 1 of 10 in GraphQL &amp; React &amp; PSQL"></a>Part 1 of 10 in GraphQL &amp; React &amp; PSQL</h4><p>This is my first project to be published on the blog. I am a bit anxious, as I am no expert by any means, and I am putting my ignorance out there for the world to see. Still, let’s do it. </p>
+<p>This post is the start of a two-part series primarily focused on GraphQL and JWT. This first part is mostly about GQL, and how it works with PSQL and React. The other one will be more focused on GQL and JWT.</p>
+<p>In this post, specifically, we will set up a Node server with Express and TypeScript.</p>
+<a id="more"></a>
+
+<h4 id="See-Project-Information"><a href="#See-Project-Information" class="headerlink" title="See Project Information"></a>See <a href="#Project-Information">Project Information</a></h4><h2 id="Step-1-Make-simple-Node-and-Express-server-with-TypeScript"><a href="#Step-1-Make-simple-Node-and-Express-server-with-TypeScript" class="headerlink" title="Step 1: Make simple Node and Express server with TypeScript"></a>Step 1: Make simple Node and Express server with TypeScript</h2><p>I thought TS setup will be more complicated on the backend side, but it was actually quite simple.<br>I used the brief and convenient guide by <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=zRo2tvQpus8">Traversy Media, titled TypeScript Setup With Node &amp; Express, and got the thing up in minutes.</a><br>It seems to me that the key part here is the ts-node package. I am not sure what exactly does, but it did get the TS working.</p>
+<p>We need to:</p>
+<ol>
+<li>Initialize package.json</li>
+<li>Install dev dependencies</li>
+<li>Install other dependencies</li>
+<li>Initialize and set up the tsconfig.json file for backend</li>
+<li>Need to modify scripts in package.json</li>
+<li>Write normal Express server</li>
+</ol>
+<h3 id="Initialize-package-json"><a href="#Initialize-package-json" class="headerlink" title="Initialize package.json"></a>Initialize package.json</h3><p>Install node-pg with:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm init</span><br></pre></td></tr></table></figure>
+
+<h3 id="Install-dev-dependencies"><a href="#Install-dev-dependencies" class="headerlink" title="Install dev dependencies"></a>Install dev dependencies</h3><p>These will only be used while developing the app, and will not be included in the production build – the one that my users see when they use the app.<br>We also need to install TypeScript types for some of the packages used by the server.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm -D typescript ts-node nodemon @types/node @types/express @types/cors</span><br></pre></td></tr></table></figure>
+
+<h3 id="Install-other-dependencies"><a href="#Install-other-dependencies" class="headerlink" title="Install other dependencies"></a>Install other dependencies</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install express cors</span><br></pre></td></tr></table></figure>
+
+<h3 id="Initialize-and-set-up-the-tsconfig-json-file-for-backend"><a href="#Initialize-and-set-up-the-tsconfig-json-file-for-backend" class="headerlink" title="Initialize and set up the tsconfig.json file for backend"></a>Initialize and set up the tsconfig.json file for backend</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tsc --init</span><br></pre></td></tr></table></figure>
+
+<p>This creates tsconfig.json file that controls behavior of Typescript. I hope this sounds correct. It is a large file, with code that is mostly commented out. To be able to easily work with TS, we do need to modify it, however, and uncomment few things.<br>Here is the relevant snippet for my setup, copied from the tutorial I mentioned above.</p>
+<ul>
+<li>“outDir” is used to specify directory where TS compiler will store .js code, created from our .ts code</li>
+<li>“rootDir” is used to specify directory where we will be writing .ts code</li>
+<li>“moduleResolution” is explained in the comment below, and I cannot explain it better. </li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ts.config</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;compilerOptions&quot;</span>: &#123;</span><br><span class="line">    ...</span><br><span class="line">    <span class="string">&quot;outDir&quot;</span>: <span class="string">&quot;./dist&quot;</span>, <span class="comment">/* Redirect output structure to the directory. */</span></span><br><span class="line">    <span class="string">&quot;rootDir&quot;</span>: <span class="string">&quot;./src&quot;</span>,  </span><br><span class="line">    ... </span><br><span class="line">    <span class="string">&quot;moduleResolution&quot;</span>: <span class="string">&quot;node&quot;</span>, <span class="comment">/* Specify module resolution strategy: &#x27;node&#x27; (Node.js) or &#x27;classic&#x27; */</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Need-to-modify-scripts-in-package-json"><a href="#Need-to-modify-scripts-in-package-json" class="headerlink" title="Need to modify scripts in package.json"></a>Need to modify scripts in package.json</h3><p>Just a quick explanation.<br>I want to be able to </p>
+<ul>
+<li>Run a development server</li>
+<li>When development is done, I want to create a production build</li>
+<li>I also want to be able to start a server for production build</li>
+</ul>
+<p>We do these things with scripts in package.json file.</p>
+<p>Here is the relevant snippet of the file</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// package.json</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;name&quot;</span>: <span class="string">&quot;graphql-jwt-api&quot;</span>,</span><br><span class="line">  <span class="string">&quot;version&quot;</span>: <span class="string">&quot;1.0.0&quot;</span>,</span><br><span class="line">  <span class="string">&quot;description&quot;</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line">  <span class="string">&quot;main&quot;</span>: <span class="string">&quot;server.js&quot;</span>,</span><br><span class="line">  <span class="string">&quot;scripts&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;start&quot;</span>: <span class="string">&quot;node dist/server.js&quot;</span>,</span><br><span class="line">    <span class="string">&quot;dev&quot;</span>: <span class="string">&quot;nodemon src/server.ts&quot;</span>,</span><br><span class="line">    <span class="string">&quot;build&quot;</span>: <span class="string">&quot;tsc -p .&quot;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">&quot;keywords&quot;</span>: [],</span><br><span class="line">  <span class="string">&quot;author&quot;</span>: <span class="string">&quot;&quot;</span>,</span><br></pre></td></tr></table></figure>
+
+
+<ol>
+<li>“dev” is used to specify that nodemon will run server.ts file in src folder.This runs our development server, and the script is activated with command:</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run dev</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>“build” is used to have TS compiler compile our .ts code from src folder into .js code in dist folder. TS compiler knows which folders to use because we specified them in the previous step with tsconfig.json file. The script is activated with command:</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run build</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>“start” is used to start a server with the production build on it. It is the build from the dist folder, which means that we have to make that build with “npm run build” prior to running this command.The production server is started with:</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm start</span><br></pre></td></tr></table></figure>
+
+<h3 id="Write-normal-Express-server"><a href="#Write-normal-Express-server" class="headerlink" title="Write normal Express server"></a>Write normal Express server</h3><p>Note that I use import syntaxt instead of require syntax that is normally used with Node.js. This is possible becuase of TS.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// src/server.js</span></span><br><span class="line"><span class="keyword">import</span> cors <span class="keyword">from</span> <span class="string">&quot;cors&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> express <span class="keyword">from</span> <span class="string">&quot;express&quot;</span>;</span><br><span class="line">  </span><br><span class="line"><span class="keyword">const</span> app = express();</span><br><span class="line">  </span><br><span class="line">app.use(cors());</span><br><span class="line">app.use(express.json());</span><br><span class="line">  </span><br><span class="line">  </span><br><span class="line">app.get(<span class="string">&quot;/&quot;</span>, <span class="keyword">async</span>(req, res) =&gt; &#123;</span><br><span class="line">    res.json(<span class="string">&quot;Hello&quot;</span>);</span><br><span class="line">&#125;);</span><br><span class="line">  </span><br><span class="line">  </span><br><span class="line">app.listen(<span class="number">3000</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;Server is listening on port 3000&quot;</span>);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<!-- End Step Content -->
+<!-- Project Information -->
+
+<h2 id="Project-Information"><a href="#Project-Information" class="headerlink" title="Project Information"></a>Project Information</h2><h3 id="Available-at"><a href="#Available-at" class="headerlink" title="Available at"></a>Available at</h3><p><a target="_blank" rel="noopener" href="https://github.com/ikaem/graphql-jwt-react.git">Github</a> </p>
+<h3 id="Goals"><a href="#Goals" class="headerlink" title="Goals"></a>Goals</h3><ol>
+<li>Create an app that uses GrapqhQL on frontend and backend</li>
+<li>Use PSQL for database</li>
+<li>Use Typescript on both ends</li>
+<li>The app should be hold a list of users that can be created, viewed, edited, and deleted.</li>
+</ol>
+<h3 id="Steps"><a href="#Steps" class="headerlink" title="Steps"></a>Steps</h3><ol>
+<li><strong>Make simple Node and Express server with TypeScript</strong></li>
+<li>Create a PostgreSQL database and tables that hold user info</li>
+<li>Use node-postgres to connect backend to database</li>
+<li>Set Apollo Express Server</li>
+<li>Create GQL types, queries and resolvers on backend</li>
+<li>Pause</li>
+<li>Make simple frontend with React and TS</li>
+<li>Set Apollo Client on frontend</li>
+<li>Establish frontend and backend communication via Apollo Client</li>
+<li>Create pagination</li>
+</ol>
+<h3 id="Tech-and-Tools"><a href="#Tech-and-Tools" class="headerlink" title="Tech and Tools"></a>Tech and Tools</h3><ol>
+<li>React</li>
+<li>React Router</li>
+<li>Styled Components</li>
+<li>Node</li>
+<li>PSQL</li>
+<li>GraphQL</li>
+<li>Apollo Server Express</li>
+<li>Apollo Client</li>
+<li>Bcrypt</li>
+<li>TypeScript</li>
+<li>Express</li>
+</ol>
+<h3 id="Experience-with-Tech-amp-Tools"><a href="#Experience-with-Tech-amp-Tools" class="headerlink" title="Experience with Tech &amp; Tools"></a>Experience with Tech &amp; Tools</h3><p>I am new to Typescript, have super little experience with PSQL and GQL and just a tiny bit more skills with Node and Express.<br>I am relatively ok with JS, React and other frontend stuff from the list but I am no way even close to be a seasoned frontend person.</p>
+<h2 id="DISCLAIMER"><a href="#DISCLAIMER" class="headerlink" title="DISCLAIMER"></a>DISCLAIMER</h2><p>Don’t take any of this seriously and as a matter-of-fact. These are my notes. It might look like I am trying to teach something to someone. I am not.</p>
+
+
+                
+            </div>
+            
+            <!-- Custom placed tags -->
+            <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                
+                    
+
+
+<a href="/angry-chaired-blog/tags/grapqhl/">#grapqhl</a> <a href="/angry-chaired-blog/tags/node/">#node</a> <a href="/angry-chaired-blog/tags/express/">#express</a> <a href="/angry-chaired-blog/tags/typescript/">#typescript</a> <a href="/angry-chaired-blog/tags/backend/">#backend</a>
+
+
+                
+            </div>
+            <!--  -->
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+
+            <!-- Hyvor comments -->
+
+            <!-- End of Hyvor comments -->
+        </div>
+    </div>
+</article>
+
+
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2020 kaem<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="Inexperienced and curious pokes into the sprawling world of web development "/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="kaem"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="GraphQL &amp; React &amp; PSQL: Apollo Client Pagination"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Inexperienced and curious pokes into the sprawling world of web development "/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Angry Chaired Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://ikaem.github.io/angry-chaired-blog/angry-chaired-blog/images/header-image.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://ikaem.github.io/angry-chaired-blog/angry-chaired-blog/images/header-image.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>GraphQL &amp; React &amp; PSQL: Apollo Client Pagination - Angry Chaired Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/angry-chaired-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+    <link rel="icon" href="/angry-chaired-blog/images/favicon.ico"/>
+    
+
+<meta name="generator" content="Hexo 5.0.2"><link rel="alternate" href="/angry-chaired-blog/atom.xml" title="Angry Chaired Blog" type="application/atom+xml">
+</head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/angry-chaired-blog/">Angry Chaired Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/about">
+                            
+                                About
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a target="_blank" rel="noopener" href="https://angrychaired.surge.sh">
+                            
+                                <i class="fa fa-user fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a target="_blank" rel="noopener" href="https://github.com/ikaem/">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a href="/angry-chaired-blog/atom.xml">
+                            
+                                <i class="fa fa-rss fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/angry-chaired-blog/images/header-image.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>GraphQL & React & PSQL: Apollo Client Pagination</h1>
+
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            16/08/2020
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/angry-chaired-blog/categories/graphql-react-psql/">graphql & react & psql</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <!-- Step Content Start -->
+
+<h4 id="Part-9-of-9-in-GraphQL-amp-React-amp-PSQL"><a href="#Part-9-of-9-in-GraphQL-amp-React-amp-PSQL" class="headerlink" title="Part 9 of 9 in GraphQL &amp; React &amp; PSQL"></a>Part 9 of 9 in GraphQL &amp; React &amp; PSQL</h4><p>Ideally, we would not have all users instantly listed on our home page. We would want to have a part of it, maybe separated into pages, or extendable if a user wants so.<br>Pagination means that, when fetching data, we only fetch a part of it. If a user wants to see more data, they interact with the app to tell it so, and the app fetches more data as a response.</p>
+<a id="more"></a>
+
+<h4 id="See-Project-Information"><a href="#See-Project-Information" class="headerlink" title="See Project Information"></a>See <a href="#Project-Information">Project Information</a></h4><h2 id="Step-10-Create-pagination"><a href="#Step-10-Create-pagination" class="headerlink" title="Step 10. Create pagination"></a>Step 10. Create pagination</h2><p>We need to:</p>
+<ul>
+<li>Determine how much data we want to fetch first time, and then same thing every time the user interacts. </li>
+<li>We would have to include some markers in the request for data</li>
+<li>We would have to send an updated marker with each following request, to inform backend which new part of data to return.</li>
+<li>We would have to receive information from backend informing us if if there is any data left that was not sent to the client</li>
+</ul>
+<p>That was a general idea.<br>When it comes to GQL and Apollo, they make it really easy to do pagination.<br>On the frontend, Apollo Client’s <strong>useQuery</strong> hook’s return contains another property called <strong>fetchMore</strong>. It is a method that we can call to send the hook’s query again.<br><strong>fetchMore</strong> can accept variables too, so we can send updated variables to backend resolvers to tell them which data we need. Commonly, values used to mark which parts of data we want are called cursors</p>
+<p>On the backed, there are no special (as far as I know) features designed to do pagination. Regular types, queries and resolvers work just fine to provide support for pagination.</p>
+<p>Here is what we will do:</p>
+<ol>
+<li>Create a type and a query on backend <strong>typeDefs</strong> that to define and return paginated users</li>
+<li>Create a resolver to resolve the paginated user type</li>
+<li>On frontend, create a query to fetch paginated users</li>
+<li>Implement <strong>useQuery</strong> hook to accept needed variables and return needed data</li>
+<li>Set up a handler to hold the <strong>fetchMore</strong> function which needs accept necessary variables, and pass the handler prop to the <strong>PagesControl</strong> component.</li>
+</ol>
+<h3 id="Create-a-type-and-a-query-on-backend-typeDefs-that-to-define-and-return-paginated-users"><a href="#Create-a-type-and-a-query-on-backend-typeDefs-that-to-define-and-return-paginated-users" class="headerlink" title="Create a type and a query on backend typeDefs that to define and return paginated users"></a>Create a type and a query on backend <strong>typeDefs</strong> that to define and return paginated users</h3><p>We already have made a type and query for this, and included ithem in one of the first posts.</p>
+<p>The type itself constists of several properties:</p>
+<ol>
+<li>users - which is a list of users we get from the resolver</li>
+<li>cursor - which is an integer representing a point which marks a point below which the resolver should not retrieve users. In our case, cursor will be a <strong>user_id</strong> of the last user we retrieve in each go of fetching paginated users. In the next go, this cursor will mark the beginning of the next batch of users.</li>
+<li>hasNextPage is just a Boolean, indicating if there are any more users after the cursor</li>
+<li>totalUsers is an integer representing total number of users in the database user tables. I wanted to use this property to show how many pages of users are there. I didn’t go with it this time, though, but I did keep the property there, in case I do it in future. </li>
+<li>usersPerPage, indicating how many users we want to show per page. We are not going to use this property either, but it can be used, for instance, to let user decide how many users per page they want to be shown.</li>
+</ol>
+<p>The query <strong>getPaginatedUsers</strong> takes only one argument - the cursor, because the resolver needs to know from which point it needs to start fetching users.</p>
+<p>Here are both the query and the type:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// type-defs.ts on backend</span></span><br><span class="line"><span class="keyword">import</span> &#123; gql &#125; <span class="keyword">from</span> <span class="string">&quot;apollo-server-express&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> gql<span class="string">`</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    type Query &#123;</span></span><br><span class="line"><span class="string">    ...</span></span><br><span class="line"><span class="string">        getPaginatedUsers(cursor: Int): PaginatedUsers</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">    ...</span></span><br><span class="line"><span class="string">    type PaginatedUsers &#123;</span></span><br><span class="line"><span class="string">        users: [User]</span></span><br><span class="line"><span class="string">        cursor: Int</span></span><br><span class="line"><span class="string">        hasNextPage: Boolean</span></span><br><span class="line"><span class="string">        totalUsers: Int</span></span><br><span class="line"><span class="string">        usersPerPage: Int</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">    ...</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Create-a-resolver-to-resolve-the-paginated-user-type"><a href="#Create-a-resolver-to-resolve-the-paginated-user-type" class="headerlink" title="Create a resolver to resolve the paginated user type"></a>Create a resolver to resolve the paginated user type</h3><p>The resolver needs to make sure it returns an object with the following properties:</p>
+<ol>
+<li>users</li>
+<li>cursor</li>
+<li>hasNextPage</li>
+<li>totalUsers</li>
+<li>usersPerPage</li>
+</ol>
+<p>I decided to have users per page. When I say page, I actually mean 3 users per fetch, since we will have new batches appended to previous list of users, and then render all new users on the same page.<br>We could have pages, and “change” page every time we fetch new batch of users, but the code and logic take a bit longer to make. I decided to stick with the simpler approach here, to illustrate pagination.</p>
+<p>Few things: </p>
+<ul>
+<li>We will hardcode number of users per page, to 3. I assigned 3 to a variable, and called it <strong>limit</strong>. This is basically what <strong>usersPerPage</strong> property would be used for if we had an option to let users choose number of users per page.</li>
+<li>We will get an a client from the <strong>node-postgres</strong> connection pool. I want to fetch all needed data with the same client (not sure why, it just feels correct).</li>
+<li>When fetching a batch of users, we will fetch users whose <strong>user_id</strong> is higher than the cursor. For instance, if our cursor is 0, we fetch all users above 0, and later, when our cursor is 3, we fetch users with <strong>user_id</strong> higher than 3.</li>
+<li>We will actually fetch 3 + 1 users. We need this + 1 to see if there are any more users in the database after the fetch, and then to set the <strong>hasNextPage</strong> property to true or false</li>
+<li>We also retrieve total number of users from the database by querying the <strong>users_login</strong> table again with SQL <strong>COUNT</strong> function.</li>
+<li>Then, we will return only 3 users after all, slicing the last one away.</li>
+<li>We set the new cursor to have value of <strong>user_id</strong> of the last user in the sliced users array. </li>
+<li>Finally, we return the object filled with the properties we retrieved and created.</li>
+<li>Note that we use the <strong>ORDER BY</strong> statement, to order returned items by <strong>user_id</strong>.</li>
+</ul>
+<p>Here is the resolver:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// query.ts on backend resolvers</span></span><br><span class="line">getPaginatedUsers: <span class="keyword">async</span>(parent: any, <span class="attr">args</span>: &#123; <span class="attr">cursor</span>: number &#125;, <span class="attr">context</span>: &#123; <span class="attr">pgPool</span>: Pool &#125;) =&gt; &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> limit = <span class="number">3</span>;</span><br><span class="line">    <span class="keyword">const</span> client = <span class="keyword">await</span> context.pgPool.connect();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">await</span> client.query(<span class="string">&quot;BEGIN&quot;</span>);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">const</span> paginatedUsersQuery = <span class="string">`</span></span><br><span class="line"><span class="string">            SELECT </span></span><br><span class="line"><span class="string">                users_login.user_id,</span></span><br><span class="line"><span class="string">                users_login.email,</span></span><br><span class="line"><span class="string">                users_info.first_name,</span></span><br><span class="line"><span class="string">                users_info.last_name,</span></span><br><span class="line"><span class="string">                users_info.city,</span></span><br><span class="line"><span class="string">                users_info.website,</span></span><br><span class="line"><span class="string">                users_info.&quot;age&quot;,</span></span><br><span class="line"><span class="string">                users_info.hobbies,</span></span><br><span class="line"><span class="string">                users_info.avatar_link</span></span><br><span class="line"><span class="string">            FROM </span></span><br><span class="line"><span class="string">                users_login</span></span><br><span class="line"><span class="string">            </span></span><br><span class="line"><span class="string">            JOIN </span></span><br><span class="line"><span class="string">                users_info</span></span><br><span class="line"><span class="string">            ON </span></span><br><span class="line"><span class="string">                users_login.user_id = users_info.user_info_id</span></span><br><span class="line"><span class="string">            WHERE </span></span><br><span class="line"><span class="string">                user_id &gt; <span class="subst">$&#123;args.cursor&#125;</span></span></span><br><span class="line"><span class="string">            ORDER BY users_login.user_id</span></span><br><span class="line"><span class="string">            LIMIT <span class="subst">$&#123;limit + <span class="number">1</span>&#125;</span>;</span></span><br><span class="line"><span class="string">        `</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">const</span> paginatedUsersRes = <span class="keyword">await</span> client.query(paginatedUsersQuery);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">const</span> numberOfUsersQuery = <span class="string">`</span></span><br><span class="line"><span class="string">            SELECT </span></span><br><span class="line"><span class="string">                COUNT(user_id)</span></span><br><span class="line"><span class="string">            FROM </span></span><br><span class="line"><span class="string">                users_login;</span></span><br><span class="line"><span class="string">        `</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">const</span> numberOfUsersRes = <span class="keyword">await</span> client.query(numberOfUsersQuery);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">const</span> hasNextPage = paginatedUsersRes.rows.length &gt; limit;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">const</span> slicedUsers = paginatedUsersRes.rows.slice(<span class="number">0</span>, limit);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">const</span> newCursor = slicedUsers[slicedUsers.length - <span class="number">1</span>].user_id;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">await</span> client.query(<span class="string">&quot;COMMIT&quot;</span>);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> &#123;</span><br><span class="line">            users: slicedUsers,</span><br><span class="line">            cursor: newCursor,</span><br><span class="line">            hasNextPage,</span><br><span class="line">            totalUsers: numberOfUsersRes.rows[<span class="number">0</span>].count,</span><br><span class="line">            usersPerPage: limit</span><br><span class="line">        &#125;;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">catch</span>(error) &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(error);</span><br><span class="line">        <span class="keyword">await</span> client.query(<span class="string">&quot;ROLLBACK&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">finally</span>&#123;</span><br><span class="line">        client.release();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="On-frontend-create-a-query-to-fetch-paginated-users"><a href="#On-frontend-create-a-query-to-fetch-paginated-users" class="headerlink" title="On frontend, create a query to fetch paginated users"></a>On frontend, create a query to fetch paginated users</h3><p>As mentioned before, the query requires only the <strong>user_id</strong> as an argument. The query needs to return:</p>
+<ul>
+<li>basic data needed for the <strong>UserBrief</strong> component</li>
+<li>cursor</li>
+<li>hasNextPage</li>
+<li>totalUsers</li>
+<li>usersPerPage</li>
+</ul>
+<p>We do this in the <strong>HomePage</strong> component:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// home.page.ts</span></span><br><span class="line"><span class="keyword">const</span> PAGINATED_USERS_QUERY = gql<span class="string">`</span></span><br><span class="line"><span class="string">    query GetPaginatedUsers($cursor: Int) &#123;</span></span><br><span class="line"><span class="string">        getPaginatedUsers(cursor: $cursor) &#123;</span></span><br><span class="line"><span class="string">            users &#123;</span></span><br><span class="line"><span class="string">                user_id,</span></span><br><span class="line"><span class="string">                avatar_link,</span></span><br><span class="line"><span class="string">                first_name,</span></span><br><span class="line"><span class="string">                last_name,</span></span><br><span class="line"><span class="string">                country &#123; country_name &#125;,</span></span><br><span class="line"><span class="string">                city,</span></span><br><span class="line"><span class="string">                website</span></span><br><span class="line"><span class="string">            &#125;,</span></span><br><span class="line"><span class="string">            cursor,</span></span><br><span class="line"><span class="string">            hasNextPage,</span></span><br><span class="line"><span class="string">            totalUsers,</span></span><br><span class="line"><span class="string">            usersPerPage</span></span><br><span class="line"><span class="string">        &#125;</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">`</span>;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Implement-useQuery-hook-to-accept-needed-variables-and-return-needed-data"><a href="#Implement-useQuery-hook-to-accept-needed-variables-and-return-needed-data" class="headerlink" title="Implement useQuery hook to accept needed variables and return needed data"></a>Implement <strong>useQuery</strong> hook to accept needed variables and return needed data</h3><p>The query for paginated users needs to replace the original query that returns all users.<br>It also needs variable <strong>user_id</strong> for the cursor argument. In the beginning, this argument needs to be 0, to make sure the query fetches users from the beginning of the table. Subsequent queries will be made by the <strong>fetchMore</strong> function, and we will provide dynamic variables with that method.<br>We will also need to adjust the props sent to the <strong>UsersBriefMapper</strong>, as we are now sending the paginated data. </p>
+<p>Here is the hook in action:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// home.page.ts</span></span><br><span class="line"><span class="keyword">const</span> HomePage = <span class="function">() =&gt;</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> &#123; <span class="attr">data</span>: usersData, <span class="attr">loading</span>: usersLoading, <span class="attr">error</span>: usersError &#125; = useQuery(USERS_LIST_QUERY);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> &#123; <span class="attr">data</span>: paginatedUsersData, <span class="attr">loading</span>: paginatedUsersLoading, <span class="attr">error</span>: paginatedUsersError, <span class="attr">fetchMore</span>: paginatedUsersFetchMore &#125; = useQuery(PAGINATED_USERS_QUERY, &#123;</span><br><span class="line">        variables: &#123;</span><br><span class="line">            cursor: <span class="number">0</span>,</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+<p>Here is the <strong>users</strong> props sent to the mapper component. Note that the users array is now nested deeper inside the response from the server.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// home.page.ts</span></span><br><span class="line">...</span><br><span class="line"><span class="keyword">return</span> (</span><br><span class="line">...</span><br><span class="line">    &lt;div </span><br><span class="line">        className=<span class="string">&quot;people-section__users-brief-mapper-wrapper&quot;</span>&gt;</span><br><span class="line">        &#123;paginatedUsersError &amp;&amp; <span class="xml"><span class="tag">&lt;<span class="name">p</span>&gt;</span>Unfortunately, there was an error fetching users. Please try again later. <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span>&#125;</span><br><span class="line">        &#123;paginatedUsersLoading &amp;&amp; <span class="xml"><span class="tag">&lt;<span class="name">p</span>&gt;</span>Loading...<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span>&#125;</span><br><span class="line"></span><br><span class="line">        &#123;paginatedUsersData &amp;&amp; <span class="xml"><span class="tag">&lt;<span class="name">UsersBriefMapper</span> </span></span></span><br><span class="line"><span class="xml">            users=&#123;paginatedUsersData.getPaginatedUsers.users&#125;</span></span><br><span class="line"><span class="xml">        /&gt;</span>&#125;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<h3 id="Set-up-a-handler-to-hold-the-fetchMore-function-which-needs-accept-necessary-variables-and-pass-the-handler-prop-to-the-PagesControl-component"><a href="#Set-up-a-handler-to-hold-the-fetchMore-function-which-needs-accept-necessary-variables-and-pass-the-handler-prop-to-the-PagesControl-component" class="headerlink" title="Set up a handler to hold the fetchMore function which needs accept necessary variables, and pass the handler prop to the PagesControl component."></a>Set up a handler to hold the <strong>fetchMore</strong> function which needs accept necessary variables, and pass the handler prop to the <strong>PagesControl</strong> component.</h3><p>Current setup is pretty much the same as when we had all users fetched and render on the <strong>HomePage</strong>.</p>
+<p>The difference comes in form of <strong>fetchMore</strong> function.<br>Destructured from the <strong>userQuery</strong> hook, the function can be used to repeat the query (it can also use a different query), use different variables, and append (or replace) received results to the existing data that the original hook called initially.</p>
+<p>And this is exactly what we will do.</p>
+<p>To make it easier and more readable, we will created a handler for the function, and place a call to the <strong>fetchMore</strong> function inside it. This way we can set it up in an isolated place, and not on an HTML element that will trigger it. </p>
+<p>So: </p>
+<ol>
+<li>Create handler function and set up the <strong>fetchMore</strong> function inside it</li>
+<li>Pass the handler as a prop to the <strong>PagesControl</strong> and place it on an element to be called when the element is clicked.</li>
+</ol>
+<h4 id="Create-handler-function-and-set-up-the-fetchMore-function-inside-it"><a href="#Create-handler-function-and-set-up-the-fetchMore-function-inside-it" class="headerlink" title="Create handler function and set up the fetchMore function inside it"></a>Create handler function and set up the <strong>fetchMore</strong> function inside it</h4><p>The handler function has an argument of event, which is of MouseEvent type. I am not sure that it is needed to have the event passed here, but I seem to recall that I can’t pass non-event functions to an event such as <strong>onClick</strong> on an element. I am probably wrong, though. </p>
+<p>Anyway, important part is that the <strong>fetchMore</strong> function, here called <strong>paginatedUsersFetchMore</strong>, accepts an argument object that has a nested <strong>cursor</strong> variable in it. Its value is taken from the return of the original return <strong>useQuery</strong> hook. This means, when the hook executes first time, the <strong>cursor</strong> variable in it will be <strong>3</strong>, because that is the <strong>user_id</strong> of the last user in the <strong>users</strong> array.<br>After that, all subsequent queries for paginated users are made by the <strong>fetchMore</strong> function. </p>
+<p>In the example below, we add another property to the function’s object - <strong>updateQuery</strong>. This method accepts 2 arguments: previous result and new result.<br>We can cobine old and new users into one array of users, and take all other returned properties from the new result, and return all of it to update the returned data in the original hook’s return. </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// home.page.ts</span></span><br><span class="line">...</span><br><span class="line"><span class="keyword">const</span> handlePaginatedUsersFetchMore = <span class="function">(<span class="params">e: React.MouseEvent&lt;HTMLButtonElement&gt;</span>) =&gt;</span> &#123;</span><br><span class="line">    paginatedUsersFetchMore(&#123;</span><br><span class="line">        variables: &#123;</span><br><span class="line">            cursor: paginatedUsersData.getPaginatedUsers.cursor</span><br><span class="line">        &#125;,</span><br><span class="line">        updateQuery: <span class="function">(<span class="params">prevResult: any, newData: any</span>) =&gt;</span> &#123;</span><br><span class="line">            <span class="keyword">const</span> newCursor = newData?.fetchMoreResult.getPaginatedUsers.cursor;</span><br><span class="line">            <span class="keyword">const</span> newUsers = newData?.fetchMoreResult.getPaginatedUsers.users;</span><br><span class="line">            <span class="keyword">const</span> oldUsers = prevResult.getPaginatedUsers.users;</span><br><span class="line">            <span class="keyword">const</span> newTotalUsers = newData?.fetchMoreResult.getPaginatedUsers.totalUsers;</span><br><span class="line">            <span class="keyword">const</span> newHasNextPage = newData?.fetchMoreResult.getPaginatedUsers.hasNextPage;</span><br><span class="line">            <span class="keyword">const</span> newusersPerPage = newData?.fetchMoreResult.getPaginatedUsers.usersPerPage;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">return</span> &#123;</span><br><span class="line">                getPaginatedUsers: &#123;</span><br><span class="line">                    cursor: newCursor,</span><br><span class="line">                    users: [</span><br><span class="line">                        ...oldUsers,</span><br><span class="line">                        ...newUsers</span><br><span class="line">                    ],</span><br><span class="line">                    totalUsers: newTotalUsers,</span><br><span class="line">                    hasNextPage: newHasNextPage,</span><br><span class="line">                    usersPerPage: newusersPerPage,</span><br><span class="line">                    __typename: <span class="string">&quot;PaginatedUsers&quot;</span>,</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-Pass-the-handler-as-a-prop-to-the-PagesControl-and-place-it-on-an-element-to-be-called-when-the-element-is-clicked"><a href="#2-Pass-the-handler-as-a-prop-to-the-PagesControl-and-place-it-on-an-element-to-be-called-when-the-element-is-clicked" class="headerlink" title="2. Pass the handler as a prop to the PagesControl and place it on an element to be called when the element is clicked."></a>2. Pass the handler as a prop to the <strong>PagesControl</strong> and place it on an element to be called when the element is clicked.</h4><p>Finally, we just pass the handler to the <strong>PagesControl</strong> component, together with the <strong>hasNextPage</strong> property, so we can disable the button for feching new user in case there is no more users to fetch:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// home.page.ts</span></span><br><span class="line"><span class="keyword">return</span> (</span><br><span class="line">...</span><br><span class="line">    &lt;div </span><br><span class="line">        className=<span class="string">&quot;people-section__pages-control-wrapper&quot;</span>&gt;</span><br><span class="line">        &lt;PagesControl </span><br><span class="line">            handlePagination=&#123;handlePaginatedUsersFetchMore&#125;</span><br><span class="line">            hasNextPage=&#123;paginatedUsersData?.getPaginatedUsers.hasNextPage&#125;/&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">...</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<p>And here is typing and use of the handler and <strong>hasNextPage</strong> in the <strong>PagesControl</strong> component.<br>Note that there are buttons for previous and next page, but we are not really using the pagination that way. Those are remnants of the original idea to shift back and forth between the pages.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// pages-contro.component.ts</span></span><br><span class="line">interface PagesControlPropsInterface &#123;</span><br><span class="line">    handlePagination: <span class="function">(<span class="params">e: React.MouseEvent&lt;HTMLButtonElement&gt;</span>) =&gt;</span> <span class="keyword">void</span>;</span><br><span class="line">    hasNextPage: boolean;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> PagesControl = <span class="function">(<span class="params">&#123; handlePagination, hasNextPage &#125;: PagesControlPropsInterface </span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">    &lt;PagesControlStyled className=<span class="string">&quot;people-section__pages-control&quot;</span>&gt;</span><br><span class="line">        &lt;button className=<span class="string">&quot;pages-control__previous-page&quot;</span>&gt;</span><br><span class="line">        &lt;span&gt;&#123;<span class="string">&quot;&lt;&quot;</span>&#125;&lt;/span&gt;</span><br><span class="line">        &lt;span&gt; Previous Page&lt;/span&gt;</span><br><span class="line">        &lt;/button&gt;</span><br><span class="line">        &lt;button </span><br><span class="line">            disabled=&#123;!hasNextPage&#125;</span><br><span class="line">            onClick=&#123;handlePagination&#125;</span><br><span class="line">            className=<span class="string">&quot;pages-control__next-page&quot;</span>&gt;</span><br><span class="line">        &lt;span&gt;Next Page &lt;/span&gt;</span><br><span class="line">        &lt;span&gt;&#123;<span class="string">&quot;&gt;&quot;</span>&#125;&lt;/span&gt;</span><br><span class="line">        &lt;/button&gt;</span><br><span class="line">    &lt;/PagesControlStyled&gt;</span><br><span class="line">    )</span><br><span class="line">&#125;</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<!-- End Step Content -->
+<!-- Project Information -->
+
+<h2 id="Project-Information"><a href="#Project-Information" class="headerlink" title="Project Information"></a>Project Information</h2><h3 id="Available-at"><a href="#Available-at" class="headerlink" title="Available at"></a>Available at</h3><p><a target="_blank" rel="noopener" href="https://github.com/ikaem/graphql-jwt-react.git">Github</a> </p>
+<h3 id="Goals"><a href="#Goals" class="headerlink" title="Goals"></a>Goals</h3><ol>
+<li>Create an app that uses GrapqhQL on frontend and backend</li>
+<li>Use PSQL for database</li>
+<li>Use Typescript on both ends</li>
+<li>The app should be hold a list of users that can be created, viewed, edited, and deleted.</li>
+</ol>
+<h3 id="Steps"><a href="#Steps" class="headerlink" title="Steps"></a>Steps</h3><ol>
+<li>Make simple Node and Express server with TypeScript</li>
+<li>Create a PostgreSQL database and tables that hold user info</li>
+<li>Use node-postgres to connect backend to database</li>
+<li>Set up Apollo Express Server</li>
+<li>Create GQL types, queries and resolvers on backend</li>
+<li>Make simple frontend with React and TS</li>
+<li>Set Apollo Client on frontend</li>
+<li>Establish frontend and backend communication via Apollo Client</li>
+<li><strong>Create pagination</strong></li>
+</ol>
+<h3 id="Tech-and-Tools"><a href="#Tech-and-Tools" class="headerlink" title="Tech and Tools"></a>Tech and Tools</h3><ol>
+<li>React</li>
+<li>React Router</li>
+<li>Styled Components</li>
+<li>Node</li>
+<li>PSQL</li>
+<li>GraphQL</li>
+<li>Apollo Server Express</li>
+<li>Apollo Client</li>
+<li>Bcrypt</li>
+<li>TypeScript</li>
+<li>Express</li>
+</ol>
+<h3 id="Experience-with-Tech-amp-Tools"><a href="#Experience-with-Tech-amp-Tools" class="headerlink" title="Experience with Tech &amp; Tools"></a>Experience with Tech &amp; Tools</h3><p>I am new to Typescript, have super little experience with PSQL and GQL and just a tiny bit more skills with Node and Express.<br>I am relatively ok with JS, React and other frontend stuff from the list but I am no way even close to be a seasoned frontend person.</p>
+<h2 id="DISCLAIMER"><a href="#DISCLAIMER" class="headerlink" title="DISCLAIMER"></a>DISCLAIMER</h2><p>Don’t take any of this seriously and as a matter-of-fact. These are my notes. It might look like I am trying to teach something to someone. I am not.</p>
+
+
+                
+            </div>
+            
+            <!-- Custom placed tags -->
+            <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                
+                    
+
+
+<a href="/angry-chaired-blog/tags/frontend/">#frontend</a> <a href="/angry-chaired-blog/tags/apollo/">#apollo</a> <a href="/angry-chaired-blog/tags/react/">#react</a> <a href="/angry-chaired-blog/tags/pagination/">#pagination</a>
+
+
+                
+            </div>
+            <!--  -->
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+
+            <!-- Hyvor comments -->
+
+            <!-- End of Hyvor comments -->
+        </div>
+    </div>
+</article>
+
+
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2020 kaem<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

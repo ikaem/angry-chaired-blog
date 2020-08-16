@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="Inexperienced and curious pokes into the sprawling world of web development "/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="kaem"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="GraphQL &amp; React &amp; PSQL: Setup Apollo Server Express"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Inexperienced and curious pokes into the sprawling world of web development "/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Angry Chaired Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://ikaem.github.io/angry-chaired-blog/angry-chaired-blog/images/header-image.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://ikaem.github.io/angry-chaired-blog/angry-chaired-blog/images/header-image.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>GraphQL &amp; React &amp; PSQL: Setup Apollo Server Express - Angry Chaired Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/angry-chaired-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+    <link rel="icon" href="/angry-chaired-blog/images/favicon.ico"/>
+    
+
+<meta name="generator" content="Hexo 5.0.2"><link rel="alternate" href="/angry-chaired-blog/atom.xml" title="Angry Chaired Blog" type="application/atom+xml">
+</head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/angry-chaired-blog/">Angry Chaired Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/about">
+                            
+                                About
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a target="_blank" rel="noopener" href="https://angrychaired.surge.sh">
+                            
+                                <i class="fa fa-user fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a target="_blank" rel="noopener" href="https://github.com/ikaem/">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a href="/angry-chaired-blog/atom.xml">
+                            
+                                <i class="fa fa-rss fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/angry-chaired-blog/images/header-image.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>GraphQL & React & PSQL: Setup Apollo Server Express</h1>
+
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            16/08/2020
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/angry-chaired-blog/categories/graphql-react-psql/">graphql & react & psql</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <!-- Step Content Start -->
+
+<h4 id="Part-4-of-10-in-GraphQL-amp-React-amp-PSQL"><a href="#Part-4-of-10-in-GraphQL-amp-React-amp-PSQL" class="headerlink" title="Part 4 of 10 in GraphQL &amp; React &amp; PSQL"></a>Part 4 of 10 in GraphQL &amp; React &amp; PSQL</h4><p>We reached an important point. It is the main reason I actually did this small project. I wanted to learn to use GrapqhQL, and figured I should create a small app to find out how it works.<br>I am not going to explain GQL in depth. I am not even close to being able to do that. Instead, I will show how to use Apollo’s tools to be able to fetch, create and edit data via GrapqhQL.</p>
+<a id="more"></a>
+
+<h4 id="See-Project-Information"><a href="#See-Project-Information" class="headerlink" title="See Project Information"></a>See <a href="#Project-Information">Project Information</a></h4><h2 id="Step-4-Set-up-Apollo-Server-Express"><a href="#Step-4-Set-up-Apollo-Server-Express" class="headerlink" title="Step 4. Set up Apollo Server Express"></a>Step 4. Set up Apollo Server Express</h2><p>I will try to explain what GQL is on a very superficial level. For this particular case, it is an alternative to REST. It is a way to get data from and to a database. Apparently, it is a faster, more modern, and more flexible way to deal with data. With GQL, we can read data from the database (query), write data to the database (mutate), or stream data from the database (subscribe - I don’t know if this description is correct).<br>GQL is kind of a mediator between the server and database, from what I gather.<br>It took me a while to wrap my head around it, but I think I like it now. </p>
+<p>Apollo has tools to make dealing with GQL easier. One of those tools is Apollo Express Server. It integrates with Express, and then listens to requests from frontend. Then, it reacts to those requests, does something, and returns some data to the client.</p>
+<p>Lets do it. </p>
+<p>Things we are going to do: </p>
+<ol>
+<li>Install necessary dependencies</li>
+<li>Create an instance of Apollo Express Server</li>
+<li>Create test blueprints for data we will return to the front end</li>
+<li>Create test functions to get data to and from database</li>
+<li>Get data with GQL via GraphQL Playground</li>
+</ol>
+<h3 id="Install-necessary-dependencies"><a href="#Install-necessary-dependencies" class="headerlink" title="Install necessary dependencies"></a>Install necessary dependencies</h3><p>We need to install:</p>
+<ol>
+<li>grapqhl</li>
+<li>apollo-server-express</li>
+<li>dotenv</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i graphql apollo-server-express dotenv</span><br></pre></td></tr></table></figure>
+
+<p>We use dotenv package to be able to work with enviromental variables. Those are constant, hidden variables that exist in the enviroment in which our process (our server, in this case) is executing. The environemnt in this case is Node.js.<br>We dont actually need environmental variables, but it is considered a good practice to store certain data in them. We will use it to store information about the port we will use. We could also use it to store password, address, and name of our database connection as well. </p>
+<h3 id="Create-an-instance-of-Apollo-Express-Server"><a href="#Create-an-instance-of-Apollo-Express-Server" class="headerlink" title="Create an instance of Apollo Express Server"></a>Create an instance of Apollo Express Server</h3><p>First thing, we will actually create that environmental variable</p>
+<p><strong>Create .env file in the root of the project</strong></p>
+<p>Add PORT = 4000 to it</p>
+<ul>
+<li>We will use this variable to have our server run on port 4000 of our localhost</li>
+<li>Note that this setup will be valid only for the development build of the server. </li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; .env</span><br><span class="line">PORT &#x3D; 4000</span><br></pre></td></tr></table></figure>
+
+<p>In src/server.ts file, we:</p>
+<ul>
+<li>Import dotenv and initialize it.</li>
+<li>Declare variable PORT to have variable of the PORT environmental variable we just created in the .env file. </li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// src/server.ts</span></span><br><span class="line"><span class="keyword">import</span> dotenv <span class="keyword">from</span> <span class="string">&quot;dotenv&quot;</span>;</span><br><span class="line">dotenv.config();</span><br><span class="line">...</span><br><span class="line"><span class="keyword">const</span> PORT = process.env.PORT || <span class="number">4000</span>;</span><br></pre></td></tr></table></figure>
+
+<p>Next, we create instance of Apollo Express Server and attach it to our Express Server.</p>
+<p>We import ApolloServer class and gql method from “apollo-server-express”</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// src/server.ts</span></span><br><span class="line">...</span><br><span class="line"><span class="keyword">import</span> &#123; ApolloServer, gql &#125; <span class="keyword">from</span> <span class="string">&quot;apollo-server-express&quot;</span>;</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<p><strong>We create an instance of the ApolloServer, and attach it to our existing Express server</strong></p>
+<p>ApolloServer accepts one argument, which is an object.<br>This object needs two mandatory properties:</p>
+<ol>
+<li>Blueprints for data we will return to the front end - we call this <strong>typeDefs</strong>. This is basiclly shape of data that GQL will be dealing with. GQL needs these blueprints </li>
+<li>Functions to get data to and from database - we call these <strong>resolvers</strong>. These are used by GQL to access databse and return data from database</li>
+</ol>
+<p>Then we just attach our instance of ApolloServer to Express server, and specify the path on which our Apollo Express Server will be available, within existing Express server.<br>We do this via <strong>applyMiddleware</strong> method which accepts an argument of an object, which has properties of:</p>
+<ol>
+<li>app - which is used to hold value of our Express server</li>
+<li>path - which holds value to path on which our Apollo Express will be available. Default path is “/graphql”, which in the end makes the full url in our case be “http:localhost:4000/graphql”.</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// src/server.ts</span></span><br><span class="line">...</span><br><span class="line"><span class="keyword">const</span> server = <span class="keyword">new</span> ApolloServer(&#123;</span><br><span class="line">    typeDefs,</span><br><span class="line">    resolvers,</span><br><span class="line">    context: <span class="function">() =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> &#123;</span><br><span class="line">            pgPool</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br><span class="line">server.applyMiddleware(&#123; app, <span class="attr">path</span>: <span class="string">&quot;/grapqhl&quot;</span>&#125;);</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<h3 id="Create-test-blueprints-for-data-we-will-return-to-the-front-end"><a href="#Create-test-blueprints-for-data-we-will-return-to-the-front-end" class="headerlink" title="Create test blueprints for data we will return to the front end"></a>Create test blueprints for data we will return to the front end</h3><p>Now, the Apollo Express Server will not work until we provide those two properties.<br>Here, we make the blueprints, or usually called <strong>typeDefs</strong>.  </p>
+<p>We will make these inside the server.ts for now, and later we will have them be in their own module</p>
+<p>So, lets just make few test ones above our Apollo Express Server instance.<br>We use the <strong>gql</strong> method for creation of typeDefs. We imported that method from “apollo-server-express”.</p>
+<p>typeDefs consists of top level:</p>
+<ul>
+<li>Mandatory Query type</li>
+<li>Our own custom types. We create them to define shape of the data that we need in our app, and that GQL will be dealing with</li>
+<li>Optional Mutation and Subscription types. We will not deal with Subscriptions here</li>
+</ul>
+<h4 id="The-mandatory-Query-type"><a href="#The-mandatory-Query-type" class="headerlink" title="The mandatory Query type"></a>The mandatory Query type</h4><p>It holds optional properties. With these properties, we define what GQL returns to us when we call them.<br>For instance, here we created variable typeDefs with the gql method:</p>
+<ul>
+<li>We define that the mandatory type Query holds property called <strong>hello</strong>, which, when called, will return data of type <strong>String</strong>.</li>
+<li>We also define another property of Query type, which is <strong>notHelloButNumber</strong>. This property, when called, will return a data of type <strong>Int</strong>, which is just a regular integer.</li>
+</ul>
+<p>Note that inside gql method we are not writing JS or TS here. Query is not a JS object, but is instead GraphQL syntax. </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> typeDefs = gql<span class="string">`</span></span><br><span class="line"><span class="string">    type Query &#123;</span></span><br><span class="line"><span class="string">        hello: String</span></span><br><span class="line"><span class="string">        notHelloButNumber: Int</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">`</span>;</span><br></pre></td></tr></table></figure>
+
+<h4 id="Our-own-custom-types"><a href="#Our-own-custom-types" class="headerlink" title="Our own custom types"></a>Our own custom types</h4><p>To define our own, custom types, we use the similar GQL syntax, and add a new top level type to the typeDefs.</p>
+<p>Here we define the <strong>User</strong> type. It holds properties:</p>
+<ul>
+<li>user_id, that returns an integer, when called.</li>
+<li>email, which returns a string, when called.</li>
+<li>hobbies, which returns an array of strings, when called.</li>
+</ul>
+<p>Then, we add another property to the Query type, and call it, <strong>getUser</strong>. When getUser is called on Query type, it will return data of type User.<br>This means that it will return:</p>
+<ul>
+<li>user_id, that returns an integer, when called.</li>
+<li>email, which returns a string, when called.</li>
+<li>and hobbies, which returns an array of strings, when called.</li>
+</ul>
+<p>Note that getUser property accepts an argument of type Int. We will use this argument to find the actual user in the database</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> typeDefs = gql<span class="string">`</span></span><br><span class="line"><span class="string">    type Query &#123;</span></span><br><span class="line"><span class="string">        hello: String</span></span><br><span class="line"><span class="string">        notHelloButNumber: Int</span></span><br><span class="line"><span class="string">        getUser(id: Int): User</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">    type User &#123;</span></span><br><span class="line"><span class="string">        user_id: Int</span></span><br><span class="line"><span class="string">        email: String</span></span><br><span class="line"><span class="string">        hobbies: [String]</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">`</span>;</span><br></pre></td></tr></table></figure>
+
+<p>We can go even deeper. Let’s define another type, <strong>UsersInfo</strong>, which holds properties:</p>
+<ul>
+<li>users, that return an arry of User type, when called </li>
+<li>numberOfUsers, that returns data of Int type, when called</li>
+</ul>
+<p>Now, we define another propery on Query type, <strong>called getUsersInfo</strong>. When called, this property will return data of type UsersInfo.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> typeDefs = gql<span class="string">`</span></span><br><span class="line"><span class="string">    type Query &#123;</span></span><br><span class="line"><span class="string">        hello: String</span></span><br><span class="line"><span class="string">        notHelloButNumber: Int</span></span><br><span class="line"><span class="string">        getUser(id: Int): User</span></span><br><span class="line"><span class="string">        getUsersInfo: UsersInfo</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">    type User &#123;</span></span><br><span class="line"><span class="string">        user_id: Int</span></span><br><span class="line"><span class="string">        email: String</span></span><br><span class="line"><span class="string">        hobbies: [String]</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    type UsersInfo &#123;</span></span><br><span class="line"><span class="string">        users: [User]</span></span><br><span class="line"><span class="string">        numberOfUsers: Int</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">`</span>;</span><br></pre></td></tr></table></figure>
+
+<p>So, the Query type seems to be the main thing when talking about queries here - it is the main type. We use its properties to return other data types. </p>
+<h4 id="Optional-Mutation-type"><a href="#Optional-Mutation-type" class="headerlink" title="Optional Mutation type"></a>Optional Mutation type</h4><p>We use the <strong>Mutation</strong> type for cases when we want to modify data in the database.<br>Its syntaxt is pretty similar to the one of the Query type, with the only difference being its name - Mutation.</p>
+<p>We define properties on the type that, when called, return a certain type of data. </p>
+<ul>
+<li>This returned data can be of basic GQL type - String, Int, Boolean…</li>
+<li>Or, it can be any of the custom types we created - for example, the <strong>User</strong> type we created previously.</li>
+</ul>
+<p>Property that we call can, but it doesn’t have to accept an argument. In our case, however, the <strong>newUser</strong> mutation property does accept arguments:</p>
+<ul>
+<li>email, of string type</li>
+<li>hobbies, of array of strings type </li>
+</ul>
+<p>We do not need argument for user_id, because when we create a new user in the database, user_id will be automatically created</p>
+<p>Finally, the mutation returns data of User type.<br>At this point, it doesn’t matter what actuall happens in the database in the time between us calling the the mutation property and getting a data returned. Important is that we call it, and we get some data back.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> typeDefs = gql<span class="string">`</span></span><br><span class="line"><span class="string">    type Query &#123;</span></span><br><span class="line"><span class="string">        hello: String</span></span><br><span class="line"><span class="string">        notHelloButNumber: Int</span></span><br><span class="line"><span class="string">        getUser(id: Int): User</span></span><br><span class="line"><span class="string">        getUsersInfo: UsersInfo</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    type Mutation &#123;</span></span><br><span class="line"><span class="string">        newUser(email: String, password: String, hobbies: [String]): User</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">    type User &#123;</span></span><br><span class="line"><span class="string">        user_id: Int</span></span><br><span class="line"><span class="string">        email: String</span></span><br><span class="line"><span class="string">        hobbies: [String]</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    type UsersInfo &#123;</span></span><br><span class="line"><span class="string">        users: [User]</span></span><br><span class="line"><span class="string">        numberOfUsers: Int</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">`</span>;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Create-test-functions-to-get-data-to-and-from-database"><a href="#Create-test-functions-to-get-data-to-and-from-database" class="headerlink" title="Create test functions to get data to and from database"></a>Create test functions to get data to and from database</h3><p>Ok, now we have our type defs, written in the server.ts file. It holds queries and mutations that we can call, in order to work with data in the database.<br>But, now we need to make it possible to actually work with the data, since those queries and mutations only define what we can do and what we get back from the data.</p>
+<p>To actualy perform the grunt work, we need functions that these properties will call. We call these functions <strong>resolvers</strong>.</p>
+<p>We will define resolvers, again, in server.ts, just below our typeDefs definition.<br>Resolvers is an object that, for our needs, contains 2 properties:</p>
+<ul>
+<li>Query</li>
+<li>Mutation</li>
+</ul>
+<p>The <strong>Query</strong> property is an object as well, and so is the <strong>Mutation</strong> property.<br>Each contains properties that have same name as their respective properties in the <strong>typeDefs</strong> definition. And each of those properties is a function that interacts with the database.</p>
+<p>A resolver’s name must match a property name on a type in <strong>typeDefs</strong> definition.<br>Resolver accepts 3 arguments:</p>
+<ul>
+<li>parent - which is a variable that contains data coming the the resolver from the type that called the resolver, in case the resolver needs it. We will get to this. </li>
+<li>args - a variable containing arguments provided to the resolver when it was called</li>
+<li>context - variable containing data provided by the instance of Apollo Express Server, and available to all existing resolvers </li>
+</ul>
+<p>Resolver needs to return data in shape that its property on its parent type is set to return.<br>So if we have a property “hello” on the Query type, and it returns data of type String, the “hello” resolver needs to return data of string type</p>
+<p>Ok, here is an example with the “hello” resolver on the <strong>Query</strong> property:. We have resolvers object, that holds Query object, that in turn holds hello property, that is a function that returns “hello” string</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// src/server.ts</span></span><br><span class="line"><span class="keyword">const</span> resolvers = &#123;</span><br><span class="line">    Query: &#123;</span><br><span class="line">        hello: <span class="keyword">async</span> () =&gt; <span class="string">&quot;Hello&quot;</span>,</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Let’s do another one, and create resolver for <strong>getUser</strong> query. </p>
+<p>We need to make sure we use arguments available for resolvers. We know that this resolver has an argument of <strong>id</strong> of Int type</p>
+<p>We will also use the <strong>pgPool</strong> connection to the database, available in the server.ts. Later, we will have the database connection be passed to all resolvers through their context arguments.<br><strong>Remember</strong>, context argument is the same for all resolvers, passed down by the instance of Apollo Express Server.</p>
+<p>Note the TS typing with the arguments. It is something I don’t understand much, but TS did require me to type those arguments. So in this case, args is typed as an object that has an argument of <strong>id</strong>, which is of type <strong>number</strong>. </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// src/server.ts</span></span><br><span class="line"><span class="keyword">const</span> resolvers = &#123;</span><br><span class="line">    Query: &#123;</span><br><span class="line">        hello: <span class="keyword">async</span>() =&gt; <span class="string">&quot;Hello&quot;</span>,</span><br><span class="line">        getUser: <span class="keyword">async</span>(parent: any, <span class="attr">args</span>: &#123; <span class="attr">id</span>: number &#125;, <span class="attr">context</span>: any) =&gt; &#123;</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                <span class="keyword">const</span> userQuery = <span class="string">`</span></span><br><span class="line"><span class="string">                    SELECT </span></span><br><span class="line"><span class="string">                        users_login.user_id,</span></span><br><span class="line"><span class="string">                        users_login.email,</span></span><br><span class="line"><span class="string">                        users_info.hobbies,</span></span><br><span class="line"><span class="string">                    FROM </span></span><br><span class="line"><span class="string">                        users_login</span></span><br><span class="line"><span class="string">                    </span></span><br><span class="line"><span class="string">                    JOIN </span></span><br><span class="line"><span class="string">                        users_info</span></span><br><span class="line"><span class="string">                    ON </span></span><br><span class="line"><span class="string">                        users_login.user_id = users_info.user_info_id</span></span><br><span class="line"><span class="string">                    WHERE</span></span><br><span class="line"><span class="string">                        users_login.user_id = <span class="subst">$&#123;+args.id&#125;</span>;</span></span><br><span class="line"><span class="string">                `</span></span><br><span class="line">                <span class="keyword">const</span> userSelect = <span class="keyword">await</span> pgPool.query(userQuery);</span><br><span class="line">                <span class="keyword">const</span> user = userSelect.rows[<span class="number">0</span>];</span><br><span class="line">                <span class="keyword">return</span> user;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">catch</span>(error) &#123;</span><br><span class="line">                <span class="built_in">console</span>.log(error);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>Few things here:</strong></p>
+<p>The code in the resolver is pretty similar to the REST route <strong>getUser</strong> we already have in the rest-router.ts module. So, GQL and REST both serve similar pupropse - they get data to and from the database. </p>
+<p>Also, for my purposes and from my perspective, <strong>resolvers</strong> themselves are pretty much the same as the actual REST routes.<br>The difference comes in form of <strong>typeDefs</strong>, where we actually define shape of our data. And, as we will see a bit later, where we make possible to choose which properties of a specific type we want to fetch from the server. </p>
+<p>PSQL query uses the <strong>id</strong> property on the <strong>args</strong> argument on the resolver method.<br>The resolver returns an object that has to have shape of the type that is returned by the property that calls this resolver.<br>In this case, the type returned by the property is <strong>User</strong>, with the following shape: </p>
+<ul>
+<li>user_id - of type <strong>Int</strong></li>
+<li>email - of type <strong>String</strong></li>
+<li>hobbies - of type <strong>String array - [String]</strong></li>
+</ul>
+<p>The return of the resolver has the same shape, so we are good here. </p>
+<p>Next, here is an example of a mutation resolver on the <strong>Mutation</strong> type.<br>Again, note that the resolver is pretty similar to the <strong>newUser</strong> REST Route <strong>newUser</strong>.</p>
+<ul>
+<li>We pull a client from the node-postgres connection pool</li>
+<li>We hash the password provided by the user</li>
+<li>We do the transaction to place data in the database</li>
+<li>We release client back to the connection pool once we are done. </li>
+</ul>
+<p>Also, I declared an interface for the <strong>args</strong> argument on the <strong>newUser</strong> resolver. I placed it in the same <strong>server.ts</strong> file, and specified that <strong>args</strong> will be an object with 3 properties, <strong>email</strong>, <strong>password</strong>, and <strong>hobbies</strong>. This is for 2 reasons:</p>
+<ul>
+<li>Because arguments in this method need to be typed when working in TS</li>
+<li>And also, because I want to keep the arguments of the method more readable and clean.</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">interface newUserArgs &#123;</span><br><span class="line">    email: string,</span><br><span class="line">    password: string,</span><br><span class="line">    hobbies: string[]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> resolvers = &#123;</span><br><span class="line">    Query: &#123;</span><br><span class="line">        hello: <span class="keyword">async</span>() =&gt; <span class="string">&quot;Hello&quot;</span>,</span><br><span class="line">        ...</span><br><span class="line">    &#125;,</span><br><span class="line">    Mutation: &#123;</span><br><span class="line">        newUser: <span class="keyword">async</span>(parent: any, <span class="attr">args</span>: newUserArgs, <span class="attr">context</span>: any ) =&gt; &#123;</span><br><span class="line">            <span class="keyword">const</span> client = <span class="keyword">await</span> pgPool.connect();</span><br><span class="line"></span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                <span class="keyword">const</span> hashed = <span class="keyword">await</span> hash(args.password, <span class="number">10</span>);</span><br><span class="line"></span><br><span class="line">                <span class="keyword">await</span> client.query(<span class="string">&quot;BEGIN&quot;</span>);</span><br><span class="line"></span><br><span class="line">                <span class="keyword">const</span> users_loginQuery = <span class="string">`</span></span><br><span class="line"><span class="string">                    INSERT INTO users_login (email, hash)</span></span><br><span class="line"><span class="string">                    VALUES (&#x27;<span class="subst">$&#123;args.email&#125;</span>&#x27;, &#x27;<span class="subst">$&#123;hashed&#125;</span>&#x27;)</span></span><br><span class="line"><span class="string">                    RETURNING user_id, email;</span></span><br><span class="line"><span class="string">                `</span>;</span><br><span class="line">                <span class="keyword">const</span> users_loginInsert = <span class="keyword">await</span> client.query(users_loginQuery);</span><br><span class="line"></span><br><span class="line">                <span class="keyword">const</span> users_infoQuery = <span class="string">`</span></span><br><span class="line"><span class="string">                    INSERT INTO users_info(    </span></span><br><span class="line"><span class="string">                        user_info_id,</span></span><br><span class="line"><span class="string">                        hobbies</span></span><br><span class="line"><span class="string">                    )</span></span><br><span class="line"><span class="string">                    VALUES (</span></span><br><span class="line"><span class="string">                        <span class="subst">$&#123;users_loginInsert.rows[<span class="number">0</span>].user_id&#125;</span>,</span></span><br><span class="line"><span class="string">                        &#x27;&#123;<span class="subst">$&#123;args.hobbies&#125;</span>&#125;&#x27;</span></span><br><span class="line"><span class="string">                    )</span></span><br><span class="line"><span class="string">                    RETURNING                 </span></span><br><span class="line"><span class="string">                        hobbies;</span></span><br><span class="line"><span class="string">                `</span>;</span><br><span class="line"></span><br><span class="line">                <span class="keyword">const</span> users_infoInsert = <span class="keyword">await</span> client.query(users_infoQuery);</span><br><span class="line">                <span class="keyword">await</span> client.query(<span class="string">&quot;COMMIT&quot;</span>);</span><br><span class="line"></span><br><span class="line">                <span class="keyword">const</span> loginData = users_loginInser.rows[<span class="number">0</span>];</span><br><span class="line">                <span class="keyword">const</span> infoData = users_infoInser.rows[<span class="number">0</span>];</span><br><span class="line"></span><br><span class="line">                <span class="keyword">return</span> &#123;</span><br><span class="line">                    ...loginData,</span><br><span class="line">                    ...infoData</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">catch</span>(error) &#123;</span><br><span class="line">                <span class="keyword">await</span> client.query(<span class="string">&quot;ROLLBACK&quot;</span>);</span><br><span class="line">                <span class="built_in">console</span>.log(error);</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">finally</span> &#123;</span><br><span class="line">                client.release();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Getting-GQL-Data-with-GraphQL-Playground"><a href="#Getting-GQL-Data-with-GraphQL-Playground" class="headerlink" title="Getting GQL Data with GraphQL Playground"></a>Getting GQL Data with GraphQL Playground</h3><p>Ok, so we did it. We:</p>
+<ol>
+<li>Created an instance of Apollo Express Server</li>
+<li>We attached it to an existing Express server</li>
+<li>We created typeDefs and resolvers, to be used in manipulation of data in the database</li>
+</ol>
+<p>Now, how do we actually manipulate data?</p>
+<ol>
+<li>Well, we can do it from the client, of course, such a browser, or a mobile app.</li>
+<li>Also, we can do it through a tool called GraphQL Playground that Apollo gives us access to.</li>
+</ol>
+<p>We can access GQL Playground at “localhost:4000/graphql”. It is the url that we set when we created the instance of AES. In it, we just type queries, and we get results back. </p>
+<p>So let’s type some queries in the middle section.</p>
+<h4 id="To-make-queries"><a href="#To-make-queries" class="headerlink" title="To make queries:"></a>To make queries:</h4><p>Type <strong>query</strong>, and open curly braces<br>Inside, type name of the query property that we put inside the Query type in typeDefs. In this case, we will type <strong>hello</strong>. </p>
+<ol>
+<li>This <strong>hello</strong> will call the <strong>hello</strong> resolver on the <strong>Query</strong> property in the resolvers object we created</li>
+<li>Finally, we will get a result of “hello”, because this is what we return from the resolver</li>
+<li>The return of the resolver is a string, and return of the hello query on the Query type is also a strinbg, so we are good here</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">query &#123;</span><br><span class="line">    hello</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>And here is what we get back:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">&quot;data&quot;</span>: &#123;</span><br><span class="line">        <span class="string">&quot;hello&quot;</span>: <span class="string">&quot;Hello&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Ok, let’s make another query get with the <strong>getUser</strong> query.</p>
+<p>Here, we have few interesting things:</p>
+<ol>
+<li>We provide an argument to the <strong>getUser</strong> query. This argument is of shape that we defined in the <strong>typeDefs</strong>. It is called <strong>id</strong>, and it is of <strong>Int</strong> type</li>
+<li>Next, unlike the <strong>hello</strong> query, we actually require a specific property from the <strong>getUser</strong>. This is because getUser query returns an object that has several properties on it. And, this is mandatory - we need to specify which properties we want back from the object that the query returns</li>
+</ol>
+<p>Just a quick note - if a property inside object that the getUser returns was another object that we had a resolver for - we would need to specify which properties we want from that object as well - <strong>We will get to this</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">query &#123;</span><br><span class="line">    getUser(id:18) &#123;</span><br><span class="line">        user_id</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>And here is what we get back:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line"><span class="string">&quot;data&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;getUser&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;user_id&quot;</span>: <span class="string">&quot;18&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="To-make-mutations"><a href="#To-make-mutations" class="headerlink" title="To make mutations:"></a>To make mutations:</h4><ol>
+<li>Instead of <strong>query</strong>, now type <strong>mutation</strong>, and open curly braces.</li>
+<li>Inside, type the name of the mutation and provide needed arguments.</li>
+<li>Finally, include names of the properties on the returned object to tell GQL that we want to get back that specific data. </li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">mutation &#123;</span><br><span class="line">    newUser(email: &quot;email@email&quot;, password: &quot;password&quot;, hobbies: [&quot;writing&quot;, &quot;writing&quot;]) &#123;</span><br><span class="line">        user_id</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<!-- End Step Content -->
+<!-- Project Information -->
+
+<h2 id="Project-Information"><a href="#Project-Information" class="headerlink" title="Project Information"></a>Project Information</h2><h3 id="Available-at"><a href="#Available-at" class="headerlink" title="Available at"></a>Available at</h3><p><a target="_blank" rel="noopener" href="https://github.com/ikaem/graphql-jwt-react.git">Github</a> </p>
+<h3 id="Goals"><a href="#Goals" class="headerlink" title="Goals"></a>Goals</h3><ol>
+<li>Create an app that uses GrapqhQL on frontend and backend</li>
+<li>Use PSQL for database</li>
+<li>Use Typescript on both ends</li>
+<li>The app should be hold a list of users that can be created, viewed, edited, and deleted.</li>
+</ol>
+<h3 id="Steps"><a href="#Steps" class="headerlink" title="Steps"></a>Steps</h3><ol>
+<li>Make simple Node and Express server with TypeScript</li>
+<li>Create a PostgreSQL database and tables that hold user info</li>
+<li>Use node-postgres to connect backend to database</li>
+<li><strong>Set up Apollo Express Server</strong></li>
+<li>Create GQL types, queries and resolvers on backend</li>
+<li>Pause</li>
+<li>Make simple frontend with React and TS</li>
+<li>Set Apollo Client on frontend</li>
+<li>Establish frontend and backend communication via Apollo Client</li>
+<li>Create pagination</li>
+</ol>
+<h3 id="Tech-and-Tools"><a href="#Tech-and-Tools" class="headerlink" title="Tech and Tools"></a>Tech and Tools</h3><ol>
+<li>React</li>
+<li>React Router</li>
+<li>Styled Components</li>
+<li>Node</li>
+<li>PSQL</li>
+<li>GraphQL</li>
+<li>Apollo Server Express</li>
+<li>Apollo Client</li>
+<li>Bcrypt</li>
+<li>TypeScript</li>
+<li>Express</li>
+</ol>
+<h3 id="Experience-with-Tech-amp-Tools"><a href="#Experience-with-Tech-amp-Tools" class="headerlink" title="Experience with Tech &amp; Tools"></a>Experience with Tech &amp; Tools</h3><p>I am new to Typescript, have super little experience with PSQL and GQL and just a tiny bit more skills with Node and Express.<br>I am relatively ok with JS, React and other frontend stuff from the list but I am no way even close to be a seasoned frontend person.</p>
+<h2 id="DISCLAIMER"><a href="#DISCLAIMER" class="headerlink" title="DISCLAIMER"></a>DISCLAIMER</h2><p>Don’t take any of this seriously and as a matter-of-fact. These are my notes. It might look like I am trying to teach something to someone. I am not.</p>
+
+
+                
+            </div>
+            
+            <!-- Custom placed tags -->
+            <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                
+                    
+
+
+<a href="/angry-chaired-blog/tags/apollo/">#apollo</a> <a href="/angry-chaired-blog/tags/node/">#node</a> <a href="/angry-chaired-blog/tags/express/">#express</a> <a href="/angry-chaired-blog/tags/backend/">#backend</a> <a href="/angry-chaired-blog/tags/server/">#server</a> <a href="/angry-chaired-blog/tags/graphql/">#graphql</a>
+
+
+                
+            </div>
+            <!--  -->
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+
+            <!-- Hyvor comments -->
+
+            <!-- End of Hyvor comments -->
+        </div>
+    </div>
+</article>
+
+
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2020 kaem<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

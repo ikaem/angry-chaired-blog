@@ -23,7 +23,7 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="Angry Chaired Blog"/>
+        <meta property="og:title" content="GraphQL &amp; React &amp; PSQL: React &amp; TypeScript Frontend"/>
     
 
     <!--Open Graph Description-->
@@ -36,7 +36,7 @@
 
     <!--Type page-->
     
-        <meta property="og:type" content="website"/>
+        <meta property="og:type" content="article"/>
     
 
     <!--Page Cover-->
@@ -55,7 +55,7 @@
 
     <!-- Title -->
     
-    <title>Angry Chaired Blog</title>
+    <title>GraphQL &amp; React &amp; PSQL: React &amp; TypeScript Frontend - Angry Chaired Blog</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
@@ -179,186 +179,162 @@
 
     <!-- Main Content -->
     <!-- Page Header -->
-<!-- Set your background image for this header in the theme's configuration: index_cover -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
 <header class="intro-header" style="background-image: url('/angry-chaired-blog/images/header-image.png')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading">
-                    <h1>Angry Chaired Blog</h1>
-                    <hr class="small">
-                    <span class="subheading">Writing about my web development learning...</span>
+                <div class="post-heading">
+                    <h1>GraphQL & React & PSQL: React & TypeScript Frontend</h1>
+
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            16/08/2020
+                        
+                    </span>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
-<!-- Main Content -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/angry-chaired-blog/categories/graphql-react-psql/">graphql & react & psql</a>
+
+                    
+                </div>
             
-                <div class="post-preview">
-  <!-- test featured image -->
 
-  
-  <a href="/angry-chaired-blog/2020/graphql-react-psql-apollo-client-pagination/">
-
-    
-    <!-- <a href="/angry-chaired-blog/2020/graphql-react-psql-apollo-client-pagination/"> -->
-    <h2 class="post-title">
-      GraphQL & React & PSQL: Apollo Client Pagination
-    </h2>
-    <!--  -->
-
-    <p class="post-meta">
-      <!-- Date and Author -->
-       16/08/2020
-    </p>
-
-    <div class="post-subtitle">
-        <!-- Step Content Start -->
-
-<h4 id="Part-9-of-9-in-GraphQL-amp-React-amp-PSQL"><a href="#Part-9-of-9-in-GraphQL-amp-React-amp-PSQL" class="headerlink" title="Part 9 of 9 in GraphQL &amp; React &amp; PSQL"></a>Part 9 of 9 in GraphQL &amp; React &amp; PSQL</h4><p>Ideally, we would not have all users instantly listed on our home page. We would want to have a part of it, maybe separated into pages, or extendable if a user wants so.<br>Pagination means that, when fetching data, we only fetch a part of it. If a user wants to see more data, they interact with the app to tell it so, and the app fetches more data as a response.</p>
-    </div>
-
-  </a>
-
-</div>
-<hr />
-
+            <!-- Gallery -->
             
-                <div class="post-preview">
-  <!-- test featured image -->
 
-  
-  <a href="/angry-chaired-blog/2020/graphql-react-psql-apollo-client-backend-frontend-communication/">
-
-    
-    <!-- <a href="/angry-chaired-blog/2020/graphql-react-psql-apollo-client-backend-frontend-communication/"> -->
-    <h2 class="post-title">
-      GraphQL & React & PSQL: Apollo Client & Backend-frontend communication
-    </h2>
-    <!--  -->
-
-    <p class="post-meta">
-      <!-- Date and Author -->
-       16/08/2020
-    </p>
-
-    <div class="post-subtitle">
-        <!-- Step Content Start -->
-
-<h4 id="Part-8-of-9-in-GraphQL-amp-React-amp-PSQL"><a href="#Part-8-of-9-in-GraphQL-amp-React-amp-PSQL" class="headerlink" title="Part 8 of 9 in GraphQL &amp; React &amp; PSQL"></a>Part 8 of 9 in GraphQL &amp; React &amp; PSQL</h4><p>Now that we have the Apollo Client set up on the frontend, we can use it to communicate with the backend.<br>For this purpose, Apollo Client provides hooks that can be used to query and mutate data. There is probably one to subscribe to data, but I don’t use it in this project. </p>
-    </div>
-
-  </a>
-
-</div>
-<hr />
-
-            
-                <div class="post-preview">
-  <!-- test featured image -->
-
-  
-  <a href="/angry-chaired-blog/2020/graphql-react-psql-apollo-client-frontend/">
-
-    
-    <!-- <a href="/angry-chaired-blog/2020/graphql-react-psql-apollo-client-frontend/"> -->
-    <h2 class="post-title">
-      GraphQL & React & PSQL: Apollo Client & Frontend
-    </h2>
-    <!--  -->
-
-    <p class="post-meta">
-      <!-- Date and Author -->
-       16/08/2020
-    </p>
-
-    <div class="post-subtitle">
-        <!-- Step Content Start -->
-
-<h4 id="Part-7-of-9-in-GraphQL-amp-React-amp-PSQL"><a href="#Part-7-of-9-in-GraphQL-amp-React-amp-PSQL" class="headerlink" title="Part 7 of 9 in GraphQL &amp; React &amp; PSQL"></a>Part 7 of 9 in GraphQL &amp; React &amp; PSQL</h4><p>Previously, we have set up Apollo Server on the backend. Now we have to find a way to get backend GraphQL data to the frontend side.<br>We will use Apollo Client for this. To be more specific, we will use Apollo Client 3 beta. The client provides tools to send queries and mutations to the backend, as well as to cache received data to keep it in memory, and use it throughout the application - sort of a state management.</p>
-    </div>
-
-  </a>
-
-</div>
-<hr />
-
-            
-                <div class="post-preview">
-  <!-- test featured image -->
-
-  
-  <a href="/angry-chaired-blog/2020/graphql-react-psql-react-typescript-frontend/">
-
-    
-    <!-- <a href="/angry-chaired-blog/2020/graphql-react-psql-react-typescript-frontend/"> -->
-    <h2 class="post-title">
-      GraphQL & React & PSQL: React & TypeScript Frontend
-    </h2>
-    <!--  -->
-
-    <p class="post-meta">
-      <!-- Date and Author -->
-       16/08/2020
-    </p>
-
-    <div class="post-subtitle">
-        <!-- Step Content Start -->
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <!-- Step Content Start -->
 
 <h4 id="Part-6-of-9-in-GraphQL-amp-React-amp-PSQL"><a href="#Part-6-of-9-in-GraphQL-amp-React-amp-PSQL" class="headerlink" title="Part 6 of 9 in GraphQL &amp; React &amp; PSQL"></a>Part 6 of 9 in GraphQL &amp; React &amp; PSQL</h4><p>Frontend is made with React, which I am relatively comfortable with. I don’t want to spend too much time on createing components and routine stuff, so I will just breeze through it to get to working with Apollo on frontend.</p>
-    </div>
+<a id="more"></a>
 
-  </a>
+<h4 id="See-Project-Information"><a href="#See-Project-Information" class="headerlink" title="See Project Information"></a>See <a href="#Project-Information">Project Information</a></h4><h2 id="Step-6-Make-simple-frontend-with-React-and-TS"><a href="#Step-6-Make-simple-frontend-with-React-and-TS" class="headerlink" title="Step 6. Make simple frontend with React and TS"></a>Step 6. Make simple frontend with React and TS</h2><p>Few things I do want to mention here:</p>
+<h3 id="Create-a-TS-React-app-with-create-react-app"><a href="#Create-a-TS-React-app-with-create-react-app" class="headerlink" title="Create a TS React app with create-react-app:"></a>Create a TS React app with create-react-app:</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npx create-react-app appname --typescript</span><br><span class="line">npm install typescript</span><br></pre></td></tr></table></figure>
 
-</div>
-<hr />
+<p>Also, make sure to have TS installed globally on my system too.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g typescript</span><br></pre></td></tr></table></figure>
 
-            
-                <div class="post-preview">
-  <!-- test featured image -->
-
-  
-  <a href="/angry-chaired-blog/2020/graphql-react-psql-types-queries-resolvers-in-apollo-server/">
-
-    
-    <!-- <a href="/angry-chaired-blog/2020/graphql-react-psql-types-queries-resolvers-in-apollo-server/"> -->
-    <h2 class="post-title">
-      GraphQL & React & PSQL: Types, Queries & Resolvers in Apollo Server
-    </h2>
-    <!--  -->
-
-    <p class="post-meta">
-      <!-- Date and Author -->
-       16/08/2020
-    </p>
-
-    <div class="post-subtitle">
-        <!-- Step Content Start -->
-
-<h4 id="Part-5-of-9-in-GraphQL-amp-React-amp-PSQL"><a href="#Part-5-of-9-in-GraphQL-amp-React-amp-PSQL" class="headerlink" title="Part 5 of 9 in GraphQL &amp; React &amp; PSQL"></a>Part 5 of 9 in GraphQL &amp; React &amp; PSQL</h4><p>GraphQL requires a quick setup to be able to fetch and modify data in the database. In particular, it needs to know what type of data it deals with, what are the possible queries it might receive in regards to data, and how to actually resolve those queries.<br>This is what we deal with in this post.</p>
-    </div>
-
-  </a>
-
-</div>
-<hr />
-
-            
-
-            <ul class="pager">
-    
-    
-        <li class="next"><a href="/angry-chaired-blog/page/2/">Older Posts  &rarr;</a></li>
-    
+<p>This will have the React app development environment be completely setup for Typescript. </p>
+<ul>
+<li>index.js and App.js are now index.tsx and App.tsx, as well as all other .js files.</li>
+<li>.tsx becomes required extension for a React component, unlike regular .js component used in case of JS setup</li>
+<li>tsconfig.json file is created automatically. I am not going into it, since I am not confident that I know what is going on in there, except for that fact that everything worked outside of the box.</li>
 </ul>
+<h3 id="Installed-important-dependencies-at-this-point"><a href="#Installed-important-dependencies-at-this-point" class="headerlink" title="Installed important dependencies at this point"></a>Installed important dependencies at this point</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install react-router-dom styled-components</span><br></pre></td></tr></table></figure>
+
+<p>As I am using TS, types for these also need to be installed</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install @types/react-router-dom @types/styled-components</span><br></pre></td></tr></table></figure>
+
+<h3 id="App-organization"><a href="#App-organization" class="headerlink" title="App organization"></a>App organization</h3><p>React components are separated into</p>
+<p>Pages:</p>
+<ul>
+<li>Home page, </li>
+<li>profile page, </li>
+<li>add profile, </li>
+<li>and edit profile</li>
+</ul>
+<p>Containers:</p>
+<ul>
+<li>There is only one component here, the one that maps over a list of users and then renders a each user to be shown on the list on the home page. There is some logic in this component, so I included it in the containers.</li>
+</ul>
+<p>Components:</p>
+<ul>
+<li>Components include form for adding and editing user, header, footer, layout, controls for pages change and so on.</li>
+</ul>
+<p>Elements:</p>
+<ul>
+<li>These are titles of sections, and profile avatar</li>
+</ul>
+<p>I like to have simple components that render small pieces of view categorized as elements. I use elements mostly for styling repeating parts of pages</p>
+<!-- End Step Content -->
+<!-- Project Information -->
+
+<h2 id="Project-Information"><a href="#Project-Information" class="headerlink" title="Project Information"></a>Project Information</h2><h3 id="Available-at"><a href="#Available-at" class="headerlink" title="Available at"></a>Available at</h3><p><a target="_blank" rel="noopener" href="https://github.com/ikaem/graphql-jwt-react.git">Github</a> </p>
+<h3 id="Goals"><a href="#Goals" class="headerlink" title="Goals"></a>Goals</h3><ol>
+<li>Create an app that uses GrapqhQL on frontend and backend</li>
+<li>Use PSQL for database</li>
+<li>Use Typescript on both ends</li>
+<li>The app should be hold a list of users that can be created, viewed, edited, and deleted.</li>
+</ol>
+<h3 id="Steps"><a href="#Steps" class="headerlink" title="Steps"></a>Steps</h3><ol>
+<li>Make simple Node and Express server with TypeScript</li>
+<li>Create a PostgreSQL database and tables that hold user info</li>
+<li>Use node-postgres to connect backend to database</li>
+<li>Set up Apollo Express Server</li>
+<li>Create GQL types, queries and resolvers on backend</li>
+<li><strong>Make simple frontend with React and TS</strong></li>
+<li>Set Apollo Client on frontend</li>
+<li>Establish frontend and backend communication via Apollo Client</li>
+<li>Create pagination</li>
+</ol>
+<h3 id="Tech-and-Tools"><a href="#Tech-and-Tools" class="headerlink" title="Tech and Tools"></a>Tech and Tools</h3><ol>
+<li>React</li>
+<li>React Router</li>
+<li>Styled Components</li>
+<li>Node</li>
+<li>PSQL</li>
+<li>GraphQL</li>
+<li>Apollo Server Express</li>
+<li>Apollo Client</li>
+<li>Bcrypt</li>
+<li>TypeScript</li>
+<li>Express</li>
+</ol>
+<h3 id="Experience-with-Tech-amp-Tools"><a href="#Experience-with-Tech-amp-Tools" class="headerlink" title="Experience with Tech &amp; Tools"></a>Experience with Tech &amp; Tools</h3><p>I am new to Typescript, have super little experience with PSQL and GQL and just a tiny bit more skills with Node and Express.<br>I am relatively ok with JS, React and other frontend stuff from the list but I am no way even close to be a seasoned frontend person.</p>
+<h2 id="DISCLAIMER"><a href="#DISCLAIMER" class="headerlink" title="DISCLAIMER"></a>DISCLAIMER</h2><p>Don’t take any of this seriously and as a matter-of-fact. These are my notes. It might look like I am trying to teach something to someone. I am not.</p>
+
+
+                
+            </div>
+            
+            <!-- Custom placed tags -->
+            <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                
+                    
+
+
+<a href="/angry-chaired-blog/tags/frontend/">#frontend</a> <a href="/angry-chaired-blog/tags/react/">#react</a> <a href="/angry-chaired-blog/tags/typescript/">#typescript</a>
+
+
+                
+            </div>
+            <!--  -->
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+
+            <!-- Hyvor comments -->
+
+            <!-- End of Hyvor comments -->
         </div>
     </div>
-</div>
+</article>
 
 
 

@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="Inexperienced and curious pokes into the sprawling world of web development "/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="kaem"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="GraphQL &amp; React &amp; PSQL: Create PSQL database"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Inexperienced and curious pokes into the sprawling world of web development "/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Angry Chaired Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://ikaem.github.io/angry-chaired-blog/angry-chaired-blog/images/header-image.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://ikaem.github.io/angry-chaired-blog/angry-chaired-blog/images/header-image.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>GraphQL &amp; React &amp; PSQL: Create PSQL database - Angry Chaired Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/angry-chaired-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+    <link rel="icon" href="/angry-chaired-blog/images/favicon.ico"/>
+    
+
+<meta name="generator" content="Hexo 5.0.2"><link rel="alternate" href="/angry-chaired-blog/atom.xml" title="Angry Chaired Blog" type="application/atom+xml">
+</head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/angry-chaired-blog/">Angry Chaired Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/about">
+                            
+                                About
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a target="_blank" rel="noopener" href="https://angrychaired.surge.sh">
+                            
+                                <i class="fa fa-user fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a target="_blank" rel="noopener" href="https://github.com/ikaem/">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a href="/angry-chaired-blog/atom.xml">
+                            
+                                <i class="fa fa-rss fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/angry-chaired-blog/images/header-image.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>GraphQL & React & PSQL: Create PSQL database</h1>
+
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            16/08/2020
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/angry-chaired-blog/categories/graphql-react-psql/">graphql & react & psql</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <!-- Step Content Start -->
+
+<h4 id="Part-2-of-10-in-GraphQL-amp-React-amp-PSQL"><a href="#Part-2-of-10-in-GraphQL-amp-React-amp-PSQL" class="headerlink" title="Part 2 of 10 in GraphQL &amp; React &amp; PSQL"></a>Part 2 of 10 in GraphQL &amp; React &amp; PSQL</h4><a id="more"></a>
+
+<h4 id="See-Project-Information"><a href="#See-Project-Information" class="headerlink" title="See Project Information"></a>See <a href="#Project-Information">Project Information</a></h4><h2 id="Step-2-Create-a-PostgreSQL-database-and-tables-that-hold-user-info"><a href="#Step-2-Create-a-PostgreSQL-database-and-tables-that-hold-user-info" class="headerlink" title="Step 2. Create a PostgreSQL database and tables that hold user info"></a>Step 2. Create a PostgreSQL database and tables that hold user info</h2><p>I am not going to explain installation of Postgres, but will focus on:</p>
+<ol>
+<li>Create new database</li>
+<li>Create tables</li>
+<li>Make queries to manipulate tables</li>
+</ol>
+<h3 id="Create-new-database"><a href="#Create-new-database" class="headerlink" title="Create new database"></a>Create new database</h3><p>Start with opening any terminal and starting the pg shell – I guess that’s how this part is called. Note that I need to login with my postgres profile with:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">postgres -U postgres</span><br></pre></td></tr></table></figure>
+
+<p>After this, psql will ask for password, and once entered, it will log the user in.</p>
+<p>Next, create new database with:</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">DATABASE</span> name_of_your_database</span><br></pre></td></tr></table></figure>
+
+<h3 id="Create-tables"><a href="#Create-tables" class="headerlink" title="Create tables"></a>Create tables</h3><p>Now start DBeaver, connect to the database created, and create tables</p>
+<p>Table for users’ login data</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> public.users_login (</span><br><span class="line">    user_id <span class="built_in">serial</span> <span class="keyword">NOT</span> <span class="literal">NULL</span>,</span><br><span class="line">    email <span class="built_in">varchar</span>(<span class="number">100</span>) <span class="literal">NULL</span>,</span><br><span class="line">    <span class="keyword">hash</span> <span class="built_in">varchar</span>(<span class="number">100</span>) <span class="literal">NULL</span>,</span><br><span class="line">    refresh_token <span class="built_in">text</span> <span class="literal">NULL</span>,</span><br><span class="line">    <span class="keyword">CONSTRAINT</span> email_unique <span class="keyword">UNIQUE</span> (email),</span><br><span class="line">    <span class="keyword">CONSTRAINT</span> user_key PRIMARY <span class="keyword">KEY</span> (user_id)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<p>This table has columns:</p>
+<ol>
+<li>user_id – of type bigserial, which is just an integer type that can be of a very big value, and it is serialized, meaning that each new entry will get user_id that is one whole number bigger than previous entry’s user_id</li>
+<li>email – of type varchar(100), which means that this column accepts entries only in string format, and those strings can be max 100 characters long.</li>
+<li>hash – of type varchar(100), used for storing users’ passwords. Same as email column, this column only accepts strings as values, up to 100 characters in length</li>
+<li>refresh_token – not used in this post, this column is meant to store refresh tokens needed for user authentication. Will be used in the following post dealing with JWT authentication.</li>
+</ol>
+<p>The table also has some constraints.<br>Constraints are, if I understand correctly, sort of limitations on specific columns.</p>
+<p>For instance, in this case:</p>
+<ul>
+<li>We put a constraint on column user_id to tell PSQL that its entries should serve as a PRIMARY KEY – a value that connects this table to other tables in the database by way of referring to the value it holds in each row. This sounds complicated. I will think about making it sound less complicated…</li>
+<li>We also added a constraint to the email column, telling PSQL that the values in it should be unique – no two emails should be the same.</li>
+</ul>
+<h4 id="Table-for-users’-info-data"><a href="#Table-for-users’-info-data" class="headerlink" title="Table for users’ info data"></a>Table for users’ info data</h4><p>Code for creating the table:</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> public.users_info (</span><br><span class="line">    user_info_id int4 <span class="keyword">NOT</span> <span class="literal">NULL</span>,</span><br><span class="line">    first_name <span class="built_in">varchar</span>(<span class="number">50</span>) <span class="literal">NULL</span>,</span><br><span class="line">    last_name <span class="built_in">varchar</span>(<span class="number">50</span>) <span class="literal">NULL</span>,</span><br><span class="line">    country int4 <span class="literal">NULL</span>,</span><br><span class="line">    city <span class="built_in">varchar</span>(<span class="number">100</span>) <span class="literal">NULL</span>,</span><br><span class="line">    website <span class="built_in">text</span> <span class="literal">NULL</span>,</span><br><span class="line">    age int4 <span class="literal">NULL</span>,</span><br><span class="line">    hobbies _text <span class="literal">NULL</span>,</span><br><span class="line">    avatar_link <span class="built_in">text</span> <span class="literal">NULL</span>,</span><br><span class="line">    <span class="keyword">CONSTRAINT</span> country_key <span class="keyword">FOREIGN</span> <span class="keyword">KEY</span> (country) <span class="keyword">REFERENCES</span> countries(country_id),</span><br><span class="line">    <span class="keyword">CONSTRAINT</span> user_info_id_foreign_key <span class="keyword">FOREIGN</span> <span class="keyword">KEY</span> (user_info_id) <span class="keyword">REFERENCES</span> users_login(user_id) <span class="keyword">ON</span> <span class="keyword">DELETE</span> <span class="keyword">CASCADE</span></span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<p>The table’s columns:</p>
+<ol>
+<li>user_info_id – of type integer, or int4 (same thing, I believe), and the value in it cannot be NULL – meaning I always have to provide value for this particular column</li>
+<li>first_name – just a varchar type, which will store users’ first names</li>
+<li>last_name – same thing as above, storing last names</li>
+<li>country – of type integer</li>
+<li>city – varchar</li>
+<li>website – obvious</li>
+<li>age – integer</li>
+<li>hobbies – of type text array. Text array can be specified as text[] as well. I was deciding between using regular array type, and json type for this column, where I would be getting json object into the column and outside it, but the learning curve seemed a bit steep for now. I just wanted to get the thing running, so I went with regular array, which seemed pretty straightforward to use.</li>
+<li>avatar is obvious</li>
+</ol>
+<p>Constraints:</p>
+<ul>
+<li>We have a constraint that makes the user_info_id column a FOREIGN KEY. Foreign key connects this table to another table’s PRIMARY KEY. In this case, this particular constraint will reference the PRIMARY KEY in the table users_login. This way, we can connect rows from the two tables, based on the same user id, and get complete data for a particular user.</li>
+<li>Same thing for the FOREIGN KEY for country column. We need to make the countries table yet, to be able to reference it. Ofc, that table should be created first, prior to connecting this table to it via FOREIGN KEY constraint.</li>
+<li>We also have ON DELETE CASCADE statement that extends the FOREIGN KEY constraint for user_info_id. This one was a bit tricky for me, but I think I got it. It basically tells PSQL to delete this entire row if row with user_id in users_login is deleted. Simply put, if a user is deleted from users_login table, the same user will be deleted in this table too.</li>
+</ul>
+<p>Notes:</p>
+<p>Usually, in either of these two tables two more columns are added. One to store date of creation of a user, and other to store date of modification. I didn’t go with it this time, but those would be of TIMESTAMP type, if I understood correctly.<br>These might be added for the JWT post, to maybe be able to tell when was the last time a user logged in.</p>
+<h4 id="Table-for-countries"><a href="#Table-for-countries" class="headerlink" title="Table for countries"></a>Table for countries</h4><p>Code for creation of the table:</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> public.countries (</span><br><span class="line">    country_id <span class="built_in">serial</span> <span class="keyword">NOT</span> <span class="literal">NULL</span>,</span><br><span class="line">    country_name <span class="built_in">varchar</span>(<span class="number">75</span>) <span class="literal">NULL</span>,</span><br><span class="line">    <span class="keyword">CONSTRAINT</span> country_id_key PRIMARY <span class="keyword">KEY</span> (country_id),</span><br><span class="line">    <span class="keyword">CONSTRAINT</span> country_name_unique <span class="keyword">UNIQUE</span> (country_name)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<p>The columns:</p>
+<ol>
+<li>country_id – of type serial, and integer, obviously, but not state, bc it is default to use int4 for serial, I guess…</li>
+<li>country_name – obvious from the description.</li>
+</ol>
+<p>Constraints:</p>
+<ul>
+<li>Same as above, really. country_id is a primary key, that the country_key (country column) in users_info references</li>
+<li>country_name is unique, to make sure we don’t add a country that already exists.</li>
+</ul>
+<p>Notes:</p>
+<p>This table is not really needed. I could have just had column country in users_info table be of type string, and store country names in there. But, I wanted to have this table too, so I can use it for a bit more complex GraphQL queries later.</p>
+<h3 id="Make-queries-to-manipulate-tables"><a href="#Make-queries-to-manipulate-tables" class="headerlink" title="Make queries to manipulate tables"></a>Make queries to manipulate tables</h3><h4 id="Insert-data-into-tables"><a href="#Insert-data-into-tables" class="headerlink" title="Insert data into tables"></a>Insert data into tables</h4><p>To insert data, we use this syntax with DBeaver’s SQL editor (and any terminal, really):</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span></span><br><span class="line">    table_name</span><br><span class="line">    (</span><br><span class="line">        column1_name,</span><br><span class="line">        column2_name</span><br><span class="line">    )</span><br><span class="line"><span class="keyword">VALUES</span></span><br><span class="line">    (</span><br><span class="line">        value_for_column1_in_row1,</span><br><span class="line">        value_for_column2_in_row1</span><br><span class="line">    ),</span><br><span class="line">    (</span><br><span class="line">        value_for_column1_in_row2,</span><br><span class="line">        value_for_column2_in_row2</span><br><span class="line">    );</span><br></pre></td></tr></table></figure>
+
+<p>Obviously, we can enter values in more or less than 2 rows.<br>So, to insert data into the countries table:</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span></span><br><span class="line">    countries</span><br><span class="line">    (</span><br><span class="line">        country_name</span><br><span class="line">    )</span><br><span class="line"><span class="keyword">VALUES</span></span><br><span class="line">    (</span><br><span class="line">        <span class="string">&#x27;croatia&#x27;</span></span><br><span class="line">    ),</span><br><span class="line">    (</span><br><span class="line">        <span class="string">&#x27;slovenia&#x27;</span></span><br><span class="line">    ),</span><br><span class="line">    (</span><br><span class="line">        <span class="string">&#x27;serbia&#x27;</span></span><br><span class="line">    ),</span><br><span class="line">    (</span><br><span class="line">        <span class="string">&#x27;bosnia and herzegovina&#x27;</span></span><br><span class="line">    );</span><br></pre></td></tr></table></figure>
+
+<p>Notes:</p>
+<p>We do not need to insert any values into country_id column, because this one is automatic due to serial type we specified it to be.<br>String (varchar and text) values need to be surrounded by single quotes. Double quotes won’t work.</p>
+<p>Now, let’s fill our users’ tables with data. Let’s say we want to enter full information about one user. We have two tables that hold different information about the same user.<br>One table holds sensitive information about user login details, and the other one holds not so sensitive information. This is why we separated them. That’s what all the tutorials say is best practice, anyway.</p>
+<p>So if we want to store complete information about a user, we have to separate it into 2 tables. Also, we want to make sure that:</p>
+<ol>
+<li>Both of those tables have data in it</li>
+<li>Both tables have the same user_id for the same user in their respective columns. This is necessary so we can later connect the data about the same user, and present it on the frontend.</li>
+</ol>
+<p>This means that we cannot insert data about the same user in one table, and not in the other. If we do this, the data won’t be complete. This case could happen in case of, for instance, an error in syntax, problems with server, or incomplete data provided to the user.</p>
+<h4 id="Transactions"><a href="#Transactions" class="headerlink" title="Transactions"></a>Transactions</h4><p>So what we want is to insert data in one table, and then insert it into other. And if there is any kind of error during either of those inserts, the whole process would just be cancelled, and inserts would be reverted, as if nothing happened.</p>
+<p>For this, we use TRANSACTIONS. We start a transaction with keyword BEGIN, and end it with keyword COMMIT. We can also manually cancel the process with keyword ROLLBACK.</p>
+<p>To use a transaction, we just put our inserts between BEGIN – COMMIT keywords.</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">BEGIN</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span></span><br><span class="line">    table1_name</span><br><span class="line">    (</span><br><span class="line">        column_name</span><br><span class="line">    )</span><br><span class="line"><span class="keyword">VALUES</span></span><br><span class="line">    (</span><br><span class="line">        value_for_column</span><br><span class="line">    );</span><br><span class="line"></span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span></span><br><span class="line">    table2_name</span><br><span class="line">    (</span><br><span class="line">        column_name</span><br><span class="line">    )</span><br><span class="line"><span class="keyword">VALUES</span></span><br><span class="line">    (</span><br><span class="line">        value_for_column</span><br><span class="line">    );</span><br><span class="line"></span><br><span class="line"><span class="keyword">COMMIT</span>;</span><br></pre></td></tr></table></figure>
+
+<p>And here is a transaction to insert actual user data into users_login and users_info tables:</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">BEGIN</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span></span><br><span class="line">    users_login</span><br><span class="line">    (</span><br><span class="line">        email,</span><br><span class="line">        <span class="keyword">hash</span></span><br><span class="line">    )</span><br><span class="line"><span class="keyword">VALUES</span></span><br><span class="line">    (</span><br><span class="line">        <span class="string">&#x27;karlo@karlo.com&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;karlo&#x27;</span></span><br><span class="line">    );</span><br><span class="line"></span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> users_info (</span><br><span class="line">    user_info_id,</span><br><span class="line">    first_name,</span><br><span class="line">    last_name,</span><br><span class="line">    country,</span><br><span class="line">    city,</span><br><span class="line">    website,</span><br><span class="line">    <span class="string">&quot;age&quot;</span>,</span><br><span class="line">    hobbies</span><br><span class="line">)</span><br><span class="line"><span class="keyword">VALUES</span> (</span><br><span class="line">    (</span><br><span class="line">        <span class="keyword">SELECT</span> user_id <span class="keyword">FROM</span> users_login <span class="keyword">WHERE</span> email = <span class="string">&#x27;karlo@karlo.com&#x27;</span>),</span><br><span class="line">    <span class="string">&#x27;karlo&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;lastname&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;country&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;city&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;www.website&#x27;</span>,</span><br><span class="line">    <span class="number">35</span>,</span><br><span class="line">    <span class="string">&#x27;&#123;</span></span><br><span class="line"><span class="string">        &quot;football&quot;,</span></span><br><span class="line"><span class="string">        &quot;writing&quot;,</span></span><br><span class="line"><span class="string">        &quot;reading&quot;</span></span><br><span class="line"><span class="string">    &#125;&#x27;</span></span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="keyword">COMMIT</span>;</span><br></pre></td></tr></table></figure>
+
+<p>Note that we are using a subquery in the second INSERT INTO query.<br>The subquery is fetching user_id we inserted into the users_login table during the first INSERT INTO query. This user_id will go into the user_info_id column, to make sure we have the same user id in both tables for the same user.<br>This is the reason we are doing the transaction. We need to have one value that is same on both tables, to be able to connect user data for the same user. In this example, we use the user id for that purpose.</p>
+<p>We get to fetching data with SELECT in the next paragraph.<br>When we get to fetching database data from Node, however, we will not be using this method. Instead, we will use node-postgres package to do it, in my opinion. a bit more elegantly.</p>
+<h4 id="Selecting-data-from-tables"><a href="#Selecting-data-from-tables" class="headerlink" title="Selecting data from tables"></a>Selecting data from tables</h4><p>We use SELECT keyword to get data from tables. To do it, we query a table with a query as shown below.<br>This particular query will return a temporary table holding as many rows as it exists in the actual table taht we are querying. Each row in the temporary table will present a different user, and with columns being those we included in the SELECT statement.</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span></span><br><span class="line">    column1_name,</span><br><span class="line">    column2_name</span><br><span class="line"><span class="keyword">FROM</span></span><br><span class="line">    table_name;</span><br></pre></td></tr></table></figure>
+
+<p>We can also query table for a specific row of data.</p>
+<p>The following query will test table rows, to see which one has a column thwith a value of ‘some_value’. If it finds any, it will return them:</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span></span><br><span class="line">    column1_name,</span><br><span class="line">    column2_name</span><br><span class="line"><span class="keyword">FROM</span></span><br><span class="line">    table_name</span><br><span class="line"><span class="keyword">WHERE</span></span><br><span class="line">    some_column = <span class="string">&#x27;some_value&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+<p>Here is a query for users_info where we want to get last name and age of user whose first name is ‘test’</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span></span><br><span class="line">    last_name,</span><br><span class="line">    age</span><br><span class="line"><span class="keyword">FROM</span></span><br><span class="line">    users_info</span><br><span class="line"><span class="keyword">WHERE</span></span><br><span class="line">    first_name = <span class="string">&#x27;test&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+<h4 id="Joining-data-from-tables"><a href="#Joining-data-from-tables" class="headerlink" title="Joining data from tables"></a>Joining data from tables</h4><p>Our users’ data is split between 3 tables:</p>
+<ol>
+<li>users_login for sensitive data</li>
+<li>users_info for personal information about the user</li>
+<li>countries for info about the country they are from</li>
+</ol>
+<p>If we want to fetch complete data for one user, we need to join data from all different tables.<br>We JOIN tables with PRIMARY and FOREIGN keys we set up when we created the tables. For instance, we join users_login and users_info based on user_id, and then we join user_info and countries via user_info.country column.</p>
+<p>Here is the query syntax where we fetch data from 3 different tables:</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span></span><br><span class="line">    table_name.column1_name,</span><br><span class="line">    table_name.column2_name,</span><br><span class="line">    joined_table1.column1_name,</span><br><span class="line">    joined_table2.column1_name</span><br><span class="line"><span class="keyword">FROM</span></span><br><span class="line">    table_name</span><br><span class="line"><span class="keyword">JOIN</span></span><br><span class="line">    joined_table1</span><br><span class="line"><span class="keyword">ON</span></span><br><span class="line">    table_name.column1_name = joined_table1.column1_name</span><br><span class="line"><span class="keyword">JOIN</span></span><br><span class="line">    joined_table2</span><br><span class="line"><span class="keyword">ON</span></span><br><span class="line">    joined_table1.column1.name = joined_table2.column1_name</span><br><span class="line"><span class="keyword">WHERE</span></span><br><span class="line">    table_name.column1_name = <span class="string">&#x27;some value&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+<p>And here is the query to get simple user data from all 3 tables – login, info and countries.</p>
+<p>We will have returned the user’s email, first name, and country name. We do it for a user with user_id 15.</p>
+<p>We can use lowercase statements for queries too:</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span></span><br><span class="line">    users_login.email,</span><br><span class="line">    users_info.first_name,</span><br><span class="line">    countries.country_name</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span></span><br><span class="line">    users_login</span><br><span class="line"><span class="keyword">join</span></span><br><span class="line">    users_info</span><br><span class="line"><span class="keyword">on</span></span><br><span class="line">    users_login.user_id = users_info.user_info_id</span><br><span class="line"><span class="keyword">join</span></span><br><span class="line">    countries</span><br><span class="line"><span class="keyword">on</span></span><br><span class="line">    users_info.country = countries.country_id</span><br><span class="line"><span class="keyword">where</span></span><br><span class="line">    users_login.user_id = <span class="number">15</span>;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Updating-data-in-tables"><a href="#Updating-data-in-tables" class="headerlink" title="Updating data in tables"></a>Updating data in tables</h3><p>Finally, we can also update data. Here is the syntax:</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">UPDATE</span> table_name</span><br><span class="line"><span class="keyword">SET</span></span><br><span class="line">    column_name = <span class="string">&#x27;some value&#x27;</span></span><br><span class="line"><span class="keyword">WHERE</span></span><br><span class="line">    some_column = <span class="string">&#x27;some value again&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+<p>And here is the actual query:</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">UPDATE</span></span><br><span class="line">    users_info</span><br><span class="line"><span class="keyword">SET</span></span><br><span class="line">    first_name = <span class="string">&#x27;post test&#x27;</span></span><br><span class="line"><span class="keyword">WHERE</span></span><br><span class="line">    first_name = <span class="string">&#x27;another&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+<p>Of course, updates can be wrapped in transactions too.</p>
+<!-- End Step Content -->
+<!-- Project Information -->
+
+<h2 id="Project-Information"><a href="#Project-Information" class="headerlink" title="Project Information"></a>Project Information</h2><h3 id="Available-at"><a href="#Available-at" class="headerlink" title="Available at"></a>Available at</h3><p><a target="_blank" rel="noopener" href="https://github.com/ikaem/graphql-jwt-react.git">Github</a></p>
+<h3 id="Goals"><a href="#Goals" class="headerlink" title="Goals"></a>Goals</h3><ol>
+<li>Create an app that uses GrapqhQL on frontend and backend</li>
+<li>Use PSQL for database</li>
+<li>Use Typescript on both ends</li>
+<li>The app should be hold a list of users that can be created, viewed, edited, and deleted.</li>
+</ol>
+<h3 id="Steps"><a href="#Steps" class="headerlink" title="Steps"></a>Steps</h3><ol>
+<li>Make simple Node and Express server with TypeScript</li>
+<li><strong>Create a PostgreSQL database and tables that hold user info</strong></li>
+<li>Use node-postgres to connect backend to database</li>
+<li>Set Apollo Express Server</li>
+<li>Create GQL types, queries and resolvers on backend</li>
+<li>Pause</li>
+<li>Make simple frontend with React and TS</li>
+<li>Set Apollo Client on frontend</li>
+<li>Establish frontend and backend communication via Apollo Client</li>
+<li>Create pagination</li>
+</ol>
+<h3 id="Tech-and-Tools"><a href="#Tech-and-Tools" class="headerlink" title="Tech and Tools"></a>Tech and Tools</h3><ol>
+<li>React</li>
+<li>React Router</li>
+<li>Styled Components</li>
+<li>Node</li>
+<li>PSQL</li>
+<li>GraphQL</li>
+<li>Apollo Server Express</li>
+<li>Apollo Client</li>
+<li>Bcrypt</li>
+<li>TypeScript</li>
+<li>Express</li>
+</ol>
+<h3 id="Experience-with-Tech-amp-Tools"><a href="#Experience-with-Tech-amp-Tools" class="headerlink" title="Experience with Tech &amp; Tools"></a>Experience with Tech &amp; Tools</h3><p>I am new to Typescript, have super little experience with PSQL and GQL and just a tiny bit more skills with Node and Express.<br>I am relatively ok with JS, React and other frontend stuff from the list but I am no way even close to be a seasoned frontend person.</p>
+<h2 id="DISCLAIMER"><a href="#DISCLAIMER" class="headerlink" title="DISCLAIMER"></a>DISCLAIMER</h2><p>Don’t take any of this seriously and as a matter-of-fact. These are my notes. It might look like I am trying to teach something to someone. I am not.</p>
+
+
+                
+            </div>
+            
+            <!-- Custom placed tags -->
+            <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                
+                    
+
+
+<a href="/angry-chaired-blog/tags/psql/">#psql</a> <a href="/angry-chaired-blog/tags/database/">#database</a>
+
+
+                
+            </div>
+            <!--  -->
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+
+            <!-- Hyvor comments -->
+
+            <!-- End of Hyvor comments -->
+        </div>
+    </div>
+</article>
+
+
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2020 kaem<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
