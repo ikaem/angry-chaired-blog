@@ -2,6 +2,9 @@
 menu:
   Home: /
   Archives: /archives
+  About: /about
+  Angry Chaired web: https://angrychaired.surge.sh
+  Github profile: https://github.com/ikaem/
 rss: /atom.xml
 
 # Content
@@ -24,13 +27,13 @@ index_widgets:
 # - archive
 
 # widget behavior
-archive_type: 'monthly'
+archive_type: 'daily'
 show_count: false
 
 # Miscellaneous
 google_analytics:
 gauges_analytics:
-favicon: /favicon.png
+favicon: /angry-chaired-blog/images/favicon.ico
 twitter:
 google_plus:
 fb_admins:
