@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="Inexperienced and curious pokes into the sprawling world of web development "/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="kaem"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="GraphQL &amp; React &amp; JWT: Logout Functionality"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Inexperienced and curious pokes into the sprawling world of web development "/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Angry Chaired Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://ikaem.github.io/angry-chaired-blog/angry-chaired-blog/images/header-image.jpg"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://ikaem.github.io/angry-chaired-blog/angry-chaired-blog/images/header-image.jpg"/>
+    
+
+    <!-- Title -->
+    
+    <title>GraphQL &amp; React &amp; JWT: Logout Functionality - Angry Chaired Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/angry-chaired-blog/css/style.css">
+
+    
+<link rel="stylesheet" href="/angry-chaired-blog/css/custom-style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+    <link rel="icon" href="/angry-chaired-blog/images/favicon.ico"/>
+    
+
+<meta name="generator" content="Hexo 5.0.2"><link rel="alternate" href="/angry-chaired-blog/atom.xml" title="Angry Chaired Blog" type="application/atom+xml">
+</head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/angry-chaired-blog/">Angry Chaired Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/about">
+                            
+                                About
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a target="_blank" rel="noopener" href="https://angrychaired.surge.sh">
+                            
+                                <i class="fa fa-user fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a target="_blank" rel="noopener" href="https://github.com/ikaem/">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a href="/angry-chaired-blog/atom.xml">
+                            
+                                <i class="fa fa-rss fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('baylee-gramling-R5eoT-c-jkY-unsplash.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>GraphQL & React & JWT: Logout Functionality</h1>
+
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            16/08/2020
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/angry-chaired-blog/categories/graphql-react-jwt/">graphql & react & jwt</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <!-- Step Content Start -->
+
+<h4 id="Part-9-of-12-in-GraphQL-amp-React-amp-JWT"><a href="#Part-9-of-12-in-GraphQL-amp-React-amp-JWT" class="headerlink" title="Part 9 of 12 in GraphQL &amp; React &amp; JWT"></a>Part 9 of 12 in GraphQL &amp; React &amp; JWT</h4><p>When a user logs out on the frontend, the client should call the <strong>logout</strong> mutation that we have prepared on the backend. That mutation will clear the refresh token column in the database and clear the <strong>refreshToken</strong> cookie, setting it to an empty string and backdating its expiration date. </p>
+<a id="more"></a>
+
+<h4 id="See-Project-Information"><a href="#See-Project-Information" class="headerlink" title="See Project Information"></a>See <a href="#Project-Information">Project Information</a></h4><h2 id="Step-9-Create-logout-functionality"><a href="#Step-9-Create-logout-functionality" class="headerlink" title="Step 9. Create logout functionality"></a>Step 9. Create logout functionality</h2><p>The frontend itself also has to do some clean up, to make sure there is no user info left on the client. </p>
+<p>We will: </p>
+<ol>
+<li>Create mutation and implement <strong>useMutation</strong> hook</li>
+<li>Clear cache to reset its values to their intial state on successfull mutation</li>
+<li>Redirect the user to the login page</li>
+<li>And fix an interesting bug that took me ages to figure out. </li>
+</ol>
+<h4 id="Create-mutation-and-implement-useMutation-hook"><a href="#Create-mutation-and-implement-useMutation-hook" class="headerlink" title="Create mutation and implement useMutation hook"></a>Create mutation and implement <strong>useMutation</strong> hook</h4><p>The mutation itself is very simple, as we already know. It requires no arguments, as its resolver with gather needed data from the access token passed to it via request headers.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// header.container.tsx</span></span><br><span class="line"><span class="keyword">const</span> LOGOUT_USER = gql<span class="string">`</span></span><br><span class="line"><span class="string">    mutation LogoutUser &#123;</span></span><br><span class="line"><span class="string">        logout</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">`</span>;</span><br></pre></td></tr></table></figure>
+
+<p>When implementing the <strong>useMutation</strong> hook, we want to destructure the mutation method for its return, as well as the client instance from its response object. We need the instance to be able to delete user data from the cache once the <strong>logout</strong> mutation completes.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">    <span class="comment">// header.container.tsx</span></span><br><span class="line"><span class="keyword">const</span> [ logoutMutationAtServer, &#123; client &#125; ] = useMutation&lt;&#123; <span class="attr">logout</span>: boolean &#125;&gt;(</span><br><span class="line">    LOGOUT_USER,</span><br><span class="line">    &#123;</span><br><span class="line">        onCompleted: <span class="function">(<span class="params">&#123; logout &#125;</span>) =&gt;</span> &#123;</span><br><span class="line">            <span class="keyword">if</span> (!logout) <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">&quot;There was an error logging out the user&quot;</span>);</span><br><span class="line">        &#125;,</span><br><span class="line">        onError: <span class="function">(<span class="params">error</span>) =&gt;</span> &#123;</span><br><span class="line">            <span class="built_in">console</span>.log(error);</span><br><span class="line">            <span class="built_in">console</span>.log(error.graphQLErrors);</span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<p>Note that we are throwing an error in the <strong>onCompleted</strong> method if the <strong>logout</strong> mutation returns false. Remember that the mutation returns true in case a logout was successfull, or a falsy value if there was an error or unsuccessful logout.<br>We want to clear user data from the client only when they are successfuly logged out from the backend too.</p>
+<p>Let’s also have the mutation method be called by a click event on the <strong>logout</strong> span element in the header:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// header.container.tsx</span></span><br><span class="line"><span class="keyword">return</span> (</span><br><span class="line">    &lt;HeaderStyled&gt;</span><br><span class="line">        &lt;div className=<span class="string">&quot;main-header__logo-container&quot;</span>&gt;</span><br><span class="line">            &lt;Link className=<span class="string">&quot;logo-container__logo-link&quot;</span> to=<span class="string">&quot;/home&quot;</span>&gt;</span><br><span class="line">                &lt;h1 className=<span class="string">&quot;logo-container__logo-actual&quot;</span>&gt;GraphQL-JWT&lt;/h1&gt;</span><br><span class="line">            &lt;/Link&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">        &lt;nav className=<span class="string">&quot;main-header__navigation&quot;</span>&gt;</span><br><span class="line">            &lt;ul className=<span class="string">&quot;navigation__options&quot;</span>&gt;</span><br><span class="line">            ...</span><br><span class="line">                &lt;li className=<span class="string">&quot;navigation__option&quot;</span>&gt;</span><br><span class="line">                    &lt;span</span><br><span class="line">                        onClick=&#123;<span class="function">() =&gt;</span> logoutMutationAtServer()&#125;</span><br><span class="line">                        className=<span class="string">&quot;option__link-actual&quot;</span></span><br><span class="line">                        style=&#123;&#123; <span class="attr">cursor</span>: <span class="string">&quot;pointer&quot;</span> &#125;&#125;</span><br><span class="line">                    &gt;</span><br><span class="line">            ...</span><br></pre></td></tr></table></figure>
+
+<h4 id="Clear-cache-to-reset-its-values-to-their-intial-state"><a href="#Clear-cache-to-reset-its-values-to-their-intial-state" class="headerlink" title="Clear cache to reset its values to their intial state"></a>Clear cache to reset its values to their intial state</h4><p>Apollo Client provides two neat methods to return cache to initial state.<br>One is <strong>resetStore</strong>, and the other one is <strong>clearStore</strong>. Both of these will clear the cache, but the first one will refetch the active queries, while the second one will not.<br>By active queries, I mean that if a GQL query exists in a currently mounted component at the time when the cache is reset, that query will automatically refetch if we use the <strong>resetStore</strong> method.<br>We do need this functionality, to make sure our header actually updates name and avatar values to empty strings once we log out.</p>
+<p>To use the method, we just call it on the client instance:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">client.resetStore();</span><br></pre></td></tr></table></figure>
+
+<p>Here it is, called in the <strong>onCompleted</strong> method of our <strong>useMutation</strong> hook implementation:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// header.container.tsx</span></span><br><span class="line"><span class="keyword">const</span> [ logoutMutationAtServer, &#123; client &#125; ] = useMutation&lt;&#123; <span class="attr">logout</span>: boolean &#125;&gt;(</span><br><span class="line">    LOGOUT_USER,</span><br><span class="line">    &#123;</span><br><span class="line">        onCompleted: <span class="function">(<span class="params">&#123; logout &#125;</span>) =&gt;</span> &#123;</span><br><span class="line">            <span class="keyword">if</span> (!logout) <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">&quot;There was an error logging out the user&quot;</span>);</span><br><span class="line">            client?.resetStore();</span><br><span class="line">        &#125;,</span><br><span class="line">        ...</span><br><span class="line">    &#125;</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<p>When <strong>resetStore</strong> is called, it will clear the entire store, leaving nothing in it. Once those active queries refetch their data, the cache will repopulate. However, we will not get our <strong>login</strong> data back to the cache because there is no active query to automatically attempt a login and set it.</p>
+<p>To fix this, we can use another method available on the client instance - <strong>onResetStore</strong>. This method will execute once the <strong>resetStore</strong> method is called anywhere in the app, and we can use it to reset the cache to the original login data.<br>Apparenty, <strong>onResetStore</strong> returns <strong>void</strong>, and takes as an argument a function that returns a generic <strong>Promise</strong>. This is why we will make this argument function an async one. </p>
+<p>We use the <strong>onResetStore</strong> method in the <strong>apollo-client.ts</strong>:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// apollo-client.ts</span></span><br><span class="line">...</span><br><span class="line">client.onResetStore( <span class="keyword">async</span>() =&gt; &#123;</span><br><span class="line">    client.writeQuery(&#123;</span><br><span class="line">        query: gql<span class="string">`</span></span><br><span class="line"><span class="string">            query Login &#123;</span></span><br><span class="line"><span class="string">                login &#123;</span></span><br><span class="line"><span class="string">                __typename</span></span><br><span class="line"><span class="string">                first_name</span></span><br><span class="line"><span class="string">                avatar_link</span></span><br><span class="line"><span class="string">                access_token</span></span><br><span class="line"><span class="string">                isLoggedIn</span></span><br><span class="line"><span class="string">                &#125;</span></span><br><span class="line"><span class="string">            &#125;</span></span><br><span class="line"><span class="string">        `</span>,</span><br><span class="line">        data: &#123;</span><br><span class="line">            login: &#123;</span><br><span class="line">                __typename: <span class="string">&quot;&quot;</span>,</span><br><span class="line">                first_name: <span class="string">&quot;&quot;</span>,</span><br><span class="line">                avatar_link: <span class="string">&quot;&quot;</span>,</span><br><span class="line">                access_token: <span class="string">&quot;&quot;</span>,</span><br><span class="line">                isLoggedIn: <span class="literal">false</span>,</span><br><span class="line">            &#125;,</span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> client;</span><br></pre></td></tr></table></figure>
+
+<p>With this, when a user logs out, a successful logout mutation should cause our Apollo Client cache to reset and reinitiaze with a login <strong>object</strong> holding empty properties.</p>
+<h4 id="Redirect-the-user-to-the-login-page"><a href="#Redirect-the-user-to-the-login-page" class="headerlink" title="Redirect the user to the login page"></a>Redirect the user to the login page</h4><p>Redirect is easy, and we have already done this we the <strong>login</strong> mutation.<br>We need to conditionally rendering the <strong>React Router</strong>‘s <strong>Redirect</strong> component, and set the route state when our <strong>logout</strong> mutation completes.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// header.container.tsx</span></span><br><span class="line">...</span><br><span class="line"><span class="keyword">const</span> Header = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> [logoutRedirect, setLogoutRedirect] = useState&lt;string&gt;(<span class="string">&quot;&quot;</span>);</span><br><span class="line">    ...</span><br><span class="line">    <span class="keyword">const</span> [ logoutMutationAtServer, &#123; client &#125; ] = useMutation&lt;&#123; <span class="attr">logout</span>: boolean &#125;&gt;(</span><br><span class="line">        LOGOUT_USER,</span><br><span class="line">        &#123;</span><br><span class="line">            onCompleted: <span class="function">(<span class="params">&#123; logout &#125;</span>) =&gt;</span> &#123;</span><br><span class="line">                <span class="keyword">if</span> (!logout) <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">&quot;There was an error logging out the user&quot;</span>);</span><br><span class="line">                setLogoutRedirect(<span class="string">&quot;login&quot;</span>);</span><br><span class="line">                client?.resetStore();</span><br><span class="line">            &#125;,</span><br><span class="line">            ...</span><br><span class="line">        &#125;</span><br><span class="line">    );</span><br><span class="line">    ...</span><br><span class="line">      <span class="keyword">return</span> (</span><br><span class="line">        &lt;HeaderStyled&gt;</span><br><span class="line">        ...</span><br><span class="line">                &lt;/nav&gt;</span><br><span class="line">                &#123;logoutRedirect &amp;&amp; <span class="xml"><span class="tag">&lt;<span class="name">Redirect</span> <span class="attr">to</span>=<span class="string">&#123;</span>`/$&#123;<span class="attr">logoutRedirect</span>&#125;`&#125; /&gt;</span></span>&#125;</span><br><span class="line">            &lt;/HeaderStyled&gt;</span><br><span class="line">      )</span><br><span class="line">    ...</span><br></pre></td></tr></table></figure>
+
+<h4 id="Fix-an-interesting-bug-that-took-me-ages-to-figure-out"><a href="#Fix-an-interesting-bug-that-took-me-ages-to-figure-out" class="headerlink" title="Fix an interesting bug that took me ages to figure out."></a>Fix an interesting bug that took me ages to figure out.</h4><p>Ok, so the situation now is that when we logout, we are redirected to the <strong>/login</strong> route, and the cache is reset to its initial state.</p>
+<p>But, when we do that, we get an error from React saying that it cannot set state on an unmounted component. Depending on which page we were when we logged out from the app, React can throw this error several times, warning about different components being unmounted and not being able to set their state. </p>
+<p>So what is happening? It ook me a while to figure it out.<br>Let’s start with the header. When we login, the app will redirect us to the home page. The view in the browser consists of several components, all of them wrapped in a single <strong>Layout</strong> component. This is just the way I organized the app. Each route renders a new Layout component, which in turn renders a new header, new footer, and the main page such as the <strong>homepage</strong>.<br>When we logout, we are redirected to the <strong>login</strong> route. This route renders the Layout component all over again, as well as the new header. This new header is not the same as the header where we clicked on <strong>logout</strong>. That component has unmounted at the moment when we were redirected to the <strong>login</strong> route.<br>This is our first clue - we have an unmounted header component.</p>
+<p>Now, remember how we said that the <strong>resetStore</strong> method refetches active queries? One of those queries is the header’s query to fetch logged user data, active via the <strong>useQuery</strong> hook. Because of the way <strong>resetStore</strong> works, a refetch is attempted for that old, unmounted component too, because of its <strong>useQuery</strong> hook. Since the hook also returns state in form of its data (I assume it uses React’s <strong>useState</strong> hook in the background), Apollo tries to update that state, but since the component is no longer mounted, React throws an error warning us that it cannot update an unmounted component’s state.<br>That’s our second clue - we are using a React state in the component from which we will navigate away.<br>If we had a different setup (totally possible), where we always render the same header, and just change pages based on the route, React would not warn us about trying to set state in the unmounted header component. It wouldn’t need to because we would never unmount the header component.</p>
+<p>But, we would get this error for other components, such as the home page. The <strong>Home</strong> component also uses the same hook, creating a React state, and keeping its queries active on store reset. On logout we navigate away from this page as well, and React warns us about being unable to set state for when this unmounted component too. </p>
+<p>So what to do? I guess we could do lot of things, but one solution I found is to use a different hook to make queries - the <strong>useLazyQuery</strong> hook. This hook can also be used to send GQL requests to Apollo Server, but unlike the <strong>useQuery</strong> one, it returns an array holding a query method, and an object holding query response, error, loading property and so on. Its looks very much like the return of the <strong>useMutation</strong> hook. </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; useLazyQuery &#125; <span class="keyword">from</span> <span class="string">&quot;@apollo/client&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> SomeComponent = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> [ queryMethod, &#123; data, error, loading, fetchMore &#125; ] = useLazyQuery(SOME_QUERY);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Once we implement the hook, it doesn’t send any query requests until we call its query method. It doesn’t do an active query, and it will not refetch when <strong>resetStore</strong> is called. Instead, it will refetch only when we call it.</p>
+<p>We can use React’s <strong>useEffect</strong> hook to call it only when a component mounts. This way, there will not be any refetching and setting of state by unmounted components, so no error.</p>
+<p>Here is the implementation for the <strong>Header</strong> component:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// header.container.tsx</span></span><br><span class="line"><span class="keyword">import</span> React, &#123; useState, useEffect &#125; <span class="keyword">from</span> <span class="string">&quot;react&quot;</span>;</span><br><span class="line">...</span><br><span class="line"><span class="keyword">const</span> GET_LOGGED_USER_AT_CLIENT = gql<span class="string">`</span></span><br><span class="line"><span class="string">    query GetLoggedUserAtClient &#123;</span></span><br><span class="line"><span class="string">        login @client &#123;</span></span><br><span class="line"><span class="string">            first_name</span></span><br><span class="line"><span class="string">            avatar_link</span></span><br><span class="line"><span class="string">        &#125;</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">`</span>;</span><br><span class="line">...</span><br><span class="line"><span class="keyword">const</span> Header = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> [logoutRedirect, setLogoutRedirect] = useState&lt;string&gt;(<span class="string">&quot;&quot;</span>);</span><br><span class="line">    ...</span><br><span class="line">    <span class="keyword">const</span> [ getLoggeduserAtClient, &#123; data &#125;] = useLazyQuery&lt;&#123; <span class="attr">login</span>: &#123; <span class="attr">first_name</span>: string, <span class="attr">avatar_link</span>: string &#125;&#125;&gt;(GET_LOGGED_USER_AT_CLIENT);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> &#123; first_name, avatar_link &#125; = data?.login || &#123; <span class="attr">first_name</span>: <span class="string">&quot;&quot;</span>, <span class="attr">avatar_link</span>: <span class="string">&quot;&quot;</span>&#125;;</span><br><span class="line"></span><br><span class="line">    useEffect(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">        getLoggeduserAtClient();</span><br><span class="line">    &#125;, []);</span><br><span class="line">    ...</span><br></pre></td></tr></table></figure>
+
+<p>The two hooks should be implemented in all components that make queries with <strong>useQuery</strong>. </p>
+<!-- End Step Content -->
+
+<!-- Project Information -->
+
+<h2 id="Project-Information"><a href="#Project-Information" class="headerlink" title="Project Information"></a>Project Information</h2><h3 id="Available-at"><a href="#Available-at" class="headerlink" title="Available at"></a>Available at</h3><p><a target="_blank" rel="noopener" href="https://github.com/ikaem/graphql-jwt-react.git">Github</a> </p>
+<h3 id="Goals"><a href="#Goals" class="headerlink" title="Goals"></a>Goals</h3><ol>
+<li>Create an app that uses GraphQL and JWT to log in and log out users</li>
+<li>Use PSQL for database</li>
+<li>Use Typescript on both ends</li>
+<li>Use Apollo Client Cache features to store JWT and user info on front end</li>
+<li>Implement protected routes, so that only logged users can access certain pages</li>
+</ol>
+<h3 id="Steps"><a href="#Steps" class="headerlink" title="Steps"></a>Steps</h3><ol>
+<li>Create types and queries</li>
+<li>Create functions to generate JSON Web Tokens</li>
+<li>Create middleware to check if tokens are valid</li>
+<li>Set up Apollo Express be able to deal with tokens and cookies</li>
+<li>Create resolvers</li>
+<li>Set up Apollo Client cache</li>
+<li>Set up Apollo Client so we can work with cookies and headers</li>
+<li>Create login functionality</li>
+<li><strong>Create logout functionality</strong></li>
+<li>Create functionality to automatically log in user if they return to our app</li>
+<li>Enable silent refresh of access token when it reaches its expiry period</li>
+<li>Create register functionality</li>
+</ol>
+<h3 id="Tech-and-Tools"><a href="#Tech-and-Tools" class="headerlink" title="Tech and Tools"></a>Tech and Tools</h3><ol>
+<li>React</li>
+<li>Node</li>
+<li>PSQL</li>
+<li>GraphQL</li>
+<li>Apollo Server Express</li>
+<li>Apollo Client</li>
+<li>Bcrypt</li>
+<li>TypeScript</li>
+<li>Express</li>
+<li>JWT</li>
+</ol>
+<h3 id="Experience-with-Tech-amp-Tools"><a href="#Experience-with-Tech-amp-Tools" class="headerlink" title="Experience with Tech &amp; Tools"></a>Experience with Tech &amp; Tools</h3><p>This project is a continuation of the <a href="categories/graphql-react-psql/">Graphql &amp; React &amp; Psql series</a>. There, I worked with TS, PSQL and GQL, so I’m ok with that, I guess.<br>I have done some JWT things before, and here I wanted to try it with GQL.</p>
+<h2 id="DISCLAIMER"><a href="#DISCLAIMER" class="headerlink" title="DISCLAIMER"></a>DISCLAIMER</h2><p>Don’t take any of this seriously and as a matter-of-fact. These are my notes. It might look like I am trying to teach something to someone. I am not.</p>
+
+
+                
+
+
+                <!-- Cover image credit -->
+                
+                    <p class="image-credit-link">
+                        Cover image by <strong>
+                            <a target="_blank" rel="noopener" href="https://unsplash.com/@bayleejadegramling?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
+                                Jeffrey F Lin
+                            </a>
+                        </strong>
+                    </p>
+
+                
+
+  
+
+            </div>
+            
+            <!-- Custom placed tags -->
+            <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                
+                    
+
+
+<a href="/angry-chaired-blog/tags/frontend/">#frontend</a> <a href="/angry-chaired-blog/tags/apollo/">#apollo</a> <a href="/angry-chaired-blog/tags/jwt/">#jwt</a> <a href="/angry-chaired-blog/tags/graphql/">#graphql</a> <a href="/angry-chaired-blog/tags/authentication/">#authentication</a>
+
+
+                
+            </div>
+            <!--  -->
+
+
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+
+            <!-- Hyvor comments -->
+
+            <!-- End of Hyvor comments -->
+        </div>
+    </div>
+</article>
+
+
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2020 kaem<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

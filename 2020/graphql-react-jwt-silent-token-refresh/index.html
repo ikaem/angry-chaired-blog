@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="Inexperienced and curious pokes into the sprawling world of web development "/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="kaem"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="GraphQL &amp; React &amp; JWT: Silent Token Refresh"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Inexperienced and curious pokes into the sprawling world of web development "/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Angry Chaired Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://ikaem.github.io/angry-chaired-blog/angry-chaired-blog/images/header-image.jpg"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://ikaem.github.io/angry-chaired-blog/angry-chaired-blog/images/header-image.jpg"/>
+    
+
+    <!-- Title -->
+    
+    <title>GraphQL &amp; React &amp; JWT: Silent Token Refresh - Angry Chaired Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/angry-chaired-blog/css/style.css">
+
+    
+<link rel="stylesheet" href="/angry-chaired-blog/css/custom-style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+    <link rel="icon" href="/angry-chaired-blog/images/favicon.ico"/>
+    
+
+<meta name="generator" content="Hexo 5.0.2"><link rel="alternate" href="/angry-chaired-blog/atom.xml" title="Angry Chaired Blog" type="application/atom+xml">
+</head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/angry-chaired-blog/">Angry Chaired Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/about">
+                            
+                                About
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a target="_blank" rel="noopener" href="https://angrychaired.surge.sh">
+                            
+                                <i class="fa fa-user fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a target="_blank" rel="noopener" href="https://github.com/ikaem/">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a href="/angry-chaired-blog/atom.xml">
+                            
+                                <i class="fa fa-rss fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('jeffrey-f-lin-Oqs5aTNE-tA-unsplash.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>GraphQL & React & JWT: Silent Token Refresh</h1>
+
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            16/08/2020
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/angry-chaired-blog/categories/graphql-react-jwt/">graphql & react & jwt</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <!-- Step Content Start -->
+
+<h4 id="Part-11-of-12-in-GraphQL-amp-React-amp-JWT"><a href="#Part-11-of-12-in-GraphQL-amp-React-amp-JWT" class="headerlink" title="Part 11 of 12 in GraphQL &amp; React &amp; JWT"></a>Part 11 of 12 in GraphQL &amp; React &amp; JWT</h4><a id="more"></a>
+
+<h4 id="See-Project-Information"><a href="#See-Project-Information" class="headerlink" title="See Project Information"></a>See <a href="#Project-Information">Project Information</a></h4><h2 id="Step-11-Enable-silent-refresh-of-access-token-when-it-reaches-its-expiry-period"><a href="#Step-11-Enable-silent-refresh-of-access-token-when-it-reaches-its-expiry-period" class="headerlink" title="Step 11. Enable silent refresh of access token when it reaches its expiry period"></a>Step 11. Enable silent refresh of access token when it reaches its expiry period</h2><p>When we created the function to generate access tokens, we specified that each new access token should be valid for 30 minutes.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// tokens.ts</span></span><br><span class="line">...</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> generateAccessToken = <span class="function">(<span class="params">userId: number</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> sign(&#123; userId &#125;, ACCESS_SECRET, &#123; <span class="attr">expiresIn</span>: <span class="string">&quot;30min&quot;</span> &#125;);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>Then, when we use the frontend to login, we receive an access token with which we access our protected routes and request protected data from the server.<br>The problem is that this access token will be valid only for 30 minutes. If we use the app longer than 30 minutes, we will not be able to request protected resources on the server. For instance, our app would currently allow us to access the <strong>“/addprofile”</strong> route even if the access token expires (This would be easy to fix by verifying timestamps on the access token’s payload)- However, if we actually submit a new user, the <strong>express-jwt</strong> middleware would see that our token has expired, and we would not be allowed to add the user to the database.</p>
+<p>To fix this and make sure that we always have a valid access token while we are using the app, we can create a mechanism to automatically refresh access token every 30 minutes.<br>We do not have to do much, either. We can use the existing mutation method already implemented in <strong>app.tsx</strong>, and have it refresh access token every 30 minutes.</p>
+<p>The method is the one that we use to automatically login a user when they return to the app. </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// app.tsx</span></span><br><span class="line">...</span><br><span class="line"><span class="keyword">const</span> [refreshLogin, &#123; client &#125;] = useMutation&lt;...&gt;(REFRESH_ACCESS_TOKEN, &#123;...&#125;);</span><br><span class="line"></span><br><span class="line">useEffect(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    refreshLogin();</span><br><span class="line">&#125;, []);</span><br></pre></td></tr></table></figure>
+
+<p>We can take the same method, and call it from a second <strong>useEffect</strong> hook every 30 minutes.</p>
+<p>Here is the idea:</p>
+<ol>
+<li>We only refresh the access token if an access token already exists in the cache</li>
+<li>If access token exists, we start a timeout that will call <strong>refreshLogin</strong> mutation function after 30 minutes</li>
+</ol>
+<h3 id="Refresh-the-access-token-if-an-access-token-already-exists-in-the-cache"><a href="#Refresh-the-access-token-if-an-access-token-already-exists-in-the-cache" class="headerlink" title="Refresh the access token if an access token already exists in the cache"></a>Refresh the access token if an access token already exists in the cache</h3><p>First, let’s extract the access token from the cache.<br>We need a client query, and an implementation of the <strong>useQuery</strong> hook. The hook is ok here because the <strong>App</strong> component never umnounts.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// app.tsx</span></span><br><span class="line"><span class="keyword">const</span> GET_IS_LOGGED_IN_AT_CLIENT = gql<span class="string">`</span></span><br><span class="line"><span class="string">    query GetIsLoggedInAtClient &#123;</span></span><br><span class="line"><span class="string">        login @client &#123;</span></span><br><span class="line"><span class="string">            access_token</span></span><br><span class="line"><span class="string">        &#125;</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">`</span>;</span><br><span class="line">...</span><br><span class="line"><span class="keyword">const</span> App = <span class="function">() =&gt;</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> &#123;</span><br><span class="line">        data: &#123; <span class="attr">login</span>: &#123; access_token &#125;&#125;&#125; = useQuery(GET_IS_LOGGED_IN_AT_CLIENT) <span class="keyword">as</span> &#123; <span class="attr">data</span>: &#123; <span class="attr">login</span>: &#123; <span class="attr">access_token</span>: string &#125;&#125;;</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<p>Now we make sure we only enter the <strong>useEffect</strong> if the current <strong>access_token</strong> holds a truthy value. We will have the <strong>access_token</strong> as a dependency of the hook, to make sure <strong>useEffect</strong> is called every time when the access token changes value. </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// app.tsx</span></span><br><span class="line">useEffect(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (!access_token) <span class="keyword">return</span>;</span><br><span class="line"></span><br><span class="line">&#125;, [access_token]);</span><br></pre></td></tr></table></figure>
+
+<h4 id="If-access-token-exists-we-start-a-timeout-that-will-call-refreshLogin-mutation-function-after-30-minutes"><a href="#If-access-token-exists-we-start-a-timeout-that-will-call-refreshLogin-mutation-function-after-30-minutes" class="headerlink" title="If access token exists, we start a timeout that will call refreshLogin mutation function after 30 minutes"></a>If access token exists, we start a timeout that will call <strong>refreshLogin</strong> mutation function after 30 minutes</h4><p>Once we pass the access token test in the <strong>useEffect</strong> hook, we can simply start a timeout and call the <strong>refreshLogin</strong> function every 30 minutes.<br>Notice that the <strong>setTimeout</strong> takes the time period argument in miliseconds, so we put 1800000 as an argument to the function, or 1800 * 1000 for legibility reasons:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// app.tsx</span></span><br><span class="line">useEffect(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (!access_token) <span class="keyword">return</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> timeoutId = <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">        refreshLogin();</span><br><span class="line">    &#125;, <span class="number">1800</span> * <span class="number">1000</span>);</span><br><span class="line">&#125;, [access_token]);</span><br></pre></td></tr></table></figure>
+
+<p>This does the trick. When we log in, the hook is called because the access token changed. It sets a timeout to call the <strong>refreshLogin</strong> method in 30 minutes. In 30 minutes, we get a new access token, the hook is called again, and sets a new timeout. This repeats until we logout. Once we do, the hook is called, sees that access token is falsy, and does not start a new timeout.<br>Note that the previous timeout will still execute, but the server is set in such a way that it will return a message saying that we have already logged out.</p>
+<p>We can improve this code a bit. If at some point we decide that our access token should be generated with shorter validity period on backend, we would have to adjust the frontend code too, to have the timeout call the <strong>refreshLogin</strong> function after that period. We can avoid this and have the timeout get this argument dynamically, from the access token itself. </p>
+<p>The token’s payload includes the time of creation of the token and the time of expiration. These are expressed in seconds, and we can use them to get the validity period in seconds, and then multiply it by 1000 to get a value of our <strong>setTimeout</strong> function. Let’s also deduce one minute from it, to have the request sent every 29 minutes in the current setup, just to compensate for possible delays and problems in frontend - backend communcation.</p>
+<p>Extranction of the time properties from the token is done by:</p>
+<ol>
+<li>Getting the middle string from the token (Tokens are separated by periods into 3 strings)</li>
+<li>Passing the string to the <strong>atob</strong> method to get a JSON representation of the payload</li>
+<li>Parsing the JSON payload to get JS object</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">  <span class="comment">// app.tsx</span></span><br><span class="line">useEffect(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">if</span> (!access_token) <span class="keyword">return</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> dataString = access_token.split(<span class="string">&quot;.&quot;</span>)[<span class="number">1</span>];</span><br><span class="line">  <span class="keyword">const</span> jsonedData = atob(dataString);</span><br><span class="line">  <span class="keyword">const</span> &#123; iat, exp &#125; = <span class="built_in">JSON</span>.parse(jsonedData) <span class="keyword">as</span> &#123; <span class="attr">iat</span>: number; exp: number &#125;;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> timeoutId = <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    refreshLogin();</span><br><span class="line">    &#125;, (exp - iat - <span class="number">60</span>) * <span class="number">1000</span>);</span><br><span class="line"></span><br><span class="line">&#125;, [access_token]);</span><br></pre></td></tr></table></figure>
+
+<p>That’s it. We now have a system that automatically refreshes our access token just in time for it to always be valid. Lovely.</p>
+<!-- End Step Content -->
+
+<!-- Project Information -->
+
+<h2 id="Project-Information"><a href="#Project-Information" class="headerlink" title="Project Information"></a>Project Information</h2><h3 id="Available-at"><a href="#Available-at" class="headerlink" title="Available at"></a>Available at</h3><p><a target="_blank" rel="noopener" href="https://github.com/ikaem/graphql-jwt-react.git">Github</a> </p>
+<h3 id="Goals"><a href="#Goals" class="headerlink" title="Goals"></a>Goals</h3><ol>
+<li>Create an app that uses GraphQL and JWT to log in and log out users</li>
+<li>Use PSQL for database</li>
+<li>Use Typescript on both ends</li>
+<li>Use Apollo Client Cache features to store JWT and user info on front end</li>
+<li>Implement protected routes, so that only logged users can access certain pages</li>
+</ol>
+<h3 id="Steps"><a href="#Steps" class="headerlink" title="Steps"></a>Steps</h3><ol>
+<li>Create types and queries</li>
+<li>Create functions to generate JSON Web Tokens</li>
+<li>Create middleware to check if tokens are valid</li>
+<li>Set up Apollo Express be able to deal with tokens and cookies</li>
+<li>Create resolvers</li>
+<li>Set up Apollo Client cache</li>
+<li>Set up Apollo Client so we can work with cookies and headers</li>
+<li>Create login functionality</li>
+<li>Create logout functionality</li>
+<li>Create functionality to automatically log in user if they return to our app</li>
+<li><strong>Enable silent refresh of access token when it reaches its expiry period</strong></li>
+<li>Create register functionality</li>
+</ol>
+<h3 id="Tech-and-Tools"><a href="#Tech-and-Tools" class="headerlink" title="Tech and Tools"></a>Tech and Tools</h3><ol>
+<li>React</li>
+<li>Node</li>
+<li>PSQL</li>
+<li>GraphQL</li>
+<li>Apollo Server Express</li>
+<li>Apollo Client</li>
+<li>Bcrypt</li>
+<li>TypeScript</li>
+<li>Express</li>
+<li>JWT</li>
+</ol>
+<h3 id="Experience-with-Tech-amp-Tools"><a href="#Experience-with-Tech-amp-Tools" class="headerlink" title="Experience with Tech &amp; Tools"></a>Experience with Tech &amp; Tools</h3><p>This project is a continuation of the <a href="categories/graphql-react-psql/">Graphql &amp; React &amp; Psql series</a>. There, I worked with TS, PSQL and GQL, so I’m ok with that, I guess.<br>I have done some JWT things before, and here I wanted to try it with GQL.</p>
+<h2 id="DISCLAIMER"><a href="#DISCLAIMER" class="headerlink" title="DISCLAIMER"></a>DISCLAIMER</h2><p>Don’t take any of this seriously and as a matter-of-fact. These are my notes. It might look like I am trying to teach something to someone. I am not.</p>
+
+
+                
+
+
+                <!-- Cover image credit -->
+                
+                    <p class="image-credit-link">
+                        Cover image by <strong>
+                            <a target="_blank" rel="noopener" href="https://unsplash.com/@jeffreyflin?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
+                                Jeffrey F Lin
+                            </a>
+                        </strong>
+                    </p>
+
+                
+
+  
+
+            </div>
+            
+            <!-- Custom placed tags -->
+            <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                
+                    
+
+
+<a href="/angry-chaired-blog/tags/frontend/">#frontend</a> <a href="/angry-chaired-blog/tags/apollo/">#apollo</a> <a href="/angry-chaired-blog/tags/jwt/">#jwt</a> <a href="/angry-chaired-blog/tags/graphql/">#graphql</a> <a href="/angry-chaired-blog/tags/authentication/">#authentication</a>
+
+
+                
+            </div>
+            <!--  -->
+
+
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+
+            <!-- Hyvor comments -->
+
+            <!-- End of Hyvor comments -->
+        </div>
+    </div>
+</article>
+
+
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2020 kaem<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

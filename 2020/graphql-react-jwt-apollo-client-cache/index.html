@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="Inexperienced and curious pokes into the sprawling world of web development "/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="kaem"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="GraphQL &amp; React &amp; JWT: Apollo Client Cache"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Inexperienced and curious pokes into the sprawling world of web development "/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Angry Chaired Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://ikaem.github.io/angry-chaired-blog/angry-chaired-blog/images/header-image.jpg"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://ikaem.github.io/angry-chaired-blog/angry-chaired-blog/images/header-image.jpg"/>
+    
+
+    <!-- Title -->
+    
+    <title>GraphQL &amp; React &amp; JWT: Apollo Client Cache - Angry Chaired Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/angry-chaired-blog/css/style.css">
+
+    
+<link rel="stylesheet" href="/angry-chaired-blog/css/custom-style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+    <link rel="icon" href="/angry-chaired-blog/images/favicon.ico"/>
+    
+
+<meta name="generator" content="Hexo 5.0.2"><link rel="alternate" href="/angry-chaired-blog/atom.xml" title="Angry Chaired Blog" type="application/atom+xml">
+</head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/angry-chaired-blog/">Angry Chaired Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/about">
+                            
+                                About
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a target="_blank" rel="noopener" href="https://angrychaired.surge.sh">
+                            
+                                <i class="fa fa-user fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a target="_blank" rel="noopener" href="https://github.com/ikaem/">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a href="/angry-chaired-blog/atom.xml">
+                            
+                                <i class="fa fa-rss fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('mosa-moseneke-WOP-W1Yg6cg-unsplash.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>GraphQL & React & JWT: Apollo Client Cache</h1>
+
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            16/08/2020
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/angry-chaired-blog/categories/graphql-react-jwt/">graphql & react & jwt</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <!-- Step Content Start -->
+
+<h4 id="Part-6-of-12-in-GraphQL-amp-React-amp-JWT"><a href="#Part-6-of-12-in-GraphQL-amp-React-amp-JWT" class="headerlink" title="Part 6 of 12 in GraphQL &amp; React &amp; JWT"></a>Part 6 of 12 in GraphQL &amp; React &amp; JWT</h4><p>We are now moving to the frontend side, to implement authentication functionalities into our React app.<br>We want to be able to login, register and logout from the app. We also want to be able to automatically login when we return to the app, and once we are logged in, we want to stay logged in as long as we are using the app.</p>
+<a id="more"></a>
+
+<h4 id="See-Project-Information"><a href="#See-Project-Information" class="headerlink" title="See Project Information"></a>See <a href="#Project-Information">Project Information</a></h4><h2 id="Step-6-Set-up-Apollo-Client-cache"><a href="#Step-6-Set-up-Apollo-Client-cache" class="headerlink" title="Step 6. Set up Apollo Client cache"></a>Step 6. Set up Apollo Client cache</h2><p>How do we do that? We used Apollo Client in the last series, working on this same app, so we will continue using it. I found it very practical and relatively easy to learn, at least on a basic level.<br>In short, we will use its mutation hook to access our backend resolvers, and we will use its cache to actually store resolved data, so we have access to it throughout the app.<br>We will also need to make some adjustments to the way our client communicates with the server, to make sure that the server has access to our request headers and cookies.</p>
+<p>In this post we will focus on setting up the cache:</p>
+<ol>
+<li>Initialize Apollo Client cache</li>
+<li>Test querying cache in the app</li>
+</ol>
+<h3 id="Initialize-Apollo-Client-cache"><a href="#Initialize-Apollo-Client-cache" class="headerlink" title="Initialize Apollo Client cache"></a>Initialize Apollo Client cache</h3><p>Even though Apollo makes their documentation very good, and the logic of their code actually pretty simple, at least on the basic level, and once you spend some time juggling it all, the cache itself was the biggest issue for me.<br>This is primarily because there are so many options available when it comes to work with cache, and there are tons of ways to something.<br>After playing with it and busting my head for a while, I just opted for the easier way to get what I needed, and here it is. There are tons of options I didn’t even look at, as well as tons that I look, got confused, and decided there must be a simpler way to do my thing.</p>
+<p>Apollo Client cache is an in-memory storage space for data that an app uses. This means that the data lives there until the app is refreshed.<br>The cache has a neat feature where it will automatically store all data that we retrieve via Apollo client. The only condition is that each retrieved item has to have an <strong>id</strong> or <strong>_id</strong> property, which the client uses to store and differentiate different items. If I understood correctly, this mechanism is then also used to prevent unneccessary requests to GQL server, but I didn’t go into it too much.</p>
+<p>I recommend you install <strong>Apollo Client Developer Tools</strong> extension for Chrome to see the cache state in real time, as we work with the app. I tried to get it for Firefox too, but couldn’t really get it to start.</p>
+<p>We can also manually store and modify data in the Apollo Client cache, and we can do it in several ways (see what I mean?):</p>
+<ol>
+<li>We can do it immediately when instantiating our Apollo Client</li>
+<li>We can do it after we perform a query or a mutation on backend</li>
+<li>We can do it after we reset the entire cache, as a reaction to this reset.</li>
+<li>We can do it anywhere in our app, at any point</li>
+<li>I am sure there is other ways</li>
+</ol>
+<p>Very basic way, however, how to do it, is the one we already used in the last series, when we instantiated our Apollo Client. With this setup, we get a fully functional in-memory cache that will automatically store GQL responses and make the data available in the app.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// apollo-client.ts</span></span><br><span class="line"><span class="keyword">import</span> &#123;</span><br><span class="line">    ApolloClient,</span><br><span class="line">    createHttpLink,</span><br><span class="line">    InMemoryCache,</span><br><span class="line">&#125; <span class="keyword">from</span> <span class="string">&quot;@apollo/client&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> client = <span class="keyword">new</span> ApolloClient(&#123;</span><br><span class="line">cache: <span class="keyword">new</span> InMemoryCache(),</span><br><span class="line">link: createHttpLink(&#123;</span><br><span class="line">    uri: gqlEndpoint,</span><br><span class="line">    credentials: <span class="string">&quot;include&quot;</span>,</span><br><span class="line">&#125;);</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<p>Apollo Client gives as an option to read and write directly from cache with <strong>readQuery</strong> and <strong>writeQuery</strong> methods.<br>We can access those methods both on the <strong>ApolloClient</strong> instance, and on the actual <strong>cache</strong>.</p>
+<p>For instance, we could use initialize our <strong>cache</strong> outside the ApolloClient contructor, write something to the cache, and then use that cache in the ApolloClient constructor.<br>Similarly, we could use our current <strong>client</strong> instance to write something in the cache.</p>
+<p>Here is the code with both examples:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// apollo-client.ts</span></span><br><span class="line"><span class="keyword">import</span> &#123;</span><br><span class="line">    ApolloClient,</span><br><span class="line">    createHttpLink,</span><br><span class="line">    InMemoryCache,</span><br><span class="line">&#125; <span class="keyword">from</span> <span class="string">&quot;@apollo/client&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> myCache = <span class="keyword">new</span> InMemoryCache();</span><br><span class="line">cache.writeQuery( <span class="comment">/* some code here */</span> )</span><br><span class="line">cache.readQuery( <span class="comment">/* some code here */</span> )</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> client = <span class="keyword">new</span> ApolloClient(&#123;</span><br><span class="line">cache: myCache,</span><br><span class="line">link: createHttpLink(&#123;</span><br><span class="line">    uri: gqlEndpoint,</span><br><span class="line">    credentials: <span class="string">&quot;include&quot;</span>,</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">client.writeQuery( <span class="comment">/* some code here */</span> )</span><br><span class="line">client.readQuery( <span class="comment">/* some code here */</span> )</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<p>According to the Apollo Client documentation, the difference between the two is that using these methods on the <strong>client</strong> instance results in automatic updates of UI throughout the app where data from cache is used. It means that if we write something to the cache via <strong>client</strong> instance, those changes will be rendered immediately wherever those values are used. This is not the case with using methods on the <strong>cache</strong> instance.<br>So we use methods on the <strong>client</strong> instance.</p>
+<p>Let’s write something to the cache now. Let’s write it immediately after we create our client instance.<br>We are planning to use the cache to store information about the currently logged user. We want to have a certain shape of data always present in the cache, so when the user actually logs in, we will just update the cache to fill already present variables with appropriate values. And if there is no logged user, this data will still hold the shape, but its variables’ values will be empty.<br>With this approach, we will always be able to query cache for logged user, to see if anyone is logged in, and our app will not be broken because certain varaibles do not exist.</p>
+<p>Note that we will be updating cache manually, because our <strong>login</strong> mutation does not return an <strong>id</strong> property.</p>
+<p>To write something to the cache, we provide an object argument to the <strong>writeQuery</strong> method.<br>This object needs 2 properties:</p>
+<ol>
+<li><strong>query</strong> - a signature, to be used to access a particular element in the cache. The query is an actual GQL query, made with Apollo’s <strong>gql</strong> method, but used to query the client’s Apollo cache instead of the server’s queries.</li>
+<li><strong>data</strong> - values to be used to modify the data that we accessed with the query</li>
+</ol>
+<p>We want our cache for logged user to hold following information:</p>
+<ol>
+<li>First name</li>
+<li>Avatar link</li>
+<li>Acess token</li>
+<li>Information whether they are logged or not</li>
+<li>Information about the typename - the GQL type we associate with this particular data collection.</li>
+</ol>
+<p>Also, we want all of this data to be grouped inside an object which we will name <strong>login</strong>.<br>Here is how I wanted it to look:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">login: &#123;</span><br><span class="line">    first_name: <span class="string">&quot;&quot;</span>,</span><br><span class="line">    avatar_link: <span class="string">&quot;&quot;</span>,</span><br><span class="line">    access_token: <span class="string">&quot;&quot;</span>,</span><br><span class="line">    isLoggedIn: <span class="literal">false</span>,</span><br><span class="line">    __typename: <span class="string">&quot;&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>You probably noticed that this shape is same as the data that our <strong>login</strong> mutation returns from the server - the shape returned by the <strong>me</strong> type. In fact, we will have the typename in the cache also be <strong>Me</strong>. I dont know if this is a good practice, but for now it is what it is.<br>The only extra property is the information whether the user is logged in or not.</p>
+<p>Ok, so here is how we write this data into the cache, to make sure that the our cache is initialized with the neccessary data:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// apollo-client.ts</span></span><br><span class="line"><span class="keyword">import</span> &#123;</span><br><span class="line">    ApolloClient,</span><br><span class="line">    createHttpLink,</span><br><span class="line">    InMemoryCache,</span><br><span class="line">    gql</span><br><span class="line">&#125; <span class="keyword">from</span> <span class="string">&quot;@apollo/client&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> myCache = <span class="keyword">new</span> InMemoryCache();</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> client = <span class="keyword">new</span> ApolloClient(&#123;</span><br><span class="line">cache: myCache,</span><br><span class="line">link: createHttpLink(&#123;</span><br><span class="line">    uri: gqlEndpoint,</span><br><span class="line">    credentials: <span class="string">&quot;include&quot;</span>,</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">client.writeQuery(&#123;</span><br><span class="line">    query: gql<span class="string">`</span></span><br><span class="line"><span class="string">        query Login &#123;</span></span><br><span class="line"><span class="string">            login &#123;</span></span><br><span class="line"><span class="string">                __typename</span></span><br><span class="line"><span class="string">                first_name</span></span><br><span class="line"><span class="string">                avatar_link</span></span><br><span class="line"><span class="string">                access_token</span></span><br><span class="line"><span class="string">                isLoggedIn</span></span><br><span class="line"><span class="string">                refreshRequestHasFinished</span></span><br><span class="line"><span class="string">            &#125;</span></span><br><span class="line"><span class="string">        &#125;</span></span><br><span class="line"><span class="string">    `</span>,</span><br><span class="line">    data: &#123;</span><br><span class="line">        login: &#123;</span><br><span class="line">            __typename: <span class="string">&quot;&quot;</span>,</span><br><span class="line">            first_name: <span class="string">&quot;&quot;</span>,</span><br><span class="line">            avatar_link: <span class="string">&quot;&quot;</span>,</span><br><span class="line">            access_token: <span class="string">&quot;&quot;</span>,</span><br><span class="line">            isLoggedIn: <span class="literal">false</span>,</span><br><span class="line">            refreshRequestHasFinished: <span class="literal">false</span>,</span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;,</span><br><span class="line">&#125;);</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<p>With this setup, we now have our cache initialized with some data. We can now query this data within our app, as well as update it when a user actually logs in.</p>
+<p>Here is our cache as shown by Apollo Client Developer Tools:</p>
+<p>Let’s also try to render the data from cache in our app.</p>
+<h3 id="Test-querying-cache-in-the-app"><a href="#Test-querying-cache-in-the-app" class="headerlink" title="Test querying cache in the app"></a>Test querying cache in the app</h3><p>There are several ways (see, again!) to access cache data from our app’s components:</p>
+<ol>
+<li>Via a client instance</li>
+<li>Via Apollo Client’s hooks</li>
+<li>We can also use client side resolvers that access cache and return specific data</li>
+<li>Something called Local-only fields</li>
+<li>Probably some other too</li>
+</ol>
+<p>The resolvers way includes defining resolvers when creating an instance of the Apollo Client, and then calling those resolvers within queries in a component.<br>Resolvers are pretty much same as those on the server side, receiving same arguments. They access cache and return some data, that we then ask for in our queries.<br>However, they are deprecated in the newest version of Apollo Client (3.0), and I found them a bit unneccessary too. So we won’t go into it.<br>We won’t go into <strong>Local-only fields</strong> either, as I found them confusing, and will come back to that in a future series.</p>
+<p>We will do check the first two options, and then use the second one in our app.</p>
+<h4 id="Working-with-cache-via-Apollo-Client-instance"><a href="#Working-with-cache-via-Apollo-Client-instance" class="headerlink" title="Working with cache via Apollo Client instance"></a>Working with cache via Apollo Client instance</h4><p>Let’s work in <strong>app.tsx</strong> component.</p>
+<p>We need to get our client instance in this component, and we can do that with the <strong>useApolloClient</strong> hook provided to us by Apollo. This assumes that we have wrapped our entire app in the Apollo Provider, like we did in the last series.</p>
+<p>We need to import this hook from Apollo Client, and then use it in our component to get access to the client instance.<br>We use our <strong>App</strong> component for this purpose.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// app.tsx</span></span><br><span class="line"><span class="keyword">import</span> &#123; useApolloClient &#125; <span class="keyword">from</span> <span class="string">&quot;@apollo/client&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> App = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> client = useApolloClient();</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<p>To read the data in the cache, we will use the <strong>readQuery</strong> method that exist on the client instance.<br>The method accepts an options object which needs a mandatory <strong>query</strong> property, and an optional <strong>variables</strong> object.</p>
+<p>The <strong>query</strong> property holds a query that needs to match the query we provided when we wrote data to the cache. We do not have to require all properties that exist in the data, but the name of the top field on both queries has to the same - this field is <strong>login</strong> in our case.</p>
+<p>We will not deal with the variables in this series, because in one of the future ones I plan to go more in depth with the whole Apollo Client thing.</p>
+<p>Ok, here is the code, with the query, implementation of the <strong>readQuery</strong> method, and the destructured query result:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// app.tsx</span></span><br><span class="line">...</span><br><span class="line"><span class="keyword">const</span> TEST_LOGIN_CACHE = gql<span class="string">`</span></span><br><span class="line"><span class="string">    query &#123;</span></span><br><span class="line"><span class="string">        logins &#123;</span></span><br><span class="line"><span class="string">            __typename</span></span><br><span class="line"><span class="string">            first_name</span></span><br><span class="line"><span class="string">            avatar_link</span></span><br><span class="line"><span class="string">            access_token</span></span><br><span class="line"><span class="string">            isLoggedIn</span></span><br><span class="line"><span class="string">        &#125;</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">`</span>;</span><br><span class="line">...</span><br><span class="line"><span class="keyword">const</span> App = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> myClient = useApolloClient();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> queryLoginData = myClient.readQuery&lt;&#123;</span><br><span class="line">    login: &#123;</span><br><span class="line">        __typename: string;</span><br><span class="line">        first_name: string;</span><br><span class="line">        avatar_link: string;</span><br><span class="line">        access_token: string;</span><br><span class="line">        isLoggedIn: boolean;</span><br><span class="line">    &#125;;</span><br><span class="line">    &#125;&gt;(&#123;</span><br><span class="line">    query: TEST_LOGIN_CACHE,</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> &#123; login &#125; = queryLoginData!;</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<p>Let’s now render the returned values:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// app.tsx</span></span><br><span class="line">...</span><br><span class="line"><span class="keyword">const</span> App = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">...</span><br><span class="line"><span class="keyword">return</span> (</span><br><span class="line">  &lt;Switch&gt;</span><br><span class="line">    &lt;Route exact path=<span class="string">&quot;/&quot;</span>&gt;</span><br><span class="line">      &lt;p&gt;__typename: &#123;login.__typename&#125;&lt;/p&gt;</span><br><span class="line">      &lt;p&gt;first_name: &#123;login.first_name&#125;&lt;/p&gt;</span><br><span class="line">      &lt;p&gt;avatar_link: &#123;login.avatar_link&#125;&lt;/p&gt;</span><br><span class="line">      &lt;p&gt;access_token: &#123;login.access_token&#125;&lt;/p&gt;</span><br><span class="line">      &lt;p&gt;isLoggedIn: &#123;login.isLoggedIn.toString()&#125;&lt;/p&gt;</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<p>If we visit the <strong>“/“</strong> root path now, we will see that all of our values are empty, except for the <strong>isLoggedIn</strong> value, which renders <strong>false</strong> because we converted the <strong>false</strong> boolean value to string</p>
+<p>Let’s make things a bit more interesting by manually changing our initialized values in the <strong>appolo-client.ts</strong> file:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// apollo-client.ts</span></span><br><span class="line">...</span><br><span class="line">client.writeQuery(&#123;</span><br><span class="line">    query: gql<span class="string">`</span></span><br><span class="line"><span class="string">        query Login &#123;</span></span><br><span class="line"><span class="string">            login &#123;</span></span><br><span class="line"><span class="string">                __typename</span></span><br><span class="line"><span class="string">                first_name</span></span><br><span class="line"><span class="string">                avatar_link</span></span><br><span class="line"><span class="string">                access_token</span></span><br><span class="line"><span class="string">                isLoggedIn</span></span><br><span class="line"><span class="string">                refreshRequestHasFinished</span></span><br><span class="line"><span class="string">            &#125;</span></span><br><span class="line"><span class="string">        &#125;</span></span><br><span class="line"><span class="string">    `</span>,</span><br><span class="line">    data: &#123;</span><br><span class="line">        login: &#123;</span><br><span class="line">            __typename: <span class="string">&quot;Me&quot;</span>,</span><br><span class="line">            first_name: <span class="string">&quot;Joe&quot;</span>,</span><br><span class="line">            avatar_link: <span class="string">&quot;Johnson&quot;</span>,</span><br><span class="line">            access_token: <span class="string">&quot;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjcsImlhdCI6MTU5NTIzMDMxOSwiZXhwIjoxNTk1MjMyMTE5fQ.VPxdlZz_WtHkIxWqyyE4VgVlU800M7G6-tpAfAjQJac&quot;</span>,</span><br><span class="line">            isLoggedIn: <span class="literal">true</span>,</span><br><span class="line">            refreshRequestHasFinished: <span class="literal">false</span>,</span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;,</span><br><span class="line">&#125;);</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<p>Try and see what the app renders now. The rendered values are not empty anymore.</p>
+<h4 id="Working-with-cache-via-Apollo-Client’s-hooks"><a href="#Working-with-cache-via-Apollo-Client’s-hooks" class="headerlink" title="Working with cache via Apollo Client’s hooks."></a>Working with cache via Apollo Client’s hooks.</h4><p>Another way, and the one we will use in our app, is by using Apollo hooks. We will be using same hooks as we used to query our Apollo Server Express. This way we will have a consistent way of querying data.</p>
+<p>The procedure is same as with the server queries:</p>
+<ol>
+<li>We define a query</li>
+<li>We implement a hook</li>
+<li>We render the data</li>
+</ol>
+<p>The only difference is that when we define a query with the <strong>gql</strong> method, we have to specify that we are querying the Apollo Client cache, and not the Apollo Server.<br>We do this by adding <strong>@client</strong> after our query name:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> TEST_LOGIN_CACHE = gql<span class="string">`</span></span><br><span class="line"><span class="string">    query &#123;</span></span><br><span class="line"><span class="string">        login @client &#123;</span></span><br><span class="line"><span class="string">            __typename</span></span><br><span class="line"><span class="string">            first_name</span></span><br><span class="line"><span class="string">            avatar_link</span></span><br><span class="line"><span class="string">            access_token</span></span><br><span class="line"><span class="string">            isLoggedIn</span></span><br><span class="line"><span class="string">        &#125;</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">`</span>;</span><br></pre></td></tr></table></figure>
+
+<p>Now, lets use this query with the <strong>useQueryHook</strong>: </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// app.tsx</span></span><br><span class="line">...</span><br><span class="line"><span class="keyword">const</span> App = <span class="function">() =&gt;</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> &#123; <span class="attr">data</span>: testLoginData &#125; = useQuery&lt;&#123;</span><br><span class="line">        login: &#123;</span><br><span class="line">            __typename: string;</span><br><span class="line">            first_name: string;</span><br><span class="line">            avatar_link: string;</span><br><span class="line">            access_token: string;</span><br><span class="line">            isLoggedIn: boolean;</span><br><span class="line">        &#125;;</span><br><span class="line">    &#125;&gt;(TEST_LOGIN_CACHE);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> &#123; <span class="attr">login</span>: testLogin &#125; = testLoginData!</span><br><span class="line"></span><br><span class="line">    <span class="built_in">console</span>.log(testLogin);</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<p>Alright, this is it. We now have a functional cache that we can query with Apollo hooks.</p>
+<p>Next, we need to finish the Apollo Client setup to have it send our access tokens with each request, as well as cookies that will hold refresh tokens.</p>
+<!-- End Step Content -->
+
+<!-- Project Information -->
+
+<h2 id="Project-Information"><a href="#Project-Information" class="headerlink" title="Project Information"></a>Project Information</h2><h3 id="Available-at"><a href="#Available-at" class="headerlink" title="Available at"></a>Available at</h3><p><a target="_blank" rel="noopener" href="https://github.com/ikaem/graphql-jwt-react.git">Github</a> </p>
+<h3 id="Goals"><a href="#Goals" class="headerlink" title="Goals"></a>Goals</h3><ol>
+<li>Create an app that uses GraphQL and JWT to log in and log out users</li>
+<li>Use PSQL for database</li>
+<li>Use Typescript on both ends</li>
+<li>Use Apollo Client Cache features to store JWT and user info on front end</li>
+<li>Implement protected routes, so that only logged users can access certain pages</li>
+</ol>
+<h3 id="Steps"><a href="#Steps" class="headerlink" title="Steps"></a>Steps</h3><ol>
+<li>Create types and queries</li>
+<li>Create functions to generate JSON Web Tokens</li>
+<li>Set up middleware to check if tokens are valid</li>
+<li>Set up Cors and Apollo Express be able to deal with tokens and cookies</li>
+<li>Create resolvers</li>
+<li>Set up Apollo Client so we can work with cookies and headers</li>
+<li><strong>Set up Apollo Client cache</strong></li>
+<li>Create login functionality</li>
+<li>Create logout functionality</li>
+<li>Create functionality to automatically log in user if they return to our app</li>
+<li>Enable silent refresh of access token when it reaches its expiry period</li>
+<li>Create register functionality</li>
+</ol>
+<h3 id="Tech-and-Tools"><a href="#Tech-and-Tools" class="headerlink" title="Tech and Tools"></a>Tech and Tools</h3><ol>
+<li>React</li>
+<li>Node</li>
+<li>PSQL</li>
+<li>GraphQL</li>
+<li>Apollo Server Express</li>
+<li>Apollo Client</li>
+<li>Bcrypt</li>
+<li>TypeScript</li>
+<li>Express</li>
+<li>JWT</li>
+</ol>
+<h3 id="Experience-with-Tech-amp-Tools"><a href="#Experience-with-Tech-amp-Tools" class="headerlink" title="Experience with Tech &amp; Tools"></a>Experience with Tech &amp; Tools</h3><p>This project is a continuation of the <a href="categories/graphql-react-psql/">Graphql &amp; React &amp; Psql series</a>. There, I worked with TS, PSQL and GQL, so I’m ok with that, I guess.<br>I have done some JWT things before, and here I wanted to try it with GQL.</p>
+<h2 id="DISCLAIMER"><a href="#DISCLAIMER" class="headerlink" title="DISCLAIMER"></a>DISCLAIMER</h2><p>Don’t take any of this seriously and as a matter-of-fact. These are my notes. It might look like I am trying to teach something to someone. I am not.</p>
+
+
+                
+
+
+                <!-- Cover image credit -->
+                
+                    <p class="image-credit-link">
+                        Cover image by <strong>
+                            <a target="_blank" rel="noopener" href="https://unsplash.com/@moooooose?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
+                                Mosa Moseneke
+                            </a>
+                        </strong>
+                    </p>
+
+                
+
+  
+
+            </div>
+            
+            <!-- Custom placed tags -->
+            <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                
+                    
+
+
+<a href="/angry-chaired-blog/tags/frontend/">#frontend</a> <a href="/angry-chaired-blog/tags/apollo/">#apollo</a> <a href="/angry-chaired-blog/tags/apollo-cache/">#apollo cache</a>
+
+
+                
+            </div>
+            <!--  -->
+
+
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+
+            <!-- Hyvor comments -->
+
+            <!-- End of Hyvor comments -->
+        </div>
+    </div>
+</article>
+
+
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2020 kaem<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

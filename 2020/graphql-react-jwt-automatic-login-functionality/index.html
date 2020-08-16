@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="Inexperienced and curious pokes into the sprawling world of web development "/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="kaem"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="GraphQL &amp; React &amp; JWT: Automatic Login Functionality"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Inexperienced and curious pokes into the sprawling world of web development "/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Angry Chaired Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://ikaem.github.io/angry-chaired-blog/angry-chaired-blog/images/header-image.jpg"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://ikaem.github.io/angry-chaired-blog/angry-chaired-blog/images/header-image.jpg"/>
+    
+
+    <!-- Title -->
+    
+    <title>GraphQL &amp; React &amp; JWT: Automatic Login Functionality - Angry Chaired Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/angry-chaired-blog/css/style.css">
+
+    
+<link rel="stylesheet" href="/angry-chaired-blog/css/custom-style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+    <link rel="icon" href="/angry-chaired-blog/images/favicon.ico"/>
+    
+
+<meta name="generator" content="Hexo 5.0.2"><link rel="alternate" href="/angry-chaired-blog/atom.xml" title="Angry Chaired Blog" type="application/atom+xml">
+</head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/angry-chaired-blog/">Angry Chaired Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/about">
+                            
+                                About
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a target="_blank" rel="noopener" href="https://angrychaired.surge.sh">
+                            
+                                <i class="fa fa-user fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a target="_blank" rel="noopener" href="https://github.com/ikaem/">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a href="/angry-chaired-blog/atom.xml">
+                            
+                                <i class="fa fa-rss fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('ivars-utinans-Mx1ADpUts8s-unsplash.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>GraphQL & React & JWT: Automatic Login Functionality</h1>
+
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            16/08/2020
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/angry-chaired-blog/categories/graphql-react-jwt/">graphql & react & jwt</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <!-- Step Content Start -->
+
+<h4 id="Part-10-of-12-in-GraphQL-amp-React-amp-JWT"><a href="#Part-10-of-12-in-GraphQL-amp-React-amp-JWT" class="headerlink" title="Part 10 of 12 in GraphQL &amp; React &amp; JWT"></a>Part 10 of 12 in GraphQL &amp; React &amp; JWT</h4><p>We have set up the login mechanism in such a way that when a user logs in, a cookie gets set on the backend and stored on the client. This cookie holds a refresh token, valid for 10 days, or until the user explicitly logs out of their account.</p>
+<p>Provided that the user doesn’t log out of their account when they leave the app, we can use that cookie to automatically log into the user’s account when they return to the app.<br>We already have a mutation prepared for that on the backend - the <strong>refreshAccessToken</strong> one. It returns the same data as the login mutation, so we can use it to login user and get exact same data back to the client. </p>
+<a id="more"></a>
+
+<h4 id="See-Project-Information"><a href="#See-Project-Information" class="headerlink" title="See Project Information"></a>See <a href="#Project-Information">Project Information</a></h4><h2 id="Step-10-Create-functionality-to-automatically-log-in-user-if-they-return-to-our-app"><a href="#Step-10-Create-functionality-to-automatically-log-in-user-if-they-return-to-our-app" class="headerlink" title="Step 10. Create functionality to automatically log in user if they return to our app"></a>Step 10. Create functionality to automatically log in user if they return to our app</h2><p>How would this work? Well, we can have this mutation sent to the backend immediately when to app starts. If we have a <strong>refreshToken</strong> cookie set on the client, the mutation’s resolver will login the user. If there is no such cookie, the resolver will return an error, informing the client that the user has to manually login.<br>Since the <strong>App</strong> component will always mount, it being a container for all other components, we will do the mutation here. The <strong>useEffect</strong> hook will make sure that we perform the mutation only once, when the component mounts, by providing it with an empty dependence array.</p>
+<p>Here is what we will do on the frontend:</p>
+<ol>
+<li>Create query and implement <strong>useMutation</strong> hook in the <strong>App</strong> component</li>
+<li>Use the <strong>useEffect</strong> hook to perform the mutation only when the component mounts</li>
+<li>Update the cache when the mutation succeeds</li>
+<li>Create protected component to protect certain routes, redirect unauthorized users to <strong>“/login”</strong> route</li>
+</ol>
+<h3 id="Create-query-and-implement-useMutation-hook-in-the-App-component"><a href="#Create-query-and-implement-useMutation-hook-in-the-App-component" class="headerlink" title="Create query and implement useMutation hook in the App component"></a>Create query and implement <strong>useMutation</strong> hook in the <strong>App</strong> component</h3><p>The mutation that we are sending to the server requests the full user info. We do not need any arguments to be included with the mutation because the matching resolver will get neccessary data from the <strong>refreshToken</strong> cookie.</p>
+<p>Here is the mutation:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// app.tsx</span></span><br><span class="line"><span class="keyword">const</span> REFRESH_ACCESS_TOKEN = gql<span class="string">`</span></span><br><span class="line"><span class="string">    mutation RefreshAccessToken &#123;</span></span><br><span class="line"><span class="string">        refreshAccessToken &#123;</span></span><br><span class="line"><span class="string">            first_name</span></span><br><span class="line"><span class="string">            avatar_link</span></span><br><span class="line"><span class="string">            access_token</span></span><br><span class="line"><span class="string">        &#125;</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">`</span>;</span><br></pre></td></tr></table></figure>
+
+<p>The <strong>useMutation</strong> hook is a usual one, accepting the mutation, and returning the mutation method.<br>We also need the destructured <strong>client</strong> instance in order to update our cache later. </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// app.tsx</span></span><br><span class="line">...</span><br><span class="line"><span class="keyword">const</span> [refreshLogin, &#123; client &#125;] = useMutation&lt;&#123;</span><br><span class="line">    refreshAccessToken: &#123;</span><br><span class="line">        first_name: string;</span><br><span class="line">        avatar_link: string;</span><br><span class="line">        access_token: string;</span><br><span class="line">        __typename: string;</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;&gt;(REFRESH_ACCESS_TOKEN, &#123;</span><br><span class="line">    onError: <span class="function">(<span class="params">error</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(error);</span><br><span class="line">        <span class="built_in">console</span>.log(error.graphQLErrors);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="Use-the-useEffect-hook-to-perform-the-mutation-only-when-the-component-mounts"><a href="#Use-the-useEffect-hook-to-perform-the-mutation-only-when-the-component-mounts" class="headerlink" title="Use the useEffect hook to perform the mutation only when the component mounts"></a>Use the <strong>useEffect</strong> hook to perform the mutation only when the component mounts</h3><p>Simple really. Call the mutation function only when the component mounts:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// app.tsx</span></span><br><span class="line">...</span><br><span class="line">useEffect(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    refreshLogin();</span><br><span class="line">&#125;, []);</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<p>With the current setup, the mutation will be done every time the component mounts - which is only once for the <strong>App</strong> component. This is exactly what we want. Depending on the existence and validity of the <strong>refreshToken</strong> cookie, a user will be automatically logged in or not. </p>
+<p>The login, however, is done only on the backend at the moment.<br>We need to use the data returned from the mutation to login the user on the frontend as well.</p>
+<h3 id="Update-the-cache-when-the-mutation-succeeds"><a href="#Update-the-cache-when-the-mutation-succeeds" class="headerlink" title="Update the cache when the mutation succeeds"></a>Update the cache when the mutation succeeds</h3><p>And we do so by updating the cache with the logged user’s info.<br>As before, we use the <strong>update</strong> method to do so:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// app.tsx</span></span><br><span class="line">...</span><br><span class="line"><span class="keyword">const</span> [refreshLogin, &#123; client &#125;] = useMutation&lt;&#123;</span><br><span class="line">    refreshAccessToken: &#123;</span><br><span class="line">        first_name: string;</span><br><span class="line">        avatar_link: string;</span><br><span class="line">        access_token: string;</span><br><span class="line">        __typename: string;</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;&gt;(REFRESH_ACCESS_TOKEN, &#123;</span><br><span class="line">    onError: <span class="function">(<span class="params">error</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(error);</span><br><span class="line">        <span class="built_in">console</span>.log(error.graphQLErrors);</span><br><span class="line">    &#125;,</span><br><span class="line">    update: <span class="function">(<span class="params">cache, &#123; data &#125;</span>) =&gt;</span> &#123;</span><br><span class="line">        client?.writeQuery(&#123;</span><br><span class="line">            query: gql<span class="string">`</span></span><br><span class="line"><span class="string">                query Login &#123;</span></span><br><span class="line"><span class="string">                        login &#123;</span></span><br><span class="line"><span class="string">                        __typename</span></span><br><span class="line"><span class="string">                        first_name</span></span><br><span class="line"><span class="string">                        avatar_link</span></span><br><span class="line"><span class="string">                        access_token</span></span><br><span class="line"><span class="string">                        isLoggedIn</span></span><br><span class="line"><span class="string">                    &#125;</span></span><br><span class="line"><span class="string">                &#125;</span></span><br><span class="line"><span class="string">            `</span>,</span><br><span class="line">            data: &#123;</span><br><span class="line">                login: &#123;</span><br><span class="line">                    __typename: data?.refreshAccessToken.__typename,</span><br><span class="line">                    first_name: data?.refreshAccessToken.first_name,</span><br><span class="line">                    avatar_link: data?.refreshAccessToken.avatar_link,</span><br><span class="line">                    access_token: data?.refreshAccessToken.access_token,</span><br><span class="line">                    isLoggedIn: <span class="literal">true</span>,</span><br><span class="line">                &#125;,</span><br><span class="line">            &#125;,</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;,</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>With this setup, try login and then refresh the page. You should stay logged in because the refreshToken cookie on your browser is sent to the server and used by a resolver to log you on the backend. The data that the resolver sends back is used by the <strong>update</strong> method to update the client cache, and you get logged back in on the client side too. </p>
+<p>Try logging out now, and then refresh the page. You are not logged backin because there is no cookie to provide info needed to refresh your login. </p>
+<h3 id="Create-protected-component-to-protect-certain-routes-redirect-unauthorized-users-to-“-login”-route"><a href="#Create-protected-component-to-protect-certain-routes-redirect-unauthorized-users-to-“-login”-route" class="headerlink" title="Create protected component to protect certain routes, redirect unauthorized users to “/login” route"></a>Create protected component to protect certain routes, redirect unauthorized users to <strong>“/login”</strong> route</h3><p>Why do we need to be logged in at all? One reason would be to access some special parts of a website. For instance, we don’t want everyone to be able to add new users to our app. Only logged users should be able to do that. </p>
+<p>How do we do that?<br>One approach, and the one that we will take, is to wrap those parts into a component that will check if there is a logged user in the cache. If a user is logged in, the so-called <strong>protected route</strong> component will render the requested content, and if there is no logged user, the browser will be redirected to the login page. </p>
+<p>Here is the plan: </p>
+<ol>
+<li>Create such component</li>
+<li>Query cache for logged user</li>
+<li>Conditionally render content or redirect to <strong>“/login”</strong> route</li>
+</ol>
+<h4 id="Create-the-ProtectedRoute-component"><a href="#Create-the-ProtectedRoute-component" class="headerlink" title="Create the ProtectedRoute component"></a>Create the ProtectedRoute component</h4><p>The component accepts children as props. In the current setup, it will always render children props, with the children being other components that we only want to render if the user is logged in.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// protected-route.container.tsx</span></span><br><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">&#x27;react&#x27;</span></span><br><span class="line"></span><br><span class="line">interface ProtectedRouteProps &#123;</span><br><span class="line">    children: React.ReactNode</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> ProtectedRoute: React.FC&lt;ProtectedRouteProps&gt; = <span class="function">(<span class="params">&#123; children &#125;</span>) =&gt;</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">        &lt;div&gt;</span><br><span class="line">            &#123; children &#125;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">    )</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> ProtectedRoute;</span><br></pre></td></tr></table></figure>
+
+<p>In the <strong>App</strong> component we wrap our <strong>AddProfile</strong> component inside the <strong>ProtectedRoute</strong>:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// app.tsx</span></span><br><span class="line">...</span><br><span class="line">    &lt;Route path=<span class="string">&quot;/addprofile&quot;</span>&gt;</span><br><span class="line">        &lt;ProtectedRoute&gt;</span><br><span class="line">        &lt;AddEditProfilePage /&gt;</span><br><span class="line">        &lt;/ProtectedRoute&gt;</span><br><span class="line">    &lt;/Route&gt;</span><br><span class="line">&lt;/Switch&gt;</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<h4 id="Query-cache-for-logged-user"><a href="#Query-cache-for-logged-user" class="headerlink" title="Query cache for logged user"></a>Query cache for logged user</h4><p>To query our cache, we will once again use the <strong>useLazyQuery</strong> hook to avoid the <strong>useQUery</strong> hook attempt to set the component’s state when we logout.<br>We will use the <strong>useEffect</strong> hook again, too, to query the cache only when the component actually mounts. </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// protected-route.container.tsx</span></span><br><span class="line">...</span><br><span class="line"><span class="keyword">const</span> IS_USER_LOGGED_IN = gql<span class="string">`</span></span><br><span class="line"><span class="string">    query IsUserLoggedIn &#123;</span></span><br><span class="line"><span class="string">        login @client &#123;</span></span><br><span class="line"><span class="string">            isLoggedIn</span></span><br><span class="line"><span class="string">            refreshRequestHasFinished</span></span><br><span class="line"><span class="string">        &#125;</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">`</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> ProtectedRoute: React.FC&lt;ProtectedRouteProps&gt; = <span class="function">(<span class="params">&#123; children &#125;</span>) =&gt;</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> [ getIsLoggedIn, &#123; data &#125; ] = useLazyQuery&lt;&#123; <span class="attr">login</span>: &#123; <span class="attr">isLoggedIn</span>: boolean, <span class="attr">refreshRequestHasFinished</span>: boolean  &#125; &#125;&gt;(IS_USER_LOGGED_IN);</span><br><span class="line"></span><br><span class="line">    useEffect(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">        getIsLoggedIn();</span><br><span class="line">    &#125;, []);</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<h4 id="Conditionally-render-content-or-redirect-to-“-login”-route"><a href="#Conditionally-render-content-or-redirect-to-“-login”-route" class="headerlink" title="Conditionally render content or redirect to “/login” route"></a>Conditionally render content or redirect to <strong>“/login”</strong> route</h4><p>Let’s say we want to start using the app at the <strong>“/addprofile”</strong> route.<br>Ideally, we would use the <strong>isLoggedIn</strong> field in the cache to render the children props at this route. If the field is false, we redirect the client to the <strong>“/login”</strong> route, and if it is true, we render the children.</p>
+<p><strong>isLogged</strong> is always <strong>false</strong> when the app starts. Our <strong>ProtectedRoute</strong> component would then always redirect the client. Even if our <strong>refreshAccessToken</strong> mutation eventually logs the user, the browser is already at the <strong>“/login”</strong> route and we cannot go to the <strong>“/addprofile”</strong> route.</p>
+<p>Here is the code for such case:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// protected-route.container.tsx</span></span><br><span class="line">...</span><br><span class="line"><span class="keyword">const</span> ProtectedRoute: React.FC&lt;ProtectedRouteProps&gt; = <span class="function">(<span class="params">&#123; children &#125;</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> [getIsLoggedIn, &#123; data, called, loading &#125;] = useLazyQuery&lt;&#123;</span><br><span class="line">        login: &#123; <span class="attr">isLoggedIn</span>: boolean; refreshRequestHasFinished: boolean &#125;;</span><br><span class="line">    &#125;&gt;(IS_USER_LOGGED_IN);</span><br><span class="line">    ...</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (!data?.login.isLoggedIn) <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">Redirect</span> <span class="attr">to</span>=<span class="string">&quot;/login&quot;</span> /&gt;</span></span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span>&#123;children&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span>;</span><br></pre></td></tr></table></figure>
+
+<p>The problem here is that, when the app starts, it takes a short period of time for the <strong>refreshAccessToken</strong> to make a request to the server and get a response back. The <strong>ProtectedRoute</strong> component is faster, however. Its logic is focused only on the local variables, so when it sees that the <strong>isLoggedIn</strong> is false, it immediately redirects the browser and unmounts itself. Even if the <strong>refreshAccessToken</strong> does actually log in the user, the <strong>ProtectedRoute</strong> component is unmounted and cannot react to a change in its state. </p>
+<p>So how to approach the problem? My idea was to stay with the <strong>ProtectedRoute</strong> component until the <strong>refreshToken</strong> returns its response.<br>To do this, I added another field to the <strong>login</strong> cache, to indicate whether the response has arrived.<br>The field, called <strong>refreshRequestHasFinished</strong> is false when the app starts, and switches to <strong>true</strong> when <strong>refreshAccessToken</strong> returns, regardless of whether it logs the user or not. </p>
+<p>Here is the modified initialized cache in the <strong>apollo-client.ts</strong>:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// apollo-client.ts</span></span><br><span class="line">client.writeQuery(&#123;</span><br><span class="line">    query: gql<span class="string">`</span></span><br><span class="line"><span class="string">        query Login &#123;</span></span><br><span class="line"><span class="string">            login &#123;</span></span><br><span class="line"><span class="string">                __typename</span></span><br><span class="line"><span class="string">                first_name</span></span><br><span class="line"><span class="string">                avatar_link</span></span><br><span class="line"><span class="string">                access_token</span></span><br><span class="line"><span class="string">                isLoggedIn</span></span><br><span class="line"><span class="string">                refreshRequestHasFinished</span></span><br><span class="line"><span class="string">            &#125;</span></span><br><span class="line"><span class="string">        &#125;</span></span><br><span class="line"><span class="string">    `</span>,</span><br><span class="line">    data: &#123;</span><br><span class="line">        login: &#123;</span><br><span class="line">            __typename: <span class="string">&quot;&quot;</span>,</span><br><span class="line">            first_name: <span class="string">&quot;&quot;</span>,</span><br><span class="line">            avatar_link: <span class="string">&quot;&quot;</span>,</span><br><span class="line">            access_token: <span class="string">&quot;&quot;</span>,</span><br><span class="line">            isLoggedIn: <span class="literal">false</span>,</span><br><span class="line">            refreshRequestHasFinished: <span class="literal">false</span>,</span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;,</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>Obviously, introduction of this field requires additional code modifications throughout the app.</p>
+<p>We need to make the new field hold <strong>true</strong> value when we are done with the <strong>refreshToken</strong> mutation. We need to do this both when the mutation succeeds and when we get an error.<br>The error case might seems strange, because why would we change our cache if aa request failed. The idea here, however, is just to know whether the request has finished, so we can render the appropriate page. We can deal with the error in a separate way.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// app.tsx</span></span><br><span class="line"><span class="keyword">const</span> [refreshLogin, &#123; client &#125;] = useMutation&lt;...&gt;(REFRESH_ACCESS_TOKEN, &#123;</span><br><span class="line">    onError: <span class="function">(<span class="params">error</span>) =&gt;</span> &#123;</span><br><span class="line">        ...</span><br><span class="line">        client?.writeQuery(&#123;</span><br><span class="line">            query: gql<span class="string">`</span></span><br><span class="line"><span class="string">                query Login &#123;</span></span><br><span class="line"><span class="string">                    login &#123;</span></span><br><span class="line"><span class="string">                        __typename</span></span><br><span class="line"><span class="string">                        first_name</span></span><br><span class="line"><span class="string">                        avatar_link</span></span><br><span class="line"><span class="string">                        access_token</span></span><br><span class="line"><span class="string">                        isLoggedIn</span></span><br><span class="line"><span class="string">                        refreshRequestHasFinished</span></span><br><span class="line"><span class="string">                    &#125;</span></span><br><span class="line"><span class="string">                &#125;</span></span><br><span class="line"><span class="string">            `</span>,</span><br><span class="line">            data: &#123;</span><br><span class="line">                login: &#123;</span><br><span class="line">                    __typename: <span class="string">&quot;&quot;</span>,</span><br><span class="line">                    first_name: <span class="string">&quot;&quot;</span>,</span><br><span class="line">                    avatar_link: <span class="string">&quot;&quot;</span>,</span><br><span class="line">                    access_token: <span class="string">&quot;&quot;</span>,</span><br><span class="line">                    isLoggedIn: <span class="literal">false</span>,</span><br><span class="line">                    refreshRequestHasFinished: <span class="literal">true</span>,</span><br><span class="line">                &#125;,</span><br><span class="line">            &#125;,</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;,</span><br><span class="line">    update: <span class="function">(<span class="params">cache, &#123; data &#125;</span>) =&gt;</span> &#123;</span><br><span class="line">        client?.writeQuery(&#123;</span><br><span class="line">            query: gql<span class="string">`</span></span><br><span class="line"><span class="string">                query Login &#123;</span></span><br><span class="line"><span class="string">                    login &#123;</span></span><br><span class="line"><span class="string">                        __typename</span></span><br><span class="line"><span class="string">                        first_name</span></span><br><span class="line"><span class="string">                        avatar_link</span></span><br><span class="line"><span class="string">                        access_token</span></span><br><span class="line"><span class="string">                        isLoggedIn</span></span><br><span class="line"><span class="string">                        refreshRequestHasFinished</span></span><br><span class="line"><span class="string">                    &#125;</span></span><br><span class="line"><span class="string">                &#125;</span></span><br><span class="line"><span class="string">            `</span>,</span><br><span class="line">            data: &#123;</span><br><span class="line">                login: &#123;</span><br><span class="line">                    __typename: data?.refreshAccessToken.__typename,</span><br><span class="line">                    first_name: data?.refreshAccessToken.first_name,</span><br><span class="line">                    avatar_link: data?.refreshAccessToken.avatar_link,</span><br><span class="line">                    access_token: data?.refreshAccessToken.access_token,</span><br><span class="line">                    isLoggedIn: <span class="literal">true</span>,</span><br><span class="line">                    refreshRequestHasFinished: <span class="literal">true</span>,</span><br><span class="line">                &#125;,</span><br><span class="line">            &#125;,</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;,</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>We need to adjust the <strong>onResetStore</strong> method in the <strong>apollo-client.ts</strong> as well, to actually keep the new field <strong>true</strong>. The assumption is that, when we reset the store, the app had been running for a while already, and had performed the initial refresh attempt.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// apollo-client.ts</span></span><br><span class="line">client.onResetStore( <span class="keyword">async</span>() =&gt; &#123;</span><br><span class="line">    client.writeQuery(&#123;</span><br><span class="line">        query: gql<span class="string">`</span></span><br><span class="line"><span class="string">            query Login &#123;</span></span><br><span class="line"><span class="string">                login &#123;</span></span><br><span class="line"><span class="string">                    __typename</span></span><br><span class="line"><span class="string">                    first_name</span></span><br><span class="line"><span class="string">                    avatar_link</span></span><br><span class="line"><span class="string">                    access_token</span></span><br><span class="line"><span class="string">                    isLoggedIn</span></span><br><span class="line"><span class="string">                    refreshRequestHasFinished</span></span><br><span class="line"><span class="string">                &#125;</span></span><br><span class="line"><span class="string">            &#125;</span></span><br><span class="line"><span class="string">        `</span>,</span><br><span class="line">        data: &#123;</span><br><span class="line">            login: &#123;</span><br><span class="line">                __typename: <span class="string">&quot;&quot;</span>,</span><br><span class="line">                first_name: <span class="string">&quot;&quot;</span>,</span><br><span class="line">                avatar_link: <span class="string">&quot;&quot;</span>,</span><br><span class="line">                access_token: <span class="string">&quot;&quot;</span>,</span><br><span class="line">                isLoggedIn: <span class="literal">false</span>,</span><br><span class="line">                refreshRequestHasFinished: <span class="literal">true</span>,</span><br><span class="line">            &#125;,</span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>We will keep the field <strong>true</strong> when we perform the <strong>login</strong> mutation too:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// login.page.tsx</span></span><br><span class="line">...</span><br><span class="line"></span><br><span class="line">update: <span class="function">(<span class="params">_cache, &#123; data &#125;</span>) =&gt;</span> &#123;</span><br><span class="line">    client?.writeQuery(&#123;</span><br><span class="line">        query: gql<span class="string">`</span></span><br><span class="line"><span class="string">            query Login &#123;</span></span><br><span class="line"><span class="string">                login &#123;</span></span><br><span class="line"><span class="string">                    __typename</span></span><br><span class="line"><span class="string">                    first_name</span></span><br><span class="line"><span class="string">                    avatar_link</span></span><br><span class="line"><span class="string">                    access_token</span></span><br><span class="line"><span class="string">                    isLoggedIn</span></span><br><span class="line"><span class="string">                    refreshRequestHasFinished</span></span><br><span class="line"><span class="string">                &#125;</span></span><br><span class="line"><span class="string">            &#125;</span></span><br><span class="line"><span class="string">        `</span>,</span><br><span class="line">        data: &#123;</span><br><span class="line">            login: &#123;</span><br><span class="line">                __typename: data?.login.__typename,</span><br><span class="line">                first_name: data?.login.first_name,</span><br><span class="line">                avatar_link: data?.login.avatar_link,</span><br><span class="line">                access_token: data?.login.access_token,</span><br><span class="line">                isLoggedIn: <span class="literal">true</span>,</span><br><span class="line">                refreshRequestHasFinished: <span class="literal">true</span>,</span><br><span class="line">            &#125;,</span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<p>We don’t need to adjust anything about the <strong>logout</strong> mutation, because the <strong>onResetStore</strong> method deals with the new field already. </p>
+<p>Now that we have an additional property in our cache with which we can stay with the <strong>ProtectedRoute</strong> component until a response from the <strong>refreshAccessToken</strong> mutation arrives, we can conditionally render waht we need.</p>
+<p>How do we want to do it?</p>
+<ol>
+<li>In case the response has not arrived, we want to stay with the component</li>
+<li>In case the response has arrived, and the <strong>isLogged</strong> property is false, we want to redirect the client to <strong>“/login”</strong></li>
+<li>In case the response has arrived, and the <strong>isLogged</strong> property is true, we render the children. We can also remove conditions from this one, and render this when none of the above conditions are fulfilled.</li>
+</ol>
+<p>Here is the code:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// protected-route.container.tsx</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> ProtectedRoute: React.FC&lt;ProtectedRouteProps&gt; = <span class="function">(<span class="params">&#123; children &#125;</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> [getIsLoggedIn, &#123; data, called, loading &#125;] = useLazyQuery&lt;&#123;</span><br><span class="line">        login: &#123; <span class="attr">isLoggedIn</span>: boolean; refreshRequestHasFinished: boolean &#125;;</span><br><span class="line">    &#125;&gt;(IS_USER_LOGGED_IN);</span><br><span class="line"></span><br><span class="line">    useEffect(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">        getIsLoggedIn();</span><br><span class="line">    &#125;, []);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>(!data?.login.refreshRequestHasFinished) <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">p</span>&gt;</span>Loading...<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span><br><span class="line">    <span class="keyword">if</span>(data?.login.refreshRequestHasFinished &amp;&amp; !data?.login.isLoggedIn) <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">Redirect</span> <span class="attr">to</span>=<span class="string">&quot;/login&quot;</span> /&gt;</span></span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">        &lt;div&gt;</span><br><span class="line">            &#123; children &#125;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">    )</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>Try it now. Go an login, and then visit the <strong>“/addprofile</strong> route. Now refresh the page, and see if you can still see the the same component. You should.<br>Now try to logout, and do the same. You should not be able to visit the route because the <strong>isLoggedIn</strong> field is <strong>false</strong>.</p>
+<!-- End Step Content -->
+
+<!-- Project Information -->
+
+<h2 id="Project-Information"><a href="#Project-Information" class="headerlink" title="Project Information"></a>Project Information</h2><h3 id="Available-at"><a href="#Available-at" class="headerlink" title="Available at"></a>Available at</h3><p><a target="_blank" rel="noopener" href="https://github.com/ikaem/graphql-jwt-react.git">Github</a> </p>
+<h3 id="Goals"><a href="#Goals" class="headerlink" title="Goals"></a>Goals</h3><ol>
+<li>Create an app that uses GraphQL and JWT to log in and log out users</li>
+<li>Use PSQL for database</li>
+<li>Use Typescript on both ends</li>
+<li>Use Apollo Client Cache features to store JWT and user info on front end</li>
+<li>Implement protected routes, so that only logged users can access certain pages</li>
+</ol>
+<h3 id="Steps"><a href="#Steps" class="headerlink" title="Steps"></a>Steps</h3><ol>
+<li>Create types and queries</li>
+<li>Create functions to generate JSON Web Tokens</li>
+<li>Create middleware to check if tokens are valid</li>
+<li>Set up Apollo Express be able to deal with tokens and cookies</li>
+<li>Create resolvers</li>
+<li>Set up Apollo Client cache</li>
+<li>Set up Apollo Client so we can work with cookies and headers</li>
+<li>Create login functionality</li>
+<li>Create logout functionality</li>
+<li><strong>Create functionality to automatically log in user if they return to our app</strong></li>
+<li>Enable silent refresh of access token when it reaches its expiry period</li>
+<li>Create register functionality</li>
+</ol>
+<h3 id="Tech-and-Tools"><a href="#Tech-and-Tools" class="headerlink" title="Tech and Tools"></a>Tech and Tools</h3><ol>
+<li>React</li>
+<li>Node</li>
+<li>PSQL</li>
+<li>GraphQL</li>
+<li>Apollo Server Express</li>
+<li>Apollo Client</li>
+<li>Bcrypt</li>
+<li>TypeScript</li>
+<li>Express</li>
+<li>JWT</li>
+</ol>
+<h3 id="Experience-with-Tech-amp-Tools"><a href="#Experience-with-Tech-amp-Tools" class="headerlink" title="Experience with Tech &amp; Tools"></a>Experience with Tech &amp; Tools</h3><p>This project is a continuation of the <a href="categories/graphql-react-psql/">Graphql &amp; React &amp; Psql series</a>. There, I worked with TS, PSQL and GQL, so I’m ok with that, I guess.<br>I have done some JWT things before, and here I wanted to try it with GQL.</p>
+<h2 id="DISCLAIMER"><a href="#DISCLAIMER" class="headerlink" title="DISCLAIMER"></a>DISCLAIMER</h2><p>Don’t take any of this seriously and as a matter-of-fact. These are my notes. It might look like I am trying to teach something to someone. I am not.</p>
+
+
+                
+
+
+                <!-- Cover image credit -->
+                
+                    <p class="image-credit-link">
+                        Cover image by <strong>
+                            <a target="_blank" rel="noopener" href="https://unsplash.com/@ivoprod?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
+                                Ivars Utināns
+                            </a>
+                        </strong>
+                    </p>
+
+                
+
+  
+
+            </div>
+            
+            <!-- Custom placed tags -->
+            <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                
+                    
+
+
+<a href="/angry-chaired-blog/tags/frontend/">#frontend</a> <a href="/angry-chaired-blog/tags/apollo/">#apollo</a> <a href="/angry-chaired-blog/tags/jwt/">#jwt</a> <a href="/angry-chaired-blog/tags/graphql/">#graphql</a> <a href="/angry-chaired-blog/tags/authentication/">#authentication</a>
+
+
+                
+            </div>
+            <!--  -->
+
+
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+
+            <!-- Hyvor comments -->
+
+            <!-- End of Hyvor comments -->
+        </div>
+    </div>
+</article>
+
+
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2020 kaem<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

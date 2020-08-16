@@ -6,7 +6,7 @@
   <link href="https://ikaem.github.io/angry-chaired-blog/atom.xml" rel="self"/>
   
   <link href="https://ikaem.github.io/angry-chaired-blog/"/>
-  <updated>2020-08-16T15:52:32.669Z</updated>
+  <updated>2020-08-16T19:38:27.856Z</updated>
   <id>https://ikaem.github.io/angry-chaired-blog/</id>
   
   <author>
@@ -15,6 +15,204 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>GraphQL &amp; React &amp; JWT: Register Functionality</title>
+    <link href="https://ikaem.github.io/angry-chaired-blog/2020/graphql-react-jwt-register-functionality/"/>
+    <id>https://ikaem.github.io/angry-chaired-blog/2020/graphql-react-jwt-register-functionality/</id>
+    <published>2020-08-16T19:26:21.000Z</published>
+    <updated>2020-08-16T19:38:27.856Z</updated>
+    
+    
+    <summary type="html">&lt;!-- Step Content Start --&gt;
+
+&lt;h4 id=&quot;Part-12-of-12-in-GraphQL-amp-React-amp-JWT&quot;&gt;&lt;a href=&quot;#Part-12-of-12-in-GraphQL-amp-React-amp-JWT&quot; class=&quot;headerlink&quot; title=&quot;Part 12 of 12 in GraphQL &amp;amp; React &amp;amp; JWT&quot;&gt;&lt;/a&gt;Part 12 of 12 in GraphQL &amp;amp; React &amp;amp; JWT&lt;/h4&gt;&lt;p&gt;The last functionality is the &lt;strong&gt;register&lt;/strong&gt; one. The functionality is very similar to the &lt;strong&gt;login&lt;/strong&gt; one, in that we have a mutation that accepts arguments, which are extracted from references to form inputs on the register page.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="graphql &amp; react &amp; jwt" scheme="https://ikaem.github.io/angry-chaired-blog/categories/graphql-react-jwt/"/>
+    
+    
+    <category term="frontend" scheme="https://ikaem.github.io/angry-chaired-blog/tags/frontend/"/>
+    
+    <category term="apollo" scheme="https://ikaem.github.io/angry-chaired-blog/tags/apollo/"/>
+    
+    <category term="jwt" scheme="https://ikaem.github.io/angry-chaired-blog/tags/jwt/"/>
+    
+    <category term="graphql" scheme="https://ikaem.github.io/angry-chaired-blog/tags/graphql/"/>
+    
+    <category term="authentication" scheme="https://ikaem.github.io/angry-chaired-blog/tags/authentication/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>GraphQL &amp; React &amp; JWT: Silent Token Refresh</title>
+    <link href="https://ikaem.github.io/angry-chaired-blog/2020/graphql-react-jwt-silent-token-refresh/"/>
+    <id>https://ikaem.github.io/angry-chaired-blog/2020/graphql-react-jwt-silent-token-refresh/</id>
+    <published>2020-08-16T19:13:51.000Z</published>
+    <updated>2020-08-16T19:19:00.970Z</updated>
+    
+    
+    <summary type="html">&lt;!-- Step Content Start --&gt;
+
+&lt;h4 id=&quot;Part-11-of-12-in-GraphQL-amp-React-amp-JWT&quot;&gt;&lt;a href=&quot;#Part-11-of-12-in-GraphQL-amp-React-amp-JWT&quot; class=&quot;headerlink&quot; title=&quot;Part 11 of 12 in GraphQL &amp;amp; React &amp;amp; JWT&quot;&gt;&lt;/a&gt;Part 11 of 12 in GraphQL &amp;amp; React &amp;amp; JWT&lt;/h4&gt;</summary>
+    
+    
+    
+    <category term="graphql &amp; react &amp; jwt" scheme="https://ikaem.github.io/angry-chaired-blog/categories/graphql-react-jwt/"/>
+    
+    
+    <category term="frontend" scheme="https://ikaem.github.io/angry-chaired-blog/tags/frontend/"/>
+    
+    <category term="apollo" scheme="https://ikaem.github.io/angry-chaired-blog/tags/apollo/"/>
+    
+    <category term="jwt" scheme="https://ikaem.github.io/angry-chaired-blog/tags/jwt/"/>
+    
+    <category term="graphql" scheme="https://ikaem.github.io/angry-chaired-blog/tags/graphql/"/>
+    
+    <category term="authentication" scheme="https://ikaem.github.io/angry-chaired-blog/tags/authentication/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>GraphQL &amp; React &amp; JWT: Automatic Login Functionality</title>
+    <link href="https://ikaem.github.io/angry-chaired-blog/2020/graphql-react-jwt-automatic-login-functionality/"/>
+    <id>https://ikaem.github.io/angry-chaired-blog/2020/graphql-react-jwt-automatic-login-functionality/</id>
+    <published>2020-08-16T18:50:48.000Z</published>
+    <updated>2020-08-16T19:07:28.215Z</updated>
+    
+    
+    <summary type="html">&lt;!-- Step Content Start --&gt;
+
+&lt;h4 id=&quot;Part-10-of-12-in-GraphQL-amp-React-amp-JWT&quot;&gt;&lt;a href=&quot;#Part-10-of-12-in-GraphQL-amp-React-amp-JWT&quot; class=&quot;headerlink&quot; title=&quot;Part 10 of 12 in GraphQL &amp;amp; React &amp;amp; JWT&quot;&gt;&lt;/a&gt;Part 10 of 12 in GraphQL &amp;amp; React &amp;amp; JWT&lt;/h4&gt;&lt;p&gt;We have set up the login mechanism in such a way that when a user logs in, a cookie gets set on the backend and stored on the client. This cookie holds a refresh token, valid for 10 days, or until the user explicitly logs out of their account.&lt;/p&gt;
+&lt;p&gt;Provided that the user doesn’t log out of their account when they leave the app, we can use that cookie to automatically log into the user’s account when they return to the app.&lt;br&gt;We already have a mutation prepared for that on the backend - the &lt;strong&gt;refreshAccessToken&lt;/strong&gt; one. It returns the same data as the login mutation, so we can use it to login user and get exact same data back to the client. &lt;/p&gt;</summary>
+    
+    
+    
+    <category term="graphql &amp; react &amp; jwt" scheme="https://ikaem.github.io/angry-chaired-blog/categories/graphql-react-jwt/"/>
+    
+    
+    <category term="frontend" scheme="https://ikaem.github.io/angry-chaired-blog/tags/frontend/"/>
+    
+    <category term="apollo" scheme="https://ikaem.github.io/angry-chaired-blog/tags/apollo/"/>
+    
+    <category term="jwt" scheme="https://ikaem.github.io/angry-chaired-blog/tags/jwt/"/>
+    
+    <category term="graphql" scheme="https://ikaem.github.io/angry-chaired-blog/tags/graphql/"/>
+    
+    <category term="authentication" scheme="https://ikaem.github.io/angry-chaired-blog/tags/authentication/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>GraphQL &amp; React &amp; JWT: Logout Functionality</title>
+    <link href="https://ikaem.github.io/angry-chaired-blog/2020/graphql-react-jwt-logout-functionality/"/>
+    <id>https://ikaem.github.io/angry-chaired-blog/2020/graphql-react-jwt-logout-functionality/</id>
+    <published>2020-08-16T18:45:30.000Z</published>
+    <updated>2020-08-16T18:49:38.306Z</updated>
+    
+    
+    <summary type="html">&lt;!-- Step Content Start --&gt;
+
+&lt;h4 id=&quot;Part-9-of-12-in-GraphQL-amp-React-amp-JWT&quot;&gt;&lt;a href=&quot;#Part-9-of-12-in-GraphQL-amp-React-amp-JWT&quot; class=&quot;headerlink&quot; title=&quot;Part 9 of 12 in GraphQL &amp;amp; React &amp;amp; JWT&quot;&gt;&lt;/a&gt;Part 9 of 12 in GraphQL &amp;amp; React &amp;amp; JWT&lt;/h4&gt;&lt;p&gt;When a user logs out on the frontend, the client should call the &lt;strong&gt;logout&lt;/strong&gt; mutation that we have prepared on the backend. That mutation will clear the refresh token column in the database and clear the &lt;strong&gt;refreshToken&lt;/strong&gt; cookie, setting it to an empty string and backdating its expiration date. &lt;/p&gt;</summary>
+    
+    
+    
+    <category term="graphql &amp; react &amp; jwt" scheme="https://ikaem.github.io/angry-chaired-blog/categories/graphql-react-jwt/"/>
+    
+    
+    <category term="frontend" scheme="https://ikaem.github.io/angry-chaired-blog/tags/frontend/"/>
+    
+    <category term="apollo" scheme="https://ikaem.github.io/angry-chaired-blog/tags/apollo/"/>
+    
+    <category term="jwt" scheme="https://ikaem.github.io/angry-chaired-blog/tags/jwt/"/>
+    
+    <category term="graphql" scheme="https://ikaem.github.io/angry-chaired-blog/tags/graphql/"/>
+    
+    <category term="authentication" scheme="https://ikaem.github.io/angry-chaired-blog/tags/authentication/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>GraphQL &amp; React &amp; JWT: Login Functionality</title>
+    <link href="https://ikaem.github.io/angry-chaired-blog/2020/graphql-react-jwt-login-functionality/"/>
+    <id>https://ikaem.github.io/angry-chaired-blog/2020/graphql-react-jwt-login-functionality/</id>
+    <published>2020-08-16T18:24:13.000Z</published>
+    <updated>2020-08-16T18:32:15.528Z</updated>
+    
+    
+    <summary type="html">&lt;!-- Step Content Start --&gt;
+
+&lt;h4 id=&quot;Part-8-of-12-in-GraphQL-amp-React-amp-JWT&quot;&gt;&lt;a href=&quot;#Part-8-of-12-in-GraphQL-amp-React-amp-JWT&quot; class=&quot;headerlink&quot; title=&quot;Part 8 of 12 in GraphQL &amp;amp; React &amp;amp; JWT&quot;&gt;&lt;/a&gt;Part 8 of 12 in GraphQL &amp;amp; React &amp;amp; JWT&lt;/h4&gt;&lt;p&gt;Now that we have setup our Apollo Client to use our headers and cookies, we can finally start to implement uathentication features.&lt;br&gt;First one is the &lt;strong&gt;login&lt;/strong&gt; one.&lt;br&gt;To login a user, we make use of the &lt;strong&gt;login&lt;/strong&gt; mutation we already have prepared on the backend. So that part is done.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="graphql &amp; react &amp; jwt" scheme="https://ikaem.github.io/angry-chaired-blog/categories/graphql-react-jwt/"/>
+    
+    
+    <category term="frontend" scheme="https://ikaem.github.io/angry-chaired-blog/tags/frontend/"/>
+    
+    <category term="apollo" scheme="https://ikaem.github.io/angry-chaired-blog/tags/apollo/"/>
+    
+    <category term="jwt" scheme="https://ikaem.github.io/angry-chaired-blog/tags/jwt/"/>
+    
+    <category term="graphql" scheme="https://ikaem.github.io/angry-chaired-blog/tags/graphql/"/>
+    
+    <category term="authentication" scheme="https://ikaem.github.io/angry-chaired-blog/tags/authentication/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>GraphQL &amp; React &amp; JWT: Apollo Client &amp; Cookies &amp; Headers</title>
+    <link href="https://ikaem.github.io/angry-chaired-blog/2020/graphql-react-jwt-apollo-client-cookies-headers/"/>
+    <id>https://ikaem.github.io/angry-chaired-blog/2020/graphql-react-jwt-apollo-client-cookies-headers/</id>
+    <published>2020-08-16T18:12:07.000Z</published>
+    <updated>2020-08-16T18:24:02.571Z</updated>
+    
+    
+    <summary type="html">&lt;!-- Step Content Start --&gt;
+
+&lt;h4 id=&quot;Part-7-of-12-in-GraphQL-amp-React-amp-JWT&quot;&gt;&lt;a href=&quot;#Part-7-of-12-in-GraphQL-amp-React-amp-JWT&quot; class=&quot;headerlink&quot; title=&quot;Part 7 of 12 in GraphQL &amp;amp; React &amp;amp; JWT&quot;&gt;&lt;/a&gt;Part 7 of 12 in GraphQL &amp;amp; React &amp;amp; JWT&lt;/h4&gt;&lt;p&gt;We have setup our backend in such way that a middleware, &lt;strong&gt;express-jwt&lt;/strong&gt;, intercepts all our requests and checks if they come with valid access token attached to their headers.&lt;br&gt;Similarly, we used another middleware, &lt;strong&gt;cookie-parser&lt;/strong&gt;, that also checks all requests for cookies, and populates the &lt;strong&gt;cookies&lt;/strong&gt; property on the request object with existing cookies.&lt;br&gt;Because of such setup, our resolvers are able to perform user authentication.&lt;br&gt;At the moment, we dont’ have access token attached to our headers, nor do we include any cookies with our requests. So let’s change that.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="graphql &amp; react &amp; jwt" scheme="https://ikaem.github.io/angry-chaired-blog/categories/graphql-react-jwt/"/>
+    
+    
+    <category term="frontend" scheme="https://ikaem.github.io/angry-chaired-blog/tags/frontend/"/>
+    
+    <category term="apollo" scheme="https://ikaem.github.io/angry-chaired-blog/tags/apollo/"/>
+    
+    <category term="cookies" scheme="https://ikaem.github.io/angry-chaired-blog/tags/cookies/"/>
+    
+    <category term="jwt" scheme="https://ikaem.github.io/angry-chaired-blog/tags/jwt/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>GraphQL &amp; React &amp; JWT: Apollo Client Cache</title>
+    <link href="https://ikaem.github.io/angry-chaired-blog/2020/graphql-react-jwt-apollo-client-cache/"/>
+    <id>https://ikaem.github.io/angry-chaired-blog/2020/graphql-react-jwt-apollo-client-cache/</id>
+    <published>2020-08-16T18:05:19.000Z</published>
+    <updated>2020-08-16T18:11:42.321Z</updated>
+    
+    
+    <summary type="html">&lt;!-- Step Content Start --&gt;
+
+&lt;h4 id=&quot;Part-6-of-12-in-GraphQL-amp-React-amp-JWT&quot;&gt;&lt;a href=&quot;#Part-6-of-12-in-GraphQL-amp-React-amp-JWT&quot; class=&quot;headerlink&quot; title=&quot;Part 6 of 12 in GraphQL &amp;amp; React &amp;amp; JWT&quot;&gt;&lt;/a&gt;Part 6 of 12 in GraphQL &amp;amp; React &amp;amp; JWT&lt;/h4&gt;&lt;p&gt;We are now moving to the frontend side, to implement authentication functionalities into our React app.&lt;br&gt;We want to be able to login, register and logout from the app. We also want to be able to automatically login when we return to the app, and once we are logged in, we want to stay logged in as long as we are using the app.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="graphql &amp; react &amp; jwt" scheme="https://ikaem.github.io/angry-chaired-blog/categories/graphql-react-jwt/"/>
+    
+    
+    <category term="frontend" scheme="https://ikaem.github.io/angry-chaired-blog/tags/frontend/"/>
+    
+    <category term="apollo" scheme="https://ikaem.github.io/angry-chaired-blog/tags/apollo/"/>
+    
+    <category term="apollo cache" scheme="https://ikaem.github.io/angry-chaired-blog/tags/apollo-cache/"/>
+    
+  </entry>
   
   <entry>
     <title>GraphQL &amp; React &amp; JWT: Authentication &amp; GQL Resolvers</title>
@@ -59,13 +257,13 @@
     <category term="graphql &amp; react &amp; jwt" scheme="https://ikaem.github.io/angry-chaired-blog/categories/graphql-react-jwt/"/>
     
     
+    <category term="apollo" scheme="https://ikaem.github.io/angry-chaired-blog/tags/apollo/"/>
+    
     <category term="cookies" scheme="https://ikaem.github.io/angry-chaired-blog/tags/cookies/"/>
     
     <category term="jwt" scheme="https://ikaem.github.io/angry-chaired-blog/tags/jwt/"/>
     
     <category term="cors" scheme="https://ikaem.github.io/angry-chaired-blog/tags/cors/"/>
-    
-    <category term="apollo" scheme="https://ikaem.github.io/angry-chaired-blog/tags/apollo/"/>
     
     <category term="server" scheme="https://ikaem.github.io/angry-chaired-blog/tags/server/"/>
     
@@ -161,11 +359,11 @@
     <category term="graphql &amp; react &amp; psql" scheme="https://ikaem.github.io/angry-chaired-blog/categories/graphql-react-psql/"/>
     
     
+    <category term="frontend" scheme="https://ikaem.github.io/angry-chaired-blog/tags/frontend/"/>
+    
     <category term="apollo" scheme="https://ikaem.github.io/angry-chaired-blog/tags/apollo/"/>
     
     <category term="react" scheme="https://ikaem.github.io/angry-chaired-blog/tags/react/"/>
-    
-    <category term="frontend" scheme="https://ikaem.github.io/angry-chaired-blog/tags/frontend/"/>
     
     <category term="pagination" scheme="https://ikaem.github.io/angry-chaired-blog/tags/pagination/"/>
     
@@ -188,11 +386,11 @@
     <category term="graphql &amp; react &amp; psql" scheme="https://ikaem.github.io/angry-chaired-blog/categories/graphql-react-psql/"/>
     
     
+    <category term="frontend" scheme="https://ikaem.github.io/angry-chaired-blog/tags/frontend/"/>
+    
     <category term="apollo" scheme="https://ikaem.github.io/angry-chaired-blog/tags/apollo/"/>
     
     <category term="react" scheme="https://ikaem.github.io/angry-chaired-blog/tags/react/"/>
-    
-    <category term="frontend" scheme="https://ikaem.github.io/angry-chaired-blog/tags/frontend/"/>
     
     <category term="backend" scheme="https://ikaem.github.io/angry-chaired-blog/tags/backend/"/>
     
@@ -215,11 +413,11 @@
     <category term="graphql &amp; react &amp; psql" scheme="https://ikaem.github.io/angry-chaired-blog/categories/graphql-react-psql/"/>
     
     
+    <category term="frontend" scheme="https://ikaem.github.io/angry-chaired-blog/tags/frontend/"/>
+    
     <category term="apollo" scheme="https://ikaem.github.io/angry-chaired-blog/tags/apollo/"/>
     
     <category term="react" scheme="https://ikaem.github.io/angry-chaired-blog/tags/react/"/>
-    
-    <category term="frontend" scheme="https://ikaem.github.io/angry-chaired-blog/tags/frontend/"/>
     
   </entry>
   
@@ -240,9 +438,9 @@
     <category term="graphql &amp; react &amp; psql" scheme="https://ikaem.github.io/angry-chaired-blog/categories/graphql-react-psql/"/>
     
     
-    <category term="react" scheme="https://ikaem.github.io/angry-chaired-blog/tags/react/"/>
-    
     <category term="frontend" scheme="https://ikaem.github.io/angry-chaired-blog/tags/frontend/"/>
+    
+    <category term="react" scheme="https://ikaem.github.io/angry-chaired-blog/tags/react/"/>
     
     <category term="typescript" scheme="https://ikaem.github.io/angry-chaired-blog/tags/typescript/"/>
     
@@ -359,66 +557,6 @@
     <category term="psql" scheme="https://ikaem.github.io/angry-chaired-blog/tags/psql/"/>
     
     <category term="database" scheme="https://ikaem.github.io/angry-chaired-blog/tags/database/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>GraphQL &amp; React &amp; PSQL: Node, Express &amp; TypeScript</title>
-    <link href="https://ikaem.github.io/angry-chaired-blog/2020/graphql-react-psql-node-express-typescript/"/>
-    <id>https://ikaem.github.io/angry-chaired-blog/2020/graphql-react-psql-node-express-typescript/</id>
-    <published>2020-08-16T11:12:00.000Z</published>
-    <updated>2020-08-16T12:54:31.601Z</updated>
-    
-    
-    <summary type="html">&lt;!-- Step Content Start --&gt;
-
-&lt;h4 id=&quot;Part-1-of-10-in-GraphQL-amp-React-amp-PSQL&quot;&gt;&lt;a href=&quot;#Part-1-of-10-in-GraphQL-amp-React-amp-PSQL&quot; class=&quot;headerlink&quot; title=&quot;Part 1 of 10 in GraphQL &amp;amp; React &amp;amp; PSQL&quot;&gt;&lt;/a&gt;Part 1 of 10 in GraphQL &amp;amp; React &amp;amp; PSQL&lt;/h4&gt;&lt;p&gt;This is my first project to be published on the blog. I am a bit anxious, as I am no expert by any means, and I am putting my ignorance out there for the world to see. Still, let’s do it. &lt;/p&gt;
-&lt;p&gt;This post is the start of a two-part series primarily focused on GraphQL and JWT. This first part is mostly about GQL, and how it works with PSQL and React. The other one will be more focused on GQL and JWT.&lt;/p&gt;
-&lt;p&gt;In this post, specifically, we will set up a Node server with Express and TypeScript.&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="graphql &amp; react &amp; psql" scheme="https://ikaem.github.io/angry-chaired-blog/categories/graphql-react-psql/"/>
-    
-    
-    <category term="express" scheme="https://ikaem.github.io/angry-chaired-blog/tags/express/"/>
-    
-    <category term="grapqhl" scheme="https://ikaem.github.io/angry-chaired-blog/tags/grapqhl/"/>
-    
-    <category term="node" scheme="https://ikaem.github.io/angry-chaired-blog/tags/node/"/>
-    
-    <category term="typescript" scheme="https://ikaem.github.io/angry-chaired-blog/tags/typescript/"/>
-    
-    <category term="backend" scheme="https://ikaem.github.io/angry-chaired-blog/tags/backend/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Welcome to Angry Chaired Blog</title>
-    <link href="https://ikaem.github.io/angry-chaired-blog/2020/welcome-to-angry-chaired-blog/"/>
-    <id>https://ikaem.github.io/angry-chaired-blog/2020/welcome-to-angry-chaired-blog/</id>
-    <published>2020-08-13T20:16:35.000Z</published>
-    <updated>2020-08-16T12:20:39.956Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;Angry Chaired Blog is a chronicle of my learning of web development. It is a collection of posts, usually belonging to a bigger project. While each project does have an idea and a set of overarching goals, posts are usually concerned with solving a specific problem.&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="angry chaired" scheme="https://ikaem.github.io/angry-chaired-blog/categories/angry-chaired/"/>
-    
-    <category term="random rant" scheme="https://ikaem.github.io/angry-chaired-blog/categories/angry-chaired/random-rant/"/>
-    
-    <category term="feature introduction" scheme="https://ikaem.github.io/angry-chaired-blog/categories/angry-chaired/feature-introduction/"/>
-    
-    
-    <category term="angry chair" scheme="https://ikaem.github.io/angry-chaired-blog/tags/angry-chair/"/>
-    
-    <category term="introduction" scheme="https://ikaem.github.io/angry-chaired-blog/tags/introduction/"/>
-    
-    <category term="about" scheme="https://ikaem.github.io/angry-chaired-blog/tags/about/"/>
-    
-    <category term="blog" scheme="https://ikaem.github.io/angry-chaired-blog/tags/blog/"/>
     
   </entry>
   
