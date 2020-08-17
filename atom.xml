@@ -6,7 +6,7 @@
   <link href="https://ikaem.github.io/angry-chaired-blog/atom.xml" rel="self"/>
   
   <link href="https://ikaem.github.io/angry-chaired-blog/"/>
-  <updated>2020-08-17T06:12:27.825Z</updated>
+  <updated>2020-08-17T07:54:39.156Z</updated>
   <id>https://ikaem.github.io/angry-chaired-blog/</id>
   
   <author>
@@ -17,11 +17,203 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Hexo Blog: Deploy to Github Pages</title>
+    <link href="https://ikaem.github.io/angry-chaired-blog/2020/hexo-blog-deploy-to-github-pages/"/>
+    <id>https://ikaem.github.io/angry-chaired-blog/2020/hexo-blog-deploy-to-github-pages/</id>
+    <published>2020-08-17T07:50:09.000Z</published>
+    <updated>2020-08-17T07:54:39.156Z</updated>
+    
+    
+    <summary type="html">&lt;!-- Step Content Start --&gt;
+
+&lt;h4 id=&quot;Part-Part-8-of-8-in-Hexo-Blog&quot;&gt;&lt;a href=&quot;#Part-Part-8-of-8-in-Hexo-Blog&quot; class=&quot;headerlink&quot; title=&quot;Part Part 8 of 8 in Hexo Blog&quot;&gt;&lt;/a&gt;Part Part 8 of 8 in Hexo Blog&lt;/h4&gt;&lt;p&gt;Finally, we reached the deployment part. We will deploy to Github Pages, and we will use the &lt;a href=&quot;https://hexo.io/docs/github-pages#One-command-deployment&quot;&gt;One-command deployment option&lt;/a&gt;.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="hexo blog" scheme="https://ikaem.github.io/angry-chaired-blog/categories/hexo-blog/"/>
+    
+    
+    <category term="deploy" scheme="https://ikaem.github.io/angry-chaired-blog/tags/deploy/"/>
+    
+    <category term="hexo" scheme="https://ikaem.github.io/angry-chaired-blog/tags/hexo/"/>
+    
+    <category term="blog" scheme="https://ikaem.github.io/angry-chaired-blog/tags/blog/"/>
+    
+    <category term="github pages" scheme="https://ikaem.github.io/angry-chaired-blog/tags/github-pages/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo Blog: Add Comments to the Blog</title>
+    <link href="https://ikaem.github.io/angry-chaired-blog/2020/hexo-blog-add-comments-to-the-blog/"/>
+    <id>https://ikaem.github.io/angry-chaired-blog/2020/hexo-blog-add-comments-to-the-blog/</id>
+    <published>2020-08-17T07:42:13.000Z</published>
+    <updated>2020-08-17T07:48:59.595Z</updated>
+    
+    
+    <summary type="html">&lt;!-- Step Content Start --&gt;
+
+&lt;h4 id=&quot;Part-7-of-8-in-Hexo-Blog&quot;&gt;&lt;a href=&quot;#Part-7-of-8-in-Hexo-Blog&quot; class=&quot;headerlink&quot; title=&quot;Part 7 of 8 in Hexo Blog&quot;&gt;&lt;/a&gt;Part 7 of 8 in Hexo Blog&lt;/h4&gt;&lt;p&gt;Most Hexo themes, including the default one, come with a support for &lt;a href=&quot;https://dustinpfister.github.io/2018/06/14/hexo-disqus/&quot;&gt;Disqus&lt;/a&gt; comments.&lt;br&gt;However, we will use another option, &lt;a href=&quot;https://groups.hyvor.com/HyvorTalk/463/adding-comments-to-your-hexo-blog&quot;&gt;Hyvor&lt;/a&gt;, to add comments to our blog.&lt;br&gt;It is a pretty straightforward setup, and the comment containers looks nice too&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="hexo blog" scheme="https://ikaem.github.io/angry-chaired-blog/categories/hexo-blog/"/>
+    
+    
+    <category term="hexo" scheme="https://ikaem.github.io/angry-chaired-blog/tags/hexo/"/>
+    
+    <category term="blog" scheme="https://ikaem.github.io/angry-chaired-blog/tags/blog/"/>
+    
+    <category term="hyvor" scheme="https://ikaem.github.io/angry-chaired-blog/tags/hyvor/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo Blog: Installing Themes</title>
+    <link href="https://ikaem.github.io/angry-chaired-blog/2020/hexo-blog-installing-themes/"/>
+    <id>https://ikaem.github.io/angry-chaired-blog/2020/hexo-blog-installing-themes/</id>
+    <published>2020-08-17T07:27:08.000Z</published>
+    <updated>2020-08-17T07:32:54.721Z</updated>
+    
+    
+    <summary type="html">&lt;!-- Step Content Start --&gt;
+
+&lt;h4 id=&quot;Part-6-of-8-in-Hexo-Blog&quot;&gt;&lt;a href=&quot;#Part-6-of-8-in-Hexo-Blog&quot; class=&quot;headerlink&quot; title=&quot;Part 6 of 8 in Hexo Blog&quot;&gt;&lt;/a&gt;Part 6 of 8 in Hexo Blog&lt;/h4&gt;&lt;p&gt;Hexo lists a selection of themes on their &lt;a href=&quot;https://hexo.io/docs/helpers.html&quot;&gt;website&lt;/a&gt;. These seem to be made by its community, so one can see modern looking themes combined with those looking like they were from 2000s.&lt;br&gt;Themes are also made with various technologies, some have bugs, and some seem to be forgotten. &lt;/p&gt;</summary>
+    
+    
+    
+    <category term="hexo blog" scheme="https://ikaem.github.io/angry-chaired-blog/categories/hexo-blog/"/>
+    
+    
+    <category term="hexo" scheme="https://ikaem.github.io/angry-chaired-blog/tags/hexo/"/>
+    
+    <category term="blog" scheme="https://ikaem.github.io/angry-chaired-blog/tags/blog/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo Blog: Customizing Default Theme</title>
+    <link href="https://ikaem.github.io/angry-chaired-blog/2020/hexo-blog-customizing-default-theme/"/>
+    <id>https://ikaem.github.io/angry-chaired-blog/2020/hexo-blog-customizing-default-theme/</id>
+    <published>2020-08-17T07:18:45.000Z</published>
+    <updated>2020-08-17T07:28:54.514Z</updated>
+    
+    
+    <summary type="html">&lt;!-- Step Content Start --&gt;
+
+&lt;h4 id=&quot;Part-5-of-8-in-Hexo-Blog&quot;&gt;&lt;a href=&quot;#Part-5-of-8-in-Hexo-Blog&quot; class=&quot;headerlink&quot; title=&quot;Part 5 of 8 in Hexo Blog&quot;&gt;&lt;/a&gt;Part 5 of 8 in Hexo Blog&lt;/h4&gt;&lt;p&gt;For me, the default theme that Hexo comes with, is both bad and good. It looks bad, plain and simple. But, to be honest, I don’t find other available themes very beginner friendly, so I stuck with this one. The good thing is that it is very simple in terms of configuration and technology it uses, so we can fix some of it.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="hexo blog" scheme="https://ikaem.github.io/angry-chaired-blog/categories/hexo-blog/"/>
+    
+    
+    <category term="hexo" scheme="https://ikaem.github.io/angry-chaired-blog/tags/hexo/"/>
+    
+    <category term="blog" scheme="https://ikaem.github.io/angry-chaired-blog/tags/blog/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo Blog: Customizing Posts</title>
+    <link href="https://ikaem.github.io/angry-chaired-blog/2020/hexo-blog-customizing-posts/"/>
+    <id>https://ikaem.github.io/angry-chaired-blog/2020/hexo-blog-customizing-posts/</id>
+    <published>2020-08-17T07:01:29.000Z</published>
+    <updated>2020-08-17T07:30:38.608Z</updated>
+    
+    
+    <summary type="html">&lt;!-- Step Content Start --&gt;
+
+&lt;h4 id=&quot;Part-4-of-8-in-Hexo-Blog&quot;&gt;&lt;a href=&quot;#Part-4-of-8-in-Hexo-Blog&quot; class=&quot;headerlink&quot; title=&quot;Part 4 of 8 in Hexo Blog&quot;&gt;&lt;/a&gt;Part 4 of 8 in Hexo Blog&lt;/h4&gt;&lt;p&gt;Hexo makes it very simple to adjust the post content. We will add image and code files to our posts, and will see how we can show post excerpts on the home page, so users know what to expect from a post. While most of these things are possible with the usual Markdown syntax, Hexo offers few tools to make post customization more effective.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="hexo blog" scheme="https://ikaem.github.io/angry-chaired-blog/categories/hexo-blog/"/>
+    
+    
+    <category term="hexo" scheme="https://ikaem.github.io/angry-chaired-blog/tags/hexo/"/>
+    
+    <category term="blog" scheme="https://ikaem.github.io/angry-chaired-blog/tags/blog/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo Blog: Configuring the Blog</title>
+    <link href="https://ikaem.github.io/angry-chaired-blog/2020/hexo-blog-configuring-the-blog/"/>
+    <id>https://ikaem.github.io/angry-chaired-blog/2020/hexo-blog-configuring-the-blog/</id>
+    <published>2020-08-17T06:56:24.000Z</published>
+    <updated>2020-08-17T07:00:40.776Z</updated>
+    
+    
+    <summary type="html">&lt;!-- Step Content Start --&gt;
+
+&lt;h4 id=&quot;Part-3-of-8-in-Hexo-Blog&quot;&gt;&lt;a href=&quot;#Part-3-of-8-in-Hexo-Blog&quot; class=&quot;headerlink&quot; title=&quot;Part 3 of 8 in Hexo Blog&quot;&gt;&lt;/a&gt;Part 3 of 8 in Hexo Blog&lt;/h4&gt;&lt;p&gt;In this post we will configure our new blog with the &lt;strong&gt;_config.yml&lt;/strong&gt; file. Hexo’s configuration file helps with SEO and prepares the website for deployment. It is also used to configure permalinks, installed plugins, themes, and much more. &lt;/p&gt;</summary>
+    
+    
+    
+    <category term="hexo blog" scheme="https://ikaem.github.io/angry-chaired-blog/categories/hexo-blog/"/>
+    
+    
+    <category term="hexo" scheme="https://ikaem.github.io/angry-chaired-blog/tags/hexo/"/>
+    
+    <category term="blog" scheme="https://ikaem.github.io/angry-chaired-blog/tags/blog/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo Blog: Create Content</title>
+    <link href="https://ikaem.github.io/angry-chaired-blog/2020/hexo-blog-create-content/"/>
+    <id>https://ikaem.github.io/angry-chaired-blog/2020/hexo-blog-create-content/</id>
+    <published>2020-08-17T06:50:23.000Z</published>
+    <updated>2020-08-17T06:55:13.080Z</updated>
+    
+    
+    <summary type="html">&lt;!-- Step Content Start --&gt;
+
+&lt;h4 id=&quot;Part-2-of-8-in-Hexo-Blog&quot;&gt;&lt;a href=&quot;#Part-2-of-8-in-Hexo-Blog&quot; class=&quot;headerlink&quot; title=&quot;Part 2 of 8 in Hexo Blog&quot;&gt;&lt;/a&gt;Part 2 of 8 in Hexo Blog&lt;/h4&gt;&lt;p&gt;Hexo can use Markdown to create blog content. We will create few new posts, a page and a draft, and then see how Hexo scaffolds can help us to prepare an outline of our content and make its creation simpler. &lt;/p&gt;</summary>
+    
+    
+    
+    <category term="hexo blog" scheme="https://ikaem.github.io/angry-chaired-blog/categories/hexo-blog/"/>
+    
+    
+    <category term="hexo" scheme="https://ikaem.github.io/angry-chaired-blog/tags/hexo/"/>
+    
+    <category term="blog" scheme="https://ikaem.github.io/angry-chaired-blog/tags/blog/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo Blog: Create Hexo Projext</title>
+    <link href="https://ikaem.github.io/angry-chaired-blog/2020/hexo-blog-create-hexo-projext/"/>
+    <id>https://ikaem.github.io/angry-chaired-blog/2020/hexo-blog-create-hexo-projext/</id>
+    <published>2020-08-17T06:31:18.000Z</published>
+    <updated>2020-08-17T06:43:45.782Z</updated>
+    
+    
+    <summary type="html">&lt;!-- Step Content Start --&gt;
+
+&lt;h4 id=&quot;Part-1-of-8-in-Hexo-Blog&quot;&gt;&lt;a href=&quot;#Part-1-of-8-in-Hexo-Blog&quot; class=&quot;headerlink&quot; title=&quot;Part 1 of 8 in Hexo Blog&quot;&gt;&lt;/a&gt;Part 1 of 8 in Hexo Blog&lt;/h4&gt;&lt;p&gt;I wanted to try Hexo to move away from Wordpress. It is that simple.&lt;br&gt;Wordpress is big, there are tons of options, and they require lots of clicking.&lt;br&gt;I just need a simple blog, and Wordpress seems to be aimed for much more than that.&lt;/p&gt;
+&lt;p&gt;I did try Hexo before, and I just didn’t find it interesting. Right now, though, I had a reson to dig deeper. Hexo generates static files, so that is cool. It uses Markdown, and it supports themes and plugins. So I decided to give it another shot. &lt;/p&gt;
+&lt;p&gt;That’s pretty much it. I don’t have any big idea here, but I have instead decided to follow its &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;, and add features that I find interesting. &lt;/p&gt;</summary>
+    
+    
+    
+    <category term="hexo blog" scheme="https://ikaem.github.io/angry-chaired-blog/categories/hexo-blog/"/>
+    
+    
+    <category term="hexo" scheme="https://ikaem.github.io/angry-chaired-blog/tags/hexo/"/>
+    
+    <category term="blog" scheme="https://ikaem.github.io/angry-chaired-blog/tags/blog/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Gatsby Web: Audit, Optimize &amp; Deploy</title>
     <link href="https://ikaem.github.io/angry-chaired-blog/2020/gatsby-web-audit-optimize-deploy/"/>
     <id>https://ikaem.github.io/angry-chaired-blog/2020/gatsby-web-audit-optimize-deploy/</id>
     <published>2020-08-17T06:06:39.000Z</published>
-    <updated>2020-08-17T06:12:27.825Z</updated>
+    <updated>2020-08-17T06:33:12.102Z</updated>
     
     
     <summary type="html">&lt;!-- Step Content Start --&gt;
@@ -37,6 +229,8 @@
     <category term="gatsby" scheme="https://ikaem.github.io/angry-chaired-blog/tags/gatsby/"/>
     
     <category term="deploy" scheme="https://ikaem.github.io/angry-chaired-blog/tags/deploy/"/>
+    
+    <category term="surge" scheme="https://ikaem.github.io/angry-chaired-blog/tags/surge/"/>
     
   </entry>
   
@@ -304,228 +498,6 @@
     <category term="jwt" scheme="https://ikaem.github.io/angry-chaired-blog/tags/jwt/"/>
     
     <category term="authentication" scheme="https://ikaem.github.io/angry-chaired-blog/tags/authentication/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>GraphQL &amp; React &amp; JWT: Automatic Login Functionality</title>
-    <link href="https://ikaem.github.io/angry-chaired-blog/2020/graphql-react-jwt-automatic-login-functionality/"/>
-    <id>https://ikaem.github.io/angry-chaired-blog/2020/graphql-react-jwt-automatic-login-functionality/</id>
-    <published>2020-08-16T18:50:48.000Z</published>
-    <updated>2020-08-16T20:06:58.277Z</updated>
-    
-    
-    <summary type="html">&lt;!-- Step Content Start --&gt;
-
-&lt;h4 id=&quot;Part-10-of-12-in-GraphQL-amp-React-amp-JWT&quot;&gt;&lt;a href=&quot;#Part-10-of-12-in-GraphQL-amp-React-amp-JWT&quot; class=&quot;headerlink&quot; title=&quot;Part 10 of 12 in GraphQL &amp;amp; React &amp;amp; JWT&quot;&gt;&lt;/a&gt;Part 10 of 12 in GraphQL &amp;amp; React &amp;amp; JWT&lt;/h4&gt;&lt;p&gt;We have set up the login mechanism in such a way that when a user logs in, a cookie gets set on the backend and stored on the client. This cookie holds a refresh token, valid for 10 days, or until the user explicitly logs out of their account.&lt;/p&gt;
-&lt;p&gt;Provided that the user doesn’t log out of their account when they leave the app, we can use that cookie to automatically log into the user’s account when they return to the app.&lt;br&gt;We already have a mutation prepared for that on the backend - the &lt;strong&gt;refreshAccessToken&lt;/strong&gt; one. It returns the same data as the login mutation, so we can use it to login user and get exact same data back to the client. &lt;/p&gt;</summary>
-    
-    
-    
-    <category term="graphql &amp; react &amp; jwt" scheme="https://ikaem.github.io/angry-chaired-blog/categories/graphql-react-jwt/"/>
-    
-    
-    <category term="graphql" scheme="https://ikaem.github.io/angry-chaired-blog/tags/graphql/"/>
-    
-    <category term="frontend" scheme="https://ikaem.github.io/angry-chaired-blog/tags/frontend/"/>
-    
-    <category term="apollo" scheme="https://ikaem.github.io/angry-chaired-blog/tags/apollo/"/>
-    
-    <category term="jwt" scheme="https://ikaem.github.io/angry-chaired-blog/tags/jwt/"/>
-    
-    <category term="authentication" scheme="https://ikaem.github.io/angry-chaired-blog/tags/authentication/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>GraphQL &amp; React &amp; JWT: Logout Functionality</title>
-    <link href="https://ikaem.github.io/angry-chaired-blog/2020/graphql-react-jwt-logout-functionality/"/>
-    <id>https://ikaem.github.io/angry-chaired-blog/2020/graphql-react-jwt-logout-functionality/</id>
-    <published>2020-08-16T18:45:30.000Z</published>
-    <updated>2020-08-16T18:49:38.306Z</updated>
-    
-    
-    <summary type="html">&lt;!-- Step Content Start --&gt;
-
-&lt;h4 id=&quot;Part-9-of-12-in-GraphQL-amp-React-amp-JWT&quot;&gt;&lt;a href=&quot;#Part-9-of-12-in-GraphQL-amp-React-amp-JWT&quot; class=&quot;headerlink&quot; title=&quot;Part 9 of 12 in GraphQL &amp;amp; React &amp;amp; JWT&quot;&gt;&lt;/a&gt;Part 9 of 12 in GraphQL &amp;amp; React &amp;amp; JWT&lt;/h4&gt;&lt;p&gt;When a user logs out on the frontend, the client should call the &lt;strong&gt;logout&lt;/strong&gt; mutation that we have prepared on the backend. That mutation will clear the refresh token column in the database and clear the &lt;strong&gt;refreshToken&lt;/strong&gt; cookie, setting it to an empty string and backdating its expiration date. &lt;/p&gt;</summary>
-    
-    
-    
-    <category term="graphql &amp; react &amp; jwt" scheme="https://ikaem.github.io/angry-chaired-blog/categories/graphql-react-jwt/"/>
-    
-    
-    <category term="graphql" scheme="https://ikaem.github.io/angry-chaired-blog/tags/graphql/"/>
-    
-    <category term="frontend" scheme="https://ikaem.github.io/angry-chaired-blog/tags/frontend/"/>
-    
-    <category term="apollo" scheme="https://ikaem.github.io/angry-chaired-blog/tags/apollo/"/>
-    
-    <category term="jwt" scheme="https://ikaem.github.io/angry-chaired-blog/tags/jwt/"/>
-    
-    <category term="authentication" scheme="https://ikaem.github.io/angry-chaired-blog/tags/authentication/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>GraphQL &amp; React &amp; JWT: Login Functionality</title>
-    <link href="https://ikaem.github.io/angry-chaired-blog/2020/graphql-react-jwt-login-functionality/"/>
-    <id>https://ikaem.github.io/angry-chaired-blog/2020/graphql-react-jwt-login-functionality/</id>
-    <published>2020-08-16T18:24:13.000Z</published>
-    <updated>2020-08-16T18:32:15.528Z</updated>
-    
-    
-    <summary type="html">&lt;!-- Step Content Start --&gt;
-
-&lt;h4 id=&quot;Part-8-of-12-in-GraphQL-amp-React-amp-JWT&quot;&gt;&lt;a href=&quot;#Part-8-of-12-in-GraphQL-amp-React-amp-JWT&quot; class=&quot;headerlink&quot; title=&quot;Part 8 of 12 in GraphQL &amp;amp; React &amp;amp; JWT&quot;&gt;&lt;/a&gt;Part 8 of 12 in GraphQL &amp;amp; React &amp;amp; JWT&lt;/h4&gt;&lt;p&gt;Now that we have setup our Apollo Client to use our headers and cookies, we can finally start to implement uathentication features.&lt;br&gt;First one is the &lt;strong&gt;login&lt;/strong&gt; one.&lt;br&gt;To login a user, we make use of the &lt;strong&gt;login&lt;/strong&gt; mutation we already have prepared on the backend. So that part is done.&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="graphql &amp; react &amp; jwt" scheme="https://ikaem.github.io/angry-chaired-blog/categories/graphql-react-jwt/"/>
-    
-    
-    <category term="graphql" scheme="https://ikaem.github.io/angry-chaired-blog/tags/graphql/"/>
-    
-    <category term="frontend" scheme="https://ikaem.github.io/angry-chaired-blog/tags/frontend/"/>
-    
-    <category term="apollo" scheme="https://ikaem.github.io/angry-chaired-blog/tags/apollo/"/>
-    
-    <category term="jwt" scheme="https://ikaem.github.io/angry-chaired-blog/tags/jwt/"/>
-    
-    <category term="authentication" scheme="https://ikaem.github.io/angry-chaired-blog/tags/authentication/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>GraphQL &amp; React &amp; JWT: Apollo Client &amp; Cookies &amp; Headers</title>
-    <link href="https://ikaem.github.io/angry-chaired-blog/2020/graphql-react-jwt-apollo-client-cookies-headers/"/>
-    <id>https://ikaem.github.io/angry-chaired-blog/2020/graphql-react-jwt-apollo-client-cookies-headers/</id>
-    <published>2020-08-16T18:12:07.000Z</published>
-    <updated>2020-08-16T18:24:02.571Z</updated>
-    
-    
-    <summary type="html">&lt;!-- Step Content Start --&gt;
-
-&lt;h4 id=&quot;Part-7-of-12-in-GraphQL-amp-React-amp-JWT&quot;&gt;&lt;a href=&quot;#Part-7-of-12-in-GraphQL-amp-React-amp-JWT&quot; class=&quot;headerlink&quot; title=&quot;Part 7 of 12 in GraphQL &amp;amp; React &amp;amp; JWT&quot;&gt;&lt;/a&gt;Part 7 of 12 in GraphQL &amp;amp; React &amp;amp; JWT&lt;/h4&gt;&lt;p&gt;We have setup our backend in such way that a middleware, &lt;strong&gt;express-jwt&lt;/strong&gt;, intercepts all our requests and checks if they come with valid access token attached to their headers.&lt;br&gt;Similarly, we used another middleware, &lt;strong&gt;cookie-parser&lt;/strong&gt;, that also checks all requests for cookies, and populates the &lt;strong&gt;cookies&lt;/strong&gt; property on the request object with existing cookies.&lt;br&gt;Because of such setup, our resolvers are able to perform user authentication.&lt;br&gt;At the moment, we dont’ have access token attached to our headers, nor do we include any cookies with our requests. So let’s change that.&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="graphql &amp; react &amp; jwt" scheme="https://ikaem.github.io/angry-chaired-blog/categories/graphql-react-jwt/"/>
-    
-    
-    <category term="frontend" scheme="https://ikaem.github.io/angry-chaired-blog/tags/frontend/"/>
-    
-    <category term="apollo" scheme="https://ikaem.github.io/angry-chaired-blog/tags/apollo/"/>
-    
-    <category term="cookies" scheme="https://ikaem.github.io/angry-chaired-blog/tags/cookies/"/>
-    
-    <category term="jwt" scheme="https://ikaem.github.io/angry-chaired-blog/tags/jwt/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>GraphQL &amp; React &amp; JWT: Apollo Client Cache</title>
-    <link href="https://ikaem.github.io/angry-chaired-blog/2020/graphql-react-jwt-apollo-client-cache/"/>
-    <id>https://ikaem.github.io/angry-chaired-blog/2020/graphql-react-jwt-apollo-client-cache/</id>
-    <published>2020-08-16T18:05:19.000Z</published>
-    <updated>2020-08-16T18:11:42.321Z</updated>
-    
-    
-    <summary type="html">&lt;!-- Step Content Start --&gt;
-
-&lt;h4 id=&quot;Part-6-of-12-in-GraphQL-amp-React-amp-JWT&quot;&gt;&lt;a href=&quot;#Part-6-of-12-in-GraphQL-amp-React-amp-JWT&quot; class=&quot;headerlink&quot; title=&quot;Part 6 of 12 in GraphQL &amp;amp; React &amp;amp; JWT&quot;&gt;&lt;/a&gt;Part 6 of 12 in GraphQL &amp;amp; React &amp;amp; JWT&lt;/h4&gt;&lt;p&gt;We are now moving to the frontend side, to implement authentication functionalities into our React app.&lt;br&gt;We want to be able to login, register and logout from the app. We also want to be able to automatically login when we return to the app, and once we are logged in, we want to stay logged in as long as we are using the app.&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="graphql &amp; react &amp; jwt" scheme="https://ikaem.github.io/angry-chaired-blog/categories/graphql-react-jwt/"/>
-    
-    
-    <category term="frontend" scheme="https://ikaem.github.io/angry-chaired-blog/tags/frontend/"/>
-    
-    <category term="apollo" scheme="https://ikaem.github.io/angry-chaired-blog/tags/apollo/"/>
-    
-    <category term="apollo cache" scheme="https://ikaem.github.io/angry-chaired-blog/tags/apollo-cache/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>GraphQL &amp; React &amp; JWT: Authentication &amp; GQL Resolvers</title>
-    <link href="https://ikaem.github.io/angry-chaired-blog/2020/graphql-react-jwt-authentication-gql-resolvers/"/>
-    <id>https://ikaem.github.io/angry-chaired-blog/2020/graphql-react-jwt-authentication-gql-resolvers/</id>
-    <published>2020-08-16T15:43:56.000Z</published>
-    <updated>2020-08-16T15:52:32.669Z</updated>
-    
-    
-    <summary type="html">&lt;!-- Step Content Start --&gt;
-
-&lt;h4 id=&quot;Part-5-of-12-in-GraphQL-amp-React-amp-JWT&quot;&gt;&lt;a href=&quot;#Part-5-of-12-in-GraphQL-amp-React-amp-JWT&quot; class=&quot;headerlink&quot; title=&quot;Part 5 of 12 in GraphQL &amp;amp; React &amp;amp; JWT&quot;&gt;&lt;/a&gt;Part 5 of 12 in GraphQL &amp;amp; React &amp;amp; JWT&lt;/h4&gt;&lt;p&gt;Ok, this one is long. But, resolvers that we need to create largely follow the same logic as the ones we created in the last series. So that’s good.&lt;/p&gt;
-&lt;p&gt;Resolvers are just functions which are (I guess) called by their matching mutations or queries. They need to return data in the the shape that their mutations or queries specify. They also get passed certain parameters, and have access to context that is provided by the Apollo Express Server.&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="graphql &amp; react &amp; jwt" scheme="https://ikaem.github.io/angry-chaired-blog/categories/graphql-react-jwt/"/>
-    
-    
-    <category term="graphql" scheme="https://ikaem.github.io/angry-chaired-blog/tags/graphql/"/>
-    
-    <category term="jwt" scheme="https://ikaem.github.io/angry-chaired-blog/tags/jwt/"/>
-    
-    <category term="resolvers" scheme="https://ikaem.github.io/angry-chaired-blog/tags/resolvers/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>GraphQL &amp; React &amp; JWT: Apollo Server, Cors, JWT &amp; Cookies</title>
-    <link href="https://ikaem.github.io/angry-chaired-blog/2020/graphql-react-jwt-apollo-server-cors-jwt-cookies/"/>
-    <id>https://ikaem.github.io/angry-chaired-blog/2020/graphql-react-jwt-apollo-server-cors-jwt-cookies/</id>
-    <published>2020-08-16T15:37:58.000Z</published>
-    <updated>2020-08-16T15:44:21.371Z</updated>
-    
-    
-    <summary type="html">&lt;!-- Step Content Start --&gt;
-
-&lt;h4 id=&quot;Part-4-of-12-in-GraphQL-amp-React-amp-JWT&quot;&gt;&lt;a href=&quot;#Part-4-of-12-in-GraphQL-amp-React-amp-JWT&quot; class=&quot;headerlink&quot; title=&quot;Part 4 of 12 in GraphQL &amp;amp; React &amp;amp; JWT&quot;&gt;&lt;/a&gt;Part 4 of 12 in GraphQL &amp;amp; React &amp;amp; JWT&lt;/h4&gt;&lt;p&gt;Now when we have made sure that our requests are inspected for access token for validity on their arrival to the backend, we want to make sure that our resolvers can actually work with both requests and responses. Mainly, we want to be able to have them deal with cookies and set tokens on responses.&lt;br&gt;In addition to this, we want to make sure our server is actually allowed to read and set cookies on clients that access backend resources.&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="graphql &amp; react &amp; jwt" scheme="https://ikaem.github.io/angry-chaired-blog/categories/graphql-react-jwt/"/>
-    
-    
-    <category term="apollo" scheme="https://ikaem.github.io/angry-chaired-blog/tags/apollo/"/>
-    
-    <category term="cookies" scheme="https://ikaem.github.io/angry-chaired-blog/tags/cookies/"/>
-    
-    <category term="jwt" scheme="https://ikaem.github.io/angry-chaired-blog/tags/jwt/"/>
-    
-    <category term="cors" scheme="https://ikaem.github.io/angry-chaired-blog/tags/cors/"/>
-    
-    <category term="server" scheme="https://ikaem.github.io/angry-chaired-blog/tags/server/"/>
-    
-    <category term="express" scheme="https://ikaem.github.io/angry-chaired-blog/tags/express/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>GraphQL &amp; React &amp; JWT: Middleware &amp;&amp; JWT Validity</title>
-    <link href="https://ikaem.github.io/angry-chaired-blog/2020/graphql-react-jwt-middleware-jwt-validity/"/>
-    <id>https://ikaem.github.io/angry-chaired-blog/2020/graphql-react-jwt-middleware-jwt-validity/</id>
-    <published>2020-08-16T15:06:46.000Z</published>
-    <updated>2020-08-16T15:36:39.457Z</updated>
-    
-    
-    <summary type="html">&lt;!-- Step Content Start --&gt;
-
-&lt;h4 id=&quot;Part-3-of-12-in-GraphQL-amp-React-amp-JWT&quot;&gt;&lt;a href=&quot;#Part-3-of-12-in-GraphQL-amp-React-amp-JWT&quot; class=&quot;headerlink&quot; title=&quot;Part 3 of 12 in GraphQL &amp;amp; React &amp;amp; JWT&quot;&gt;&lt;/a&gt;Part 3 of 12 in GraphQL &amp;amp; React &amp;amp; JWT&lt;/h4&gt;&lt;p&gt;When a user sends a request to our backend, we want to check if their access token is valid.&lt;br&gt;We will set up requests to have a place for access token in their headers. This way access token will be sent to the backend with every request.&lt;br&gt;The only thing we need to do on backend is to inspect the token - does it exist at all, and if yes, is it valid. &lt;/p&gt;</summary>
-    
-    
-    
-    <category term="graphql &amp; react &amp; jwt" scheme="https://ikaem.github.io/angry-chaired-blog/categories/graphql-react-jwt/"/>
-    
-    
-    <category term="jwt" scheme="https://ikaem.github.io/angry-chaired-blog/tags/jwt/"/>
-    
-    <category term="express" scheme="https://ikaem.github.io/angry-chaired-blog/tags/express/"/>
-    
-    <category term="middleware" scheme="https://ikaem.github.io/angry-chaired-blog/tags/middleware/"/>
     
   </entry>
   

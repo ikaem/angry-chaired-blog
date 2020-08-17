@@ -206,12 +206,18 @@
   <!-- test featured image -->
 
   
-  <a href="/angry-chaired-blog/2020/graphql-react-psql-react-typescript-frontend/">
+  <a href="/angry-chaired-blog/2020/graphql-react-jwt-authentication-gql-resolvers/">
 
     
-    <!-- <a href="/angry-chaired-blog/2020/graphql-react-psql-react-typescript-frontend/"> -->
+
+    <div class="post-preview__featured-image-container">
+      <img src="/angry-chaired-blog/2020/graphql-react-jwt-authentication-gql-resolvers/greta-scholderle-moller-xe07ZDGZ-2Q-unsplash.jpg" alt="" />
+    </div>
+
+    
+    <!-- <a href="/angry-chaired-blog/2020/graphql-react-jwt-authentication-gql-resolvers/"> -->
     <h2 class="post-title">
-      GraphQL & React & PSQL: React & TypeScript Frontend
+      GraphQL & React & JWT: Authentication & GQL Resolvers
     </h2>
     <!--  -->
 
@@ -223,7 +229,8 @@
     <div class="post-subtitle">
         <!-- Step Content Start -->
 
-<h4 id="Part-6-of-9-in-GraphQL-amp-React-amp-PSQL"><a href="#Part-6-of-9-in-GraphQL-amp-React-amp-PSQL" class="headerlink" title="Part 6 of 9 in GraphQL &amp; React &amp; PSQL"></a>Part 6 of 9 in GraphQL &amp; React &amp; PSQL</h4><p>Frontend is made with React, which I am relatively comfortable with. I don’t want to spend too much time on createing components and routine stuff, so I will just breeze through it to get to working with Apollo on frontend.</p>
+<h4 id="Part-5-of-12-in-GraphQL-amp-React-amp-JWT"><a href="#Part-5-of-12-in-GraphQL-amp-React-amp-JWT" class="headerlink" title="Part 5 of 12 in GraphQL &amp; React &amp; JWT"></a>Part 5 of 12 in GraphQL &amp; React &amp; JWT</h4><p>Ok, this one is long. But, resolvers that we need to create largely follow the same logic as the ones we created in the last series. So that’s good.</p>
+<p>Resolvers are just functions which are (I guess) called by their matching mutations or queries. They need to return data in the the shape that their mutations or queries specify. They also get passed certain parameters, and have access to context that is provided by the Apollo Express Server.</p>
     </div>
 
   </a>
@@ -236,12 +243,18 @@
   <!-- test featured image -->
 
   
-  <a href="/angry-chaired-blog/2020/graphql-react-psql-types-queries-resolvers-in-apollo-server/">
+  <a href="/angry-chaired-blog/2020/graphql-react-jwt-apollo-server-cors-jwt-cookies/">
 
     
-    <!-- <a href="/angry-chaired-blog/2020/graphql-react-psql-types-queries-resolvers-in-apollo-server/"> -->
+
+    <div class="post-preview__featured-image-container">
+      <img src="/angry-chaired-blog/2020/graphql-react-jwt-apollo-server-cors-jwt-cookies/kuan-fang-WaQ5xQq2E6g-unsplash.jpg" alt="" />
+    </div>
+
+    
+    <!-- <a href="/angry-chaired-blog/2020/graphql-react-jwt-apollo-server-cors-jwt-cookies/"> -->
     <h2 class="post-title">
-      GraphQL & React & PSQL: Types, Queries & Resolvers in Apollo Server
+      GraphQL & React & JWT: Apollo Server, Cors, JWT & Cookies
     </h2>
     <!--  -->
 
@@ -253,7 +266,7 @@
     <div class="post-subtitle">
         <!-- Step Content Start -->
 
-<h4 id="Part-5-of-9-in-GraphQL-amp-React-amp-PSQL"><a href="#Part-5-of-9-in-GraphQL-amp-React-amp-PSQL" class="headerlink" title="Part 5 of 9 in GraphQL &amp; React &amp; PSQL"></a>Part 5 of 9 in GraphQL &amp; React &amp; PSQL</h4><p>GraphQL requires a quick setup to be able to fetch and modify data in the database. In particular, it needs to know what type of data it deals with, what are the possible queries it might receive in regards to data, and how to actually resolve those queries.<br>This is what we deal with in this post.</p>
+<h4 id="Part-4-of-12-in-GraphQL-amp-React-amp-JWT"><a href="#Part-4-of-12-in-GraphQL-amp-React-amp-JWT" class="headerlink" title="Part 4 of 12 in GraphQL &amp; React &amp; JWT"></a>Part 4 of 12 in GraphQL &amp; React &amp; JWT</h4><p>Now when we have made sure that our requests are inspected for access token for validity on their arrival to the backend, we want to make sure that our resolvers can actually work with both requests and responses. Mainly, we want to be able to have them deal with cookies and set tokens on responses.<br>In addition to this, we want to make sure our server is actually allowed to read and set cookies on clients that access backend resources.</p>
     </div>
 
   </a>
@@ -266,12 +279,18 @@
   <!-- test featured image -->
 
   
-  <a href="/angry-chaired-blog/2020/graphql-react-psql-setup-apollo-server-express/">
+  <a href="/angry-chaired-blog/2020/graphql-react-jwt-middleware-jwt-validity/">
 
     
-    <!-- <a href="/angry-chaired-blog/2020/graphql-react-psql-setup-apollo-server-express/"> -->
+
+    <div class="post-preview__featured-image-container">
+      <img src="/angry-chaired-blog/2020/graphql-react-jwt-middleware-jwt-validity/arseny-togulev-GKLQ8PJuCzI-unsplash.jpg" alt="" />
+    </div>
+
+    
+    <!-- <a href="/angry-chaired-blog/2020/graphql-react-jwt-middleware-jwt-validity/"> -->
     <h2 class="post-title">
-      GraphQL & React & PSQL: Setup Apollo Server Express
+      GraphQL & React & JWT: Middleware && JWT Validity
     </h2>
     <!--  -->
 
@@ -283,7 +302,7 @@
     <div class="post-subtitle">
         <!-- Step Content Start -->
 
-<h4 id="Part-4-of-10-in-GraphQL-amp-React-amp-PSQL"><a href="#Part-4-of-10-in-GraphQL-amp-React-amp-PSQL" class="headerlink" title="Part 4 of 10 in GraphQL &amp; React &amp; PSQL"></a>Part 4 of 10 in GraphQL &amp; React &amp; PSQL</h4><p>We reached an important point. It is the main reason I actually did this small project. I wanted to learn to use GrapqhQL, and figured I should create a small app to find out how it works.<br>I am not going to explain GQL in depth. I am not even close to being able to do that. Instead, I will show how to use Apollo’s tools to be able to fetch, create and edit data via GrapqhQL.</p>
+<h4 id="Part-3-of-12-in-GraphQL-amp-React-amp-JWT"><a href="#Part-3-of-12-in-GraphQL-amp-React-amp-JWT" class="headerlink" title="Part 3 of 12 in GraphQL &amp; React &amp; JWT"></a>Part 3 of 12 in GraphQL &amp; React &amp; JWT</h4><p>When a user sends a request to our backend, we want to check if their access token is valid.<br>We will set up requests to have a place for access token in their headers. This way access token will be sent to the backend with every request.<br>The only thing we need to do on backend is to inspect the token - does it exist at all, and if yes, is it valid. </p>
     </div>
 
   </a>
@@ -296,12 +315,18 @@
   <!-- test featured image -->
 
   
-  <a href="/angry-chaired-blog/2020/graphql-react-psql-using-node-postgres/">
+  <a href="/angry-chaired-blog/2020/graphql-react-jwt-create-json-web-tokens/">
 
     
-    <!-- <a href="/angry-chaired-blog/2020/graphql-react-psql-using-node-postgres/"> -->
+
+    <div class="post-preview__featured-image-container">
+      <img src="/angry-chaired-blog/2020/graphql-react-jwt-create-json-web-tokens/abigail-keenan-8-s5QuUBtyM-unsplash.jpg" alt="" />
+    </div>
+
+    
+    <!-- <a href="/angry-chaired-blog/2020/graphql-react-jwt-create-json-web-tokens/"> -->
     <h2 class="post-title">
-      GraphQL & React & PSQL: Using node-postgres
+      GraphQL & React & JWT: Create JSON Web Tokens
     </h2>
     <!--  -->
 
@@ -313,7 +338,7 @@
     <div class="post-subtitle">
         <!-- Step Content Start -->
 
-<h4 id="Part-3-of-10-in-GraphQL-amp-React-amp-PSQL"><a href="#Part-3-of-10-in-GraphQL-amp-React-amp-PSQL" class="headerlink" title="Part 3 of 10 in GraphQL &amp; React &amp; PSQL"></a>Part 3 of 10 in GraphQL &amp; React &amp; PSQL</h4><p>Node-postgres is a tool to connect Node.js with PSQL database and interact with it. That is what I know about it in terms of describing it. It is very easy to use, and it uses PSQL syntax for queries.<br>There is another tool that I tried called Knex. Knext has its methods for inserting, selecting, updating, transactions and so on. It feels like I have to learn another language.<br>With node-postgres, I can just use PSQL knowledge that I have. </p>
+<h4 id="Part-2-of-12-in-GraphQL-amp-React-amp-JWT"><a href="#Part-2-of-12-in-GraphQL-amp-React-amp-JWT" class="headerlink" title="Part 2 of 12 in GraphQL &amp; React &amp; JWT"></a>Part 2 of 12 in GraphQL &amp; React &amp; JWT</h4><p>We will stray from the GQL path a bit, to get introduced to JSON Web Tokens and figure out how to create them.<br>From what I understand, JWT are signed strings that hold data. They are used to prove certain claims on both ends of our app. For instance, we would have our server create a JWT, which would claim that a user for which this token is created is in fact logged into their account. Our client would then accept this claim as a proof of successful login, and would treat current user as logged in.<br>This is a very simple and very limited explanation. It works for me, however, so let’s move on.</p>
     </div>
 
   </a>
@@ -326,12 +351,18 @@
   <!-- test featured image -->
 
   
-  <a href="/angry-chaired-blog/2020/graphql-react-psql-create-psql-database/">
+  <a href="/angry-chaired-blog/2020/graphql-react-jwt-authentication-gql-types-queries/">
 
     
-    <!-- <a href="/angry-chaired-blog/2020/graphql-react-psql-create-psql-database/"> -->
+
+    <div class="post-preview__featured-image-container">
+      <img src="/angry-chaired-blog/2020/graphql-react-jwt-authentication-gql-types-queries/giorgio-trovato-iP4Ju2-4paQ-unsplash.jpg" alt="" />
+    </div>
+
+    
+    <!-- <a href="/angry-chaired-blog/2020/graphql-react-jwt-authentication-gql-types-queries/"> -->
     <h2 class="post-title">
-      GraphQL & React & PSQL: Create PSQL database
+      GraphQL & React & JWT: Authentication & GQL Types and Queries
     </h2>
     <!--  -->
 
@@ -343,7 +374,7 @@
     <div class="post-subtitle">
         <!-- Step Content Start -->
 
-<h4 id="Part-2-of-10-in-GraphQL-amp-React-amp-PSQL"><a href="#Part-2-of-10-in-GraphQL-amp-React-amp-PSQL" class="headerlink" title="Part 2 of 10 in GraphQL &amp; React &amp; PSQL"></a>Part 2 of 10 in GraphQL &amp; React &amp; PSQL</h4>
+<h4 id="Part-1-of-12-in-GraphQL-amp-React-amp-JWT"><a href="#Part-1-of-12-in-GraphQL-amp-React-amp-JWT" class="headerlink" title="Part 1 of 12 in GraphQL &amp; React &amp; JWT"></a>Part 1 of 12 in GraphQL &amp; React &amp; JWT</h4><p>This project is a continuation of the <a href="categories/graphql-react-psql/">Graphql &amp; React &amp; Psql series</a>, where we used GraphQL to get and manipulate data in PSQL database.<br>The idea in this part is to create functionality to log users into their account with a piece of data called JSON Web Token (JWT). This token is created on backend, and sent to and stored on frontend. It is then used for user authentication anytime the user requests protected data. </p>
     </div>
 
   </a>

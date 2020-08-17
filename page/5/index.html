@@ -206,18 +206,18 @@
   <!-- test featured image -->
 
   
-  <a href="/angry-chaired-blog/2020/graphql-react-jwt-create-json-web-tokens/">
+  <a href="/angry-chaired-blog/2020/graphql-react-jwt-automatic-login-functionality/">
 
     
 
     <div class="post-preview__featured-image-container">
-      <img src="/angry-chaired-blog/2020/graphql-react-jwt-create-json-web-tokens/abigail-keenan-8-s5QuUBtyM-unsplash.jpg" alt="" />
+      <img src="/angry-chaired-blog/2020/graphql-react-jwt-automatic-login-functionality/ivars-utinans-Mx1ADpUts8s-unsplash.jpg" alt="" />
     </div>
 
     
-    <!-- <a href="/angry-chaired-blog/2020/graphql-react-jwt-create-json-web-tokens/"> -->
+    <!-- <a href="/angry-chaired-blog/2020/graphql-react-jwt-automatic-login-functionality/"> -->
     <h2 class="post-title">
-      GraphQL & React & JWT: Create JSON Web Tokens
+      GraphQL & React & JWT: Automatic Login Functionality
     </h2>
     <!--  -->
 
@@ -229,7 +229,8 @@
     <div class="post-subtitle">
         <!-- Step Content Start -->
 
-<h4 id="Part-2-of-12-in-GraphQL-amp-React-amp-JWT"><a href="#Part-2-of-12-in-GraphQL-amp-React-amp-JWT" class="headerlink" title="Part 2 of 12 in GraphQL &amp; React &amp; JWT"></a>Part 2 of 12 in GraphQL &amp; React &amp; JWT</h4><p>We will stray from the GQL path a bit, to get introduced to JSON Web Tokens and figure out how to create them.<br>From what I understand, JWT are signed strings that hold data. They are used to prove certain claims on both ends of our app. For instance, we would have our server create a JWT, which would claim that a user for which this token is created is in fact logged into their account. Our client would then accept this claim as a proof of successful login, and would treat current user as logged in.<br>This is a very simple and very limited explanation. It works for me, however, so let’s move on.</p>
+<h4 id="Part-10-of-12-in-GraphQL-amp-React-amp-JWT"><a href="#Part-10-of-12-in-GraphQL-amp-React-amp-JWT" class="headerlink" title="Part 10 of 12 in GraphQL &amp; React &amp; JWT"></a>Part 10 of 12 in GraphQL &amp; React &amp; JWT</h4><p>We have set up the login mechanism in such a way that when a user logs in, a cookie gets set on the backend and stored on the client. This cookie holds a refresh token, valid for 10 days, or until the user explicitly logs out of their account.</p>
+<p>Provided that the user doesn’t log out of their account when they leave the app, we can use that cookie to automatically log into the user’s account when they return to the app.<br>We already have a mutation prepared for that on the backend - the <strong>refreshAccessToken</strong> one. It returns the same data as the login mutation, so we can use it to login user and get exact same data back to the client. </p>
     </div>
 
   </a>
@@ -242,18 +243,18 @@
   <!-- test featured image -->
 
   
-  <a href="/angry-chaired-blog/2020/graphql-react-jwt-authentication-gql-types-queries/">
+  <a href="/angry-chaired-blog/2020/graphql-react-jwt-logout-functionality/">
 
     
 
     <div class="post-preview__featured-image-container">
-      <img src="/angry-chaired-blog/2020/graphql-react-jwt-authentication-gql-types-queries/giorgio-trovato-iP4Ju2-4paQ-unsplash.jpg" alt="" />
+      <img src="/angry-chaired-blog/2020/graphql-react-jwt-logout-functionality/baylee-gramling-R5eoT-c-jkY-unsplash.jpg" alt="" />
     </div>
 
     
-    <!-- <a href="/angry-chaired-blog/2020/graphql-react-jwt-authentication-gql-types-queries/"> -->
+    <!-- <a href="/angry-chaired-blog/2020/graphql-react-jwt-logout-functionality/"> -->
     <h2 class="post-title">
-      GraphQL & React & JWT: Authentication & GQL Types and Queries
+      GraphQL & React & JWT: Logout Functionality
     </h2>
     <!--  -->
 
@@ -265,37 +266,7 @@
     <div class="post-subtitle">
         <!-- Step Content Start -->
 
-<h4 id="Part-1-of-12-in-GraphQL-amp-React-amp-JWT"><a href="#Part-1-of-12-in-GraphQL-amp-React-amp-JWT" class="headerlink" title="Part 1 of 12 in GraphQL &amp; React &amp; JWT"></a>Part 1 of 12 in GraphQL &amp; React &amp; JWT</h4><p>This project is a continuation of the <a href="categories/graphql-react-psql/">Graphql &amp; React &amp; Psql series</a>, where we used GraphQL to get and manipulate data in PSQL database.<br>The idea in this part is to create functionality to log users into their account with a piece of data called JSON Web Token (JWT). This token is created on backend, and sent to and stored on frontend. It is then used for user authentication anytime the user requests protected data. </p>
-    </div>
-
-  </a>
-
-</div>
-<hr />
-
-            
-                <div class="post-preview">
-  <!-- test featured image -->
-
-  
-  <a href="/angry-chaired-blog/2020/graphql-react-psql-apollo-client-pagination/">
-
-    
-    <!-- <a href="/angry-chaired-blog/2020/graphql-react-psql-apollo-client-pagination/"> -->
-    <h2 class="post-title">
-      GraphQL & React & PSQL: Apollo Client Pagination
-    </h2>
-    <!--  -->
-
-    <p class="post-meta">
-      <!-- Date and Author -->
-       16/08/2020
-    </p>
-
-    <div class="post-subtitle">
-        <!-- Step Content Start -->
-
-<h4 id="Part-9-of-9-in-GraphQL-amp-React-amp-PSQL"><a href="#Part-9-of-9-in-GraphQL-amp-React-amp-PSQL" class="headerlink" title="Part 9 of 9 in GraphQL &amp; React &amp; PSQL"></a>Part 9 of 9 in GraphQL &amp; React &amp; PSQL</h4><p>Ideally, we would not have all users instantly listed on our home page. We would want to have a part of it, maybe separated into pages, or extendable if a user wants so.<br>Pagination means that, when fetching data, we only fetch a part of it. If a user wants to see more data, they interact with the app to tell it so, and the app fetches more data as a response.</p>
+<h4 id="Part-9-of-12-in-GraphQL-amp-React-amp-JWT"><a href="#Part-9-of-12-in-GraphQL-amp-React-amp-JWT" class="headerlink" title="Part 9 of 12 in GraphQL &amp; React &amp; JWT"></a>Part 9 of 12 in GraphQL &amp; React &amp; JWT</h4><p>When a user logs out on the frontend, the client should call the <strong>logout</strong> mutation that we have prepared on the backend. That mutation will clear the refresh token column in the database and clear the <strong>refreshToken</strong> cookie, setting it to an empty string and backdating its expiration date. </p>
     </div>
 
   </a>
@@ -308,12 +279,18 @@
   <!-- test featured image -->
 
   
-  <a href="/angry-chaired-blog/2020/graphql-react-psql-apollo-client-backend-frontend-communication/">
+  <a href="/angry-chaired-blog/2020/graphql-react-jwt-login-functionality/">
 
     
-    <!-- <a href="/angry-chaired-blog/2020/graphql-react-psql-apollo-client-backend-frontend-communication/"> -->
+
+    <div class="post-preview__featured-image-container">
+      <img src="/angry-chaired-blog/2020/graphql-react-jwt-login-functionality/jeffrey-f-lin-D4DBJk5UmFo-unsplash.jpg" alt="" />
+    </div>
+
+    
+    <!-- <a href="/angry-chaired-blog/2020/graphql-react-jwt-login-functionality/"> -->
     <h2 class="post-title">
-      GraphQL & React & PSQL: Apollo Client & Backend-frontend communication
+      GraphQL & React & JWT: Login Functionality
     </h2>
     <!--  -->
 
@@ -325,7 +302,7 @@
     <div class="post-subtitle">
         <!-- Step Content Start -->
 
-<h4 id="Part-8-of-9-in-GraphQL-amp-React-amp-PSQL"><a href="#Part-8-of-9-in-GraphQL-amp-React-amp-PSQL" class="headerlink" title="Part 8 of 9 in GraphQL &amp; React &amp; PSQL"></a>Part 8 of 9 in GraphQL &amp; React &amp; PSQL</h4><p>Now that we have the Apollo Client set up on the frontend, we can use it to communicate with the backend.<br>For this purpose, Apollo Client provides hooks that can be used to query and mutate data. There is probably one to subscribe to data, but I don’t use it in this project. </p>
+<h4 id="Part-8-of-12-in-GraphQL-amp-React-amp-JWT"><a href="#Part-8-of-12-in-GraphQL-amp-React-amp-JWT" class="headerlink" title="Part 8 of 12 in GraphQL &amp; React &amp; JWT"></a>Part 8 of 12 in GraphQL &amp; React &amp; JWT</h4><p>Now that we have setup our Apollo Client to use our headers and cookies, we can finally start to implement uathentication features.<br>First one is the <strong>login</strong> one.<br>To login a user, we make use of the <strong>login</strong> mutation we already have prepared on the backend. So that part is done.</p>
     </div>
 
   </a>
@@ -338,12 +315,18 @@
   <!-- test featured image -->
 
   
-  <a href="/angry-chaired-blog/2020/graphql-react-psql-apollo-client-frontend/">
+  <a href="/angry-chaired-blog/2020/graphql-react-jwt-apollo-client-cookies-headers/">
 
     
-    <!-- <a href="/angry-chaired-blog/2020/graphql-react-psql-apollo-client-frontend/"> -->
+
+    <div class="post-preview__featured-image-container">
+      <img src="/angry-chaired-blog/2020/graphql-react-jwt-apollo-client-cookies-headers/ahmad-AT22-uV7rQs-unsplash.jpg" alt="" />
+    </div>
+
+    
+    <!-- <a href="/angry-chaired-blog/2020/graphql-react-jwt-apollo-client-cookies-headers/"> -->
     <h2 class="post-title">
-      GraphQL & React & PSQL: Apollo Client & Frontend
+      GraphQL & React & JWT: Apollo Client & Cookies & Headers
     </h2>
     <!--  -->
 
@@ -355,7 +338,43 @@
     <div class="post-subtitle">
         <!-- Step Content Start -->
 
-<h4 id="Part-7-of-9-in-GraphQL-amp-React-amp-PSQL"><a href="#Part-7-of-9-in-GraphQL-amp-React-amp-PSQL" class="headerlink" title="Part 7 of 9 in GraphQL &amp; React &amp; PSQL"></a>Part 7 of 9 in GraphQL &amp; React &amp; PSQL</h4><p>Previously, we have set up Apollo Server on the backend. Now we have to find a way to get backend GraphQL data to the frontend side.<br>We will use Apollo Client for this. To be more specific, we will use Apollo Client 3 beta. The client provides tools to send queries and mutations to the backend, as well as to cache received data to keep it in memory, and use it throughout the application - sort of a state management.</p>
+<h4 id="Part-7-of-12-in-GraphQL-amp-React-amp-JWT"><a href="#Part-7-of-12-in-GraphQL-amp-React-amp-JWT" class="headerlink" title="Part 7 of 12 in GraphQL &amp; React &amp; JWT"></a>Part 7 of 12 in GraphQL &amp; React &amp; JWT</h4><p>We have setup our backend in such way that a middleware, <strong>express-jwt</strong>, intercepts all our requests and checks if they come with valid access token attached to their headers.<br>Similarly, we used another middleware, <strong>cookie-parser</strong>, that also checks all requests for cookies, and populates the <strong>cookies</strong> property on the request object with existing cookies.<br>Because of such setup, our resolvers are able to perform user authentication.<br>At the moment, we dont’ have access token attached to our headers, nor do we include any cookies with our requests. So let’s change that.</p>
+    </div>
+
+  </a>
+
+</div>
+<hr />
+
+            
+                <div class="post-preview">
+  <!-- test featured image -->
+
+  
+  <a href="/angry-chaired-blog/2020/graphql-react-jwt-apollo-client-cache/">
+
+    
+
+    <div class="post-preview__featured-image-container">
+      <img src="/angry-chaired-blog/2020/graphql-react-jwt-apollo-client-cache/mosa-moseneke-WOP-W1Yg6cg-unsplash.jpg" alt="" />
+    </div>
+
+    
+    <!-- <a href="/angry-chaired-blog/2020/graphql-react-jwt-apollo-client-cache/"> -->
+    <h2 class="post-title">
+      GraphQL & React & JWT: Apollo Client Cache
+    </h2>
+    <!--  -->
+
+    <p class="post-meta">
+      <!-- Date and Author -->
+       16/08/2020
+    </p>
+
+    <div class="post-subtitle">
+        <!-- Step Content Start -->
+
+<h4 id="Part-6-of-12-in-GraphQL-amp-React-amp-JWT"><a href="#Part-6-of-12-in-GraphQL-amp-React-amp-JWT" class="headerlink" title="Part 6 of 12 in GraphQL &amp; React &amp; JWT"></a>Part 6 of 12 in GraphQL &amp; React &amp; JWT</h4><p>We are now moving to the frontend side, to implement authentication functionalities into our React app.<br>We want to be able to login, register and logout from the app. We also want to be able to automatically login when we return to the app, and once we are logged in, we want to stay logged in as long as we are using the app.</p>
     </div>
 
   </a>

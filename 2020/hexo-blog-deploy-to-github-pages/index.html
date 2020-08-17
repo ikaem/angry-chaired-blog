@@ -23,7 +23,7 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="About Angry Chaired"/>
+        <meta property="og:title" content="Hexo Blog: Deploy to Github Pages"/>
     
 
     <!--Open Graph Description-->
@@ -55,7 +55,7 @@
 
     <!-- Title -->
     
-    <title>About Angry Chaired - Angry Chaired Blog</title>
+    <title>Hexo Blog: Deploy to Github Pages - Angry Chaired Blog</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
@@ -181,25 +181,21 @@
 </nav>
 
     <!-- Main Content -->
-    
-
-
-    <section class="main">
-        <!-- Page Header -->
+    <!-- Page Header -->
 <!-- Set your background image for this header in your post front-matter: cover -->
 
-<header class="intro-header" style="background-image: url('/angry-chaired-blog/images/header-image.jpg')">
+<header class="intro-header" style="background-image: url('dino-aganovic-oZInUnTLERU-unsplash.jpg')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="post-heading">
-                    <h1>About Angry Chaired</h1>
+                    <h1>Hexo Blog: Deploy to Github Pages</h1>
 
                     <span class="meta">
                         <!-- Date and Author -->
                         
                         
-                            13/08/2020
+                            17/08/2020
                         
                     </span>
                 </div>
@@ -215,25 +211,82 @@
 
             <!-- Tags and categories -->
            
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/angry-chaired-blog/categories/hexo-blog/">hexo blog</a>
+
+                    
+                </div>
+            
 
             <!-- Gallery -->
             
 
             <!-- Post Main Content -->
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <h2 id="What-is-Angry-Chaired-Blog"><a href="#What-is-Angry-Chaired-Blog" class="headerlink" title="What is Angry Chaired Blog?"></a>What is Angry Chaired Blog?</h2><p>Angry Chaired Blog is a chronicle of my learning of web development. It is a collection of posts, usually belonging to a bigger project. While each project does have an idea and a set of overarching goals, posts are usually concerned with solving a specific problem.</p>
-<h2 id="What-can-you-find-on-Angry-Chaired-Blog"><a href="#What-can-you-find-on-Angry-Chaired-Blog" class="headerlink" title="What can you find on Angry Chaired Blog?"></a>What can you find on Angry Chaired Blog?</h2><p>At the moment there is not too much here: few partially-realized projects, use of questionable practices, and a bottomless pit of shady code.<br>Still, there is also a lot of will and enthusiasm. I would like it to grow into a collection of projects related to web development. These would include frontend and backend development, video games for web, JS machine learning, use of various frameworks, development for mobile and so on.<br>Every now and then, I would also like to include things no specifically related to web dev. Why not, right?<br>So there. </p>
-<h2 id="Why-am-I-writing-it"><a href="#Why-am-I-writing-it" class="headerlink" title="Why am I writing it?"></a>Why am I writing it?</h2><p>I am writing Angry Chaired blog to note what I learned about web development. I am writing it because it is fun. And I am writing it because I need a place to organize my enthusiasm.<br>I realized it (my enthusiasm) is all over the place, and by putting planned, finished and pending ideas on the paper, I can focus it better. </p>
-<p>I also realized I learn things better by writing about them. It is a cliched realization, but I finally got it. Better late then never, right?</p>
-<h2 id="Am-I-trying-to-teach-you-something"><a href="#Am-I-trying-to-teach-you-something" class="headerlink" title="Am I trying to teach you something?"></a>Am I trying to teach you something?</h2><p>To be clear, I am writing this for myself. I am not trying to teach you anything. I am a beginner myself, and I am trying to dip my toes in all of it. I can’t possibl be considered an authority in any of this. </p>
-<p>But, if some of it helps you, in any way - hey, that’s okay. </p>
-<h2 id="Can-you-contact-me"><a href="#Can-you-contact-me" class="headerlink" title="Can you contact me?"></a>Can you contact me?</h2><p>Sure, send me an email to <a href="mailto:&#105;&#107;&#97;&#x65;&#109;&#64;&#116;&#x75;&#116;&#x61;&#x6e;&#111;&#x74;&#x61;&#46;&#99;&#x6f;&#x6d;">&#105;&#107;&#97;&#x65;&#109;&#64;&#116;&#x75;&#116;&#x61;&#x6e;&#111;&#x74;&#x61;&#46;&#99;&#x6f;&#x6d;</a></p>
+                <!-- Step Content Start -->
+
+<h4 id="Part-Part-8-of-8-in-Hexo-Blog"><a href="#Part-Part-8-of-8-in-Hexo-Blog" class="headerlink" title="Part Part 8 of 8 in Hexo Blog"></a>Part Part 8 of 8 in Hexo Blog</h4><p>Finally, we reached the deployment part. We will deploy to Github Pages, and we will use the <a target="_blank" rel="noopener" href="https://hexo.io/docs/github-pages#One-command-deployment">One-command deployment option</a>.</p>
+<a id="more"></a>
+
+<h4 id="See-Project-Information"><a href="#See-Project-Information" class="headerlink" title="See Project Information"></a>See <a href="#Project-Information">Project Information</a></h4><h2 id="Step-8-Hexo-Blog-Deploy-blog-to-Github-Pages"><a href="#Step-8-Hexo-Blog-Deploy-blog-to-Github-Pages" class="headerlink" title="Step 8: Hexo Blog: Deploy blog to Github Pages"></a>Step 8: Hexo Blog: Deploy blog to Github Pages</h2><p>There is not much to it.<br>First we need to install <strong>hexo-deployer-git</strong>:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i hexo-deployer-git</span><br></pre></td></tr></table></figure>
+
+<p>Then we have to configure it in the root <strong>_config.yml</strong> file.<br>We add the following snipper specifying type of deployment, repository of our project on Github, and branch to which we are deploying. In this case, we are deploying to the <strong>gh-pages</strong> branch</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">https://github.com/ikaem/angry-chaired-blog.git</span></span><br><span class="line">  <span class="comment"># repo: https://github.com/&lt;username&gt;/&lt;project&gt;</span></span><br><span class="line">  <span class="comment"># example, https://github.com/hexojs/hexojs.github.io</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">gh-pages</span></span><br></pre></td></tr></table></figure>
+
+<p>Finally, deploy the website with:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>Once the deployment is done, go to your repository, and navigate to the <strong>settings</strong> tab.<br>Scroll down to <strong>Github Pages</strong> section, and make sure that the <strong>Source</strong> is <strong>gh-branch</strong>. </p>
+<p>Then click on the link to your website, and voila!</p>
+<!-- End Step Content -->
+
+<!-- Project Information -->
+
+<h2 id="Project-Information"><a href="#Project-Information" class="headerlink" title="Project Information"></a>Project Information</h2><h3 id="Available-at"><a href="#Available-at" class="headerlink" title="Available at"></a>Available at</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/ikaem/angry-chaired-blog">Github</a> </li>
+<li><a href="https://ikaem.github.io/angry-chaired-blog/">Live project</a></li>
+</ul>
+<h3 id="Goals"><a href="#Goals" class="headerlink" title="Goals"></a>Goals</h3><ol>
+<li>Create Hexo blog</li>
+<li>Write Markdown posts and migrate from Wordpress</li>
+<li>Style the blog</li>
+<li>Deploy to Github Pages</li>
+</ol>
+<h3 id="Steps"><a href="#Steps" class="headerlink" title="Steps"></a>Steps</h3><ol>
+<li>Create a Hexo project</li>
+<li>Create content</li>
+<li>Configuring the blog</li>
+<li>Customizing posts</li>
+<li>Customize default theme</li>
+<li>Install new theme</li>
+<li>Add comments to the blog</li>
+<li><strong>Deploy blog to Github Pages</strong></li>
+</ol>
+<h3 id="Tech-and-Tools"><a href="#Tech-and-Tools" class="headerlink" title="Tech and Tools"></a>Tech and Tools</h3><ol>
+<li>Hexo</li>
+<li>Comments by Hyvor</li>
+</ol>
+<h3 id="Experience-with-Tech-amp-Tools"><a href="#Experience-with-Tech-amp-Tools" class="headerlink" title="Experience with Tech &amp; Tools"></a>Experience with Tech &amp; Tools</h3><p>I have only tried to install and create a Hexo blog before, to see what it is about. I had trouble with styling and property deploying to Gihub pages, and the whole thing seemed too much trouble.<br>Since I didn’t really need a blog, I quickly gave up.<br>I have some experience with Markdown, which is normally used to create content for Hexo blogs.<br>I did a Web Dev basics course some time ago, where I was introduced to EJS, in which Hexo templates are written, so there is that too.<br>And that is pretty much all that is needed to get a lot from Hexo, it turned out.</p>
+<h2 id="DISCLAIMER"><a href="#DISCLAIMER" class="headerlink" title="DISCLAIMER"></a>DISCLAIMER</h2><p>Don’t take any of this seriously and as a matter-of-fact. These are my notes. It might look like I am trying to teach something to someone. I am not.</p>
 
 
                 
 
 
                 <!-- Cover image credit -->
+                
+                    <p class="image-credit-link">
+                        Cover image by <strong>
+                            <a target="_blank" rel="noopener" href="https://unsplash.com/@bur4?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
+                                Dino Aganović
+                            </a>
+                        </strong>
+                    </p>
+
                 
 
   
@@ -242,6 +295,13 @@
             
             <!-- Custom placed tags -->
             <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                
+                    
+
+
+<a href="/angry-chaired-blog/tags/deploy/">#deploy</a> <a href="/angry-chaired-blog/tags/hexo/">#hexo</a> <a href="/angry-chaired-blog/tags/blog/">#blog</a> <a href="/angry-chaired-blog/tags/github-pages/">#github pages</a>
+
+
                 
             </div>
             <!--  -->
@@ -263,12 +323,6 @@
         </div>
     </div>
 </article>
-
-
-    </section>
-
-
-
 
 
 
