@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="Inexperienced and curious pokes into the sprawling world of web development "/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="kaem"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Gatsby Web: New Gatsby Project with TypeScript"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Inexperienced and curious pokes into the sprawling world of web development "/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Angry Chaired Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://ikaem.github.io/angry-chaired-blog/angry-chaired-blog/images/header-image.jpg"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://ikaem.github.io/angry-chaired-blog/angry-chaired-blog/images/header-image.jpg"/>
+    
+
+    <!-- Title -->
+    
+    <title>Gatsby Web: New Gatsby Project with TypeScript - Angry Chaired Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/angry-chaired-blog/css/style.css">
+
+    
+<link rel="stylesheet" href="/angry-chaired-blog/css/custom-style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+    <link rel="icon" href="/angry-chaired-blog/images/favicon.ico"/>
+    
+
+<meta name="generator" content="Hexo 5.0.2"><link rel="alternate" href="/angry-chaired-blog/atom.xml" title="Angry Chaired Blog" type="application/atom+xml">
+</head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/angry-chaired-blog/">Angry Chaired Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/about">
+                            
+                                About
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a target="_blank" rel="noopener" href="https://angrychaired.surge.sh">
+                            
+                                <i class="fa fa-user fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a target="_blank" rel="noopener" href="https://github.com/ikaem/">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a href="/angry-chaired-blog/atom.xml">
+                            
+                                <i class="fa fa-rss fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('sangia-A4LzJf1cZeE-unsplash.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Gatsby Web: New Gatsby Project with TypeScript</h1>
+
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            16/08/2020
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/angry-chaired-blog/categories/gatsby-web/">gatsby web</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <!-- Step Content Start -->
+
+<h4 id="Part-1-of-10-in-Gatsby-Web"><a href="#Part-1-of-10-in-Gatsby-Web" class="headerlink" title="Part 1 of 10 in Gatsby Web"></a>Part 1 of 10 in Gatsby Web</h4><p>This project relies heavily on the <a target="_blank" rel="noopener" href="https://www.gatsbyjs.org/tutorial/">Gatsby official tutorial</a>. I did modify it somewhat, using TS instead of JS, messing with the filesystem plugin a bit, and straying on occasion when the website needed something different from the tutorial. </p>
+<p>The idea here is to create a website where I will eventually be able to show my projects, and then sometime in the future even move the blog to.<br>I see Gatsby mentioned a lot around the web, so I figured to use it for this project. </p>
+<a id="more"></a>
+
+<h4 id="See-Project-Information"><a href="#See-Project-Information" class="headerlink" title="See Project Information"></a>See <a href="#Project-Information">Project Information</a></h4><p>I wanted to test how it is to use Markdown for describing projects, and then converting that to HTML. I am not really impressed with how Gatsby turns it into HTML, but then again, there is probably lot that I don’t know about it. Also, there is this thing called MDX, which is basically JSX in Markdown. I plan to use this for the blog project, and have a feeling I might be more comfortable with it. </p>
+<p>All in all, working with Gatsby turned out to be surprisingly simple. It is basically React, but with no server in the way I am used to it with React. Though, it could be, if one wants. I had to adjust my way of thinking a bit, since, when built, the website is static.<br>I found working in TS a bit weird, though, as it doesn’t use TS compiler, but instead uses Babel, so there is no type checking. It seems this can be changed, though, and I will check that in future series.</p>
+<p>Finally, I am not happy with the end result. Thinking back on it, and knowing what I know now, I think I can make it better. I will work on my desing, HTML and CSS skills, and do a separate blog project, and will come back to Gatsby after. </p>
+<h2 id="Step-1-Create-new-Gatsby-project-with-TS-and-create-basic-pages"><a href="#Step-1-Create-new-Gatsby-project-with-TS-and-create-basic-pages" class="headerlink" title="Step 1. Create new Gatsby project with TS and create basic pages"></a>Step 1. Create new Gatsby project with TS and create basic pages</h2><p>Alright, let’s start, straight into it, head first. </p>
+<p>In this part we will:</p>
+<ol>
+<li>Create a new project with TS and see what is in the created project</li>
+<li>Create basic outline of our pages</li>
+<li>Navigate across our pages</li>
+</ol>
+<h3 id="Create-a-new-project-with-TS-and-see-what-is-in-the-created-project"><a href="#Create-a-new-project-with-TS-and-see-what-is-in-the-created-project" class="headerlink" title="Create a new project with TS and see what is in the created project"></a>Create a new project with TS and see what is in the created project</h3><p>Gatsby requires Node, Git and Gatsby CLI to work.<br>I assume the first two are already installed, and move to Gatsby CLI from the terminal. We are installing it globally. </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i -g gatsby-cli</span><br></pre></td></tr></table></figure>
+
+<p>The CLI enables us to actually create new projects.<br>Once the CLI is installed, we create a new project from the terminal by calling <strong>gatsby new</strong> command.<br>We add the name of the project (or a “.” character if we want to create a project in the current folder) after, and a link to a starter project. </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gatsby new hello-world https://github.com/gatsbyjs/gatsby-starter-hello-world</span><br></pre></td></tr></table></figure>
+
+<p>A starter project includes certain folders and files that are needed for a new site.<br>There is a (list)[<a target="_blank" rel="noopener" href="https://www.gatsbyjs.org/starters/?v=2%5D">https://www.gatsbyjs.org/starters/?v=2]</a> of Gatsby starters here.</p>
+<p>Once the download and installation completes, we get a project whose structure is very similar to that of a classic React project.</p>
+<p>Few most obvious differences are:</p>
+<ul>
+<li>There is no <strong>index.js</strong> file which holds the entire app</li>
+<li>There is no <strong>app.js</strong> file </li>
+<li>There is a <strong>gatsby-config.js</strong> file</li>
+<li>There is a <strong>src</strong> folder which holds a <strong>pages</strong> folder. </li>
+</ul>
+<p>Inside <strong>pages</strong> folder there is an <strong>index.js</strong> file. If we look inside we will see a usual React component. </p>
+<p>Let’s rename the file to <strong>index.tsx</strong>. We are now working with TypeScript in Gatsby. </p>
+<p>According to Gatsby documentation, it comes with TS support out of the box. However, it doesn’t use TS compiler. Instead, it uses a Babel plugin to transpile (big word) TypeScript, and does not do type checking. This last part was a bit confusing for me, as types obviously mismatched on several occasions, but the site still worked. </p>
+<p>Let’s now start the development server from the terminal, so we can see our app in action. </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gatsby develop</span><br></pre></td></tr></table></figure>
+
+<p>This will start a dev server, and we get access to our website on <strong>localhost:8000</strong>.<br>In case you want to change port, you can use the <strong>-p</strong> or <strong>–port</strong> flags, and specify port after it </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gatsby develop -p 4000</span><br></pre></td></tr></table></figure>
+
+<p>The development server, in theory, allows for hot reloading. It works in most cases, but there were few occasions when the server did not react to changes in the code.</p>
+<h3 id="Create-basic-outline-of-our-pages"><a href="#Create-basic-outline-of-our-pages" class="headerlink" title="Create basic outline of our pages"></a>Create basic outline of our pages</h3><p>The pages in question are just regular React components. What makes them pages is that they are placed in that <strong>pages</strong> folder. Gatsby then uses filenames of those components to create routes in our app. We will get to this.</p>
+<p>We will create 4 pages:</p>
+<ol>
+<li>Home page</li>
+<li>About page</li>
+<li>Contact page</li>
+<li>404 page</li>
+</ol>
+<p>In this part we will create just rough sketches of these pages, and I will not go too deep into it. They are, after all, React components.</p>
+<p>For <strong>index.tsx</strong>, the Home Page, replace the existing content with the one below:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// src/pages/index.tsx</span></span><br><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">&quot;react&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> HomePage: React.FC= <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">        &lt;h1&gt;Home Page&lt;/h1&gt;</span><br><span class="line">    )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>About and Contact pages we create from scratch:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// src/pages/about.tsx</span></span><br><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">&quot;react&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> About: React.FC= <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">        &lt;h1&gt;About Page&lt;/h1&gt;</span><br><span class="line">    )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// src/pages/contact.tsx</span></span><br><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">&quot;react&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> Contact: React.FC= <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">        &lt;h1&gt;Contact Page&lt;/h1&gt;</span><br><span class="line">    )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>We stay with the <strong>404.tsx</strong> component a bit longer.<br>If a component with this name exists in the <strong>pages</strong> folder, Gatsby will render it avery time an unknown route is requested. It is very convenient.<br>Note that this particular component will not be automatically shown in development. A default dev 404 page will be shown instead, but a link to our custom 404 will be shown.</p>
+<p>Here is the sketch:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// src/pages/404.tsx</span></span><br><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">&quot;react&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> NoSuchRoute: React.FC= <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">        &lt;h1&gt;Unfortunately, no such route :(&lt;/h1&gt;</span><br><span class="line">    )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Navigate-across-our-pages"><a href="#Navigate-across-our-pages" class="headerlink" title="Navigate across our pages"></a>Navigate across our pages</h3><p>Go and visit the app again. On the <strong>localhost:8000</strong> you will see the Home Page.<br>Now try navigating to <strong>localhost:8000/about</strong>, and you will see the About page. Same thing with the <strong>/contact</strong> route. </p>
+<p>Now try typing <strong>localhost:8000/blog</strong>. Development 404 page shows up, telling us there is no such page, and listing all existing pages in our app.<br>It also gives us a link to the custom 404 page we made. Click it and see the page.</p>
+<p>That is how navigation works. If a component is in the <strong>pages</strong> folder, its filename becomes a route.</p>
+<p>But how to navigate to pages from within components?<br>Gatsby provides a <strong>Link</strong> component, similar to <strong>React Router</strong>‘s <strong>Link</strong> component in React apps.</p>
+<p>To use it, we import <strong>Link</strong> from <strong>“gatsby”</strong>, and include it into a our component.<br><strong>Link</strong> has a mandatory <strong>to</strong> attribute to which we assign a route in our app. Under the hood, <strong>Link</strong> returns a regular <strong>anchor</strong> element, but prevents refeshing of the page when we click it. </p>
+<p>Note that <strong>Link</strong> is used only for navigation within the app, and usual <strong>anchor</strong> element is used for any navigation that goes outside of the app. </p>
+<p>Let’s import <strong>Link</strong> in our Home and About pages, and then link them to each other:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// src/pages/index.tsx</span></span><br><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">&quot;react&quot;</span></span><br><span class="line"><span class="keyword">import</span> &#123; Link &#125; <span class="keyword">from</span> <span class="string">&quot;gatsby&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> HomePage: React.FC= <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">        &lt;Link to=<span class="string">&quot;/about&quot;</span>&gt;To About&lt;/Link&gt;</span><br><span class="line">        &lt;h1&gt;Home Page&lt;/h1&gt;</span><br><span class="line">    )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// src/pages/about.tsx</span></span><br><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">&quot;react&quot;</span></span><br><span class="line"><span class="keyword">import</span> &#123; Link &#125; <span class="keyword">from</span> <span class="string">&quot;gatsby&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> About: React.FC= <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">        &lt;Link to=<span class="string">&quot;/&quot;</span>&gt;To Home&lt;/Link&gt;</span><br><span class="line">        &lt;h1&gt;About Page&lt;/h1&gt;</span><br><span class="line">    )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Now, let’s visit the app again. On home page, click the <strong>“To About</strong> link, and find yourself on the <strong>About</strong> page. Magic. Now click the <strong>“To Home”</strong> link. Wow! We are home again. We are surfing now :).</p>
+<!-- End Step Content -->
+
+<!-- Project Information -->
+
+<h2 id="Project-Information"><a href="#Project-Information" class="headerlink" title="Project Information"></a>Project Information</h2><h3 id="Available-at"><a href="#Available-at" class="headerlink" title="Available at"></a>Available at</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/ikaem/angry-chaired-gatsby">Github</a> </li>
+<li><a target="_blank" rel="noopener" href="https://angrychaired.surge.sh/">Live project</a></li>
+</ul>
+<h3 id="Goals"><a href="#Goals" class="headerlink" title="Goals"></a>Goals</h3><ol>
+<li>A Gatsby website with a list of projects on home page</li>
+<li>Dedicated pages for each project</li>
+<li>Write project information in Markdown</li>
+<li>Functional message form </li>
+<li>Deployed website</li>
+</ol>
+<h3 id="Steps"><a href="#Steps" class="headerlink" title="Steps"></a>Steps</h3><ol>
+<li><strong>Create new Gatsby project with TS and create basic pages</strong></li>
+<li>Create layout and its elements, and other components</li>
+<li>Install Styled Components and its Gatsby plugin to style pages</li>
+<li>Get data with Filesystem plugin and GraphQL</li>
+<li>Write projects content in Markdown</li>
+<li>Programatically create pages from Markdown files</li>
+<li>Insert Markdown files into pages with MarkdownRemark plugin</li>
+<li>Use Gatsby Image to work with images</li>
+<li>Create send message feature on the contact page</li>
+<li>Audit, optimize and deploy the website</li>
+</ol>
+<h3 id="Tech-and-Tools"><a href="#Tech-and-Tools" class="headerlink" title="Tech and Tools"></a>Tech and Tools</h3><ol>
+<li>React</li>
+<li>Gatsby</li>
+<li>Markdown</li>
+<li>TypeScript</li>
+<li>Getform.io</li>
+<li>Surge</li>
+<li>Styled Components</li>
+</ol>
+<h3 id="Experience-with-Tech-amp-Tools"><a href="#Experience-with-Tech-amp-Tools" class="headerlink" title="Experience with Tech &amp; Tools"></a>Experience with Tech &amp; Tools</h3><p>Prior to this project, I had very little experience with Gatsby. I did a little something with Next.js, another React framework that focuses on server-side rendered websites. I am ok with GraphQL, on which Gatsby heavily relies to get its data, and I am ok with TS too.  </p>
+<h2 id="DISCLAIMER"><a href="#DISCLAIMER" class="headerlink" title="DISCLAIMER"></a>DISCLAIMER</h2><p>Don’t take any of this seriously and as a matter-of-fact. These are my notes. It might look like I am trying to teach something to someone. I am not.</p>
+
+
+                
+
+
+                <!-- Cover image credit -->
+                
+                    <p class="image-credit-link">
+                        Cover image by <strong>
+                            <a target="_blank" rel="noopener" href="https://unsplash.com/@sangia?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
+                                Sangia
+                            </a>
+                        </strong>
+                    </p>
+
+                
+
+  
+
+            </div>
+            
+            <!-- Custom placed tags -->
+            <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                
+                    
+
+
+<a href="/angry-chaired-blog/tags/gatsby/">#gatsby</a> <a href="/angry-chaired-blog/tags/typescript/">#typescript</a>
+
+
+                
+            </div>
+            <!--  -->
+
+
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+
+            <!-- Hyvor comments -->
+
+            <!-- End of Hyvor comments -->
+        </div>
+    </div>
+</article>
+
+
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2020 kaem<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

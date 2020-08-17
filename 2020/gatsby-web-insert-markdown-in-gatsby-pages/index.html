@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="Inexperienced and curious pokes into the sprawling world of web development "/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="kaem"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Gatsby Web: Insert Markdown in Gatsby Pages"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Inexperienced and curious pokes into the sprawling world of web development "/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Angry Chaired Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://ikaem.github.io/angry-chaired-blog/angry-chaired-blog/images/header-image.jpg"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://ikaem.github.io/angry-chaired-blog/angry-chaired-blog/images/header-image.jpg"/>
+    
+
+    <!-- Title -->
+    
+    <title>Gatsby Web: Insert Markdown in Gatsby Pages - Angry Chaired Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/angry-chaired-blog/css/style.css">
+
+    
+<link rel="stylesheet" href="/angry-chaired-blog/css/custom-style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+    <link rel="icon" href="/angry-chaired-blog/images/favicon.ico"/>
+    
+
+<meta name="generator" content="Hexo 5.0.2"><link rel="alternate" href="/angry-chaired-blog/atom.xml" title="Angry Chaired Blog" type="application/atom+xml">
+</head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/angry-chaired-blog/">Angry Chaired Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/about">
+                            
+                                About
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a target="_blank" rel="noopener" href="https://angrychaired.surge.sh">
+                            
+                                <i class="fa fa-user fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a target="_blank" rel="noopener" href="https://github.com/ikaem/">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a href="/angry-chaired-blog/atom.xml">
+                            
+                                <i class="fa fa-rss fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('vasyl-s-ODJ2f2JPY_0-unsplash.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Gatsby Web: Insert Markdown in Gatsby Pages</h1>
+
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            17/08/2020
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/angry-chaired-blog/categories/gatsby-web/">gatsby web</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <!-- Step Content Start -->
+
+<h4 id="Part-7-of-10-in-Gatsby-Web"><a href="#Part-7-of-10-in-Gatsby-Web" class="headerlink" title="Part 7 of 10 in Gatsby Web"></a>Part 7 of 10 in Gatsby Web</h4><p>Before we even start, I need to say that Markdown is meant to style text, and not websites. Unfortunately, I went into this expecting to style a page in a certain way, and then just insert pieces of Markdown body into their places, or to style elements in the Markdown document directly.<br>While this is possible, it is a bit of a pain, and more importantly, it goes against the point of Markdown. </p>
+<a id="more"></a>
+
+<h4 id="See-Project-Information"><a href="#See-Project-Information" class="headerlink" title="See Project Information"></a>See <a href="#Project-Information">Project Information</a></h4><h2 id="Step-7-Insert-Markdown-body-content-into-pages-with-the-transformer-remark-plugin"><a href="#Step-7-Insert-Markdown-body-content-into-pages-with-the-transformer-remark-plugin" class="headerlink" title="Step 7. Insert Markdown body content into pages with the transformer-remark plugin"></a>Step 7. Insert Markdown body content into pages with the transformer-remark plugin</h2><p>From what I have seen so far, inserting Markdown content in pages could be done in 2 ways:</p>
+<ol>
+<li>By writing regular HTML inside Markdown document body, and assigning ids to each element. Then, we would query <strong>htmlAst</strong> field from MarkdownRemark node, which would return an object holding entire HTML representation of the document in the form of array of objects. These object hold information about each element that exist in the document. We would then go over the array, search elements by their ids to store each element into their own variable. It is an interesting approach, but it involves a lot of code.</li>
+<li>By writing HTML inside Markdown doucuments, complete with all classes and ids for which styling is already defined in our app. I tried using this approach, but a Markdown document filled with HTML ruins its purpose. </li>
+</ol>
+<p>The most common approch is just to write pure Markdown, aided by HTML where Markdown syntax is not enough, and then just dump everything into a React component.<br>Specific data that we might need to place in exact places on the page can be stored in the frontmatter section. </p>
+<p>Before I said that frontmatter values can be only strings. This is not true. I just learned they can be arrays too:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: Project 1</span><br><span class="line">learningPeriod: 30 June 2020 to 5 July 2020</span><br><span class="line">date: &quot;2020-08-11&quot;</span><br><span class="line">frontmatterExcerpt: This is the Project 1 content.</span><br><span class="line">featuredImage: .&#x2F;image.jpg</span><br><span class="line">tech: [&quot;react&quot;, &quot;grapqhl&quot;]</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<p>Let’s insert some more content into our Markdown documents. We will make them all have same content in the body.</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&lt;!--</span> <span class="string">src/pages/projects/project-4/index.md</span> <span class="string">--&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">Project</span> <span class="number">4</span></span><br><span class="line"><span class="attr">learningPeriod:</span> <span class="number">30</span> <span class="string">June</span> <span class="number">2020 </span><span class="string">to</span> <span class="number">5</span> <span class="string">July</span> <span class="number">2020</span></span><br><span class="line"><span class="attr">date:</span> <span class="string">&quot;2020-08-11&quot;</span></span><br><span class="line"><span class="attr">frontmatterExcerpt:</span> <span class="string">This</span> <span class="string">is</span> <span class="string">the</span> <span class="string">Project</span> <span class="number">4</span> <span class="string">content.</span></span><br><span class="line"><span class="attr">featuredImage:</span> <span class="string">./featuredimage.jpg</span></span><br><span class="line"><span class="attr">tech:</span> [<span class="string">&quot;react&quot;</span>, <span class="string">&quot;grapqhl&quot;</span>]</span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="comment">## Lorem Ipsum bacon</span></span><br><span class="line"><span class="string">Lorem</span> <span class="string">ipsum</span> <span class="string">dolor,</span> <span class="string">sit</span> <span class="string">amet</span> <span class="string">consectetur</span> <span class="string">adipisicing</span> <span class="string">elit.</span> <span class="string">Praesentium</span> <span class="string">optio</span> <span class="string">at</span> <span class="string">adipisci</span> <span class="string">facilis</span> <span class="string">delectus</span> <span class="string">tempore,</span> <span class="string">aut</span> <span class="string">error</span> <span class="string">tempora</span> <span class="string">assumenda</span> <span class="string">perspiciatis</span> <span class="string">impedit</span> <span class="string">dicta,</span> <span class="string">eveniet</span> <span class="string">quis</span> <span class="string">expedita,</span> <span class="string">commodi</span> <span class="string">molestiae</span> <span class="string">atque</span> <span class="string">voluptatem</span> <span class="string">voluptates?</span></span><br><span class="line"></span><br><span class="line"><span class="comment">## Lorem Ipsum bacon more bacon</span></span><br><span class="line"><span class="string">Lorem</span> <span class="string">ipsum</span> <span class="string">dolor,</span> <span class="string">sit</span> <span class="string">amet</span> <span class="string">consectetur</span> <span class="string">adipisicing</span> <span class="string">elit.</span> <span class="string">Praesentium</span> <span class="string">optio</span> <span class="string">at</span> <span class="string">adipisci</span> <span class="string">facilis</span> <span class="string">delectus</span> <span class="string">tempore,</span> <span class="string">aut</span> <span class="string">error</span> <span class="string">tempora</span> <span class="string">assumenda</span> <span class="string">perspiciatis</span> <span class="string">impedit</span> <span class="string">dicta,</span> <span class="string">eveniet</span> <span class="string">quis</span> <span class="string">expedita,</span> <span class="string">commodi</span> <span class="string">molestiae</span> <span class="string">atque</span> <span class="string">voluptatem</span> <span class="string">voluptates?</span> [<span class="string">This</span> <span class="string">is</span> <span class="string">a</span> <span class="string">link</span> <span class="string">to</span> <span class="string">Google</span>]<span class="string">(https://google.com)</span> <span class="string">delectus</span> <span class="string">tempore,</span> <span class="string">aut</span> <span class="string">error</span> <span class="string">tempora</span> <span class="string">assumenda.</span> <span class="string">**Delectus**</span> <span class="string">tempore,</span> <span class="string">aut</span> <span class="string">error</span> <span class="string">tempora</span> <span class="string">*assumenda*.</span></span><br><span class="line"></span><br><span class="line"><span class="comment">## Lorem List Dolorem</span></span><br><span class="line"></span><br><span class="line"><span class="bullet">-</span> <span class="string">Lorem</span> <span class="string">Lorem</span> <span class="string">React</span> <span class="string">something</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">Think</span> <span class="string">again</span></span><br><span class="line"></span><br><span class="line"><span class="comment">## No Tired of Lorem Lists</span></span><br><span class="line"></span><br><span class="line"><span class="bullet">-</span> <span class="string">Lorem</span> <span class="string">Lorem</span> <span class="string">React</span> <span class="string">something</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">Think</span> <span class="string">again</span></span><br><span class="line"></span><br><span class="line"><span class="comment">## Screenshost Lorem</span></span><br><span class="line"></span><br><span class="line"><span class="number">1</span><span class="string">.</span> <span class="type">![Screenshot</span> <span class="number">1</span><span class="string">](./screen1.jpg)</span></span><br><span class="line"><span class="number">1</span><span class="string">.</span> <span class="type">![Screenshot</span> <span class="number">2</span><span class="string">](./screen2.jpg)</span></span><br><span class="line"><span class="number">1</span><span class="string">.</span> <span class="type">![Screenshot</span> <span class="number">3</span><span class="string">](./screen3.jpg)</span></span><br><span class="line"><span class="number">2</span><span class="string">.</span> <span class="type">![Screenshot</span> <span class="number">4</span><span class="string">](./screen4.jpg)</span></span><br><span class="line"></span><br><span class="line"><span class="string">&lt;h3&gt;An</span> <span class="string">example</span> <span class="string">HTML</span> <span class="string">element&lt;/h3&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>Now, back in our <strong>ProjectTemplate</strong> component, we will add an additional field in our query: <strong>html</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> query = graphql<span class="string">`</span></span><br><span class="line"><span class="string">  query MyQuery($slug: String!) &#123;</span></span><br><span class="line"><span class="string">    markdownRemark(fields: &#123; slug: &#123; eq: $slug &#125; &#125;) &#123;</span></span><br><span class="line"><span class="string">      frontmatter &#123;</span></span><br><span class="line"><span class="string">        date</span></span><br><span class="line"><span class="string">        title</span></span><br><span class="line"><span class="string">        frontmatterExcerpt</span></span><br><span class="line"><span class="string">      &#125;</span></span><br><span class="line"><span class="string">      html</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">  &#125;</span></span><br><span class="line"><span class="string">`</span></span><br></pre></td></tr></table></figure>
+
+<p>Let’s log it to see what we get:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">querying html field: </span><br><span class="line">    &lt;h2&gt;Lorem Ipsum bacon&lt;&#x2F;h2&gt;</span><br><span class="line">    &lt;p&gt;Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium optio at adipisci facilis delectus tempore, aut error tempora assumenda perspiciatis impedit dicta, eveniet quis expedita, commodi molestiae atque voluptatem voluptates?&lt;&#x2F;p&gt;</span><br><span class="line">    &lt;h2&gt;Lorem Ipsum bacon more bacon&lt;&#x2F;h2&gt;</span><br><span class="line">    &lt;p&gt;Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium optio at adipisci facilis delectus tempore, aut error tempora assumenda perspiciatis impedit dicta, eveniet quis expedita, commodi molestiae atque voluptatem voluptates? &lt;a href&#x3D;&quot;https:&#x2F;&#x2F;google.com&quot;&gt;This is a link to Google&lt;&#x2F;a&gt; delectus tempore, aut error tempora assumenda. &lt;strong&gt;Delectus&lt;&#x2F;strong&gt; tempore, aut error tempora &lt;em&gt;assumenda&lt;&#x2F;em&gt;.&lt;&#x2F;p&gt;</span><br><span class="line">    &lt;h2&gt;Lorem List Dolorem&lt;&#x2F;h2&gt;</span><br><span class="line">    &lt;ul&gt;</span><br><span class="line">        &lt;li&gt;Lorem Lorem React something&lt;&#x2F;li&gt;</span><br><span class="line">        &lt;li&gt;Think again&lt;&#x2F;li&gt;</span><br><span class="line">    &lt;&#x2F;ul&gt;</span><br><span class="line">    &lt;h2&gt;No Tired of Lorem Lists&lt;&#x2F;h2&gt;</span><br><span class="line">    &lt;ul&gt;</span><br><span class="line">        &lt;li&gt;Lorem Lorem React something&lt;&#x2F;li&gt;</span><br><span class="line">        &lt;li&gt;Think again&lt;&#x2F;li&gt;</span><br><span class="line">    &lt;&#x2F;ul&gt;</span><br><span class="line">    &lt;h2&gt;Screenshost Lorem&lt;&#x2F;h2&gt;</span><br><span class="line">    &lt;ol&gt;</span><br><span class="line">        &lt;li&gt;&lt;img src&#x3D;&quot;.&#x2F;screen1.jpg&quot; alt&#x3D;&quot;Screenshot 1&quot;&gt;&lt;&#x2F;li&gt;</span><br><span class="line">        &lt;li&gt;&lt;img src&#x3D;&quot;.&#x2F;screen2.jpg&quot; alt&#x3D;&quot;Screenshot 2&quot;&gt;&lt;&#x2F;li&gt;</span><br><span class="line">        &lt;li&gt;&lt;img src&#x3D;&quot;.&#x2F;screen3.jpg&quot; alt&#x3D;&quot;Screenshot 3&quot;&gt;&lt;&#x2F;li&gt;</span><br><span class="line">        &lt;li&gt;&lt;img src&#x3D;&quot;.&#x2F;screen4.jpg&quot; alt&#x3D;&quot;Screenshot 4&quot;&gt;&lt;&#x2F;li&gt;</span><br><span class="line">    &lt;&#x2F;ol&gt;</span><br><span class="line">    &lt;h3&gt;An example HTML element&lt;&#x2F;h3&gt;</span><br></pre></td></tr></table></figure>
+
+<p>We go pure html here.</p>
+<p>Now, we can insert this html into our component.</p>
+<p>We do it with an attribute on <strong>div</strong> element called <strong>dangerouslySetInnerHTML</strong>. We give it a value of an object holding property called <strong>__html</strong>, which has a value of our <strong>html</strong>:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// src/templates/project-template.tsx</span></span><br><span class="line"></span><br><span class="line">...</span><br><span class="line"><span class="keyword">const</span> ProjectTemplate: React.FC&lt;ProjectTemplateProps&gt; = <span class="function">(<span class="params">&#123; data &#125;</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> &#123; html &#125; = data.markdownRemark;</span><br><span class="line">  <span class="keyword">const</span> &#123; title, date, frontmatterExcerpt &#125; = data.markdownRemark.frontmatter;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    &lt;Layout&gt;</span><br><span class="line">      &lt;ProjectTemplateStyled className=<span class="string">&quot;project-template&quot;</span>&gt;</span><br><span class="line">        &lt;section className=<span class="string">&quot;project-template__details-section&quot;</span>&gt;</span><br><span class="line">          &lt;h1 className=<span class="string">&quot;details-section__project-title&quot;</span>&gt;&#123; title &#125;&lt;/h1&gt;</span><br><span class="line">          &lt;span className=<span class="string">&quot;details-section__publish-date&quot;</span>&gt;&#123; date &#125;&lt;/span&gt;</span><br><span class="line">          &lt;p className=<span class="string">&quot;details-section__project-lead&quot;</span>&gt;</span><br><span class="line">            &#123; frontmatterExcerpt &#125;</span><br><span class="line">          &lt;/p&gt;</span><br><span class="line">        &lt;/section&gt;</span><br><span class="line">        &lt;div dangerouslySetInnerHTML=&#123;&#123;<span class="attr">__html</span>: html &#125;&#125;&gt;&lt;/div&gt;</span><br><span class="line">      &lt;/ProjectTemplateStyled&gt;</span><br><span class="line">    &lt;/Layout&gt;</span><br><span class="line">  )</span><br><span class="line">&#125;</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<p>If we now go our page, we will see our content rendered. It is unstyled, but we can use CSS to style it by using element and pseudo selectors.</p>
+<p>We do have a problem, however. Our images that we have set in our Markdown documents are not visible on the page.<br>This is a bit convulted for me, and it has to do with the location of our images. Currently, we have screenshot images set in the same folder as our Markdown documents. However, when Gatsby builds our app, those images are no longer present there. The only file that is in the <strong>project-1</strong> folder of the build app is <strong>index.html</strong>.<br>Obviously, pointing to the file that doesn’t exist in this folder doesn’t work. </p>
+<p>We could use the <strong>static</strong> folder available in the root of our project, as explained in <a target="_blank" rel="noopener" href="https://www.gatsbyjs.org/docs/static-folder">Gatsby’s documentation</a>.</p>
+<p>However, a better solution is to use <strong>gatsby-remark-images</strong>, togethe with another plugin, <strong>gatsby-plugin-sharp</strong>.</p>
+<p>Since we are dealing with images in general, and with the <strong>sharp</strong> plugins in particular in the next post, we will fix this issue there.</p>
+<p>For now, we have our projects content on new pages. Is good.</p>
+<!-- End Step Content -->
+
+<!-- Project Information -->
+
+<h2 id="Project-Information"><a href="#Project-Information" class="headerlink" title="Project Information"></a>Project Information</h2><h3 id="Available-at"><a href="#Available-at" class="headerlink" title="Available at"></a>Available at</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/ikaem/angry-chaired-gatsby">Github</a> </li>
+<li><a target="_blank" rel="noopener" href="https://angrychaired.surge.sh/">Live project</a></li>
+</ul>
+<h3 id="Goals"><a href="#Goals" class="headerlink" title="Goals"></a>Goals</h3><ol>
+<li>A Gatsby website with a list of projects on home page</li>
+<li>Dedicated pages for each project</li>
+<li>Write project information in Markdown</li>
+<li>Functional message form </li>
+<li>Deployed website</li>
+</ol>
+<h3 id="Steps"><a href="#Steps" class="headerlink" title="Steps"></a>Steps</h3><ol>
+<li>Create new Gatsby project with TS and create basic pages</li>
+<li>Create layout and its elements, and other components</li>
+<li>Install Styled Components and its Gatsby plugin to style pages</li>
+<li>Get data with Filesystem plugin and GraphQL</li>
+<li>Write projects content in Markdown, transform and query them with the transformer-remark plugin</li>
+<li>Programatically create pages from Markdown files</li>
+<li><strong>Insert Markdown files into pages with the transformer-remark plugin</strong></li>
+<li>Use Gatsby Image to work with images</li>
+<li>Create send message feature on the contact page</li>
+<li>Audit, optimize and deploy the website</li>
+</ol>
+<h3 id="Tech-and-Tools"><a href="#Tech-and-Tools" class="headerlink" title="Tech and Tools"></a>Tech and Tools</h3><ol>
+<li>React</li>
+<li>Gatsby</li>
+<li>Markdown</li>
+<li>TypeScript</li>
+<li>Getform.io</li>
+<li>Surge</li>
+<li>Styled Components</li>
+</ol>
+<h3 id="Experience-with-Tech-amp-Tools"><a href="#Experience-with-Tech-amp-Tools" class="headerlink" title="Experience with Tech &amp; Tools"></a>Experience with Tech &amp; Tools</h3><p>Prior to this project, I had very little experience with Gatsby. I did a little something with Next.js, another React framework that focuses on server-side rendered websites. I am ok with GraphQL, on which Gatsby heavily relies to get its data, and I am ok with TS too.  </p>
+<h2 id="DISCLAIMER"><a href="#DISCLAIMER" class="headerlink" title="DISCLAIMER"></a>DISCLAIMER</h2><p>Don’t take any of this seriously and as a matter-of-fact. These are my notes. It might look like I am trying to teach something to someone. I am not.</p>
+
+
+                
+
+
+                <!-- Cover image credit -->
+                
+                    <p class="image-credit-link">
+                        Cover image by <strong>
+                            <a target="_blank" rel="noopener" href="https://unsplash.com/@vasslobodian?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
+                                Vasyl S
+                            </a>
+                        </strong>
+                    </p>
+
+                
+
+  
+
+            </div>
+            
+            <!-- Custom placed tags -->
+            <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                
+                    
+
+
+<a href="/angry-chaired-blog/tags/gatsby-plugins/">#gatsby plugins</a> <a href="/angry-chaired-blog/tags/markdowns/">#markdowns</a>
+
+
+                
+            </div>
+            <!--  -->
+
+
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+
+            <!-- Hyvor comments -->
+
+            <!-- End of Hyvor comments -->
+        </div>
+    </div>
+</article>
+
+
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2020 kaem<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

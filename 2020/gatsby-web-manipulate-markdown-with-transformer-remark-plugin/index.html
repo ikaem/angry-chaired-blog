@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="Inexperienced and curious pokes into the sprawling world of web development "/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="kaem"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Gatsby Web: Manipulate Markdown with Transformer Remark Plugin"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Inexperienced and curious pokes into the sprawling world of web development "/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Angry Chaired Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://ikaem.github.io/angry-chaired-blog/angry-chaired-blog/images/header-image.jpg"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://ikaem.github.io/angry-chaired-blog/angry-chaired-blog/images/header-image.jpg"/>
+    
+
+    <!-- Title -->
+    
+    <title>Gatsby Web: Manipulate Markdown with Transformer Remark Plugin - Angry Chaired Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/angry-chaired-blog/css/style.css">
+
+    
+<link rel="stylesheet" href="/angry-chaired-blog/css/custom-style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+    <link rel="icon" href="/angry-chaired-blog/images/favicon.ico"/>
+    
+
+<meta name="generator" content="Hexo 5.0.2"><link rel="alternate" href="/angry-chaired-blog/atom.xml" title="Angry Chaired Blog" type="application/atom+xml">
+</head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/angry-chaired-blog/">Angry Chaired Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/about">
+                            
+                                About
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a target="_blank" rel="noopener" href="https://angrychaired.surge.sh">
+                            
+                                <i class="fa fa-user fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a target="_blank" rel="noopener" href="https://github.com/ikaem/">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a href="/angry-chaired-blog/atom.xml">
+                            
+                                <i class="fa fa-rss fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('lucas-messere-OYCsjGZHzAg-unsplash.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Gatsby Web: Manipulate Markdown with Transformer Remark Plugin</h1>
+
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            16/08/2020
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/angry-chaired-blog/categories/gatsby-web/">gatsby web</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <!-- Step Content Start -->
+
+<h4 id="Part-5-of-10-in-Gatsby-Web"><a href="#Part-5-of-10-in-Gatsby-Web" class="headerlink" title="Part 5 of 10 in Gatsby Web"></a>Part 5 of 10 in Gatsby Web</h4><p>The idea of this project was to create a portfolio of learning projects I worked on. To do that, I need a way to store project information, and this would ideally be in form of a file.<br>Of course, I could have had a database, and store this information there. We are working with Gatsby, however, and Gatsby can use Markdown, so we use Markdown.</p>
+<a id="more"></a>
+
+<h4 id="See-Project-Information"><a href="#See-Project-Information" class="headerlink" title="See Project Information"></a>See <a href="#Project-Information">Project Information</a></h4><h2 id="Step-5-Write-projects-content-in-Markdown-transform-and-query-them-with-the-transformer-remark-plugin"><a href="#Step-5-Write-projects-content-in-Markdown-transform-and-query-them-with-the-transformer-remark-plugin" class="headerlink" title="Step 5. Write projects content in Markdown, transform and query them with the transformer-remark plugin"></a>Step 5. Write projects content in Markdown, transform and query them with the transformer-remark plugin</h2><p>Markdown is a way to style and organize text. This is how I see it. Before I started working on this project, I imagined Markdown to be something where I could select pieces of text, and then place them around an HTML template that I prepared.<br>It is not like that (well, it could be, but it is a pain). It is meant to style text, and then we can use that styled text and insert it into our website. This turned out to be a problem for me, but we will get there.</p>
+<p>Anyhow, we will still use Markdown.</p>
+<p>Here is what we will do in this part:</p>
+<ol>
+<li>Create Markdown files that hold project information</li>
+<li>Install <strong>gatsby-transformer-remark</strong> plugin to be able to transform our Markdown files</li>
+<li>Query Markdown documents on the Home page and map over it to render a list of projects</li>
+</ol>
+<h2 id="Create-Markdown-files-that-hold-project-information"><a href="#Create-Markdown-files-that-hold-project-information" class="headerlink" title="Create Markdown files that hold project information"></a>Create Markdown files that hold project information</h2><p>Let’s make few Markdown files that will hold information about our projects.<br>Create a folder <strong>projects</strong> inside the <strong>pages</strong> folder, and then create four more folders inside. Name them <strong>project-1</strong>, <strong>project-2</strong>, <strong>project-3</strong>, and <strong>project-4</strong>, and place an <strong>index.md</strong> inside each one of them.</p>
+<p>Now, lets put some data inside these files. For now, let’s make all <strong>index.md</strong> files same, except for the project title and number of the project in the <strong>frontmatterExcerpt</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; src&#x2F;pages&#x2F;projects&#x2F;project-1.md -&gt; do not include in the file</span><br><span class="line">---</span><br><span class="line">title: Project 1</span><br><span class="line">learningPeriod: 30 June 2020 to 5 July 2020</span><br><span class="line">date: &quot;2020-08-05&quot;</span><br><span class="line">frontmatterExcerpt: This is the Project 1 content.</span><br><span class="line">---</span><br><span class="line"># This is project heading 1</span><br><span class="line">This is project paragraph</span><br><span class="line"></span><br><span class="line">## This is project heading 2</span><br><span class="line">This is another paragraph</span><br><span class="line"></span><br><span class="line">[This is a link to Google](https:&#x2F;&#x2F;google.com)</span><br><span class="line"></span><br><span class="line">### Below is an unordered list:</span><br><span class="line"></span><br><span class="line">- List item</span><br><span class="line">- Another list item</span><br><span class="line"></span><br><span class="line">#### And below is an ordered list</span><br><span class="line"></span><br><span class="line">1. List item again</span><br><span class="line">2. More, more items...</span><br></pre></td></tr></table></figure>
+
+<p>So what do we have here?<br>The area between the triple dashes is known as <strong>frontmatter</strong>. It consists of key-value pairs that are used to describe a Markdown document.<br>We can put whatever we want in there, as long as the value is of string type.<br>Once we start querying this data, GQL will have frontmatter keys available as fields, and we will be able to retrieve their values individualy.</p>
+<p>The area below is the body of the Markdown document.<br>Text that starts with # is a heading equivalent to <strong>h1</strong> in HTML. The one that has two pound signs is equivalent to <strong>h2</strong>, and so on.<br>Text with no signs in front is a regular paragraph, <strong>p</strong> in HTML<br>Text with the [square bracketed](syntax) turns to an <strong>a</strong> element in HTML<br>And any unordered and ordered list turns into an <strong>ul</strong> and <strong>ol</strong> list in HTML<br>Body of the Markdown document is usually retrieved all together as a single string value holding HTML representation of the body. </p>
+<p>Great. We have Markdown files with project information. What do we do with it now?<br>We should find a way to transform Markdown syntaxt into something we can work with.</p>
+<h2 id="Install-gatsby-transformer-remark-plugin-to-be-able-to-transform-our-Markdown-files"><a href="#Install-gatsby-transformer-remark-plugin-to-be-able-to-transform-our-Markdown-files" class="headerlink" title="Install gatsby-transformer-remark plugin to be able to transform our Markdown files"></a>Install <strong>gatsby-transformer-remark</strong> plugin to be able to transform our Markdown files</h2><p>To query and transform Markdown syntax into HTML, we will use <strong>gatsby-transformer-remark</strong> plugin. </p>
+<p>Transformer plugins are those that transform content into something that Gatsby can actualy make use of. In this case, we will use the <strong>gatsby-transformer-remark</strong> plugin to transform raw Markdown files made available by the <strong>gatsby-source-filesystem</strong>.<br>Source plugins get raw content, transfomer ones make them usable. </p>
+<p>Ok, to install the plugin:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i gatsby-transfomer-remark</span><br></pre></td></tr></table></figure>
+
+<p>And then add it to the plugins array in <strong>gatsby-config.js</strong>.<br>We will add it to the array as a simple string, but we could also include it as a configuration object in case we needed to adjust its options. </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// gatsby-config.js</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  <span class="comment">/* Your site config here */</span></span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">  plugins: [</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">    <span class="string">&quot;gatsby-transformer-remark&quot;</span>,</span><br></pre></td></tr></table></figure>
+
+<p>Good. Restart the development server and head over to GraphiQL and refresh it in case you had it open.<br>Once refreshed, GraphiQL should show two new options in the left area: <strong>allMarkdownRemark</strong> and <strong>markdownRemark</strong>.<br>Let’s select the first one, to query all of our trasnformed Markdown files. The other option allows us to query a specific one.</p>
+<p><strong>allMarkdownRemark</strong> offers similar options as the <strong>allFile</strong> query. Select <strong>edges</strong>, <strong>node</strong>, and then open the <strong>frontmatter</strong> field.<br>Inside, we get all keys we created in the frontmatter section of our Markdown documents.<br>Select <strong>title</strong> and <strong>frontmatterExercpt</strong>, and also select <strong>html</strong> field outside of the <strong>frontmatter</strong>.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">query MyQuery &#123;</span><br><span class="line">  allMarkdownRemark &#123;</span><br><span class="line">    edges &#123;</span><br><span class="line">      node &#123;</span><br><span class="line">        frontmatter &#123;</span><br><span class="line">          title</span><br><span class="line">          frontmatterExcerpt</span><br><span class="line">        &#125;</span><br><span class="line">        html</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Run the query and see what we get.<br>The result shows four nodes, which corresponds to four Markdown documents that we have.<br>We see that we got values for <strong>title</strong> and <strong>frontmatterExcerpt</strong> from <strong>frontmatter</strong>, as well as the value of <strong>html</strong> field. It is a string that contains HTML representation of our Markdow docuemnts’ bodies. The <strong>transformer-remark</strong> plugin has successfully transformed markdown to HTML.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;data&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;allMarkdownRemark&quot;</span>: &#123;</span><br><span class="line">      <span class="string">&quot;edges&quot;</span>: [</span><br><span class="line">        &#123;</span><br><span class="line">          <span class="string">&quot;node&quot;</span>: &#123;</span><br><span class="line">            <span class="string">&quot;frontmatter&quot;</span>: &#123;</span><br><span class="line">              <span class="string">&quot;title&quot;</span>: <span class="string">&quot;Project 4&quot;</span>,</span><br><span class="line">              <span class="string">&quot;frontmatterExcerpt&quot;</span>: <span class="string">&quot;This is the Project 4 content.&quot;</span></span><br><span class="line">            &#125;,</span><br><span class="line">            <span class="string">&quot;html&quot;</span>: <span class="string">&quot;&lt;h1&gt;This is project heading&lt;/h1&gt;\n&lt;p&gt;This is project paragraph&lt;/p&gt;\n&lt;h2&gt;This is project heading 2&lt;/h2&gt;\n&lt;p&gt;This is another paragraph&lt;/p&gt;\n&lt;p&gt;&lt;a href=\&quot;https://google.com\&quot;&gt;This is a link to Google&lt;/a&gt;&lt;/p&gt;\n&lt;h3&gt;Below is an unordered list:&lt;/h3&gt;\n&lt;ul&gt;\n&lt;li&gt;List item&lt;/li&gt;\n&lt;li&gt;Another list item&lt;/li&gt;\n&lt;/ul&gt;\n&lt;h4&gt;And below is an ordered list&lt;/h4&gt;\n&lt;ol&gt;\n&lt;li&gt;List item again&lt;/li&gt;\n&lt;li&gt;More, more items...&lt;/li&gt;\n&lt;/ol&gt;&quot;</span></span><br><span class="line">          &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="comment">// Projects 3 and 2 cut</span></span><br><span class="line">        &#123;</span><br><span class="line">          <span class="string">&quot;node&quot;</span>: &#123;</span><br><span class="line">            <span class="string">&quot;frontmatter&quot;</span>: &#123;</span><br><span class="line">              <span class="string">&quot;title&quot;</span>: <span class="string">&quot;Project 1&quot;</span>,</span><br><span class="line">              <span class="string">&quot;frontmatterExcerpt&quot;</span>: <span class="string">&quot;This is the Project 1 content.&quot;</span></span><br><span class="line">            &#125;,</span><br><span class="line">            <span class="string">&quot;html&quot;</span>: <span class="string">&quot;&lt;h1&gt;This is project heading&lt;/h1&gt;\n&lt;p&gt;This is project paragraph&lt;/p&gt;\n&lt;h2&gt;This is project heading 2&lt;/h2&gt;\n&lt;p&gt;This is another paragraph&lt;/p&gt;\n&lt;p&gt;&lt;a href=\&quot;https://google.com\&quot;&gt;This is a link to Google&lt;/a&gt;&lt;/p&gt;\n&lt;h3&gt;Below is an unordered list:&lt;/h3&gt;\n&lt;ul&gt;\n&lt;li&gt;List item&lt;/li&gt;\n&lt;li&gt;Another list item&lt;/li&gt;\n&lt;/ul&gt;\n&lt;h4&gt;And below is an ordered list&lt;/h4&gt;\n&lt;ol&gt;\n&lt;li&gt;List item again&lt;/li&gt;\n&lt;li&gt;More, more items...&lt;/li&gt;\n&lt;/ol&gt;&quot;</span></span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">      ]</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Note that <strong>node</strong> has a field called excerpt. This is a default field available on the node which, if selected, returns first 140 characters of the document’s body. This can be increased or decreased.<br>I have chosen to ignore this default excerpt option and instead define my own in frontmatter, to be able to fully control what excerpt shows.</p>
+<h2 id="Query-Markdown-documents-on-the-Home-page-and-map-over-it-to-render-a-list-of-projects"><a href="#Query-Markdown-documents-on-the-Home-page-and-map-over-it-to-render-a-list-of-projects" class="headerlink" title="Query Markdown documents on the Home page and map over it to render a list of projects"></a>Query Markdown documents on the Home page and map over it to render a list of projects</h2><p>Now that we know how to query and transform Markdown documents, why not list all of our projects on the Home page?</p>
+<p>We can run a page query to get a list of MarkdownRemark data, and pass it from the HomePage to the <strong>ILearnMapper</strong> component. The mapper will go over the list, rendering an <strong>LearnItem</strong> component for each item in the list.<br>Let’s do it. </p>
+<p>First, let’s make that page query in the <strong>Home</strong> component. The query will return data and pass it as a prop to the component. </p>
+<p>We need to query allMarkdownRemark for:</p>
+<ol>
+<li>id - it is a field that exists on every node. We need as a key for each list item </li>
+<li>frontmatter title</li>
+<li>frontmatterExcerpt</li>
+<li>frontmatter date - note how we can define a returned format on the date from the frontmatter. I have defined date in the frontmatter in format “YYYY-MM-DD”, and requested the query to return “DD/MM/YYYY”. I have also changed frontmatter dates in all Markdown documents, so they are all different. </li>
+</ol>
+<p>Here is the page query in the <strong>Home</strong> page, together with passing the query results to the <strong>ILearnMapper</strong> component:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// src/pages/index.tsx</span></span><br><span class="line"><span class="comment">// ...</span></span><br><span class="line"><span class="keyword">const</span> HomePage: React.FC&lt;HomePageProps&gt; = (&#123;</span><br><span class="line">  location,</span><br><span class="line">  data,</span><br><span class="line">&#125;) =&gt; &#123;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">        &lt;section className=<span class="string">&quot;home-page__i-learn&quot;</span>&gt;</span><br><span class="line">          &#123;<span class="comment">/*...*/</span>&#125;</span><br><span class="line">          &lt;ILearnMapper projects=&#123;data.allMarkdownRemark.edges&#125; /&gt;</span><br><span class="line">        &lt;/section&gt;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">  )</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> query = graphql<span class="string">`</span></span><br><span class="line"><span class="string">  query &#123;</span></span><br><span class="line"><span class="string">    allMarkdownRemark(sort: &#123; fields: frontmatter___date, order: DESC &#125;) &#123;</span></span><br><span class="line"><span class="string">      edges &#123;</span></span><br><span class="line"><span class="string">        node &#123;</span></span><br><span class="line"><span class="string">          id</span></span><br><span class="line"><span class="string">          frontmatter &#123;</span></span><br><span class="line"><span class="string">            title</span></span><br><span class="line"><span class="string">            date(formatString: &quot;DD/MM/YYYY&quot;)</span></span><br><span class="line"><span class="string">            frontmatterExcerpt</span></span><br><span class="line"><span class="string">          &#125;</span></span><br><span class="line"><span class="string">        &#125;</span></span><br><span class="line"><span class="string">      &#125;</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">  &#125;</span></span><br><span class="line"><span class="string">`</span></span><br></pre></td></tr></table></figure>
+
+<p>Notice that we are sorting the queried results by the <strong>frontmatter___date</strong> field, in the <strong>DESC</strong> order.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">allMarkdownRemark(sort: &#123; fields: frontmatter___date, order: DESC &#125;) &#123;...</span><br></pre></td></tr></table></figure>
+
+<p>We could have also sorted it in ascending order, or chose any other frontmatter field for sorting.<br>I used GraphiQL to set this up.</p>
+<p>Next up, we are mapping over the MarkdownRemark results in the <strong>ILeanMapper</strong> component, and render a <strong>LearnItem</strong> component for every item in the results lists.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// src/containers/i-learn-mapper.container.tsx</span></span><br><span class="line"><span class="keyword">const</span> ILearnMapper: React.FC&lt;ILearnMapperProps&gt; = <span class="function">(<span class="params">&#123; projects &#125;</span>) =&gt;</span> &#123;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    &lt;ILearnMapperStyled className=<span class="string">&quot;i-learn-mapper&quot;</span>&gt;</span><br><span class="line">      &#123;projects.map(<span class="function">(<span class="params">&#123; node: &#123; id, frontmatter &#125; &#125;</span>) =&gt;</span> (</span><br><span class="line">        &lt;LearnItem key=&#123;id&#125; frontmatter=&#123;frontmatter&#125;/&gt;</span><br><span class="line">      ))&#125;</span><br><span class="line">    &lt;/ILearnMapperStyled&gt;</span><br><span class="line">  )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>And finally, let’s accept and render all those props in the <strong>LearnItem</strong> component:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// src/components/learn-item.component</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// ...</span></span><br><span class="line"></span><br><span class="line">interface LearnItemProps &#123;</span><br><span class="line">    frontmatter: &#123;</span><br><span class="line">      title: string</span><br><span class="line">      date: string</span><br><span class="line">      frontmatterExcerpt: string</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">const</span> LearnItem: React.FC&lt;LearnItemProps&gt; = (&#123;</span><br><span class="line">    frontmatter: &#123;</span><br><span class="line">      title,</span><br><span class="line">      date,</span><br><span class="line">      frontmatterExcerpt: excerpt</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;) =&gt; &#123;</span><br><span class="line">  </span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      &lt;LearnItemStyled className=<span class="string">&quot;learn-item&quot;</span>&gt;</span><br><span class="line">        &lt;div className=<span class="string">&quot;learn-item__learn-points&quot;</span>&gt;</span><br><span class="line">            &lt;h3 className=<span class="string">&quot;learn-points__title&quot;</span>&gt;&#123;title&#125;&lt;/h3&gt;</span><br><span class="line">            &lt;span className=<span class="string">&quot;learn-points__date&quot;</span>&gt;&#123;date&#125;&lt;/span&gt;</span><br><span class="line">            &lt;p className=<span class="string">&quot;learn-points__other&quot;</span>&gt;&#123;excerpt&#125;&lt;/p&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">      &lt;/LearnItemStyled&gt;</span><br><span class="line">    )</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">export</span> <span class="keyword">default</span> LearnItem</span><br></pre></td></tr></table></figure>
+
+<p>Nice. Let’s visit the Home page now. We should have a list of four projects there, sorted by date. We have successfully used the <strong>transformer-remark</strong> plugin together with the <strong>source-filesystem</strong> plugin to list all of our projects. Progress.</p>
+<p>Alright. We now know how to transform Markdown to HTML, and how to extract data from such documents.<br>In the next post we will use Markdown files to create project pages. We will create a component which will be used as a template for project pages. We will define a path for each project page, and we will create as many pages as we have Markdown files.<br>We will also return to the <strong>LearnItem</strong> component, and link its title to a project page which corresponds to its title.<br>Then, in the following post, we will attempt to insert body content from Markdown documents into newly created pages, and see what options does Gatsby offer to do that.</p>
+<!-- End Step Content -->
+
+<!-- Project Information -->
+
+<h2 id="Project-Information"><a href="#Project-Information" class="headerlink" title="Project Information"></a>Project Information</h2><h3 id="Available-at"><a href="#Available-at" class="headerlink" title="Available at"></a>Available at</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/ikaem/angry-chaired-gatsby">Github</a> </li>
+<li><a target="_blank" rel="noopener" href="https://angrychaired.surge.sh/">Live project</a></li>
+</ul>
+<h3 id="Goals"><a href="#Goals" class="headerlink" title="Goals"></a>Goals</h3><ol>
+<li>A Gatsby website with a list of projects on home page</li>
+<li>Dedicated pages for each project</li>
+<li>Write project information in Markdown</li>
+<li>Functional message form </li>
+<li>Deployed website</li>
+</ol>
+<h3 id="Steps"><a href="#Steps" class="headerlink" title="Steps"></a>Steps</h3><ol>
+<li>Create new Gatsby project with TS and create basic pages</li>
+<li>Create layout and its elements, and other components</li>
+<li>Install Styled Components and its Gatsby plugin to style pages</li>
+<li>Get data with Filesystem plugin and GraphQL</li>
+<li><strong>Write projects content in Markdown, transform and query them with the transformer-remark plugin</strong></li>
+<li>Programatically create pages from Markdown files</li>
+<li>Insert Markdown files into pages with the <strong>transformer-remark</strong> plugin</li>
+<li>Use Gatsby Image to work with images</li>
+<li>Create send message feature on the contact page</li>
+<li>Audit, optimize and deploy the website</li>
+</ol>
+<h3 id="Tech-and-Tools"><a href="#Tech-and-Tools" class="headerlink" title="Tech and Tools"></a>Tech and Tools</h3><ol>
+<li>React</li>
+<li>Gatsby</li>
+<li>Markdown</li>
+<li>TypeScript</li>
+<li>Getform.io</li>
+<li>Surge</li>
+<li>Styled Components</li>
+</ol>
+<h3 id="Experience-with-Tech-amp-Tools"><a href="#Experience-with-Tech-amp-Tools" class="headerlink" title="Experience with Tech &amp; Tools"></a>Experience with Tech &amp; Tools</h3><p>Prior to this project, I had very little experience with Gatsby. I did a little something with Next.js, another React framework that focuses on server-side rendered websites. I am ok with GraphQL, on which Gatsby heavily relies to get its data, and I am ok with TS too.  </p>
+<h2 id="DISCLAIMER"><a href="#DISCLAIMER" class="headerlink" title="DISCLAIMER"></a>DISCLAIMER</h2><p>Don’t take any of this seriously and as a matter-of-fact. These are my notes. It might look like I am trying to teach something to someone. I am not.</p>
+
+
+                
+
+
+                <!-- Cover image credit -->
+                
+                    <p class="image-credit-link">
+                        Cover image by <strong>
+                            <a target="_blank" rel="noopener" href="https://unsplash.com/@lucasmessere?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
+                                Lucas Messere
+                            </a>
+                        </strong>
+                    </p>
+
+                
+
+  
+
+            </div>
+            
+            <!-- Custom placed tags -->
+            <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                
+                    
+
+
+<a href="/angry-chaired-blog/tags/gatsby-plugins/">#gatsby plugins</a> <a href="/angry-chaired-blog/tags/markdown/">#markdown</a>
+
+
+                
+            </div>
+            <!--  -->
+
+
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+
+            <!-- Hyvor comments -->
+
+            <!-- End of Hyvor comments -->
+        </div>
+    </div>
+</article>
+
+
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2020 kaem<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

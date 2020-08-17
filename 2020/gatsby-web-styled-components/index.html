@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="Inexperienced and curious pokes into the sprawling world of web development "/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="kaem"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Gatsby Web: Styled Components"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Inexperienced and curious pokes into the sprawling world of web development "/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Angry Chaired Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://ikaem.github.io/angry-chaired-blog/angry-chaired-blog/images/header-image.jpg"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://ikaem.github.io/angry-chaired-blog/angry-chaired-blog/images/header-image.jpg"/>
+    
+
+    <!-- Title -->
+    
+    <title>Gatsby Web: Styled Components - Angry Chaired Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/angry-chaired-blog/css/style.css">
+
+    
+<link rel="stylesheet" href="/angry-chaired-blog/css/custom-style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+    <link rel="icon" href="/angry-chaired-blog/images/favicon.ico"/>
+    
+
+<meta name="generator" content="Hexo 5.0.2"><link rel="alternate" href="/angry-chaired-blog/atom.xml" title="Angry Chaired Blog" type="application/atom+xml">
+</head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/angry-chaired-blog/">Angry Chaired Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/about">
+                            
+                                About
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a target="_blank" rel="noopener" href="https://angrychaired.surge.sh">
+                            
+                                <i class="fa fa-user fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a target="_blank" rel="noopener" href="https://github.com/ikaem/">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a href="/angry-chaired-blog/atom.xml">
+                            
+                                <i class="fa fa-rss fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('filip-baotic-bapQrN7zcg8-unsplash.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Gatsby Web: Styled Components</h1>
+
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            16/08/2020
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/angry-chaired-blog/categories/gatsby-web/">gatsby web</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <!-- Step Content Start -->
+
+<h4 id="Part-3-of-10-in-Gatsby-Web"><a href="#Part-3-of-10-in-Gatsby-Web" class="headerlink" title="Part 3 of 10 in Gatsby Web"></a>Part 3 of 10 in Gatsby Web</h4><p>At the moment, our app looks pretty dry. In fact, it is ugly. We have to style it a bit.<br>Official Gatsby tutorial goes with CSS Modules when it comes to styling.<br>However, I prefer Styled Components. It allows us to have styles in the same file as React components, we can nest style rules like with Sass, and we can define global styles with it, too. </p>
+<a id="more"></a>
+
+<h4 id="See-Project-Information"><a href="#See-Project-Information" class="headerlink" title="See Project Information"></a>See <a href="#Project-Information">Project Information</a></h4><h2 id="Step-2-Install-Styled-Components-and-its-Gatsby-plugin-to-style-pages"><a href="#Step-2-Install-Styled-Components-and-its-Gatsby-plugin-to-style-pages" class="headerlink" title="Step 2. Install Styled Components and its Gatsby plugin to style pages"></a>Step 2. Install Styled Components and its Gatsby plugin to style pages</h2><p>There is a small issue when it comes to importing fonts, but its Gatsby, so there is a plugin for that. </p>
+<p>Here is what we will do:</p>
+<ol>
+<li>Install Styled Components, its TS types, and its Gatsby plugin</li>
+<li>Define global styles for the app</li>
+<li>Install a plugin to enable Google fonts in global styles</li>
+<li>Get footer icons with FontAwesome</li>
+<li>Style the <strong>PageTitle</strong> component</li>
+</ol>
+<p>Again, to stay on point, we won’t go into styling all the components we made so far. This is all available in the project code on Github.</p>
+<h3 id="Install-Styled-Components-its-TS-types-and-its-Gatsby-plugin"><a href="#Install-Styled-Components-its-TS-types-and-its-Gatsby-plugin" class="headerlink" title="Install Styled Components, its TS types, and its Gatsby plugin"></a>Install Styled Components, its TS types, and its Gatsby plugin</h3><p>To use Styled Components with Gatsby, we install 3 packages:</p>
+<ul>
+<li>Actual <strong>styled-components</strong> package</li>
+<li>A Gatsby plugin for the package, <strong>gatsby-plugin-styled-components</strong></li>
+<li>Babel plugin for Styled Components, <strong>babel-plugin-styled-components</strong>, which apparently enables server-side render ability and makes style bundles smaller in size, among other things.</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save gatsby-plugin-styled-components styled-components babel-plugin-styled-components</span><br></pre></td></tr></table></figure>
+
+<p>Of course, since we are working with TS, we need to install TS types for styled-components:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i -D @types/styled-components</span><br></pre></td></tr></table></figure>
+
+<p>Now, we get into Gatsby territory.<br>In the root of our project, there is a file called <strong>gatsby-config.js</strong>. This file is used for configuring plugins, metadata, and other things in our application. Name of this file is predefined, and Gatsby expects to find it in the root of the project. We cannot change its name or extension.<br><a target="_blank" rel="noopener" href="https://www.gatsbyjs.org/docs/api-files-gatsby-config/">Here</a> is the Gatsby’s own overview of the file.</p>
+<p>Right now, the <strong>gatsby-config</strong> file in our app is empty, and looks like this: </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Configure your Gatsby site with this file.</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * See: https://www.gatsbyjs.org/docs/gatsby-config/</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  <span class="comment">/* Your site config here */</span></span><br><span class="line">  plugins: [],</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>We can remove comments, and add a new item to the <strong>plugins</strong> array.<br>The item will be a string representing the Gatsby plugin for styled-components. If you go back to when we installed the plugin, you can see that its name was <strong>gatsby-plugin-styled-components</strong>. This exact name is what we will add to the <strong>plugins</strong> array.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// gatsby-config.js</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  plugins: [<span class="string">&quot;gatsby-plugin-styled-components&quot;</span>],</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>That’s it (as far the SC plugin is concerned). We can now use styled components in our app.</p>
+<h3 id="Define-global-styles-for-the-app"><a href="#Define-global-styles-for-the-app" class="headerlink" title="Define global styles for the app"></a>Define global styles for the app</h3><p>Defining a global style with SC is not an exclusive Gatsby thing. It did, however, introduce me to a problem that I solved by… intalling a new plugin.<br>This is a common thing in Gatsby, it seems: there is a problem, and then there is a plugin that solves the problem.</p>
+<p>We will create the global style component in the <strong>Layout</strong> component. It is the most natural place, and <a target="_blank" rel="noopener" href="https://www.gatsbyjs.org/docs/styled-components/#creating-global-styles">recommended by the Gatby team</a>, as <strong>Layout</strong> is where all other components sit in.</p>
+<p>Global style is created with the named <strong>createGlobalStyle</strong> imported function. It returns a styled component, which we can then place at top of our <strong>Layout</strong> component. </p>
+<p>Here it is:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// src/components/layout.component.tsx</span></span><br><span class="line"></span><br><span class="line">...</span><br><span class="line"><span class="keyword">import</span> &#123; createGlobalStyle &#125; <span class="keyword">from</span> <span class="string">&quot;styled-components&quot;</span></span><br><span class="line">...</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> Layout: React.FC&lt;LayoutProps&gt; = <span class="function">(<span class="params">&#123; children, path &#125;</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    &lt;div className=<span class="string">&quot;layout&quot;</span>&gt;</span><br><span class="line">      &lt;GlobalStyle /&gt;</span><br><span class="line">      &lt;Header /&gt;</span><br><span class="line">      ...</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  )</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> Layout</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> GlobalStyle = createGlobalStyle<span class="string">`</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    @import url(&quot;https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@400;900&amp;display=swap&quot;);</span></span><br><span class="line"><span class="string">    @import url(&quot;https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,900;1,700&amp;display=swap&quot;);</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    /* variables */</span></span><br><span class="line"><span class="string">    :root &#123;</span></span><br><span class="line"><span class="string">        --red: #FF715B;</span></span><br><span class="line"><span class="string">        --bluegreen: #F1F4F4;</span></span><br><span class="line"><span class="string">        --smudgedblue: #5D6A6A; </span></span><br><span class="line"><span class="string">        --textblue: #373f3f;</span></span><br><span class="line"><span class="string">        --touchedwhite: #FBFCFF;</span></span><br><span class="line"><span class="string">        --usedyellow: #FFEF5B;</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    /* fonts */</span></span><br><span class="line"><span class="string">    html &#123;</span></span><br><span class="line"><span class="string">        font-family: &#x27;Lato&#x27;, sans-serif;</span></span><br><span class="line"><span class="string">        font-size: 100%;</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    /* reset */</span></span><br><span class="line"><span class="string">    * &#123;</span></span><br><span class="line"><span class="string">        box-sizing: border-box;</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    body, #___gatsby, #gatsby-focus-wrapper &#123;</span></span><br><span class="line"><span class="string">        height: 100%;</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    body &#123;</span></span><br><span class="line"><span class="string">        overflow-x: hidden;</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    body, h1, h2, h3, h4, ul, a, p &#123;</span></span><br><span class="line"><span class="string">        margin: 0;</span></span><br><span class="line"><span class="string">        padding: 0;</span></span><br><span class="line"><span class="string">        text-decoration: none;</span></span><br><span class="line"><span class="string">        list-style: none;</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    ol &#123;</span></span><br><span class="line"><span class="string">        margin: 0;</span></span><br><span class="line"><span class="string">        padding-left: 1rem;</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    img &#123;</span></span><br><span class="line"><span class="string">        display: block;</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    button, input, textarea &#123;</span></span><br><span class="line"><span class="string">        font: inherit;</span></span><br><span class="line"><span class="string">        padding: 0;</span></span><br><span class="line"><span class="string">        margin: 0;</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    button:focus, </span></span><br><span class="line"><span class="string">    input:focus, </span></span><br><span class="line"><span class="string">    textarea:focus &#123;</span></span><br><span class="line"><span class="string">        outline: none;</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">`</span></span><br></pre></td></tr></table></figure>
+
+<p>Ok, so far so good. If you go and check the Home page, you can see that element margins and paddings are now removed, and that links in navigations are no longer bulleted. </p>
+<h3 id="Install-a-plugin-to-import-Google-fonts-in-global-styles"><a href="#Install-a-plugin-to-import-Google-fonts-in-global-styles" class="headerlink" title="Install a plugin to import Google fonts in global styles"></a>Install a plugin to import Google fonts in global styles</h3><p>With the <strong>GlobalStyles</strong> component, we have reset our stylesheet, and set general styles. However, there is an issue with global fonts.<br>We are importing fonts from Google Fonts in our global styles component, and then using one of them, <strong>Lato</strong>, as the default font in the app. Unfortunately, this font is never actually applied. Instead, a default serif font is used.</p>
+<p>This has to do with Styled Components itself, and <a target="_blank" rel="noopener" href="https://scottspence.com/2020/02/06/globally-style-gatsby-styled-components/">this guy</a> points to it, and offers a solution in the form of another plugin - the <strong>gatsby-plugin-google-fonts</strong>.</p>
+<p>This plugin, when installed, is also added to the <strong>plugins</strong> array. However, unlike the <strong>styled-components</strong> plugin, this one is added in the form of a JS object with properties that configure it.<br>As we will see throughout this series, some plugins are included in the plugins array as a simple string, some require a configuration object, and some packages are not included there at all. Wonders…</p>
+<p>Anyway, we install the plugin:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i gatsby-plugin-google-fonts</span><br></pre></td></tr></table></figure>
+
+<p>Then, we create a new entry in the <strong>plugins</strong> array in the <strong>gatsby-config.js</strong> file.<br>This entry is an object, resolving to <strong>gatsby-plugin-google-fonts</strong>, and specifying Google fonts that we want to bring into our app.<br>The fonts are defined as an entry in the <strong>fonts</strong> array, consisting of the font name and required font weights.<br>Font display option is also specified, which is <strong>swap</strong> in this case, instructing the browser to use our serif font until it manages to replace it with our chosen font. </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// gatsby-config.js</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  plugins: [</span><br><span class="line">    <span class="string">&quot;gatsby-plugin-styled-components&quot;</span>,</span><br><span class="line">    &#123;</span><br><span class="line">      resolve: <span class="string">&quot;gatsby-plugin-google-fonts&quot;</span>,</span><br><span class="line">      options: &#123;</span><br><span class="line">        fonts: [<span class="string">`Playfair Display SC\:400,700,900`</span>, <span class="string">`Lato\:400,700`</span>],</span><br><span class="line">        display: <span class="string">&quot;swap&quot;</span>,</span><br><span class="line">      &#125;,</span><br><span class="line">    &#125;,</span><br></pre></td></tr></table></figure>
+
+<p>Note that I had trouble with specifying fonts in lowercase letters, as done on Gatsby website and in the mentioned article. Instead, I typed names of fonts in the way they are written on Google Fonts website. </p>
+<p>Alright, that should be it. We need to restart our development server after modifying <strong>gatsby-config.js</strong> (CTRL+C to stop it, and <strong>gatsby develop</strong> to start again), and <strong>Lato</strong> font should be used everywhere. Everywhhere, I tell you.</p>
+<h3 id="Get-footer-icons-with-FontAwesome"><a href="#Get-footer-icons-with-FontAwesome" class="headerlink" title="Get footer icons with FontAwesome"></a>Get footer icons with FontAwesome</h3><p>While we won’t bother with styling the footer here, I am including this because I initially wanted to use <strong>Styled Icons</strong> to get icons into the app. Styled Icons is an icon library by Styled Components, so this is the connection I was going for. Plus, I used styled icons before, and I liked it, so I figured to use them again.<br>Unfortunatly, I couldn’t get it to work, so I chose FontAwesome icon library instead.<br>I still kept the section in the blog series, however. Packages that we will use here don’t require a Gatsby plugin, so we get to see a case where a dependency in Gatsby does not require a plugin. </p>
+<p>I only needed three icons to use in the footer - Facebook, Twitter, and a simple envelope as an icon for email. </p>
+<p>For this, we need to install 4 packages. For 3 measly icons= A bit of an overkill, huh?</p>
+<ul>
+<li>@fortawesome/fontawesome-svg-core package, that will give us an access to icons library</li>
+<li>@fortawesome/free-solid-svg-icons, from which we will grab our envelope icon</li>
+<li>@fortawesome/free-brands-svg-icons, for Facebook and Twitter icons</li>
+<li>@fortawesome/react-fontawesome, which provides a component to render the icons</li>
+</ul>
+<p>Now, let’s build a library to house our 3 icons, so we can use them anywhere in the app. We need to get our money’s worth, right?</p>
+<p>Create a new folder in <strong>src</strong>, and call it <strong>utils</strong>. We can use it for any utility functions needed for our app.<br>Inside, create a new file called fontawesome.ts, and import the <strong>library</strong> object from the <strong>“core”</strong> package. This object will hold whatever icons we need, making them available all over the app.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// utils/fontawesome.ts</span></span><br><span class="line"><span class="keyword">import</span> &#123; library &#125; <span class="keyword">from</span> <span class="string">&quot;@fortawesome/fontawesome-svg-core&quot;</span>;</span><br></pre></td></tr></table></figure>
+
+<p>Now, in the same file, let’s get the icons that we need.<br>We will get the Facebook and Twitter ones from the <strong>brands</strong> package, and the <strong>envelope</strong> one from the <strong>solid</strong> package:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// utils/fontawesome.ts</span></span><br><span class="line"><span class="keyword">import</span> &#123; library &#125; <span class="keyword">from</span> <span class="string">&quot;@fortawesome/fontawesome-svg-core&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; faEnvelopeSquare &#125; <span class="keyword">from</span> <span class="string">&quot;@fortawesome/free-solid-svg-icons&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; faFacebookSquare, faTwitterSquare &#125; <span class="keyword">from</span> <span class="string">&quot;@fortawesome/free-brands-svg-icons&quot;</span>;</span><br></pre></td></tr></table></figure>
+
+<p>Great. Now, in the spirit of overkill, we need to add them to the library. Same file, we call the <strong>add</strong> function available on the <strong>library</strong> object, and pass in all our icons.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// utils/fontawesome.ts</span></span><br><span class="line"><span class="keyword">import</span> &#123; library &#125; <span class="keyword">from</span> <span class="string">&quot;@fortawesome/fontawesome-svg-core&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; faEnvelopeSquare &#125; <span class="keyword">from</span> <span class="string">&quot;@fortawesome/free-solid-svg-icons&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; faFacebookSquare, faTwitterSquare &#125; <span class="keyword">from</span> <span class="string">&quot;@fortawesome/free-brands-svg-icons&quot;</span>;</span><br><span class="line"></span><br><span class="line">library.add(faEnvelopeSquare, faFacebookSquare, faTwitterSquare);</span><br></pre></td></tr></table></figure>
+
+<p>The icons library is now filled, and we can move on to use the icons.<br>To be able to use them, we have to initialize the library first.<br>We can do this in the <strong>Layout</strong> component again, as this component wraps everything else. We could initialize the library in the <strong>Footer</strong> too, but then only footer would have access to the library.</p>
+<p>To initialize the library, we simply import the <strong>fontawesome.ts</strong> file:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// src/components/layout.component.tsx</span></span><br><span class="line">...</span><br><span class="line"><span class="keyword">import</span> <span class="string">&quot;../utils/fontawesome&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>Next, we go to the Footer component.<br>To render our icons, we need to import the <strong>FontAwesomeIcon</strong> component from the <strong>“react-awesome</strong> package. </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// src/components/footer.component.tsx</span></span><br><span class="line">...</span><br><span class="line"><span class="keyword">import</span> &#123; FontAwesomeIcon &#125; <span class="keyword">from</span> <span class="string">&quot;@fortawesome/react-fontawesome&quot;</span>;</span><br></pre></td></tr></table></figure>
+
+<p>To render an icon, we provide a string value to the <strong>icon</strong> attribute on the <strong>FontAwesomeIcon</strong>. In our case, we want to use that envelope icon we added to the library, so we will provide its icon string - <strong>envelope-square</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// src/components/footer.component.tsx</span></span><br><span class="line">...</span><br><span class="line"><span class="keyword">import</span> &#123; FontAwesomeIcon &#125; <span class="keyword">from</span> <span class="string">&quot;@fortawesome/react-fontawesome&quot;</span>;</span><br><span class="line">...</span><br><span class="line"><span class="keyword">const</span> Footer = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    &lt;FooterStyled className=<span class="string">&quot;main-footer&quot;</span>&gt;</span><br><span class="line">      ...</span><br><span class="line">      &lt;ul className=<span class="string">&quot;main-footer__social-links&quot;</span>&gt;</span><br><span class="line">        ...</span><br><span class="line">        &lt;li className=<span class="string">&quot;social-links__link&quot;</span>&gt;</span><br><span class="line">          &lt;a href=<span class="string">&quot;#&quot;</span>&gt;</span><br><span class="line">            &lt;FontAwesomeIcon icon=<span class="string">&quot;envelope-square&quot;</span> /&gt;</span><br><span class="line">          &lt;/a&gt;</span><br><span class="line">        &lt;/li&gt;</span><br><span class="line">      &lt;/ul&gt;</span><br><span class="line">    &lt;/FooterStyled&gt;</span><br><span class="line">  )</span><br><span class="line">&#125;</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<p>The icon strings are just names of icons in string format. You can find those on the <a target="_blank" rel="noopener" href="https://fontawesome.com/icons?d=gallery">FontAwesome page</a>, when searching or browsing icons. Icon strings will be written below each icon. </p>
+<p>Try to open the website and look at the footer. Do you see the envelope? </p>
+<p>Let’s add that Facebook icon too. Try the same thing, add use its string - <strong>facebook-square</strong>.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;FontAwesomeIcon icon=<span class="string">&quot;facebook-square&quot;</span> /&gt;</span><br></pre></td></tr></table></figure>
+
+<p>Visit the site. No good, right? Nothing shows. This is because FA icons come with prefixes that identify their types. The envelope icon is a solid icon, making its prefix <strong>fas</strong> - font awesome solid. The Facebook one (and the Twitter one, too) on the other hand, is a <strong>brand</strong> icon - <strong>fab</strong>.</p>
+<p>When we provide icon names as strings, like we do here (yes, there are <a target="_blank" rel="noopener" href="https://medium.com/@johnny02/how-to-add-font-awesome-to-a-gatsby-site-89da940924d5">other</a> <a target="_blank" rel="noopener" href="https://github.com/FortAwesome/react-fontawesome#build-a-library-to-reference-icons-throughout-your-app-more-conveniently">ways</a>), the <strong>FontAwesomeIcon</strong> component assumes that the icon type (prefix) is <strong>fas</strong>. If we want to change that, we have to explicitly tell it otherwise.</p>
+<p>We do this by providing an array value to the <strong>icon</strong> attribute, and setting the array’s first value to be the neccessary prefix.<br>Like this:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;FontAwesomeIcon icon=&#123;[<span class="string">&quot;fab&quot;</span>, <span class="string">&quot;facebook-square&quot;</span>]&#125; /&gt;</span><br></pre></td></tr></table></figure>
+
+<p>Now, it should work.<br>If we want to resize these icons, or change their color, we do it simply by treating the <strong>FontAwesomeIcon</strong> components as fonts, and using selectors and CSS rules as we would to manipulate fonts. </p>
+<h3 id="Style-the-PageTitle-component"><a href="#Style-the-PageTitle-component" class="headerlink" title="Style the PageTitle component"></a>Style the <strong>PageTitle</strong> component</h3><p>We will only show how to style this small component.<br>Its style adds up to the style of each page, where <strong>PageTitle</strong> is a part of a flex-box.<br>When rendered on the Home page, I want it to be shown in the center, and when on other pages, I want it to be aligned all the way to the left. </p>
+<p>To get this, we will use the <strong>path</strong> prop we already have available in the Home page component. It will allow for some conditional styling of <strong>PageTitle</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// src/elements/page-title.element.tsx</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">&quot;react&quot;</span></span><br><span class="line"><span class="keyword">import</span> styled <span class="keyword">from</span> <span class="string">&quot;styled-components&quot;</span></span><br><span class="line"></span><br><span class="line">interface PageTitleProps &#123;</span><br><span class="line">  pageTitle: string; </span><br><span class="line">  path?: string; </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> PageTitle: React.FC&lt;PageTitleProps&gt; = (&#123;</span><br><span class="line">  pageTitle,</span><br><span class="line">  path,</span><br><span class="line">&#125;) =&gt; &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">PageTitleStyled</span> <span class="attr">path</span>=<span class="string">&#123;path&#125;</span>&gt;</span>&#123;pageTitle&#125;<span class="tag">&lt;/<span class="name">PageTitleStyled</span>&gt;</span></span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> PageTitle</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> PageTitleStyled = styled.h1<span class="string">`</span></span><br><span class="line"><span class="string">  color: var(--smudgedblue);</span></span><br><span class="line"><span class="string">  font-size: 1.5rem;</span></span><br><span class="line"><span class="string">  font-weight: 400;</span></span><br><span class="line"><span class="string">  margin-top: 0.5rem;</span></span><br><span class="line"><span class="string">  margin-bottom: 1rem;</span></span><br><span class="line"><span class="string">  align-self: <span class="subst">$&#123;(props: &#123; path: string &#125;</span>) =&gt; (props.path ? &quot;center&quot; : &quot;flex-start&quot;)&#125;;</span></span><br><span class="line"><span class="string">  padding-bottom: 0.25rem;</span></span><br><span class="line"><span class="string">  border-bottom: <span class="subst">$&#123;(props) =&gt; (props.path ? <span class="string">&quot;16px solid var(--red)&quot;</span> : <span class="string">&quot;8px solid var(--usedyellow)&quot;</span>)&#125;</span>;;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  @media (min-width: 40rem) &#123;</span></span><br><span class="line"><span class="string">    font-size: 1.75rem;</span></span><br><span class="line"><span class="string">    margin-top: 0.5rem;</span></span><br><span class="line"><span class="string">    margin-bottom: 1.5rem;</span></span><br><span class="line"><span class="string">  &#125;</span></span><br><span class="line"><span class="string">`</span></span><br></pre></td></tr></table></figure>
+
+<p>Note how are are typing that prop passed to the styled component. We have to type it just once, and after that TS knows what’s up, and doesn’t require typing for this particular property (path) anymore. </p>
+<p>Alright, that is it. We saw how to use plugins.<br>Next is the big one, the thing that makes Gatsby really cool - use of GraphQL to pull data into components. </p>
+<!-- End Step Content -->
+
+<!-- Project Information -->
+
+<h2 id="Project-Information"><a href="#Project-Information" class="headerlink" title="Project Information"></a>Project Information</h2><h3 id="Available-at"><a href="#Available-at" class="headerlink" title="Available at"></a>Available at</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/ikaem/angry-chaired-gatsby">Github</a> </li>
+<li><a target="_blank" rel="noopener" href="https://angrychaired.surge.sh/">Live project</a></li>
+</ul>
+<h3 id="Goals"><a href="#Goals" class="headerlink" title="Goals"></a>Goals</h3><ol>
+<li>A Gatsby website with a list of projects on home page</li>
+<li>Dedicated pages for each project</li>
+<li>Write project information in Markdown</li>
+<li>Functional message form </li>
+<li>Deployed website</li>
+</ol>
+<h3 id="Steps"><a href="#Steps" class="headerlink" title="Steps"></a>Steps</h3><ol>
+<li>Create new Gatsby project with TS and create basic pages</li>
+<li>Create layout and its elements, and other components</li>
+<li><strong>Install Styled Components and its Gatsby plugin to style pages</strong></li>
+<li>Get data with Filesystem plugin and GraphQL</li>
+<li>Write projects content in Markdown</li>
+<li>Programatically create pages from Markdown files</li>
+<li>Insert Markdown files into pages with MarkdownRemark plugin</li>
+<li>Use Gatsby Image to work with images</li>
+<li>Create send message feature on the contact page</li>
+<li>Audit, optimize and deploy the website</li>
+</ol>
+<h3 id="Tech-and-Tools"><a href="#Tech-and-Tools" class="headerlink" title="Tech and Tools"></a>Tech and Tools</h3><ol>
+<li>React</li>
+<li>Gatsby</li>
+<li>Markdown</li>
+<li>TypeScript</li>
+<li>Getform.io</li>
+<li>Surge</li>
+<li>Styled Components</li>
+</ol>
+<h3 id="Experience-with-Tech-amp-Tools"><a href="#Experience-with-Tech-amp-Tools" class="headerlink" title="Experience with Tech &amp; Tools"></a>Experience with Tech &amp; Tools</h3><p>Prior to this project, I had very little experience with Gatsby. I did a little something with Next.js, another React framework that focuses on server-side rendered websites. I am ok with GraphQL, on which Gatsby heavily relies to get its data, and I am ok with TS too.  </p>
+<h2 id="DISCLAIMER"><a href="#DISCLAIMER" class="headerlink" title="DISCLAIMER"></a>DISCLAIMER</h2><p>Don’t take any of this seriously and as a matter-of-fact. These are my notes. It might look like I am trying to teach something to someone. I am not.</p>
+
+
+                
+
+
+                <!-- Cover image credit -->
+                
+                    <p class="image-credit-link">
+                        Cover image by <strong>
+                            <a target="_blank" rel="noopener" href="https://unsplash.com/@filipbaotic?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
+                                Filip Baotić
+                            </a>
+                        </strong>
+                    </p>
+
+                
+
+  
+
+            </div>
+            
+            <!-- Custom placed tags -->
+            <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                
+                    
+
+
+<a href="/angry-chaired-blog/tags/gatsby/">#gatsby</a> <a href="/angry-chaired-blog/tags/styled-components/">#styled components</a>
+
+
+                
+            </div>
+            <!--  -->
+
+
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+
+            <!-- Hyvor comments -->
+
+            <!-- End of Hyvor comments -->
+        </div>
+    </div>
+</article>
+
+
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2020 kaem<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

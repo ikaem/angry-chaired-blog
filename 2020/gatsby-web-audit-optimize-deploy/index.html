@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="Inexperienced and curious pokes into the sprawling world of web development "/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="kaem"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Gatsby Web: Audit, Optimize &amp; Deploy"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Inexperienced and curious pokes into the sprawling world of web development "/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Angry Chaired Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://ikaem.github.io/angry-chaired-blog/angry-chaired-blog/images/header-image.jpg"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://ikaem.github.io/angry-chaired-blog/angry-chaired-blog/images/header-image.jpg"/>
+    
+
+    <!-- Title -->
+    
+    <title>Gatsby Web: Audit, Optimize &amp; Deploy - Angry Chaired Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/angry-chaired-blog/css/style.css">
+
+    
+<link rel="stylesheet" href="/angry-chaired-blog/css/custom-style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+    <link rel="icon" href="/angry-chaired-blog/images/favicon.ico"/>
+    
+
+<meta name="generator" content="Hexo 5.0.2"><link rel="alternate" href="/angry-chaired-blog/atom.xml" title="Angry Chaired Blog" type="application/atom+xml">
+</head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/angry-chaired-blog/">Angry Chaired Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/about">
+                            
+                                About
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a target="_blank" rel="noopener" href="https://angrychaired.surge.sh">
+                            
+                                <i class="fa fa-user fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a target="_blank" rel="noopener" href="https://github.com/ikaem/">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a href="/angry-chaired-blog/atom.xml">
+                            
+                                <i class="fa fa-rss fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('roko-labrovic-k_2yK3NCLx0-unsplash.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Gatsby Web: Audit, Optimize & Deploy</h1>
+
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            17/08/2020
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/angry-chaired-blog/categories/gatsby-web/">gatsby web</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <!-- Step Content Start -->
+
+<h4 id="Part-10-of-10-in-Gatsby-Web"><a href="#Part-10-of-10-in-Gatsby-Web" class="headerlink" title="Part 10 of 10 in Gatsby Web"></a>Part 10 of 10 in Gatsby Web</h4><p>After making our components, programmatically creating pages, inserting images and implementing messaging funcitonality, last thing to do is to actually put our website online. </p>
+<p>Before we do that, however, let’s tweak it a bit more.</p>
+<a id="more"></a>
+
+<h4 id="See-Project-Information"><a href="#See-Project-Information" class="headerlink" title="See Project Information"></a>See <a href="#Project-Information">Project Information</a></h4><h2 id="Step-10-Audit-optimize-and-deploy-the-website"><a href="#Step-10-Audit-optimize-and-deploy-the-website" class="headerlink" title="Step 10. Audit, optimize and deploy the website"></a>Step 10. Audit, optimize and deploy the website</h2><p>Here is what we will do:</p>
+<ol>
+<li>Audit the website to see what we need to tweak</li>
+<li>Do the tweaking: make the website a progressive web app, implement offline support, and optimize for SEO</li>
+<li>Deploy the website</li>
+</ol>
+<h3 id="Audit-the-website-to-see-what-we-need-to-tweak"><a href="#Audit-the-website-to-see-what-we-need-to-tweak" class="headerlink" title="Audit the website to see what we need to tweak"></a>Audit the website to see what we need to tweak</h3><p>To see how we can improve our website, let’s build it:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gatsby build</span><br></pre></td></tr></table></figure>
+
+<p>And then let’s serve it</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gatsby serve</span><br></pre></td></tr></table></figure>
+
+<p>Then, let’s open <strong>localhost:9000</strong> in Chrome’s private window, to prevent any extensions from interfering with the audit.<br>Open the Chrome Developer Tools with CTRL + SHIFT + I, and go to the <strong>Lighthouse</strong> tab. There, click on the <strong>Generate Report</strong> button and wait until the audit is complete.</p>
+<p>The results will show that our website is not a Progressive Web App, and that it has low accessibility and SEO scores.</p>
+<p>So let’s fix that.</p>
+<h3 id="Do-the-tweaking-make-the-website-a-progressive-web-app-implement-offline-support-and-optimize-for-SEO"><a href="#Do-the-tweaking-make-the-website-a-progressive-web-app-implement-offline-support-and-optimize-for-SEO" class="headerlink" title="Do the tweaking: make the website a progressive web app, implement offline support, and optimize for SEO"></a>Do the tweaking: make the website a progressive web app, implement offline support, and optimize for SEO</h3><p>Progressive Web App, or PWA, are websites that behave similar to regular applications on desktop or smartphones. They have offline functionality, can access hardware, and generally make web experience better. </p>
+<p>To consider a website a PWA, it has to satisfy several criteria.<br>One of them is to have a manifest.</p>
+<h4 id="Manifest"><a href="#Manifest" class="headerlink" title="Manifest"></a>Manifest</h4><p>Manifest is a simple JSON file that tells browser how a website should behave on phones or desktop.<br>Of course, Gatsby has a plugin to create a manifest, and when installed it will create it on every site build. </p>
+<p>Let’s install the plugin:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i gatsby-plugin-manifest</span><br></pre></td></tr></table></figure>
+
+<p>Manifest requires a favicon, an icon associated with a website. You can create a simple one at <a target="_blank" rel="noopener" href="http://www.xiconeditor.com/">X-Icon Editor</a>. Once you are done, click export and save it to your project, in <strong>src/data/images</strong> as <strong>favicon.icon</strong>.</p>
+<p>Then, we need to add the <strong>gatsby-plugin-manifest</strong> to the <strong>plugins</strong> array in <strong>gatsby-config.js</strong>. The manifest plugin needs to be added to the array as a configuration object, with its <strong>options</strong> object containing several properties. </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// gatsby-config.js</span></span><br><span class="line"><span class="comment">// ...</span></span><br><span class="line">&#123;</span><br><span class="line">  resolve: <span class="string">&quot;gatsby-plugin-manifest&quot;</span>,</span><br><span class="line">  options: &#123;</span><br><span class="line">    name: <span class="string">&quot;Angry Chaired&quot;</span>,</span><br><span class="line">    short_name: <span class="string">&quot;AngryCh&quot;</span>,</span><br><span class="line">    start_url: <span class="string">&quot;/&quot;</span>,</span><br><span class="line">    background_color: <span class="string">&quot;#FBFCFF&quot;</span>,</span><br><span class="line">    theme_color: <span class="string">&quot;#FF715B&quot;</span>,</span><br><span class="line">    display: <span class="string">&quot;minimal-ui&quot;</span>,</span><br><span class="line">    icon: <span class="string">&quot;./src/data/images/favicon.ico&quot;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>start_url</strong> is used to point to the starting point of the website</li>
+<li><strong>background_color</strong> defines color of the splash screen when the app is first launched on mobile</li>
+<li><strong>theme_color</strong> is UI color on mobile</li>
+<li><strong>display</strong> defines how the website should be displayed on mobile. For PWA purposes, display should be <strong>“standalone”</strong>, <strong>“minimal-ui”</strong> or <strong>“fullscreen”</strong></li>
+<li><strong>icon</strong> defines path to our favicon, relative to the root of the project</li>
+</ul>
+<p>More info can be found <a target="_blank" rel="noopener" href="https://developers.google.com/web/fundamentals/web-app-manifest/#display">here</a>.</p>
+<h4 id="Offline-support"><a href="#Offline-support" class="headerlink" title="Offline support"></a>Offline support</h4><p>Another PWA requirement is that the site can be used offline.<br>We can accomplish that with another plugin, <strong>gatsby-plugin-offline</strong>.</p>
+<p>The plugin is a script that decides whether the app should use network or cached data, and it does it based on network connectivity</p>
+<p>The setup is very simple. We just need to install the plugin and add it to the <strong>plugins</strong> array in <strong>gatsby-config.js</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install gatsby-plugin-offline</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// gatsby-config.js</span></span><br><span class="line">&#123;</span><br><span class="line">  resolve: <span class="string">&quot;gatsby-plugin-manifest&quot;</span>,</span><br><span class="line">  options: &#123;</span><br><span class="line">    name: <span class="string">&quot;Angry Chaired&quot;</span>,</span><br><span class="line">    short_name: <span class="string">&quot;AngryCh&quot;</span>,</span><br><span class="line">    start_url: <span class="string">&quot;/&quot;</span>,</span><br><span class="line">    background_color: <span class="string">&quot;#FBFCFF&quot;</span>,</span><br><span class="line">    theme_color: <span class="string">&quot;#FF715B&quot;</span>,</span><br><span class="line">    display: <span class="string">&quot;standalone&quot;</span>,</span><br><span class="line">    icon: <span class="string">&quot;src/data/images/favicon.ico&quot;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;,</span><br><span class="line"><span class="string">&quot;gatsby-plugin-offline&quot;</span>,</span><br><span class="line"><span class="comment">// ...</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="SEO-optimization"><a href="#SEO-optimization" class="headerlink" title="SEO optimization"></a>SEO optimization</h4><p>SEO is not connected to PWA, but is important in its own right. Good SEO will make a website rank better with search engines and increase organic popularity with users.</p>
+<p>To optimize SEO, we will use <strong>React Helmet</strong>, a popular component that manages document head in React components.<br>Gatsby also requires its own React Helmet plugin, so we will install both and add the Gatsby plugin to the <strong>plugins</strong> array.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i react-helmet gatsby-plugin-react-helmet</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// gatsby-config.js</span></span><br><span class="line"><span class="string">&quot;gatsby-transformer-sharp&quot;</span>,</span><br><span class="line"><span class="string">&quot;gatsby-plugin-sharp&quot;</span>,</span><br><span class="line"><span class="string">&quot;gatsby-plugin-react-helmet&quot;</span>,</span><br><span class="line">&#123;</span><br><span class="line">  resolve: <span class="string">&quot;gatsby-plugin-manifest&quot;</span>,</span><br><span class="line">  options: &#123;</span><br><span class="line">    name: <span class="string">&quot;Angry Chaired&quot;</span>,</span><br><span class="line">    short_name: <span class="string">&quot;AngryCh&quot;</span>,</span><br><span class="line">    start_url: <span class="string">&quot;/&quot;</span>,</span><br><span class="line">    background_color: <span class="string">&quot;#FBFCFF&quot;</span>,</span><br><span class="line">    theme_color: <span class="string">&quot;#FF715B&quot;</span>,</span><br><span class="line">    display: <span class="string">&quot;standalone&quot;</span>,</span><br><span class="line">    icon: <span class="string">&quot;src/data/images/favicon.ico&quot;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;,</span><br><span class="line"><span class="comment">// ...</span></span><br></pre></td></tr></table></figure>
+
+<p>React Helmet requires TS types to be installed as well, so let’s do that:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i -D @types/react-helmet</span><br></pre></td></tr></table></figure>
+
+<p>Let’s create an <strong>SEO</strong> component that will incorporate <strong>React Helmet</strong>.<br>This component will fetch our site’s metadata in <strong>gatsby-cofig</strong>, and it will accept props. It will then assign the received queried and props data to the <strong>React Helmet</strong>‘s props. <strong>React Helmet</strong> will then do its magic to set metadata of every page that uses the <strong>SEO</strong> component.</p>
+<p>First, the component. We import <strong>Helmet</strong> from <strong>“react-helmet”</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// src/components/seo.component.tsx</span></span><br><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">&quot;react&quot;</span></span><br><span class="line"><span class="keyword">import</span> &#123; Helmet &#125; <span class="keyword">from</span> <span class="string">&quot;react-helmet&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> SEO: React.FC = <span class="function">() =&gt;</span> &#123;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    &lt;Helmet /&gt;</span><br><span class="line">  )</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> SEO</span><br></pre></td></tr></table></figure>
+
+<p>Then, we assign some default props that come into our component.<br>We want to have <strong>lang</strong>, <strong>meta</strong> and <strong>description</strong> props no matter what.<br>Notice that the <strong>lang</strong> prop is set to <strong>“en”</strong> by default, and that the <strong>meta</strong> prop is an empty array.</p>
+<p>We also create an interface for the same props possiblly coming from a parent component, in which case they will overwrite the default ones.<br>We are making the passed props optional (except the <strong>title</strong> prop) to ensure that they don’t have to be passed in since we have the default ones. </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// src/components/seo.component.tsx</span></span><br><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">&quot;react&quot;</span></span><br><span class="line"><span class="keyword">import</span> &#123; Helmet &#125; <span class="keyword">from</span> <span class="string">&quot;react-helmet&quot;</span></span><br><span class="line"></span><br><span class="line">interface SEOProps &#123;</span><br><span class="line">  lang?: string</span><br><span class="line">  meta?: &#123; name?: string; content?: string &#125;[]</span><br><span class="line">  description?: string</span><br><span class="line">  title: string</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> SEO: React.FC&lt;SEOProps&gt; = <span class="function">(<span class="params">&#123; lang, meta, description, title &#125;</span>) =&gt;</span> &#123;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    &lt;Helmet /&gt;</span><br><span class="line">  )</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> SEO</span><br><span class="line"></span><br><span class="line">SEO.defaultProps = &#123;</span><br><span class="line">  lang: <span class="string">&quot;en&quot;</span>,</span><br><span class="line">  meta: [],</span><br><span class="line">  description: <span class="string">&quot;&quot;</span>,</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>Next, we will use the <strong>useStaticQuery</strong> hook to fetch site metadata from <strong>gatsby-config.js</strong>.<br>We will then assign that data to props of the <strong>Helmet</strong> component</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// src/components/seo.component.tsx</span></span><br><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">&quot;react&quot;</span></span><br><span class="line"><span class="keyword">import</span> &#123; Helmet &#125; <span class="keyword">from</span> <span class="string">&quot;react-helmet&quot;</span></span><br><span class="line"><span class="keyword">import</span> &#123; useStaticQuery, graphql &#125; <span class="keyword">from</span> <span class="string">&quot;gatsby&quot;</span></span><br><span class="line"></span><br><span class="line">interface MetadataQueryInterface &#123;</span><br><span class="line">  site: &#123;</span><br><span class="line">    siteMetadata: &#123;</span><br><span class="line">      title: string</span><br><span class="line">      description: string</span><br><span class="line">      author: string</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">interface SEOProps &#123;</span><br><span class="line">  lang?: string</span><br><span class="line">  meta?: &#123; name?: string; content?: string &#125;[]</span><br><span class="line">  description?: string</span><br><span class="line">  title: string</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> SEO: React.FC&lt;SEOProps&gt; = <span class="function">(<span class="params">&#123; lang, meta, description, title &#125;</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> &#123; site &#125; = useStaticQuery&lt;MetadataQueryInterface&gt;(graphql<span class="string">`</span></span><br><span class="line"><span class="string">    query &#123;</span></span><br><span class="line"><span class="string">      site &#123;</span></span><br><span class="line"><span class="string">        siteMetadata &#123;</span></span><br><span class="line"><span class="string">          author</span></span><br><span class="line"><span class="string">          description</span></span><br><span class="line"><span class="string">          title</span></span><br><span class="line"><span class="string">        &#125;</span></span><br><span class="line"><span class="string">      &#125;</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">  `</span>)</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    &lt;Helmet</span><br><span class="line">      htmlAttributes=&#123;&#123;</span><br><span class="line">        lang,</span><br><span class="line">      &#125;&#125;</span><br><span class="line">      title=&#123;title&#125;</span><br><span class="line">      titleTemplate=&#123;<span class="string">`<span class="subst">$&#123;site.siteMetadata.title&#125;</span> | %s `</span>&#125;</span><br><span class="line">      meta=&#123;([</span><br><span class="line">        &#123;</span><br><span class="line">          name: <span class="string">&quot;description&quot;</span>,</span><br><span class="line">          content: description || site.siteMetadata.description,</span><br><span class="line">        &#125;,</span><br><span class="line">      ] <span class="keyword">as</span> &#123;&#125;[]).concat(meta)&#125;</span><br><span class="line">    /&gt;</span><br><span class="line">  )</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> SEO</span><br><span class="line"></span><br><span class="line">SEO.defaultProps = &#123;</span><br><span class="line">  lang: <span class="string">&quot;en&quot;</span>,</span><br><span class="line">  meta: [],</span><br><span class="line">  description: <span class="string">&quot;&quot;</span>,</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>Few things might need explanation:</p>
+<ul>
+<li><strong>htmlAttributes</strong> is used here to define the language of the HTML body</li>
+<li><strong>title</strong> will define title of the page</li>
+<li><strong>titleTemplate</strong> defines the shape of the title on the browser tab. In this case, we specify that the title from the queried site metadata is shown first, then a verical bar (“|”) is shown, and then the value of the <strong>title</strong> prop on the <strong>Helmet</strong> component is shown. Note how <strong>“%s”</strong> stands for the <strong>title</strong> prop. The whole affair makes the browser tab show <strong>“Angry Chaired | Home Page”</strong>.</li>
+<li><strong>meta</strong> prop holds an array of meta entries. It can contain numerous entries, and here we only specify one, and concatanate the array with whatever might be passed to the SEO component as a <strong>meta</strong> prop. In this case, the meta tag that will be added holds description of our website, which can either passed to the component as a valid prop, or a description from the site metadata.</li>
+</ul>
+<p>Now, we just have to include the <strong>SEO</strong> component in one of our pages. Let’s do it in the <strong>Home</strong> page.<br>We will pass the <strong>title</strong> prop to it, as it is mandatory.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// src/pages/index.tsx</span></span><br><span class="line"><span class="comment">// ...</span></span><br><span class="line"><span class="keyword">return</span> (</span><br><span class="line">  &lt;Layout path=&#123;pathname&#125;&gt;</span><br><span class="line">    &lt;SEO title=<span class="string">&quot;Home page&quot;</span>/&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>This should do it. If we want, we can add more meta entries in our SEO, but this should do it for now.</p>
+<h3 id="Deploy-the-website"><a href="#Deploy-the-website" class="headerlink" title="Deploy the website"></a>Deploy the website</h3><p>Finally, we deploy the website.</p>
+<p>We do the basic one, as explained in <a target="_blank" rel="noopener" href="https://www.gatsbyjs.org/tutorial/part-one/">Gatsby tutorial</a>.</p>
+<p>We use Surge, a static site host, that makes this whole thing super easy.</p>
+<p>First, we need to install Surge on our system. We install it globally with:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --global surge</span><br></pre></td></tr></table></figure>
+
+<p>Then, we need to build our site, which we already know how to do</p>
+<p>Next, we login and create an account with Surge:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">surge login</span><br></pre></td></tr></table></figure>
+
+<p>The command will take us through short registration process</p>
+<p>Finally, we deploy the site:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gatsby public</span><br></pre></td></tr></table></figure>
+
+<p>Once the deployment starts, we can define the domain, or we can let surge generate a random one. </p>
+<p>That’s it. After the deployment is finished, visit the website and that is it.</p>
+<p>Indeed, that is it. It has been fun doing this. I learned a lot making the website, and then I learned tons more just writing about it.<br>I can’t say I am happy how the website turned out, though. Writing about it made me see tons of silly mistakes I made, as well as areas for improvement. I am already planning to return to it. I am particularly interested in MDX, a Markdown extension that allows for use of React components withing Markdown documents.<br>See you then</p>
+<!-- End Step Content -->
+
+<!-- Project Information -->
+
+<h2 id="Project-Information"><a href="#Project-Information" class="headerlink" title="Project Information"></a>Project Information</h2><h3 id="Available-at"><a href="#Available-at" class="headerlink" title="Available at"></a>Available at</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/ikaem/angry-chaired-gatsby">Github</a> </li>
+<li><a target="_blank" rel="noopener" href="https://angrychaired.surge.sh/">Live project</a></li>
+</ul>
+<h3 id="Goals"><a href="#Goals" class="headerlink" title="Goals"></a>Goals</h3><ol>
+<li>A Gatsby website with a list of projects on home page</li>
+<li>Dedicated pages for each project</li>
+<li>Write project information in Markdown</li>
+<li>Functional message form </li>
+<li>Deployed website</li>
+</ol>
+<h3 id="Steps"><a href="#Steps" class="headerlink" title="Steps"></a>Steps</h3><ol>
+<li>Create new Gatsby project with TS and create basic pages</li>
+<li>Create layout and its elements, and other components</li>
+<li>Install Styled Components and its Gatsby plugin to style pages</li>
+<li>Get data with Filesystem plugin and GraphQL</li>
+<li>Write projects content in Markdown, transform and query them with the transformer-remark plugin</li>
+<li>Programatically create pages from Markdown files</li>
+<li>Insert Markdown files into pages with the transformer-remark plugin</li>
+<li>Use Gatsby Image to work with images</li>
+<li>Create send message feature on the contact page</li>
+<li><strong>Audit, optimize and deploy the website</strong></li>
+</ol>
+<h3 id="Tech-and-Tools"><a href="#Tech-and-Tools" class="headerlink" title="Tech and Tools"></a>Tech and Tools</h3><ol>
+<li>React</li>
+<li>Gatsby</li>
+<li>Markdown</li>
+<li>TypeScript</li>
+<li>Getform.io</li>
+<li>Surge</li>
+<li>Styled Components</li>
+</ol>
+<h3 id="Experience-with-Tech-amp-Tools"><a href="#Experience-with-Tech-amp-Tools" class="headerlink" title="Experience with Tech &amp; Tools"></a>Experience with Tech &amp; Tools</h3><p>Prior to this project, I had very little experience with Gatsby. I did a little something with Next.js, another React framework that focuses on server-side rendered websites. I am ok with GraphQL, on which Gatsby heavily relies to get its data, and I am ok with TS too.  </p>
+<h2 id="DISCLAIMER"><a href="#DISCLAIMER" class="headerlink" title="DISCLAIMER"></a>DISCLAIMER</h2><p>Don’t take any of this seriously and as a matter-of-fact. These are my notes. It might look like I am trying to teach something to someone. I am not.</p>
+<hr>
+
+
+                
+
+
+                <!-- Cover image credit -->
+                
+                    <p class="image-credit-link">
+                        Cover image by <strong>
+                            <a target="_blank" rel="noopener" href="https://unsplash.com/@rlabrovi?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
+                                Roko Labrovic
+                            </a>
+                        </strong>
+                    </p>
+
+                
+
+  
+
+            </div>
+            
+            <!-- Custom placed tags -->
+            <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                
+                    
+
+
+<a href="/angry-chaired-blog/tags/gatsby/">#gatsby</a> <a href="/angry-chaired-blog/tags/deploy/">#deploy</a>
+
+
+                
+            </div>
+            <!--  -->
+
+
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+
+            <!-- Hyvor comments -->
+
+            <!-- End of Hyvor comments -->
+        </div>
+    </div>
+</article>
+
+
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2020 kaem<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

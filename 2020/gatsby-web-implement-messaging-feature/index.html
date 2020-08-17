@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="Inexperienced and curious pokes into the sprawling world of web development "/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="kaem"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Gatsby Web: Implement Messaging Feature"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Inexperienced and curious pokes into the sprawling world of web development "/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Angry Chaired Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://ikaem.github.io/angry-chaired-blog/angry-chaired-blog/images/header-image.jpg"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://ikaem.github.io/angry-chaired-blog/angry-chaired-blog/images/header-image.jpg"/>
+    
+
+    <!-- Title -->
+    
+    <title>Gatsby Web: Implement Messaging Feature - Angry Chaired Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/angry-chaired-blog/css/style.css">
+
+    
+<link rel="stylesheet" href="/angry-chaired-blog/css/custom-style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+    <link rel="icon" href="/angry-chaired-blog/images/favicon.ico"/>
+    
+
+<meta name="generator" content="Hexo 5.0.2"><link rel="alternate" href="/angry-chaired-blog/atom.xml" title="Angry Chaired Blog" type="application/atom+xml">
+</head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/angry-chaired-blog/">Angry Chaired Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/about">
+                            
+                                About
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a target="_blank" rel="noopener" href="https://angrychaired.surge.sh">
+                            
+                                <i class="fa fa-user fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a target="_blank" rel="noopener" href="https://github.com/ikaem/">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a href="/angry-chaired-blog/atom.xml">
+                            
+                                <i class="fa fa-rss fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('kevin-mueller-nB_l59Q0vFE-unsplash.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Gatsby Web: Implement Messaging Feature</h1>
+
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            17/08/2020
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/angry-chaired-blog/categories/gatsby-web/">gatsby web</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <!-- Step Content Start -->
+
+<h4 id="Part-9-of-10-in-Gatsby-Web"><a href="#Part-9-of-10-in-Gatsby-Web" class="headerlink" title="Part 9 of 10 in Gatsby Web"></a>Part 9 of 10 in Gatsby Web</h4><p>The <strong>Contact</strong> page contains a simple form that users could use to send us a message. There is also a list of other ways on how to contact us, but we want to offer a quick and simple way too, so users can do it on the spot.</p>
+<a id="more"></a>
+
+<h4 id="See-Project-Information"><a href="#See-Project-Information" class="headerlink" title="See Project Information"></a>See <a href="#Project-Information">Project Information</a></h4><h2 id="Step-9-Create-send-message-feature-on-the-contact-page"><a href="#Step-9-Create-send-message-feature-on-the-contact-page" class="headerlink" title="Step 9. Create send message feature on the contact page"></a>Step 9. Create send message feature on the contact page</h2><p>Here is the <strong>Contact</strong> page, with focus on the form. There is not much to it. User has to provide name, email and message subject together with the actual message.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// src/pages/contact.tsx</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">&quot;react&quot;</span></span><br><span class="line"><span class="comment">// ...</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> Contact: React.FC = <span class="function">() =&gt;</span> &#123;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    &lt;Layout&gt;</span><br><span class="line">      &lt;ContactStyled className=<span class="string">&quot;contact-page&quot;</span>&gt;</span><br><span class="line">        &lt;section</span><br><span class="line">          className=<span class="string">&quot;contact-page__message-section&quot;</span> &gt;</span><br><span class="line">          &#123;<span class="comment">/* ... */</span>&#125;</span><br><span class="line">          &lt;form className=<span class="string">&quot;message-section__message-form&quot;</span>&gt;</span><br><span class="line">            &lt;label htmlFor=<span class="string">&quot;name&quot;</span> className=<span class="string">&quot;message-form__label&quot;</span>&gt;</span><br><span class="line">              Name:</span><br><span class="line">            &lt;/label&gt;</span><br><span class="line">            &lt;input</span><br><span class="line">              type=<span class="string">&quot;text&quot;</span></span><br><span class="line">              id=<span class="string">&quot;name&quot;</span></span><br><span class="line">              className=<span class="string">&quot;message-form__input&quot;</span></span><br><span class="line">              name=<span class="string">&quot;name&quot;</span></span><br><span class="line">              required</span><br><span class="line">            /&gt;</span><br><span class="line">            &lt;label htmlFor=<span class="string">&quot;email&quot;</span> className=<span class="string">&quot;message-form__label&quot;</span>&gt;</span><br><span class="line">              Email:</span><br><span class="line">            &lt;/label&gt;</span><br><span class="line">            &lt;input</span><br><span class="line">              type=<span class="string">&quot;email&quot;</span></span><br><span class="line">              id=<span class="string">&quot;email&quot;</span></span><br><span class="line">              className=<span class="string">&quot;message-form__input&quot;</span></span><br><span class="line">              name=<span class="string">&quot;email&quot;</span></span><br><span class="line">              required</span><br><span class="line">            /&gt;</span><br><span class="line">            &lt;label htmlFor=<span class="string">&quot;subject&quot;</span> className=<span class="string">&quot;message-form__label&quot;</span>&gt;</span><br><span class="line">              Subject:</span><br><span class="line">            &lt;/label&gt;</span><br><span class="line">            &lt;input</span><br><span class="line">              type=<span class="string">&quot;text&quot;</span></span><br><span class="line">              id=<span class="string">&quot;subject&quot;</span></span><br><span class="line">              className=<span class="string">&quot;message-form__input&quot;</span></span><br><span class="line">              name=<span class="string">&quot;subject&quot;</span></span><br><span class="line">              required</span><br><span class="line">            /&gt;</span><br><span class="line">            &lt;label htmlFor=<span class="string">&quot;message&quot;</span> className=<span class="string">&quot;message-form__label span-2&quot;</span>&gt;</span><br><span class="line">              Message:</span><br><span class="line">            &lt;/label&gt;</span><br><span class="line">            &lt;textarea</span><br><span class="line">              name=<span class="string">&quot;message&quot;</span></span><br><span class="line">              id=<span class="string">&quot;message&quot;</span></span><br><span class="line">              rows=&#123;<span class="number">10</span>&#125;</span><br><span class="line">              className=<span class="string">&quot;message-form__input span-2&quot;</span></span><br><span class="line">              required</span><br><span class="line">            /&gt;</span><br><span class="line"></span><br><span class="line">            &lt;button</span><br><span class="line">              type=<span class="string">&quot;submit&quot;</span></span><br><span class="line">              className=<span class="string">&quot;message-form__btn-submit&quot;</span>&gt;</span><br><span class="line">              &lt;span className=<span class="string">&quot;btn-submit__label&quot;</span>&gt;Send&lt;/span&gt;</span><br><span class="line">            &lt;/button&gt;</span><br><span class="line">          &lt;/form&gt;</span><br><span class="line">        &#123;<span class="comment">/* ... */</span>&#125;</span><br><span class="line">  )</span><br></pre></td></tr></table></figure>
+
+<p>Gatsby <a target="_blank" rel="noopener" href="https://www.gatsbyjs.org/docs/building-a-contact-form/">documentation</a> suggests several options to implement messaging functionality into a Gatsby website.<br>I decided to go with <a target="_blank" rel="noopener" href="https://getform.io/">getform.io</a>, and the basic solution was a breeze.<br>I had to register on their website, click a big “Plus” button (that’s how they refer to it), get the URL they generated, and assign it as a value of <strong>action</strong> attribute. Make sure that the <strong>method</strong> attribute on the <strong>form</strong> element is <strong>“POST”</strong>, and that inputs have <strong>name</strong> attributes, and you are good to go. That’s it</p>
+<p>I also found a <a target="_blank" rel="noopener" href="https://blog.getform.io/building-a-gatsby-contact-form-using-getform/">guide</a> to geform’s own implementation of messaging on a Gatsby website, and this is what I base my solution on.</p>
+<p>The getform’s implementation builds on the basic solution by moving the URL endpoint to a submit handler, which is then called by the React’s <strong>onSubmit</strong> event.<br>It also uses <strong>Axios</strong>, an HTTP client, to actually submit form data to the URL endpoint, and tests getform’s response inside Axios’ return promise to show a “thank you” message.</p>
+<p>My version has stripped some of the logic, though.</p>
+<p>This is what we will do: </p>
+<ol>
+<li>Create messaging functionality to submit message and react to the submission state on the <strong>Contact</strong> page</li>
+<li>Use environment variables to “hide” our URL endpoint so it is not visible to the browser</li>
+</ol>
+<h3 id="Create-messaging-functionality-to-submit-message-and-react-to-the-submission-state-on-the-Contact-page"><a href="#Create-messaging-functionality-to-submit-message-and-react-to-the-submission-state-on-the-Contact-page" class="headerlink" title="Create messaging functionality to submit message and react to the submission state on the Contact page"></a>Create messaging functionality to submit message and react to the submission state on the <strong>Contact</strong> page</h3><p>First things first. Let’s create an accout on <strong>getform.io</strong>, click that big plus, and create a new form on their side. Then copy and save the URL endpoint.</p>
+<p>Next, let’s install <strong>axios</strong>:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i axios</span><br></pre></td></tr></table></figure>
+
+<p>We do not need to import anything into the <strong>plugins</strong> array of the <strong>gatsby-config.js</strong> file.<br>We do, however, import <strong>axios</strong> into <strong>Contact</strong> page:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// src/pages/contact.tsx</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">&quot;react&quot;</span>;</span><br><span class="line"><span class="comment">//...</span></span><br><span class="line"><span class="keyword">import</span> axios <span class="keyword">from</span> <span class="string">&quot;axios&quot;</span>;</span><br></pre></td></tr></table></figure>
+
+<p>Before we actually submit anything, or show success or fail messages, let’s log the data that our form contains once we click that <strong>submit</strong> button.</p>
+<p>Create a function inside the <strong>Contact</strong> component and call it <strong>handleSubmit</strong>. Prevent the default submit behavior, and log the entire event target. Then, have the <strong>onSubmit</strong> event on the form call the <strong>handleSubmit</strong> function. The event target is now the form, and we should see the form element logged.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// src/pages/contact.tsx</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> Contact: React.FC = <span class="function">() =&gt;</span> &#123;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> handleSubmit = <span class="function">(<span class="params">e: React.FormEvent&lt;HTMLFormElement&gt;</span>) =&gt;</span> &#123;</span><br><span class="line">    e.preventDefault()</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;event target: &quot;</span>, e.target)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    &lt;Layout&gt;</span><br><span class="line">      &lt;ContactStyled className=<span class="string">&quot;contact-page&quot;</span>&gt;</span><br><span class="line">        &lt;section className=<span class="string">&quot;contact-page__message-section&quot;</span>&gt;</span><br><span class="line">          &lt;PageTitle pageTitle=&#123;<span class="string">&quot;Contact&quot;</span>&#125; /&gt;</span><br><span class="line">          &lt;h2 className=<span class="string">&quot;message-section__paragraph-title&quot;</span>&gt;Message me&lt;/h2&gt;</span><br><span class="line"></span><br><span class="line">          &lt;form</span><br><span class="line">            className=<span class="string">&quot;message-section__message-form&quot;</span></span><br><span class="line">            onSubmit=&#123;handleSubmit&#125;</span><br><span class="line">          &gt;</span><br><span class="line">    &#123;<span class="comment">/* ... */</span>&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Here is the log, cut for brevity:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">event target:</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">class</span>=<span class="string">​</span>&quot;<span class="attr">message-section__message-form</span>&quot; <span class="attr">_lpchecked</span>=<span class="string">​</span>&quot;<span class="attr">1</span>&quot;&gt;</span>​</span><br><span class="line">  <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">​</span>&quot;<span class="attr">name</span>&quot; <span class="attr">class</span>=<span class="string">​</span>&quot;<span class="attr">message-form__label</span>&quot;&gt;</span>​Name:​<span class="tag">&lt;/<span class="name">label</span>&gt;</span>​</span><br><span class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">​</span>&quot;<span class="attr">text</span>&quot; <span class="attr">id</span>=<span class="string">​</span>&quot;<span class="attr">name</span>&quot; <span class="attr">class</span>=<span class="string">​</span>&quot;<span class="attr">message-form__input</span>&quot; <span class="attr">name</span>=<span class="string">​</span>&quot;<span class="attr">name</span>&quot; <span class="attr">required</span>&gt;</span>​</span><br><span class="line">  <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">​</span>&quot;<span class="attr">email</span>&quot; <span class="attr">class</span>=<span class="string">​</span>&quot;<span class="attr">message-form__label</span>&quot;&gt;</span>​Email:​<span class="tag">&lt;/<span class="name">label</span>&gt;</span>​</span><br><span class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">​</span>&quot;<span class="attr">email</span>&quot; <span class="attr">id</span>=<span class="string">​</span>&quot;<span class="attr">email</span>&quot; <span class="attr">class</span>=<span class="string">​</span>&quot;<span class="attr">message-form__input</span>&quot; <span class="attr">name</span>=<span class="string">​</span>&quot;<span class="attr">email</span>&quot; <span class="attr">required</span>&gt;</span>​</span><br><span class="line">  <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">​</span>&quot;<span class="attr">subject</span>&quot; <span class="attr">class</span>=<span class="string">​</span>&quot;<span class="attr">message-form__label</span>&quot;&gt;</span>​Subject:​<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">  ​<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">​</span>&quot;<span class="attr">text</span>&quot; <span class="attr">id</span>=<span class="string">​</span>&quot;<span class="attr">subject</span>&quot; <span class="attr">class</span>=<span class="string">​</span>&quot;<span class="attr">message-form__input</span>&quot; <span class="attr">name</span>=<span class="string">​</span>&quot;<span class="attr">subject</span>&quot; <span class="attr">required</span>&gt;</span>​</span><br><span class="line">  <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">​</span>&quot;<span class="attr">message</span>&quot; <span class="attr">class</span>=<span class="string">​</span>&quot;<span class="attr">message-form__label</span> <span class="attr">span-2</span>&quot;&gt;</span>​Message:​<span class="tag">&lt;/<span class="name">label</span>&gt;</span>​</span><br><span class="line">  <span class="tag">&lt;<span class="name">textarea</span> <span class="attr">name</span>=<span class="string">​</span>&quot;<span class="attr">message</span>&quot; <span class="attr">id</span>=<span class="string">​</span>&quot;<span class="attr">message</span>&quot; <span class="attr">rows</span>=<span class="string">​</span>&quot;<span class="attr">10</span>&quot; <span class="attr">class</span>=<span class="string">​</span>&quot;<span class="attr">message-form__input</span> <span class="attr">span-2</span>&quot; <span class="attr">required</span>&gt;</span>​<span class="tag">&lt;/<span class="name">textarea</span>&gt;</span></span><br><span class="line">  ​<span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">​</span>&quot;<span class="attr">submit</span>&quot; <span class="attr">class</span>=<span class="string">​</span>&quot;<span class="attr">message-form__btn-submit</span>&quot;&gt;</span>​…​<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">​<span class="tag">&lt;/<span class="name">form</span>&gt;</span>​</span><br></pre></td></tr></table></figure>
+
+<p>Cool. But we don’t have any values in this logged form.</p>
+<p>Well, we should pass this form to the <strong>FormData</strong> constructor to create a FormData object. This object will have key-value pairs where keys are <strong>name</strong> properties of each element, and values are the element value properties.<br>This object is what the <strong>getform API</strong> needs.</p>
+<p>We should also cast the event target as <strong>HTMLFormElement</strong>, as this is the type that the <strong>FormData</strong> constructor accepts.</p>
+<p>Note that, if we log the <strong>formData</strong> object, it will seem empty. This is because the <strong>formData</strong> is <a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/25040479/formdata-created-from-an-existing-form-seems-empty-when-i-log-it">not a vanilla JS object</a>.<br>It is, however, an iterable, so to see its contents, we can iterate over its entries, or log its contents with the spread operator.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> handleSubmit = <span class="function">(<span class="params">e: React.FormEvent&lt;HTMLFormElement&gt;</span>) =&gt;</span> &#123;</span><br><span class="line">  e.preventDefault()</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> form = e.target <span class="keyword">as</span> HTMLFormElement</span><br><span class="line">  <span class="keyword">const</span> formData = <span class="keyword">new</span> FormData(form);</span><br><span class="line"></span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;&quot;empty&quot; form data:&#x27;</span>, formData);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">const</span> inputKeyAndValue <span class="keyword">of</span> formData.entries()) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;actual input key and value:&quot;</span>, inputKeyAndValue)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&quot;spread operator here:&quot;</span>, ...formData);</span><br></pre></td></tr></table></figure>
+
+<p>Here is the log:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&quot;empty&quot; form data: FormData &#123;&#125;</span><br><span class="line"></span><br><span class="line">actual input key and value: (2) [&quot;name&quot;, &quot;John&quot;]</span><br><span class="line">actual input key and value: (2) [&quot;email&quot;, &quot;john@email.com&quot;]</span><br><span class="line">actual input key and value: (2) [&quot;subject&quot;, &quot;Test message&quot;]</span><br><span class="line">actual input key and value: (2) [&quot;message&quot;, &quot;This is test message&quot;]</span><br><span class="line"></span><br><span class="line">spread operator here: (2) [&quot;name&quot;, &quot;John&quot;] (2) [&quot;email&quot;, &quot;john@email.com&quot;] (2) [&quot;subject&quot;, &quot;Test message&quot;] (2) [&quot;message&quot;, &quot;This is test message&quot;]</span><br></pre></td></tr></table></figure>
+
+<p>Now that we know that we have actual data in our form, let’s submit it to <strong>getform.io</strong>.</p>
+<p>We will use <strong>axios</strong> for this.<br>To make a post request, which we need to do since we are sending data to the API, axios needs an argument object with 3 properties:</p>
+<ul>
+<li><strong>method</strong>, which is “post”</li>
+<li><strong>url</strong>, which is our url endpoint,</li>
+<li>and <strong>data</strong>, which is our <strong>formData</strong> object</li>
+</ul>
+<p>The <strong>axios</strong> function returns a promise, so we will use the <strong>then</strong> method to log the response, and <strong>catch</strong> method to log a possible error.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> handleSubmit = <span class="function">(<span class="params">e: React.FormEvent&lt;HTMLFormElement&gt;</span>) =&gt;</span> &#123;</span><br><span class="line">  e.preventDefault()</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> form = e.target <span class="keyword">as</span> HTMLFormElement</span><br><span class="line">  <span class="keyword">const</span> formData = <span class="keyword">new</span> FormData(form);</span><br><span class="line"></span><br><span class="line">  axios(&#123;</span><br><span class="line">    method: <span class="string">&quot;post&quot;</span>,</span><br><span class="line">    url: <span class="string">&quot;https://getform.io/f/53a34abc-648d-4d47-81f3-10fbc475eac9&quot;</span>,</span><br><span class="line">    data: formData,</span><br><span class="line">  &#125;)</span><br><span class="line">  .then(<span class="function"><span class="params">response</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;axios response:&quot;</span>, response)</span><br><span class="line">  &#125;)</span><br><span class="line">  .catch(<span class="function"><span class="params">error</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;axios error:&quot;</span>, error)</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Here is what we get with a successful submission:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">axios response:</span><br><span class="line">  config: &#123;<span class="attr">url</span>: <span class="string">&quot;https://getform.io/f/53a34abc-648d-4d47-81f3-10fbc475eac9&quot;</span>, <span class="attr">method</span>: <span class="string">&quot;post&quot;</span>, <span class="attr">data</span>: FormData, <span class="attr">headers</span>: &#123;…&#125;, <span class="attr">transformRequest</span>: <span class="built_in">Array</span>(<span class="number">1</span>), …&#125;</span><br><span class="line">  data: <span class="string">&quot;&lt;!doctype html&gt;↵&lt;html lang=&quot;</span>en<span class="string">&quot;&gt;↵&lt;head&gt;↵    &lt;scrip&quot;</span></span><br><span class="line">  headers: &#123;cache-control: <span class="string">&quot;no-cache, private&quot;</span>, content-length: <span class="string">&quot;7094&quot;</span>, content-type: <span class="string">&quot;text/html; charset=UTF-8&quot;</span>&#125;</span><br><span class="line">  request: XMLHttpRequest &#123;<span class="attr">readyState</span>: <span class="number">4</span>, <span class="attr">timeout</span>: <span class="number">0</span>, <span class="attr">withCredentials</span>: <span class="literal">false</span>, <span class="attr">upload</span>: XMLHttpRequestUpload, <span class="attr">onreadystatechange</span>: ƒ, …&#125;</span><br><span class="line">  status: <span class="number">200</span></span><br><span class="line">  statusText: <span class="string">&quot;OK&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>The <strong>config</strong> object is holds information related to the request we made, such as the method type, url and data sent to the API. This is an <strong>axios</strong> data.<br>The <strong>data</strong> property holds information returned to us by the actual API. In case of <strong>getform.io</strong>, successful submission returns an HTML of a “thank you” page. We will not use it.<br>We are interested in the <strong>status</strong> property. If this property is 200, the submission was a success. Otherwise, there was a problem.</p>
+<p>Let’s adjust the logic, so that in case the submission was not a success, we will throw an error, causing the <strong>catch</strong> block to activate, and then log the error.<br>In case there is no error, we want to reset the form to offer a possiblity of sending a new message.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> handleSubmit = <span class="function">(<span class="params">e: React.FormEvent&lt;HTMLFormElement&gt;</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">  <span class="keyword">const</span> form = e.target <span class="keyword">as</span> HTMLFormElement</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">  .then(<span class="function"><span class="params">response</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;axios response:&quot;</span>, response)</span><br><span class="line">    <span class="keyword">if</span> (response.status !== <span class="number">200</span>) <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">&quot;Send message failed&quot;</span>)</span><br><span class="line">    form.reset();</span><br><span class="line">  &#125;)</span><br><span class="line">  .catch(<span class="function"><span class="params">error</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;axios error:&quot;</span>, error)</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Alright. Now we submit data, and if response status is 200, it is all good. If the status is not 200, we throw an error.</p>
+<p>Let’s work on this a bit.<br>Since we are not showing <strong>getform.io</strong>‘s “thank you” page, we should provide some data of our own to let user know if the messaging was a success or fail.</p>
+<p>For this, let’s create a state to indicate the state of the message submission.<br>We can use one state to indicate:</p>
+<ul>
+<li>current state of submitting, meaning is the message being submitted right now, at this moment. </li>
+<li>status of the submission, meaning if the message submission succeeded or failed. We will type this as either <strong>null</strong>, or an object containing an <strong>ok</strong> property of <strong>boolean</strong> type, and a <strong>msg</strong> property of <strong>string</strong> type.</li>
+</ul>
+<p>As no submission is being done or is done when the component first mounts, initial values of both state properties are falsy.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">const</span> Contact: React.FC = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> [submissionState, setSubmissionState] = useState&lt;&#123;</span><br><span class="line">    submitting: boolean</span><br><span class="line">    status: &#123; <span class="attr">ok</span>: boolean; msg: string &#125; | <span class="literal">null</span></span><br><span class="line">  &#125;&gt;(&#123;</span><br><span class="line">    submitting: <span class="literal">false</span>,</span><br><span class="line">    status: <span class="literal">null</span>,</span><br><span class="line">  &#125;)</span><br><span class="line">  <span class="comment">// ...</span></span><br></pre></td></tr></table></figure>
+
+
+<p>Now, let’s create a paragraph in the component’s return, to render that <strong>msg</strong> property. We will render this paragraph only if the state <strong>status</strong> property is a truthy value. </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">return</span> (</span><br><span class="line">  &#123;<span class="comment">/* ... */</span>&#125;</span><br><span class="line">    &lt;/form&gt;</span><br><span class="line">    &#123;submissionState.status &amp;&amp; (</span><br><span class="line">      &lt;p className=<span class="string">&quot;message-form__submission-message&quot;</span>&gt;</span><br><span class="line">        &#123;submissionState.status.msg&#125;</span><br><span class="line">      &lt;/p&gt;</span><br><span class="line">    )&#125;</span><br><span class="line">  &lt;/section&gt;</span><br></pre></td></tr></table></figure>
+
+<p>Now, we just have to set <strong>submissionState</strong> based on the response from the <strong>getform.io</strong>.<br>We can do it in <strong>.then</strong> and <strong>.catch</strong> blocks:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> handleSubmit = <span class="function">(<span class="params">e: React.FormEvent&lt;HTMLFormElement&gt;</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">  <span class="keyword">const</span> form = e.target <span class="keyword">as</span> HTMLFormElement</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">  .then(<span class="function"><span class="params">response</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;axios response:&quot;</span>, response)</span><br><span class="line">    <span class="keyword">if</span> (response.status !== <span class="number">200</span>) <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">&quot;Send message failed&quot;</span>)</span><br><span class="line">    form.reset();</span><br><span class="line">    setSubmissionState(&#123;</span><br><span class="line">      status: &#123;</span><br><span class="line">        ok: <span class="literal">true</span>,</span><br><span class="line">        msg:</span><br><span class="line">          <span class="string">&quot;Thank you! Your message was sent successfully. I will respond as soon as possible.&quot;</span>,</span><br><span class="line">      &#125;,</span><br><span class="line">      submitting: <span class="literal">false</span>,</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;)</span><br><span class="line">  .catch(<span class="function"><span class="params">error</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;axios error:&quot;</span>, error)</span><br><span class="line">    setSubmissionState(&#123;</span><br><span class="line">      status: &#123;</span><br><span class="line">        ok: <span class="literal">false</span>,</span><br><span class="line">        msg:</span><br><span class="line">          <span class="string">&quot;There was a problem submitting the message. Please try again or use one of the other contact options. Thank you.&quot;</span>,</span><br><span class="line">      &#125;,</span><br><span class="line">      submitting: <span class="literal">false</span>,</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Cool. This now works. Try sending a message and see if it works. Success and fail messages should show up under the submit button.</p>
+<p>Speaking of the fail message, you can create one by passing an incompatible data to the axios method.<br>I also tried using an incorrect URL endpoint by adding more characters at the end of the URL. This did not work, though, and axious returned a 200 status. I assume it is because <strong>getform.io</strong> doesn’t really check if a URL exists, but just sends the request to the URL.<br>Changing the domain name, however, did cause a <strong>Network Error</strong>, as <strong>“url: “<a target="_blank" rel="noopener" href="https://ggetform.io/&quot;">https://ggetform.io/&quot;</a></strong> probably doesn’t exist.</p>
+<p>You probably noticed that we keep the status’ <strong>submitting</strong> property <strong>false</strong> all the time.<br>What we can do with it is disable the submit button during the actual submission so that user cannot submit another message while there is a submission in process.</p>
+<p>For this, we just need to change the <strong>submitting</strong> value to <strong>true</strong> just before <strong>axios</strong> sends the request, and set the submit button to be <strong>disabled</strong> if the <strong>submitting</strong> property is <strong>true</strong>.<br>Once <strong>axios</strong> receives a response from the API, whether it is true or false, the <strong>submitting</strong> property is back to <strong>false</strong>, and we can send a new message.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> handleSubmit = <span class="function">(<span class="params">e: React.FormEvent&lt;HTMLFormElement&gt;</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line"></span><br><span class="line">  setSubmissionState(<span class="function"><span class="params">prevState</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      ...prevState,</span><br><span class="line">      submitting: <span class="literal">true</span>,</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line"></span><br><span class="line">  axios(&#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">return</span> (</span><br><span class="line">  &#123;<span class="comment">/* ... */</span>&#125;</span><br><span class="line"></span><br><span class="line">    &lt;button</span><br><span class="line">      type=<span class="string">&quot;submit&quot;</span></span><br><span class="line">      className=<span class="string">&quot;message-form__btn-submit&quot;</span></span><br><span class="line">      disabled=&#123;submissionState.submitting&#125;&gt;</span><br><span class="line">      &lt;span className=<span class="string">&quot;btn-submit__label&quot;</span>&gt;Send&lt;/span&gt;</span><br><span class="line">    &lt;/button&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Use-environment-variables-to-“hide”-our-URL-endpoint-so-it-is-not-visible-to-the-browser"><a href="#Use-environment-variables-to-“hide”-our-URL-endpoint-so-it-is-not-visible-to-the-browser" class="headerlink" title="Use environment variables to “hide” our URL endpoint so it is not visible to the browser"></a>Use environment variables to “hide” our URL endpoint so it is not visible to the browser</h3><p>Ideally, we would not keep the URL endpoint in our code. We would not anyone to use it by putting it into their code and have their users send messages to us. It’s weird. </p>
+<p>For this, we would use environmet variables from which our could would pull necessary values.</p>
+<p>It is very easy to create environment variables.<br>Gatsby gives us an option to make two files for this purpose. One is called <strong>.env.development</strong>, and it is used to hold environment variables for use during development.<br>The other is called <strong>.env.production</strong>, and is used to hold environment variables for production builds.</p>
+<p>Both of these live in the root of our project. Let’s create them there, and put this same entry in both. This is the URL endpoint to our from on <strong>getform.io</strong>.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GATSBY_MESSAGING_ENDPOINT &#x3D; &quot;https:&#x2F;&#x2F;getform.io&#x2F;f&#x2F;53a34abc-648d-4d47-81f3-10fbc475eac9&quot;</span><br></pre></td></tr></table></figure>
+
+<p>Environment variables in Gatsby have to start with <strong>“GATSBY__”</strong>. </p>
+<p>Now, let’s make sure our .env files don’t get commited to Github by adding them to <strong>.gitignore</strong> file.</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># dotenv environment variable files</span></span><br><span class="line"><span class="string">.env</span></span><br><span class="line"><span class="string">.env.development</span></span><br><span class="line"><span class="string">.env.production</span></span><br></pre></td></tr></table></figure>
+
+<p>We can now adjust the axios url in the <strong>Contact</strong> page to use our newly created environment variable instead or the explicit URL string.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// pages/contact.tsx</span></span><br><span class="line"><span class="comment">// ...</span></span><br><span class="line">    axios(&#123;</span><br><span class="line">      method: <span class="string">&quot;post&quot;</span>,</span><br><span class="line">      url: process.env.GATSBY_MESSAGING_ENDPOINT,</span><br><span class="line">      data: formData,</span><br><span class="line">    &#125;)</span><br><span class="line"><span class="comment">// ...</span></span><br></pre></td></tr></table></figure>
+
+<p>Great. Restart the server and try sending a message. It should work as before.<br>Now stop the development server, and make a production build with <strong>gatsby build</strong>, and then serve it on port <strong>9000</strong> with <strong>gatsby serve</strong>.<br>Try opening the website and sending a message. All should be well again.</p>
+<p>Very good. We have reached the end of this post, after successfully sending few messages to ourselves, and hiding our endpoint URL from ourselves, as well. </p>
+<p>In the next one we will reach the finish line. We will audit the website with <strong>Chrome Developer Tools</strong>, do some finishing touches like SEO optimization and offline support. Finally, we will deploy the website. </p>
+<!-- End Step Content -->
+
+<!-- Project Information -->
+
+<h2 id="Project-Information"><a href="#Project-Information" class="headerlink" title="Project Information"></a>Project Information</h2><h3 id="Available-at"><a href="#Available-at" class="headerlink" title="Available at"></a>Available at</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/ikaem/angry-chaired-gatsby">Github</a> </li>
+<li><a target="_blank" rel="noopener" href="https://angrychaired.surge.sh/">Live project</a></li>
+</ul>
+<h3 id="Goals"><a href="#Goals" class="headerlink" title="Goals"></a>Goals</h3><ol>
+<li>A Gatsby website with a list of projects on home page</li>
+<li>Dedicated pages for each project</li>
+<li>Write project information in Markdown</li>
+<li>Functional message form </li>
+<li>Deployed website</li>
+</ol>
+<h3 id="Steps"><a href="#Steps" class="headerlink" title="Steps"></a>Steps</h3><ol>
+<li>Create new Gatsby project with TS and create basic pages</li>
+<li>Create layout and its elements, and other components</li>
+<li>Install Styled Components and its Gatsby plugin to style pages</li>
+<li>Get data with Filesystem plugin and GraphQL</li>
+<li>Write projects content in Markdown, transform and query them with the transformer-remark plugin</li>
+<li>Programatically create pages from Markdown files</li>
+<li>Insert Markdown files into pages with the transformer-remark plugin</li>
+<li>Use Gatsby Image to work with images</li>
+<li><strong>Create send message feature on the contact page</strong></li>
+<li>Audit, optimize and deploy the website</li>
+</ol>
+<h3 id="Tech-and-Tools"><a href="#Tech-and-Tools" class="headerlink" title="Tech and Tools"></a>Tech and Tools</h3><ol>
+<li>React</li>
+<li>Gatsby</li>
+<li>Markdown</li>
+<li>TypeScript</li>
+<li>Getform.io</li>
+<li>Surge</li>
+<li>Styled Components</li>
+</ol>
+<h3 id="Experience-with-Tech-amp-Tools"><a href="#Experience-with-Tech-amp-Tools" class="headerlink" title="Experience with Tech &amp; Tools"></a>Experience with Tech &amp; Tools</h3><p>Prior to this project, I had very little experience with Gatsby. I did a little something with Next.js, another React framework that focuses on server-side rendered websites. I am ok with GraphQL, on which Gatsby heavily relies to get its data, and I am ok with TS too.  </p>
+<h2 id="DISCLAIMER"><a href="#DISCLAIMER" class="headerlink" title="DISCLAIMER"></a>DISCLAIMER</h2><p>Don’t take any of this seriously and as a matter-of-fact. These are my notes. It might look like I am trying to teach something to someone. I am not.</p>
+
+
+                
+
+
+                <!-- Cover image credit -->
+                
+                    <p class="image-credit-link">
+                        Cover image by <strong>
+                            <a target="_blank" rel="noopener" href="https://unsplash.com/@kevinmueller?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
+                                Kevin Mueller
+                            </a>
+                        </strong>
+                    </p>
+
+                
+
+  
+
+            </div>
+            
+            <!-- Custom placed tags -->
+            <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                
+                    
+
+
+<a href="/angry-chaired-blog/tags/gatsby/">#gatsby</a> <a href="/angry-chaired-blog/tags/messaging/">#messaging</a>
+
+
+                
+            </div>
+            <!--  -->
+
+
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+
+            <!-- Hyvor comments -->
+
+            <!-- End of Hyvor comments -->
+        </div>
+    </div>
+</article>
+
+
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2020 kaem<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

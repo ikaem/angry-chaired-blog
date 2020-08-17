@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="Inexperienced and curious pokes into the sprawling world of web development "/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="kaem"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Gatsby Web: Gatsby &amp; React Components"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Inexperienced and curious pokes into the sprawling world of web development "/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Angry Chaired Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://ikaem.github.io/angry-chaired-blog/angry-chaired-blog/images/header-image.jpg"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://ikaem.github.io/angry-chaired-blog/angry-chaired-blog/images/header-image.jpg"/>
+    
+
+    <!-- Title -->
+    
+    <title>Gatsby Web: Gatsby &amp; React Components - Angry Chaired Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/angry-chaired-blog/css/style.css">
+
+    
+<link rel="stylesheet" href="/angry-chaired-blog/css/custom-style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+    <link rel="icon" href="/angry-chaired-blog/images/favicon.ico"/>
+    
+
+<meta name="generator" content="Hexo 5.0.2"><link rel="alternate" href="/angry-chaired-blog/atom.xml" title="Angry Chaired Blog" type="application/atom+xml">
+</head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/angry-chaired-blog/">Angry Chaired Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/about">
+                            
+                                About
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a target="_blank" rel="noopener" href="https://angrychaired.surge.sh">
+                            
+                                <i class="fa fa-user fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a target="_blank" rel="noopener" href="https://github.com/ikaem/">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a href="/angry-chaired-blog/atom.xml">
+                            
+                                <i class="fa fa-rss fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('sam-barber-x4Jk1vRLKRA-unsplash.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Gatsby Web: Gatsby & React Components</h1>
+
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            16/08/2020
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/angry-chaired-blog/categories/gatsby-web/">gatsby web</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <!-- Step Content Start -->
+
+<h4 id="Part-2-of-10-in-Gatsby-Web"><a href="#Part-2-of-10-in-Gatsby-Web" class="headerlink" title="Part 2 of 10 in Gatsby Web"></a>Part 2 of 10 in Gatsby Web</h4><p>Now when we have our basic pages, let’s add some structure to our website.<br>Since all websites have header and footer, it would probably be good that our site has those as well.</p>
+<a id="more"></a>
+
+<h4 id="See-Project-Information"><a href="#See-Project-Information" class="headerlink" title="See Project Information"></a>See <a href="#Project-Information">Project Information</a></h4><h2 id="Step-2-Create-layout-and-its-elements-and-other-components"><a href="#Step-2-Create-layout-and-its-elements-and-other-components" class="headerlink" title="Step 2. Create layout and its elements and other components"></a>Step 2. Create layout and its elements and other components</h2><p>I wanted each page to have the same general look, consisting of:</p>
+<ul>
+<li>Header</li>
+<li>Information bar</li>
+<li>Footer</li>
+<li>Welcome bar exclusive to Home Page</li>
+</ul>
+<p>We will put all those elements inside a <strong>layout</strong> component. We will then import that layout into each page component, and then pass page contents to the Layout component as children.</p>
+<p>Here is a a rough sketch of this applied to Home and About pages:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; Header --&gt; Layout element</span><br><span class="line">&#x2F;&#x2F; Welcome -- &gt; Layout element</span><br><span class="line">&#x2F;&#x2F; Information Bar --&gt; Layout element</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; Home - Home Page Component</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; Footer --&gt; Layout element</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; Header --&gt; Layout element</span><br><span class="line">&#x2F;&#x2F; Information Bar --&gt; Layout element</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; About - About Page Component</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; Footer --&gt; Layout element</span><br></pre></td></tr></table></figure>
+
+<p>This is a common practice in React projects as well.<br>One drawback I found, in case of React, is that it causes each page to render new header, for instance. In the last blog series this caused problems with updating state of unmounted components when navigating away from pages.</p>
+<p>In addition to the layout components, we will also create few other ones that our app needs:</p>
+<ul>
+<li>A mapper component to map over list of projects</li>
+<li>An item component to show brief info about each project on the Home page</li>
+<li>A page title component</li>
+</ul>
+<p>Alright, enough of that. Let’s see what we do:</p>
+<ol>
+<li>Create Layout component</li>
+<li>Create Header</li>
+<li>Create Welcome</li>
+<li>Create information bar and Footer components</li>
+<li>Create rest of the components</li>
+</ol>
+<h3 id="Create-Layout-component"><a href="#Create-Layout-component" class="headerlink" title="Create Layout component"></a>Create Layout component</h3><p>Layout is just a wrapper component that renders its children. We will add Header and Co. to it later, when we make those, but for now we will keep it simple.</p>
+<p>We create <strong>components</strong> folder inside the <strong>src</strong> folder, and put <strong>layout.component.tsx</strong> file inside it. We also type its props, which is <strong>children</strong>, that it receives from its parent components.<br>We pass the types definition as concrete types to the <strong>React.FC</strong> generic function - the React functional component.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// src/components/layout.component.tsx</span></span><br><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">&quot;react&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> Layout: React.FC&lt;&#123; <span class="attr">children</span>: React.ReactNode &#125;&gt; = <span class="function">(<span class="params">&#123; children &#125;</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">      Layout component</span><br><span class="line">      &#123;children&#125;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  );</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>Ok, we do usual stuff now. Import this component in each page, and have it wrap page content.<br>Here is the <strong>Home Page</strong> case, with that <strong>Link</strong> component removed from it:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// src/pages/index.tsx</span></span><br><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">&quot;react&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> Layout <span class="keyword">from</span> <span class="string">&quot;../components/layout.component&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> HomePage: React.FC = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    &lt;Layout&gt;</span><br><span class="line">      &lt;h1&gt;Home Page&lt;/h1&gt;</span><br><span class="line">    &lt;/Layout&gt;</span><br><span class="line">  );</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>Try and visit the pages now. All of them should have the <strong>Layout component</strong> text at the top. Is good.</p>
+<h3 id="Create-Header"><a href="#Create-Header" class="headerlink" title="Create Header"></a>Create Header</h3><p>We will now create the <strong>Header</strong> component, and place it inside the <strong>Layout</strong>. This should get the same header to all of our pages.</p>
+<p>Inside the header, we place a simple logo, and mobile and desktop navigations, and a button and logic to toggle the mobile navigation on and off.<br>The code is shortened for the sake of space and focus. Full final code is available on Github, via link at the top of the post.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// src/components/header.component.tsx</span></span><br><span class="line"><span class="keyword">import</span> React, &#123; useState &#125; <span class="keyword">from</span> <span class="string">&quot;react&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; Link &#125; <span class="keyword">from</span> <span class="string">&quot;gatsby&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> Header: React.FC = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> [isMobileNavOpen, setIsMobileNavOpen] = useState &lt; boolean &gt; <span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    &lt;header className=<span class="string">&quot;main-header&quot;</span>&gt;</span><br><span class="line">      &lt;div className=<span class="string">&quot;main-header__logo-container&quot;</span>&gt;</span><br><span class="line">        &lt;Link to=<span class="string">&quot;/&quot;</span>&gt;</span><br><span class="line">          &lt;h1 className=<span class="string">&quot;logo-container__logo-header-actual&quot;</span>&gt;Angry Chaired&lt;/h1&gt;</span><br><span class="line">        &lt;/Link&gt;</span><br><span class="line">        ...</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">      &lt;nav className=<span class="string">&quot;main-header__navigation-desktop&quot;</span>&gt;</span><br><span class="line">        &lt;ul className=<span class="string">&quot;navigation-desktop__links&quot;</span>&gt;</span><br><span class="line">          &lt;li className=<span class="string">&quot;desktop__links-link-wrapper&quot;</span>&gt;</span><br><span class="line">            &lt;a target=<span class="string">&quot;_blank&quot;</span> href=<span class="string">&quot;https://angrychaired.wordpress.com&quot;</span>&gt;</span><br><span class="line">              Blog</span><br><span class="line">            &lt;/a&gt;</span><br><span class="line">          &lt;/li&gt;</span><br><span class="line">          ...</span><br><span class="line">        &lt;/ul&gt;</span><br><span class="line">      &lt;/nav&gt;</span><br><span class="line">      &lt;div</span><br><span class="line">        className=<span class="string">&quot;main-header__mobile-nav-toggle&quot;</span></span><br><span class="line">        onClick=&#123;<span class="function">() =&gt;</span> setIsMobileNavOpen(<span class="function">(<span class="params">prevState</span>) =&gt;</span> !prevState)&#125;</span><br><span class="line">      &gt;</span><br><span class="line">        ...</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">      &lt;nav className=<span class="string">&quot;main-header__navigation-mobile&quot;</span>&gt;</span><br><span class="line">        &lt;ul className=<span class="string">&quot;navigation-mobile__links&quot;</span>&gt;...&lt;/ul&gt;</span><br><span class="line">        &lt;button</span><br><span class="line">          className=<span class="string">&quot;navigation-mobile__btn-close&quot;</span></span><br><span class="line">          onClick=&#123;<span class="function">() =&gt;</span> setIsMobileNavOpen(<span class="function">(<span class="params">prevState</span>) =&gt;</span> !prevState)&#125;</span><br><span class="line">        &gt;</span><br><span class="line">          &lt;span className=<span class="string">&quot;btn-close__label&quot;</span>&gt;X&lt;/span&gt;</span><br><span class="line">        &lt;/button&gt;</span><br><span class="line">      &lt;/nav&gt;</span><br><span class="line">    &lt;/header&gt;</span><br><span class="line">  );</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> Header;</span><br></pre></td></tr></table></figure>
+
+<p>Then we just import and render <strong>Header</strong> in the <strong>Layout</strong> component.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// src/components/layout.component.tsx</span></span><br><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">&quot;react&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> Header <span class="keyword">from</span> <span class="string">&quot;./header.component&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> Layout: React.FC&lt;&#123; <span class="attr">children</span>: React.ReactNode &#125;&gt; = <span class="function">(<span class="params">&#123; children &#125;</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">      &lt;Header /&gt;</span><br><span class="line">      Layout component</span><br><span class="line">      &#123;children&#125;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  );</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>All of our pages should now have a header. Admittedly, it is an ugly header, but we will make it nicer soon enough.</p>
+<h3 id="Create-Welcome"><a href="#Create-Welcome" class="headerlink" title="Create Welcome"></a>Create Welcome</h3><p>Welcome is a component that will be shown only on the Home page.<br>I considered putting it directly there. However, I wanted all of my page components’ structure to be same, and <strong>Welcome</strong> component would push <strong>Home</strong> outside of that shape.</p>
+<p>Anyway, here is the component:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// src/components/welcome.component.tsx</span></span><br><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">&quot;react&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> Welcome: React.FC = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    &lt;div className=<span class="string">&quot;welcome&quot;</span>&gt;</span><br><span class="line">      &lt;div className=<span class="string">&quot;welcome__crooked-welcome-container&quot;</span>&gt;</span><br><span class="line">        &lt;div className=<span class="string">&quot;crooked-welcome-container__lead&quot;</span>&gt;</span><br><span class="line">          &lt;h2 className=<span class="string">&quot;lead__greeting lead-item&quot;</span>&gt;Welcome to Angry Chaired&lt;/h2&gt;</span><br><span class="line">          &lt;p className=<span class="string">&quot;lead__description lead-item&quot;</span>&gt;</span><br><span class="line">            A personal portfolio <span class="keyword">of</span> Web Dev things learned, to be learned, and</span><br><span class="line">            <span class="keyword">in</span> the process <span class="keyword">of</span> learning.</span><br><span class="line">          &lt;/p&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  );</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> Welcome;</span><br></pre></td></tr></table></figure>
+
+<p>Now, we need to place it in the <strong>Layout</strong> component.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// src/components/layout.component.tsx</span></span><br><span class="line">...</span><br><span class="line"><span class="keyword">import</span> Welcome <span class="keyword">from</span> <span class="string">&quot;./welcome.component&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> Layout: React.FC&lt;&#123; <span class="attr">children</span>: React.ReactNode &#125;&gt; = <span class="function">(<span class="params">&#123; children &#125;</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">      &lt;Header /&gt;</span><br><span class="line">      &lt;Welcome /&gt;</span><br><span class="line">      &#123;children&#125;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  );</span><br><span class="line">&#125;;</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<p>With this approach, however, the component will always be rendered, no matter the page we are on. We don’t want that.</p>
+<p>We have to render it conditionally, but how to do that?<br>Well, we only want to render it in case the url is exactly <strong>“ourwebsiteeaddress/“</strong>. With this path - the <strong>“/“</strong>, <strong>Home Page</strong> is rendered in the browser.<br>Now we just have to find a way how to check if we are on this route.</p>
+<p>I found several sources on how to check current route with Gatsby. One of them was <a target="_blank" rel="noopener" href="https://css-tricks.com/how-to-the-get-current-page-url-in-gatsby/">this article on CSS-Tricks</a> that presents several options and explains difference between getting the domain name during build time and runtime. It is an interesting piece that offers several ways to deal with this.</p>
+<p>However, there is also an easy way to get the current route.<br>Each page component in our app has access to a prop called <strong>location</strong> that is automatically passed to it.<br>This prop looks like this:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Object</span>;</span><br><span class="line">    hash: <span class="string">&quot;&quot;</span>;</span><br><span class="line">    host: <span class="string">&quot;localhost:8000&quot;</span>;</span><br><span class="line">    hostname: <span class="string">&quot;localhost&quot;</span>;</span><br><span class="line">    href: <span class="string">&quot;http://localhost:8000/&quot;</span>;</span><br><span class="line">    key: <span class="string">&quot;initial&quot;</span>;</span><br><span class="line">    origin: <span class="string">&quot;http://localhost:8000&quot;</span>;</span><br><span class="line">    pathname: <span class="string">&quot;/&quot;</span>;</span><br><span class="line">    port: <span class="string">&quot;8000&quot;</span>;</span><br><span class="line">    protocol: <span class="string">&quot;http:&quot;</span>;</span><br><span class="line">    search: <span class="string">&quot;&quot;</span>;</span><br><span class="line">    state: <span class="literal">null</span>;</span><br></pre></td></tr></table></figure>
+
+<p>As you can see, we can get search queries, hostname, port and more information.<br>We need the <strong>pathname</strong> property.</p>
+<p>So let’s get the location prop in the <strong>Home</strong> page, and pass its <strong>pathname</strong> property to the layout.<br>We can then conditionally render the <strong>Welcome</strong> component, depending on the value of the <strong>pathname</strong> prop in the <strong>Layout</strong> component.</p>
+<p>Here is the <strong>Home</strong> page, together with its props interface and <strong>pathname</strong> passed to the <strong>Layout</strong> component.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// src/pages/index.tsx</span></span><br><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">&quot;react&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> Layout <span class="keyword">from</span> <span class="string">&quot;../components/layout.component&quot;</span>;</span><br><span class="line"></span><br><span class="line">interface HomePageProps &#123;</span><br><span class="line">  location: &#123;</span><br><span class="line">    pathname: string,</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> HomePage: React.FC&lt;HomePageProps&gt; = <span class="function">(<span class="params">&#123; location &#125;</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> &#123; pathname &#125; = location;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    &lt;Layout path=&#123;pathname&#125;&gt;</span><br><span class="line">      &lt;h1&gt;Home Page&lt;/h1&gt;</span><br><span class="line">    &lt;/Layout&gt;</span><br><span class="line">  );</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>Now, we have to make sure that <strong>Layout</strong> component can actually accept the <strong>path</strong> prop.<br>Let’s define and interface with the type for the <strong>path</strong> and <strong>children</strong> props, accept the <strong>path</strong> prop, and use it to conditionally render the <strong>Welcome</strong> component.</p>
+<p>Note that we are defining the <strong>path</strong> prop as optional. This way, we don’t need to pass it from other components, which will make it <strong>undefined</strong>, and the <strong>Welcome</strong> component will not render.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// src/components/layout.component.tsx</span></span><br><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">&quot;react&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> Header <span class="keyword">from</span> <span class="string">&quot;./header.component&quot;</span></span><br><span class="line"><span class="keyword">import</span> Welcome <span class="keyword">from</span> <span class="string">&quot;./welcome.component&quot;</span></span><br><span class="line"></span><br><span class="line">interface LayoutProps &#123;</span><br><span class="line">  children: React.ReactNode</span><br><span class="line">  path?: string</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> Layout: React.FC&lt;LayoutProps&gt; = <span class="function">(<span class="params">&#123; children, path &#125;</span>) =&gt;</span> &#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    &lt;div className=<span class="string">&quot;layout&quot;</span>&gt;</span><br><span class="line">      &lt;Header /&gt;</span><br><span class="line">      &#123;path === <span class="string">&quot;/&quot;</span> &amp;&amp; <span class="xml"><span class="tag">&lt;<span class="name">Welcome</span> /&gt;</span></span>&#125;</span><br><span class="line">      &#123;children&#125;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  )</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> Layout</span><br></pre></td></tr></table></figure>
+
+<h3 id="Create-information-bar-and-Footer-components"><a href="#Create-information-bar-and-Footer-components" class="headerlink" title="Create information bar and Footer components"></a>Create information bar and Footer components</h3><p>Information bar seems a bit vague, I know. It is a place where I imagine two links pointing to a page with the project that I am currently working on, and to the newest blog post.<br>So lets call this component <strong>Currently</strong>.</p>
+<p>It is a simple component:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// src/components/currently.component.tsx</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">&quot;react&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> Currently: React.FC = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    &lt;div className=<span class="string">&quot;currently&quot;</span>&gt;</span><br><span class="line">      &lt;div className=<span class="string">&quot;currently__new-blog-post&quot;</span>&gt;</span><br><span class="line">        &lt;span className=<span class="string">&quot;currently___key&quot;</span>&gt;New Blog Post:&lt;/span&gt;</span><br><span class="line">        &lt;span className=<span class="string">&quot;currently___value&quot;</span>&gt;</span><br><span class="line">          Create New Gatsby Project <span class="keyword">with</span> TypeScript</span><br><span class="line">        &lt;/span&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">      &lt;div className=<span class="string">&quot;currently__current-project&quot;</span>&gt;</span><br><span class="line">        &lt;span className=<span class="string">&quot;currently___key&quot;</span>&gt;Current Project:&lt;/span&gt;</span><br><span class="line">        &lt;span className=<span class="string">&quot;currently___value&quot;</span>&gt;Gatsby Portfolio&lt;/span&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  );</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> Currently;</span><br></pre></td></tr></table></figure>
+
+<p>Here is the <strong>Footer</strong> component, also very simple:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// src/components/footer.component.tsx</span></span><br><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">&quot;react&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> Footer = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    &lt;footer className=<span class="string">&quot;main-footer&quot;</span>&gt;</span><br><span class="line">      &lt;div className=<span class="string">&quot;main-footer__logo-container&quot;</span>&gt;</span><br><span class="line">        &lt;h1 className=<span class="string">&quot;logo-container__logo-footer-actual&quot;</span>&gt;Angry Chaired&lt;/h1&gt;</span><br><span class="line">        ...</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">      &lt;ul className=<span class="string">&quot;main-footer__social-links&quot;</span>&gt;</span><br><span class="line">        &lt;li className=<span class="string">&quot;social-links__link&quot;</span>&gt;</span><br><span class="line">          &lt;a href=<span class="string">&quot;#&quot;</span>&gt;Facebook&lt;/a&gt;</span><br><span class="line">        &lt;/li&gt;</span><br><span class="line">        ...</span><br><span class="line">      &lt;/ul&gt;</span><br><span class="line">    &lt;/footer&gt;</span><br><span class="line">  );</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> Footer;</span><br></pre></td></tr></table></figure>
+
+<p>Finally, we can put both in the Layout:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// src/components/layout.component.tsx</span></span><br><span class="line">...</span><br><span class="line"><span class="keyword">import</span> Currently <span class="keyword">from</span> <span class="string">&quot;./currently.component&quot;</span></span><br><span class="line"><span class="keyword">import</span> Footer <span class="keyword">from</span> <span class="string">&quot;./footer.component&quot;</span></span><br><span class="line">...</span><br><span class="line"><span class="keyword">const</span> Layout: React.FC&lt;LayoutProps&gt; = <span class="function">(<span class="params">&#123; children, path &#125;</span>) =&gt;</span> &#123;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    &lt;div className=<span class="string">&quot;layout&quot;</span>&gt;</span><br><span class="line">      &lt;Header /&gt;</span><br><span class="line">      &#123;path === <span class="string">&quot;/&quot;</span> &amp;&amp; <span class="xml"><span class="tag">&lt;<span class="name">Welcome</span> /&gt;</span></span>&#125;</span><br><span class="line">      &#123;children&#125;</span><br><span class="line">      &lt;Currently /&gt;</span><br><span class="line">      &#123;children&#125;</span><br><span class="line">      &lt;Footer /&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  )</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> Layout</span><br></pre></td></tr></table></figure>
+
+<h3 id="Create-rest-of-the-components"><a href="#Create-rest-of-the-components" class="headerlink" title="Create rest of the components"></a>Create rest of the components</h3><p>We keep this part simple as well.</p>
+<p>The mapper component that we create sits in the <strong>Home</strong> page component. It will eventually accept a list of projects from the <strong>Home</strong> page, and render another component for each project in the list. This component, <strong>LearnItem</strong>, will then render brief project information passed to it by the mapper.</p>
+<p>We will start with the <strong>LearnItem</strong>, currently without props, unstyled, and rendering a hardcoded image, project title and project description:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// src/components/learn-item.tsx</span></span><br><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">&quot;react&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> LearnItem: React.FC = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    &lt;li className=<span class="string">&quot;learn-item&quot;</span>&gt;</span><br><span class="line">      &lt;div className=<span class="string">&quot;learn-item__image-container&quot;</span>&gt;</span><br><span class="line">        &lt;img src=<span class="string">&quot;https://source.unsplash.com/350x350/?nature&quot;</span> alt=<span class="string">&quot;&quot;</span> /&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">      &lt;div className=<span class="string">&quot;learn-item__learn-points&quot;</span>&gt;</span><br><span class="line">        &lt;h3 className=<span class="string">&quot;learn-points__title&quot;</span>&gt;Lorem ipsum dolor&lt;/h3&gt;</span><br><span class="line">        &lt;p className=<span class="string">&quot;learn-points__other&quot;</span>&gt;</span><br><span class="line">          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti aut</span><br><span class="line">          dolorem exercitationem suscipit, ipsam, eos ipsum officiis alias ea</span><br><span class="line">          nihil optio. Id soluta qui incidunt numquam tenetur dolores temporibus</span><br><span class="line">          exercitationem.</span><br><span class="line">        &lt;/p&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">    &lt;/li&gt;</span><br><span class="line">  );</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> LearnItem;</span><br></pre></td></tr></table></figure>
+
+<p>The mapper component imports and renders a <strong>LearnItem</strong> component for each item in its projects list. At the moment it is only mapping over a simple array.<br>Since the mapper is focused only on logic, I placed it in the <strong>containers</strong> folder, and see it as a <strong>container component</strong>.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// src/containers/i-learn-mapper.container.tsx</span></span><br><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">&quot;react&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> LearnItem <span class="keyword">from</span> <span class="string">&quot;../components/learn-item.component&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> ILearnMapper: React.FC = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    &lt;ul className=<span class="string">&quot;i-learn-mapper&quot;</span>&gt;</span><br><span class="line">      &#123;[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>].map(<span class="function">(<span class="params">index</span>) =&gt;</span> (</span><br><span class="line">        &lt;LearnItem key=&#123;index&#125; /&gt;</span><br><span class="line">      ))&#125;</span><br><span class="line">    &lt;/ul&gt;</span><br><span class="line">  );</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> ILearnMapper;</span><br></pre></td></tr></table></figure>
+
+<p>Let’s now make that page title component, too. We will use it to render page title for each page. I choose to do it this way to have uniform style of titles on all pages.<br>We will have it accept a title prop here, as well, but we won’t style it yet.</p>
+<p>I have put it in folder called <strong>elements</strong>. I don’t know if this is a common thing to do, but as this component is very simple, and is basically just a simple element, it makes sense not to actually consider it a full-blown component in terms of the role it plays in the app.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// src/elements/page-title.element.tsx</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">&quot;react&quot;</span>;</span><br><span class="line"></span><br><span class="line">interface PageTitleProps &#123;</span><br><span class="line">  pageTitle: string;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> PageTitle: React.FC&lt;PageTitleProps&gt; = <span class="function">(<span class="params">&#123; pageTitle &#125;</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>&#123;pageTitle&#125;<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span>;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> PageTitle;</span><br></pre></td></tr></table></figure>
+
+<p>That’s it. Now we just have to import and render all of these components. We will use <strong>Home</strong><br>page as an example again, as it holds both the <strong>ILearnMapper</strong> and <strong>PageTitle</strong> component, while other pages will only have the latter one.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// src/pages/index.tsx</span></span><br><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">&quot;react&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> ILearnMapper <span class="keyword">from</span> <span class="string">&quot;../containers/i-learn-mapper.container&quot;</span></span><br><span class="line"><span class="keyword">import</span> PageTitle <span class="keyword">from</span> <span class="string">&quot;../elements/page-title.element&quot;</span></span><br><span class="line">...</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> HomePage: React.FC&lt;HomePageProps&gt; = <span class="function">(<span class="params">&#123; location &#125;</span>) =&gt;</span> &#123;</span><br><span class="line">  ...</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    &lt;Layout path=&#123;pathname&#125;&gt;</span><br><span class="line">      &lt;main className=<span class="string">&quot;home-page&quot;</span>&gt;</span><br><span class="line">        &lt;section className=<span class="string">&quot;home-page__i-learn&quot;</span>&gt;</span><br><span class="line">          &lt;PageTitle pageTitle=&#123;<span class="string">&quot;I learn:&quot;</span>&#125; /&gt;</span><br><span class="line">          &lt;ILearnMapper /&gt;</span><br><span class="line">        &lt;/section&gt;</span><br><span class="line">      &lt;/main&gt;</span><br><span class="line">    &lt;/Layout&gt;</span><br><span class="line">  );</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>Lovely. The home page should look very ugly now, unstyled, and with bunch of Lorem Ipsum text. Good thing it is not the <a target="_blank" rel="noopener" href="https://baconipsum.com/">Ipsun Bacon one</a>… :)</p>
+<p>Ok, this marks the end of mostly React and HTML part. Starting with the next post, we go more into Gatsby stuff, installing plugins, and then working with GraphQL and data. See you there.</p>
+<!-- End Step Content -->
+
+<!-- Project Information -->
+
+<h2 id="Project-Information"><a href="#Project-Information" class="headerlink" title="Project Information"></a>Project Information</h2><h3 id="Available-at"><a href="#Available-at" class="headerlink" title="Available at"></a>Available at</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/ikaem/angry-chaired-gatsby">Github</a> </li>
+<li><a target="_blank" rel="noopener" href="https://angrychaired.surge.sh/">Live project</a></li>
+</ul>
+<h3 id="Goals"><a href="#Goals" class="headerlink" title="Goals"></a>Goals</h3><ol>
+<li>A Gatsby website with a list of projects on home page</li>
+<li>Dedicated pages for each project</li>
+<li>Write project information in Markdown</li>
+<li>Functional message form </li>
+<li>Deployed website</li>
+</ol>
+<h3 id="Steps"><a href="#Steps" class="headerlink" title="Steps"></a>Steps</h3><ol>
+<li>Create new Gatsby project with TS and create basic pages</li>
+<li><strong>Create layout and its elements, and other components</strong></li>
+<li>Install Styled Components and its Gatsby plugin to style pages</li>
+<li>Get data with Filesystem plugin and GraphQL</li>
+<li>Write projects content in Markdown</li>
+<li>Programatically create pages from Markdown files</li>
+<li>Insert Markdown files into pages with MarkdownRemark plugin</li>
+<li>Use Gatsby Image to work with images</li>
+<li>Create send message feature on the contact page</li>
+<li>Audit, optimize and deploy the website</li>
+</ol>
+<h3 id="Tech-and-Tools"><a href="#Tech-and-Tools" class="headerlink" title="Tech and Tools"></a>Tech and Tools</h3><ol>
+<li>React</li>
+<li>Gatsby</li>
+<li>Markdown</li>
+<li>TypeScript</li>
+<li>Getform.io</li>
+<li>Surge</li>
+<li>Styled Components</li>
+</ol>
+<h3 id="Experience-with-Tech-amp-Tools"><a href="#Experience-with-Tech-amp-Tools" class="headerlink" title="Experience with Tech &amp; Tools"></a>Experience with Tech &amp; Tools</h3><p>Prior to this project, I had very little experience with Gatsby. I did a little something with Next.js, another React framework that focuses on server-side rendered websites. I am ok with GraphQL, on which Gatsby heavily relies to get its data, and I am ok with TS too.  </p>
+<h2 id="DISCLAIMER"><a href="#DISCLAIMER" class="headerlink" title="DISCLAIMER"></a>DISCLAIMER</h2><p>Don’t take any of this seriously and as a matter-of-fact. These are my notes. It might look like I am trying to teach something to someone. I am not.</p>
+
+
+                
+
+
+                <!-- Cover image credit -->
+                
+                    <p class="image-credit-link">
+                        Cover image by <strong>
+                            <a target="_blank" rel="noopener" href="https://unsplash.com/@milltownphotography?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
+                                Sam Barber
+                            </a>
+                        </strong>
+                    </p>
+
+                
+
+  
+
+            </div>
+            
+            <!-- Custom placed tags -->
+            <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                
+                    
+
+
+<a href="/angry-chaired-blog/tags/gatsby/">#gatsby</a> <a href="/angry-chaired-blog/tags/react/">#react</a>
+
+
+                
+            </div>
+            <!--  -->
+
+
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+
+            <!-- Hyvor comments -->
+
+            <!-- End of Hyvor comments -->
+        </div>
+    </div>
+</article>
+
+
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2020 kaem<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

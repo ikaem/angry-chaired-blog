@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="Inexperienced and curious pokes into the sprawling world of web development "/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="kaem"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Gatsby Web: Getting Data with GraphQL &amp; Filesystem Plugin"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Inexperienced and curious pokes into the sprawling world of web development "/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Angry Chaired Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://ikaem.github.io/angry-chaired-blog/angry-chaired-blog/images/header-image.jpg"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://ikaem.github.io/angry-chaired-blog/angry-chaired-blog/images/header-image.jpg"/>
+    
+
+    <!-- Title -->
+    
+    <title>Gatsby Web: Getting Data with GraphQL &amp; Filesystem Plugin - Angry Chaired Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/angry-chaired-blog/css/style.css">
+
+    
+<link rel="stylesheet" href="/angry-chaired-blog/css/custom-style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+    <link rel="icon" href="/angry-chaired-blog/images/favicon.ico"/>
+    
+
+<meta name="generator" content="Hexo 5.0.2"><link rel="alternate" href="/angry-chaired-blog/atom.xml" title="Angry Chaired Blog" type="application/atom+xml">
+</head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/angry-chaired-blog/">Angry Chaired Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/about">
+                            
+                                About
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a target="_blank" rel="noopener" href="https://angrychaired.surge.sh">
+                            
+                                <i class="fa fa-user fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a target="_blank" rel="noopener" href="https://github.com/ikaem/">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a href="/angry-chaired-blog/atom.xml">
+                            
+                                <i class="fa fa-rss fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('mikusa-martin-nY3QuSiCG8Q-unsplash.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Gatsby Web: Getting Data with GraphQL & Filesystem Plugin</h1>
+
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            16/08/2020
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/angry-chaired-blog/categories/gatsby-web/">gatsby web</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <!-- Step Content Start -->
+
+<h4 id="Part-4-of-10-in-Gatsby-Web"><a href="#Part-4-of-10-in-Gatsby-Web" class="headerlink" title="Part 4 of 10 in Gatsby Web"></a>Part 4 of 10 in Gatsby Web</h4><p>Gatsby is all about GraphQL. We incorporate our site’s metadata into pages with it, we use it to get data from files, and to get and work with images, and so on. </p>
+<a id="more"></a>
+
+<h4 id="See-Project-Information"><a href="#See-Project-Information" class="headerlink" title="See Project Information"></a>See <a href="#Project-Information">Project Information</a></h4><h2 id="Step-4-Get-data-with-GraphQL-and-Filesystem-plugin"><a href="#Step-4-Get-data-with-GraphQL-and-Filesystem-plugin" class="headerlink" title="Step 4. Get data with GraphQL and Filesystem plugin"></a>Step 4. Get data with GraphQL and Filesystem plugin</h2><p>Here is what we will do in this part: </p>
+<ol>
+<li>Configure site metadata and use GQL to query it</li>
+<li>Install and configure plugin to access the file system</li>
+<li>Use GQL to query the file system inside the app</li>
+</ol>
+<h3 id="Configure-site-metadata-and-use-GQL-to-query-it"><a href="#Configure-site-metadata-and-use-GQL-to-query-it" class="headerlink" title="Configure site metadata and use GQL to query it"></a>Configure site metadata and use GQL to query it</h3><p>We use meta data to describe websites, and make it easier for search engines to know what websites are about.<br>With Gatsby, we can prepare information about our website, and then use GQL to query and provide that information to whichever tool needs it to assemble the metadata. </p>
+<p>We will not assemble this metadata just yet. We will, however, prepare that information, query it, and use queried data to set content on the <strong>About</strong> page, and to set logo in our header.</p>
+<p>To prepare site metadata information for querying, once again we go to the <strong>gatsby-config.js</strong> file.<br>There, we add another property to the exported object, and call it <strong>siteMetadata</strong>. siteMetadata is an object holding three properties (or more, if you want) defining title, description and author of the website:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// gatsby-config.js</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  <span class="comment">/* Your site config here */</span></span><br><span class="line">  siteMetadata: &#123;</span><br><span class="line">    title: <span class="string">&quot;Angry Chaired&quot;</span>,</span><br><span class="line">    description: <span class="string">&quot;Portfolio of my Web Development learning&quot;</span>,</span><br><span class="line">    author: <span class="string">&quot;kaem&quot;</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">  plugins: [</span><br><span class="line">  ...</span><br></pre></td></tr></table></figure>
+
+<p>Nice. Now, we can query this data and use it in our page.<br>There are 2 types of queries in Gatsby:</p>
+<ol>
+<li>Page queries</li>
+<li>Static queries</li>
+</ol>
+<h4 id="Page-queries"><a href="#Page-queries" class="headerlink" title="Page queries"></a>Page queries</h4><p>Let’s go to the <strong>About</strong> page component, and import <strong>graphql</strong> from <strong>“gatsby”</strong>. This is a tag function that we will use to query data we just created.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// src/pages/about.tsx</span></span><br><span class="line">...</span><br><span class="line"><span class="keyword">import</span> &#123; graphql &#125; <span class="keyword">from</span> <span class="string">&quot;gatsby&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>Now, we query.<br>Gatsby pages have access to so-called page queries. These queries can take variables, like normal GQL queries, but are only available in Gatsby pages. </p>
+<p>Page queries are defined outside of componenent defintions, and need to be exported.<br>Data that they return is automatically passed as a prop to the component that lives in the same file. This prop is called <strong>data</strong>.</p>
+<p>Here we are making a page query for author and title of our site, log the queried data, and then pass it on to other components.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// src/pages/about.tsx</span></span><br><span class="line"><span class="keyword">import</span> &#123; graphql &#125; <span class="keyword">from</span> <span class="string">&quot;gatsby&quot;</span></span><br><span class="line"></span><br><span class="line">interface AboutProps &#123;</span><br><span class="line">    data: &#123;</span><br><span class="line">        site: &#123;</span><br><span class="line">            siteMetadata: &#123;</span><br><span class="line">                title: string;</span><br><span class="line">                author: string;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> About: React.FC&lt;AboutProps&gt; = <span class="function">(<span class="params">&#123; data &#125;</span>) =&gt;</span> &#123;</span><br><span class="line"></span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&quot;data in about:&quot;</span>, data);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> &#123; <span class="attr">site</span>: &#123; <span class="attr">siteMetadata</span>: &#123; title, author &#125;&#125;&#125; = data;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">        &lt;section className=<span class="string">&quot;about-page__about-section&quot;</span>&gt;</span><br><span class="line">          &lt;PageTitle pageTitle=&#123;<span class="string">`About <span class="subst">$&#123;title&#125;</span> by <span class="subst">$&#123;author&#125;</span>`</span>&#125; /&gt;</span><br><span class="line">        &lt;/section&gt;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">  )</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> About</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> query = graphql<span class="string">`</span></span><br><span class="line"><span class="string">  query &#123;</span></span><br><span class="line"><span class="string">    site &#123;</span></span><br><span class="line"><span class="string">      siteMetadata &#123;</span></span><br><span class="line"><span class="string">        title </span></span><br><span class="line"><span class="string">        author</span></span><br><span class="line"><span class="string">      &#125;</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">  &#125;</span></span><br><span class="line"><span class="string">`</span></span><br></pre></td></tr></table></figure>
+
+<p>Here is what is logged in the console: </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">data <span class="keyword">in</span> about: </span><br><span class="line">    &#123;<span class="attr">site</span>: &#123;…&#125;&#125;</span><br><span class="line">        site:</span><br><span class="line">            siteMetadata:</span><br><span class="line">                author: <span class="string">&quot;kaem&quot;</span></span><br><span class="line">                title: <span class="string">&quot;Angry Chaired&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>Note that the name of our query (and the object in the <strong>data</strong> prop ) is <strong>site</strong>. This is how GQL knows that it needs to query the site. </p>
+<p>We can also give an alias to the query, in case we need the queried data to have a different name.<br>We do so by adding a custom name and a colon before <strong>“site”</strong>:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ...</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> query = graphql<span class="string">`</span></span><br><span class="line"><span class="string">  query &#123;</span></span><br><span class="line"><span class="string">    metadata: site &#123;</span></span><br><span class="line"><span class="string">      siteMetadata &#123;</span></span><br><span class="line"><span class="string">        title </span></span><br><span class="line"><span class="string">        author</span></span><br><span class="line"><span class="string">      &#125;</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">  &#125;</span></span><br><span class="line"><span class="string">`</span></span><br></pre></td></tr></table></figure>
+
+<p>Now, we can find the queried data by its alias:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">data <span class="keyword">in</span> about: </span><br><span class="line">    &#123; <span class="attr">metadata</span>: &#123;…&#125;&#125;</span><br><span class="line">        metadata: &#123;<span class="attr">siteMetadata</span>: &#123;…&#125;&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="Static-queries"><a href="#Static-queries" class="headerlink" title="Static queries"></a>Static queries</h4><p>What about those other components, you ask? How do they query?<br>They can. They can use static queries. Unfortunately, these cannot use variables, something that caused headache for me at one point.</p>
+<p>Still, they can query data.<br>We will go to our <strong>Header</strong> component, and import a hook from <strong>“gatsby”</strong> called <strong>useStaticQuery</strong>. We will also import <strong>graphql</strong> too. </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// src/components/header.component.tsx</span></span><br><span class="line"><span class="comment">// ...</span></span><br><span class="line"><span class="keyword">import</span> &#123; Link, graphql, useStaticQuery &#125; <span class="keyword">from</span> <span class="string">&quot;gatsby&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>The <strong>useStaticQuery</strong> hook is used inside component definitions. It accepts an argument, which is a GQL query made with the <strong>grapqhl</strong> function. </p>
+<p>Let’s use the hook in the Header component, and pass it that same query that we used on the <strong>About</strong> page (minus the <strong>author</strong>).<br>Again, we log the result, and render the <strong>title</strong> as logo in the header.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// src/components/header.component.tsx</span></span><br><span class="line"><span class="comment">// ...</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> Header: React.FC = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">  <span class="keyword">const</span> data = useStaticQuery&lt;&#123; <span class="attr">site</span>: &#123; <span class="attr">siteMetadata</span>: &#123; <span class="attr">title</span>: string &#125; &#125; &#125;&gt;(</span><br><span class="line">    graphql<span class="string">`</span></span><br><span class="line"><span class="string">      query &#123;</span></span><br><span class="line"><span class="string">        site &#123;</span></span><br><span class="line"><span class="string">          siteMetadata &#123;</span></span><br><span class="line"><span class="string">            title</span></span><br><span class="line"><span class="string">          &#125;</span></span><br><span class="line"><span class="string">        &#125;</span></span><br><span class="line"><span class="string">      &#125;</span></span><br><span class="line"><span class="string">    `</span></span><br><span class="line">  )</span><br><span class="line"></span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&quot;header static query data:&quot;</span>, data);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> &#123; <span class="attr">site</span>: &#123; <span class="attr">siteMetadata</span>: &#123; title &#125;&#125;&#125; = data;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    &lt;HeaderStyled className=<span class="string">&quot;main-header&quot;</span>&gt;</span><br><span class="line">      &lt;div className=<span class="string">&quot;main-header__logo-container&quot;</span>&gt;</span><br><span class="line">        &lt;Link to=<span class="string">&quot;/&quot;</span>&gt;</span><br><span class="line">          &lt;h1 className=<span class="string">&quot;logo-container__logo-header-actual&quot;</span>&gt;&#123;title&#125;&lt;/h1&gt;</span><br><span class="line">        &lt;/Link&gt;</span><br><span class="line">        ...</span><br></pre></td></tr></table></figure>
+
+<p>The logged result is the same as the one with the page query:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">header <span class="keyword">static</span> query data: </span><br><span class="line">  &#123;<span class="attr">site</span>: &#123;…&#125;&#125;</span><br><span class="line">    site: </span><br><span class="line">      siteMetadata: </span><br><span class="line">        &#123;<span class="attr">title</span>: <span class="string">&quot;Angry Chaired&quot;</span>&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Install-and-configure-plugin-to-access-the-file-system"><a href="#Install-and-configure-plugin-to-access-the-file-system" class="headerlink" title="Install and configure plugin to access the file system"></a>Install and configure plugin to access the file system</h3><p>Now that we see how GQL querying works in Gatsby, how about we try to query files in our project?</p>
+<p>For this, we need a source plugin. Source plugins are used to fetch data from a source, and in this case we need a source plugin for the file system.<br>After installing and configuring the plugin, we will be able to go query files in our project.</p>
+<p>The plugin we need is conveniently called <strong>gatsby-source-filesystem</strong>, and we install it, as one would assume, with:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i gatsby-source-filesystem</span><br></pre></td></tr></table></figure>
+
+<p>Next up is the plugin configuration.</p>
+<p>We do it, as usual, in the <strong>gatsby-config.js</strong> file, by adding the plugin to the <strong>plugins</strong> array.<br>The <strong>gatsby-source-filesystem</strong> requires a JS object to be added to the array. The object holds a <strong>resolve</strong> property, which is a string with the name of the plugin, and an options object. This object in turn holds a <strong>path</strong> property, pointing to the folder we want the plugin to work in.<br>In this case, we want the plugin to “cover” the entire <strong>src</strong> folder, so we can query all files inside it.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// gatsby-config.js</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  <span class="comment">/* Your site config here */</span></span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">  plugins: [</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">    &#123;</span><br><span class="line">      resolve: <span class="string">&quot;gatsby-source-filesystem&quot;</span>,</span><br><span class="line">      options: &#123;</span><br><span class="line">        path: <span class="string">`<span class="subst">$&#123;__dirname&#125;</span>/src`</span>,</span><br><span class="line">      &#125;,</span><br><span class="line">    &#125;,</span><br></pre></td></tr></table></figure>
+
+<p>Right on. Let’s query our files now.<br>Gatsby comes with a great tool to do querying outside the app we are developing. The tool is called <strong>GraphiQL</strong>, and it is available at <strong>localhost:8000/___graphql</strong>.</p>
+<p>After starting the tool, a window with three areas show up.<br>The left one lists all possible queries, the middle one is used for writing queries, and the right one returns query results.<br>It is really an amazing tool. </p>
+<p>Before we use the filesystem plugin, lets try to query our site for that same metadata we queried in the app.<br>In the left area, click on the <strong>site</strong> option. The option expanded to show a dropdown with more options, and two of them are called <strong>siteMetadata</strong>. Click on the bottom, blue one. It is the same one that we used in the app.<br>Now look at the middle screen. As we click options on the left, we select them, and they are automatically entered into the query area. Not bad, right?<br>Go back to the left area and select <strong>author</strong> from under <strong>siteMetadata</strong>. The <strong>author</strong> field is added to the query.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">query MyQuery &#123;</span><br><span class="line">  site &#123;</span><br><span class="line">    siteMetadata &#123;</span><br><span class="line">      author</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Finally, click that big <strong>play</strong> button just above the query area. QraphiQL does a bit od work, and comes up with a result in the right area. We just go our site author. </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;data&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;site&quot;</span>: &#123;</span><br><span class="line">      <span class="string">&quot;siteMetadata&quot;</span>: &#123;</span><br><span class="line">        <span class="string">&quot;author&quot;</span>: <span class="string">&quot;kaem&quot;</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>GrapqhiQL makes it possible to easily assemble queries. We can see what options we have available, and do sorting and filtering in an easy way. Finally, when we have a query just the way we want it, we can simply copy it into our app.</p>
+<p>How about making use of that filesystem plugin we just installed?<br>Select <strong>allFile</strong> option in the left area, and then click on the <strong>edges</strong> option in the middle. The <strong>edge</strong> field represents a single query result, which in turn points to a <strong>node</strong>. So select the <strong>node</strong> field too. Node is an object, a file, a discrete unit in the filesystem. We can now access properties that describe this node thing.<br>So let’s select <strong>relativePath</strong> and <strong>prettySize</strong>.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">query MyQuery &#123;</span><br><span class="line">  allFile &#123;</span><br><span class="line">    edges &#123;</span><br><span class="line">      node &#123;</span><br><span class="line">        relativePath</span><br><span class="line">        prettySize</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Click play again, and see what we get. GrapqhiQL return a list of all files in the <strong>src</strong> folder, together with their path relative to <strong>src</strong>, and their size in KB. Very good</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;data&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;allFile&quot;</span>: &#123;</span><br><span class="line">      <span class="string">&quot;edges&quot;</span>: [</span><br><span class="line">        &#123;</span><br><span class="line">          <span class="string">&quot;node&quot;</span>: &#123;</span><br><span class="line">            <span class="string">&quot;relativePath&quot;</span>: <span class="string">&quot;index.css&quot;</span>,</span><br><span class="line">            <span class="string">&quot;prettySize&quot;</span>: <span class="string">&quot;0 B&quot;</span></span><br><span class="line">          &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">          <span class="string">&quot;node&quot;</span>: &#123;</span><br><span class="line">            <span class="string">&quot;relativePath&quot;</span>: <span class="string">&quot;components/currently.component.tsx&quot;</span>,</span><br><span class="line">            <span class="string">&quot;prettySize&quot;</span>: <span class="string">&quot;1.53 kB&quot;</span></span><br><span class="line">          &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">          <span class="string">&quot;node&quot;</span>: &#123;</span><br><span class="line">            <span class="string">&quot;relativePath&quot;</span>: <span class="string">&quot;components/layout.component.tsx&quot;</span>,</span><br><span class="line">            <span class="string">&quot;prettySize&quot;</span>: <span class="string">&quot;2.01 kB&quot;</span></span><br><span class="line">          &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">  <span class="comment">// ...</span></span><br></pre></td></tr></table></figure>
+
+<p>Let’s go back to the app real quick.<br>We can have multiple sets of options for the <strong>gatsby-source-filesystem</strong> plugin, to indicate that we work with multiple filesystem locations (data sets), and need one filesystem plugin for each data set. </p>
+<p>When doing this, we add a <strong>name</strong> property to the <strong>options</strong> object, and give it a string value with which we can indentify this particular data set.<br>Note that the <strong>path</strong> properties in these configuration objects would then point to different folders, none of which can be nested inside each other. </p>
+<p>Let’s say that we want to have two data sets: one for our pages, and the other one for the components. Here is what I mean:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  resolve: <span class="string">&quot;gatsby-source-filesystem&quot;</span>,</span><br><span class="line">  options: &#123;</span><br><span class="line">    name: <span class="string">&quot;pages&quot;</span>,</span><br><span class="line">    path: <span class="string">`<span class="subst">$&#123;__dirname&#125;</span>/src/pages`</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;,</span><br><span class="line">&#123;</span><br><span class="line">  resolve: <span class="string">&quot;gatsby-source-filesystem&quot;</span>,</span><br><span class="line">  options: &#123;</span><br><span class="line">    name: <span class="string">&quot;components&quot;</span>,</span><br><span class="line">    path: <span class="string">`<span class="subst">$&#123;__dirname&#125;</span>/src/components`</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<p>Restart the devlopment server and move back to GrapqhiQL.<br>We can now query our data sets separately, by using their names to indicate which one we want to work with.<br>We specify a data set by filtering files by <strong>sourceInstanceName</strong>, which we want equal to name of a data set.</p>
+<p>GrapqhiQL makes it easy.<br>Click on <strong>allFile</strong>, <strong>filter</strong>, <strong>sourceInstanceName</strong>. Chjeck the <strong>eq</strong> option, and type <strong>“pages”</strong> in the empty field.<br>Finally, move a bit down to find the <strong>totalCount</strong> field, and select it. This will return total number of files in this particular data set.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">query MyQuery &#123;</span><br><span class="line">  allFile(filter: &#123;sourceInstanceName: &#123;eq: &quot;pages&quot;&#125;&#125;) &#123;</span><br><span class="line">    totalCount</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Press play, and see the result:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;data&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;allFile&quot;</span>: &#123;</span><br><span class="line">      <span class="string">&quot;totalCount&quot;</span>: <span class="number">15</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Now rename the sourceInstanceName to equal <strong>“components”</strong>, and press play:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;data&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;allFile&quot;</span>: &#123;</span><br><span class="line">      <span class="string">&quot;totalCount&quot;</span>: <span class="number">7</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Wow. See. Two data sets, and we can switch between them. Lovely.</p>
+<p>Let’s go back to just one data set, though, as it makes this whole writing thing easier. </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  resolve: <span class="string">&quot;gatsby-source-filesystem&quot;</span>,</span><br><span class="line">  options: &#123;</span><br><span class="line">    name: <span class="string">&quot;src&quot;</span>,</span><br><span class="line">    path: <span class="string">`<span class="subst">$&#123;__dirname&#125;</span>/src`</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<p>Don’t forget to restart the development server after changing <strong>gatsby-config.js</strong></p>
+<h3 id="Use-GQL-to-query-the-file-system-inside-the-app"><a href="#Use-GQL-to-query-the-file-system-inside-the-app" class="headerlink" title="Use GQL to query the file system inside the app"></a>Use GQL to query the file system inside the app</h3><p>This part is really not complicated now.<br>We already know how to do page queries and static queries, and we know how to query the filesystem.</p>
+<p>So let’s just log the total number of files we have in the <strong>src</strong> folder.<br>We can do it in the <strong>Contact</strong> page.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// contact.tsx</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> &#123; graphql &#125; <span class="keyword">from</span> <span class="string">&quot;gatsby&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> Contact: React.FC&lt;&#123; <span class="attr">data</span>: &#123; <span class="attr">allFile</span>: &#123; <span class="attr">totalCount</span>: number &#125;&#125;&#125;&gt; = <span class="function">(<span class="params">&#123; data &#125;</span>) =&gt;</span> &#123;</span><br><span class="line"></span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&quot;allFile data:&quot;</span>, data);</span><br><span class="line">  ...</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span>(...)</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> Contact</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> query = graphql<span class="string">`</span></span><br><span class="line"><span class="string">  query &#123;</span></span><br><span class="line"><span class="string">    allFile &#123;</span></span><br><span class="line"><span class="string">      totalCount</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">  &#125;</span></span><br><span class="line"><span class="string">`</span></span><br></pre></td></tr></table></figure>
+
+<!-- End Step Content -->
+
+<!-- Project Information -->
+
+<h2 id="Project-Information"><a href="#Project-Information" class="headerlink" title="Project Information"></a>Project Information</h2><h3 id="Available-at"><a href="#Available-at" class="headerlink" title="Available at"></a>Available at</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/ikaem/angry-chaired-gatsby">Github</a> </li>
+<li><a target="_blank" rel="noopener" href="https://angrychaired.surge.sh/">Live project</a></li>
+</ul>
+<h3 id="Goals"><a href="#Goals" class="headerlink" title="Goals"></a>Goals</h3><ol>
+<li>A Gatsby website with a list of projects on home page</li>
+<li>Dedicated pages for each project</li>
+<li>Write project information in Markdown</li>
+<li>Functional message form </li>
+<li>Deployed website</li>
+</ol>
+<h3 id="Steps"><a href="#Steps" class="headerlink" title="Steps"></a>Steps</h3><ol>
+<li>Create new Gatsby project with TS and create basic pages</li>
+<li>Create layout and its elements, and other components</li>
+<li>Install Styled Components and its Gatsby plugin to style pages</li>
+<li><strong>Get data with Filesystem plugin and GraphQL</strong></li>
+<li>Write projects content in Markdown</li>
+<li>Programatically create pages from Markdown files</li>
+<li>Insert Markdown files into pages with MarkdownRemark plugin</li>
+<li>Use Gatsby Image to work with images</li>
+<li>Create send message feature on the contact page</li>
+<li>Audit, optimize and deploy the website</li>
+</ol>
+<h3 id="Tech-and-Tools"><a href="#Tech-and-Tools" class="headerlink" title="Tech and Tools"></a>Tech and Tools</h3><ol>
+<li>React</li>
+<li>Gatsby</li>
+<li>Markdown</li>
+<li>TypeScript</li>
+<li>Getform.io</li>
+<li>Surge</li>
+<li>Styled Components</li>
+</ol>
+<h3 id="Experience-with-Tech-amp-Tools"><a href="#Experience-with-Tech-amp-Tools" class="headerlink" title="Experience with Tech &amp; Tools"></a>Experience with Tech &amp; Tools</h3><p>Prior to this project, I had very little experience with Gatsby. I did a little something with Next.js, another React framework that focuses on server-side rendered websites. I am ok with GraphQL, on which Gatsby heavily relies to get its data, and I am ok with TS too.  </p>
+<h2 id="DISCLAIMER"><a href="#DISCLAIMER" class="headerlink" title="DISCLAIMER"></a>DISCLAIMER</h2><p>Don’t take any of this seriously and as a matter-of-fact. These are my notes. It might look like I am trying to teach something to someone. I am not.</p>
+
+
+                
+
+
+                <!-- Cover image credit -->
+                
+                    <p class="image-credit-link">
+                        Cover image by <strong>
+                            <a target="_blank" rel="noopener" href="https://unsplash.com/@marooxd?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
+                                Mikusa Martin
+                            </a>
+                        </strong>
+                    </p>
+
+                
+
+  
+
+            </div>
+            
+            <!-- Custom placed tags -->
+            <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                
+                    
+
+
+<a href="/angry-chaired-blog/tags/gatsby/">#gatsby</a> <a href="/angry-chaired-blog/tags/graphql/">#graphql</a> <a href="/angry-chaired-blog/tags/gatsby-plugins/">#gatsby plugins</a>
+
+
+                
+            </div>
+            <!--  -->
+
+
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+
+            <!-- Hyvor comments -->
+
+            <!-- End of Hyvor comments -->
+        </div>
+    </div>
+</article>
+
+
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2020 kaem<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

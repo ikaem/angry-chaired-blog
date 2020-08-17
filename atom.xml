@@ -6,7 +6,7 @@
   <link href="https://ikaem.github.io/angry-chaired-blog/atom.xml" rel="self"/>
   
   <link href="https://ikaem.github.io/angry-chaired-blog/"/>
-  <updated>2020-08-16T19:38:27.856Z</updated>
+  <updated>2020-08-17T06:12:27.825Z</updated>
   <id>https://ikaem.github.io/angry-chaired-blog/</id>
   
   <author>
@@ -15,6 +15,239 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Gatsby Web: Audit, Optimize &amp; Deploy</title>
+    <link href="https://ikaem.github.io/angry-chaired-blog/2020/gatsby-web-audit-optimize-deploy/"/>
+    <id>https://ikaem.github.io/angry-chaired-blog/2020/gatsby-web-audit-optimize-deploy/</id>
+    <published>2020-08-17T06:06:39.000Z</published>
+    <updated>2020-08-17T06:12:27.825Z</updated>
+    
+    
+    <summary type="html">&lt;!-- Step Content Start --&gt;
+
+&lt;h4 id=&quot;Part-10-of-10-in-Gatsby-Web&quot;&gt;&lt;a href=&quot;#Part-10-of-10-in-Gatsby-Web&quot; class=&quot;headerlink&quot; title=&quot;Part 10 of 10 in Gatsby Web&quot;&gt;&lt;/a&gt;Part 10 of 10 in Gatsby Web&lt;/h4&gt;&lt;p&gt;After making our components, programmatically creating pages, inserting images and implementing messaging funcitonality, last thing to do is to actually put our website online. &lt;/p&gt;
+&lt;p&gt;Before we do that, however, let’s tweak it a bit more.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="gatsby web" scheme="https://ikaem.github.io/angry-chaired-blog/categories/gatsby-web/"/>
+    
+    
+    <category term="gatsby" scheme="https://ikaem.github.io/angry-chaired-blog/tags/gatsby/"/>
+    
+    <category term="deploy" scheme="https://ikaem.github.io/angry-chaired-blog/tags/deploy/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Gatsby Web: Implement Messaging Feature</title>
+    <link href="https://ikaem.github.io/angry-chaired-blog/2020/gatsby-web-implement-messaging-feature/"/>
+    <id>https://ikaem.github.io/angry-chaired-blog/2020/gatsby-web-implement-messaging-feature/</id>
+    <published>2020-08-17T05:59:20.000Z</published>
+    <updated>2020-08-17T06:05:49.057Z</updated>
+    
+    
+    <summary type="html">&lt;!-- Step Content Start --&gt;
+
+&lt;h4 id=&quot;Part-9-of-10-in-Gatsby-Web&quot;&gt;&lt;a href=&quot;#Part-9-of-10-in-Gatsby-Web&quot; class=&quot;headerlink&quot; title=&quot;Part 9 of 10 in Gatsby Web&quot;&gt;&lt;/a&gt;Part 9 of 10 in Gatsby Web&lt;/h4&gt;&lt;p&gt;The &lt;strong&gt;Contact&lt;/strong&gt; page contains a simple form that users could use to send us a message. There is also a list of other ways on how to contact us, but we want to offer a quick and simple way too, so users can do it on the spot.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="gatsby web" scheme="https://ikaem.github.io/angry-chaired-blog/categories/gatsby-web/"/>
+    
+    
+    <category term="gatsby" scheme="https://ikaem.github.io/angry-chaired-blog/tags/gatsby/"/>
+    
+    <category term="messaging" scheme="https://ikaem.github.io/angry-chaired-blog/tags/messaging/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Gatsby Web: Gatsby Images</title>
+    <link href="https://ikaem.github.io/angry-chaired-blog/2020/gatsby-web-gatsby-images/"/>
+    <id>https://ikaem.github.io/angry-chaired-blog/2020/gatsby-web-gatsby-images/</id>
+    <published>2020-08-17T05:50:36.000Z</published>
+    <updated>2020-08-17T06:05:46.230Z</updated>
+    
+    
+    <summary type="html">&lt;!-- Step Content Start --&gt;
+
+&lt;h4 id=&quot;Part-8-of-10-in-Gatsby-Web&quot;&gt;&lt;a href=&quot;#Part-8-of-10-in-Gatsby-Web&quot; class=&quot;headerlink&quot; title=&quot;Part 8 of 10 in Gatsby Web&quot;&gt;&lt;/a&gt;Part 8 of 10 in Gatsby Web&lt;/h4&gt;&lt;p&gt;Inserting local images into a Gatsby website can be very simple. We can simply put them into the &lt;a href=&quot;https://www.gatsbyjs.org/docs/static-folder&quot;&gt;static folder&lt;/a&gt; that exists in the root of our project, and that is it.&lt;br&gt;Gatsby documentation, however, does not encourage it, and instead recommendes that we use a plugin for this.&lt;/p&gt;
+&lt;p&gt;This plugin is &lt;strong&gt;gatsby-image&lt;/strong&gt;, and it is used in combination with few other plugins: &lt;strong&gt;gatsby-transformer-sharp&lt;/strong&gt; and &lt;strong&gt;gatsby-plugin-sharp&lt;/strong&gt;.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="gatsby web" scheme="https://ikaem.github.io/angry-chaired-blog/categories/gatsby-web/"/>
+    
+    
+    <category term="gatsby plugins" scheme="https://ikaem.github.io/angry-chaired-blog/tags/gatsby-plugins/"/>
+    
+    <category term="images" scheme="https://ikaem.github.io/angry-chaired-blog/tags/images/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Gatsby Web: Insert Markdown in Gatsby Pages</title>
+    <link href="https://ikaem.github.io/angry-chaired-blog/2020/gatsby-web-insert-markdown-in-gatsby-pages/"/>
+    <id>https://ikaem.github.io/angry-chaired-blog/2020/gatsby-web-insert-markdown-in-gatsby-pages/</id>
+    <published>2020-08-17T05:43:48.000Z</published>
+    <updated>2020-08-17T05:52:07.821Z</updated>
+    
+    
+    <summary type="html">&lt;!-- Step Content Start --&gt;
+
+&lt;h4 id=&quot;Part-7-of-10-in-Gatsby-Web&quot;&gt;&lt;a href=&quot;#Part-7-of-10-in-Gatsby-Web&quot; class=&quot;headerlink&quot; title=&quot;Part 7 of 10 in Gatsby Web&quot;&gt;&lt;/a&gt;Part 7 of 10 in Gatsby Web&lt;/h4&gt;&lt;p&gt;Before we even start, I need to say that Markdown is meant to style text, and not websites. Unfortunately, I went into this expecting to style a page in a certain way, and then just insert pieces of Markdown body into their places, or to style elements in the Markdown document directly.&lt;br&gt;While this is possible, it is a bit of a pain, and more importantly, it goes against the point of Markdown. &lt;/p&gt;</summary>
+    
+    
+    
+    <category term="gatsby web" scheme="https://ikaem.github.io/angry-chaired-blog/categories/gatsby-web/"/>
+    
+    
+    <category term="gatsby plugins" scheme="https://ikaem.github.io/angry-chaired-blog/tags/gatsby-plugins/"/>
+    
+    <category term="markdowns" scheme="https://ikaem.github.io/angry-chaired-blog/tags/markdowns/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Gatsby Web: Programatically Create Pages</title>
+    <link href="https://ikaem.github.io/angry-chaired-blog/2020/gatsby-web-programatically-create-pages/"/>
+    <id>https://ikaem.github.io/angry-chaired-blog/2020/gatsby-web-programatically-create-pages/</id>
+    <published>2020-08-17T05:35:15.000Z</published>
+    <updated>2020-08-17T05:40:56.705Z</updated>
+    
+    
+    <summary type="html">&lt;!-- Step Content Start --&gt;
+
+&lt;h4 id=&quot;Part-6-of-10-in-Gatsby-Web&quot;&gt;&lt;a href=&quot;#Part-6-of-10-in-Gatsby-Web&quot; class=&quot;headerlink&quot; title=&quot;Part 6 of 10 in Gatsby Web&quot;&gt;&lt;/a&gt;Part 6 of 10 in Gatsby Web&lt;/h4&gt;&lt;p&gt;As we mentioned in the previous post, this one will be about creating new pages. We will create them programatically, based on Markdown documents that exist in our project.&lt;br&gt;We will also create a template to hold project information that we get from Markdown documents.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="gatsby web" scheme="https://ikaem.github.io/angry-chaired-blog/categories/gatsby-web/"/>
+    
+    
+    <category term="gatsby" scheme="https://ikaem.github.io/angry-chaired-blog/tags/gatsby/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Gatsby Web: Manipulate Markdown with Transformer Remark Plugin</title>
+    <link href="https://ikaem.github.io/angry-chaired-blog/2020/gatsby-web-manipulate-markdown-with-transformer-remark-plugin/"/>
+    <id>https://ikaem.github.io/angry-chaired-blog/2020/gatsby-web-manipulate-markdown-with-transformer-remark-plugin/</id>
+    <published>2020-08-16T20:37:15.000Z</published>
+    <updated>2020-08-16T20:43:05.702Z</updated>
+    
+    
+    <summary type="html">&lt;!-- Step Content Start --&gt;
+
+&lt;h4 id=&quot;Part-5-of-10-in-Gatsby-Web&quot;&gt;&lt;a href=&quot;#Part-5-of-10-in-Gatsby-Web&quot; class=&quot;headerlink&quot; title=&quot;Part 5 of 10 in Gatsby Web&quot;&gt;&lt;/a&gt;Part 5 of 10 in Gatsby Web&lt;/h4&gt;&lt;p&gt;The idea of this project was to create a portfolio of learning projects I worked on. To do that, I need a way to store project information, and this would ideally be in form of a file.&lt;br&gt;Of course, I could have had a database, and store this information there. We are working with Gatsby, however, and Gatsby can use Markdown, so we use Markdown.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="gatsby web" scheme="https://ikaem.github.io/angry-chaired-blog/categories/gatsby-web/"/>
+    
+    
+    <category term="gatsby plugins" scheme="https://ikaem.github.io/angry-chaired-blog/tags/gatsby-plugins/"/>
+    
+    <category term="markdown" scheme="https://ikaem.github.io/angry-chaired-blog/tags/markdown/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Gatsby Web: Getting Data with GraphQL &amp; Filesystem Plugin</title>
+    <link href="https://ikaem.github.io/angry-chaired-blog/2020/gatsby-web-getting-data-with-graphql-filesystem-plugin/"/>
+    <id>https://ikaem.github.io/angry-chaired-blog/2020/gatsby-web-getting-data-with-graphql-filesystem-plugin/</id>
+    <published>2020-08-16T20:28:18.000Z</published>
+    <updated>2020-08-16T20:35:16.761Z</updated>
+    
+    
+    <summary type="html">&lt;!-- Step Content Start --&gt;
+
+&lt;h4 id=&quot;Part-4-of-10-in-Gatsby-Web&quot;&gt;&lt;a href=&quot;#Part-4-of-10-in-Gatsby-Web&quot; class=&quot;headerlink&quot; title=&quot;Part 4 of 10 in Gatsby Web&quot;&gt;&lt;/a&gt;Part 4 of 10 in Gatsby Web&lt;/h4&gt;&lt;p&gt;Gatsby is all about GraphQL. We incorporate our site’s metadata into pages with it, we use it to get data from files, and to get and work with images, and so on. &lt;/p&gt;</summary>
+    
+    
+    
+    <category term="gatsby web" scheme="https://ikaem.github.io/angry-chaired-blog/categories/gatsby-web/"/>
+    
+    
+    <category term="gatsby" scheme="https://ikaem.github.io/angry-chaired-blog/tags/gatsby/"/>
+    
+    <category term="graphql" scheme="https://ikaem.github.io/angry-chaired-blog/tags/graphql/"/>
+    
+    <category term="gatsby plugins" scheme="https://ikaem.github.io/angry-chaired-blog/tags/gatsby-plugins/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Gatsby Web: Styled Components</title>
+    <link href="https://ikaem.github.io/angry-chaired-blog/2020/gatsby-web-styled-components/"/>
+    <id>https://ikaem.github.io/angry-chaired-blog/2020/gatsby-web-styled-components/</id>
+    <published>2020-08-16T20:19:00.000Z</published>
+    <updated>2020-08-16T20:25:56.966Z</updated>
+    
+    
+    <summary type="html">&lt;!-- Step Content Start --&gt;
+
+&lt;h4 id=&quot;Part-3-of-10-in-Gatsby-Web&quot;&gt;&lt;a href=&quot;#Part-3-of-10-in-Gatsby-Web&quot; class=&quot;headerlink&quot; title=&quot;Part 3 of 10 in Gatsby Web&quot;&gt;&lt;/a&gt;Part 3 of 10 in Gatsby Web&lt;/h4&gt;&lt;p&gt;At the moment, our app looks pretty dry. In fact, it is ugly. We have to style it a bit.&lt;br&gt;Official Gatsby tutorial goes with CSS Modules when it comes to styling.&lt;br&gt;However, I prefer Styled Components. It allows us to have styles in the same file as React components, we can nest style rules like with Sass, and we can define global styles with it, too. &lt;/p&gt;</summary>
+    
+    
+    
+    <category term="gatsby web" scheme="https://ikaem.github.io/angry-chaired-blog/categories/gatsby-web/"/>
+    
+    
+    <category term="gatsby" scheme="https://ikaem.github.io/angry-chaired-blog/tags/gatsby/"/>
+    
+    <category term="styled components" scheme="https://ikaem.github.io/angry-chaired-blog/tags/styled-components/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Gatsby Web: Gatsby &amp; React Components</title>
+    <link href="https://ikaem.github.io/angry-chaired-blog/2020/gatsby-web-gatsby-react-components/"/>
+    <id>https://ikaem.github.io/angry-chaired-blog/2020/gatsby-web-gatsby-react-components/</id>
+    <published>2020-08-16T20:08:44.000Z</published>
+    <updated>2020-08-16T20:17:43.833Z</updated>
+    
+    
+    <summary type="html">&lt;!-- Step Content Start --&gt;
+
+&lt;h4 id=&quot;Part-2-of-10-in-Gatsby-Web&quot;&gt;&lt;a href=&quot;#Part-2-of-10-in-Gatsby-Web&quot; class=&quot;headerlink&quot; title=&quot;Part 2 of 10 in Gatsby Web&quot;&gt;&lt;/a&gt;Part 2 of 10 in Gatsby Web&lt;/h4&gt;&lt;p&gt;Now when we have our basic pages, let’s add some structure to our website.&lt;br&gt;Since all websites have header and footer, it would probably be good that our site has those as well.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="gatsby web" scheme="https://ikaem.github.io/angry-chaired-blog/categories/gatsby-web/"/>
+    
+    
+    <category term="gatsby" scheme="https://ikaem.github.io/angry-chaired-blog/tags/gatsby/"/>
+    
+    <category term="react" scheme="https://ikaem.github.io/angry-chaired-blog/tags/react/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Gatsby Web: New Gatsby Project with TypeScript</title>
+    <link href="https://ikaem.github.io/angry-chaired-blog/2020/gatsby-web-new-gatsby-project-with-typescript/"/>
+    <id>https://ikaem.github.io/angry-chaired-blog/2020/gatsby-web-new-gatsby-project-with-typescript/</id>
+    <published>2020-08-16T19:47:07.000Z</published>
+    <updated>2020-08-16T20:11:14.858Z</updated>
+    
+    
+    <summary type="html">&lt;!-- Step Content Start --&gt;
+
+&lt;h4 id=&quot;Part-1-of-10-in-Gatsby-Web&quot;&gt;&lt;a href=&quot;#Part-1-of-10-in-Gatsby-Web&quot; class=&quot;headerlink&quot; title=&quot;Part 1 of 10 in Gatsby Web&quot;&gt;&lt;/a&gt;Part 1 of 10 in Gatsby Web&lt;/h4&gt;&lt;p&gt;This project relies heavily on the &lt;a href=&quot;https://www.gatsbyjs.org/tutorial/&quot;&gt;Gatsby official tutorial&lt;/a&gt;. I did modify it somewhat, using TS instead of JS, messing with the filesystem plugin a bit, and straying on occasion when the website needed something different from the tutorial. &lt;/p&gt;
+&lt;p&gt;The idea here is to create a website where I will eventually be able to show my projects, and then sometime in the future even move the blog to.&lt;br&gt;I see Gatsby mentioned a lot around the web, so I figured to use it for this project. &lt;/p&gt;</summary>
+    
+    
+    
+    <category term="gatsby web" scheme="https://ikaem.github.io/angry-chaired-blog/categories/gatsby-web/"/>
+    
+    
+    <category term="gatsby" scheme="https://ikaem.github.io/angry-chaired-blog/tags/gatsby/"/>
+    
+    <category term="typescript" scheme="https://ikaem.github.io/angry-chaired-blog/tags/typescript/"/>
+    
+  </entry>
   
   <entry>
     <title>GraphQL &amp; React &amp; JWT: Register Functionality</title>
@@ -33,13 +266,13 @@
     <category term="graphql &amp; react &amp; jwt" scheme="https://ikaem.github.io/angry-chaired-blog/categories/graphql-react-jwt/"/>
     
     
+    <category term="graphql" scheme="https://ikaem.github.io/angry-chaired-blog/tags/graphql/"/>
+    
     <category term="frontend" scheme="https://ikaem.github.io/angry-chaired-blog/tags/frontend/"/>
     
     <category term="apollo" scheme="https://ikaem.github.io/angry-chaired-blog/tags/apollo/"/>
     
     <category term="jwt" scheme="https://ikaem.github.io/angry-chaired-blog/tags/jwt/"/>
-    
-    <category term="graphql" scheme="https://ikaem.github.io/angry-chaired-blog/tags/graphql/"/>
     
     <category term="authentication" scheme="https://ikaem.github.io/angry-chaired-blog/tags/authentication/"/>
     
@@ -62,13 +295,13 @@
     <category term="graphql &amp; react &amp; jwt" scheme="https://ikaem.github.io/angry-chaired-blog/categories/graphql-react-jwt/"/>
     
     
+    <category term="graphql" scheme="https://ikaem.github.io/angry-chaired-blog/tags/graphql/"/>
+    
     <category term="frontend" scheme="https://ikaem.github.io/angry-chaired-blog/tags/frontend/"/>
     
     <category term="apollo" scheme="https://ikaem.github.io/angry-chaired-blog/tags/apollo/"/>
     
     <category term="jwt" scheme="https://ikaem.github.io/angry-chaired-blog/tags/jwt/"/>
-    
-    <category term="graphql" scheme="https://ikaem.github.io/angry-chaired-blog/tags/graphql/"/>
     
     <category term="authentication" scheme="https://ikaem.github.io/angry-chaired-blog/tags/authentication/"/>
     
@@ -79,7 +312,7 @@
     <link href="https://ikaem.github.io/angry-chaired-blog/2020/graphql-react-jwt-automatic-login-functionality/"/>
     <id>https://ikaem.github.io/angry-chaired-blog/2020/graphql-react-jwt-automatic-login-functionality/</id>
     <published>2020-08-16T18:50:48.000Z</published>
-    <updated>2020-08-16T19:07:28.215Z</updated>
+    <updated>2020-08-16T20:06:58.277Z</updated>
     
     
     <summary type="html">&lt;!-- Step Content Start --&gt;
@@ -92,13 +325,13 @@
     <category term="graphql &amp; react &amp; jwt" scheme="https://ikaem.github.io/angry-chaired-blog/categories/graphql-react-jwt/"/>
     
     
+    <category term="graphql" scheme="https://ikaem.github.io/angry-chaired-blog/tags/graphql/"/>
+    
     <category term="frontend" scheme="https://ikaem.github.io/angry-chaired-blog/tags/frontend/"/>
     
     <category term="apollo" scheme="https://ikaem.github.io/angry-chaired-blog/tags/apollo/"/>
     
     <category term="jwt" scheme="https://ikaem.github.io/angry-chaired-blog/tags/jwt/"/>
-    
-    <category term="graphql" scheme="https://ikaem.github.io/angry-chaired-blog/tags/graphql/"/>
     
     <category term="authentication" scheme="https://ikaem.github.io/angry-chaired-blog/tags/authentication/"/>
     
@@ -121,13 +354,13 @@
     <category term="graphql &amp; react &amp; jwt" scheme="https://ikaem.github.io/angry-chaired-blog/categories/graphql-react-jwt/"/>
     
     
+    <category term="graphql" scheme="https://ikaem.github.io/angry-chaired-blog/tags/graphql/"/>
+    
     <category term="frontend" scheme="https://ikaem.github.io/angry-chaired-blog/tags/frontend/"/>
     
     <category term="apollo" scheme="https://ikaem.github.io/angry-chaired-blog/tags/apollo/"/>
     
     <category term="jwt" scheme="https://ikaem.github.io/angry-chaired-blog/tags/jwt/"/>
-    
-    <category term="graphql" scheme="https://ikaem.github.io/angry-chaired-blog/tags/graphql/"/>
     
     <category term="authentication" scheme="https://ikaem.github.io/angry-chaired-blog/tags/authentication/"/>
     
@@ -150,13 +383,13 @@
     <category term="graphql &amp; react &amp; jwt" scheme="https://ikaem.github.io/angry-chaired-blog/categories/graphql-react-jwt/"/>
     
     
+    <category term="graphql" scheme="https://ikaem.github.io/angry-chaired-blog/tags/graphql/"/>
+    
     <category term="frontend" scheme="https://ikaem.github.io/angry-chaired-blog/tags/frontend/"/>
     
     <category term="apollo" scheme="https://ikaem.github.io/angry-chaired-blog/tags/apollo/"/>
     
     <category term="jwt" scheme="https://ikaem.github.io/angry-chaired-blog/tags/jwt/"/>
-    
-    <category term="graphql" scheme="https://ikaem.github.io/angry-chaired-blog/tags/graphql/"/>
     
     <category term="authentication" scheme="https://ikaem.github.io/angry-chaired-blog/tags/authentication/"/>
     
@@ -232,9 +465,9 @@
     <category term="graphql &amp; react &amp; jwt" scheme="https://ikaem.github.io/angry-chaired-blog/categories/graphql-react-jwt/"/>
     
     
-    <category term="jwt" scheme="https://ikaem.github.io/angry-chaired-blog/tags/jwt/"/>
-    
     <category term="graphql" scheme="https://ikaem.github.io/angry-chaired-blog/tags/graphql/"/>
+    
+    <category term="jwt" scheme="https://ikaem.github.io/angry-chaired-blog/tags/jwt/"/>
     
     <category term="resolvers" scheme="https://ikaem.github.io/angry-chaired-blog/tags/resolvers/"/>
     
@@ -293,270 +526,6 @@
     <category term="express" scheme="https://ikaem.github.io/angry-chaired-blog/tags/express/"/>
     
     <category term="middleware" scheme="https://ikaem.github.io/angry-chaired-blog/tags/middleware/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>GraphQL &amp; React &amp; JWT: Create JSON Web Tokens</title>
-    <link href="https://ikaem.github.io/angry-chaired-blog/2020/graphql-react-jwt-create-json-web-tokens/"/>
-    <id>https://ikaem.github.io/angry-chaired-blog/2020/graphql-react-jwt-create-json-web-tokens/</id>
-    <published>2020-08-16T14:56:29.000Z</published>
-    <updated>2020-08-16T15:05:54.006Z</updated>
-    
-    
-    <summary type="html">&lt;!-- Step Content Start --&gt;
-
-&lt;h4 id=&quot;Part-2-of-12-in-GraphQL-amp-React-amp-JWT&quot;&gt;&lt;a href=&quot;#Part-2-of-12-in-GraphQL-amp-React-amp-JWT&quot; class=&quot;headerlink&quot; title=&quot;Part 2 of 12 in GraphQL &amp;amp; React &amp;amp; JWT&quot;&gt;&lt;/a&gt;Part 2 of 12 in GraphQL &amp;amp; React &amp;amp; JWT&lt;/h4&gt;&lt;p&gt;We will stray from the GQL path a bit, to get introduced to JSON Web Tokens and figure out how to create them.&lt;br&gt;From what I understand, JWT are signed strings that hold data. They are used to prove certain claims on both ends of our app. For instance, we would have our server create a JWT, which would claim that a user for which this token is created is in fact logged into their account. Our client would then accept this claim as a proof of successful login, and would treat current user as logged in.&lt;br&gt;This is a very simple and very limited explanation. It works for me, however, so let’s move on.&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="graphql &amp; react &amp; jwt" scheme="https://ikaem.github.io/angry-chaired-blog/categories/graphql-react-jwt/"/>
-    
-    
-    <category term="jwt" scheme="https://ikaem.github.io/angry-chaired-blog/tags/jwt/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>GraphQL &amp; React &amp; JWT: Authentication &amp; GQL Types and Queries</title>
-    <link href="https://ikaem.github.io/angry-chaired-blog/2020/graphql-react-jwt-authentication-gql-types-queries/"/>
-    <id>https://ikaem.github.io/angry-chaired-blog/2020/graphql-react-jwt-authentication-gql-types-queries/</id>
-    <published>2020-08-16T13:44:30.000Z</published>
-    <updated>2020-08-16T15:02:20.810Z</updated>
-    
-    
-    <summary type="html">&lt;!-- Step Content Start --&gt;
-
-&lt;h4 id=&quot;Part-1-of-12-in-GraphQL-amp-React-amp-JWT&quot;&gt;&lt;a href=&quot;#Part-1-of-12-in-GraphQL-amp-React-amp-JWT&quot; class=&quot;headerlink&quot; title=&quot;Part 1 of 12 in GraphQL &amp;amp; React &amp;amp; JWT&quot;&gt;&lt;/a&gt;Part 1 of 12 in GraphQL &amp;amp; React &amp;amp; JWT&lt;/h4&gt;&lt;p&gt;This project is a continuation of the &lt;a href=&quot;categories/graphql-react-psql/&quot;&gt;Graphql &amp;amp; React &amp;amp; Psql series&lt;/a&gt;, where we used GraphQL to get and manipulate data in PSQL database.&lt;br&gt;The idea in this part is to create functionality to log users into their account with a piece of data called JSON Web Token (JWT). This token is created on backend, and sent to and stored on frontend. It is then used for user authentication anytime the user requests protected data. &lt;/p&gt;</summary>
-    
-    
-    
-    <category term="graphql &amp; react &amp; jwt" scheme="https://ikaem.github.io/angry-chaired-blog/categories/graphql-react-jwt/"/>
-    
-    
-    <category term="jwt" scheme="https://ikaem.github.io/angry-chaired-blog/tags/jwt/"/>
-    
-    <category term="graphql" scheme="https://ikaem.github.io/angry-chaired-blog/tags/graphql/"/>
-    
-    <category term="react" scheme="https://ikaem.github.io/angry-chaired-blog/tags/react/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>GraphQL &amp; React &amp; PSQL: Apollo Client Pagination</title>
-    <link href="https://ikaem.github.io/angry-chaired-blog/2020/graphql-react-psql-apollo-client-pagination/"/>
-    <id>https://ikaem.github.io/angry-chaired-blog/2020/graphql-react-psql-apollo-client-pagination/</id>
-    <published>2020-08-16T13:09:50.000Z</published>
-    <updated>2020-08-16T13:41:28.550Z</updated>
-    
-    
-    <summary type="html">&lt;!-- Step Content Start --&gt;
-
-&lt;h4 id=&quot;Part-9-of-9-in-GraphQL-amp-React-amp-PSQL&quot;&gt;&lt;a href=&quot;#Part-9-of-9-in-GraphQL-amp-React-amp-PSQL&quot; class=&quot;headerlink&quot; title=&quot;Part 9 of 9 in GraphQL &amp;amp; React &amp;amp; PSQL&quot;&gt;&lt;/a&gt;Part 9 of 9 in GraphQL &amp;amp; React &amp;amp; PSQL&lt;/h4&gt;&lt;p&gt;Ideally, we would not have all users instantly listed on our home page. We would want to have a part of it, maybe separated into pages, or extendable if a user wants so.&lt;br&gt;Pagination means that, when fetching data, we only fetch a part of it. If a user wants to see more data, they interact with the app to tell it so, and the app fetches more data as a response.&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="graphql &amp; react &amp; psql" scheme="https://ikaem.github.io/angry-chaired-blog/categories/graphql-react-psql/"/>
-    
-    
-    <category term="frontend" scheme="https://ikaem.github.io/angry-chaired-blog/tags/frontend/"/>
-    
-    <category term="apollo" scheme="https://ikaem.github.io/angry-chaired-blog/tags/apollo/"/>
-    
-    <category term="react" scheme="https://ikaem.github.io/angry-chaired-blog/tags/react/"/>
-    
-    <category term="pagination" scheme="https://ikaem.github.io/angry-chaired-blog/tags/pagination/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>GraphQL &amp; React &amp; PSQL: Apollo Client &amp; Backend-frontend communication</title>
-    <link href="https://ikaem.github.io/angry-chaired-blog/2020/graphql-react-psql-apollo-client-backend-frontend-communication/"/>
-    <id>https://ikaem.github.io/angry-chaired-blog/2020/graphql-react-psql-apollo-client-backend-frontend-communication/</id>
-    <published>2020-08-16T13:05:54.000Z</published>
-    <updated>2020-08-16T13:08:56.454Z</updated>
-    
-    
-    <summary type="html">&lt;!-- Step Content Start --&gt;
-
-&lt;h4 id=&quot;Part-8-of-9-in-GraphQL-amp-React-amp-PSQL&quot;&gt;&lt;a href=&quot;#Part-8-of-9-in-GraphQL-amp-React-amp-PSQL&quot; class=&quot;headerlink&quot; title=&quot;Part 8 of 9 in GraphQL &amp;amp; React &amp;amp; PSQL&quot;&gt;&lt;/a&gt;Part 8 of 9 in GraphQL &amp;amp; React &amp;amp; PSQL&lt;/h4&gt;&lt;p&gt;Now that we have the Apollo Client set up on the frontend, we can use it to communicate with the backend.&lt;br&gt;For this purpose, Apollo Client provides hooks that can be used to query and mutate data. There is probably one to subscribe to data, but I don’t use it in this project. &lt;/p&gt;</summary>
-    
-    
-    
-    <category term="graphql &amp; react &amp; psql" scheme="https://ikaem.github.io/angry-chaired-blog/categories/graphql-react-psql/"/>
-    
-    
-    <category term="frontend" scheme="https://ikaem.github.io/angry-chaired-blog/tags/frontend/"/>
-    
-    <category term="apollo" scheme="https://ikaem.github.io/angry-chaired-blog/tags/apollo/"/>
-    
-    <category term="react" scheme="https://ikaem.github.io/angry-chaired-blog/tags/react/"/>
-    
-    <category term="backend" scheme="https://ikaem.github.io/angry-chaired-blog/tags/backend/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>GraphQL &amp; React &amp; PSQL: Apollo Client &amp; Frontend</title>
-    <link href="https://ikaem.github.io/angry-chaired-blog/2020/graphql-react-psql-apollo-client-frontend/"/>
-    <id>https://ikaem.github.io/angry-chaired-blog/2020/graphql-react-psql-apollo-client-frontend/</id>
-    <published>2020-08-16T12:57:09.000Z</published>
-    <updated>2020-08-16T13:07:00.972Z</updated>
-    
-    
-    <summary type="html">&lt;!-- Step Content Start --&gt;
-
-&lt;h4 id=&quot;Part-7-of-9-in-GraphQL-amp-React-amp-PSQL&quot;&gt;&lt;a href=&quot;#Part-7-of-9-in-GraphQL-amp-React-amp-PSQL&quot; class=&quot;headerlink&quot; title=&quot;Part 7 of 9 in GraphQL &amp;amp; React &amp;amp; PSQL&quot;&gt;&lt;/a&gt;Part 7 of 9 in GraphQL &amp;amp; React &amp;amp; PSQL&lt;/h4&gt;&lt;p&gt;Previously, we have set up Apollo Server on the backend. Now we have to find a way to get backend GraphQL data to the frontend side.&lt;br&gt;We will use Apollo Client for this. To be more specific, we will use Apollo Client 3 beta. The client provides tools to send queries and mutations to the backend, as well as to cache received data to keep it in memory, and use it throughout the application - sort of a state management.&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="graphql &amp; react &amp; psql" scheme="https://ikaem.github.io/angry-chaired-blog/categories/graphql-react-psql/"/>
-    
-    
-    <category term="frontend" scheme="https://ikaem.github.io/angry-chaired-blog/tags/frontend/"/>
-    
-    <category term="apollo" scheme="https://ikaem.github.io/angry-chaired-blog/tags/apollo/"/>
-    
-    <category term="react" scheme="https://ikaem.github.io/angry-chaired-blog/tags/react/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>GraphQL &amp; React &amp; PSQL: React &amp; TypeScript Frontend</title>
-    <link href="https://ikaem.github.io/angry-chaired-blog/2020/graphql-react-psql-react-typescript-frontend/"/>
-    <id>https://ikaem.github.io/angry-chaired-blog/2020/graphql-react-psql-react-typescript-frontend/</id>
-    <published>2020-08-16T12:50:06.000Z</published>
-    <updated>2020-08-16T12:55:57.360Z</updated>
-    
-    
-    <summary type="html">&lt;!-- Step Content Start --&gt;
-
-&lt;h4 id=&quot;Part-6-of-9-in-GraphQL-amp-React-amp-PSQL&quot;&gt;&lt;a href=&quot;#Part-6-of-9-in-GraphQL-amp-React-amp-PSQL&quot; class=&quot;headerlink&quot; title=&quot;Part 6 of 9 in GraphQL &amp;amp; React &amp;amp; PSQL&quot;&gt;&lt;/a&gt;Part 6 of 9 in GraphQL &amp;amp; React &amp;amp; PSQL&lt;/h4&gt;&lt;p&gt;Frontend is made with React, which I am relatively comfortable with. I don’t want to spend too much time on createing components and routine stuff, so I will just breeze through it to get to working with Apollo on frontend.&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="graphql &amp; react &amp; psql" scheme="https://ikaem.github.io/angry-chaired-blog/categories/graphql-react-psql/"/>
-    
-    
-    <category term="frontend" scheme="https://ikaem.github.io/angry-chaired-blog/tags/frontend/"/>
-    
-    <category term="react" scheme="https://ikaem.github.io/angry-chaired-blog/tags/react/"/>
-    
-    <category term="typescript" scheme="https://ikaem.github.io/angry-chaired-blog/tags/typescript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>GraphQL &amp; React &amp; PSQL: Types, Queries &amp; Resolvers in Apollo Server</title>
-    <link href="https://ikaem.github.io/angry-chaired-blog/2020/graphql-react-psql-types-queries-resolvers-in-apollo-server/"/>
-    <id>https://ikaem.github.io/angry-chaired-blog/2020/graphql-react-psql-types-queries-resolvers-in-apollo-server/</id>
-    <published>2020-08-16T12:40:21.000Z</published>
-    <updated>2020-08-16T12:55:11.562Z</updated>
-    
-    
-    <summary type="html">&lt;!-- Step Content Start --&gt;
-
-&lt;h4 id=&quot;Part-5-of-9-in-GraphQL-amp-React-amp-PSQL&quot;&gt;&lt;a href=&quot;#Part-5-of-9-in-GraphQL-amp-React-amp-PSQL&quot; class=&quot;headerlink&quot; title=&quot;Part 5 of 9 in GraphQL &amp;amp; React &amp;amp; PSQL&quot;&gt;&lt;/a&gt;Part 5 of 9 in GraphQL &amp;amp; React &amp;amp; PSQL&lt;/h4&gt;&lt;p&gt;GraphQL requires a quick setup to be able to fetch and modify data in the database. In particular, it needs to know what type of data it deals with, what are the possible queries it might receive in regards to data, and how to actually resolve those queries.&lt;br&gt;This is what we deal with in this post.&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="graphql &amp; react &amp; psql" scheme="https://ikaem.github.io/angry-chaired-blog/categories/graphql-react-psql/"/>
-    
-    
-    <category term="apollo" scheme="https://ikaem.github.io/angry-chaired-blog/tags/apollo/"/>
-    
-    <category term="graphql" scheme="https://ikaem.github.io/angry-chaired-blog/tags/graphql/"/>
-    
-    <category term="backend" scheme="https://ikaem.github.io/angry-chaired-blog/tags/backend/"/>
-    
-    <category term="types" scheme="https://ikaem.github.io/angry-chaired-blog/tags/types/"/>
-    
-    <category term="queries" scheme="https://ikaem.github.io/angry-chaired-blog/tags/queries/"/>
-    
-    <category term="resolvers" scheme="https://ikaem.github.io/angry-chaired-blog/tags/resolvers/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>GraphQL &amp; React &amp; PSQL: Setup Apollo Server Express</title>
-    <link href="https://ikaem.github.io/angry-chaired-blog/2020/graphql-react-psql-setup-apollo-server-express/"/>
-    <id>https://ikaem.github.io/angry-chaired-blog/2020/graphql-react-psql-setup-apollo-server-express/</id>
-    <published>2020-08-16T12:23:41.000Z</published>
-    <updated>2020-08-16T12:55:02.961Z</updated>
-    
-    
-    <summary type="html">&lt;!-- Step Content Start --&gt;
-
-&lt;h4 id=&quot;Part-4-of-10-in-GraphQL-amp-React-amp-PSQL&quot;&gt;&lt;a href=&quot;#Part-4-of-10-in-GraphQL-amp-React-amp-PSQL&quot; class=&quot;headerlink&quot; title=&quot;Part 4 of 10 in GraphQL &amp;amp; React &amp;amp; PSQL&quot;&gt;&lt;/a&gt;Part 4 of 10 in GraphQL &amp;amp; React &amp;amp; PSQL&lt;/h4&gt;&lt;p&gt;We reached an important point. It is the main reason I actually did this small project. I wanted to learn to use GrapqhQL, and figured I should create a small app to find out how it works.&lt;br&gt;I am not going to explain GQL in depth. I am not even close to being able to do that. Instead, I will show how to use Apollo’s tools to be able to fetch, create and edit data via GrapqhQL.&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="graphql &amp; react &amp; psql" scheme="https://ikaem.github.io/angry-chaired-blog/categories/graphql-react-psql/"/>
-    
-    
-    <category term="apollo" scheme="https://ikaem.github.io/angry-chaired-blog/tags/apollo/"/>
-    
-    <category term="server" scheme="https://ikaem.github.io/angry-chaired-blog/tags/server/"/>
-    
-    <category term="express" scheme="https://ikaem.github.io/angry-chaired-blog/tags/express/"/>
-    
-    <category term="graphql" scheme="https://ikaem.github.io/angry-chaired-blog/tags/graphql/"/>
-    
-    <category term="node" scheme="https://ikaem.github.io/angry-chaired-blog/tags/node/"/>
-    
-    <category term="backend" scheme="https://ikaem.github.io/angry-chaired-blog/tags/backend/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>GraphQL &amp; React &amp; PSQL: Using node-postgres</title>
-    <link href="https://ikaem.github.io/angry-chaired-blog/2020/graphql-react-psql-using-node-postgres/"/>
-    <id>https://ikaem.github.io/angry-chaired-blog/2020/graphql-react-psql-using-node-postgres/</id>
-    <published>2020-08-16T12:15:50.000Z</published>
-    <updated>2020-08-16T12:55:18.088Z</updated>
-    
-    
-    <summary type="html">&lt;!-- Step Content Start --&gt;
-
-&lt;h4 id=&quot;Part-3-of-10-in-GraphQL-amp-React-amp-PSQL&quot;&gt;&lt;a href=&quot;#Part-3-of-10-in-GraphQL-amp-React-amp-PSQL&quot; class=&quot;headerlink&quot; title=&quot;Part 3 of 10 in GraphQL &amp;amp; React &amp;amp; PSQL&quot;&gt;&lt;/a&gt;Part 3 of 10 in GraphQL &amp;amp; React &amp;amp; PSQL&lt;/h4&gt;&lt;p&gt;Node-postgres is a tool to connect Node.js with PSQL database and interact with it. That is what I know about it in terms of describing it. It is very easy to use, and it uses PSQL syntax for queries.&lt;br&gt;There is another tool that I tried called Knex. Knext has its methods for inserting, selecting, updating, transactions and so on. It feels like I have to learn another language.&lt;br&gt;With node-postgres, I can just use PSQL knowledge that I have. &lt;/p&gt;</summary>
-    
-    
-    
-    <category term="graphql &amp; react &amp; psql" scheme="https://ikaem.github.io/angry-chaired-blog/categories/graphql-react-psql/"/>
-    
-    
-    <category term="express" scheme="https://ikaem.github.io/angry-chaired-blog/tags/express/"/>
-    
-    <category term="psql" scheme="https://ikaem.github.io/angry-chaired-blog/tags/psql/"/>
-    
-    <category term="node" scheme="https://ikaem.github.io/angry-chaired-blog/tags/node/"/>
-    
-    <category term="backend" scheme="https://ikaem.github.io/angry-chaired-blog/tags/backend/"/>
-    
-    <category term="node-posgres" scheme="https://ikaem.github.io/angry-chaired-blog/tags/node-posgres/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>GraphQL &amp; React &amp; PSQL: Create PSQL database</title>
-    <link href="https://ikaem.github.io/angry-chaired-blog/2020/graphql-react-psql-create-psql-database/"/>
-    <id>https://ikaem.github.io/angry-chaired-blog/2020/graphql-react-psql-create-psql-database/</id>
-    <published>2020-08-16T12:06:18.000Z</published>
-    <updated>2020-08-16T12:54:52.624Z</updated>
-    
-    
-    <summary type="html">&lt;!-- Step Content Start --&gt;
-
-&lt;h4 id=&quot;Part-2-of-10-in-GraphQL-amp-React-amp-PSQL&quot;&gt;&lt;a href=&quot;#Part-2-of-10-in-GraphQL-amp-React-amp-PSQL&quot; class=&quot;headerlink&quot; title=&quot;Part 2 of 10 in GraphQL &amp;amp; React &amp;amp; PSQL&quot;&gt;&lt;/a&gt;Part 2 of 10 in GraphQL &amp;amp; React &amp;amp; PSQL&lt;/h4&gt;</summary>
-    
-    
-    
-    <category term="graphql &amp; react &amp; psql" scheme="https://ikaem.github.io/angry-chaired-blog/categories/graphql-react-psql/"/>
-    
-    
-    <category term="psql" scheme="https://ikaem.github.io/angry-chaired-blog/tags/psql/"/>
-    
-    <category term="database" scheme="https://ikaem.github.io/angry-chaired-blog/tags/database/"/>
     
   </entry>
   

@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="Inexperienced and curious pokes into the sprawling world of web development "/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="kaem"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Gatsby Web: Programatically Create Pages"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Inexperienced and curious pokes into the sprawling world of web development "/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Angry Chaired Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://ikaem.github.io/angry-chaired-blog/angry-chaired-blog/images/header-image.jpg"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://ikaem.github.io/angry-chaired-blog/angry-chaired-blog/images/header-image.jpg"/>
+    
+
+    <!-- Title -->
+    
+    <title>Gatsby Web: Programatically Create Pages - Angry Chaired Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/angry-chaired-blog/css/style.css">
+
+    
+<link rel="stylesheet" href="/angry-chaired-blog/css/custom-style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+    <link rel="icon" href="/angry-chaired-blog/images/favicon.ico"/>
+    
+
+<meta name="generator" content="Hexo 5.0.2"><link rel="alternate" href="/angry-chaired-blog/atom.xml" title="Angry Chaired Blog" type="application/atom+xml">
+</head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/angry-chaired-blog/">Angry Chaired Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/about">
+                            
+                                About
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a target="_blank" rel="noopener" href="https://angrychaired.surge.sh">
+                            
+                                <i class="fa fa-user fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a target="_blank" rel="noopener" href="https://github.com/ikaem/">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a href="/angry-chaired-blog/atom.xml">
+                            
+                                <i class="fa fa-rss fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('cezar-sampaio-OfIVnZ-0gyA-unsplash.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Gatsby Web: Programatically Create Pages</h1>
+
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            17/08/2020
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/angry-chaired-blog/categories/gatsby-web/">gatsby web</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <!-- Step Content Start -->
+
+<h4 id="Part-6-of-10-in-Gatsby-Web"><a href="#Part-6-of-10-in-Gatsby-Web" class="headerlink" title="Part 6 of 10 in Gatsby Web"></a>Part 6 of 10 in Gatsby Web</h4><p>As we mentioned in the previous post, this one will be about creating new pages. We will create them programatically, based on Markdown documents that exist in our project.<br>We will also create a template to hold project information that we get from Markdown documents.</p>
+<a id="more"></a>
+
+<h4 id="See-Project-Information"><a href="#See-Project-Information" class="headerlink" title="See Project Information"></a>See <a href="#Project-Information">Project Information</a></h4><h2 id="Step-6-Programatically-create-pages-from-Markdown-files"><a href="#Step-6-Programatically-create-pages-from-Markdown-files" class="headerlink" title="Step 6. Programatically create pages from Markdown files"></a>Step 6. Programatically create pages from Markdown files</h2><p>Here is the list of what we do:</p>
+<ol>
+<li>Create a template component to eventually hold our project information</li>
+<li>Use Gatsby’s <strong>onCreateNode</strong> API to create a field on MarkdownRemark nodes to hold their relative path - the slug</li>
+<li>Use another API of Gatsby’s, <strong>createPages</strong>, to create new pages</li>
+<li>Adjust project template to show project title and frontmatter excerpt, and link <strong>LearnItem</strong> to new pages</li>
+</ol>
+<h3 id="Create-a-template-component-to-eventually-hold-our-project-information"><a href="#Create-a-template-component-to-eventually-hold-our-project-information" class="headerlink" title="Create a template component to eventually hold our project information"></a>Create a template component to eventually hold our project information</h3><p>The template component that we are creating will be used as a container for all programatically create pages.<br>Other than that, there is nothing special about it. It is a regular React component, and because it will be used as a page, it can do page queries. We will do the query part later.</p>
+<p>So let’s create it.<br>Create a new folder called <strong>templates</strong> in the <strong>src</strong> folder, and put a file in it called <strong>project.template.tsx</strong>.<br>Then create a component inside it, with placeholders for <strong>title</strong>, <strong>date</strong>, and <strong>excerpt</strong>.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// src/templates/project.template.tsx</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">&quot;react&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> ProjectTemplate: React.FC = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    &lt;Layout&gt;</span><br><span class="line">      &lt;ProjectTemplateStyled className=<span class="string">&quot;project-template&quot;</span>&gt;</span><br><span class="line">        &lt;section className=<span class="string">&quot;project-template__details-section&quot;</span>&gt;</span><br><span class="line">          &lt;h1 className=<span class="string">&quot;details-section__project-title&quot;</span>&gt;Project Title&lt;/h1&gt;</span><br><span class="line">          &lt;span className=<span class="string">&quot;details-section__publish-date&quot;</span>&gt;<span class="number">22</span>/<span class="number">08</span>/<span class="number">2020</span>&lt;/span&gt;</span><br><span class="line">          &lt;p className=<span class="string">&quot;details-section__project-lead&quot;</span>&gt;</span><br><span class="line">            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum</span><br><span class="line">            maiores quidem quod suscipit veniam ullam alias ipsum et minima</span><br><span class="line">            magnam quasi beatae tempora iste laboriosam, nemo, optio eos nobis.</span><br><span class="line">            Voluptatum!</span><br><span class="line">          &lt;/p&gt;</span><br><span class="line">        &lt;/section&gt;</span><br><span class="line">      &lt;/ProjectTemplateStyled&gt;</span><br><span class="line">    &lt;/Layout&gt;</span><br><span class="line">  );</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> ProjectTemplate;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Use-Gatsby’s-onCreateNode-API-to-create-a-field-on-MarkdownRemark-nodes-to-hold-their-relative-path-the-slug"><a href="#Use-Gatsby’s-onCreateNode-API-to-create-a-field-on-MarkdownRemark-nodes-to-hold-their-relative-path-the-slug" class="headerlink" title="Use Gatsby’s onCreateNode API to create a field on MarkdownRemark nodes to hold their relative path - the slug"></a>Use Gatsby’s <strong>onCreateNode</strong> API to create a field on MarkdownRemark nodes to hold their relative path - the slug</h3><p>Now, let’s go and create pages.</p>
+<p>Creation of pages consists of two parts:</p>
+<ol>
+<li>We need to define a path to each new page</li>
+<li>We need to actually create a new page for each MarkdownRemark node, assign a path to it, specify which template it uses, and provide a GraphQL variable to it so it can get its data.</li>
+</ol>
+<p>When I saw this approach first time, I was a bit confused. I couldn’t understand why are we creating this path, and later, why are we looping over all MarkdownRemark nodes to create pages.<br>Next.js, and React, have a way to specify a dynamic route which, when called, renders a specific component. Here, however, we are creating a path (the slug thing) that is very concrete, and is set for each page.<br>Moreover, Next and React approach makes it possible to use a part of the dynamic route to get data into the component. Gatsby, we will see, uses GraphQL, to get data into the template component.</p>
+<p>Eventually, however, I realized this is just another approach. We scan Markdown files in the project, set a fixed path based on their names, and loop over them to create a page for each file.<br>And, it turned out, the GQL query that is used to get data into the template, is also using the page path (the slug) to find its data, similar to the dynamic route part in Next.</p>
+<p>Ok, now that we dealt with my issues, let’s move on.<br>This part deals with defining a path for each new page - the slug thing.</p>
+<p>When Gatsby builds an app, it creates a node for each file (or at least, this is the way I understand it).<br>It is possible to tap into this node-creation process, and add our own logic to it.</p>
+<p>We want to check when a created node is of <strong>MarkdownRemark</strong> type, assign a new field to any node of this type, and then let it move on.<br>The field that we want to create on the node is <strong>slug</strong> - just a property that holds a path to this specific node.</p>
+<p>We create this slug from the name of the file that created the MarkdownRemark node.<br>And later, we use this lug to access specific page.</p>
+<p>To be honest, from what I have seen so far, I don’t think the slug thing is absolutely necessary. I could be wrong, but we could have new pages available by pointing to the node’s <strong>id</strong> property which is there by default. Or we could hardcode a path, or a slug key into a Markdown document’s frontmatter, and use that as the path to a new page.</p>
+<p>However, the slug creation approach seems to be good practice, so let’s go with it.</p>
+<p>Gatsby provides an API that we can use to tap into the node creation process. It is a function called <strong>onCreateNode</strong>, and we can use it as a Node export in a file called <strong>gatsby-node.js</strong> that we make in the root of our project.</p>
+<p>Like <strong>gatsby-config.js</strong>, <strong>gatsby-node.js</strong> needs to have this specific name.<br>We export the <strong>onCreateNode</strong> from it. The function is automatically passed an object with a <strong>node</strong> property in it, so let’s log that <strong>node</strong> property to see how it looks like.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// gatsby-node.js</span></span><br><span class="line"><span class="built_in">exports</span>.onCreateNode = <span class="function">(<span class="params">&#123; node &#125;</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&quot;this is node:&quot;</span>, node);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>There is a lot of nodes printed out, but here we show a React component node and a MarkdownRemark node.</p>
+<p>React component:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">this</span> is node: &#123;</span><br><span class="line">  internalComponentName: <span class="string">&#x27;ComponentIndex&#x27;</span>,</span><br><span class="line">  path: <span class="string">&#x27;/&#x27;</span>,</span><br><span class="line">  matchPath: <span class="literal">undefined</span>,</span><br><span class="line">  component: <span class="string">&#x27;D:/WebDev/Ja/angry-chaired-web/angry-chaired/src/pages/index.tsx&#x27;</span>,</span><br><span class="line">  componentChunkName: <span class="string">&#x27;component---src-pages-index-tsx&#x27;</span>,</span><br><span class="line">  isCreatedByStatefulCreatePages: <span class="literal">true</span>,</span><br><span class="line">  context: &#123;&#125;,</span><br><span class="line">  pluginCreator___NODE: <span class="string">&#x27;7c78aecd-c771-5557-a879-7fed842b1ab2&#x27;</span>,</span><br><span class="line">  pluginCreatorId: <span class="string">&#x27;7c78aecd-c771-5557-a879-7fed842b1ab2&#x27;</span>,</span><br><span class="line">  componentPath: <span class="string">&#x27;D:/WebDev/Ja/angry-chaired-web/angry-chaired/src/pages/index.tsx&#x27;</span>,</span><br><span class="line">  id: <span class="string">&#x27;SitePage /&#x27;</span>,</span><br><span class="line">  parent: <span class="literal">null</span>,</span><br><span class="line">  children: [],</span><br><span class="line">  internal: &#123;</span><br><span class="line">    type: <span class="string">&#x27;SitePage&#x27;</span>,</span><br><span class="line">    contentDigest: <span class="string">&#x27;f3d4de75721b4415d567a5d5ea73f193&#x27;</span>,</span><br><span class="line">    description: <span class="string">&#x27;7c78aecd-c771-5557-a879-7fed842b1ab2&#x27;</span>,</span><br><span class="line">    counter: <span class="number">98</span>,</span><br><span class="line">    owner: <span class="string">&#x27;internal-data-bridge&#x27;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>MarkdownRemark:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">this</span> is node: &#123;</span><br><span class="line">  id: <span class="string">&#x27;36a198e8-5d00-5114-bedb-452922e75a97&#x27;</span>,</span><br><span class="line">  children: [],</span><br><span class="line">  parent: <span class="string">&#x27;2f473a24-cdd2-50c4-b688-80a43781b47e&#x27;</span>,</span><br><span class="line">  internal: &#123;</span><br><span class="line">    content: <span class="string">&#x27;# This is project heading\r\n&#x27;</span> +</span><br><span class="line">      <span class="string">&#x27;This is project paragraph\r\n&#x27;</span> +</span><br><span class="line">      <span class="string">&#x27;\r\n&#x27;</span> +</span><br><span class="line">      <span class="string">&#x27;## This is project heading 2\r\n&#x27;</span> +</span><br><span class="line">      <span class="string">&#x27;This is another paragraph\r\n&#x27;</span> +</span><br><span class="line">      <span class="string">&#x27;\r\n&#x27;</span> +</span><br><span class="line">      <span class="string">&#x27;[This is a link to Google](https://google.com)\r\n&#x27;</span> +</span><br><span class="line">      <span class="string">&#x27;\r\n&#x27;</span> +</span><br><span class="line">      <span class="string">&#x27;### Below is an unordered list:\r\n&#x27;</span> +</span><br><span class="line">      <span class="string">&#x27;\r\n&#x27;</span> +</span><br><span class="line">      <span class="string">&#x27;- List item\r\n&#x27;</span> +</span><br><span class="line">      <span class="string">&#x27;- Another list item\r\n&#x27;</span> +</span><br><span class="line">      <span class="string">&#x27;\r\n&#x27;</span> +</span><br><span class="line">      <span class="string">&#x27;#### And below is an ordered list\r\n&#x27;</span> +</span><br><span class="line">      <span class="string">&#x27;\r\n&#x27;</span> +</span><br><span class="line">      <span class="string">&#x27;1. List item again\r\n&#x27;</span> +</span><br><span class="line">      <span class="string">&#x27;2. More, more items...&#x27;</span>,</span><br><span class="line">    type: <span class="string">&#x27;MarkdownRemark&#x27;</span>,</span><br><span class="line">    contentDigest: <span class="string">&#x27;b172aacf4b71470216cce8b562a12e4e&#x27;</span>,</span><br><span class="line">    counter: <span class="number">88</span>,</span><br><span class="line">    owner: <span class="string">&#x27;gatsby-transformer-remark&#x27;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  frontmatter: &#123;</span><br><span class="line">    title: <span class="string">&#x27;Project 2&#x27;</span>,</span><br><span class="line">    learningPeriod: <span class="string">&#x27;30 June 2020 to 5 July 2020&#x27;</span>,</span><br><span class="line">    date: <span class="string">&#x27;2020-08-05&#x27;</span>,</span><br><span class="line">    frontmatterExcerpt: <span class="string">&#x27;This is the Project 2 content.&#x27;</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">  excerpt: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">  rawMarkdownBody: <span class="string">&#x27;# This is project heading\r\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;This is project paragraph\r\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;\r\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;## This is project heading 2\r\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;This is another paragraph\r\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;\r\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;[This is a link to Google](https://google.com)\r\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;\r\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;### Below is an unordered list:\r\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;\r\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;- List item\r\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;- Another list item\r\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;\r\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;#### And below is an ordered list\r\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;\r\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;1. List item again\r\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;2. More, more items...&#x27;</span>,</span><br><span class="line">  fileAbsolutePath: <span class="string">&#x27;D:/WebDev/Ja/angry-chaired-web/angry-chaired/src/pages/projects/project-2/index.md&#x27;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>As we are trying to create pages from MarkdownRemark nodes, let’s look at the second one.<br>Few properties are interesting to us:</p>
+<ul>
+<li>parent, holding a string which is an id(I assume) of the Markdown file from which this node was created.</li>
+<li>internal.type, indicating type of the node - MarkdownRemark</li>
+<li>frontmatter object, holdling all keys and values that exist in the MarkdownRemark node</li>
+</ul>
+<p>Let’ also take a look at the <strong>fileAbsolutePath</strong>, just to illustrate what is our slug going to look like once we make it.<br>I want the slug to be everything after <strong>“…/pages”</strong>, without the final file extension. That means that, for this particulal node, the slug would be <strong>“/projects/project-2/index”</strong>.</p>
+<p>How do we do that?<br>First, we do this whole process only if the type of a node is <strong>MarkdownRemark</strong>.<br>Then, we get another property from that arguments object automatically passed to <strong>onCreateNode</strong>. This one is a function called <strong>GetNode</strong>, and we can use it to get access to the node’s parent, which is the Markdown file itself.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// gatsby-node.js</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">exports</span>.onCreateNode = <span class="function">(<span class="params">&#123; node, getNode &#125;</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">if</span> (node.internal.type === <span class="string">&quot;MarkdownRemark&quot;</span>) &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> nodeParent = getNode(node.parent);</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;this is parent of the node:&quot;</span>, nodeParent);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>I cut the log a bit, but kept what we are interested in:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">this</span> is parent <span class="keyword">of</span> the node: &#123;</span><br><span class="line">  id: <span class="string">&#x27;c07dfab0-94ae-5cff-afc8-a6ab46107cf2&#x27;</span>,</span><br><span class="line">  children: [ <span class="string">&#x27;cea3be53-d913-5c3f-99f8-b57e4850097f&#x27;</span> ],</span><br><span class="line">  parent: <span class="literal">null</span>,</span><br><span class="line">  internal: &#123;</span><br><span class="line">    contentDigest: <span class="string">&#x27;c583e570cf478a07d1375275829ac972&#x27;</span>,</span><br><span class="line">    type: <span class="string">&#x27;File&#x27;</span>,</span><br><span class="line">    mediaType: <span class="string">&#x27;text/markdown&#x27;</span>,</span><br><span class="line">    description: <span class="string">&#x27;File &quot;src\\pages\\projects\\project-4\\index.md&quot;&#x27;</span>,</span><br><span class="line">    counter: <span class="number">79</span>,</span><br><span class="line">    owner: <span class="string">&#x27;gatsby-source-filesystem&#x27;</span>,</span><br><span class="line">    content: <span class="string">&#x27;---\r\n&#x27;</span> +</span><br><span class="line">      <span class="string">&#x27;title: Project 4\r\n&#x27;</span> +</span><br><span class="line">      <span class="string">&#x27;learningPeriod: 30 June 2020 to 5 July 2020\r\n&#x27;</span> +</span><br><span class="line">      <span class="string">&#x27;date: &quot;2020-08-04&quot;\r\n&#x27;</span> +</span><br><span class="line">      <span class="string">&#x27;frontmatterExcerpt: This is the Project 4 content.\r\n&#x27;</span> +</span><br><span class="line">      <span class="string">&#x27;featuredImage: ./image.jpg\r\n&#x27;</span> +</span><br><span class="line">      <span class="string">&#x27;---\r\n&#x27;</span> +</span><br><span class="line">      <span class="string">&#x27;# This is project heading\r\n&#x27;</span> +</span><br><span class="line">      <span class="string">&#x27;This is project paragraph\r\n&#x27;</span> +</span><br><span class="line">      <span class="string">&#x27;\r\n&#x27;</span> +</span><br><span class="line">      <span class="string">&#x27;## This is project heading 2\r\n&#x27;</span> +</span><br><span class="line">      <span class="string">&#x27;This is another paragraph\r\n&#x27;</span> +</span><br><span class="line">      <span class="string">&#x27;\r\n&#x27;</span> +</span><br><span class="line">      <span class="string">&#x27;[This is a link to Google](https://google.com)\r\n&#x27;</span> +</span><br><span class="line">      <span class="string">&#x27;\r\n&#x27;</span> +</span><br><span class="line">      <span class="string">&#x27;### Below is an unordered list:\r\n&#x27;</span> +</span><br><span class="line">      <span class="string">&#x27;\r\n&#x27;</span> +</span><br><span class="line">      <span class="string">&#x27;- List item\r\n&#x27;</span> +</span><br><span class="line">      <span class="string">&#x27;- Another list item\r\n&#x27;</span> +</span><br><span class="line">      <span class="string">&#x27;\r\n&#x27;</span> +</span><br><span class="line">      <span class="string">&#x27;#### And below is an ordered list\r\n&#x27;</span> +</span><br><span class="line">      <span class="string">&#x27;\r\n&#x27;</span> +</span><br><span class="line">      <span class="string">&#x27;1. List item again\r\n&#x27;</span> +</span><br><span class="line">      <span class="string">&#x27;2. More, more items...&#x27;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  sourceInstanceName: <span class="string">&#x27;src&#x27;</span>,</span><br><span class="line">  absolutePath: <span class="string">&#x27;D:/WebDev/Ja/angry-chaired-web/angry-chaired/src/pages/projects/project-4/index.md&#x27;</span>,</span><br><span class="line">  relativePath: <span class="string">&#x27;pages/projects/project-4/index.md&#x27;</span>,</span><br><span class="line">  extension: <span class="string">&#x27;md&#x27;</span>,</span><br><span class="line">  <span class="comment">// rest is cut...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>We see that the parent is actually an .md file. We can also see the that it has <strong>sourceInstanceName</strong> of <strong>“src”</strong>, which is what we defined as a name for data set when we configured the <strong>gatsby-source-filesystem</strong> plugin.<br>We also see that this file has a <strong>relativePath</strong> property. Since we want our slug to be <strong>“/projects/project-4/index”</strong>, we could just slice that <strong>pages</strong> substring, as well as the <strong>.md</strong> one, and the slug is there.</p>
+<p>Or we could use the <strong>createFilePath</strong> function provided by the <strong>gatsby-source-filesystem</strong> plugin, and skip all of this parent stuff, letting the function create the slug.<br>The function, imported from <strong>“gatsby-source-filesystem”</strong>, returns finished slug, and accepts an argument object with three properties:</p>
+<ul>
+<li>node object</li>
+<li>getNode function</li>
+<li>basePath, which is a string representing part of the relative path we want removed. We want the <strong>“pages”</strong> part removed.</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// gatsby-node.js</span></span><br><span class="line"><span class="keyword">const</span> &#123; createFilePath &#125; = <span class="built_in">require</span>(<span class="string">&quot;gatsby-source-filesystem&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">exports</span>.onCreateNode = <span class="function">(<span class="params">&#123; node, getNode &#125;</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">if</span> (node.internal.type === <span class="string">&quot;MarkdownRemark&quot;</span>) &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> slug = createFilePath(&#123; node, getNode, <span class="attr">basePath</span>: <span class="string">&quot;pages&quot;</span> &#125;)</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;this is slug:&quot;</span>, slug);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Here is what we get:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">this is slug: &#x2F;projects&#x2F;project-1&#x2F;</span><br><span class="line">this is slug: &#x2F;projects&#x2F;project-2&#x2F;</span><br><span class="line">this is slug: &#x2F;projects&#x2F;project-3&#x2F;</span><br><span class="line">this is slug: &#x2F;projects&#x2F;project-4&#x2F;</span><br></pre></td></tr></table></figure>
+
+<p>You might be wondering where is the <strong>“index”</strong> part? Well, we dont need it. If there is no file specified in the URL, index.html file will be rendered, and this is what will be built by Gatsby. So we are good.</p>
+<p>So we have the slug. Now what?<br>Well, we should create a new field on the MarkdownRemark node, name it <strong>“slug”</strong> and give it the value of our slug.</p>
+<p>We do it with a function that we get from yet another property on the argument object passed to the <strong>onCreateNode</strong> function.<br>The property name is <strong>actions</strong>, and the function inside it that we need is called <strong>createNodeField</strong></p>
+<p>We call <strong>createNodeField</strong> and pass it an arguments object with three properties:</p>
+<ul>
+<li>node</li>
+<li>name of the field - <strong>“slug”</strong> in this case</li>
+<li>value - <strong>slug</strong></li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// gatsby-node.js</span></span><br><span class="line"><span class="keyword">const</span> &#123; createFilePath &#125; = <span class="built_in">require</span>(<span class="string">&quot;gatsby-source-filesystem&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">exports</span>.onCreateNode = <span class="function">(<span class="params">&#123; node, getNode, actions &#125;</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">if</span> (node.internal.type === <span class="string">&quot;MarkdownRemark&quot;</span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123; createNodeField &#125; = actions;</span><br><span class="line">    <span class="keyword">const</span> slug = createFilePath(&#123; node, getNode, <span class="attr">basePath</span>: <span class="string">&quot;pages&quot;</span> &#125;)</span><br><span class="line">    createNodeField(&#123;</span><br><span class="line">        node,</span><br><span class="line">        name: <span class="string">&quot;slug&quot;</span>,</span><br><span class="line">        value: slug</span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;this is slugged node:&quot;</span>, node);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>If we log the node again, after we added the <strong>slug</strong> field to it, we will see that the new field is there:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">  ...</span><br><span class="line">  rawMarkdownBody: <span class="string">&#x27;# This is project heading\r\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;This is project paragraph\r\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;\r\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;## This is project heading 2\r\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;This is another paragraph\r\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;\r\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;[This is a link to Google](https://google.com)\r\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;\r\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;### Below is an unordered list:\r\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;\r\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;- List item\r\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;- Another list item\r\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;\r\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;#### And below is an ordered list\r\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;\r\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;1. List item again\r\n&#x27;</span> +</span><br><span class="line">    <span class="string">&#x27;2. More, more items...&#x27;</span>,</span><br><span class="line">  fileAbsolutePath: <span class="string">&#x27;D:/WebDev/Ja/angry-chaired-web/angry-chaired/src/pages/projects/project-4/index.md&#x27;</span>,</span><br><span class="line">  fields: &#123; <span class="attr">slug</span>: <span class="string">&#x27;/projects/project-4/&#x27;</span> &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Uf, that was lot of logging.</p>
+<h3 id="Use-another-API-of-Gatsby’s-createPages-to-create-new-pages"><a href="#Use-another-API-of-Gatsby’s-createPages-to-create-new-pages" class="headerlink" title="Use another API of Gatsby’s, createPages, to create new pages"></a>Use another API of Gatsby’s, <strong>createPages</strong>, to create new pages</h3><p>Now we move to the part where we actually create pages.<br>We will use another API given to us by Gatsby. It is a function again, <strong>createPages</strong>, that is again exported from the <strong>gatsby-node.js</strong> file.</p>
+<p>In short, here we will query MarkdownRemark nodes, and then use another function to create a page for every node we have.<br>We will define a path to the page, set the template to be used for the page, and also set a context for each new page. This context will make a GraphQL variable avialble in each new page, which will come in handy when we get to populating the template with data.</p>
+<p>Alright. As we said, we export <strong>createPages</strong> from <strong>gatsby-node.js</strong>. This function is passed an argument object holding 2 properties:</p>
+<ul>
+<li>graphql</li>
+<li>actions</li>
+</ul>
+<p>The <strong>graphql</strong> property is a function that returns a promise in this case, so we will make entire <strong>createPages</strong> an async function.<br>Inside, we destructure <strong>createPage</strong> function from <strong>actions</strong>, and then query <strong>allMarkdownRemark</strong> to get a slug of each MarkdownRemark node.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// gatsby-node.js</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">exports</span>.onCreateNode = <span class="function">(<span class="params">&#123; node, getNode, actions &#125;</span>) =&gt;</span> &#123;<span class="comment">//...</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">exports</span>.createPages = <span class="keyword">async</span> (&#123; graphql, actions &#125;) =&gt; &#123;</span><br><span class="line">  <span class="keyword">const</span> &#123; createPage &#125; = actions</span><br><span class="line">  <span class="keyword">const</span> result = <span class="keyword">await</span> graphql(<span class="string">`</span></span><br><span class="line"><span class="string">    query &#123;</span></span><br><span class="line"><span class="string">      allMarkdownRemark &#123;</span></span><br><span class="line"><span class="string">        edges &#123;</span></span><br><span class="line"><span class="string">          node &#123;</span></span><br><span class="line"><span class="string">            fields &#123;</span></span><br><span class="line"><span class="string">              slug</span></span><br><span class="line"><span class="string">            &#125;</span></span><br><span class="line"><span class="string">          &#125;</span></span><br><span class="line"><span class="string">        &#125;</span></span><br><span class="line"><span class="string">      &#125;</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">  `</span>)</span><br></pre></td></tr></table></figure>
+
+<p>The result variable that we have is an object that holds a <strong>data</strong> property, which in turn contains <strong>allMarkdownRemark</strong> property.<br>Here is the log of <strong>result</strong>:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;data&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;allMarkdownRemark&quot;</span>: &#123;</span><br><span class="line">      <span class="string">&quot;edges&quot;</span>: [</span><br><span class="line">        &#123;</span><br><span class="line">          <span class="string">&quot;node&quot;</span>: &#123;</span><br><span class="line">            <span class="string">&quot;fields&quot;</span>: &#123;</span><br><span class="line">              <span class="string">&quot;slug&quot;</span>: <span class="string">&quot;/projects/project-2/&quot;</span></span><br><span class="line">            &#125;</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">          <span class="string">&quot;node&quot;</span>: &#123;</span><br><span class="line">            <span class="string">&quot;fields&quot;</span>: &#123;</span><br><span class="line">              <span class="string">&quot;slug&quot;</span>: <span class="string">&quot;/projects/project-1/&quot;</span></span><br><span class="line">            &#125;</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">          <span class="string">&quot;node&quot;</span>: &#123;</span><br><span class="line">            <span class="string">&quot;fields&quot;</span>: &#123;</span><br><span class="line">              <span class="string">&quot;slug&quot;</span>: <span class="string">&quot;/projects/project-3/&quot;</span></span><br><span class="line">            &#125;</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">          <span class="string">&quot;node&quot;</span>: &#123;</span><br><span class="line">            <span class="string">&quot;fields&quot;</span>: &#123;</span><br><span class="line">              <span class="string">&quot;slug&quot;</span>: <span class="string">&quot;/projects/project-4/&quot;</span></span><br><span class="line">            &#125;</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">      ]</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Seeing that <strong>edges</strong> is an array of <strong>edge</strong> objects containing <strong>node</strong> objects, we can now loop over <strong>edges</strong>, and create a page for each <strong>edge</strong>.<br>The <strong>createPage</strong> method that we use to create a page takes an argment object, with three properties:</p>
+<ul>
+<li>path, which defines a relative path to new pages from the <strong>/pages</strong> path</li>
+<li>component, which defines an absolute path to a template component that renders when we hit the path</li>
+<li>context, which defines a variables that pages will be able to access in their page queries. In this case we will use the <strong>slug</strong> as a variable, as we can use it to get particular MarkdownRemark nodes from the filesystem.</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// gatsby-node.js</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">exports</span>.onCreateNode = <span class="function">(<span class="params">&#123; node, getNode, actions &#125;</span>) =&gt;</span> &#123;<span class="comment">//...</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">exports</span>.createPages = <span class="keyword">async</span> (&#123; graphql, actions &#125;) =&gt; &#123;</span><br><span class="line">  <span class="keyword">const</span> &#123; createPage &#125; = actions</span><br><span class="line">  <span class="keyword">const</span> result = <span class="keyword">await</span> graphql(<span class="string">`</span></span><br><span class="line"><span class="string">    query &#123;</span></span><br><span class="line"><span class="string">      allMarkdownRemark &#123;</span></span><br><span class="line"><span class="string">        edges &#123;</span></span><br><span class="line"><span class="string">          node &#123;</span></span><br><span class="line"><span class="string">            fields &#123;</span></span><br><span class="line"><span class="string">              slug</span></span><br><span class="line"><span class="string">            &#125;</span></span><br><span class="line"><span class="string">          &#125;</span></span><br><span class="line"><span class="string">        &#125;</span></span><br><span class="line"><span class="string">      &#125;</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">  `</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">  result.data.allMarkdownRemark.edges.forEach(<span class="function">(<span class="params">&#123; node &#125;</span>) =&gt;</span> &#123;</span><br><span class="line">    createPage(&#123;</span><br><span class="line">      path: node.fields.slug,</span><br><span class="line">      component: path.resolve(<span class="string">&quot;./src/templates/project.template.tsx&quot;</span>),</span><br><span class="line">      context: &#123;</span><br><span class="line">        slug: node.fields.slug,</span><br><span class="line">      &#125;,</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;)</span><br></pre></td></tr></table></figure>
+
+<p>And that’s it. We have now programmatically created new pages.<br>Each new page is accessible via <strong>“projects/NAME_OF_THEIR_MARKDOWN_NODE_FOLDER”</strong>.</p>
+<p>Since we haven’t linked Home page list items to new pages, let’s try to access a URL that doesn’t , like <strong>“<a target="_blank" rel="noopener" href="http://localhost:8000/oo&quot;">http://localhost:8000/oo&quot;</a></strong>. The development 404 page will list all existing routes, and we can find URLs to new pages there.</p>
+<h3 id="Adjust-project-template-to-show-project-title-and-frontmatter-excerpt-and-link-LearnItem-to-new-pages"><a href="#Adjust-project-template-to-show-project-title-and-frontmatter-excerpt-and-link-LearnItem-to-new-pages" class="headerlink" title="Adjust project template to show project title and frontmatter excerpt, and link LearnItem to new pages"></a>Adjust project template to show project title and frontmatter excerpt, and link <strong>LearnItem</strong> to new pages</h3><p>When we see the project, it looks a bit dry, and it would be good to fill it with some data.<br>Since the template is being used as a page, we can do a page query inside it.<br>Also, we have access to that context variable that we provided to each new page. This variable is called <strong>slug</strong>, and we can access it as <strong>$slug</strong></p>
+<p>Let’s assemble the query in GraphiQL, and then we can just copy it to the template.</p>
+<p>We want to access a specific MarkdownRemark node, so we choose the <strong>markdownRemark</strong> option.<br>We want to filter it by <strong>fields</strong>, and then <strong>slug</strong>. Check the <strong>eq</strong> option, and hover above it to show a small <strong>$</strong> icon. Click on it, and the query will automatically insert <strong>$eq</strong> variable in the query and define it as an empty string.<br>Since our variable is actually called <strong>$slug</strong>, and we don’t want to define it in the query, manually correct the query to following:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">query MyQuery($slug: String!) &#123;</span><br><span class="line">  markdownRemark(fields: &#123;slug: &#123;eq: $slug&#125;&#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Then, add frontmatter <strong>title</strong>, <strong>frontmatterExcerpt</strong> and <strong>data</strong> fields to the query, and specify date format if you wish.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">query MyQuery($slug: String!) &#123;</span><br><span class="line">  markdownRemark(fields: &#123;slug: &#123;eq: $slug&#125;&#125;) &#123;</span><br><span class="line">    frontmatter &#123;</span><br><span class="line">      date(formatString: &quot;DD&#x2F;MM&#x2F;YYYY&quot;)</span><br><span class="line">      title</span><br><span class="line">      frontmatterExcerpt</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>Finally, we define the <strong>$slug</strong> variable in GraphiQL itself. There is a <strong>QUERY VARIABLES</strong> bar at the bottom of the screen.<br>Open it and add following JSON data to it:</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">&quot;slug&quot;</span>: <span class="string">&quot;/projects/project-1/&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Hit play now.<br>We get data for the first project.</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;data&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;markdownRemark&quot;</span>: &#123;</span><br><span class="line">      <span class="attr">&quot;frontmatter&quot;</span>: &#123;</span><br><span class="line">        <span class="attr">&quot;date&quot;</span>: <span class="string">&quot;11/08/2020&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;title&quot;</span>: <span class="string">&quot;Project 1&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;frontmatterExcerpt&quot;</span>: <span class="string">&quot;This is the Project 1 content.&quot;</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Now we can just copy this data into a page query in the project template. We don’t need to include the slug variable, however, as each programmatically created page already has this variable included in its context.</p>
+<p>Then we can accept the <strong>data</strong> prop passed to the template by the page query, and include the data into HTML.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// src/templates/project.template.tsx</span></span><br><span class="line"><span class="comment">// ...</span></span><br><span class="line">interface ProjectTemplateProps &#123;</span><br><span class="line">  data: &#123;</span><br><span class="line">    markdownRemark: &#123;</span><br><span class="line">      frontmatter: &#123;</span><br><span class="line">        title: string;</span><br><span class="line">        date: string</span><br><span class="line">        frontmatterExcerpt: string;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> ProjectTemplate: React.FC&lt;ProjectTemplateProps&gt; = <span class="function">(<span class="params">&#123; data &#125;</span>) =&gt;</span> &#123;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> &#123; title, date, frontmatterExcerpt &#125; = data.markdownRemark.frontmatter;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    &lt;Layout&gt;</span><br><span class="line">      &lt;ProjectTemplateStyled className=<span class="string">&quot;project-template&quot;</span>&gt;</span><br><span class="line">        &lt;section className=<span class="string">&quot;project-template__details-section&quot;</span>&gt;</span><br><span class="line">          &lt;h1 className=<span class="string">&quot;details-section__project-title&quot;</span>&gt;&#123; title &#125;&lt;/h1&gt;</span><br><span class="line">          &lt;span className=<span class="string">&quot;details-section__publish-date&quot;</span>&gt;&#123; date &#125;&lt;/span&gt;</span><br><span class="line">          &lt;p className=<span class="string">&quot;details-section__project-lead&quot;</span>&gt;</span><br><span class="line">            &#123; frontmatterExcerpt &#125;</span><br><span class="line">          &lt;/p&gt;</span><br><span class="line">        &lt;/section&gt;</span><br><span class="line">      &lt;/ProjectTemplateStyled&gt;</span><br><span class="line">    &lt;/Layout&gt;</span><br><span class="line">  )</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> ProjectTemplate</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> query = graphql<span class="string">`</span></span><br><span class="line"><span class="string">  query MyQuery($slug: String!) &#123;</span></span><br><span class="line"><span class="string">    markdownRemark(fields: &#123; slug: &#123; eq: $slug &#125; &#125;) &#123;</span></span><br><span class="line"><span class="string">      frontmatter &#123;</span></span><br><span class="line"><span class="string">        date</span></span><br><span class="line"><span class="string">        title</span></span><br><span class="line"><span class="string">        frontmatterExcerpt</span></span><br><span class="line"><span class="string">      &#125;</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">  &#125;</span></span><br><span class="line"><span class="string">`</span></span><br></pre></td></tr></table></figure>
+
+<p>Cool. Now we have somewhat decent-looing project pages.</p>
+<p>Last thing to do is to link <strong>LearnItem</strong> component to each new page.<br>To do this, we can include query for the slug field in the <strong>Home</strong> page component, together with all other fields needed for project list. The slug us then passed to the <strong>ILearnMapper</strong> as a part of each <strong>node</strong> in the <strong>edges</strong> list.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// src/pages/index.tsx</span></span><br><span class="line"><span class="comment">// ...</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> HomePage: React.FC&lt;HomePageProps&gt; = (&#123;...</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">        ...</span><br><span class="line">          &lt;ILearnMapper projects=&#123;data.allMarkdownRemark.edges&#125; /&gt;</span><br><span class="line">        ...</span><br><span class="line">    )</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> HomePage</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> query = graphql<span class="string">`</span></span><br><span class="line"><span class="string">  query &#123;</span></span><br><span class="line"><span class="string">    allMarkdownRemark(sort: &#123; fields: frontmatter___date, order: DESC &#125;) &#123;</span></span><br><span class="line"><span class="string">      edges &#123;</span></span><br><span class="line"><span class="string">        node &#123;</span></span><br><span class="line"><span class="string">          id</span></span><br><span class="line"><span class="string">          frontmatter &#123;</span></span><br><span class="line"><span class="string">            title</span></span><br><span class="line"><span class="string">            date(formatString: &quot;DD/MM/YYYY&quot;)</span></span><br><span class="line"><span class="string">            frontmatterExcerpt</span></span><br><span class="line"><span class="string">          &#125;</span></span><br><span class="line"><span class="string">          fields &#123;</span></span><br><span class="line"><span class="string">            slug</span></span><br><span class="line"><span class="string">          &#125;</span></span><br><span class="line"><span class="string">        &#125;</span></span><br><span class="line"><span class="string">      &#125;</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">  &#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>Then, we pass the <strong>slug</strong> from the mapper to the <strong>LearnItem</strong> component:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// src/containers/i-learn-mapper.tsx</span></span><br><span class="line">...</span><br><span class="line">interface ILearnMapperProps &#123;</span><br><span class="line">  projects: <span class="built_in">Array</span>&lt;&#123;</span><br><span class="line">    node: &#123;</span><br><span class="line">      frontmatter: &#123;</span><br><span class="line">        title: string</span><br><span class="line">        date: string</span><br><span class="line">        frontmatterExcerpt: string</span><br><span class="line">      &#125;</span><br><span class="line">      id: string</span><br><span class="line">      fields: &#123;</span><br><span class="line">        slug: string</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;&gt;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> ILearnMapper: React.FC&lt;ILearnMapperProps&gt; = <span class="function">(<span class="params">&#123; projects &#125;</span>) =&gt;</span> &#123;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    &lt;ILearnMapperStyled className=<span class="string">&quot;i-learn-mapper&quot;</span>&gt;</span><br><span class="line">      &#123;projects.map(<span class="function">(<span class="params">&#123; node: &#123; id, frontmatter, fields &#125; &#125;</span>) =&gt;</span> (</span><br><span class="line">        &lt;LearnItem key=&#123;id&#125; frontmatter=&#123;frontmatter&#125; slug=&#123;fields.slug&#125;/&gt;</span><br><span class="line">      ))&#125;</span><br><span class="line">    &lt;/ILearnMapperStyled&gt;</span><br><span class="line">  )</span><br><span class="line">&#125;</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<p>Finally, we use the slug in the <strong>LearnItem</strong> component to link to project pages:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// src/components/learn-item.component.tsx</span></span><br><span class="line"><span class="comment">// ...</span></span><br><span class="line">interface LearnItemProps &#123;</span><br><span class="line">  frontmatter: &#123;</span><br><span class="line">    title: string</span><br><span class="line">    date: string</span><br><span class="line">    frontmatterExcerpt: string</span><br><span class="line">  &#125;</span><br><span class="line">  slug: string</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> LearnItem: React.FC&lt;LearnItemProps&gt; = (&#123;</span><br><span class="line">  frontmatter: &#123;</span><br><span class="line">    title,</span><br><span class="line">    date,</span><br><span class="line">    frontmatterExcerpt: excerpt,</span><br><span class="line">  &#125;,</span><br><span class="line">  slug</span><br><span class="line">&#125;) =&gt; &#123;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    &lt;LearnItemStyled className=<span class="string">&quot;learn-item&quot;</span>&gt;</span><br><span class="line">      &lt;div className=<span class="string">&quot;learn-item__learn-points&quot;</span>&gt;</span><br><span class="line">        &lt;Link to=&#123;slug&#125;&gt;</span><br><span class="line">          &lt;h3 className=<span class="string">&quot;learn-points__title&quot;</span>&gt;&#123;title&#125;&lt;/h3&gt;</span><br><span class="line">        &lt;/Link&gt;</span><br><span class="line">        &lt;span className=<span class="string">&quot;learn-points__date&quot;</span>&gt;&#123;date&#125;&lt;/span&gt;</span><br><span class="line">        &lt;p className=<span class="string">&quot;learn-points__other&quot;</span>&gt;&#123;excerpt&#125;&lt;/p&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">    &lt;/LearnItemStyled&gt;</span><br><span class="line">  )</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> LearnItem</span><br><span class="line"></span><br><span class="line"><span class="comment">// ...</span></span><br></pre></td></tr></table></figure>
+
+<p>Alright. Go to the Home page and try to click on a project title. It should take you to its project page. </p>
+<p>That’s all folks, as far as this part is concerned. We created pages from our Markdown documents.<br>First we create a template to hold data for our new pages. We also created slugs that we use as paths to access newly created pages. Then we added those slugs to nodes created from Markdown documents.<br>With slugs ready, we were able to create pages for each Markdown document. We specified how to access them, which template they use, and what context they have available.<br>We did well, I think.</p>
+<p>In the next one we will see how we can insert Markdown body into our components. Out of all things, this is the one that annoyed me the most. It was because I was not able to style inserted data in the way I imagined the page to look. Because of this I tried several ways to deal with it.<br>We will see what those ways are.</p>
+<!-- End Step Content -->
+
+<!-- Project Information -->
+
+<h2 id="Project-Information"><a href="#Project-Information" class="headerlink" title="Project Information"></a>Project Information</h2><h3 id="Available-at"><a href="#Available-at" class="headerlink" title="Available at"></a>Available at</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/ikaem/angry-chaired-gatsby">Github</a> </li>
+<li><a target="_blank" rel="noopener" href="https://angrychaired.surge.sh/">Live project</a></li>
+</ul>
+<h3 id="Goals"><a href="#Goals" class="headerlink" title="Goals"></a>Goals</h3><ol>
+<li>A Gatsby website with a list of projects on home page</li>
+<li>Dedicated pages for each project</li>
+<li>Write project information in Markdown</li>
+<li>Functional message form </li>
+<li>Deployed website</li>
+</ol>
+<h3 id="Steps"><a href="#Steps" class="headerlink" title="Steps"></a>Steps</h3><ol>
+<li>Create new Gatsby project with TS and create basic pages</li>
+<li>Create layout and its elements, and other components</li>
+<li>Install Styled Components and its Gatsby plugin to style pages</li>
+<li>Get data with Filesystem plugin and GraphQL</li>
+<li>Write projects content in Markdown, transform and query them with the transformer-remark plugin</li>
+<li><strong>Programatically create pages from Markdown files</strong></li>
+<li>Insert Markdown files into pages with the <strong>transformer-remark</strong> plugin</li>
+<li>Use Gatsby Image to work with images</li>
+<li>Create send message feature on the contact page</li>
+<li>Audit, optimize and deploy the website</li>
+</ol>
+<h3 id="Tech-and-Tools"><a href="#Tech-and-Tools" class="headerlink" title="Tech and Tools"></a>Tech and Tools</h3><ol>
+<li>React</li>
+<li>Gatsby</li>
+<li>Markdown</li>
+<li>TypeScript</li>
+<li>Getform.io</li>
+<li>Surge</li>
+<li>Styled Components</li>
+</ol>
+<h3 id="Experience-with-Tech-amp-Tools"><a href="#Experience-with-Tech-amp-Tools" class="headerlink" title="Experience with Tech &amp; Tools"></a>Experience with Tech &amp; Tools</h3><p>Prior to this project, I had very little experience with Gatsby. I did a little something with Next.js, another React framework that focuses on server-side rendered websites. I am ok with GraphQL, on which Gatsby heavily relies to get its data, and I am ok with TS too.  </p>
+<h2 id="DISCLAIMER"><a href="#DISCLAIMER" class="headerlink" title="DISCLAIMER"></a>DISCLAIMER</h2><p>Don’t take any of this seriously and as a matter-of-fact. These are my notes. It might look like I am trying to teach something to someone. I am not.</p>
+
+
+                
+
+
+                <!-- Cover image credit -->
+                
+                    <p class="image-credit-link">
+                        Cover image by <strong>
+                            <a target="_blank" rel="noopener" href="https://unsplash.com/@cezarsmpio?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
+                                Cezar Sampaio
+                            </a>
+                        </strong>
+                    </p>
+
+                
+
+  
+
+            </div>
+            
+            <!-- Custom placed tags -->
+            <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                
+                    
+
+
+<a href="/angry-chaired-blog/tags/gatsby/">#gatsby</a>
+
+
+                
+            </div>
+            <!--  -->
+
+
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+
+            <!-- Hyvor comments -->
+
+            <!-- End of Hyvor comments -->
+        </div>
+    </div>
+</article>
+
+
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2020 kaem<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
