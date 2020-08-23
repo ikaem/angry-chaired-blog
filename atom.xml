@@ -6,7 +6,7 @@
   <link href="https://ikaem.github.io/angry-chaired-blog/atom.xml" rel="self"/>
   
   <link href="https://ikaem.github.io/angry-chaired-blog/"/>
-  <updated>2020-08-17T07:54:39.156Z</updated>
+  <updated>2020-08-23T11:41:03.546Z</updated>
   <id>https://ikaem.github.io/angry-chaired-blog/</id>
   
   <author>
@@ -15,6 +15,107 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Copying Landbot.io: The CSS</title>
+    <link href="https://ikaem.github.io/angry-chaired-blog/2020/copying-landbot-io-the-css/"/>
+    <id>https://ikaem.github.io/angry-chaired-blog/2020/copying-landbot-io-the-css/</id>
+    <published>2020-08-23T05:19:24.000Z</published>
+    <updated>2020-08-23T11:41:03.546Z</updated>
+    
+    
+    <summary type="html">&lt;!-- Step Content Start --&gt;
+
+&lt;h4 id=&quot;Part-4-of-4-in-Copying-Landbot-io&quot;&gt;&lt;a href=&quot;#Part-4-of-4-in-Copying-Landbot-io&quot; class=&quot;headerlink&quot; title=&quot;Part 4 of 4 in Copying Landbot.io&quot;&gt;&lt;/a&gt;Part 4 of 4 in Copying Landbot.io&lt;/h4&gt;&lt;p&gt;Stying my copy of &lt;a href=&quot;https://landbot.io/&quot;&gt;Landbot&lt;/a&gt;‘s home page was pretty simple. Aside from usual coloring and positioning, I mostly used Flexbox. There were few occasions where I got stuck and was not able to understand why something was done in original. However, the end product ended up looking pretty similar to its model.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="copy web" scheme="https://ikaem.github.io/angry-chaired-blog/categories/copy-web/"/>
+    
+    
+    <category term="landbot" scheme="https://ikaem.github.io/angry-chaired-blog/tags/landbot/"/>
+    
+    <category term="css" scheme="https://ikaem.github.io/angry-chaired-blog/tags/css/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Copying Landbot.io: The HTML</title>
+    <link href="https://ikaem.github.io/angry-chaired-blog/2020/copying-landbot-io-the-html/"/>
+    <id>https://ikaem.github.io/angry-chaired-blog/2020/copying-landbot-io-the-html/</id>
+    <published>2020-08-22T12:01:54.000Z</published>
+    <updated>2020-08-23T05:23:43.281Z</updated>
+    
+    
+    <summary type="html">&lt;!-- Step Content Start --&gt;
+
+&lt;h4 id=&quot;Part-3-of-4-in-Copying-Landbot-io&quot;&gt;&lt;a href=&quot;#Part-3-of-4-in-Copying-Landbot-io&quot; class=&quot;headerlink&quot; title=&quot;Part 3 of 4 in Copying Landbot.io&quot;&gt;&lt;/a&gt;Part 3 of 4 in Copying Landbot.io&lt;/h4&gt;&lt;p&gt;HTML of the &lt;a href=&quot;https://landbot.io/&quot;&gt;Landbot&lt;/a&gt;‘s home page is filled with &lt;strong&gt;&amp;lt;div&amp;gt;&lt;/strong&gt; elements. I assume this is becuase they use &lt;a href=&quot;https://getbootstrap.com/&quot;&gt;Bootstrap&lt;/a&gt;, which usually has lot of nested &lt;strong&gt;div&lt;/strong&gt;s to position and assign roles to specific parts of HTML.&lt;br&gt;In any case, there is not much semantic HTML, the only one being &lt;strong&gt;&amp;lt;nav&amp;gt;&lt;/strong&gt; to indicate navigation in the header area.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="copy web" scheme="https://ikaem.github.io/angry-chaired-blog/categories/copy-web/"/>
+    
+    
+    <category term="landbot" scheme="https://ikaem.github.io/angry-chaired-blog/tags/landbot/"/>
+    
+    <category term="html" scheme="https://ikaem.github.io/angry-chaired-blog/tags/html/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Copying Landbot.io: The Design</title>
+    <link href="https://ikaem.github.io/angry-chaired-blog/2020/copying-landbot-io-the-design/"/>
+    <id>https://ikaem.github.io/angry-chaired-blog/2020/copying-landbot-io-the-design/</id>
+    <published>2020-08-21T19:41:51.000Z</published>
+    <updated>2020-08-22T12:01:41.652Z</updated>
+    
+    
+    <summary type="html">&lt;!-- Step Content Start --&gt;
+
+&lt;h4 id=&quot;Part-2-of-4-in-Copying-Landbot-io&quot;&gt;&lt;a href=&quot;#Part-2-of-4-in-Copying-Landbot-io&quot; class=&quot;headerlink&quot; title=&quot;Part 2 of 4 in Copying Landbot.io&quot;&gt;&lt;/a&gt;Part 2 of 4 in Copying Landbot.io&lt;/h4&gt;&lt;p&gt;Style of the &lt;a href=&quot;https://landbot.io/&quot;&gt;Landbot.io&lt;/a&gt; home page is fun. There are happy colors, shapes curving and moving about, and there is a grey Ryan Reynolds. &lt;/p&gt;
+&lt;p&gt;I used Figma to copy all of those things and get a static version of the page that I could say I built. By drawing it, I could see how lot of the page is actually made out of few things, copied, modified and assembled into new things. &lt;/p&gt;</summary>
+    
+    
+    
+    <category term="copy web" scheme="https://ikaem.github.io/angry-chaired-blog/categories/copy-web/"/>
+    
+    
+    <category term="landbot" scheme="https://ikaem.github.io/angry-chaired-blog/tags/landbot/"/>
+    
+    <category term="figma" scheme="https://ikaem.github.io/angry-chaired-blog/tags/figma/"/>
+    
+    <category term="design" scheme="https://ikaem.github.io/angry-chaired-blog/tags/design/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Copying Landbot.io: The Framework</title>
+    <link href="https://ikaem.github.io/angry-chaired-blog/2020/copying-landbot-io-the-framework/"/>
+    <id>https://ikaem.github.io/angry-chaired-blog/2020/copying-landbot-io-the-framework/</id>
+    <published>2020-08-21T19:01:14.000Z</published>
+    <updated>2020-08-22T11:48:21.182Z</updated>
+    
+    
+    <summary type="html">&lt;!-- Step Content Start --&gt;
+
+&lt;h4 id=&quot;Part-1-of-4-in-Copying-Landbot-io&quot;&gt;&lt;a href=&quot;#Part-1-of-4-in-Copying-Landbot-io&quot; class=&quot;headerlink&quot; title=&quot;Part 1 of 4 in Copying Landbot.io&quot;&gt;&lt;/a&gt;Part 1 of 4 in Copying Landbot.io&lt;/h4&gt;&lt;p&gt;I wanted to start a little ongoing project to copy website design. Ideally, I would like to find a nice website, and then copy it to make it simpler in terms of HTML and CSS. Because that is what I am about, simple :).&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="copy web" scheme="https://ikaem.github.io/angry-chaired-blog/categories/copy-web/"/>
+    
+    
+    <category term="landbot" scheme="https://ikaem.github.io/angry-chaired-blog/tags/landbot/"/>
+    
+    <category term="html" scheme="https://ikaem.github.io/angry-chaired-blog/tags/html/"/>
+    
+    <category term="css" scheme="https://ikaem.github.io/angry-chaired-blog/tags/css/"/>
+    
+    <category term="figma" scheme="https://ikaem.github.io/angry-chaired-blog/tags/figma/"/>
+    
+    <category term="design" scheme="https://ikaem.github.io/angry-chaired-blog/tags/design/"/>
+    
+  </entry>
   
   <entry>
     <title>Hexo Blog: Deploy to Github Pages</title>
@@ -393,111 +494,6 @@
     <category term="gatsby" scheme="https://ikaem.github.io/angry-chaired-blog/tags/gatsby/"/>
     
     <category term="styled components" scheme="https://ikaem.github.io/angry-chaired-blog/tags/styled-components/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Gatsby Web: Gatsby &amp; React Components</title>
-    <link href="https://ikaem.github.io/angry-chaired-blog/2020/gatsby-web-gatsby-react-components/"/>
-    <id>https://ikaem.github.io/angry-chaired-blog/2020/gatsby-web-gatsby-react-components/</id>
-    <published>2020-08-16T20:08:44.000Z</published>
-    <updated>2020-08-16T20:17:43.833Z</updated>
-    
-    
-    <summary type="html">&lt;!-- Step Content Start --&gt;
-
-&lt;h4 id=&quot;Part-2-of-10-in-Gatsby-Web&quot;&gt;&lt;a href=&quot;#Part-2-of-10-in-Gatsby-Web&quot; class=&quot;headerlink&quot; title=&quot;Part 2 of 10 in Gatsby Web&quot;&gt;&lt;/a&gt;Part 2 of 10 in Gatsby Web&lt;/h4&gt;&lt;p&gt;Now when we have our basic pages, let’s add some structure to our website.&lt;br&gt;Since all websites have header and footer, it would probably be good that our site has those as well.&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="gatsby web" scheme="https://ikaem.github.io/angry-chaired-blog/categories/gatsby-web/"/>
-    
-    
-    <category term="gatsby" scheme="https://ikaem.github.io/angry-chaired-blog/tags/gatsby/"/>
-    
-    <category term="react" scheme="https://ikaem.github.io/angry-chaired-blog/tags/react/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Gatsby Web: New Gatsby Project with TypeScript</title>
-    <link href="https://ikaem.github.io/angry-chaired-blog/2020/gatsby-web-new-gatsby-project-with-typescript/"/>
-    <id>https://ikaem.github.io/angry-chaired-blog/2020/gatsby-web-new-gatsby-project-with-typescript/</id>
-    <published>2020-08-16T19:47:07.000Z</published>
-    <updated>2020-08-16T20:11:14.858Z</updated>
-    
-    
-    <summary type="html">&lt;!-- Step Content Start --&gt;
-
-&lt;h4 id=&quot;Part-1-of-10-in-Gatsby-Web&quot;&gt;&lt;a href=&quot;#Part-1-of-10-in-Gatsby-Web&quot; class=&quot;headerlink&quot; title=&quot;Part 1 of 10 in Gatsby Web&quot;&gt;&lt;/a&gt;Part 1 of 10 in Gatsby Web&lt;/h4&gt;&lt;p&gt;This project relies heavily on the &lt;a href=&quot;https://www.gatsbyjs.org/tutorial/&quot;&gt;Gatsby official tutorial&lt;/a&gt;. I did modify it somewhat, using TS instead of JS, messing with the filesystem plugin a bit, and straying on occasion when the website needed something different from the tutorial. &lt;/p&gt;
-&lt;p&gt;The idea here is to create a website where I will eventually be able to show my projects, and then sometime in the future even move the blog to.&lt;br&gt;I see Gatsby mentioned a lot around the web, so I figured to use it for this project. &lt;/p&gt;</summary>
-    
-    
-    
-    <category term="gatsby web" scheme="https://ikaem.github.io/angry-chaired-blog/categories/gatsby-web/"/>
-    
-    
-    <category term="gatsby" scheme="https://ikaem.github.io/angry-chaired-blog/tags/gatsby/"/>
-    
-    <category term="typescript" scheme="https://ikaem.github.io/angry-chaired-blog/tags/typescript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>GraphQL &amp; React &amp; JWT: Register Functionality</title>
-    <link href="https://ikaem.github.io/angry-chaired-blog/2020/graphql-react-jwt-register-functionality/"/>
-    <id>https://ikaem.github.io/angry-chaired-blog/2020/graphql-react-jwt-register-functionality/</id>
-    <published>2020-08-16T19:26:21.000Z</published>
-    <updated>2020-08-16T19:38:27.856Z</updated>
-    
-    
-    <summary type="html">&lt;!-- Step Content Start --&gt;
-
-&lt;h4 id=&quot;Part-12-of-12-in-GraphQL-amp-React-amp-JWT&quot;&gt;&lt;a href=&quot;#Part-12-of-12-in-GraphQL-amp-React-amp-JWT&quot; class=&quot;headerlink&quot; title=&quot;Part 12 of 12 in GraphQL &amp;amp; React &amp;amp; JWT&quot;&gt;&lt;/a&gt;Part 12 of 12 in GraphQL &amp;amp; React &amp;amp; JWT&lt;/h4&gt;&lt;p&gt;The last functionality is the &lt;strong&gt;register&lt;/strong&gt; one. The functionality is very similar to the &lt;strong&gt;login&lt;/strong&gt; one, in that we have a mutation that accepts arguments, which are extracted from references to form inputs on the register page.&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="graphql &amp; react &amp; jwt" scheme="https://ikaem.github.io/angry-chaired-blog/categories/graphql-react-jwt/"/>
-    
-    
-    <category term="graphql" scheme="https://ikaem.github.io/angry-chaired-blog/tags/graphql/"/>
-    
-    <category term="frontend" scheme="https://ikaem.github.io/angry-chaired-blog/tags/frontend/"/>
-    
-    <category term="apollo" scheme="https://ikaem.github.io/angry-chaired-blog/tags/apollo/"/>
-    
-    <category term="jwt" scheme="https://ikaem.github.io/angry-chaired-blog/tags/jwt/"/>
-    
-    <category term="authentication" scheme="https://ikaem.github.io/angry-chaired-blog/tags/authentication/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>GraphQL &amp; React &amp; JWT: Silent Token Refresh</title>
-    <link href="https://ikaem.github.io/angry-chaired-blog/2020/graphql-react-jwt-silent-token-refresh/"/>
-    <id>https://ikaem.github.io/angry-chaired-blog/2020/graphql-react-jwt-silent-token-refresh/</id>
-    <published>2020-08-16T19:13:51.000Z</published>
-    <updated>2020-08-16T19:19:00.970Z</updated>
-    
-    
-    <summary type="html">&lt;!-- Step Content Start --&gt;
-
-&lt;h4 id=&quot;Part-11-of-12-in-GraphQL-amp-React-amp-JWT&quot;&gt;&lt;a href=&quot;#Part-11-of-12-in-GraphQL-amp-React-amp-JWT&quot; class=&quot;headerlink&quot; title=&quot;Part 11 of 12 in GraphQL &amp;amp; React &amp;amp; JWT&quot;&gt;&lt;/a&gt;Part 11 of 12 in GraphQL &amp;amp; React &amp;amp; JWT&lt;/h4&gt;</summary>
-    
-    
-    
-    <category term="graphql &amp; react &amp; jwt" scheme="https://ikaem.github.io/angry-chaired-blog/categories/graphql-react-jwt/"/>
-    
-    
-    <category term="graphql" scheme="https://ikaem.github.io/angry-chaired-blog/tags/graphql/"/>
-    
-    <category term="frontend" scheme="https://ikaem.github.io/angry-chaired-blog/tags/frontend/"/>
-    
-    <category term="apollo" scheme="https://ikaem.github.io/angry-chaired-blog/tags/apollo/"/>
-    
-    <category term="jwt" scheme="https://ikaem.github.io/angry-chaired-blog/tags/jwt/"/>
-    
-    <category term="authentication" scheme="https://ikaem.github.io/angry-chaired-blog/tags/authentication/"/>
     
   </entry>
   

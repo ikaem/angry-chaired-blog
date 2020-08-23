@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="Inexperienced and curious pokes into the sprawling world of web development "/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="kaem"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Copying Landbot.io: The Framework"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Inexperienced and curious pokes into the sprawling world of web development "/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Angry Chaired Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://ikaem.github.io/angry-chaired-blog/angry-chaired-blog/images/header-image.jpg"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://ikaem.github.io/angry-chaired-blog/angry-chaired-blog/images/header-image.jpg"/>
+    
+
+    <!-- Title -->
+    
+    <title>Copying Landbot.io: The Framework - Angry Chaired Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/angry-chaired-blog/css/style.css">
+
+    
+<link rel="stylesheet" href="/angry-chaired-blog/css/custom-style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+    <link rel="icon" href="/angry-chaired-blog/images/favicon.ico"/>
+    
+
+<meta name="generator" content="Hexo 5.0.2"><link rel="alternate" href="/angry-chaired-blog/atom.xml" title="Angry Chaired Blog" type="application/atom+xml">
+</head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/angry-chaired-blog/">Angry Chaired Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/about">
+                            
+                                About
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a target="_blank" rel="noopener" href="https://angrychaired.surge.sh">
+                            
+                                <i class="fa fa-user fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a target="_blank" rel="noopener" href="https://github.com/ikaem/">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a href="/angry-chaired-blog/atom.xml">
+                            
+                                <i class="fa fa-rss fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('levi-ventura--sdXl1eqW7E-unsplash.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Copying Landbot.io: The Framework</h1>
+
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            21/08/2020
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/angry-chaired-blog/categories/copy-web/">copy web</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <!-- Step Content Start -->
+
+<h4 id="Part-1-of-4-in-Copying-Landbot-io"><a href="#Part-1-of-4-in-Copying-Landbot-io" class="headerlink" title="Part 1 of 4 in Copying Landbot.io"></a>Part 1 of 4 in Copying Landbot.io</h4><p>I wanted to start a little ongoing project to copy website design. Ideally, I would like to find a nice website, and then copy it to make it simpler in terms of HTML and CSS. Because that is what I am about, simple :).</p>
+<a id="more"></a>
+
+<h4 id="See-Project-Information"><a href="#See-Project-Information" class="headerlink" title="See Project Information"></a>See <a href="#Project-Information">Project Information</a></h4><p>I would also like to change tech when copying. For instance, this first project was styled using Bootstrap, and I copied it by using pure CSS. I hope to do a next one by converting pure CSS to a CSS framework, then use Sass, a different framework, and so on.</p>
+<p>Why did I do it? Well, I feel I am struggling with page design. I did some courses, and read some books, but the shapes, and placements, and colors, and layout, it all escapes me. That’s why. </p>
+<p>This first project was me copying the <a target="_blank" rel="noopener" href="https://landbot.io/">Landbot</a>‘s home page. Landbot provides a way to implement a chatbot into a website. So much for that. </p>
+<p>Few things to mention:</p>
+<ol>
+<li>I only copied one size of the website, the desktop one. </li>
+<li>I did not do any animations, any hovers, nor any interactivity.</li>
+<li>The website changed a bit during the period I worked on the copy (4 days).</li>
+<li>I tried to make the thing as simple as possible, in all phases. </li>
+<li>I am not sure if it is legal in any country to copy a website and then put that copy online. I am counting on Landbot team to understand that this is for learning purposes. </li>
+<li>I am no design expert. I will probably be using terms incorrectly. I apologize in advance.</li>
+</ol>
+<p>We will start with framework of the website.</p>
+<h2 id="Step-1-Draw-framework-in-Figma"><a href="#Step-1-Draw-framework-in-Figma" class="headerlink" title="Step 1: Draw framework in Figma"></a>Step 1: Draw framework in Figma</h2><p>I wanted to do framework to see how the elements on the page are actually laid out. It took some time to place all major elements where they belong, but it worked out well.<br>Note that the framework does not represent the actual HTML elements. It is merely showing the most prominient elements on the page. </p>
+<p>You can see my framework of the full Landbot’s home page at the <a href="#Full-framework-image">end</a> of the post.</p>
+<p>Generally, the page is centered in the middle, with a lot of white space.<br>Two patterns dominate the main content area: </p>
+<ul>
+<li>Section with two side-by-side boxes</li>
+<li>Section with stacked boxes</li>
+</ul>
+<p>More specifically, the page is split into four sections:</p>
+<ol>
+<li>Header</li>
+<li>Main content</li>
+<li>Some sort of fake footer area</li>
+<li>Footer</li>
+</ol>
+<h3 id="Header"><a href="#Header" class="headerlink" title="Header"></a>Header</h3><p>Header is pretty simple. As far as the framework is concerned, it is just a container holding two side by side boxes. </p>
+<img src="/angry-chaired-blog/2020/copying-landbot-io-the-framework/framework-header.jpg" class="" title="Landbot header framework" alt="Landbot header framework">
+
+<p>The right box holds the navigation, while the much smaller one on the left is the logo.</p>
+<h3 id="Main-content"><a href="#Main-content" class="headerlink" title="Main content"></a>Main content</h3><p>Main content in nicely aligned in the middle. </p>
+<p>The first, hero section, has that general side-by-side pattern. It also has some boxes scattered all over the right one. I wasn’t really sure how to approach that. </p>
+<img src="/angry-chaired-blog/2020/copying-landbot-io-the-framework/framework-hero.jpg" class="" title="Landbot hero framework" alt="Landbot hero framework">
+
+<p>Othe content in this section is pretty simple. Lot of it actually repeats, by either switching sides of images and text in the side-by-side pattern, or by replacing a row of images with a text box in the stacked pattern.</p>
+<img src="/angry-chaired-blog/2020/copying-landbot-io-the-framework/framework-body-selection.jpg" class="" title="Landbot body framework" alt="Landbot body framework">
+
+<ol start="3">
+<li>Fake footer area</li>
+</ol>
+<p>Fake footer area is a stripe that spans entire length of the page, and then has an additional boxes under it. </p>
+<img src="/angry-chaired-blog/2020/copying-landbot-io-the-framework/framework-stripe.jpg" class="" title="Landbot fake footer framework" alt="Landbot fake footer framework">
+
+<p>I actually messed up this part when writing HTML. I wrapped both second and third section into the <strong>&lt;main&gt;</strong> element, and then centered the <strong>&lt;main&gt;</strong> and set its width smaller than the page. Luckily, I learned a trick from HTML in the orignal page, and got away with it. We will see it later. </p>
+<ol start="4">
+<li>Footer</li>
+</ol>
+<p>It is just a regular footer, with bunch of links.<br>The only thing remotely interesting is that the links box on the far end does not extend all the way to the end of the content container.</p>
+<img src="/angry-chaired-blog/2020/copying-landbot-io-the-framework/framework-footer.jpg" class="" title="Landbot footer framework" alt="Landbot footer framework">
+
+<p>That’s it for the framework part. I did it to see how the page actually “looks” like. Without all the colors and “design”, it is a pretty simple layout, placed in the middle, and assembled from couple patterns</p>
+<p>In the next post we will take a quick look at the actual “design”: the colors, shapes, some more patterns, white space, and so on.</p>
+<h4 id="Full-framework-image"><a href="#Full-framework-image" class="headerlink" title="Full framework image"></a>Full framework image</h4><img src="/angry-chaired-blog/2020/copying-landbot-io-the-framework/framework-full.jpg" class="" title="Full Landbot framework" alt="Landbot full framework">
+
+<!-- End Step Content -->
+
+<!-- Project Information -->
+
+<h2 id="Project-Information"><a href="#Project-Information" class="headerlink" title="Project Information"></a>Project Information</h2><h3 id="Available-at"><a href="#Available-at" class="headerlink" title="Available at"></a>Available at</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/ikaem/angry-chaired-blog">Github</a> </li>
+<li><a href="https://ikaem.github.io/angry-chaired-blog/">Live project</a></li>
+</ul>
+<h3 id="Goals"><a href="#Goals" class="headerlink" title="Goals"></a>Goals</h3><ol>
+<li>Just copy the website</li>
+</ol>
+<h3 id="Steps"><a href="#Steps" class="headerlink" title="Steps"></a>Steps</h3><ol>
+<li><strong>Draw framework in Figma</strong></li>
+<li>Draw design in Figma</li>
+<li>Write HTML</li>
+<li>Write CSS</li>
+</ol>
+<h3 id="Tech-and-Tools"><a href="#Tech-and-Tools" class="headerlink" title="Tech and Tools"></a>Tech and Tools</h3><ol>
+<li>Figma</li>
+<li>HTML</li>
+<li>CSS</li>
+</ol>
+<h3 id="Experience-with-Tech-amp-Tools"><a href="#Experience-with-Tech-amp-Tools" class="headerlink" title="Experience with Tech &amp; Tools"></a>Experience with Tech &amp; Tools</h3><p>I can work with HTML and CSS, to a fine degree, I think. I can also do stuff in Figma. I did lot of things with these three tools combined.<br>The issue is actually getting it all together to make a nice looking website. </p>
+<h2 id="DISCLAIMER"><a href="#DISCLAIMER" class="headerlink" title="DISCLAIMER"></a>DISCLAIMER</h2><p>Don’t take any of this seriously and as a matter-of-fact. These are my notes. It might look like I am trying to teach something to someone. I am not.</p>
+
+
+                
+
+
+                <!-- Cover image credit -->
+                
+                    <p class="image-credit-link">
+                        Cover image by <strong>
+                            <a target="_blank" rel="noopener" href="https://unsplash.com/@leviventura_?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
+                                Levi Ventura
+                            </a>
+                        </strong>
+                    </p>
+
+                
+
+  
+
+            </div>
+            
+            <!-- Custom placed tags -->
+            <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                
+                    
+
+
+<a href="/angry-chaired-blog/tags/landbot/">#landbot</a> <a href="/angry-chaired-blog/tags/html/">#html</a> <a href="/angry-chaired-blog/tags/css/">#css</a> <a href="/angry-chaired-blog/tags/figma/">#figma</a> <a href="/angry-chaired-blog/tags/design/">#design</a>
+
+
+                
+            </div>
+            <!--  -->
+
+
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+
+            <!-- Hyvor comments -->
+
+            <!-- End of Hyvor comments -->
+        </div>
+    </div>
+</article>
+
+
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2020 kaem<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

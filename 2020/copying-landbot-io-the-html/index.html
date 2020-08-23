@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="Inexperienced and curious pokes into the sprawling world of web development "/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="kaem"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Copying Landbot.io: The HTML"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Inexperienced and curious pokes into the sprawling world of web development "/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Angry Chaired Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://ikaem.github.io/angry-chaired-blog/angry-chaired-blog/images/header-image.jpg"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://ikaem.github.io/angry-chaired-blog/angry-chaired-blog/images/header-image.jpg"/>
+    
+
+    <!-- Title -->
+    
+    <title>Copying Landbot.io: The HTML - Angry Chaired Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/angry-chaired-blog/css/style.css">
+
+    
+<link rel="stylesheet" href="/angry-chaired-blog/css/custom-style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+    <link rel="icon" href="/angry-chaired-blog/images/favicon.ico"/>
+    
+
+<meta name="generator" content="Hexo 5.0.2"><link rel="alternate" href="/angry-chaired-blog/atom.xml" title="Angry Chaired Blog" type="application/atom+xml">
+</head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/angry-chaired-blog/">Angry Chaired Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/about">
+                            
+                                About
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a target="_blank" rel="noopener" href="https://angrychaired.surge.sh">
+                            
+                                <i class="fa fa-user fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a target="_blank" rel="noopener" href="https://github.com/ikaem/">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a href="/angry-chaired-blog/atom.xml">
+                            
+                                <i class="fa fa-rss fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('ilya-mirnyy-fae9zsLMdw4-unsplash.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Copying Landbot.io: The HTML</h1>
+
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            22/08/2020
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/angry-chaired-blog/categories/copy-web/">copy web</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <!-- Step Content Start -->
+
+<h4 id="Part-3-of-4-in-Copying-Landbot-io"><a href="#Part-3-of-4-in-Copying-Landbot-io" class="headerlink" title="Part 3 of 4 in Copying Landbot.io"></a>Part 3 of 4 in Copying Landbot.io</h4><p>HTML of the <a target="_blank" rel="noopener" href="https://landbot.io/">Landbot</a>‘s home page is filled with <strong>&lt;div&gt;</strong> elements. I assume this is becuase they use <a target="_blank" rel="noopener" href="https://getbootstrap.com/">Bootstrap</a>, which usually has lot of nested <strong>div</strong>s to position and assign roles to specific parts of HTML.<br>In any case, there is not much semantic HTML, the only one being <strong>&lt;nav&gt;</strong> to indicate navigation in the header area.</p>
+<a id="more"></a>
+
+<h4 id="See-Project-Information"><a href="#See-Project-Information" class="headerlink" title="See Project Information"></a>See <a href="#Project-Information">Project Information</a></h4><h2 id="Step-3-Write-HTML"><a href="#Step-3-Write-HTML" class="headerlink" title="Step 3: Write HTML"></a>Step 3: Write HTML</h2><p>I wanted to write HTML that is more semantic, and that does not have as much nesting if not necessary. Of course, I am sure that the Landbot team had very good reasons for how they wrote their code. I just wanted to simplify it for myself.</p>
+<p>Here is what we will look at:</p>
+<ol>
+<li>Header</li>
+<li>Main content</li>
+<li>Footer</li>
+<li>Interesting HTML code</li>
+</ol>
+<p>We will not go into complete code. There is just too much of it. Instead, I will pick parts that are most representative of their sections and focus on that.<br>The “interesting code” part is mosly to show some things that I learned, or just generally found curious.</p>
+<h3 id="Header"><a href="#Header" class="headerlink" title="Header"></a>Header</h3><p>The original header is a <strong>div</strong> element with the class of <strong>navigation-wrap</strong>. Inside, there are two other <strong>div</strong>s, one for the desktop, and other for the mobile view of the page. We will focus on the desktop.<br>The desktop <strong>div</strong> has a class of <strong>navigation w-nav</strong>, and holds another <strong>div</strong>, the <strong>.navigation-container</strong>. Finally, this one holds two divs to separate left and right navigation. They are <strong>.navigation-left</strong> and <strong>.navigation-right</strong>, respecitively.</p>
+<figure class="highlight html"><figcaption><span>HTML: Header code down to left and right navigation divs</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;navigation-wrap&quot;</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- desktop navigation starts here --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;navigation w-nav&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;navigation-container&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;navigation-left&quot;</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- ... --&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;navigation-right&quot;</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- ... --&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- desktop navigation ends here --&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- mobile navigation starts here --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;navigation-mob-2 w-nav&quot;</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- ... --&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- mobile navigation ends here --&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>The left navigation <strong>div</strong> holds an <strong>anchor</strong> element as a link to the home page. It also holds an <strong>image</strong> element, which is the Landbot’s logo.</p>
+<figure class="highlight html"><figcaption><span>HTML: Left navigation in the header</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;navigation-left&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">&quot;w-inline-block w--current&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">class</span>=<span class="string">&quot;image-34&quot;</span> /&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- ... --&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>The right navigtion gets a bit more convulted again. It holds two <strong>div</strong>s, an <strong>anchor</strong>, and a <strong>nav</strong> element. They contain navigation labels, as well as dropdown menus, and one of the <strong>div</strong>s holds login buttons.<br>The dropdowns are filled with nested elements, too many for me to list them all here.</p>
+<figure class="highlight html"><figcaption><span>HTML: Right navigation in the header</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;navigation-right&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;dropdown-2 w-dropdown&quot;</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- Product label --&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">nav</span> <span class="attr">class</span>=<span class="string">&quot;nav-menu w-nav-menu&quot;</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- Resources label --&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">nav</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">&quot;header-button w-nav-link&quot;</span>&gt;</span>Pricing<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;login-buttons&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">&quot;header-button w-nav-link&quot;</span>&gt;</span>Login<span class="tag">&lt;/<span class="name">a</span></span></span><br><span class="line"><span class="tag">    &gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">&quot;button-menu-2 w-button&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;text-span-34&quot;</span>&gt;</span>Sign up<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>Note that I removed all attributes from elements except for classes, as well as unused html elements, in order to make them everything readable. Still, that is a lot of code, but again, not surprising considerig the use of Bootstrap. In addition to this, there was additional code present for mobile navigation.</p>
+<p>Since I was using plain CSS and worked only on the desktop copy, I ended up with much less code. Also, I wanted to use as much semantic HTML as I was familiar with and the original code allowed.</p>
+<p>My header consists of a within a <strong>&lt;header&gt;</strong> element, which holds a <strong>nav</strong> element. The <strong>nav</strong> then holds <strong>.header-logo-navigation</strong> and <strong>.header-links-wrapper</strong> divs. These are equivalent to the <strong>.navigation-left</strong> and <strong>.navigation-right</strong> divs in the original code.</p>
+<figure class="highlight html"><figcaption><span>HTML: My code of header down to logo navigation and links wrapper</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">header</span> <span class="attr">class</span>=<span class="string">&quot;main-header&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">nav</span> <span class="attr">class</span>=<span class="string">&quot;main-header__main-navigation&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;main-navigation__header-logo-navigation&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;&quot;</span> <span class="attr">class</span>=<span class="string">&quot;header-logo-navigation__logo-container&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">img</span></span></span><br><span class="line"><span class="tag">          <span class="attr">src</span>=<span class="string">&quot;./images//logo/5f0dbc6a9770687655a95a98_logotype_nosybol (1).png&quot;</span></span></span><br><span class="line"><span class="tag">          <span class="attr">alt</span>=<span class="string">&quot;Landbot logo&quot;</span></span></span><br><span class="line"><span class="tag">          <span class="attr">class</span>=<span class="string">&quot;logo-container__logo-actual&quot;</span></span></span><br><span class="line"><span class="tag">        /&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;main-navigation__header-links-wrapper&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">&quot;header-links-wrapper__header-options&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">&quot;header-links__header-option&quot;</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;header-option__label&quot;</span>&gt;</span>Product<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;fas fa-chevron-down&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">&quot;header-links__header-option&quot;</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;header-option__label&quot;</span>&gt;</span>Resources<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;fas fa-chevron-down&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">&quot;header-links__header-option pricing-option&quot;</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span> <span class="attr">class</span>=<span class="string">&quot;header-link__label&quot;</span>&gt;</span>Pricing<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">&quot;header-links__header-option login-option&quot;</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span> <span class="attr">class</span>=<span class="string">&quot;header-link__label&quot;</span>&gt;</span>Login<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">&quot;header-links__header-option register-option&quot;</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>Sign up<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">nav</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">header</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>You can see above that my inner HTML in the <strong>.header-links-wrapper</strong> is completely included, unlike the original one where it would take a lot of space to do so. My labels and links are nested within unordered list items.<br>Again, I had a much easier job, not creating the actual dropdowns and having to use Bootstrap’s predefined components which required lot of divs.</p>
+<h3 id="Main-content"><a href="#Main-content" class="headerlink" title="Main content"></a>Main content</h3><p>I won’t do an overview of complete HTML of the main content. The nesting patterns repeat here as well, and there is no semantic HTML at all.</p>
+<figure class="highlight html"><figcaption><span>Landbot home page <body> contents</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span> <span class="attr">class</span>=<span class="string">&quot;body&quot;</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- header --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;landing w-container&quot;</span>&gt;</span><span class="comment">&lt;!-- ... --&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;info-1&quot;</span>&gt;</span><span class="comment">&lt;!-- ... --&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;section-3&quot;</span>&gt;</span><span class="comment">&lt;!-- ... --&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;info-2&quot;</span>&gt;</span><span class="comment">&lt;!-- ... --&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;cat2 padding-top-l2 padding-bottom-l&quot;</span>&gt;</span><span class="comment">&lt;!-- ... --&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;info-3&quot;</span>&gt;</span><span class="comment">&lt;!-- ... --&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;info-4&quot;</span>&gt;</span><span class="comment">&lt;!-- ... --&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;cat2 footer-bg&quot;</span>&gt;</span><span class="comment">&lt;!-- ... --&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- footer --&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>Instead, we will only focus on two things:</p>
+<ol>
+<li>There is no single container for the entire main content on the page.</li>
+<li>Section titles are sometimes just regular text blocks in a <strong>div</strong> or <strong>p</strong> element.</li>
+</ol>
+<h4 id="There-is-no-single-container-for-the-entire-main-content-on-the-page"><a href="#There-is-no-single-container-for-the-entire-main-content-on-the-page" class="headerlink" title="There is no single container for the entire main content on the page."></a>There is no single container for the entire main content on the page.</h4><p>I am used to placing entire main content in the <strong>main</strong> element. The Landbot home page, however, has each section placed as a top level element inside the <strong>body</strong> tag.</p>
+<p>This causes few things:</p>
+<ul>
+<li>Each section has to be styled individually to have same side margins and same width</li>
+<li>It also made possible for that yellow stripe, the <strong>“fake footer”</strong>, to extend to the full width of the page.</li>
+</ul>
+<p>In addition to this, Bootstrap classes are just not helpful when it comes to recognizing roles of elements in HTML.</p>
+<p>The first point is probably not much of an issue when using Bootstrap, as predefined classes are probably applied to section containers to line them all up.</p>
+<p>The second point turned out to be a bit of an issue for me. I did actually place entire main content in a <strong>main</strong> element, including the <strong>“fake footer”</strong>. Since I styled the <strong>main</strong> to have a max width of 940px, and positioned it in the center of the page, I had a problem extending the fake footer to the page ends.<br>We will see how I fixed it in the next post.</p>
+<p>Here is my code:</p>
+<figure class="highlight html"><figcaption><span>My version of the Landbot home page <body> contents</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- header --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">main</span> <span class="attr">class</span>=<span class="string">&quot;main-content&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;main-content__intro-section&quot;</span>&gt;</span><span class="comment">&lt;!-- ... --&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;main-content__clients-section&quot;</span>&gt;</span><span class="comment">&lt;!-- ... --&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;main-section__landbot-features-text&quot;</span>&gt;</span><span class="comment">&lt;!-- ... --&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;main-section__landbot-features-visual&quot;</span>&gt;</span><span class="comment">&lt;!-- ... --&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;main-section__landbot-benefits&quot;</span>&gt;</span><span class="comment">&lt;!-- ... --&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;main-section__flow-building&quot;</span>&gt;</span><span class="comment">&lt;!-- ... --&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;main-section__instant-messaging&quot;</span>&gt;</span><span class="comment">&lt;!-- ... --&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;main-section__conversations&quot;</span>&gt;</span><span class="comment">&lt;!-- ... --&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;main-section__capterra-stripe-outer&quot;</span>&gt;</span><span class="comment">&lt;!-- ... --&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;main-section__final-call&quot;</span>&gt;</span><span class="comment">&lt;!-- ... --&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">main</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- footer --&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>As you can see, all content sections are <strong>div</strong>s, nested inside a <strong>main</strong> element.<br>I did want to use <strong>&lt;section&gt;</strong> elements to actually hold section contents, but this would require a heading element to be nested directly inside. It could be done, of course. However, some sections would require me to use CSS Grid to position elements, or do some acrobatic positioning with margins to get same looks as the original one.</p>
+<h4 id="Section-titles-are-sometimes-just-regular-text-blocks-in-a-div-or-p-element"><a href="#Section-titles-are-sometimes-just-regular-text-blocks-in-a-div-or-p-element" class="headerlink" title="Section titles are sometimes just regular text blocks in a div or p element."></a>Section titles are sometimes just regular text blocks in a <strong>div</strong> or <strong>p</strong> element.</h4><p>This one is a more of a curiosity than anything else.<br>Consider these two examples where obvious section titles are nested inside a <strong>div</strong> and a <strong>p</strong> element.</p>
+<figure class="highlight html"><figcaption><span>Section titles in div and paragraph elements</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;node-header-text&quot;</span>&gt;</span>👋<span class="tag">&lt;<span class="name">strong</span>&gt;</span> <span class="symbol">&amp;nbsp;</span>Live Chat<span class="tag">&lt;/<span class="name">strong</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--  --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;paragraph paragraph-dark home&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">strong</span> <span class="attr">class</span>=<span class="string">&quot;bold-text-11&quot;</span>&gt;</span>Empowering +50,000 businesses<span class="tag">&lt;/<span class="name">strong</span>&gt;</span> create</span><br><span class="line">  memorable experiences</span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>First example is from the intro section. It is a title of that box that also holds a gif of Ryan Reynolds. It just struck me as unusual that a <strong>div</strong> was used where one of the <strong>heading</strong> elements seemed like a natural choice.</p>
+<p>The other one is title of the section with client logos. Seeing that it actually says an important thing, in addition to being a title, a heading seemed a better fit here as well.</p>
+<p>Now, these people know their stuff, and I am sure they know better than me. I am just wondering.<br>Also, would a heading element be better for SEO? The first one is wrapped in a <strong>strong</strong> tag, but Internet is not 100% on it working better for SEO.</p>
+<p>I wrapped all cases of this in headings.</p>
+<h3 id="Footer"><a href="#Footer" class="headerlink" title="Footer"></a>Footer</h3><p>There is nothing really special in the original’s footer. It is a <strong>div</strong> container that spans entire width of the page, and holds another, smaller <strong>div</strong> container. Inside, logo and navigation sections are nested, and all pretty similar, apart from the logo section having a logo, and the last section having social media icons instead of links to actual Landbot pages.</p>
+<figure class="highlight html"><figcaption><span>Footer of Landbot's home page</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;section-5&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;columns-12 w-row&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;column-54 w-col w-col-2&quot;</span>&gt;</span></span><br><span class="line">      <span class="comment">&lt;!-- logo section --&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">img</span> <span class="attr">class</span>=<span class="string">&quot;image-17&quot;</span> /&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;text-block-10&quot;</span>&gt;</span></span><br><span class="line">        Copyright © 2020<span class="tag">&lt;<span class="name">br</span> /&gt;</span></span><br><span class="line">        HELLO UMI S.L.</span><br><span class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;w-col w-col-2&quot;</span>&gt;</span></span><br><span class="line">      <span class="comment">&lt;!-- example of navigation section --&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;head&quot;</span>&gt;</span>Product<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">&quot;link-13&quot;</span>&gt;</span>Features<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">&quot;link-2&quot;</span>&gt;</span>Pricing<span class="tag">&lt;/<span class="name">a</span></span></span><br><span class="line"><span class="tag">      &gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">&quot;link-2&quot;</span>&gt;</span>Features<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;head sechead&quot;</span>&gt;</span>Company<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">&quot;link-2&quot;</span>&gt;</span>Jobs<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">&quot;link-2&quot;</span>&gt;</span>Terms <span class="symbol">&amp;amp;</span><span class="symbol">&amp;nbsp;</span>Conditions<span class="tag">&lt;/<span class="name">a</span></span></span><br><span class="line"><span class="tag">      &gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">&quot;link-12&quot;</span>&gt;</span>About Landbot<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;w-col w-col-2&quot;</span>&gt;</span><span class="comment">&lt;!-- navigation section --&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;w-col w-col-2&quot;</span>&gt;</span><span class="comment">&lt;!-- navigation section --&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;w-col w-col-3&quot;</span>&gt;</span></span><br><span class="line">      <span class="comment">&lt;!-- social media section --&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;head&quot;</span>&gt;</span>Follow us<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;div-block-44&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">&quot;link-block-12 w-inline-block&quot;</span></span></span><br><span class="line"><span class="tag">          &gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">class</span>=<span class="string">&quot;image-18 fb-logo&quot;</span></span></span><br><span class="line"><span class="tag">        /&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">&quot;link-block-12 w-inline-block&quot;</span></span></span><br><span class="line"><span class="tag">          &gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">class</span>=<span class="string">&quot;image-18 tw-logo&quot;</span></span></span><br><span class="line"><span class="tag">        /&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- ... more social media links --&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>Generally, my code is pretty similar. I too, have a container, the <strong>footer</strong> element, that spans entire width of the page, and holds another container, the <strong>.inner-footer</strong> div. Inner footer is the one holding navigation sections.</p>
+<p>Few things are different, and they actually make my code bigger.<br>First, I like to wrap an image inside a <strong>div</strong> container. This allows me to control image dimensions and position via the container, which I find makes more sense. Next, my navigation sections are <strong>nav</strong> elements, and I have my links set in an unordered list. Finally, my social media <strong>anchor</strong> elements hold <a target="_blank" rel="noopener" href="https://fontawesome.com/icons">Font Awesome icons</a>, unlike the original, where icons are actualy images.</p>
+<figure class="highlight html"><figcaption><span>My code for the footer of Landbot's home page</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">footer</span> <span class="attr">class</span>=<span class="string">&quot;main-footer&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;main-footer__inner-footer&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;inner-footer__logo&quot;</span>&gt;</span></span><br><span class="line">      <span class="comment">&lt;!-- logo section --&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;logo__image-container&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">img</span></span></span><br><span class="line"><span class="tag">          <span class="attr">src</span>=<span class="string">&quot;./images/5f15693db0e62c76a760db3f_logotype_negative (1)-p-500.png&quot;</span></span></span><br><span class="line"><span class="tag">        /&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;copyright&quot;</span>&gt;</span></span><br><span class="line">        Copyright © 2020</span><br><span class="line">        <span class="tag">&lt;<span class="name">br</span> /&gt;</span></span><br><span class="line">        HELLO UMI S.L.</span><br><span class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">nav</span> <span class="attr">class</span>=<span class="string">&quot;inner-footer__nav-section&quot;</span>&gt;</span></span><br><span class="line">      <span class="comment">&lt;!-- example of navigation section --&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">h5</span> <span class="attr">class</span>=<span class="string">&quot;nav-section__title&quot;</span>&gt;</span>Product<span class="tag">&lt;/<span class="name">h5</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">&quot;nav-section__options&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">&quot;nav-section___option&quot;</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span> <span class="attr">class</span>=<span class="string">&quot;nav-section____link&quot;</span>&gt;</span></span><br><span class="line">            Pricing</span><br><span class="line">          <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">&quot;nav-section___option&quot;</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span> <span class="attr">class</span>=<span class="string">&quot;nav-section____link&quot;</span>&gt;</span></span><br><span class="line">            Features</span><br><span class="line">          <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">h5</span> <span class="attr">class</span>=<span class="string">&quot;nav-section__title company-title&quot;</span>&gt;</span>Company<span class="tag">&lt;/<span class="name">h5</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">&quot;nav-section__options&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">&quot;nav-section___option&quot;</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span> <span class="attr">class</span>=<span class="string">&quot;nav-section____link&quot;</span>&gt;</span></span><br><span class="line">            Jobs</span><br><span class="line">          <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">&quot;nav-section___option&quot;</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span> <span class="attr">class</span>=<span class="string">&quot;nav-section____link&quot;</span>&gt;</span></span><br><span class="line">            Terms &amp; Conditions</span><br><span class="line">          <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">nav</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">nav</span> <span class="attr">class</span>=<span class="string">&quot;inner-footer__nav-section&quot;</span>&gt;</span><span class="comment">&lt;!-- navigation section --&gt;</span><span class="tag">&lt;/<span class="name">nav</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">nav</span> <span class="attr">class</span>=<span class="string">&quot;inner-footer__nav-section&quot;</span>&gt;</span><span class="comment">&lt;!-- navigation section --&gt;</span><span class="tag">&lt;/<span class="name">nav</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">nav</span> <span class="attr">class</span>=<span class="string">&quot;inner-footer__nav-section follow-us-section&quot;</span>&gt;</span></span><br><span class="line">      <span class="comment">&lt;!-- social media section --&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">h5</span> <span class="attr">class</span>=<span class="string">&quot;nav-section__title&quot;</span>&gt;</span>Follow us<span class="tag">&lt;/<span class="name">h5</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">&quot;nav-section__options&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">&quot;nav-section___option&quot;</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span> <span class="attr">class</span>=<span class="string">&quot;nav-section____link&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;fab fa-facebook-f&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">&quot;nav-section___option&quot;</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span> <span class="attr">class</span>=<span class="string">&quot;nav-section____link&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;fab fa-twitter&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- ... more social media links --&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">nav</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">footer</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Interesting-HTML-code"><a href="#Interesting-HTML-code" class="headerlink" title="Interesting HTML code"></a>Interesting HTML code</h3><p>Here I just want to show iteresting HTML code I found in the Landbot’s home page.</p>
+<h4 id="lt-video-gt-and-lt-source-gt-elements"><a href="#lt-video-gt-and-lt-source-gt-elements" class="headerlink" title="&lt;video&gt; and &lt;source&gt; elements"></a>&lt;video&gt; and &lt;source&gt; elements</h4><p>I honestly did not know about these. They are used in the main section, to hold a video illustrating how instant messaging can help building user journeys.</p>
+<p>Here is the original code:</p>
+<figure class="highlight html"><figcaption><span>&lt;video> and &lt;source> elements in Landbot's home page</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">video</span></span></span><br><span class="line"><span class="tag">  <span class="attr">preload</span>=<span class="string">&quot;auto&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">autoplay</span>=<span class="string">&quot;autoplay&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">loop</span>=<span class="string">&quot;loop&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">muted</span>=<span class="string">&quot;&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">width</span>=<span class="string">&quot;300&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">height</span>=<span class="string">&quot;100%&quot;</span></span></span><br><span class="line"><span class="tag">&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">source</span></span></span><br><span class="line"><span class="tag">    <span class="attr">src</span>=<span class="string">&quot;https://landbot.io/wp-content/uploads/2020/08/landbot-conversational-multi-channel-solution.mp4&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">type</span>=<span class="string">&quot;video/mp4&quot;</span></span></span><br><span class="line"><span class="tag">  /&gt;</span></span><br><span class="line">  Your browser does not support the video tag.</span><br><span class="line"><span class="tag">&lt;/<span class="name">video</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>It turns out that the <strong>video</strong> tag is used to insert a video into a document.<br>Aside from the attributes in the code snippet above, it can also have a <strong>src</strong> attribute too. Of course, it would be used to point to a video file. </p>
+<p>As the code shows, however, we have a <strong>source</strong> element instead, nested inside the <strong>video</strong> element, and used to point to a video file, and specify its type.<br><strong>source</strong> element can be used multiple times inside the same <strong>video</strong> element, pointing to different types of the video. Browser will then use and render the one whose type it supports. The element is used not only for video, but for all kinds of media files.</p>
+<p>As for the attributes on the <strong>video</strong> element:</p>
+<ul>
+<li>preload defines if the video should be downloaded when the page loads. <strong>auto</strong> value sets it to download, yes.</li>
+<li>autoplay and autoplay will make video start as soon as it is downloaded. Removing the attribute will prevent this.</li>
+<li>loop attribute makes the video loop. If the attribute is not present, there is no looping. </li>
+<li>muted makes the video muted when playing. If no attribute, no mute.  </li>
+</ul>
+<br>
+
+<h4 id="navigation-w-nav-div-has-a-role-of-“banner”"><a href="#navigation-w-nav-div-has-a-role-of-“banner”" class="headerlink" title=".navigation w-nav div has a role of “banner”"></a>.navigation w-nav div has a role of “banner”</h4><p>The <strong>role</strong> attribute is one of <a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA">ARIA</a> attributes used to make Web more accessible to people with disabilities. The attribute defines semantic meaning of elements on the page, so that, for instance, blind people can get this information from an electronic reader. Roles can be <strong>button</strong>, <strong>article</strong>, <strong>img</strong> and so on.</p>
+<p>The <strong>banner</strong> role is used to represent informative content usually placed at the beginning of a page. Fun thing is that the <strong>header</strong> element has identical semantic meaning to the <strong>banner</strong> role. So the Landbot home page did use semantic HTML after all :)</p>
+<h4 id="“srcset”-attribute"><a href="#“srcset”-attribute" class="headerlink" title="“srcset” attribute"></a>“srcset” attribute</h4><p><strong>img</strong> element in the header of the Landbot’s home page has a <strong>srcset</strong> attribute on it. Its value is a string, which seems to hold paths to various images. So what is that about?</p>
+<p>First, the code:</p>
+<figure class="highlight html"><figcaption><span>&lt;img> element with **srcset** attribute</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> </span></span><br><span class="line"><span class="tag">    <span class="attr">src</span>=<span class="string">&quot;https://assets.website-files.com/5e1c4fb5db4d5243c0021d34/5f0dbc6a9770687655a95a98_logotype_nosybol%20(1).png&quot;</span> </span></span><br><span class="line"><span class="tag">    <span class="attr">srcset</span>=<span class="string">&quot;https://assets.website-files.com/5e1c4fb5db4d5243c0021d34/5f0dbc6a9770687655a95a98_logotype_nosybol%20(1)-p-500.png 500w, </span></span></span><br><span class="line"><span class="tag"><span class="string">    https://assets.website-files.com/5e1c4fb5db4d5243c0021d34/5f0dbc6a9770687655a95a98_logotype_nosybol%20(1)-p-800.png 800w, </span></span></span><br><span class="line"><span class="tag"><span class="string">    https://assets.website-files.com/5e1c4fb5db4d5243c0021d34/5f0dbc6a9770687655a95a98_logotype_nosybol%20(1).png 826w&quot;</span> </span></span><br><span class="line"><span class="tag">    <span class="attr">sizes</span>=<span class="string">&quot;(max-width: 991px) 100vw, 120px&quot;</span> </span></span><br><span class="line"><span class="tag">    <span class="attr">alt</span>=<span class="string">&quot;&quot;</span> </span></span><br><span class="line"><span class="tag">    <span class="attr">class</span>=<span class="string">&quot;image-34&quot;</span></span></span><br><span class="line"><span class="tag">&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>Well, there are two parts to this:</p>
+<ol>
+<li>srcset attribute</li>
+<li>sizes attribute</li>
+</ol>
+<p>The <strong>srcset</strong> attribute deines a set of image options that the browser can choose from when loading a page.<br>These options include a path to the image and the inherent width of the image stated in <strong>w</strong> units. In our case, we have three options that the browser can choose from.</p>
+<p>The <strong>sizes</strong> attribute defines condition when a certain image option should be chosen.<br>Here, the condition states that when the screen is at most 991px, first image option same or bigger than 100vw should be chosen. Depending on the viewport size, the browser will chose an option from the selection.<br>If the width of the viewport is more that 991 pixels, first option that is same or bigger than 120 pixels will be chosen. </p>
+<h4 id="lt-br-gt-line-break"><a href="#lt-br-gt-line-break" class="headerlink" title="&lt;br&gt; line break"></a>&lt;br&gt; line break</h4><p>This is obvious, but it never crossed my mind to break a line with a &lt;br&gt; tag. </p>
+<figure class="highlight html"><figcaption><span>Breaking lines with &lt;br> tag</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;text-block-10&quot;</span>&gt;</span>Copyright © 2020<span class="tag">&lt;<span class="name">br</span>&gt;</span>HELLO UMI S.L.<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>Cool, that’s it for the HTML part. We saw how, apparently, Bootstrap makes a lot of decisions for a web designer in terms of HTML code organization. We got rid of lot of their <strong>div</strong> containers, and tried to use as much semantic HTML as possible.</p>
+<p>In the last post, we will go over styling. Again, there is a lot of it, so we will not go over all of it. Instead, we will focus on their solutions that I had issues with, and how I solved them.<br>See you soon.</p>
+<!-- End Step Content -->
+
+<!-- Project Information -->
+
+<h2 id="Project-Information"><a href="#Project-Information" class="headerlink" title="Project Information"></a>Project Information</h2><h3 id="Available-at"><a href="#Available-at" class="headerlink" title="Available at"></a>Available at</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/ikaem/angry-chaired-blog">Github</a></li>
+<li><a href="https://ikaem.github.io/angry-chaired-blog/">Live project</a></li>
+</ul>
+<h3 id="Goals"><a href="#Goals" class="headerlink" title="Goals"></a>Goals</h3><ol>
+<li>Just copy the website</li>
+</ol>
+<h3 id="Steps"><a href="#Steps" class="headerlink" title="Steps"></a>Steps</h3><ol>
+<li>Draw framework in Figma</li>
+<li>Draw design in Figma</li>
+<li><strong>Write HTML</strong></li>
+<li>Write CSS</li>
+</ol>
+<h3 id="Tech-and-Tools"><a href="#Tech-and-Tools" class="headerlink" title="Tech and Tools"></a>Tech and Tools</h3><ol>
+<li>Figma</li>
+<li>HTML</li>
+<li>CSS</li>
+</ol>
+<h3 id="Experience-with-Tech-amp-Tools"><a href="#Experience-with-Tech-amp-Tools" class="headerlink" title="Experience with Tech &amp; Tools"></a>Experience with Tech &amp; Tools</h3><p>I can work with HTML and CSS, to a fine degree, I think. I can also do stuff in Figma. I did lot of things with these three tools combined.<br>The issue is actually getting it all together to make a nice looking website.</p>
+<h2 id="DISCLAIMER"><a href="#DISCLAIMER" class="headerlink" title="DISCLAIMER"></a>DISCLAIMER</h2><p>Don’t take any of this seriously and as a matter-of-fact. These are my notes. It might look like I am trying to teach something to someone. I am not.</p>
+
+
+                
+
+
+                <!-- Cover image credit -->
+                
+                    <p class="image-credit-link">
+                        Cover image by <strong>
+                            <a target="_blank" rel="noopener" href="https://unsplash.com/@mirnyy?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
+                                Ilya Mirnyy
+                            </a>
+                        </strong>
+                    </p>
+
+                
+
+  
+
+            </div>
+            
+            <!-- Custom placed tags -->
+            <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                
+                    
+
+
+<a href="/angry-chaired-blog/tags/landbot/">#landbot</a> <a href="/angry-chaired-blog/tags/html/">#html</a>
+
+
+                
+            </div>
+            <!--  -->
+
+
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+
+            <!-- Hyvor comments -->
+
+            <!-- End of Hyvor comments -->
+        </div>
+    </div>
+</article>
+
+
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2020 kaem<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

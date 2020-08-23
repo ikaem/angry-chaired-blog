@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="Inexperienced and curious pokes into the sprawling world of web development "/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="kaem"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Copying Landbot.io: The Design"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Inexperienced and curious pokes into the sprawling world of web development "/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Angry Chaired Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://ikaem.github.io/angry-chaired-blog/angry-chaired-blog/images/header-image.jpg"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://ikaem.github.io/angry-chaired-blog/angry-chaired-blog/images/header-image.jpg"/>
+    
+
+    <!-- Title -->
+    
+    <title>Copying Landbot.io: The Design - Angry Chaired Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/angry-chaired-blog/css/style.css">
+
+    
+<link rel="stylesheet" href="/angry-chaired-blog/css/custom-style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+    <link rel="icon" href="/angry-chaired-blog/images/favicon.ico"/>
+    
+
+<meta name="generator" content="Hexo 5.0.2"><link rel="alternate" href="/angry-chaired-blog/atom.xml" title="Angry Chaired Blog" type="application/atom+xml">
+</head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/angry-chaired-blog/">Angry Chaired Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/about">
+                            
+                                About
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a target="_blank" rel="noopener" href="https://angrychaired.surge.sh">
+                            
+                                <i class="fa fa-user fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a target="_blank" rel="noopener" href="https://github.com/ikaem/">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a href="/angry-chaired-blog/atom.xml">
+                            
+                                <i class="fa fa-rss fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('spencer-davis-v26urzoDLk4-unsplash.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Copying Landbot.io: The Design</h1>
+
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            21/08/2020
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/angry-chaired-blog/categories/copy-web/">copy web</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <!-- Step Content Start -->
+
+<h4 id="Part-2-of-4-in-Copying-Landbot-io"><a href="#Part-2-of-4-in-Copying-Landbot-io" class="headerlink" title="Part 2 of 4 in Copying Landbot.io"></a>Part 2 of 4 in Copying Landbot.io</h4><p>Style of the <a target="_blank" rel="noopener" href="https://landbot.io/">Landbot.io</a> home page is fun. There are happy colors, shapes curving and moving about, and there is a grey Ryan Reynolds. </p>
+<p>I used Figma to copy all of those things and get a static version of the page that I could say I built. By drawing it, I could see how lot of the page is actually made out of few things, copied, modified and assembled into new things. </p>
+<a id="more"></a>
+
+<h4 id="See-Project-Information"><a href="#See-Project-Information" class="headerlink" title="See Project Information"></a>See <a href="#Project-Information">Project Information</a></h4><h2 id="Step-2-Draw-design-in-Figma"><a href="#Step-2-Draw-design-in-Figma" class="headerlink" title="Step 2: Draw design in Figma"></a>Step 2: Draw design in Figma</h2><p>Landbot’s home page is also very airy. Together with alternation of few colors, white space is the most prominent thing we see on the page.</p>
+<p>You can see my copy of the full Landbot’s home page at the <a href="#Full-design-image">end</a> of the post.</p>
+<p>Ok, so here is what we will look at:</p>
+<ol>
+<li>Colors</li>
+<li>White space</li>
+<li>Fonts </li>
+<li>Shapes</li>
+<li>Patterns</li>
+<li>Graphics</li>
+</ol>
+<h3 id="Colors"><a href="#Colors" class="headerlink" title="Colors"></a>Colors</h3><p>Blue, pink and yellow and their variations seem to be the most used in the page. </p>
+<p>Blue is used as a kind of grounded color, creating a stable context for both text content and visuals.<br>Calls to action and interesting bits are often pink, and often on that blue background, too. </p>
+<p>In the header and hero section, these two colors alone give us the whole page.<br>The logo is blue, the chatbot scheme is blue, and the information about the service is blue.<br>If we want to interact with the service, we go pink. Pink is also the surrounding color of the selected clients’s logos. </p>
+<p>Two colors only. I think it is beautiful</p>
+<img src="/angry-chaired-blog/2020/copying-landbot-io-the-design/design-colors-pink-blue.jpg" class="" title="Pink and blue colors in header and hero section" alt="Pink and blue colors in header and hero section">
+
+<p>As for the yellow color, it always gives a golden impression, and is used in context of customers. I guess customers are as valuable as gold, huh?</p>
+<img src="/angry-chaired-blog/2020/copying-landbot-io-the-design/design-colors-yellow.jpg" class="" title="Yellow color in the context of work with customers" alt="Yellow color in the context of work with customers">
+
+<h3 id="White-space"><a href="#White-space" class="headerlink" title="White space"></a>White space</h3><p>Just for the record, I am not graphic designer.<br>But, that Landbot home page sure is airy. </p>
+<p>First, sections are clearly distinguishable by just having a decent amount of empty space between them. </p>
+<p>Second, I really liked how the hero section visuals are using empty space to illustrate the mechanism of chatbot providing a service and making money.<br>Boxes on the blue canvas are spread to give a clearing impression that a process exists here. It is an understandable process that goes from completing order to data being entered in a sheet, to payment processing.</p>
+<img src="/angry-chaired-blog/2020/copying-landbot-io-the-design/design-whitespace-hero.jpg" class="" title="White space in the hero section" alt="White space in the hero section">
+
+<p>This is how the hero section would look like if there was no white space between the boxes:</p>
+<img src="/angry-chaired-blog/2020/copying-landbot-io-the-design/design-whitespace-no-whitespace-hero.jpg" class="" title="White space in the hero section - case with no white space" alt="White space in the hero section - case with no white space">
+
+<p>I also have a feeling that white space compensates for the use of all those colors and shapes. If the page wasn’t so much fun, there wouldn’t be a need for so much white space, and the other way around. </p>
+<h3 id="Fonts"><a href="#Fonts" class="headerlink" title="Fonts"></a>Fonts</h3><p>The page uses four fonts. </p>
+<ol>
+<li>Gotham Rounded</li>
+<li>Poppins</li>
+<li>Lato</li>
+<li>Avenir</li>
+</ol>
+<p>Two of these, <a target="_blank" rel="noopener" href="https://fonts.google.com/specimen/Poppins">Poppins</a> and <a target="_blank" rel="noopener" href="https://fonts.google.com/specimen/Lato">Lato</a>, are Google Fonts.</p>
+<p>Gotham Rounded is the most prominent font. It is used in almost all titles and paragraphs.<br>I though the font fit well with the page. It is rounded, so it matched rounded borders of boxes and curvy shapes on the background.</p>
+<p>It is a paid one, though, so I used a Google Font replacement instead: <a target="_blank" rel="noopener" href="https://fonts.google.com/specimen/Nunito?category=Sans+Serif&thickness=6&preview.text=The+Most+Intuitive&preview.text_type=custom&query=nunit">Nunito</a>. </p>
+<p>AvenirIt is another paid one, and I replaced it with <a target="_blank" rel="noopener" href="https://fonts.google.com/specimen/Nunito+Sans?query=nunito+sans&preview.text=lato&preview.text_type=custom&sidebar.open=true">Nunito Sans</a>. </p>
+<p>AvenirIt and Poppins are used in the footer and header, respectively, and Lato is used only in paragraphs to describe two of the Landbot’s features.</p>
+<img src="/angry-chaired-blog/2020/copying-landbot-io-the-design/design-fonts-lato.jpg" class="" title="The Lato font is used only in two paragraphs" alt="The Lato font is used only in two paragraphs">
+
+<p>Frankly, I thought four fonts was a bit too many. I did seem to notice that font use changed while I was working on the project, so maybe they are changing this.</p>
+<p>Font sizes seemed all over the place, too. I am not sure how font sizes are decided on in big projects, however.<br>Here, I counted 15 different font sizes, ranging from 14 pixels to 50px. Also, there were almost no sizes which could be reduced to 16, which I usually find it easier to work with. Instead, sizes were 14px, 16.67px, 17px, 32.6px and so on.</p>
+<p>That was another thing - font sizes were always defined in pixels, while I was used to work with <strong>rem</strong> units.</p>
+<h3 id="Shapes"><a href="#Shapes" class="headerlink" title="Shapes"></a>Shapes</h3><p>When it comes to shapes, everything is rounded. Most prominent were large curvy shapes on the bacgkround. They gave a bit of an impression that the page was actually lifted a bit above the background. </p>
+<p>As I mentioned before, the main font is rounded, too, as well as the content boxes and backgrounds behind titles. </p>
+<img src="/angry-chaired-blog/2020/copying-landbot-io-the-design/design-shapes-rounded.jpg" class="" title="Rounded shapes on Landbot home page" alt="Rounded shapes on Landbot home page">
+
+<p>It’s a pretty soft, cushiony design. It was kind of a heureka thing for me, because I usually go with straight lines. They are a default solution when creating boxes, and I am kind of afraid to stray await from it, so as not to ruin the looks.</p>
+<h3 id="Patterns"><a href="#Patterns" class="headerlink" title="Patterns"></a>Patterns</h3><p>When I say patterns, I am referring to two things that repeat a lot on the page. By repeating, they create a kind of rhytm and reliability. I thing this technique will help me a lot in future.</p>
+<p>First one is just swapping sides between image and text blocks when the two are arranged side by side. I already mentioned this in the previous post, but here we can see it in its full effect.</p>
+<img src="/angry-chaired-blog/2020/copying-landbot-io-the-design/design-patterns-image-text.jpg" class="" title="Swapping image and text positons in the side-by-side boxes arrangement" alt="Swapping image and text positons in the side-by-side boxes arrangement">
+
+<p>The other pattern is also visible in the image above. It is the use of a colored background in a part of title. This establishes what Landbot is about, without the need to read. It also creates an interesting experience when scrolling down the page, because we get a fun color in the middle of a dark and grounded title. </p>
+<h3 id="Graphics"><a href="#Graphics" class="headerlink" title="Graphics"></a>Graphics</h3><p>As for the graphichs, I just wanted to list some of the visuals that I think really enhance the page.</p>
+<p>The colorful splotchy background is a large .svg file. It is not tiled, but is in fact large enough to cover the whole page. I guess it would tile if the viewport was big enough.<br>It really helps to bring things to life.<br>Here is the page with the background removed:</p>
+<img src="/angry-chaired-blog/2020/copying-landbot-io-the-design/design-graphics-no-background.jpg" class="" title="Landbot home page with no fun background" alt="Landbot home page with no fun background">
+
+<p>Next two are the green “pipes” that connect boxes in the hero section. These are just regular .png images, but their positioning really makes a point.  </p>
+<img src="/angry-chaired-blog/2020/copying-landbot-io-the-design/design-graphics-pipes.jpg" class="" title="Pipes visuals illustrating relationshipo between hero section elements" alt="Pipes visuals illustrating relationshipo between hero section elements">
+
+<p>Then we have an actual .mp4 video of an Iphone receiving WhatsApp, Slack, Mailchimp and other notifications related to a Landbot campaign. It is a neat way to show the service in action.</p>
+<img src="/angry-chaired-blog/2020/copying-landbot-io-the-design/design-graphics-iphone.jpg" class="" title="Landbot notifications in action on Iphone" alt="Landbot notifications in action on Iphone">
+
+<p>There are more visuals on the page, like the one showing WhatApp integration, or illustrating customer satisfaction on Capterra. The point is that all of them bring something to the home page. They either show how the service works, or they give a little bit more life to site to make it more interesting to the user. </p>
+<p>Ok, we briefly went over design elements in this post. I am in no way a graphic designer, but I did want to see if I could break down the design into parts, to make it easier to understand. </p>
+<p>In the next post we will quickly go over both the original and my HTML. We will see how the Landbot team structured their code, and then we will see what did I do to simplify it on my end.<br>See you soon.</p>
+<h4 id="Full-design-image"><a href="#Full-design-image" class="headerlink" title="Full design image"></a>Full design image</h4><img src="/angry-chaired-blog/2020/copying-landbot-io-the-design/design-full.jpg" class="" title="My copy of the full Landbot home page" alt="My copy of the full Landbot home page">
+
+<!-- End Step Content -->
+
+<!-- Project Information -->
+
+<h2 id="Project-Information"><a href="#Project-Information" class="headerlink" title="Project Information"></a>Project Information</h2><h3 id="Available-at"><a href="#Available-at" class="headerlink" title="Available at"></a>Available at</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/ikaem/angry-chaired-blog">Github</a> </li>
+<li><a href="https://ikaem.github.io/angry-chaired-blog/">Live project</a></li>
+</ul>
+<h3 id="Goals"><a href="#Goals" class="headerlink" title="Goals"></a>Goals</h3><ol>
+<li>Just copy the website</li>
+</ol>
+<h3 id="Steps"><a href="#Steps" class="headerlink" title="Steps"></a>Steps</h3><ol>
+<li>Draw framework in Figma</li>
+<li><strong>Draw design in Figma</strong></li>
+<li>Write HTML</li>
+<li>Write CSS</li>
+</ol>
+<h3 id="Tech-and-Tools"><a href="#Tech-and-Tools" class="headerlink" title="Tech and Tools"></a>Tech and Tools</h3><ol>
+<li>Figma</li>
+<li>HTML</li>
+<li>CSS</li>
+</ol>
+<h3 id="Experience-with-Tech-amp-Tools"><a href="#Experience-with-Tech-amp-Tools" class="headerlink" title="Experience with Tech &amp; Tools"></a>Experience with Tech &amp; Tools</h3><p>I can work with HTML and CSS, to a fine degree, I think. I can also do stuff in Figma. I did lot of things with these three tools combined.<br>The issue is actually getting it all together to make a nice looking website. </p>
+<h2 id="DISCLAIMER"><a href="#DISCLAIMER" class="headerlink" title="DISCLAIMER"></a>DISCLAIMER</h2><p>Don’t take any of this seriously and as a matter-of-fact. These are my notes. It might look like I am trying to teach something to someone. I am not.</p>
+
+
+                
+
+
+                <!-- Cover image credit -->
+                
+                    <p class="image-credit-link">
+                        Cover image by <strong>
+                            <a target="_blank" rel="noopener" href="https://unsplash.com/@spencerdavis?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
+                                Spencer Davis
+                            </a>
+                        </strong>
+                    </p>
+
+                
+
+  
+
+            </div>
+            
+            <!-- Custom placed tags -->
+            <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                
+                    
+
+
+<a href="/angry-chaired-blog/tags/landbot/">#landbot</a> <a href="/angry-chaired-blog/tags/figma/">#figma</a> <a href="/angry-chaired-blog/tags/design/">#design</a>
+
+
+                
+            </div>
+            <!--  -->
+
+
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+
+            <!-- Hyvor comments -->
+
+            <!-- End of Hyvor comments -->
+        </div>
+    </div>
+</article>
+
+
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2020 kaem<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

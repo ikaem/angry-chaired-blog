@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="Inexperienced and curious pokes into the sprawling world of web development "/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="kaem"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Copying Landbot.io: The CSS"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Inexperienced and curious pokes into the sprawling world of web development "/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Angry Chaired Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://ikaem.github.io/angry-chaired-blog/angry-chaired-blog/images/header-image.jpg"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://ikaem.github.io/angry-chaired-blog/angry-chaired-blog/images/header-image.jpg"/>
+    
+
+    <!-- Title -->
+    
+    <title>Copying Landbot.io: The CSS - Angry Chaired Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/angry-chaired-blog/css/style.css">
+
+    
+<link rel="stylesheet" href="/angry-chaired-blog/css/custom-style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+    <link rel="icon" href="/angry-chaired-blog/images/favicon.ico"/>
+    
+
+<meta name="generator" content="Hexo 5.0.2"><link rel="alternate" href="/angry-chaired-blog/atom.xml" title="Angry Chaired Blog" type="application/atom+xml">
+</head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/angry-chaired-blog/">Angry Chaired Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/about">
+                            
+                                About
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a target="_blank" rel="noopener" href="https://angrychaired.surge.sh">
+                            
+                                <i class="fa fa-user fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a target="_blank" rel="noopener" href="https://github.com/ikaem/">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a href="/angry-chaired-blog/atom.xml">
+                            
+                                <i class="fa fa-rss fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('ilya-mirnyy-fae9zsLMdw4-unsplash.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Copying Landbot.io: The CSS</h1>
+
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            23/08/2020
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/angry-chaired-blog/categories/copy-web/">copy web</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <!-- Step Content Start -->
+
+<h4 id="Part-4-of-4-in-Copying-Landbot-io"><a href="#Part-4-of-4-in-Copying-Landbot-io" class="headerlink" title="Part 4 of 4 in Copying Landbot.io"></a>Part 4 of 4 in Copying Landbot.io</h4><p>Stying my copy of <a target="_blank" rel="noopener" href="https://landbot.io/">Landbot</a>‘s home page was pretty simple. Aside from usual coloring and positioning, I mostly used Flexbox. There were few occasions where I got stuck and was not able to understand why something was done in original. However, the end product ended up looking pretty similar to its model.</p>
+<a id="more"></a>
+
+<h4 id="See-Project-Information"><a href="#See-Project-Information" class="headerlink" title="See Project Information"></a>See <a href="#Project-Information">Project Information</a></h4><h2 id="Step-4-Write-CSS"><a href="#Step-4-Write-CSS" class="headerlink" title="Step 4: Write CSS"></a>Step 4: Write CSS</h2><p>The biggest difference between the original and my CSS was the use of <strong>float</strong> property. In the original, <strong>float</strong> is used very often to position containers in a row or a grid, which I assume is a remnant of an old version of Bootstrap.<br>I didn’t want to use <strong>float</strong> at all. I replaced it with Flexbox every time, and it worked well for me.</p>
+<p>Let’s take a closer look at what was happening. Again, I won’t go over everything, but will focus on specific places where I had to stray from usual styling process such as coloring or positioning. Reasons for this for either simplification, my preference for a different approach, or, simply, lack of skills.</p>
+<p>I divided the overview into five parts:</p>
+<ol>
+<li>Page</li>
+<li>Header</li>
+<li>Main content</li>
+<li>Footer</li>
+<li>Interesting and problematic parts</li>
+</ol>
+<h3 id="Page"><a href="#Page" class="headerlink" title="Page"></a>Page</h3><p>This one is quick just to point out two things:</p>
+<ol>
+<li>Fonts</li>
+<li>Footer at the bottom of the page</li>
+</ol>
+<h4 id="Fonts"><a href="#Fonts" class="headerlink" title="Fonts"></a>Fonts</h4><p>As already mentioned, Landbot’s home page uses four fonts, two of which (Gotham Rounded and AvenirIt) are paid for, I guess. These are loaded into a user’s brower via <strong>@fontface</strong> rules in the <a target="_blank" rel="noopener" href="https://assets.website-files.com/5e1c4fb5db4d5243c0021d34/css/landbotio.9dec42870.css">homepage CSS stylesheet</a>.</p>
+<p>Here is just an example for one of the faces of Gotham Rounded:</p>
+<figure class="highlight css"><figcaption><span>Gotham Rounded Typefaces are loaded via @typeface property</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@font-face</span> &#123;</span><br><span class="line">  <span class="attribute">font-family</span>: <span class="string">&#x27;Gotham Rounded&#x27;</span>;</span><br><span class="line">  <span class="attribute">src</span>: <span class="built_in">url</span>(<span class="string">&#x27;https://assets.website-files.com/5e1c4fb5db4d5243c0021d34/5e1c4fb5db4d525a8a021d52_GothamRnd-Book.otf&#x27;</span>) <span class="built_in">format</span>(<span class="string">&#x27;opentype&#x27;</span>);</span><br><span class="line">  <span class="attribute">font-weight</span>: <span class="number">400</span>;</span><br><span class="line">  <span class="attribute">font-style</span>: normal;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Fonts that I used were all fetched from Google Fonts, using a single <strong>@import</strong> rule.</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@import</span> url(<span class="string">&quot;https://fonts.googleapis.com/css2?family=Lato:wght@400;700&amp;family=Nunito:wght@300;600;900&amp;family=Poppins:wght@300;500;600;700&amp;family=Nunito+Sans:wght@300;600;700&amp;display=swap&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+<p>I find this approach more convenient usually, as I have all of my fonts with their weights loaded in the same place.<br>However, I can see how big projects benefit in terms of readability, as well as source and options management, by using the <strong>@font-face</strong> approach.</p>
+<h4 id="Footer-at-the-bottom-of-the-page"><a href="#Footer-at-the-bottom-of-the-page" class="headerlink" title="Footer at the bottom of the page"></a>Footer at the bottom of the page</h4><p>With the current style setup, the original home page does not make its footer always stick to the bottom of the page. I tried removing few sections from the original’s body, and the footer moved up the page, to stay with the content.</p>
+<p>I wanted to avoid this, so I made my copy’s <strong>body</strong> element a Flexbox. I also had to make both <strong>body</strong> and its parent, <strong>html</strong>, have 100% height, in order to take up all the space possible.<br>Then I just made the <strong>footer</strong> always stick down by making its top margin taking all available space.</p>
+<p>Here is the selection from my stylesheet:</p>
+<figure class="highlight css"><figcaption><span>Making footer stick to the bottom in my copy of Landbot's home page</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* ... */</span></span><br><span class="line"><span class="selector-tag">body</span>,</span><br><span class="line"><span class="selector-tag">html</span> &#123;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* ... */</span></span><br><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">  <span class="attribute">flex-direction</span>: column;</span><br><span class="line">  <span class="attribute">justify-content</span>: flex-start;</span><br><span class="line">  <span class="attribute">overflow-x</span>: hidden;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.main-footer</span> &#123;</span><br><span class="line">  <span class="attribute">margin-top</span>: auto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Header"><a href="#Header" class="headerlink" title="Header"></a>Header</h3><p>I want to go over two things related to the header:</p>
+<ol>
+<li>Position and dimensions of the header itself</li>
+<li>Dimensions and outline of the the navigation container</li>
+<li>Position of navigation links</li>
+</ol>
+<h4 id="Position-and-dimensions-of-the-header-itself"><a href="#Position-and-dimensions-of-the-header-itself" class="headerlink" title="Position and dimensions of the header itself"></a>Position and dimensions of the header itself</h4><p>The original made the header have siede paddings or 3%, and then hold the width of 100%, making its actual width flexible. This is what I did as well, as it seemed a simple way to always have a reliable width of the header.<br>The header is also a fixed one, laid on top of everything and stuck to the top of the page as we scroll.<br>Finally, the original home page has it with the height of 90 pixels. I couldn’t set the height directly on the header, as that would pull its contents to the top margin, and I would have to make more adjustments to fix that. So I set minimum height on the child element of header, <strong>.main-navigation</strong>.</p>
+<p>Here is the relevant seelction from the stylesheet:</p>
+<figure class="highlight css"><figcaption><span>Setting position and dimensions of the header</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.main-header</span> &#123;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">0</span> <span class="number">3%</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#fff</span>;</span><br><span class="line">  <span class="attribute">position</span>: fixed;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">  <span class="comment">/* ... */</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.main-header__main-navigation</span> &#123;</span><br><span class="line">  <span class="comment">/* ... */</span></span><br><span class="line">  <span class="attribute">min-height</span>: <span class="number">90px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="Dimensions-and-outline-of-the-the-navigation-container"><a href="#Dimensions-and-outline-of-the-the-navigation-container" class="headerlink" title="Dimensions and outline of the the navigation container"></a>Dimensions and outline of the the navigation container</h4><p>Navigation container, the already mentioned <strong>.main-navigation</strong>, has its margins varying, depending on the size of the header. Its width, however, cannot exceed 1300px.<br>It is also a Flexbox container, and it positions its content verticaly cetered, and stuck to its edges.<br>Note that we do defined the actual <strong>width</strong> property to be 100%. This is in order for it to take those 1300px whenever possible, and not to adjust width to its contents.</p>
+<figure class="highlight css"><figcaption><span>Adjusting navigation container</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.main-header__main-navigation</span> &#123;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">0</span> auto;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">  <span class="attribute">justify-content</span>: space-between;</span><br><span class="line">  <span class="attribute">align-items</span>: center;</span><br><span class="line">  <span class="attribute">max-width</span>: <span class="number">1300px</span>;</span><br><span class="line">  <span class="attribute">min-height</span>: <span class="number">90px</span>;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="Position-of-navigation-links"><a href="#Position-of-navigation-links" class="headerlink" title="Position of navigation links"></a>Position of navigation links</h4><p>I had issues with links in the navigation section, that I couldn’t solve completely. We are talking about the <strong>.navigation-right</strong> container in the original, and the <strong>.header-links-wrapper__header-options</strong> in my copy.<br>Specifically, I couldn’t get all the navigation labels to be in the same position.</p>
+<p>In the original, <strong>.navigation-right</strong> is a flex container with width of 50%. It has first three navigation labels as individual elements, and two login links set in one container. The login container has the left margin be 30px and right of 0, while other labels, or their descendants, have side margins set to auto. There are few other padding rules for all elements in the right navigation, too.</p>
+<p>Since I had all label elements be direct descendants of the right navigation, I set side margins to all of them, except the last two - login and sign up. I set the login label to have 30px for the left margin, but label positions were always a bit off. So I did what I could to get them as close as possible, and left it that way.</p>
+<figure class="highlight css"><figcaption><span>My solution for styling right navitaion in the header</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.header-links-wrapper__header-options</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">  <span class="attribute">justify-content</span>: flex-end;</span><br><span class="line">  <span class="attribute">align-items</span>: center;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.header-links__header-option</span> &#123;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">0</span> auto;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">20px</span>;</span><br><span class="line">  <span class="attribute">cursor</span>: pointer;</span><br><span class="line">  <span class="attribute">white-space</span>: nowrap;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.header-links__header-option</span> &gt; * &#123;</span><br><span class="line">  <span class="attribute">color</span>: <span class="built_in">var</span>(--blandDarkBlueText);</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">15px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.header-links__header-option</span><span class="selector-class">.login-option</span> &#123;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">40px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.header-links__header-option</span><span class="selector-class">.register-option</span> &#123;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Main-content"><a href="#Main-content" class="headerlink" title="Main content"></a>Main content</h3><p>Since main content is pretty big, we will go over few selected things that stuck with me. Generally, the style is pretty repetitive anyway.</p>
+<p>Here is our checklist:</p>
+<ol>
+<li>Width and margins of the <strong>main</strong> container</li>
+<li>Canvas in the hero section</li>
+<li>Clients logos container</li>
+<li>Width of the Capterra stripe</li>
+</ol>
+<h4 id="Width-and-margins-of-the-main-container"><a href="#Width-and-margins-of-the-main-container" class="headerlink" title="Width and margins of the main container"></a>Width and margins of the main container</h4><p>As mentioned previously, the original’s <strong>body</strong> element does not have a container for main content of the page. Instead, it leaves each section to take care of its own margins and width.<br>I didn’t want to do that, so I placed all main content inside a <strong>main</strong> element.</p>
+<p>As the page header is a <strong>fixed</strong> element laying on top of everything else, <strong>main</strong> was initially pushed up to touch top of the page.<br>Original style has its top padding set to 100 pixels, in order to move it below the header. I had margin set to 90px, to make it easier to do math relative to header for other elemenets in the <strong>main</strong> element.<br>I also set its side margins to auto, and its <strong>max-width</strong> to 940 pixels, to provide a consistent container for all elements inside</p>
+<figure class="highlight css"><figcaption><span>Width and margins of the <main> container</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.main-content</span> &#123;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">90px</span> auto <span class="number">0</span> auto;</span><br><span class="line">  <span class="attribute">max-width</span>: <span class="number">940px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="Canvas-in-the-hero-section"><a href="#Canvas-in-the-hero-section" class="headerlink" title="Canvas in the hero section"></a>Canvas in the hero section</h4><p>Canvas in the hero section is that blue box with three boxes pushing out of it.</p>
+<p>We want to see how those boxes are positioned, and how those green lines are placed to connect them.</p>
+<p>In the original, <strong>float</strong> is used to position the boxes. Again, I don’t want to use that, so I went with Flexbox again.<br>I made the canvas a Flexbox container, and had it wrap its elements into another row when their total width exceeds the container width. I also had to set the last element in the container to have the left margin set to auto. This way, it gets pushed all the way to the end of the row, which is what the original has.</p>
+<figure class="highlight css"><figcaption><span>Using Flexbox instead of floats to position elements in canvas</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.visual-description__canvas</span> &#123;</span><br><span class="line">  <span class="comment">/* ... */</span></span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">  <span class="attribute">flex-wrap</span>: wrap;</span><br><span class="line">  <span class="attribute">justify-content</span>: space-between;</span><br><span class="line">  <span class="attribute">align-items</span>: flex-start;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* ... */</span></span><br><span class="line"><span class="selector-class">.google-sheets-container</span> &#123;</span><br><span class="line">  <span class="comment">/* ... */</span></span><br><span class="line">  <span class="attribute">margin-left</span>: auto;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">178px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>As for the green lines, the pipes, they are just .png images. In the original, they were placed directly inside an element from which they come out.<br>For instance, the horizontal line is an <strong>img</strong> element placed in the pink demo button saying <strong>“Complete Order”</strong>. I did the same, but added a container to hold each image, as I usually do.</p>
+<p>The key here is to have this image (or the image container in my case) be an absolutely positioned element, placed inside an alement that is not statically positioned. This way the image is out of the container’s element flow, and can move about relative to the container, while other elements in the container can take up the image’s place as if it was never there.<br>I also had to make the starting box (Stripe payment in this case) have a higher z-index than the pipe, so it covers any extra part of the line going into it.</p>
+<p>Here are my CSS rules (almost the same as in the origianl) for the vertical green pipe:</p>
+<figure class="highlight css"><figcaption><span>Positioning of green lines in the canvas container</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.canvas__service-container</span> &#123;</span><br><span class="line">  <span class="attribute">position</span>: relative;</span><br><span class="line">  <span class="comment">/* ... */</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* ... */</span></span><br><span class="line"><span class="selector-class">.stripe-payment-container</span> &#123;</span><br><span class="line">  <span class="comment">/* ... */</span></span><br><span class="line">  <span class="attribute">z-index</span>: <span class="number">3</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* ... */</span></span><br><span class="line"><span class="selector-class">.google-sheets-container__pipe-ver-container</span> &#123;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">178px</span>;</span><br><span class="line">  <span class="attribute">bottom</span>: <span class="number">8px</span>;</span><br><span class="line">  <span class="attribute">left</span>: <span class="number">45px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="Clients-logos-container"><a href="#Clients-logos-container" class="headerlink" title="Clients logos container"></a>Clients logos container</h4><p>The original has the clients containers set as a grid. Since there is always only one row of logos, I set the container as Flexbox.</p>
+<figure class="highlight css"><figcaption><span>Clients logos container set as a Flexbox instead of grid</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.clients-section__clients-logos</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">  <span class="attribute">justify-content</span>: space-between;</span><br><span class="line">  <span class="comment">/* ... */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Another thing that caught my eye here was that the original had each grid item (which is also a logo container) hold a width of 1fr, and padding of 30px. 1fr for each grid item equals to 175px, and finally comes down to 115px for each image when paddings are reduced.</p>
+<p>On my side, I had my Flexbox hold image containers. I wanted my images to be 115px wide, so that is what I set as <strong>width</strong> for image containers, in addition to a background color. The problem now was that the image containers were actuall 115px wide, and images were actually 55px wide, after paddings were deducted.</p>
+<p>To fix that, I had to adjust <strong>box-sizing</strong> for this particular element. Initially, I set this property to be <strong>border-box</strong> for all elements on the page. This caused both content and padding to be calculated into a the element’s specified width. In this case, however, needed padding to be removed from this calculation, so that only image width goes into that 115px widht.<br>So I changed the rule to <strong>content-box</strong> for the container.</p>
+<figure class="highlight css"><figcaption><span>Client image container box-sizing changed to "content-box"</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.clients__logos-logo-container</span> &#123;</span><br><span class="line">  <span class="attribute">max-width</span>: <span class="number">115px</span>;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">30px</span>;</span><br><span class="line">  <span class="attribute">box-sizing</span>: content-box;</span><br><span class="line">  <span class="comment">/* ... */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="Width-of-the-Capterra-stripe"><a href="#Width-of-the-Capterra-stripe" class="headerlink" title="Width of the Capterra stripe"></a>Width of the Capterra stripe</h4><p>This one is quick. Since the <strong>main</strong> container is centered in the middle of the page, not allowing its contents to ever touch the page edges, I had a problem to span that yellow strap accross the entire page.</p>
+<p>Luckily, I saw how Landbot home page uses negative margins throughout the page, and I used it here.<br>I gave the stripe negative side margins of -1999px, and the problem was solved.</p>
+<figure class="highlight css"><figcaption><span>Negative margins on Capterra stripe</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.main-section__capterra-stripe-outer</span> &#123;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#fccc46f2</span>;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">0</span> -<span class="number">1999px</span>;</span><br><span class="line">  <span class="comment">/* ... */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Footer"><a href="#Footer" class="headerlink" title="Footer"></a>Footer</h3><p>Nothing really here. It is pretty much a routine stuff.</p>
+<p>That’s it. It’s over. I think the copied page looks quite decent, and I hope that the Landbot team won’t mind me putting my copy online. They probably won’t even see it. </p>
+<!-- End Step Content -->
+
+<!-- Project Information -->
+
+<h2 id="Project-Information"><a href="#Project-Information" class="headerlink" title="Project Information"></a>Project Information</h2><h3 id="Available-at"><a href="#Available-at" class="headerlink" title="Available at"></a>Available at</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/ikaem/angry-chaired-blog">Github</a></li>
+<li><a href="/angry-chaired-blog/copy-web/">Copied Landbot home page</a></li>
+<li><a href="https://ikaem.github.io/angry-chaired-blog/copy-web/" title="" target="">Copied web</a>
+
+</li>
+</ul>
+<h3 id="Goals"><a href="#Goals" class="headerlink" title="Goals"></a>Goals</h3><ol>
+<li>Just copy the website</li>
+</ol>
+<h3 id="Steps"><a href="#Steps" class="headerlink" title="Steps"></a>Steps</h3><ol>
+<li>Draw framework in Figma</li>
+<li>Draw design in Figma</li>
+<li>Write HTML</li>
+<li><strong>Write CSS</strong></li>
+</ol>
+<h3 id="Tech-and-Tools"><a href="#Tech-and-Tools" class="headerlink" title="Tech and Tools"></a>Tech and Tools</h3><ol>
+<li>Figma</li>
+<li>HTML</li>
+<li>CSS</li>
+</ol>
+<h3 id="Experience-with-Tech-amp-Tools"><a href="#Experience-with-Tech-amp-Tools" class="headerlink" title="Experience with Tech &amp; Tools"></a>Experience with Tech &amp; Tools</h3><p>I can work with HTML and CSS, to a fine degree, I think. I can also do stuff in Figma. I did lot of things with these three tools combined.<br>The issue is actually getting it all together to make a nice looking website.</p>
+<h2 id="DISCLAIMER"><a href="#DISCLAIMER" class="headerlink" title="DISCLAIMER"></a>DISCLAIMER</h2><p>Don’t take any of this seriously and as a matter-of-fact. These are my notes. It might look like I am trying to teach something to someone. I am not.</p>
+
+
+                
+
+
+                <!-- Cover image credit -->
+                
+                    <p class="image-credit-link">
+                        Cover image by <strong>
+                            <a target="_blank" rel="noopener" href="https://unsplash.com/@mirnyy?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
+                                Ilya Mirnyy
+                            </a>
+                        </strong>
+                    </p>
+
+                
+
+  
+
+            </div>
+            
+            <!-- Custom placed tags -->
+            <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                
+                    
+
+
+<a href="/angry-chaired-blog/tags/landbot/">#landbot</a> <a href="/angry-chaired-blog/tags/css/">#css</a>
+
+
+                
+            </div>
+            <!--  -->
+
+
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+
+            <!-- Hyvor comments -->
+
+            <!-- End of Hyvor comments -->
+        </div>
+    </div>
+</article>
+
+
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2020 kaem<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
