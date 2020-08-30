@@ -6,7 +6,7 @@
   <link href="https://ikaem.github.io/angry-chaired-blog/atom.xml" rel="self"/>
   
   <link href="https://ikaem.github.io/angry-chaired-blog/"/>
-  <updated>2020-08-30T11:57:18.327Z</updated>
+  <updated>2020-08-30T14:46:16.811Z</updated>
   <id>https://ikaem.github.io/angry-chaired-blog/</id>
   
   <author>
@@ -17,11 +17,34 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Gatsby &amp; MDX: Create Pages with Default Layouts</title>
+    <link href="https://ikaem.github.io/angry-chaired-blog/2020/gatsby-mdx-create-pages-with-default-layouts/"/>
+    <id>https://ikaem.github.io/angry-chaired-blog/2020/gatsby-mdx-create-pages-with-default-layouts/</id>
+    <published>2020-08-30T12:24:49.000Z</published>
+    <updated>2020-08-30T14:46:16.811Z</updated>
+    
+    
+    <summary type="html">&lt;!-- Step Content Start --&gt;
+
+&lt;h4 id=&quot;Part-3-of-6-in-Gatsby-amp-MDX&quot;&gt;&lt;a href=&quot;#Part-3-of-6-in-Gatsby-amp-MDX&quot; class=&quot;headerlink&quot; title=&quot;Part 3 of 6 in Gatsby &amp;amp; MDX&quot;&gt;&lt;/a&gt;Part 3 of 6 in Gatsby &amp;amp; MDX&lt;/h4&gt;&lt;p&gt;In the previous post we programmatically created pages from MDX documents. In this post we will create pages by specifying a folder whose MDX documents will be turned to pages automatically, and then specifying a default layout which will be used for every page.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="gatsby &amp; mdx" scheme="https://ikaem.github.io/angry-chaired-blog/categories/gatsby-mdx/"/>
+    
+    
+    <category term="gatsby" scheme="https://ikaem.github.io/angry-chaired-blog/tags/gatsby/"/>
+    
+    <category term="mdx" scheme="https://ikaem.github.io/angry-chaired-blog/tags/mdx/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Gatsby &amp; MDX: Programmatically Create Pages</title>
     <link href="https://ikaem.github.io/angry-chaired-blog/2020/gatsby-mdx-programmatically-create-pages/"/>
     <id>https://ikaem.github.io/angry-chaired-blog/2020/gatsby-mdx-programmatically-create-pages/</id>
     <published>2020-08-30T09:40:45.000Z</published>
-    <updated>2020-08-30T11:57:18.327Z</updated>
+    <updated>2020-08-30T12:24:55.492Z</updated>
     
     
     <summary type="html">&lt;!-- Step Content Start --&gt;
@@ -471,29 +494,6 @@
     
     
     <category term="gatsby" scheme="https://ikaem.github.io/angry-chaired-blog/tags/gatsby/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Gatsby Web: Manipulate Markdown with Transformer Remark Plugin</title>
-    <link href="https://ikaem.github.io/angry-chaired-blog/2020/gatsby-web-manipulate-markdown-with-transformer-remark-plugin/"/>
-    <id>https://ikaem.github.io/angry-chaired-blog/2020/gatsby-web-manipulate-markdown-with-transformer-remark-plugin/</id>
-    <published>2020-08-16T20:37:15.000Z</published>
-    <updated>2020-08-16T20:43:05.702Z</updated>
-    
-    
-    <summary type="html">&lt;!-- Step Content Start --&gt;
-
-&lt;h4 id=&quot;Part-5-of-10-in-Gatsby-Web&quot;&gt;&lt;a href=&quot;#Part-5-of-10-in-Gatsby-Web&quot; class=&quot;headerlink&quot; title=&quot;Part 5 of 10 in Gatsby Web&quot;&gt;&lt;/a&gt;Part 5 of 10 in Gatsby Web&lt;/h4&gt;&lt;p&gt;The idea of this project was to create a portfolio of learning projects I worked on. To do that, I need a way to store project information, and this would ideally be in form of a file.&lt;br&gt;Of course, I could have had a database, and store this information there. We are working with Gatsby, however, and Gatsby can use Markdown, so we use Markdown.&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="gatsby web" scheme="https://ikaem.github.io/angry-chaired-blog/categories/gatsby-web/"/>
-    
-    
-    <category term="gatsby plugins" scheme="https://ikaem.github.io/angry-chaired-blog/tags/gatsby-plugins/"/>
-    
-    <category term="markdown" scheme="https://ikaem.github.io/angry-chaired-blog/tags/markdown/"/>
     
   </entry>
   
