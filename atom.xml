@@ -6,7 +6,7 @@
   <link href="https://ikaem.github.io/angry-chaired-blog/atom.xml" rel="self"/>
   
   <link href="https://ikaem.github.io/angry-chaired-blog/"/>
-  <updated>2020-08-23T12:18:18.067Z</updated>
+  <updated>2020-08-30T09:25:49.884Z</updated>
   <id>https://ikaem.github.io/angry-chaired-blog/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Gatsby &amp; MDX: Set up MDX</title>
+    <link href="https://ikaem.github.io/angry-chaired-blog/2020/gatsby-mdx-set-up-mdx/"/>
+    <id>https://ikaem.github.io/angry-chaired-blog/2020/gatsby-mdx-set-up-mdx/</id>
+    <published>2020-08-30T05:40:09.000Z</published>
+    <updated>2020-08-30T09:25:49.884Z</updated>
+    
+    
+    <summary type="html">&lt;!-- Step Content Start --&gt;
+
+&lt;h4 id=&quot;Part-1-of-6-in-Gatsby-amp-MDX&quot;&gt;&lt;a href=&quot;#Part-1-of-6-in-Gatsby-amp-MDX&quot; class=&quot;headerlink&quot; title=&quot;Part 1 of 6 in Gatsby &amp;amp; MDX&quot;&gt;&lt;/a&gt;Part 1 of 6 in Gatsby &amp;amp; MDX&lt;/h4&gt;&lt;p&gt;At the end the Gatsby Web project &lt;a href=&quot;/angry-chaired-blog/2020/gatsby-web-audit-optimize-deploy/&quot; title=&quot;I did previously&quot;&gt;I did previously&lt;/a&gt;, I said that I wasn’t happy how the website turned out. I felt it was done clumsily, its folder structure being all over the place, and its design ugly. I also wasn’t impressed with what Markdown turned out to be. So I figured I should return to Gatsby, and redo the page.&lt;br&gt;This is it.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="gatsby &amp; mdx" scheme="https://ikaem.github.io/angry-chaired-blog/categories/gatsby-mdx/"/>
+    
+    
+    <category term="gatsby" scheme="https://ikaem.github.io/angry-chaired-blog/tags/gatsby/"/>
+    
+    <category term="mdx" scheme="https://ikaem.github.io/angry-chaired-blog/tags/mdx/"/>
+    
+    <category term="typescript" scheme="https://ikaem.github.io/angry-chaired-blog/tags/typescript/"/>
+    
+  </entry>
   
   <entry>
     <title>Copying Landbot.io: The CSS</title>
@@ -314,7 +339,7 @@
     <link href="https://ikaem.github.io/angry-chaired-blog/2020/gatsby-web-audit-optimize-deploy/"/>
     <id>https://ikaem.github.io/angry-chaired-blog/2020/gatsby-web-audit-optimize-deploy/</id>
     <published>2020-08-17T06:06:39.000Z</published>
-    <updated>2020-08-30T05:35:46.176Z</updated>
+    <updated>2020-08-30T05:37:05.984Z</updated>
     
     
     <summary type="html">&lt;!-- Step Content Start --&gt;
@@ -471,29 +496,6 @@
     <category term="graphql" scheme="https://ikaem.github.io/angry-chaired-blog/tags/graphql/"/>
     
     <category term="gatsby plugins" scheme="https://ikaem.github.io/angry-chaired-blog/tags/gatsby-plugins/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Gatsby Web: Styled Components</title>
-    <link href="https://ikaem.github.io/angry-chaired-blog/2020/gatsby-web-styled-components/"/>
-    <id>https://ikaem.github.io/angry-chaired-blog/2020/gatsby-web-styled-components/</id>
-    <published>2020-08-16T20:19:00.000Z</published>
-    <updated>2020-08-16T20:25:56.966Z</updated>
-    
-    
-    <summary type="html">&lt;!-- Step Content Start --&gt;
-
-&lt;h4 id=&quot;Part-3-of-10-in-Gatsby-Web&quot;&gt;&lt;a href=&quot;#Part-3-of-10-in-Gatsby-Web&quot; class=&quot;headerlink&quot; title=&quot;Part 3 of 10 in Gatsby Web&quot;&gt;&lt;/a&gt;Part 3 of 10 in Gatsby Web&lt;/h4&gt;&lt;p&gt;At the moment, our app looks pretty dry. In fact, it is ugly. We have to style it a bit.&lt;br&gt;Official Gatsby tutorial goes with CSS Modules when it comes to styling.&lt;br&gt;However, I prefer Styled Components. It allows us to have styles in the same file as React components, we can nest style rules like with Sass, and we can define global styles with it, too. &lt;/p&gt;</summary>
-    
-    
-    
-    <category term="gatsby web" scheme="https://ikaem.github.io/angry-chaired-blog/categories/gatsby-web/"/>
-    
-    
-    <category term="gatsby" scheme="https://ikaem.github.io/angry-chaired-blog/tags/gatsby/"/>
-    
-    <category term="styled components" scheme="https://ikaem.github.io/angry-chaired-blog/tags/styled-components/"/>
     
   </entry>
   
