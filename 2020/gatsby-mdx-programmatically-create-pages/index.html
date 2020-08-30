@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="Inexperienced and curious pokes into the sprawling world of web development "/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="kaem"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Gatsby &amp; MDX: Programmatically Create Pages"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Inexperienced and curious pokes into the sprawling world of web development "/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Angry Chaired Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://ikaem.github.io/angry-chaired-blog/angry-chaired-blog/images/header-image.jpg"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://ikaem.github.io/angry-chaired-blog/angry-chaired-blog/images/header-image.jpg"/>
+    
+
+    <!-- Title -->
+    
+    <title>Gatsby &amp; MDX: Programmatically Create Pages - Angry Chaired Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/angry-chaired-blog/css/style.css">
+
+    
+<link rel="stylesheet" href="/angry-chaired-blog/css/custom-style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+    <link rel="icon" href="/angry-chaired-blog/images/favicon.ico"/>
+    
+
+<meta name="generator" content="Hexo 5.0.2"><link rel="alternate" href="/angry-chaired-blog/atom.xml" title="Angry Chaired Blog" type="application/atom+xml">
+</head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/angry-chaired-blog/">Angry Chaired Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/about">
+                            
+                                About
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a target="_blank" rel="noopener" href="https://angrychaired.surge.sh">
+                            
+                                <i class="fa fa-user fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a target="_blank" rel="noopener" href="https://github.com/ikaem/">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a href="/angry-chaired-blog/atom.xml">
+                            
+                                <i class="fa fa-rss fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('jc-gellidon-UIp163xCV6w-unsplash.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Gatsby & MDX: Programmatically Create Pages</h1>
+
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            30/08/2020
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/angry-chaired-blog/categories/gatsby-mdx/">gatsby & mdx</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <!-- Step Content Start -->
+
+<h4 id="Part-2-of-6-in-Gatsby-amp-MDX"><a href="#Part-2-of-6-in-Gatsby-amp-MDX" class="headerlink" title="Part 2 of 6 in Gatsby &amp; MDX"></a>Part 2 of 6 in Gatsby &amp; MDX</h4><p>In the previous post we installed a plugin that allowed use to create pages by just placing MDX documents in the Gatsby’s <strong>pages</strong> folder. While this is cool, the plugin allows us to also insert MDX content into any React component. Here, we will see how to do so with programmatically created pages.</p>
+<a id="more"></a>
+
+<h4 id="See-Project-Information"><a href="#See-Project-Information" class="headerlink" title="See Project Information"></a>See <a href="#Project-Information">Project Information</a></h4><h2 id="Step-2-Programmatically-create-pages-with-MDX"><a href="#Step-2-Programmatically-create-pages-with-MDX" class="headerlink" title="Step 2: Programmatically create pages with MDX"></a>Step 2: Programmatically create pages with MDX</h2><p>Creating pages programmatically is <a href="/angry-chaired-blog/2020/gatsby-web-programatically-create-pages/" title="always the same">always the same</a>. We use Gatsby’s APIs, <strong>onCreateNode</strong> and <strong>createPages</strong> to generate slugs for new pages, and then to create those pages, respectively.</p>
+<p>Now, while tutorials online use the same procedure for MDX, I found that MDX nodes already come with their own slugs. I am going to assumet this is automatically done by the <strong>gatsby-plugin-mdx</strong>, and won’t look back.</p>
+<p>Here is what we will do:</p>
+<ol>
+<li>Use <strong>createPages</strong> API to create new pages for each MDX document in the project</li>
+<li>Use <strong>MDXRendered</strong> component to render body.</li>
+</ol>
+<h3 id="Use-“createPages”-API-to-create-new-pages-for-each-MDX-document-in-the-project"><a href="#Use-“createPages”-API-to-create-new-pages-for-each-MDX-document-in-the-project" class="headerlink" title="Use “createPages” API to create new pages for each MDX document in the project"></a>Use “createPages” API to create new pages for each MDX document in the project</h3><p>For this part, I have partially followed Scott Pence’s <a target="_blank" rel="noopener" href="https://scottspence.com/2019/10/31/build-an-mdx-blog/">exhaustive guide</a> to create a blog with Gatsby and MDX. Thanks Scott.</p>
+<p>We will start with creating two folders inside <strong>src</strong>: <strong>current-project</strong> and <strong>projects</strong>.</p>
+<p>I want the <strong>projects</strong> folder contain bunch of other folders, one for each project. They will be named after a project, and will each containe a single <strong>index.mdx</strong> file with the project contents.<br>With this setup, I make sure that slugs for my projects are names of the project folders. When creating pages with <strong>createPage</strong> method, I will assemble paths to project pages to be <strong>project/<name-of-the-project-folder></strong></p>
+<p>As for the <strong>current-project</strong> folder, it will hold a single <strong>index.mdx</strong> file with details of the current project. This will make sure that slug for this MDX node is actually an empty string. I assume this is default behavior of the <strong>gatsby-plugin-mdx</strong> plugin when creating slugs, where it ignores the top level folder names inside the <strong>src</strong> folder. This works great for me, as I want my current project to be available at <strong>/current/</strong> path.</p>
+<p>To make use of these two folders, we have to add them as instances to <strong>source-filesystem plugin</strong>:</p>
+<figure class="highlight js"><figcaption><span>gatsby-config.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ...</span></span><br><span class="line">    &#123;</span><br><span class="line">      resolve: <span class="string">&quot;gatsby-source-filesystem&quot;</span>,</span><br><span class="line">      options: &#123;</span><br><span class="line">        name: <span class="string">&quot;projects&quot;</span>,</span><br><span class="line">        path: <span class="string">`<span class="subst">$&#123;__dirname&#125;</span>/src/projects`</span>,</span><br><span class="line">      &#125;,</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      resolve: <span class="string">&quot;gatsby-source-filesystem&quot;</span>,</span><br><span class="line">      options: &#123;</span><br><span class="line">        name: <span class="string">&quot;current-project&quot;</span>,</span><br><span class="line">        path: <span class="string">`<span class="subst">$&#123;__dirname&#125;</span>/src/current-project`</span>,</span><br><span class="line">      &#125;,</span><br><span class="line">    &#125;,</span><br></pre></td></tr></table></figure>
+
+<p>Next, we create the <strong>gatsby-node.js</strong> file in the root, and immediately require <strong>path</strong> in it, as we will need it to resolve absolute path to pages’ templates. Plural, yes.</p>
+<p>Main idea here is the same as in the post I already linked above. We query our MDX files, and then we loop over the edges to create a page for each edge.</p>
+<figure class="highlight js"><figcaption><span>Programmatically creating pages in "gatsby-node.js"</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">&quot;path&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">exports</span>.createPages = <span class="keyword">async</span> (&#123; actions, graphql &#125;) =&gt; &#123;</span><br><span class="line">  <span class="keyword">const</span> &#123; createPage &#125; = actions;</span><br><span class="line">  <span class="keyword">const</span> currentProjectTemplate = path.resolve(</span><br><span class="line">    <span class="string">&quot;src/templates/current-project.template.tsx&quot;</span></span><br><span class="line">  );</span><br><span class="line">  <span class="keyword">const</span> finishedProjectTemplate = path.resolve(</span><br><span class="line">    <span class="string">&quot;src/templates/project.template.tsx&quot;</span></span><br><span class="line">  );</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> result = <span class="keyword">await</span> graphql(<span class="string">`</span></span><br><span class="line"><span class="string">    query AllMDX &#123;</span></span><br><span class="line"><span class="string">      allMdx(filter: &#123; frontmatter: &#123; published: &#123; eq: true &#125; &#125; &#125;) &#123;</span></span><br><span class="line"><span class="string">        edges &#123;</span></span><br><span class="line"><span class="string">          node &#123;</span></span><br><span class="line"><span class="string">            slug</span></span><br><span class="line"><span class="string">            frontmatter &#123;</span></span><br><span class="line"><span class="string">              type</span></span><br><span class="line"><span class="string">            &#125;</span></span><br><span class="line"><span class="string">          &#125;</span></span><br><span class="line"><span class="string">        &#125;</span></span><br><span class="line"><span class="string">      &#125;</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">  `</span>);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> projects = result.data.allMdx.edges;</span><br><span class="line"></span><br><span class="line">  projects.forEach(<span class="function">(<span class="params">&#123; node &#125;</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (node.frontmatter.type === <span class="string">&quot;finished&quot;</span>) &#123;</span><br><span class="line">      createPage(&#123;</span><br><span class="line">        path: <span class="string">`project/<span class="subst">$&#123;node.slug&#125;</span>`</span>,</span><br><span class="line">        component: finishedProjectTemplate,</span><br><span class="line">        context: &#123;</span><br><span class="line">          slug: node.slug,</span><br><span class="line">        &#125;,</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (node.frontmatter.type === <span class="string">&quot;current&quot;</span>) &#123;</span><br><span class="line">      createPage(&#123;</span><br><span class="line">        path: <span class="string">`current/<span class="subst">$&#123;node.slug&#125;</span>`</span>,</span><br><span class="line">        component: currentProjectTemplate,</span><br><span class="line">        context: &#123;</span><br><span class="line">          slug: node.slug,</span><br><span class="line">        &#125;,</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>Few specifics are:</p>
+<ol>
+<li>We obviously use <strong>allMdx</strong> query to get our MDX nodes.</li>
+<li>We filter the nodes by their <strong>published</strong> value, to retireve only published content. I added <strong>published</strong> field to the frontmatter for drafting purposes.</li>
+<li>In addition to <strong>slug</strong>, I also request the <strong>type</strong> field from the frontmatter. I do this to be able to assign current and finished projects to their respective templates</li>
+<li>This is visible in the forEach loop, where I assign different templates to finished and current project (of which there is just one).</li>
+<li>Finally, I assemble paths. Finished projects paths consist of the <strong>“project”</strong> string and <strong>slug</strong> value. Current project path gets <strong>“current</strong> string, and the <strong>slug</strong> value. Note that <strong>slug</strong> is not even needed, as it is empty string, but for the sake of consistency, I put it there.</li>
+</ol>
+<h3 id="Use-MDXRenderer-component-to-render-body"><a href="#Use-MDXRenderer-component-to-render-body" class="headerlink" title="Use MDXRenderer component to render body."></a>Use <strong>MDXRenderer</strong> component to render body.</h3><p>We have now created pages and assigned paths to them. Obviously, those pages can be linked to the front page via their slugs (which need <strong>/project/</strong> and <strong>/current/</strong> strings prepended to them), but we will not deal with that.</p>
+<p>Instead, we will head over to one of the two templates, <strong>project.template.tsx</strong> i the <strong>tempaltes</strong> folder, to see how we can insert finished project data in it.</p>
+<p>To do so, <strong>gatsby-plugin-mdx</strong> provides component <strong>MDXRenderer</strong>. This component wraps around the <strong>body</strong> field retrieved from the GQL <strong>mdx</strong> query. </p>
+<p>Here it is in action, together with the query that uses GQL variable from the context we provided to each page when we created them.</p>
+<figure class="highlight jsx"><figcaption><span>MDXRenderer component renders MDX body</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">&quot;react&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; graphql &#125; <span class="keyword">from</span> <span class="string">&quot;gatsby&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; MDXRenderer &#125; <span class="keyword">from</span> <span class="string">&quot;gatsby-plugin-mdx&quot;</span>;</span><br><span class="line"><span class="comment">// ...</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> ProjectTemplate: React.FC&lt;ProjectTemplateProps&gt; = <span class="function">(<span class="params">&#123; data &#125;</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> &#123;</span><br><span class="line">    body,</span><br><span class="line">    frontmatter: &#123; date, title &#125;,</span><br><span class="line">  &#125; = data.mdx;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    &lt;Layout&gt;</span><br><span class="line">      &lt;ProjectTemplateStyled className=<span class="string">&quot;main-content_project-article&quot;</span>&gt;</span><br><span class="line">        &lt;div className=<span class="string">&quot;project-article_project-details&quot;</span>&gt;</span><br><span class="line">          &lt;h2 className=<span class="string">&quot;project-details_title&quot;</span>&gt;&#123;title&#125;&lt;/h2&gt;</span><br><span class="line">          &lt;span className=<span class="string">&quot;project-details_date&quot;</span>&gt;&#123;date&#125;&lt;/span&gt;</span><br><span class="line">          &lt;div className=<span class="string">&quot;project-details_remark-insert&quot;</span>&gt;</span><br><span class="line">            &lt;MDXRenderer&gt;&#123;body&#125;&lt;/MDXRenderer&gt;</span><br><span class="line">          &lt;/div&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">      &lt;/ProjectTemplateStyled&gt;</span><br><span class="line">    &lt;/Layout&gt;</span><br><span class="line">  );</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> ProjectTemplate;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> query = graphql<span class="string">`</span></span><br><span class="line"><span class="string">  query ProjectPage($slug: String!) &#123;</span></span><br><span class="line"><span class="string">    mdx(slug: &#123; eq: $slug &#125;) &#123;</span></span><br><span class="line"><span class="string">      body</span></span><br><span class="line"><span class="string">      excerpt</span></span><br><span class="line"><span class="string">      frontmatter &#123;</span></span><br><span class="line"><span class="string">        date</span></span><br><span class="line"><span class="string">        title</span></span><br><span class="line"><span class="string">      &#125;</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">  &#125;</span></span><br><span class="line"><span class="string">`</span>;</span><br></pre></td></tr></table></figure>
+
+<p><strong>MDXRenderer</strong> component does not wrap the <strong>body</strong> in any HTML elements, so that is neat. </p>
+<p>That is it. As you can see, programmatically creating pages out ouf MDX document is very similar to the way we do it with regular Markdown. We didn’t have to create slugs, which was cool (for some reason I am super annoyed by the whole slugs concept), and we used a dedicated component to render MDX body. </p>
+<p>In the next post we will see another way how to create pages with the <strong>gatsby-plugin-mdx</strong>. This is a more <strong>“MDX”</strong> way, taking advantage of the fact that we can use JSX inside MDX documents.</p>
+<!-- End Step Content -->
+
+<!-- Project Information -->
+
+<h2 id="Project-Information"><a href="#Project-Information" class="headerlink" title="Project Information"></a>Project Information</h2><h3 id="Available-at"><a href="#Available-at" class="headerlink" title="Available at"></a>Available at</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/ikaem/angry-chaired-v2/">Github respository</a></li>
+<li><a target="_blank" rel="noopener" href="https://angrychaired.surge.sh/">Live website</a></li>
+</ul>
+<h3 id="Goals"><a href="#Goals" class="headerlink" title="Goals"></a>Goals</h3><ol>
+<li>Use MDX to provide content for programmatically created pages</li>
+<li>Get better TypeScript support in Gatsby project</li>
+</ol>
+<h3 id="Steps"><a href="#Steps" class="headerlink" title="Steps"></a>Steps</h3><ol>
+<li>Setup MDX and render MDX files as pages</li>
+<li><strong>Programmatically create pages with MDX</strong></li>
+<li>Create pages with default layouts and gatsby-plugin-create-pages</li>
+<li>Gatsby Images with MDX</li>
+<li>Additional things learned</li>
+<li>Issus encountered during the project</li>
+</ol>
+<h3 id="Tech-and-Tools"><a href="#Tech-and-Tools" class="headerlink" title="Tech and Tools"></a>Tech and Tools</h3><ol>
+<li>Gatsby</li>
+<li>TypeScript</li>
+<li>MDX</li>
+</ol>
+<h3 id="Experience-with-Tech-amp-Tools"><a href="#Experience-with-Tech-amp-Tools" class="headerlink" title="Experience with Tech &amp; Tools"></a>Experience with Tech &amp; Tools</h3><p>I have previously created a Gatsby website, and wrote about it on this blog. I have also used TypeScript before, including the mentioned project. I haven’t used MDX, but from what I see, it is basically a way to write React components in Markdown files.</p>
+<h2 id="DISCLAIMER"><a href="#DISCLAIMER" class="headerlink" title="DISCLAIMER"></a>DISCLAIMER</h2><p>Don’t take any of this seriously and as a matter-of-fact. These are my notes. It might look like I am trying to teach something to someone. I am not.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+                
+
+
+                <!-- Cover image credit -->
+                
+                    <p class="image-credit-link">
+                        Cover image by <strong>
+                            <a target="_blank" rel="noopener" href="https://unsplash.com/@jcgellidon?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
+                                JC Gellidon
+                            </a>
+                        </strong>
+                    </p>
+
+                
+
+  
+
+            </div>
+            
+            <!-- Custom placed tags -->
+            <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                
+                    
+
+
+<a href="/angry-chaired-blog/tags/gatsby/">#gatsby</a> <a href="/angry-chaired-blog/tags/mdx/">#mdx</a>
+
+
+                
+            </div>
+            <!--  -->
+
+
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+
+            <!-- Hyvor comments -->
+
+            <!-- End of Hyvor comments -->
+        </div>
+    </div>
+</article>
+
+
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2020 kaem<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

@@ -6,7 +6,7 @@
   <link href="https://ikaem.github.io/angry-chaired-blog/atom.xml" rel="self"/>
   
   <link href="https://ikaem.github.io/angry-chaired-blog/"/>
-  <updated>2020-08-30T09:25:49.884Z</updated>
+  <updated>2020-08-30T11:34:51.622Z</updated>
   <id>https://ikaem.github.io/angry-chaired-blog/</id>
   
   <author>
@@ -17,11 +17,34 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Gatsby &amp; MDX: Programmatically Create Pages</title>
+    <link href="https://ikaem.github.io/angry-chaired-blog/2020/gatsby-mdx-programmatically-create-pages/"/>
+    <id>https://ikaem.github.io/angry-chaired-blog/2020/gatsby-mdx-programmatically-create-pages/</id>
+    <published>2020-08-30T09:40:45.000Z</published>
+    <updated>2020-08-30T11:34:51.622Z</updated>
+    
+    
+    <summary type="html">&lt;!-- Step Content Start --&gt;
+
+&lt;h4 id=&quot;Part-2-of-6-in-Gatsby-amp-MDX&quot;&gt;&lt;a href=&quot;#Part-2-of-6-in-Gatsby-amp-MDX&quot; class=&quot;headerlink&quot; title=&quot;Part 2 of 6 in Gatsby &amp;amp; MDX&quot;&gt;&lt;/a&gt;Part 2 of 6 in Gatsby &amp;amp; MDX&lt;/h4&gt;&lt;p&gt;In the previous post we installed a plugin that allowed use to create pages by just placing MDX documents in the Gatsby’s &lt;strong&gt;pages&lt;/strong&gt; folder. While this is cool, the plugin allows us to also insert MDX content into any React component. Here, we will see how to do so with programmatically created pages.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="gatsby &amp; mdx" scheme="https://ikaem.github.io/angry-chaired-blog/categories/gatsby-mdx/"/>
+    
+    
+    <category term="gatsby" scheme="https://ikaem.github.io/angry-chaired-blog/tags/gatsby/"/>
+    
+    <category term="mdx" scheme="https://ikaem.github.io/angry-chaired-blog/tags/mdx/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Gatsby &amp; MDX: Set up MDX</title>
     <link href="https://ikaem.github.io/angry-chaired-blog/2020/gatsby-mdx-set-up-mdx/"/>
     <id>https://ikaem.github.io/angry-chaired-blog/2020/gatsby-mdx-set-up-mdx/</id>
     <published>2020-08-30T05:40:09.000Z</published>
-    <updated>2020-08-30T09:25:49.884Z</updated>
+    <updated>2020-08-30T11:51:36.972Z</updated>
     
     
     <summary type="html">&lt;!-- Step Content Start --&gt;
@@ -471,31 +494,6 @@
     <category term="gatsby plugins" scheme="https://ikaem.github.io/angry-chaired-blog/tags/gatsby-plugins/"/>
     
     <category term="markdown" scheme="https://ikaem.github.io/angry-chaired-blog/tags/markdown/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Gatsby Web: Getting Data with GraphQL &amp; Filesystem Plugin</title>
-    <link href="https://ikaem.github.io/angry-chaired-blog/2020/gatsby-web-getting-data-with-graphql-filesystem-plugin/"/>
-    <id>https://ikaem.github.io/angry-chaired-blog/2020/gatsby-web-getting-data-with-graphql-filesystem-plugin/</id>
-    <published>2020-08-16T20:28:18.000Z</published>
-    <updated>2020-08-16T20:35:16.761Z</updated>
-    
-    
-    <summary type="html">&lt;!-- Step Content Start --&gt;
-
-&lt;h4 id=&quot;Part-4-of-10-in-Gatsby-Web&quot;&gt;&lt;a href=&quot;#Part-4-of-10-in-Gatsby-Web&quot; class=&quot;headerlink&quot; title=&quot;Part 4 of 10 in Gatsby Web&quot;&gt;&lt;/a&gt;Part 4 of 10 in Gatsby Web&lt;/h4&gt;&lt;p&gt;Gatsby is all about GraphQL. We incorporate our site’s metadata into pages with it, we use it to get data from files, and to get and work with images, and so on. &lt;/p&gt;</summary>
-    
-    
-    
-    <category term="gatsby web" scheme="https://ikaem.github.io/angry-chaired-blog/categories/gatsby-web/"/>
-    
-    
-    <category term="gatsby" scheme="https://ikaem.github.io/angry-chaired-blog/tags/gatsby/"/>
-    
-    <category term="graphql" scheme="https://ikaem.github.io/angry-chaired-blog/tags/graphql/"/>
-    
-    <category term="gatsby plugins" scheme="https://ikaem.github.io/angry-chaired-blog/tags/gatsby-plugins/"/>
     
   </entry>
   
