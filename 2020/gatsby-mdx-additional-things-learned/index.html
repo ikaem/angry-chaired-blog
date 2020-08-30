@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="Inexperienced and curious pokes into the sprawling world of web development "/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="kaem"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Gatsby &amp; MDX: Additional Things Learned"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Inexperienced and curious pokes into the sprawling world of web development "/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Angry Chaired Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://ikaem.github.io/angry-chaired-blog/angry-chaired-blog/images/header-image.jpg"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://ikaem.github.io/angry-chaired-blog/angry-chaired-blog/images/header-image.jpg"/>
+    
+
+    <!-- Title -->
+    
+    <title>Gatsby &amp; MDX: Additional Things Learned - Angry Chaired Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/angry-chaired-blog/css/style.css">
+
+    
+<link rel="stylesheet" href="/angry-chaired-blog/css/custom-style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+    <link rel="icon" href="/angry-chaired-blog/images/favicon.ico"/>
+    
+
+<meta name="generator" content="Hexo 5.0.2"><link rel="alternate" href="/angry-chaired-blog/atom.xml" title="Angry Chaired Blog" type="application/atom+xml">
+</head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/angry-chaired-blog/">Angry Chaired Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/about">
+                            
+                                About
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a target="_blank" rel="noopener" href="https://angrychaired.surge.sh">
+                            
+                                <i class="fa fa-user fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a target="_blank" rel="noopener" href="https://github.com/ikaem/">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a href="/angry-chaired-blog/atom.xml">
+                            
+                                <i class="fa fa-rss fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('national-cancer-institute-701-FJcjLAQ-unsplash.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Gatsby & MDX: Additional Things Learned</h1>
+
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            30/08/2020
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/angry-chaired-blog/categories/gatsby-mdx/">gatsby & mdx</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <!-- Step Content Start -->
+
+<h4 id="Part-4-of-4-in-Gatsby-amp-MDX"><a href="#Part-4-of-4-in-Gatsby-amp-MDX" class="headerlink" title="Part 4 of 4 in Gatsby &amp; MDX"></a>Part 4 of 4 in Gatsby &amp; MDX</h4><p>As I was working on the website, I bumped into interesting things that either didn’t have direct connection to MDX, or would make too short of a post. I decided to write about all of them in once place, as I felt they provided some value to me.</p>
+<a id="more"></a>
+
+<h4 id="See-Project-Information"><a href="#See-Project-Information" class="headerlink" title="See Project Information"></a>See <a href="#Project-Information">Project Information</a></h4><h2 id="Step-4-Additional-things-learned"><a href="#Step-4-Additional-things-learned" class="headerlink" title="Step 4: Additional things learned"></a>Step 4: Additional things learned</h2><p>Note that these will be brief, and might seem out of context.</p>
+<p>Here is what we will go over:</p>
+<ol>
+<li>gatsby-plugin-ts</li>
+<li>gatsby-remark-images with MDX</li>
+<li>Declaring media TS modules</li>
+<li>Passing generic types to Styled Components</li>
+<li>Global style with gatsby-browser</li>
+<li>Custom hook for siteMetadata</li>
+<li>multipart/form-data format for sending forms</li>
+</ol>
+<h3 id="gatsby-plugin-ts"><a href="#gatsby-plugin-ts" class="headerlink" title="gatsby-plugin-ts"></a>gatsby-plugin-ts</h3><p>We start with the <strong>gatsby-plugin-ts</strong>. As I already mentioned, the plugin provides support for type checking inside Gatsby project. Also, it has a cool feature where it automatically generates types for GQL queries, both page and static ones.</p>
+<p>It requires installation of typescript compiler, so we install all together with:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i typescript gatsby-plugin-ts</span><br></pre></td></tr></table></figure>
+
+<p>Of course, we need to add it to the plugin array in <strong>gatsby-config.js</strong></p>
+<figure class="highlight js"><figcaption><span>gatsby-config.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ...</span></span><br><span class="line">  plugins: [</span><br><span class="line">    &#123;</span><br><span class="line">      resolve: <span class="string">&quot;gatsby-plugin-ts&quot;</span>,</span><br><span class="line">      options: &#123;</span><br><span class="line">        typeCheck: process.env.NODE_ENV !== <span class="string">&quot;production&quot;</span>,</span><br><span class="line">        fileName: <span class="string">&quot;types/graphql-types.ts&quot;</span></span><br><span class="line">      &#125;,</span><br><span class="line">    &#125;,</span><br><span class="line">  ],</span><br><span class="line"><span class="comment">// ...</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>In this particular configuration, we are disabling type checking in production mode. We are also specifing that the automatically generated GQL types are stored in the <strong>types</strong> folder in the root of the project.<br>According to the plugin <a target="_blank" rel="noopener" href="https://www.gatsbyjs.com/plugins/gatsby-plugin-ts/">documentation</a>, the shouldn’t be placed in the <strong>src</strong> folder as that would cause infinite loop.</p>
+<p>Finally, we should also create a <strong>tsconfig.json</strong> file ourselves:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tsc --init</span><br></pre></td></tr></table></figure>
+
+<p>And we should configure it to look like this:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;compilerOptions&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;target&quot;</span>: <span class="string">&quot;ES2018&quot;</span>,    <span class="comment">/* or at least ES2015 */</span></span><br><span class="line">    <span class="string">&quot;module&quot;</span>: <span class="string">&quot;ESNext&quot;</span>,    <span class="comment">/* or at least ES2015 */</span></span><br><span class="line">    <span class="string">&quot;lib&quot;</span>: [<span class="string">&quot;dom&quot;</span>],             <span class="comment">/* &lt;-- required! */</span></span><br><span class="line">    <span class="string">&quot;jsx&quot;</span>: <span class="string">&quot;preserve&quot;</span>,          <span class="comment">/* &lt;-- required! */</span></span><br><span class="line">    <span class="string">&quot;moduleResolution&quot;</span>: <span class="string">&quot;node&quot;</span>, <span class="comment">/* &lt;-- required! */</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">/* for mixed ts/js codebase */</span></span><br><span class="line">    <span class="string">&quot;allowJS&quot;</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="string">&quot;outDir&quot;</span>: <span class="string">&quot;./build&quot;</span>    <span class="comment">/* this won&#x27;t be used by ts-loader */</span></span><br><span class="line">    <span class="comment">/* other options... */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>That’s it. It worked.<br>I did get a continuous warning saying that GQL types for certain pointers couldn0t be found. According to the <a target="_blank" rel="noopener" href="https://github.com/d4rekanguok/gatsby-typescript">plugin’s Github page</a>, it has to do with Gatsby moving folders of plugins’ fragments. They do provide a solution, but I couldn’t get it to work.</p>
+<p>More annoying were a seemingly big effect the types generation had on hot reloading times, as well as unfamiliar types it used for GQL queried data. This has to do with me, of course.</p>
+<h3 id="gatsby-remark-images-with-MDX"><a href="#gatsby-remark-images-with-MDX" class="headerlink" title="gatsby-remark-images with MDX"></a>gatsby-remark-images with MDX</h3><p>I already used this plugin in the previous Gatsby project, when I needed to render images inserted into Markdown documents via Markdown syntax.<br>The plugin’s use is almost the same here, except that after its installation we pass it to plugin arrays of <strong>gatsby-plugin-mdx</strong> instead of <strong>gatsby-transformer-remark</strong>.</p>
+<p>Note that we pass it to two plugin arrays inside the <strong>gatsby-plugin-mdx</strong> configuration object.</p>
+<figure class="highlight js"><figcaption><span>gatsby-config.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ...</span></span><br><span class="line">&#123;</span><br><span class="line">    resolve: <span class="string">&quot;gatsby-plugin-mdx&quot;</span>,</span><br><span class="line">        options: &#123;</span><br><span class="line">        extensions: [<span class="string">&quot;.mdx&quot;</span>, <span class="string">&quot;.md&quot;</span>],</span><br><span class="line">        defaultLayouts: &#123;</span><br><span class="line">            <span class="keyword">default</span>: path.resolve(<span class="string">&quot;./src/templates/next.template.tsx&quot;</span>),</span><br><span class="line">        &#125;,</span><br><span class="line">        gatsbyRemarkPlugins: [</span><br><span class="line">            &#123;</span><br><span class="line">            resolve: <span class="string">&quot;gatsby-remark-images&quot;</span>,</span><br><span class="line">            options: &#123;</span><br><span class="line">                maxWidth: <span class="number">566</span>,</span><br><span class="line">            &#125;,</span><br><span class="line">            &#125;,</span><br><span class="line">        ],</span><br><span class="line">        plugins: [</span><br><span class="line">            &#123;</span><br><span class="line">                resolve: <span class="string">&quot;gatsby-remark-images&quot;</span>,</span><br><span class="line">                options: &#123;</span><br><span class="line">                    maxWidth: <span class="number">566</span>,</span><br><span class="line">                &#125;,</span><br><span class="line">            &#125;,</span><br><span class="line">        ],</span><br><span class="line">    &#125;,</span><br><span class="line">&#125;,</span><br><span class="line"><span class="comment">// ...</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Declaring-media-TS-modules"><a href="#Declaring-media-TS-modules" class="headerlink" title="Declaring media TS modules"></a>Declaring media TS modules</h3><p>I wanted to import an image that will be used as a background for my website.</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> backgroundImage <span class="keyword">from</span> <span class="string">&quot;../data/images/repeating-chevrons-background.svg&quot;</span>;</span><br></pre></td></tr></table></figure>
+
+<p>When I did it, I was warned that the import’s module of corresponding type declarations couldn’t be found.<br>Googling helped, to find, duh, that I only had to declare the module somewhere in the project.</p>
+<figure class="highlight ts"><figcaption><span>media-typings.d.ts</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">declare</span> <span class="keyword">module</span> &quot;*.svg&quot;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Passing-generic-types-to-Styled-Components"><a href="#Passing-generic-types-to-Styled-Components" class="headerlink" title="Passing generic types to Styled Components"></a>Passing generic types to Styled Components</h3><p>Similar duh to the one above: I wanted to pass props to a styled component. I know that I could type the prop inside the actual component:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ...</span></span><br><span class="line">&gt; p &#123;</span><br><span class="line">    background-color: $&#123;<span class="function">(<span class="params">props: &#123; isMessageSuccess: boolean &#125;</span>) =&gt;</span> (props.isMessageSuccess ? <span class="string">&quot;#3bbb7e&quot;</span> : <span class="string">&quot;var(--red)&quot;</span>)&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>But, we can do generic types on the actual styled component, by assigning it to the actual element we are styling:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> MessageFormStyled =</span><br><span class="line">  styled.form &lt;</span><br><span class="line">  &#123; <span class="attr">isMessageSuccess</span>: boolean &#125; &gt;</span><br><span class="line">  <span class="string">`</span></span><br><span class="line"><span class="string">`</span>;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Global-style-with-gatsby-browser"><a href="#Global-style-with-gatsby-browser" class="headerlink" title="Global style with gatsby-browser"></a>Global style with gatsby-browser</h3><p>I wanted to import fonts from Google Fonts, but couldn’t be bothered to install another plugin.<br>It turned out I didn’t have to. Only thing I had to do was create a css stylesheet in the project, and import fonts there, and then import that stylsheet into <strong>gatsby-browser.js</strong> file in the root of the project.</p>
+<figure class="highlight js"><figcaption><span>gatsby-browser.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">&quot;./src/styles/global.css&quot;</span>;</span><br></pre></td></tr></table></figure>
+
+<p>From what I understand, this will insert the stylesheet into the document once it is rendered in the browser.<br>It also <a target="_blank" rel="noopener" href="https://www.narative.co/articles/understanding-the-gatsby-lifecycle/">turned out</a> that <strong>gatsby-browser</strong> is one of the Gatby’s API files, and is used to manage the website once it is rendered in the browser.</p>
+<h3 id="Custom-hook-for-siteMetadata"><a href="#Custom-hook-for-siteMetadata" class="headerlink" title="Custom hook for siteMetadata"></a>Custom hook for siteMetadata</h3><p>One other small, but helpful thing that never crossed my mind, and it should have, is to create a custom hook for fetching siteMetadata (or anyhing else, really).</p>
+<p>This one is thanks to Scott Pence <a target="_blank" rel="noopener" href="https://scottspence.com/2019/10/31/build-an-mdx-blog/">once again</a>, and it is very simple. We just create and export a function that queries siteMetadata by way of <strong>useStatic</strong> query hook.<br>The function returns metadata properties that we actually need.</p>
+<figure class="highlight ts"><figcaption><span>use-site-metadata.ts</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; graphql, useStaticQuery &#125; <span class="keyword">from</span> <span class="string">&quot;gatsby&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> &#123; SiteMetadataQuery &#125; <span class="keyword">from</span> <span class="string">&quot;../../custom-typings/graphql-typings&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> useSiteMetadata = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> data: SiteMetadataQuery = useStaticQuery(</span><br><span class="line">    graphql<span class="string">`</span></span><br><span class="line"><span class="string">      query SiteMetadataQuery &#123;</span></span><br><span class="line"><span class="string">        site &#123;</span></span><br><span class="line"><span class="string">          siteMetadata &#123;</span></span><br><span class="line"><span class="string">            title</span></span><br><span class="line"><span class="string">            description</span></span><br><span class="line"><span class="string">            author</span></span><br><span class="line"><span class="string">          &#125;</span></span><br><span class="line"><span class="string">        &#125;</span></span><br><span class="line"><span class="string">      &#125;</span></span><br><span class="line"><span class="string">    `</span></span><br><span class="line">  );</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> data.site.siteMetadata;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> useSiteMetadata;</span><br></pre></td></tr></table></figure>
+
+<h3 id="multipart-form-data-format-for-sending-forms"><a href="#multipart-form-data-format-for-sending-forms" class="headerlink" title="multipart/form-data format for sending forms"></a>multipart/form-data format for sending forms</h3><p>Finally, I discovered that form data is sent in <strong>multipart/form-data</strong> format. </p>
+<p>Same as in previous <a href="/angry-chaired-blog/2020/gatsby-web-implement-messaging-feature/" title="‘series’ } with Gatsby, I used &lt;strong&gt;getform.io&lt;&#x2F;strong&gt; to implement messaging on the website.&lt;&#x2F;p&gt; &lt;p&gt;Unlike the first solution where &lt;strong&gt;axios&lt;&#x2F;strong&gt; was used to send data to &lt;strong&gt;geform.io&lt;&#x2F;strong&gt;, I wanted to use regular &lt;strong&gt;fetch&lt;&#x2F;strong&gt; to do so. I thought that form data was to be sent as a json string, but no. It was to be sent as a regular &lt;strong&gt;FormData&lt;&#x2F;strong&gt; object, which was in &lt;strong&gt;multipart&#x2F;form-data&lt;&#x2F;strong&gt; format by default. Boom&lt;&#x2F;p&gt; &lt;figure class&#x3D;highlight js&gt;&lt;table&gt;&lt;tr&gt;&lt;td class&#x3D;gutter&gt;&lt;pre&gt;&lt;span class&#x3D;line&gt;1&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;line&gt;2&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;line&gt;3&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;line&gt;4&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;line&gt;5&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;line&gt;6&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;line&gt;7&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;line&gt;8&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;line&gt;9&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;line&gt;10&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;line&gt;11&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;line&gt;12&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;line&gt;13&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;line&gt;14&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;line&gt;15&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;line&gt;16&lt;&#x2F;span&gt;&lt;br&gt;&lt;&#x2F;pre&gt;&lt;&#x2F;td&gt;&lt;td class&#x3D;code&gt;&lt;pre&gt;&lt;span class&#x3D;line&gt;&lt;span class&#x3D;comment&gt;&#x2F;&#x2F; ...&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;line&gt;&lt;span class&#x3D;keyword&gt;const&lt;&#x2F;span&gt; form &#x3D; e.target &lt;span class&#x3D;keyword&gt;as&lt;&#x2F;span&gt; HTMLFormElement&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;line&gt;&lt;span class&#x3D;keyword&gt;const&lt;&#x2F;span&gt; formData &#x3D; &lt;span class&#x3D;keyword&gt;new&lt;&#x2F;span&gt; FormData(form)&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;line&gt;&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;line&gt;&lt;span class&#x3D;keyword&gt;try&lt;&#x2F;span&gt; &amp;#123;&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;line&gt; &lt;span class&#x3D;keyword&gt;const&lt;&#x2F;span&gt; response &#x3D; (&lt;span class&#x3D;keyword&gt;await&lt;&#x2F;span&gt; fetch(&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;line&gt; process.env.GATSBY_MESSAGING_ENDPOINT &lt;span class&#x3D;keyword&gt;as&lt;&#x2F;span&gt; string,&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;line&gt; &amp;#123;&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;line&gt; method: &lt;span class&#x3D;string&gt;&quot;post&quot;&lt;&#x2F;span&gt;,&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;line&gt; body: formData,&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;line&gt; &amp;#125;&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;line&gt; )) &lt;span class&#x3D;keyword&gt;as&lt;&#x2F;span&gt; &amp;#123;&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;line&gt; ok: boolean&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;line&gt; redirected: boolean&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;line&gt; status: number&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;line&gt; &amp;#125;&lt;&#x2F;span&gt;&lt;br&gt;&lt;&#x2F;pre&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;table&gt;&lt;&#x2F;figure&gt; &lt;p&gt;There, that’s it. The website is done. &lt;&#x2F;p&gt; &lt;p&gt;Actually, one last thing left is how furious I got with Gatsby at one point. When I first started the project, React wasn’t installed for some reason, so I had to install all dependencies with &lt;strong&gt;npm install&lt;&#x2F;strong&gt;. From that point the whole app has been laggy, taking a long time to start and restart development server, and to build static files.&lt;br&gt;I felt that the installation of the typescript plugin made things worse, too.&lt;br&gt;And then, when I almost finished the whole thing, built the static site, and wanted to serve it locally, I couldn’t render the website in the browser. I tried fixing it, going over my queries and components, but no success.&lt;br&gt;I almost quit here, and went to rebuild the site with Next.js. But, finally I decided to build the site again in Gatsby. I dropped the the TS plugin, and went with the default TS support, and finished the site again. Still, the website wouldn’t render in the browser.&lt;&#x2F;p&gt; &lt;p&gt;It turned out that the problem was a service worker installed by the offline plugin in the previous Gatsby project. Argh. &lt;&#x2F;p&gt; &lt;p&gt;Anyway, the site is here now. It looks good.&lt;&#x2F;p&gt; &lt;p&gt;It turned out that the app wasn’t a problem at all. The issue was &lt;&#x2F;p&gt; &lt;!-- End Step Content --&gt; &lt;!-- Project Information --&gt; &lt;h2 id&#x3D;Project-Information&gt;&lt;a href&#x3D;#Project-Information class&#x3D;headerlink title&#x3D;Project Information&gt;&lt;&#x2F;a&gt;Project Information&lt;&#x2F;h2&gt;&lt;h3 id&#x3D;Available-at&gt;&lt;a href&#x3D;#Available-at class&#x3D;headerlink title&#x3D;Available at&gt;&lt;&#x2F;a&gt;Available at&lt;&#x2F;h3&gt;&lt;ul&gt; &lt;li&gt;&lt;a href&#x3D;https:&#x2F;&#x2F;github.com&#x2F;ikaem&#x2F;angry-chaired-v2&#x2F;&gt;Github respository&lt;&#x2F;a&gt;&lt;&#x2F;li&gt; &lt;li&gt;&lt;a href&#x3D;https:&#x2F;&#x2F;angrychaired.surge.sh&#x2F;&gt;Live website&lt;&#x2F;a&gt;&lt;&#x2F;li&gt; &lt;&#x2F;ul&gt; &lt;h3 id&#x3D;Goals&gt;&lt;a href&#x3D;#Goals class&#x3D;headerlink title&#x3D;Goals&gt;&lt;&#x2F;a&gt;Goals&lt;&#x2F;h3&gt;&lt;ol&gt; &lt;li&gt;Use MDX to provide content for programmatically created pages&lt;&#x2F;li&gt; &lt;li&gt;Get better TypeScript support in Gatsby project&lt;&#x2F;li&gt; &lt;&#x2F;ol&gt; &lt;h3 id&#x3D;Steps&gt;&lt;a href&#x3D;#Steps class&#x3D;headerlink title&#x3D;Steps&gt;&lt;&#x2F;a&gt;Steps&lt;&#x2F;h3&gt;&lt;ol&gt; &lt;li&gt;Setup MDX and render MDX files as pages&lt;&#x2F;li&gt; &lt;li&gt;Programmatically create pages with MDX&lt;&#x2F;li&gt; &lt;li&gt;Create pages with default layouts and gatsby-plugin-page-creator&lt;&#x2F;li&gt; &lt;li&gt;&lt;strong&gt;Additional things learned&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt; &lt;&#x2F;ol&gt; &lt;h3 id&#x3D;Tech-and-Tools&gt;&lt;a href&#x3D;#Tech-and-Tools class&#x3D;headerlink title&#x3D;Tech and Tools&gt;&lt;&#x2F;a&gt;Tech and Tools&lt;&#x2F;h3&gt;&lt;ol&gt; &lt;li&gt;Gatsby&lt;&#x2F;li&gt; &lt;li&gt;TypeScript&lt;&#x2F;li&gt; &lt;li&gt;MDX&lt;&#x2F;li&gt; &lt;&#x2F;ol&gt; &lt;h3 id&#x3D;Experience-with-Tech-amp-Tools&gt;&lt;a href&#x3D;#Experience-with-Tech-amp-Tools class&#x3D;headerlink title&#x3D;Experience with Tech &amp; Tools&gt;&lt;&#x2F;a&gt;Experience with Tech &amp; Tools&lt;&#x2F;h3&gt;&lt;p&gt;I have previously created a Gatsby website, and wrote about it on this blog. I have also used TypeScript before, including the mentioned project. I haven’t used MDX, but from what I see, it is basically a way to write React components in Markdown files.&lt;&#x2F;p&gt; &lt;h2 id&#x3D;DISCLAIMER&gt;&lt;a href&#x3D;#DISCLAIMER class&#x3D;headerlink title&#x3D;DISCLAIMER&gt;&lt;&#x2F;a&gt;DISCLAIMER&lt;&#x2F;h2&gt;&lt;p&gt;Don’t take any of this seriously and as a matter-of-fact. These are my notes. It might look like I am trying to teach something to someone. I am not.&lt;&#x2F;p&gt;">‘series’ } with Gatsby, I used &lt;strong&gt;getform.io&lt;&#x2F;strong&gt; to implement messaging on the website.&lt;&#x2F;p&gt; &lt;p&gt;Unlike the first solution where &lt;strong&gt;axios&lt;&#x2F;strong&gt; was used to send data to &lt;strong&gt;geform.io&lt;&#x2F;strong&gt;, I wanted to use regular &lt;strong&gt;fetch&lt;&#x2F;strong&gt; to do so. I thought that form data was to be sent as a json string, but no. It was to be sent as a regular &lt;strong&gt;FormData&lt;&#x2F;strong&gt; object, which was in &lt;strong&gt;multipart&#x2F;form-data&lt;&#x2F;strong&gt; format by default. Boom&lt;&#x2F;p&gt; &lt;figure class&#x3D;highlight js&gt;&lt;table&gt;&lt;tr&gt;&lt;td class&#x3D;gutter&gt;&lt;pre&gt;&lt;span class&#x3D;line&gt;1&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;line&gt;2&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;line&gt;3&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;line&gt;4&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;line&gt;5&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;line&gt;6&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;line&gt;7&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;line&gt;8&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;line&gt;9&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;line&gt;10&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;line&gt;11&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;line&gt;12&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;line&gt;13&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;line&gt;14&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;line&gt;15&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;line&gt;16&lt;&#x2F;span&gt;&lt;br&gt;&lt;&#x2F;pre&gt;&lt;&#x2F;td&gt;&lt;td class&#x3D;code&gt;&lt;pre&gt;&lt;span class&#x3D;line&gt;&lt;span class&#x3D;comment&gt;&#x2F;&#x2F; ...&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;line&gt;&lt;span class&#x3D;keyword&gt;const&lt;&#x2F;span&gt; form &#x3D; e.target &lt;span class&#x3D;keyword&gt;as&lt;&#x2F;span&gt; HTMLFormElement&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;line&gt;&lt;span class&#x3D;keyword&gt;const&lt;&#x2F;span&gt; formData &#x3D; &lt;span class&#x3D;keyword&gt;new&lt;&#x2F;span&gt; FormData(form)&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;line&gt;&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;line&gt;&lt;span class&#x3D;keyword&gt;try&lt;&#x2F;span&gt; &amp;#123;&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;line&gt; &lt;span class&#x3D;keyword&gt;const&lt;&#x2F;span&gt; response &#x3D; (&lt;span class&#x3D;keyword&gt;await&lt;&#x2F;span&gt; fetch(&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;line&gt; process.env.GATSBY_MESSAGING_ENDPOINT &lt;span class&#x3D;keyword&gt;as&lt;&#x2F;span&gt; string,&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;line&gt; &amp;#123;&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;line&gt; method: &lt;span class&#x3D;string&gt;&quot;post&quot;&lt;&#x2F;span&gt;,&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;line&gt; body: formData,&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;line&gt; &amp;#125;&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;line&gt; )) &lt;span class&#x3D;keyword&gt;as&lt;&#x2F;span&gt; &amp;#123;&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;line&gt; ok: boolean&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;line&gt; redirected: boolean&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;line&gt; status: number&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;line&gt; &amp;#125;&lt;&#x2F;span&gt;&lt;br&gt;&lt;&#x2F;pre&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;table&gt;&lt;&#x2F;figure&gt; &lt;p&gt;There, that’s it. The website is done. &lt;&#x2F;p&gt; &lt;p&gt;Actually, one last thing left is how furious I got with Gatsby at one point. When I first started the project, React wasn’t installed for some reason, so I had to install all dependencies with &lt;strong&gt;npm install&lt;&#x2F;strong&gt;. From that point the whole app has been laggy, taking a long time to start and restart development server, and to build static files.&lt;br&gt;I felt that the installation of the typescript plugin made things worse, too.&lt;br&gt;And then, when I almost finished the whole thing, built the static site, and wanted to serve it locally, I couldn’t render the website in the browser. I tried fixing it, going over my queries and components, but no success.&lt;br&gt;I almost quit here, and went to rebuild the site with Next.js. But, finally I decided to build the site again in Gatsby. I dropped the the TS plugin, and went with the default TS support, and finished the site again. Still, the website wouldn’t render in the browser.&lt;&#x2F;p&gt; &lt;p&gt;It turned out that the problem was a service worker installed by the offline plugin in the previous Gatsby project. Argh. &lt;&#x2F;p&gt; &lt;p&gt;Anyway, the site is here now. It looks good.&lt;&#x2F;p&gt; &lt;p&gt;It turned out that the app wasn’t a problem at all. The issue was &lt;&#x2F;p&gt; &lt;!-- End Step Content --&gt; &lt;!-- Project Information --&gt; &lt;h2 id&#x3D;Project-Information&gt;&lt;a href&#x3D;#Project-Information class&#x3D;headerlink title&#x3D;Project Information&gt;&lt;&#x2F;a&gt;Project Information&lt;&#x2F;h2&gt;&lt;h3 id&#x3D;Available-at&gt;&lt;a href&#x3D;#Available-at class&#x3D;headerlink title&#x3D;Available at&gt;&lt;&#x2F;a&gt;Available at&lt;&#x2F;h3&gt;&lt;ul&gt; &lt;li&gt;&lt;a href&#x3D;https:&#x2F;&#x2F;github.com&#x2F;ikaem&#x2F;angry-chaired-v2&#x2F;&gt;Github respository&lt;&#x2F;a&gt;&lt;&#x2F;li&gt; &lt;li&gt;&lt;a href&#x3D;https:&#x2F;&#x2F;angrychaired.surge.sh&#x2F;&gt;Live website&lt;&#x2F;a&gt;&lt;&#x2F;li&gt; &lt;&#x2F;ul&gt; &lt;h3 id&#x3D;Goals&gt;&lt;a href&#x3D;#Goals class&#x3D;headerlink title&#x3D;Goals&gt;&lt;&#x2F;a&gt;Goals&lt;&#x2F;h3&gt;&lt;ol&gt; &lt;li&gt;Use MDX to provide content for programmatically created pages&lt;&#x2F;li&gt; &lt;li&gt;Get better TypeScript support in Gatsby project&lt;&#x2F;li&gt; &lt;&#x2F;ol&gt; &lt;h3 id&#x3D;Steps&gt;&lt;a href&#x3D;#Steps class&#x3D;headerlink title&#x3D;Steps&gt;&lt;&#x2F;a&gt;Steps&lt;&#x2F;h3&gt;&lt;ol&gt; &lt;li&gt;Setup MDX and render MDX files as pages&lt;&#x2F;li&gt; &lt;li&gt;Programmatically create pages with MDX&lt;&#x2F;li&gt; &lt;li&gt;Create pages with default layouts and gatsby-plugin-page-creator&lt;&#x2F;li&gt; &lt;li&gt;&lt;strong&gt;Additional things learned&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt; &lt;&#x2F;ol&gt; &lt;h3 id&#x3D;Tech-and-Tools&gt;&lt;a href&#x3D;#Tech-and-Tools class&#x3D;headerlink title&#x3D;Tech and Tools&gt;&lt;&#x2F;a&gt;Tech and Tools&lt;&#x2F;h3&gt;&lt;ol&gt; &lt;li&gt;Gatsby&lt;&#x2F;li&gt; &lt;li&gt;TypeScript&lt;&#x2F;li&gt; &lt;li&gt;MDX&lt;&#x2F;li&gt; &lt;&#x2F;ol&gt; &lt;h3 id&#x3D;Experience-with-Tech-amp-Tools&gt;&lt;a href&#x3D;#Experience-with-Tech-amp-Tools class&#x3D;headerlink title&#x3D;Experience with Tech &amp; Tools&gt;&lt;&#x2F;a&gt;Experience with Tech &amp; Tools&lt;&#x2F;h3&gt;&lt;p&gt;I have previously created a Gatsby website, and wrote about it on this blog. I have also used TypeScript before, including the mentioned project. I haven’t used MDX, but from what I see, it is basically a way to write React components in Markdown files.&lt;&#x2F;p&gt; &lt;h2 id&#x3D;DISCLAIMER&gt;&lt;a href&#x3D;#DISCLAIMER class&#x3D;headerlink title&#x3D;DISCLAIMER&gt;&lt;&#x2F;a&gt;DISCLAIMER&lt;&#x2F;h2&gt;&lt;p&gt;Don’t take any of this seriously and as a matter-of-fact. These are my notes. It might look like I am trying to teach something to someone. I am not.&lt;&#x2F;p&gt;</a>
+
+                
+
+
+                <!-- Cover image credit -->
+                
+                    <p class="image-credit-link">
+                        Cover image by <strong>
+                            <a target="_blank" rel="noopener" href="https://unsplash.com/@nci?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
+                                National Cancer Institute
+                            </a>
+                        </strong>
+                    </p>
+
+                
+
+  
+
+            </div>
+            
+            <!-- Custom placed tags -->
+            <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                
+                    
+
+
+<a href="/angry-chaired-blog/tags/gatsby/">#gatsby</a> <a href="/angry-chaired-blog/tags/mdx/">#mdx</a> <a href="/angry-chaired-blog/tags/typescript/">#typescript</a> <a href="/angry-chaired-blog/tags/styled-components/">#styled-components</a> <a href="/angry-chaired-blog/tags/javascript/">#javascript</a>
+
+
+                
+            </div>
+            <!--  -->
+
+
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+
+            <!-- Hyvor comments -->
+
+            <!-- End of Hyvor comments -->
+        </div>
+    </div>
+</article>
+
+
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2020 kaem<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

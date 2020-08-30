@@ -6,7 +6,7 @@
   <link href="https://ikaem.github.io/angry-chaired-blog/atom.xml" rel="self"/>
   
   <link href="https://ikaem.github.io/angry-chaired-blog/"/>
-  <updated>2020-08-30T14:46:16.811Z</updated>
+  <updated>2020-08-30T18:59:00.759Z</updated>
   <id>https://ikaem.github.io/angry-chaired-blog/</id>
   
   <author>
@@ -17,16 +17,45 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Gatsby &amp; MDX: Create Pages with Default Layouts</title>
-    <link href="https://ikaem.github.io/angry-chaired-blog/2020/gatsby-mdx-create-pages-with-default-layouts/"/>
-    <id>https://ikaem.github.io/angry-chaired-blog/2020/gatsby-mdx-create-pages-with-default-layouts/</id>
-    <published>2020-08-30T12:24:49.000Z</published>
-    <updated>2020-08-30T14:46:16.811Z</updated>
+    <title>Gatsby &amp; MDX: Additional Things Learned</title>
+    <link href="https://ikaem.github.io/angry-chaired-blog/2020/gatsby-mdx-additional-things-learned/"/>
+    <id>https://ikaem.github.io/angry-chaired-blog/2020/gatsby-mdx-additional-things-learned/</id>
+    <published>2020-08-30T14:58:27.000Z</published>
+    <updated>2020-08-30T18:59:00.759Z</updated>
     
     
     <summary type="html">&lt;!-- Step Content Start --&gt;
 
-&lt;h4 id=&quot;Part-3-of-6-in-Gatsby-amp-MDX&quot;&gt;&lt;a href=&quot;#Part-3-of-6-in-Gatsby-amp-MDX&quot; class=&quot;headerlink&quot; title=&quot;Part 3 of 6 in Gatsby &amp;amp; MDX&quot;&gt;&lt;/a&gt;Part 3 of 6 in Gatsby &amp;amp; MDX&lt;/h4&gt;&lt;p&gt;In the previous post we programmatically created pages from MDX documents. In this post we will create pages by specifying a folder whose MDX documents will be turned to pages automatically, and then specifying a default layout which will be used for every page.&lt;/p&gt;</summary>
+&lt;h4 id=&quot;Part-4-of-4-in-Gatsby-amp-MDX&quot;&gt;&lt;a href=&quot;#Part-4-of-4-in-Gatsby-amp-MDX&quot; class=&quot;headerlink&quot; title=&quot;Part 4 of 4 in Gatsby &amp;amp; MDX&quot;&gt;&lt;/a&gt;Part 4 of 4 in Gatsby &amp;amp; MDX&lt;/h4&gt;&lt;p&gt;As I was working on the website, I bumped into interesting things that either didn’t have direct connection to MDX, or would make too short of a post. I decided to write about all of them in once place, as I felt they provided some value to me.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="gatsby &amp; mdx" scheme="https://ikaem.github.io/angry-chaired-blog/categories/gatsby-mdx/"/>
+    
+    
+    <category term="gatsby" scheme="https://ikaem.github.io/angry-chaired-blog/tags/gatsby/"/>
+    
+    <category term="mdx" scheme="https://ikaem.github.io/angry-chaired-blog/tags/mdx/"/>
+    
+    <category term="typescript" scheme="https://ikaem.github.io/angry-chaired-blog/tags/typescript/"/>
+    
+    <category term="styled-components" scheme="https://ikaem.github.io/angry-chaired-blog/tags/styled-components/"/>
+    
+    <category term="javascript" scheme="https://ikaem.github.io/angry-chaired-blog/tags/javascript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Gatsby &amp; MDX: Create Pages with Default Layouts</title>
+    <link href="https://ikaem.github.io/angry-chaired-blog/2020/gatsby-mdx-create-pages-with-default-layouts/"/>
+    <id>https://ikaem.github.io/angry-chaired-blog/2020/gatsby-mdx-create-pages-with-default-layouts/</id>
+    <published>2020-08-30T12:24:49.000Z</published>
+    <updated>2020-08-30T18:57:58.514Z</updated>
+    
+    
+    <summary type="html">&lt;!-- Step Content Start --&gt;
+
+&lt;h4 id=&quot;Part-3-of-4-in-Gatsby-amp-MDX&quot;&gt;&lt;a href=&quot;#Part-3-of-4-in-Gatsby-amp-MDX&quot; class=&quot;headerlink&quot; title=&quot;Part 3 of 4 in Gatsby &amp;amp; MDX&quot;&gt;&lt;/a&gt;Part 3 of 4 in Gatsby &amp;amp; MDX&lt;/h4&gt;&lt;p&gt;In the previous post we programmatically created pages from MDX documents. In this post we will create pages by specifying a folder whose MDX documents will be turned to pages automatically, and then specifying a default layout which will be used for every page.&lt;/p&gt;</summary>
     
     
     
@@ -44,12 +73,12 @@
     <link href="https://ikaem.github.io/angry-chaired-blog/2020/gatsby-mdx-programmatically-create-pages/"/>
     <id>https://ikaem.github.io/angry-chaired-blog/2020/gatsby-mdx-programmatically-create-pages/</id>
     <published>2020-08-30T09:40:45.000Z</published>
-    <updated>2020-08-30T12:24:55.492Z</updated>
+    <updated>2020-08-30T18:58:18.457Z</updated>
     
     
     <summary type="html">&lt;!-- Step Content Start --&gt;
 
-&lt;h4 id=&quot;Part-2-of-6-in-Gatsby-amp-MDX&quot;&gt;&lt;a href=&quot;#Part-2-of-6-in-Gatsby-amp-MDX&quot; class=&quot;headerlink&quot; title=&quot;Part 2 of 6 in Gatsby &amp;amp; MDX&quot;&gt;&lt;/a&gt;Part 2 of 6 in Gatsby &amp;amp; MDX&lt;/h4&gt;&lt;p&gt;In the previous post we installed a plugin that allowed use to create pages by just placing MDX documents in the Gatsby’s &lt;strong&gt;pages&lt;/strong&gt; folder. While this is cool, the plugin allows us to also insert MDX content into any React component. Here, we will see how to do so with programmatically created pages.&lt;/p&gt;</summary>
+&lt;h4 id=&quot;Part-2-of-4-in-Gatsby-amp-MDX&quot;&gt;&lt;a href=&quot;#Part-2-of-4-in-Gatsby-amp-MDX&quot; class=&quot;headerlink&quot; title=&quot;Part 2 of 4 in Gatsby &amp;amp; MDX&quot;&gt;&lt;/a&gt;Part 2 of 4 in Gatsby &amp;amp; MDX&lt;/h4&gt;&lt;p&gt;In the previous post we installed a plugin that allowed use to create pages by just placing MDX documents in the Gatsby’s &lt;strong&gt;pages&lt;/strong&gt; folder. While this is cool, the plugin allows us to also insert MDX content into any React component. Here, we will see how to do so with programmatically created pages.&lt;/p&gt;</summary>
     
     
     
@@ -67,12 +96,12 @@
     <link href="https://ikaem.github.io/angry-chaired-blog/2020/gatsby-mdx-set-up-mdx/"/>
     <id>https://ikaem.github.io/angry-chaired-blog/2020/gatsby-mdx-set-up-mdx/</id>
     <published>2020-08-30T05:40:09.000Z</published>
-    <updated>2020-08-30T11:51:36.972Z</updated>
+    <updated>2020-08-30T18:58:39.141Z</updated>
     
     
     <summary type="html">&lt;!-- Step Content Start --&gt;
 
-&lt;h4 id=&quot;Part-1-of-6-in-Gatsby-amp-MDX&quot;&gt;&lt;a href=&quot;#Part-1-of-6-in-Gatsby-amp-MDX&quot; class=&quot;headerlink&quot; title=&quot;Part 1 of 6 in Gatsby &amp;amp; MDX&quot;&gt;&lt;/a&gt;Part 1 of 6 in Gatsby &amp;amp; MDX&lt;/h4&gt;&lt;p&gt;At the end the Gatsby Web project &lt;a href=&quot;/angry-chaired-blog/2020/gatsby-web-audit-optimize-deploy/&quot; title=&quot;I did previously&quot;&gt;I did previously&lt;/a&gt;, I said that I wasn’t happy how the website turned out. I felt it was done clumsily, its folder structure being all over the place, and its design ugly. I also wasn’t impressed with what Markdown turned out to be. So I figured I should return to Gatsby, and redo the page.&lt;br&gt;This is it.&lt;/p&gt;</summary>
+&lt;h4 id=&quot;Part-1-of-4-in-Gatsby-amp-MDX&quot;&gt;&lt;a href=&quot;#Part-1-of-4-in-Gatsby-amp-MDX&quot; class=&quot;headerlink&quot; title=&quot;Part 1 of 4 in Gatsby &amp;amp; MDX&quot;&gt;&lt;/a&gt;Part 1 of 4 in Gatsby &amp;amp; MDX&lt;/h4&gt;&lt;p&gt;At the end the Gatsby Web project &lt;a href=&quot;/angry-chaired-blog/2020/gatsby-web-audit-optimize-deploy/&quot; title=&quot;I did previously&quot;&gt;I did previously&lt;/a&gt;, I said that I wasn’t happy how the website turned out. I felt it was done clumsily, its folder structure being all over the place, and its design ugly. I also wasn’t impressed with what Markdown turned out to be. So I figured I should return to Gatsby, and redo the page.&lt;br&gt;This is it.&lt;/p&gt;</summary>
     
     
     
@@ -473,27 +502,6 @@
     <category term="gatsby plugins" scheme="https://ikaem.github.io/angry-chaired-blog/tags/gatsby-plugins/"/>
     
     <category term="markdowns" scheme="https://ikaem.github.io/angry-chaired-blog/tags/markdowns/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Gatsby Web: Programatically Create Pages</title>
-    <link href="https://ikaem.github.io/angry-chaired-blog/2020/gatsby-web-programatically-create-pages/"/>
-    <id>https://ikaem.github.io/angry-chaired-blog/2020/gatsby-web-programatically-create-pages/</id>
-    <published>2020-08-17T05:35:15.000Z</published>
-    <updated>2020-08-17T05:40:56.705Z</updated>
-    
-    
-    <summary type="html">&lt;!-- Step Content Start --&gt;
-
-&lt;h4 id=&quot;Part-6-of-10-in-Gatsby-Web&quot;&gt;&lt;a href=&quot;#Part-6-of-10-in-Gatsby-Web&quot; class=&quot;headerlink&quot; title=&quot;Part 6 of 10 in Gatsby Web&quot;&gt;&lt;/a&gt;Part 6 of 10 in Gatsby Web&lt;/h4&gt;&lt;p&gt;As we mentioned in the previous post, this one will be about creating new pages. We will create them programatically, based on Markdown documents that exist in our project.&lt;br&gt;We will also create a template to hold project information that we get from Markdown documents.&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="gatsby web" scheme="https://ikaem.github.io/angry-chaired-blog/categories/gatsby-web/"/>
-    
-    
-    <category term="gatsby" scheme="https://ikaem.github.io/angry-chaired-blog/tags/gatsby/"/>
     
   </entry>
   
