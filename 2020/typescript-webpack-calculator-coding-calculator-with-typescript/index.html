@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="Inexperienced and curious pokes into the sprawling world of web development "/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="kaem"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="TypeScript &amp; Webpack Calculator: Coding Calculator with TypeScript"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Inexperienced and curious pokes into the sprawling world of web development "/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Angry Chaired Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://ikaem.github.io/angry-chaired-blog/angry-chaired-blog/images/header-image.jpg"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://ikaem.github.io/angry-chaired-blog/angry-chaired-blog/images/header-image.jpg"/>
+    
+
+    <!-- Title -->
+    
+    <title>TypeScript &amp; Webpack Calculator: Coding Calculator with TypeScript - Angry Chaired Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/angry-chaired-blog/css/style.css">
+
+    
+<link rel="stylesheet" href="/angry-chaired-blog/css/custom-style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+    <link rel="icon" href="/angry-chaired-blog/images/favicon.ico"/>
+    
+
+<meta name="generator" content="Hexo 5.0.2"><link rel="alternate" href="/angry-chaired-blog/atom.xml" title="Angry Chaired Blog" type="application/atom+xml">
+</head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/angry-chaired-blog/">Angry Chaired Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/about">
+                            
+                                About
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a target="_blank" rel="noopener" href="https://angrychaired.surge.sh">
+                            
+                                <i class="fa fa-user fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a target="_blank" rel="noopener" href="https://github.com/ikaem/">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a href="/angry-chaired-blog/atom.xml">
+                            
+                                <i class="fa fa-rss fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('alan-fung-z6z-Vq4eJhc-unsplash.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>TypeScript & Webpack Calculator: Coding Calculator with TypeScript</h1>
+
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            04/09/2020
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/angry-chaired-blog/categories/ts-webpack-calculator/">ts webpack calculator</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <!-- Step Content Start -->
+
+<h4 id="Part-2-of-3-in-TypeScript-amp-Webpack-Calculator"><a href="#Part-2-of-3-in-TypeScript-amp-Webpack-Calculator" class="headerlink" title="Part 2 of 3 in TypeScript &amp; Webpack Calculator"></a>Part 2 of 3 in TypeScript &amp; Webpack Calculator</h4><p>The [original calculator](<a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=j59qQ7YWLxw">Web Development Simplified</a>) that we are copying was made with Vanilla JS. We are going to be using TypeScript. This requires us to set up and configure TypesScript. We will also use modules, which the original did not have. Why? Because we can, that’s why.</p>
+<a id="more"></a>
+
+<h4 id="See-Project-Information"><a href="#See-Project-Information" class="headerlink" title="See Project Information"></a>See <a href="#Project-Information">Project Information</a></h4><p>Main focus of this post is the calculator logic. In its final form, the code is a shameless copy of the original. Still, I will also provide examples and description of my numerous) attempts to code the same functionality, note the biggest differences, and share what I thought were particularly impressive solutions to problems in my own code.</p>
+<p>Let’s start from the beginning, however.</p>
+<h2 id="Step-2-TypeScript-setup-and-coding-the-calculator"><a href="#Step-2-TypeScript-setup-and-coding-the-calculator" class="headerlink" title="Step 2: TypeScript setup and coding the calculator"></a>Step 2: TypeScript setup and coding the calculator</h2><p>Here is what we will do:</p>
+<ol>
+<li>Set up and configure TypeScript</li>
+<li>Code the calculator</li>
+<li>Create modules</li>
+</ol>
+<h3 id="Set-up-and-configure-TypeScript"><a href="#Set-up-and-configure-TypeScript" class="headerlink" title="Set up and configure TypeScript"></a>Set up and configure TypeScript</h3><p>First things first: to work with TypeScript, we should have it installed globally on our system.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i -g typescript</span><br></pre></td></tr></table></figure>
+
+<p>Next, we want to configure the TypeScript setup for this particular project.<br>To do that, we need to create a TS configuration file in the root of the project. We do so with the command:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tsc --init</span><br></pre></td></tr></table></figure>
+
+<p>This command creates a <strong>tsconfig.json</strong> file in the project root.</p>
+<p>If you open the file, you will see lots of options, most of them commented out. It is a lengthy one, and we won’t go through all of it. Instead, we will focus only on the opetions that get this particular app running.</p>
+<p>At the top of the file, we see the <strong>target</strong> field set to <strong>es5</strong>. While this is fine, we will go ahead and change this to <strong>es6</strong>. This effectively makes TypeScript compile all .ts files to the ES6 version of JavaScript. While ES5 is supported by more browsers, it being older, we will need ES6 for modules and few methods used in the app.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;compilerOptions&quot;</span>: &#123;</span><br><span class="line">    <span class="comment">//   ...</span></span><br><span class="line">    <span class="string">&quot;target&quot;</span>: <span class="string">&quot;es6&quot;</span>,</span><br><span class="line"><span class="comment">// ...</span></span><br></pre></td></tr></table></figure>
+
+<p>Next option is <strong>module</strong>. This sets module loader for our app. Module loader is used to locate and execute dependencies of modules. Default loader here is <strong>commonjs</strong>, but we will change this to <strong>“es2015”</strong>, to use ES2015 (ES6) module loader.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;target&quot;</span>: <span class="string">&quot;es6&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>Next is <strong>sourceMap</strong>. We will have this set as <strong>true</strong>, to make sure TS map files are created for every .ts file in the project. I am very fluent in this, but what I know is that this way we will be able to see TS files in the source tab of Chrome Developer Tools, instead of having access only to compiled JS files. This is mostly used for debugging.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;sourceMap&quot;</span>: <span class="literal">true</span>,</span><br></pre></td></tr></table></figure>
+
+<p>Next is <strong>outDir</strong>. We will uncomment this, and set it to <strong>“./public”</strong>. Now, TypeScript will output compiled .ts files to the <strong>public</strong> folder, which is where we have our <strong>index.html</strong>.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;outDir&quot;</span>: <span class="string">&quot;./public&quot;</span>,</span><br></pre></td></tr></table></figure>
+
+<p>We also need to specify a folder which TypeScript will use as a source of .ts files to be compiled into JS. We do this with the <strong>rootDir</strong> option. We uncomment this and set it to <strong>“./src”</strong>, which is the path of our source folder.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;rootDir&quot;</span>: <span class="string">&quot;./src&quot;</span>,</span><br></pre></td></tr></table></figure>
+
+<p>We will also add a field to the config file, to specify that the TS compiler should not generate JS files in case it finds an error in a TS file.<br>The field we add is <strong>noEmitOnError</strong>, and we set it to <strong>true</strong>.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;noEmitOnError&quot;</span>: <span class="literal">true</span>,</span><br></pre></td></tr></table></figure>
+
+<p>Nice. With this, we have configured our TypeScript project. Let’s create an <strong>app.ts</strong> file in the <strong>src</strong> folder, and then have TS compiler watch our project.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tsc -w</span><br></pre></td></tr></table></figure>
+
+<p>This command should result in a <strong>app.js</strong> file created in the <strong>public</strong> folder, as specified in the <strong>tsconfig.json</strong> file.</p>
+<p>Last thing to do is to connect <strong>index.html</strong> with the <strong>app.js</strong> script. We will add the <strong>defer</strong> attribute to the <strong>script</strong> tag, to make sure the script runs only after the page has fully loaded:</p>
+<figure class="highlight html"><figcaption><span>index.html</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;app.js&quot;</span> <span class="attr">defer</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Code-the-calculator"><a href="#Code-the-calculator" class="headerlink" title="Code the calculator"></a>Code the calculator</h3><p>In this part we will skip selecting DOM elements, and will jump directly into coding the app.<br>The approach I take here is to describe my logic, and then show how the original solution solved a problem that my code could not.</p>
+<p>First, about the calculator.<br>The calculator can do four operations: addition, deduction, multiplication and division. It can chain operations, meaning that we can do an operation with a result of a previous operation. Obviously, it can compute a result of an operation, regardless of how long the operation chain is. It can also delete digits of a number we want to perform an operation on, and it can reset the whole thing. Finally, it can do operations with decimal numbers.<br>As for displaying values, it has its “screen” split in two parts. The main, bottom part, is used to show the current number as well as the result of an operation. The top screen is used to show a previous number together with the current operator.</p>
+<p>We will start with creating a calculator class.<br>The class I created had multiple fields on it, at one point reaching as many as six:</p>
+<ul>
+<li>this.currentValue</li>
+<li>this.previousValue</li>
+<li>this.operator</li>
+<li>this.result</li>
+<li>this.currentDisplayString</li>
+<li>this.previousDisplayString</li>
+</ul>
+<p>The idea was that I would use currentValue fields to do the math with, and the displayStrings ones for rendering displays.<br>The result, I thought, was needed to store the current result of the operation.</p>
+<p>The original code had three properties. Those were <strong>currentOperand</strong>, <strong>previousOperand</strong>, and <strong>operation</strong>. It didn’t need the strings, nor the result.</p>
+<p>Here is the original code:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Calculator</span> </span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>(previousOperandTextElement, currentOperandTextElement) &#123;</span><br><span class="line">    <span class="built_in">this</span>.previousOperandTextElement = previousOperandTextElement</span><br><span class="line">    <span class="built_in">this</span>.currentOperandTextElement = currentOperandTextElement</span><br><span class="line">    <span class="built_in">this</span>.clear()</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  clear() &#123;</span><br><span class="line">    <span class="built_in">this</span>.currentOperand = <span class="string">&#x27;&#x27;</span></span><br><span class="line">    <span class="built_in">this</span>.previousOperand = <span class="string">&#x27;&#x27;</span></span><br><span class="line">    <span class="built_in">this</span>.operation = <span class="literal">undefined</span></span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+
+<p>This was a bit of a revelation for me.<br>All along I tried to separate calculation from the view, but with only one field for each value, the original didn’t care about that.<br>Big surprise was that there was no <strong>result</strong> variable. In my approach, I was so keen on the <strong>result</strong> property, that for a long time I didn’t even have the <strong>previouValue</strong> property. I used <strong>result</strong> instead. I still think it could be done, because we always integrate current value into the result, but my mind got all tangled up in combinations.</p>
+<p>Moving on to the class methods.</p>
+<p>I originally imagined six different methods:</p>
+<ul>
+<li>updateCurrentNumber</li>
+<li>setOperation</li>
+<li>doCalculation</li>
+<li>printResult</li>
+<li>updateCurrentScreen</li>
+<li>updatePreviousScreen</li>
+</ul>
+<p>At one point I had two more methods that would format strings for the display. Talk about a “simple” calculator.</p>
+<p>On the other hand, the original has four methods:</p>
+<ul>
+<li>appendNumber</li>
+<li>chooseOperation</li>
+<li>compute</li>
+<li>updateDisplay</li>
+</ul>
+<p>Only four of them? Now, that is simple.</p>
+<p>Here is my logic:</p>
+<ul>
+<li><strong>updateCurrentNumber</strong> gets a value from a calculator button and stores it into the <strong>currentValue</strong>. It then sets the <strong>currentDisplayString</strong>, and calls the <strong>updateCurrentScreen</strong> method to display the <strong>currentDisplayString</strong>.</li>
+<li><strong>setOperation</strong> checks if the <strong>currentValue</strong> exists. If it doesn’t, it returns, not allowing any operations until a number on the calculator is clicked. If the <strong>currentValue</strong> is valid, it proceeds to set the <strong>operator</strong> sent from the calculator. It also calls <strong>doCalculation</strong> function, which calculates the result. After this is done, the <strong>setOperation</strong> method sets the <strong>currentDisplayString</strong> to an empty string, and calls the <strong>updateCurrentScreen</strong>. Then, it moves <strong>currentValue</strong> to the <strong>previousValue</strong>, sets the <strong>previousDisplayString</strong>, and calls <strong>updatePreviousScreen</strong>. Finally, it deletes <strong>currentValue</strong>, and then resets the <strong>operator</strong>.</li>
+<li><strong>doCalculation</strong> checks if there is anything in the <strong>result</strong>. If there is not, it just sets the <strong>currentValue</strong> to the result, and returns. The idea is that we will use this <strong>result</strong> as a previous value in the following calculations. If there already is a <strong>result</strong> value, we do the math where the result is on the left side of whatever operation happens, and we store the operation result in the <strong>result</strong> again</li>
+<li><strong>printResult</strong> is a method called by pressing the “<strong>equals</strong>“ button. It calls <strong>doCalculation</strong> to do the math again. When the calculation is done, it sets the <strong>currentDisplayString</strong>, and calls the <strong>updateCurrentScreen</strong> method. It also sets the <strong>previousDisplayString</strong>, and calls <strong>updatePreviousScreen</strong>. It then deletes <strong>currentValue</strong> and deletes the <strong>operator</strong>.</li>
+</ul>
+<p>The <strong>printResult</strong> is where the problems show (besides the fact that even writing about the whole thing is convulted).</p>
+<ol>
+<li>When calling the <strong>doCalculation</strong> method, there might be no <strong>operator</strong> to work with, because the <strong>setOperation</strong> removed the operator when it returned. I tried keeping the operator in memory, but this caused another problem where we could click on an operator just before clicking on equals, and changing the whole operation.</li>
+<li>Assuming the math in <strong>doCalculation</strong> was successful, <strong>currentValue</strong> gets deleted. But, valid <strong>currentValue</strong> is required to access the <strong>setOperation</strong> method again in cases when a user wants to continue calculation.</li>
+<li>If we decide to remove the above mentioned condition, we still have a problem. The <strong>currentValue</strong> that is in the memory gets computed <strong>again</strong> into the result after we click an operation. This results in bad math.</li>
+<li>And finally, the operation chain that I wanted to show in the previous screen. I wanted to concatanate all <strong>previousValue</strong> instances together with their operators, to show a long operation chain all the time. This was completely unnecessary. The original wasn’t even considering that.</li>
+</ol>
+<p>Now here is what the original did.</p>
+<p>First major difference is that they had all of their buttons always call the <strong>updateDisplay</strong> method right after their primary method.</p>
+<p>In this example, the <strong>numberButton</strong> calls the <strong>appendNumber</strong>, and then immediately calls the <strong>updateDisplay</strong> method.</p>
+<figure class="highlight js"><figcaption><span>Buttons always call their primary function and updateDisplay function</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">numberButtons.forEach(<span class="function">(<span class="params">button</span>) =&gt;</span> &#123;</span><br><span class="line">  button.addEventListener(<span class="string">&quot;click&quot;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    calculator.appendNumber(button.innerText);</span><br><span class="line">    calculator.updateDisplay();</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>Here is the <strong>updateDisplay</strong> method. Ignore the <strong>getDisplayNumber</strong> method, which is used only to format the <strong>currentOperand</strong> and <strong>previousOperand</strong> strings.<br>When called, the <strong>updateDisplay</strong> always shows the <strong>currentOperand</strong> on the screen.<br>And if there was a valid <strong>operation</strong> variable set in the memory, the previous screen will render the <strong>operator</strong> together with the <strong>previousOperand</strong>. Otherwise, the previous screen renders an empty string.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">  updateDisplay() &#123;</span><br><span class="line">    <span class="built_in">this</span>.currentOperandTextElement.innerText =</span><br><span class="line">      <span class="built_in">this</span>.getDisplayNumber(<span class="built_in">this</span>.currentOperand)</span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">this</span>.operation != <span class="literal">null</span>) &#123;</span><br><span class="line">      <span class="built_in">this</span>.previousOperandTextElement.innerText =</span><br><span class="line">        <span class="string">`<span class="subst">$&#123;<span class="built_in">this</span>.getDisplayNumber(<span class="built_in">this</span>.previousOperand)&#125;</span> <span class="subst">$&#123;<span class="built_in">this</span>.operation&#125;</span>`</span></span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="built_in">this</span>.previousOperandTextElement.innerText = <span class="string">&#x27;&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>This was beautiful to me. It meant that I didn’t have to worry about when to render which data, and what to send to current and what to send to the previous screen. The method did that. Lovely.</p>
+<p>It gets better.</p>
+<p>Next method, <strong>chooseOperation</strong> (mine <strong>setOperation</strong>), allows entry only if there is a valid <strong>currentOperand</strong> This is what I did too.</p>
+<p>It also has another condition that says that if there is a <strong>previousOperand</strong> too, we should call the <strong>compute</strong> method to calculate the result. This part is basically same as mine. I always called the <strong>doCalculation</strong> method, moving <strong>currentValue</strong> to the <strong>result</strong> if the result was empty.<br>The original <strong>chooseOperation</strong> does that too, just after <strong>compute</strong> returns. It moves <strong>currentOperand</strong> to <strong>previousOperand</strong>, sets the <strong>operator</strong>, and finally resets the <strong>currentOperand</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">chooseOperation(operation) &#123;</span><br><span class="line">  <span class="keyword">if</span> (<span class="built_in">this</span>.currentOperand === <span class="string">&#x27;&#x27;</span>) <span class="keyword">return</span></span><br><span class="line">  <span class="keyword">if</span> (<span class="built_in">this</span>.previousOperand !== <span class="string">&#x27;&#x27;</span>) &#123;</span><br><span class="line">    <span class="built_in">this</span>.compute()</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">this</span>.operation = operation</span><br><span class="line">  <span class="built_in">this</span>.previousOperand = <span class="built_in">this</span>.currentOperand</span><br><span class="line">  <span class="built_in">this</span>.currentOperand = <span class="string">&#x27;&#x27;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Note how <strong>chooseOperation</strong> sets the <strong>operator</strong>. After it returns, <strong>updateDisplay</strong> is called, as usual. Since there is nothing in the <strong>currentValue</strong>, it will render an empty main screen. But, the <strong>operation</strong> value is valid, so the previous screen renders both <strong>previousOperand</strong> and the <strong>operation</strong>.</p>
+<p>The “better” comes with the <strong>compute</strong> method. Along with being called by the <strong>chooseOperation</strong> method, it is allso called by the <strong>equals</strong> button on the calculator.<br>Since there is no <strong>result</strong> field in the Calculator class, the method creates its own <strong>result</strong> variable, does a routing check to see if both operands are actually valid numbers, and then it calculates the result. All good so far.<br>Then, it moves the <strong>result</strong> to the <strong>currentOperand</strong>, resets the <strong>operation</strong>, and empties the <strong>previousOperand</strong>.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">compute() &#123;</span><br><span class="line">  <span class="keyword">let</span> computation</span><br><span class="line">  <span class="keyword">const</span> prev = <span class="built_in">parseFloat</span>(<span class="built_in">this</span>.previousOperand)</span><br><span class="line">  <span class="keyword">const</span> current = <span class="built_in">parseFloat</span>(<span class="built_in">this</span>.currentOperand)</span><br><span class="line">  <span class="keyword">if</span> (<span class="built_in">isNaN</span>(prev) || <span class="built_in">isNaN</span>(current)) <span class="keyword">return</span></span><br><span class="line">  <span class="keyword">switch</span> (<span class="built_in">this</span>.operation) &#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="string">&#x27;+&#x27;</span>:</span><br><span class="line">      computation = prev + current</span><br><span class="line">      <span class="keyword">break</span></span><br><span class="line">    <span class="keyword">case</span> <span class="string">&#x27;-&#x27;</span>:</span><br><span class="line">      computation = prev - current</span><br><span class="line">      <span class="keyword">break</span></span><br><span class="line">    <span class="keyword">case</span> <span class="string">&#x27;*&#x27;</span>:</span><br><span class="line">      computation = prev * current</span><br><span class="line">      <span class="keyword">break</span></span><br><span class="line">    <span class="keyword">case</span> <span class="string">&#x27;÷&#x27;</span>:</span><br><span class="line">      computation = prev / current</span><br><span class="line">      <span class="keyword">break</span></span><br><span class="line">    <span class="keyword">default</span>:</span><br><span class="line">      <span class="keyword">return</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">this</span>.currentOperand = computation</span><br><span class="line">  <span class="built_in">this</span>.operation = <span class="literal">undefined</span></span><br><span class="line">  <span class="built_in">this</span>.previousOperand = <span class="string">&#x27;&#x27;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>The “better” part is the move of result to the <strong>currentOperand</strong>.<br>Think about what this does.</p>
+<ul>
+<li>It allows entry into <strong>chooseOperation</strong> again, even after we click <strong>equals</strong></li>
+<li>It sets up the future <strong>previousOperand</strong> after we click an operator button again. This effectively turns the <strong>previousOperand</strong> into the missing <strong>result</strong> variable. It allows for continuous calculation with reliable values, unlike my solution where a click on an operator after we get an <strong>equals</strong> result will mess up the math.</li>
+</ul>
+<p>After multiple attempts to code the calculator on my own, and never managing to get all features actually working, I admit I am super impressed with how elegant the original code is.</p>
+<p>Few other things that I also found neat were:</p>
+<ul>
+<li>The <strong>updateDisplay</strong> method takes care of both screens. I had two methods from the start, and then I see that one is enough</li>
+<li>The original does not actually declare any fields directly on the class. Instead, the <strong>clear</strong> method sets those when called, which immediately after an intance of the Calculator class is created. <strong>clear</strong> is also called by the <strong>AC</strong> button on the calculator to reset all values.</li>
+<li><strong>parseFloat()</strong> is better than the <strong>Number()</strong> function for this particular case. In case of an empty string, <strong>Number</strong> will convert it to zero, while <strong>parseFloat</strong> will result with <strong>NaN</strong>. I imagine me using <strong>Number()</strong> was caused many problems I wasn’t even aware of.</li>
+<li>The simplicity of it.</li>
+</ul>
+<p>Very good. Thank you WDS.</p>
+<h3 id="Create-modules"><a href="#Create-modules" class="headerlink" title="Create modules"></a>Create modules</h3><p>To makes this app as much of an overkill as possible, let’s split the app logic into two modules:</p>
+<ul>
+<li>calculator.ts, which exports the <strong>Calculator</strong> class</li>
+<li>app.ts, which contains DOM selectors and calculator methods calls</li>
+</ul>
+<p>Here is the Calculator module:</p>
+<figure class="highlight ts"><figcaption><span>The Calculator class module</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">class</span> Calculator &#123;</span><br><span class="line">  currentValue = <span class="string">&quot;&quot;</span>;</span><br><span class="line">  previousValue = <span class="string">&quot;&quot;</span>;</span><br><span class="line">  operator = <span class="string">&quot;&quot;</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">constructor</span>(<span class="params"></span></span><br><span class="line"><span class="params">    <span class="keyword">public</span> currentOperandScreen: HTMLDivElement,</span></span><br><span class="line"><span class="params">    <span class="keyword">public</span> previousOperandScreen: HTMLDivElement</span></span><br><span class="line"><span class="params">  </span>) &#123;</span><br><span class="line">    <span class="built_in">this</span>.clearAll();</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  updateCurrentValue = <span class="function">(<span class="params">newValue: <span class="built_in">string</span></span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (newValue === <span class="string">&quot;.&quot;</span> &amp;&amp; <span class="built_in">this</span>.currentValue.includes(<span class="string">&quot;.&quot;</span>)) <span class="keyword">return</span>;</span><br><span class="line">    <span class="built_in">this</span>.currentValue = <span class="built_in">this</span>.currentValue + newValue;</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  setOperation = <span class="function">(<span class="params">operator: <span class="built_in">string</span></span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (!<span class="built_in">this</span>.currentValue) <span class="keyword">return</span>;</span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">this</span>.previousValue) <span class="built_in">this</span>.calculateResult();</span><br><span class="line"></span><br><span class="line">    <span class="built_in">this</span>.operator = operator;</span><br><span class="line">    <span class="built_in">this</span>.previousValue = <span class="built_in">this</span>.currentValue;</span><br><span class="line">    <span class="built_in">this</span>.currentValue = <span class="string">&quot;&quot;</span>;</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  calculateResult = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">let</span> result: <span class="built_in">number</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> previousNumber = <span class="built_in">Number</span>(<span class="built_in">this</span>.previousValue);</span><br><span class="line">    <span class="keyword">let</span> currentNumber = <span class="built_in">Number</span>(<span class="built_in">this</span>.currentValue);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">isNaN</span>(previousNumber) || <span class="built_in">isNaN</span>(currentNumber)) <span class="keyword">return</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">switch</span> (<span class="built_in">this</span>.operator) &#123;</span><br><span class="line">      <span class="keyword">case</span> <span class="string">&quot;+&quot;</span>:</span><br><span class="line">        result = previousNumber + currentNumber;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">      <span class="keyword">case</span> <span class="string">&quot;-&quot;</span>:</span><br><span class="line">        result = previousNumber - currentNumber;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">      <span class="keyword">case</span> <span class="string">&quot;*&quot;</span>:</span><br><span class="line">        result = previousNumber * currentNumber;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">      <span class="keyword">case</span> <span class="string">&quot;÷&quot;</span>:</span><br><span class="line">        result = previousNumber / currentNumber;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">      <span class="keyword">default</span>:</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">this</span>.currentValue = <span class="built_in">String</span>(result);</span><br><span class="line">    <span class="built_in">this</span>.previousValue = <span class="string">&quot;&quot;</span>;</span><br><span class="line">    <span class="built_in">this</span>.operator = <span class="string">&quot;&quot;</span>;</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  updateDisplay = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">this</span>.currentOperandScreen.textContent = <span class="built_in">this</span>.currentValue;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">this</span>.previousOperandScreen.textContent = <span class="built_in">this</span>.previousValue</span><br><span class="line">      ? <span class="built_in">this</span>.previousValue + <span class="built_in">this</span>.operator</span><br><span class="line">      : <span class="string">&quot;&quot;</span>;</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  deleteLastDigit = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">this</span>.currentValue = <span class="built_in">this</span>.currentValue.slice(<span class="number">0</span>, <span class="number">-1</span>);</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  clearAll = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">this</span>.currentValue = <span class="string">&quot;&quot;</span>;</span><br><span class="line">    <span class="built_in">this</span>.previousValue = <span class="string">&quot;&quot;</span>;</span><br><span class="line">    <span class="built_in">this</span>.operator = <span class="string">&quot;&quot;</span>;</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>And here is the App module:</p>
+<figure class="highlight ts"><figcaption><span>The module with rest of the app logic</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Calculator <span class="keyword">from</span> <span class="string">&quot;./calculator.js&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> previousOperandDiv = <span class="built_in">document</span>.querySelector(</span><br><span class="line">  <span class="string">&quot;[data-previous-operand]&quot;</span></span><br><span class="line">) <span class="keyword">as</span> HTMLDivElement;</span><br><span class="line"><span class="keyword">const</span> currentOperandDiv = <span class="built_in">document</span>.querySelector(</span><br><span class="line">  <span class="string">&quot;[data-current-operand]&quot;</span></span><br><span class="line">) <span class="keyword">as</span> HTMLDivElement;</span><br><span class="line"><span class="keyword">const</span> calcNumbers = <span class="built_in">document</span>.querySelectorAll(<span class="string">&quot;[data-number]&quot;</span>);</span><br><span class="line"><span class="keyword">const</span> operationButtons = <span class="built_in">document</span>.querySelectorAll(<span class="string">&quot;[data-operation]&quot;</span>);</span><br><span class="line"><span class="keyword">const</span> equalsButton = <span class="built_in">document</span>.querySelector(<span class="string">&quot;[data-equals]&quot;</span>)!;</span><br><span class="line"><span class="keyword">const</span> deleteButton = <span class="built_in">document</span>.querySelector(<span class="string">&quot;[data-delete]&quot;</span>)!;</span><br><span class="line"><span class="keyword">const</span> clearAllButton = <span class="built_in">document</span>.querySelector(<span class="string">&quot;[data-clear-all]&quot;</span>)!;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> calculator = <span class="keyword">new</span> Calculator(currentOperandDiv, previousOperandDiv);</span><br><span class="line"></span><br><span class="line">equalsButton.addEventListener(<span class="string">&quot;click&quot;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  calculator.calculateResult();</span><br><span class="line">  calculator.updateDisplay();</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&quot;zgg&quot;</span>);</span><br><span class="line"></span><br><span class="line">operationButtons.forEach(<span class="function">(<span class="params">operationButton</span>) =&gt;</span> &#123;</span><br><span class="line">  operationButton.addEventListener(<span class="string">&quot;click&quot;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    calculator.setOperation(operationButton.textContent!.trim());</span><br><span class="line">    calculator.updateDisplay();</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">calcNumbers.forEach(<span class="function">(<span class="params">calcNumber</span>) =&gt;</span> &#123;</span><br><span class="line">  calcNumber.addEventListener(<span class="string">&quot;click&quot;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    calculator.updateCurrentValue(calcNumber.textContent!.trim());</span><br><span class="line">    calculator.updateDisplay();</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">deleteButton.addEventListener(<span class="string">&quot;click&quot;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  calculator.deleteLastDigit();</span><br><span class="line">  calculator.updateDisplay();</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">clearAllButton.addEventListener(<span class="string">&quot;click&quot;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  calculator.clearAll();</span><br><span class="line">  calculator.updateDisplay();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>To make sure our modules actually work, we do have to make few adjustments.</p>
+<ol>
+<li>Have <strong>module</strong> field set to <strong>es2015</strong> and <strong>type</strong> field set to <strong>es6</strong> in the <strong>tsconfig.json</strong> file</li>
+<li>Make sure we include <strong>.”js”</strong> extensions on modules when we import them. This is because we are compiling our modules into JS, and we can’t have JS modules import TS ones. We already did that in the <strong>app.ts</strong> module above.</li>
+<li>Add <strong>type</strong> attribute to the <strong>script</strong> tag which loads our application, and give it a value of <strong>module</strong>. This will let the browser know that this script is a module</li>
+<li>Remove the <strong>defer</strong> attribute from the script tag. Modules defer by default.</li>
+</ol>
+<figure class="highlight html"><figcaption><span>index.html snippet</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;app.js&quot;</span> <span class="attr">type</span>=<span class="string">&quot;module&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>Ok, that’s it. If the <strong>tsc -w</strong> command is still running, valid JS modules should be compiled into the <strong>public</strong> folder. </p>
+<p>Great. We finished the TS and coding part. Despite being a bit hard to put it all into words, and after not being able to complete the actual calculator on my own, I find it rewarding. The simplicity of WDS’s code came as a relief and inspiration to keep on trying.<br>We also installed TS and set up the modules, and now have a neat little app that works.</p>
+<p>In the next post we will complicate it a bit more, and squeeze the app through a tool call Webpack. See you there. </p>
+<!-- End Step Content -->
+
+<!-- Project Information -->
+
+<h2 id="Project-Information"><a href="#Project-Information" class="headerlink" title="Project Information"></a>Project Information</h2><h3 id="Available-at"><a href="#Available-at" class="headerlink" title="Available at"></a>Available at</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/ikaem/angry-chaired-v2/">Github respository</a></li>
+<li><a target="_blank" rel="noopener" href="https://angrychaired.surge.sh/">Live website</a></li>
+</ul>
+<h3 id="Goals"><a href="#Goals" class="headerlink" title="Goals"></a>Goals</h3><ol>
+<li>Copy Web Development Simplified’s JS calculator with TypeScript and Webpack</li>
+<li>Use Tailwind to style the app</li>
+</ol>
+<h3 id="Steps"><a href="#Steps" class="headerlink" title="Steps"></a>Steps</h3><ol>
+<li>Setup and styling with Tailwind</li>
+<li><strong>TypeScript setup and coding the calculator</strong></li>
+<li>Webpack setup</li>
+</ol>
+<h3 id="Tech-and-Tools"><a href="#Tech-and-Tools" class="headerlink" title="Tech and Tools"></a>Tech and Tools</h3><ol>
+<li>Tailwind</li>
+<li>TypeScript</li>
+<li>Webpack</li>
+</ol>
+<h3 id="Experience-with-Tech-amp-Tools"><a href="#Experience-with-Tech-amp-Tools" class="headerlink" title="Experience with Tech &amp; Tools"></a>Experience with Tech &amp; Tools</h3><p>I haven’t done anything with Tailwind before, except for few crash courses. I did a course on Webpack setup, too, and used that as a guide for this project. As for TypeScript, I think that by now I settled into using it comfortably on a limited level.</p>
+<h2 id="DISCLAIMER"><a href="#DISCLAIMER" class="headerlink" title="DISCLAIMER"></a>DISCLAIMER</h2><p>Don’t take any of this seriously and as a matter-of-fact. These are my notes. It might look like I am trying to teach something to someone. I am not.</p>
+
+
+                
+
+
+                <!-- Cover image credit -->
+                
+                    <p class="image-credit-link">
+                        Cover image by <strong>
+                            <a target="_blank" rel="noopener" href="https://unsplash.com/@herrfung?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
+                                Alan Fung
+                            </a>
+                        </strong>
+                    </p>
+
+                
+
+  
+
+            </div>
+            
+            <!-- Custom placed tags -->
+            <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                
+                    
+
+
+<a href="/angry-chaired-blog/tags/typescript/">#typescript</a>
+
+
+                
+            </div>
+            <!--  -->
+
+
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+
+            <!-- Hyvor comments -->
+
+            <!-- End of Hyvor comments -->
+        </div>
+    </div>
+</article>
+
+
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2020 kaem<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

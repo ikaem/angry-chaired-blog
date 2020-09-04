@@ -6,7 +6,7 @@
   <link href="https://ikaem.github.io/angry-chaired-blog/atom.xml" rel="self"/>
   
   <link href="https://ikaem.github.io/angry-chaired-blog/"/>
-  <updated>2020-09-04T12:53:47.097Z</updated>
+  <updated>2020-09-04T18:20:38.271Z</updated>
   <id>https://ikaem.github.io/angry-chaired-blog/</id>
   
   <author>
@@ -15,6 +15,48 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>TypeScript &amp; Webpack Calculator: Calculator App &amp; Webpack</title>
+    <link href="https://ikaem.github.io/angry-chaired-blog/2020/typescript-webpack-calculator-calculator-app-webpack/"/>
+    <id>https://ikaem.github.io/angry-chaired-blog/2020/typescript-webpack-calculator-calculator-app-webpack/</id>
+    <published>2020-09-04T18:18:23.000Z</published>
+    <updated>2020-09-04T18:20:38.271Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;In this post, we will use Webpack with our app. Webpack is a tool than bundles modules. The way I see it, it creates one big (but small)</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>TypeScript &amp; Webpack Calculator: Coding Calculator with TypeScript</title>
+    <link href="https://ikaem.github.io/angry-chaired-blog/2020/typescript-webpack-calculator-coding-calculator-with-typescript/"/>
+    <id>https://ikaem.github.io/angry-chaired-blog/2020/typescript-webpack-calculator-coding-calculator-with-typescript/</id>
+    <published>2020-09-04T13:16:04.000Z</published>
+    <updated>2020-09-04T18:23:07.887Z</updated>
+    
+    
+    <summary type="html">&lt;!-- Step Content Start --&gt;
+
+&lt;h4 id=&quot;Part-2-of-3-in-TypeScript-amp-Webpack-Calculator&quot;&gt;&lt;a href=&quot;#Part-2-of-3-in-TypeScript-amp-Webpack-Calculator&quot; class=&quot;headerlink&quot; title=&quot;Part 2 of 3 in TypeScript &amp;amp; Webpack Calculator&quot;&gt;&lt;/a&gt;Part 2 of 3 in TypeScript &amp;amp; Webpack Calculator&lt;/h4&gt;&lt;p&gt;The [original calculator](&lt;a href=&quot;https://www.youtube.com/watch?v=j59qQ7YWLxw&quot;&gt;Web Development Simplified&lt;/a&gt;) that we are copying was made with Vanilla JS. We are going to be using TypeScript. This requires us to set up and configure TypesScript. We will also use modules, which the original did not have. Why? Because we can, that’s why.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="ts webpack calculator" scheme="https://ikaem.github.io/angry-chaired-blog/categories/ts-webpack-calculator/"/>
+    
+    
+    <category term="typescript" scheme="https://ikaem.github.io/angry-chaired-blog/tags/typescript/"/>
+    
+  </entry>
   
   <entry>
     <title>TypeScript &amp; Webpack Calculator: Setup &amp; Styling with Tailwind</title>
@@ -457,53 +499,6 @@
     <category term="deploy" scheme="https://ikaem.github.io/angry-chaired-blog/tags/deploy/"/>
     
     <category term="surge" scheme="https://ikaem.github.io/angry-chaired-blog/tags/surge/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Gatsby Web: Implement Messaging Feature</title>
-    <link href="https://ikaem.github.io/angry-chaired-blog/2020/gatsby-web-implement-messaging-feature/"/>
-    <id>https://ikaem.github.io/angry-chaired-blog/2020/gatsby-web-implement-messaging-feature/</id>
-    <published>2020-08-17T05:59:20.000Z</published>
-    <updated>2020-08-17T06:05:49.057Z</updated>
-    
-    
-    <summary type="html">&lt;!-- Step Content Start --&gt;
-
-&lt;h4 id=&quot;Part-9-of-10-in-Gatsby-Web&quot;&gt;&lt;a href=&quot;#Part-9-of-10-in-Gatsby-Web&quot; class=&quot;headerlink&quot; title=&quot;Part 9 of 10 in Gatsby Web&quot;&gt;&lt;/a&gt;Part 9 of 10 in Gatsby Web&lt;/h4&gt;&lt;p&gt;The &lt;strong&gt;Contact&lt;/strong&gt; page contains a simple form that users could use to send us a message. There is also a list of other ways on how to contact us, but we want to offer a quick and simple way too, so users can do it on the spot.&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="gatsby web" scheme="https://ikaem.github.io/angry-chaired-blog/categories/gatsby-web/"/>
-    
-    
-    <category term="gatsby" scheme="https://ikaem.github.io/angry-chaired-blog/tags/gatsby/"/>
-    
-    <category term="messaging" scheme="https://ikaem.github.io/angry-chaired-blog/tags/messaging/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Gatsby Web: Gatsby Images</title>
-    <link href="https://ikaem.github.io/angry-chaired-blog/2020/gatsby-web-gatsby-images/"/>
-    <id>https://ikaem.github.io/angry-chaired-blog/2020/gatsby-web-gatsby-images/</id>
-    <published>2020-08-17T05:50:36.000Z</published>
-    <updated>2020-08-17T06:05:46.230Z</updated>
-    
-    
-    <summary type="html">&lt;!-- Step Content Start --&gt;
-
-&lt;h4 id=&quot;Part-8-of-10-in-Gatsby-Web&quot;&gt;&lt;a href=&quot;#Part-8-of-10-in-Gatsby-Web&quot; class=&quot;headerlink&quot; title=&quot;Part 8 of 10 in Gatsby Web&quot;&gt;&lt;/a&gt;Part 8 of 10 in Gatsby Web&lt;/h4&gt;&lt;p&gt;Inserting local images into a Gatsby website can be very simple. We can simply put them into the &lt;a href=&quot;https://www.gatsbyjs.org/docs/static-folder&quot;&gt;static folder&lt;/a&gt; that exists in the root of our project, and that is it.&lt;br&gt;Gatsby documentation, however, does not encourage it, and instead recommendes that we use a plugin for this.&lt;/p&gt;
-&lt;p&gt;This plugin is &lt;strong&gt;gatsby-image&lt;/strong&gt;, and it is used in combination with few other plugins: &lt;strong&gt;gatsby-transformer-sharp&lt;/strong&gt; and &lt;strong&gt;gatsby-plugin-sharp&lt;/strong&gt;.&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="gatsby web" scheme="https://ikaem.github.io/angry-chaired-blog/categories/gatsby-web/"/>
-    
-    
-    <category term="gatsby plugins" scheme="https://ikaem.github.io/angry-chaired-blog/tags/gatsby-plugins/"/>
-    
-    <category term="images" scheme="https://ikaem.github.io/angry-chaired-blog/tags/images/"/>
     
   </entry>
   
