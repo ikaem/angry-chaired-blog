@@ -6,7 +6,7 @@
   <link href="https://ikaem.github.io/angry-chaired-blog/atom.xml" rel="self"/>
   
   <link href="https://ikaem.github.io/angry-chaired-blog/"/>
-  <updated>2020-08-30T18:59:00.759Z</updated>
+  <updated>2020-09-04T05:36:04.526Z</updated>
   <id>https://ikaem.github.io/angry-chaired-blog/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>TypeScript &amp; Webpack Calculator: Setup &amp; Styling with Tailwind</title>
+    <link href="https://ikaem.github.io/angry-chaired-blog/2020/typescript-webpack-calculator-setup-styling-with-tailwind/"/>
+    <id>https://ikaem.github.io/angry-chaired-blog/2020/typescript-webpack-calculator-setup-styling-with-tailwind/</id>
+    <published>2020-09-04T05:33:12.000Z</published>
+    <updated>2020-09-04T05:36:04.526Z</updated>
+    
+    
+    <summary type="html">&lt;!-- Step Content Start --&gt;
+
+&lt;h4 id=&quot;Part-1-of-3-in-TypeScript-amp-Webpack-Calculator&quot;&gt;&lt;a href=&quot;#Part-1-of-3-in-TypeScript-amp-Webpack-Calculator&quot; class=&quot;headerlink&quot; title=&quot;Part 1 of 3 in TypeScript &amp;amp; Webpack Calculator&quot;&gt;&lt;/a&gt;Part 1 of 3 in TypeScript &amp;amp; Webpack Calculator&lt;/h4&gt;&lt;p&gt;excerpt&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="ts webpack calculator" scheme="https://ikaem.github.io/angry-chaired-blog/categories/ts-webpack-calculator/"/>
+    
+    
+    <category term="typescript" scheme="https://ikaem.github.io/angry-chaired-blog/tags/typescript/"/>
+    
+    <category term="webpack" scheme="https://ikaem.github.io/angry-chaired-blog/tags/webpack/"/>
+    
+    <category term="tailwind" scheme="https://ikaem.github.io/angry-chaired-blog/tags/tailwind/"/>
+    
+  </entry>
   
   <entry>
     <title>Gatsby &amp; MDX: Additional Things Learned</title>
@@ -479,29 +504,6 @@
     <category term="gatsby plugins" scheme="https://ikaem.github.io/angry-chaired-blog/tags/gatsby-plugins/"/>
     
     <category term="images" scheme="https://ikaem.github.io/angry-chaired-blog/tags/images/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Gatsby Web: Insert Markdown in Gatsby Pages</title>
-    <link href="https://ikaem.github.io/angry-chaired-blog/2020/gatsby-web-insert-markdown-in-gatsby-pages/"/>
-    <id>https://ikaem.github.io/angry-chaired-blog/2020/gatsby-web-insert-markdown-in-gatsby-pages/</id>
-    <published>2020-08-17T05:43:48.000Z</published>
-    <updated>2020-08-17T05:52:07.821Z</updated>
-    
-    
-    <summary type="html">&lt;!-- Step Content Start --&gt;
-
-&lt;h4 id=&quot;Part-7-of-10-in-Gatsby-Web&quot;&gt;&lt;a href=&quot;#Part-7-of-10-in-Gatsby-Web&quot; class=&quot;headerlink&quot; title=&quot;Part 7 of 10 in Gatsby Web&quot;&gt;&lt;/a&gt;Part 7 of 10 in Gatsby Web&lt;/h4&gt;&lt;p&gt;Before we even start, I need to say that Markdown is meant to style text, and not websites. Unfortunately, I went into this expecting to style a page in a certain way, and then just insert pieces of Markdown body into their places, or to style elements in the Markdown document directly.&lt;br&gt;While this is possible, it is a bit of a pain, and more importantly, it goes against the point of Markdown. &lt;/p&gt;</summary>
-    
-    
-    
-    <category term="gatsby web" scheme="https://ikaem.github.io/angry-chaired-blog/categories/gatsby-web/"/>
-    
-    
-    <category term="gatsby plugins" scheme="https://ikaem.github.io/angry-chaired-blog/tags/gatsby-plugins/"/>
-    
-    <category term="markdowns" scheme="https://ikaem.github.io/angry-chaired-blog/tags/markdowns/"/>
     
   </entry>
   
