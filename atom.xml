@@ -42,12 +42,12 @@
     <link href="https://ikaem.github.io/angry-chaired-blog/2020/typescript-webpack-calculator-coding-calculator-with-typescript/"/>
     <id>https://ikaem.github.io/angry-chaired-blog/2020/typescript-webpack-calculator-coding-calculator-with-typescript/</id>
     <published>2020-09-04T13:16:04.000Z</published>
-    <updated>2020-09-04T18:23:07.887Z</updated>
+    <updated>2020-09-04T18:25:03.844Z</updated>
     
     
     <summary type="html">&lt;!-- Step Content Start --&gt;
 
-&lt;h4 id=&quot;Part-2-of-3-in-TypeScript-amp-Webpack-Calculator&quot;&gt;&lt;a href=&quot;#Part-2-of-3-in-TypeScript-amp-Webpack-Calculator&quot; class=&quot;headerlink&quot; title=&quot;Part 2 of 3 in TypeScript &amp;amp; Webpack Calculator&quot;&gt;&lt;/a&gt;Part 2 of 3 in TypeScript &amp;amp; Webpack Calculator&lt;/h4&gt;&lt;p&gt;The [original calculator](&lt;a href=&quot;https://www.youtube.com/watch?v=j59qQ7YWLxw&quot;&gt;Web Development Simplified&lt;/a&gt;) that we are copying was made with Vanilla JS. We are going to be using TypeScript. This requires us to set up and configure TypesScript. We will also use modules, which the original did not have. Why? Because we can, that’s why.&lt;/p&gt;</summary>
+&lt;h4 id=&quot;Part-2-of-3-in-TypeScript-amp-Webpack-Calculator&quot;&gt;&lt;a href=&quot;#Part-2-of-3-in-TypeScript-amp-Webpack-Calculator&quot; class=&quot;headerlink&quot; title=&quot;Part 2 of 3 in TypeScript &amp;amp; Webpack Calculator&quot;&gt;&lt;/a&gt;Part 2 of 3 in TypeScript &amp;amp; Webpack Calculator&lt;/h4&gt;&lt;p&gt;The &lt;a href=&quot;https://www.youtube.com/watch?v=j59qQ7YWLxw&quot;&gt;original calculator&lt;/a&gt;) that we are copying was made with Vanilla JS. We are going to be using TypeScript. This requires us to set up and configure TypesScript. We will also use modules, which the original did not have. Why? Because we can, that’s why.&lt;/p&gt;</summary>
     
     
     
