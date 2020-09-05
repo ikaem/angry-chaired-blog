@@ -6,7 +6,7 @@
   <link href="https://ikaem.github.io/angry-chaired-blog/atom.xml" rel="self"/>
   
   <link href="https://ikaem.github.io/angry-chaired-blog/"/>
-  <updated>2020-09-04T18:20:38.271Z</updated>
+  <updated>2020-09-05T08:15:18.482Z</updated>
   <id>https://ikaem.github.io/angry-chaired-blog/</id>
   
   <author>
@@ -21,19 +21,21 @@
     <link href="https://ikaem.github.io/angry-chaired-blog/2020/typescript-webpack-calculator-calculator-app-webpack/"/>
     <id>https://ikaem.github.io/angry-chaired-blog/2020/typescript-webpack-calculator-calculator-app-webpack/</id>
     <published>2020-09-04T18:18:23.000Z</published>
-    <updated>2020-09-04T18:20:38.271Z</updated>
+    <updated>2020-09-05T08:15:18.482Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;In this post, we will use Webpack with our app. Webpack is a tool than bundles modules. The way I see it, it creates one big (but small)</summary>
-        
-      
+    <summary type="html">&lt;!-- Step Content Start --&gt;
+
+&lt;h4 id=&quot;Part-3-of-3-in-TypeScript-amp-Webpack-Calculator&quot;&gt;&lt;a href=&quot;#Part-3-of-3-in-TypeScript-amp-Webpack-Calculator&quot; class=&quot;headerlink&quot; title=&quot;Part 3 of 3 in TypeScript &amp;amp; Webpack Calculator&quot;&gt;&lt;/a&gt;Part 3 of 3 in TypeScript &amp;amp; Webpack Calculator&lt;/h4&gt;&lt;p&gt;In this post, we will use Webpack with our app. Webpack is a tool than bundles modules. The way I see it, it creates one big (but small) JS file out of existing JS modules. With our app having only two (questionable) modules, using such a bundler is a definite overkill. That’s why we’re doing it.&lt;/p&gt;</summary>
     
     
     
+    <category term="ts webpack calculator" scheme="https://ikaem.github.io/angry-chaired-blog/categories/ts-webpack-calculator/"/>
+    
+    
+    <category term="typescript" scheme="https://ikaem.github.io/angry-chaired-blog/tags/typescript/"/>
+    
+    <category term="webpack" scheme="https://ikaem.github.io/angry-chaired-blog/tags/webpack/"/>
     
   </entry>
   

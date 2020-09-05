@@ -184,7 +184,7 @@
     <!-- Page Header -->
 <!-- Set your background image for this header in your post front-matter: cover -->
 
-<header class="intro-header" style="background-image: url('/angry-chaired-blog/images/header-image.jpg')">
+<header class="intro-header" style="background-image: url('laura-dewilde-h1aRw9D35dg-unsplash.jpg')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -211,20 +211,161 @@
 
             <!-- Tags and categories -->
            
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/angry-chaired-blog/categories/ts-webpack-calculator/">ts webpack calculator</a>
+
+                    
+                </div>
+            
 
             <!-- Gallery -->
             
 
             <!-- Post Main Content -->
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <p>In this post, we will use Webpack with our app. Webpack is a tool than bundles modules. The way I see it, it creates one big (but small) JS file out of existing JS modules. With our app having only two (questionable) modules, using such a bundler is a definite overkill. That’s why we will do it. </p>
-<p>According to the documentation and online stuff, Webpack can do much more than bundling. It provides a neat little development server with support for hot reloading, and can convert TS files to JS with help of plugins. Outside of these three things, it is all Greek to me, so we will juggle these three things for now. </p>
+                <!-- Step Content Start -->
+
+<h4 id="Part-3-of-3-in-TypeScript-amp-Webpack-Calculator"><a href="#Part-3-of-3-in-TypeScript-amp-Webpack-Calculator" class="headerlink" title="Part 3 of 3 in TypeScript &amp; Webpack Calculator"></a>Part 3 of 3 in TypeScript &amp; Webpack Calculator</h4><p>In this post, we will use Webpack with our app. Webpack is a tool than bundles modules. The way I see it, it creates one big (but small) JS file out of existing JS modules. With our app having only two (questionable) modules, using such a bundler is a definite overkill. That’s why we’re doing it.</p>
+<a id="more"></a>
+
+<h4 id="See-Project-Information"><a href="#See-Project-Information" class="headerlink" title="See Project Information"></a>See <a href="#Project-Information">Project Information</a></h4><p>According to the documentation and online stuff, Webpack can do much more than bundling. It provides a neat little development server with support for hot reloading, and can convert TS files to JS with help of plugins. Outside of these three things, it is all Greek to me, so we will juggle these three things for now.</p>
+<h2 id="Step-3-Webpack-setup"><a href="#Step-3-Webpack-setup" class="headerlink" title="Step 3: Webpack setup"></a>Step 3: Webpack setup</h2><p>Here is what we will do:</p>
+<ol>
+<li>Install Webpack, plugins and other necessary tools</li>
+<li>Configure Webpack, web-dev-server, and TypeScript to build and serve bundles</li>
+</ol>
+<h3 id="Install-Webpack-plugins-and-other-necessary-tools"><a href="#Install-Webpack-plugins-and-other-necessary-tools" class="headerlink" title="Install Webpack, plugins and other necessary tools"></a>Install Webpack, plugins and other necessary tools</h3><p>First things first, we need to install things.<br>We need:</p>
+<ul>
+<li>webpack, the actual tool that bundles our files</li>
+<li>webpack-cli, a tool to run webpack commands in the terminal</li>
+<li>webpack-dev-server, a tool that sets up a webpack dev server, watches and reacts to changes in our code, and serves our website</li>
+<li>typescript compiler to be used locally just for this specific project</li>
+<li>ts-loader, a tool to help webpack convert TS files to JS</li>
+</ul>
+<p>These are all development dependencies, so we will add -D flag when installing them from NPM.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i -D webpack webpack-cli webpack-dev-server typescript ts-loader</span><br></pre></td></tr></table></figure>
+
+<h3 id="Configure-Webpack-and-TypeScript-to-build-development-and-production-bundles"><a href="#Configure-Webpack-and-TypeScript-to-build-development-and-production-bundles" class="headerlink" title="Configure Webpack and TypeScript to build development and production bundles"></a>Configure Webpack and TypeScript to build development and production bundles</h3><p>Let’s configure things now.</p>
+<p>We will return to the <strong>tsconfig.json</strong> file first.</p>
+<p>To make this works, make sure that:</p>
+<ul>
+<li><strong>target</strong> is set to <strong>“es6”</strong></li>
+<li><strong>module</strong> is set to <strong>“ES2015”</strong></li>
+<li><strong>outDir</strong> stays uncommented, and pointing to output folder. In this case, this is <strong>“/public”</strong></li>
+<li><strong>rootDir</strong> is commented out. We don’t need it for this part, as Webpack will determine where our source files are.</li>
+<li><strong>“sourceMap”</strong> stays uncommented, and <strong>true</strong></li>
+</ul>
+<p>Next, we will create files that Webpack will use to build our bundle.</p>
+<p>We will create:</p>
+<ol>
+<li>Configuration file for development</li>
+<li>Configuration file for production</li>
+</ol>
+<h4 id="Configuration-file-for-development"><a href="#Configuration-file-for-development" class="headerlink" title="Configuration file for development"></a>Configuration file for development</h4><p>The file we are creating is a JS file, and needs to be called <strong>webpack.config.js</strong>. We will place it in the project root.</p>
+<p>The file exports an object whose properties are used to configure Webpack.<br>It uses Node.js features, so we need to export the object with Node export syntax.<br>Inside, we will also require the <strong>path</strong> module, as we will need it to resolve absolute paths to couple of folders in the project.</p>
+<figure class="highlight js"><figcaption><span>webpack.configure.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">&quot;path&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>The <strong>webpack.config.js</strong> we are working on will be used to generate a bundle for development. Later, we will create another configuration file for production.</p>
+<p>Here are the properties that we add to the exported object:</p>
+<ul>
+<li><strong>mode</strong> - we will set this to <strong>development</strong> for now, to tell Webpack that we work in development mode. Webpack will use this to make less optimizations when bundling modules</li>
+<li><strong>entry</strong> - this is a string holding a relative path to the file which starts the application. For us, this is <strong>“./src/app.ts”</strong></li>
+<li><strong>output</strong> - this is an object holding information about the output location. We add to properties here: <strong>filename</strong> and <strong>path</strong>, holding the name of our bundle (<strong>“bundle.js”</strong>) and the absolute path to the <strong>public</strong> folder, respectively.</li>
+</ul>
+<p>Here is what we have so far:</p>
+<figure class="highlight js"><figcaption><span>webpack.config.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">&quot;path&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  mode: <span class="string">&quot;development&quot;</span>,</span><br><span class="line">  entry: <span class="string">&quot;./src/app.ts&quot;</span>,</span><br><span class="line">  output: &#123;</span><br><span class="line">    filename: <span class="string">&quot;bundle.js&quot;</span>,</span><br><span class="line">    path: path.resolve(__dirname, <span class="string">&quot;public&quot;</span>),</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>Next , we add <strong>devServer</strong> property, which is an object that configures <strong>webpack-dev-server</strong>. Inside, we will specify only one property, but the object can hold more than that.</p>
+<ul>
+<li><strong>contentBase</strong> - holds abolute path to the <strong>public</strong> folder. This tells dev-server where it should look to find static files it needs to serve. Since our <strong>index.html</strong> is inside the <strong>public</strong> folder, this is what we need.</li>
+</ul>
+<figure class="highlight js"><figcaption><span>webpack.config.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">&quot;path&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">  devServer: &#123;</span><br><span class="line">    contentBase: path.resolve(__dirname, <span class="string">&quot;public&quot;</span>),</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>Note that <strong>webpack-dev-server</strong> servers bundles from memory, so with this setup it will use only <strong>index.html</strong> from the <strong>public</strong> folder. The <strong>bundle.js</strong> file that <strong>index.html</strong> uses will come from the <strong>dev-server</strong>‘s memory.</p>
+<p>Following that, we will add a property called <strong>devTool</strong> to the <strong>webpack.config.js</strong> exported object. With this we make sure that we can use TS files source maps. The <strong>“inline-source-map”</strong> value will tell Webpack that we will already have source maps generated, and that Webpack should connect to these maps. That’s the limit of my understanding of this property.</p>
+<figure class="highlight js"><figcaption><span>webpack.config.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">&quot;path&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">  devtool: <span class="string">&quot;inline-source-map&quot;</span>,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>Next is adding support for TypeScript. We do with another object called <strong>module</strong>, to which we add a property called <strong>rules</strong>. This property is an array, and is used to define what Webpack should do with specific modules.<br>In this case, we want all TS modules to use <strong>ts-loader</strong>.<br>We also exclude the <strong>node_modules</strong> folder from this test.</p>
+<figure class="highlight js"><figcaption><span>webpack.config.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">&quot;path&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">  <span class="built_in">module</span>: &#123;</span><br><span class="line">    rules: [</span><br><span class="line">      &#123;</span><br><span class="line">        test: <span class="regexp">/\.ts/</span>,</span><br><span class="line">        use: <span class="string">&quot;ts-loader&quot;</span>,</span><br><span class="line">        exclude: <span class="regexp">/node_modules/</span>,</span><br><span class="line">      &#125;,</span><br><span class="line">    ],</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>Note that both <strong>test</strong> and <strong>exclude</strong> use <strong>Regular Expression,</strong> which I really can’t be bothered to learn now.</p>
+<p>Finally, we add the <strong>resolve</strong> property to the <strong>webpack.config.js</strong> export. It is an object that holds <strong>extensions</strong> array. Inside, we specify extensions of files that Webpack will add to imports it finds in modules.<br>By default, Webpack adds <strong>.js</strong> extensions to the imports, but we want it to add <strong>*.ts</strong> as well.</p>
+<figure class="highlight js"><figcaption><span>webpack.config.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">&quot;path&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">  resolve: &#123;</span><br><span class="line">    extensions: [<span class="string">&quot;.ts&quot;</span>, <span class="string">&quot;.js&quot;</span>],</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>With this, we can remove the <strong>.js</strong> extension from the <strong>app.ts</strong> module, as Webpack will be taking care of that now.</p>
+<figure class="highlight ts"><figcaption><span>app.ts</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Calculator <span class="keyword">from</span> <span class="string">&quot;./calculator&quot;</span>;</span><br><span class="line"><span class="comment">// ...</span></span><br></pre></td></tr></table></figure>
+
+<p>We will also replace <strong>app.js</strong> script with <strong>bundle.js</strong> in <strong>index.html</strong></p>
+<figure class="highlight html"><figcaption><span>index.html</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;bundle.js&quot;</span> <span class="attr">type</span>=<span class="string">&quot;module&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>With this, we have configured how Webpack will create development bundles.</p>
+<p>We will now create a script in <strong>package.json</strong> to get the <strong>webpack-dev-server</strong> started.<br>When starting, it will use Webpack’s development configuration to create bundles in memory. It will then search for static <strong>public</strong> folder, and it will serve <strong>index.html</strong> file that it finds there.</p>
+<p>Here is the script:</p>
+<figure class="highlight js"><figcaption><span>package.json</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;scripts&quot;</span>: &#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">    <span class="string">&quot;start&quot;</span>: <span class="string">&quot;webpack-dev-server&quot;</span></span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<p>Assuming your <strong>index.html</strong> is present in <strong>public</strong> folder, lets enter command <strong>npm run start</strong>, and visit <strong>localhost:8080</strong> where <strong>webpack-dev-server</strong> serves the development app by default.</p>
+<p>We should see our calculator there. Try changing something in either of the modules, and see how hot reloading works too.<br>Great.</p>
+<h4 id="Configuration-file-for-production"><a href="#Configuration-file-for-production" class="headerlink" title="Configuration file for production"></a>Configuration file for production</h4><p>In the end, we also need a production bundle.</p>
+<p>We will make it simple and make a copy of the existing one and rename it to <strong>webpack.config.prod.js</strong>. This is not a predefined name, and we can call the file anyway we like.</p>
+<p>We will just modify it a bit before we actually use it for generating production bundles.</p>
+<ul>
+<li><strong>mode</strong> - change to <strong>“production”</strong></li>
+<li><strong>devServer</strong> object - is not needed and can be completely removed</li>
+<li><strong>devtool</strong> - change to <strong>“none”</strong>, to indicate that we don’t need any source maps</li>
+</ul>
+<p>Here is the <strong>webpack.config.prod.js</strong> file:</p>
+<figure class="highlight js"><figcaption><span>webpack.config.prod.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">&quot;path&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  mode: <span class="string">&quot;production&quot;</span>,</span><br><span class="line">  entry: <span class="string">&quot;./src/app.ts&quot;</span>,</span><br><span class="line">  output: &#123;</span><br><span class="line">    filename: <span class="string">&quot;bundle.js&quot;</span>,</span><br><span class="line">    path: path.resolve(__dirname, <span class="string">&quot;./public&quot;</span>),</span><br><span class="line">  &#125;,</span><br><span class="line">  devtool: <span class="string">&quot;none&quot;</span>,</span><br><span class="line">  <span class="built_in">module</span>: &#123;</span><br><span class="line">    rules: [</span><br><span class="line">      &#123;</span><br><span class="line">        test: <span class="regexp">/\.ts/</span>,</span><br><span class="line">        use: <span class="string">&quot;ts-loader&quot;</span>,</span><br><span class="line">        exclude: <span class="regexp">/node_modules/</span>,</span><br><span class="line">      &#125;,</span><br><span class="line">    ],</span><br><span class="line">  &#125;,</span><br><span class="line">  resolve: &#123;</span><br><span class="line">    extensions: [<span class="string">&quot;.js&quot;</span>, <span class="string">&quot;.ts&quot;</span>],</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>Last thing is to add a script to <strong>package.json</strong> that will have Webpack build a production bundle using this configuration file.</p>
+<figure class="highlight js"><figcaption><span>package.json</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;scripts&quot;</span>: &#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">    <span class="string">&quot;build&quot;</span>: <span class="string">&quot;webpack --config webpack.config.prod.js&quot;</span>,</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<p>That’s it.<br>Try running the command in terminal:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run build</span><br></pre></td></tr></table></figure>
+
+<p>You should see <strong>bundle.js</strong> file generated in <strong>public</strong> folder after the script finishes.<br><strong>index.html</strong> and <strong>styles.css</strong> are both there, too, so we can deply the app and start calculating.</p>
+<p>Great. This is done too. We used Webpack to assemble our TS modules into a JS bundle, and have ti do whatever optimization it does. Good times.</p>
+<!-- End Step Content -->
+
+<!-- Project Information -->
+
+<h2 id="Project-Information"><a href="#Project-Information" class="headerlink" title="Project Information"></a>Project Information</h2><h3 id="Available-at"><a href="#Available-at" class="headerlink" title="Available at"></a>Available at</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/ikaem/angry-chaired-v2/">Github respository</a></li>
+<li><a target="_blank" rel="noopener" href="https://angrychaired.surge.sh/">Live website</a></li>
+</ul>
+<h3 id="Goals"><a href="#Goals" class="headerlink" title="Goals"></a>Goals</h3><ol>
+<li>Copy Web Development Simplified’s JS calculator with TypeScript and Webpack</li>
+<li>Use Tailwind to style the app</li>
+</ol>
+<h3 id="Steps"><a href="#Steps" class="headerlink" title="Steps"></a>Steps</h3><ol>
+<li>Setup and styling with Tailwind</li>
+<li>TypeScript setup and coding the calculator</li>
+<li><strong>Webpack setup</strong></li>
+</ol>
+<h3 id="Tech-and-Tools"><a href="#Tech-and-Tools" class="headerlink" title="Tech and Tools"></a>Tech and Tools</h3><ol>
+<li>Tailwind</li>
+<li>TypeScript</li>
+<li>Webpack</li>
+</ol>
+<h3 id="Experience-with-Tech-amp-Tools"><a href="#Experience-with-Tech-amp-Tools" class="headerlink" title="Experience with Tech &amp; Tools"></a>Experience with Tech &amp; Tools</h3><p>I haven’t done anything with Tailwind before, except for few crash courses. I did a course on Webpack setup, too, and used that as a guide for this project. As for TypeScript, I think that by now I settled into using it comfortably on a limited level.</p>
+<h2 id="DISCLAIMER"><a href="#DISCLAIMER" class="headerlink" title="DISCLAIMER"></a>DISCLAIMER</h2><p>Don’t take any of this seriously and as a matter-of-fact. These are my notes. It might look like I am trying to teach something to someone. I am not.</p>
 
 
                 
 
 
                 <!-- Cover image credit -->
+                
+                    <p class="image-credit-link">
+                        Cover image by <strong>
+                            <a target="_blank" rel="noopener" href="https://unsplash.com/@lauradewilde97?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
+                                Laura Dewilde
+                            </a>
+                        </strong>
+                    </p>
+
                 
 
   
@@ -233,6 +374,13 @@
             
             <!-- Custom placed tags -->
             <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                
+                    
+
+
+<a href="/angry-chaired-blog/tags/typescript/">#typescript</a> <a href="/angry-chaired-blog/tags/webpack/">#webpack</a>
+
+
                 
             </div>
             <!--  -->
