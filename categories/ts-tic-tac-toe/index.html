@@ -55,7 +55,7 @@
 
     <!-- Title -->
     
-    <title>page - Angry Chaired Blog</title>
+    <title>ts tic tac toe - Angry Chaired Blog</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
@@ -181,16 +181,16 @@
 </nav>
 
     <!-- Main Content -->
-    <!-- Page Header -->
+    
+
+<!-- Page Header -->
 <!-- Set your background image for this header in the theme's configuration: index_cover -->
 <header class="intro-header" style="background-image: url('/angry-chaired-blog/images/header-image.jpg')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="site-heading">
-                    <h1>Angry Chaired Blog</h1>
-                    <hr class="small">
-                    <span class="subheading">Writing about my web development learning...</span>
+                    <h1>ts tic tac toe</h1>
                 </div>
             </div>
         </div>
@@ -203,199 +203,26 @@
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             
                 <div class="post-preview">
-  <!-- test featured image -->
-
-  
-  <a href="/angry-chaired-blog/2020/graphql-react-jwt-apollo-client-cookies-headers/">
-
-    
-
-    <div class="post-preview__featured-image-container">
-      <img src="/angry-chaired-blog/2020/graphql-react-jwt-apollo-client-cookies-headers/ahmad-AT22-uV7rQs-unsplash.jpg" alt="" />
-    </div>
-
-    
-    <!-- <a href="/angry-chaired-blog/2020/graphql-react-jwt-apollo-client-cookies-headers/"> -->
-    <h2 class="post-title">
-      GraphQL & React & JWT: Apollo Client & Cookies & Headers
-    </h2>
-    <!--  -->
-
-    <p class="post-meta">
-      <!-- Date and Author -->
-       16/08/2020
+    <a href="/angry-chaired-blog/2020/tic-tac-toe-with-typescript-project-setup/">
+        <h1 class="post-title archive">
+            Tic Tac Toe with TypeScript: Project Setup
+        </h1>
+    </a>
+    <p class="post-meta archive">
+        <!-- Date and Author -->
+        
+        07/09/2020
     </p>
-
-    <div class="post-subtitle">
-        <!-- Step Content Start -->
-
-<h4 id="Part-7-of-12-in-GraphQL-amp-React-amp-JWT"><a href="#Part-7-of-12-in-GraphQL-amp-React-amp-JWT" class="headerlink" title="Part 7 of 12 in GraphQL &amp; React &amp; JWT"></a>Part 7 of 12 in GraphQL &amp; React &amp; JWT</h4><p>We have setup our backend in such way that a middleware, <strong>express-jwt</strong>, intercepts all our requests and checks if they come with valid access token attached to their headers.<br>Similarly, we used another middleware, <strong>cookie-parser</strong>, that also checks all requests for cookies, and populates the <strong>cookies</strong> property on the request object with existing cookies.<br>Because of such setup, our resolvers are able to perform user authentication.<br>At the moment, we dont’ have access token attached to our headers, nor do we include any cookies with our requests. So let’s change that.</p>
-    </div>
-
-  </a>
-
 </div>
-<hr />
-
             
-                <div class="post-preview">
-  <!-- test featured image -->
-
-  
-  <a href="/angry-chaired-blog/2020/graphql-react-jwt-apollo-client-cache/">
-
-    
-
-    <div class="post-preview__featured-image-container">
-      <img src="/angry-chaired-blog/2020/graphql-react-jwt-apollo-client-cache/mosa-moseneke-WOP-W1Yg6cg-unsplash.jpg" alt="" />
-    </div>
-
-    
-    <!-- <a href="/angry-chaired-blog/2020/graphql-react-jwt-apollo-client-cache/"> -->
-    <h2 class="post-title">
-      GraphQL & React & JWT: Apollo Client Cache
-    </h2>
-    <!--  -->
-
-    <p class="post-meta">
-      <!-- Date and Author -->
-       16/08/2020
-    </p>
-
-    <div class="post-subtitle">
-        <!-- Step Content Start -->
-
-<h4 id="Part-6-of-12-in-GraphQL-amp-React-amp-JWT"><a href="#Part-6-of-12-in-GraphQL-amp-React-amp-JWT" class="headerlink" title="Part 6 of 12 in GraphQL &amp; React &amp; JWT"></a>Part 6 of 12 in GraphQL &amp; React &amp; JWT</h4><p>We are now moving to the frontend side, to implement authentication functionalities into our React app.<br>We want to be able to login, register and logout from the app. We also want to be able to automatically login when we return to the app, and once we are logged in, we want to stay logged in as long as we are using the app.</p>
-    </div>
-
-  </a>
-
-</div>
-<hr />
-
-            
-                <div class="post-preview">
-  <!-- test featured image -->
-
-  
-  <a href="/angry-chaired-blog/2020/graphql-react-jwt-authentication-gql-resolvers/">
-
-    
-
-    <div class="post-preview__featured-image-container">
-      <img src="/angry-chaired-blog/2020/graphql-react-jwt-authentication-gql-resolvers/greta-scholderle-moller-xe07ZDGZ-2Q-unsplash.jpg" alt="" />
-    </div>
-
-    
-    <!-- <a href="/angry-chaired-blog/2020/graphql-react-jwt-authentication-gql-resolvers/"> -->
-    <h2 class="post-title">
-      GraphQL & React & JWT: Authentication & GQL Resolvers
-    </h2>
-    <!--  -->
-
-    <p class="post-meta">
-      <!-- Date and Author -->
-       16/08/2020
-    </p>
-
-    <div class="post-subtitle">
-        <!-- Step Content Start -->
-
-<h4 id="Part-5-of-12-in-GraphQL-amp-React-amp-JWT"><a href="#Part-5-of-12-in-GraphQL-amp-React-amp-JWT" class="headerlink" title="Part 5 of 12 in GraphQL &amp; React &amp; JWT"></a>Part 5 of 12 in GraphQL &amp; React &amp; JWT</h4><p>Ok, this one is long. But, resolvers that we need to create largely follow the same logic as the ones we created in the last series. So that’s good.</p>
-<p>Resolvers are just functions which are (I guess) called by their matching mutations or queries. They need to return data in the the shape that their mutations or queries specify. They also get passed certain parameters, and have access to context that is provided by the Apollo Express Server.</p>
-    </div>
-
-  </a>
-
-</div>
-<hr />
-
-            
-                <div class="post-preview">
-  <!-- test featured image -->
-
-  
-  <a href="/angry-chaired-blog/2020/graphql-react-jwt-apollo-server-cors-jwt-cookies/">
-
-    
-
-    <div class="post-preview__featured-image-container">
-      <img src="/angry-chaired-blog/2020/graphql-react-jwt-apollo-server-cors-jwt-cookies/kuan-fang-WaQ5xQq2E6g-unsplash.jpg" alt="" />
-    </div>
-
-    
-    <!-- <a href="/angry-chaired-blog/2020/graphql-react-jwt-apollo-server-cors-jwt-cookies/"> -->
-    <h2 class="post-title">
-      GraphQL & React & JWT: Apollo Server, Cors, JWT & Cookies
-    </h2>
-    <!--  -->
-
-    <p class="post-meta">
-      <!-- Date and Author -->
-       16/08/2020
-    </p>
-
-    <div class="post-subtitle">
-        <!-- Step Content Start -->
-
-<h4 id="Part-4-of-12-in-GraphQL-amp-React-amp-JWT"><a href="#Part-4-of-12-in-GraphQL-amp-React-amp-JWT" class="headerlink" title="Part 4 of 12 in GraphQL &amp; React &amp; JWT"></a>Part 4 of 12 in GraphQL &amp; React &amp; JWT</h4><p>Now when we have made sure that our requests are inspected for access token for validity on their arrival to the backend, we want to make sure that our resolvers can actually work with both requests and responses. Mainly, we want to be able to have them deal with cookies and set tokens on responses.<br>In addition to this, we want to make sure our server is actually allowed to read and set cookies on clients that access backend resources.</p>
-    </div>
-
-  </a>
-
-</div>
-<hr />
-
-            
-                <div class="post-preview">
-  <!-- test featured image -->
-
-  
-  <a href="/angry-chaired-blog/2020/graphql-react-jwt-middleware-jwt-validity/">
-
-    
-
-    <div class="post-preview__featured-image-container">
-      <img src="/angry-chaired-blog/2020/graphql-react-jwt-middleware-jwt-validity/arseny-togulev-GKLQ8PJuCzI-unsplash.jpg" alt="" />
-    </div>
-
-    
-    <!-- <a href="/angry-chaired-blog/2020/graphql-react-jwt-middleware-jwt-validity/"> -->
-    <h2 class="post-title">
-      GraphQL & React & JWT: Middleware && JWT Validity
-    </h2>
-    <!--  -->
-
-    <p class="post-meta">
-      <!-- Date and Author -->
-       16/08/2020
-    </p>
-
-    <div class="post-subtitle">
-        <!-- Step Content Start -->
-
-<h4 id="Part-3-of-12-in-GraphQL-amp-React-amp-JWT"><a href="#Part-3-of-12-in-GraphQL-amp-React-amp-JWT" class="headerlink" title="Part 3 of 12 in GraphQL &amp; React &amp; JWT"></a>Part 3 of 12 in GraphQL &amp; React &amp; JWT</h4><p>When a user sends a request to our backend, we want to check if their access token is valid.<br>We will set up requests to have a place for access token in their headers. This way access token will be sent to the backend with every request.<br>The only thing we need to do on backend is to inspect the token - does it exist at all, and if yes, is it valid. </p>
-    </div>
-
-  </a>
-
-</div>
-<hr />
-
-            
-
+            <div class="archive-before-pagination"></div>
             <ul class="pager">
     
-        <li class="previous"><a href="/angry-chaired-blog/page/7/">&larr;  Newer Posts</a></li>
-    
-    
-        <li class="next"><a href="/angry-chaired-blog/page/9/">Older Posts  &rarr;</a></li>
     
 </ul>
         </div>
     </div>
 </div>
-
 
 
     <!-- Footer -->

@@ -6,7 +6,7 @@
   <link href="https://ikaem.github.io/angry-chaired-blog/atom.xml" rel="self"/>
   
   <link href="https://ikaem.github.io/angry-chaired-blog/"/>
-  <updated>2020-09-07T08:49:19.699Z</updated>
+  <updated>2020-09-07T12:34:31.873Z</updated>
   <id>https://ikaem.github.io/angry-chaired-blog/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Tic Tac Toe with TypeScript: Project Setup</title>
+    <link href="https://ikaem.github.io/angry-chaired-blog/2020/tic-tac-toe-with-typescript-project-setup/"/>
+    <id>https://ikaem.github.io/angry-chaired-blog/2020/tic-tac-toe-with-typescript-project-setup/</id>
+    <published>2020-09-07T10:23:17.000Z</published>
+    <updated>2020-09-07T12:34:31.873Z</updated>
+    
+    
+    <summary type="html">&lt;!-- Step Content Start --&gt;
+
+&lt;h4 id=&quot;Part-1-of-3-in-Tic-Tac-Toe-with-TypeScript&quot;&gt;&lt;a href=&quot;#Part-1-of-3-in-Tic-Tac-Toe-with-TypeScript&quot; class=&quot;headerlink&quot; title=&quot;Part 1 of 3 in Tic Tac Toe with TypeScript&quot;&gt;&lt;/a&gt;Part 1 of 3 in Tic Tac Toe with TypeScript&lt;/h4&gt;&lt;p&gt;I figured I should do another small app, but code it completely on my own this time. I saw someone mention Tic Tac Toe online, so it’s Tic Tac Toe.&lt;br&gt;Same as before, I do this one with TypeScript, Tailwind and Webpack.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="ts tic tac toe" scheme="https://ikaem.github.io/angry-chaired-blog/categories/ts-tic-tac-toe/"/>
+    
+    
+    <category term="typescript" scheme="https://ikaem.github.io/angry-chaired-blog/tags/typescript/"/>
+    
+    <category term="games" scheme="https://ikaem.github.io/angry-chaired-blog/tags/games/"/>
+    
+  </entry>
   
   <entry>
     <title>TypeScript &amp; Webpack Calculator: Calculator App &amp; Webpack</title>
@@ -475,32 +498,6 @@
     <category term="hexo" scheme="https://ikaem.github.io/angry-chaired-blog/tags/hexo/"/>
     
     <category term="blog" scheme="https://ikaem.github.io/angry-chaired-blog/tags/blog/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Gatsby Web: Audit, Optimize &amp; Deploy</title>
-    <link href="https://ikaem.github.io/angry-chaired-blog/2020/gatsby-web-audit-optimize-deploy/"/>
-    <id>https://ikaem.github.io/angry-chaired-blog/2020/gatsby-web-audit-optimize-deploy/</id>
-    <published>2020-08-17T06:06:39.000Z</published>
-    <updated>2020-08-30T05:37:05.984Z</updated>
-    
-    
-    <summary type="html">&lt;!-- Step Content Start --&gt;
-
-&lt;h4 id=&quot;Part-10-of-10-in-Gatsby-Web&quot;&gt;&lt;a href=&quot;#Part-10-of-10-in-Gatsby-Web&quot; class=&quot;headerlink&quot; title=&quot;Part 10 of 10 in Gatsby Web&quot;&gt;&lt;/a&gt;Part 10 of 10 in Gatsby Web&lt;/h4&gt;&lt;p&gt;After making our components, programmatically creating pages, inserting images and implementing messaging funcitonality, last thing to do is to actually put our website online. &lt;/p&gt;
-&lt;p&gt;Before we do that, however, let’s tweak it a bit more.&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="gatsby web" scheme="https://ikaem.github.io/angry-chaired-blog/categories/gatsby-web/"/>
-    
-    
-    <category term="gatsby" scheme="https://ikaem.github.io/angry-chaired-blog/tags/gatsby/"/>
-    
-    <category term="deploy" scheme="https://ikaem.github.io/angry-chaired-blog/tags/deploy/"/>
-    
-    <category term="surge" scheme="https://ikaem.github.io/angry-chaired-blog/tags/surge/"/>
     
   </entry>
   
