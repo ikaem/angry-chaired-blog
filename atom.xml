@@ -6,7 +6,7 @@
   <link href="https://ikaem.github.io/angry-chaired-blog/atom.xml" rel="self"/>
   
   <link href="https://ikaem.github.io/angry-chaired-blog/"/>
-  <updated>2020-09-07T12:34:31.873Z</updated>
+  <updated>2020-09-08T07:00:32.304Z</updated>
   <id>https://ikaem.github.io/angry-chaired-blog/</id>
   
   <author>
@@ -17,11 +17,34 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Tic Tac Toe: Coding the Game</title>
+    <link href="https://ikaem.github.io/angry-chaired-blog/2020/tic-tac-toe-coding-the-game/"/>
+    <id>https://ikaem.github.io/angry-chaired-blog/2020/tic-tac-toe-coding-the-game/</id>
+    <published>2020-09-07T12:36:52.000Z</published>
+    <updated>2020-09-08T07:00:32.304Z</updated>
+    
+    
+    <summary type="html">&lt;!-- Step Content Start --&gt;
+
+&lt;h4 id=&quot;Part-2-of-3-in-Tic-Tac-Toe-with-TypeScript&quot;&gt;&lt;a href=&quot;#Part-2-of-3-in-Tic-Tac-Toe-with-TypeScript&quot; class=&quot;headerlink&quot; title=&quot;Part 2 of 3 in Tic Tac Toe with TypeScript&quot;&gt;&lt;/a&gt;Part 2 of 3 in Tic Tac Toe with TypeScript&lt;/h4&gt;&lt;p&gt;Thus starts the hard (and long) part. To get the game running, we will use the class we have already created. There is not much more to say. Let’s do this.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="ts tic tac toe" scheme="https://ikaem.github.io/angry-chaired-blog/categories/ts-tic-tac-toe/"/>
+    
+    
+    <category term="typescript" scheme="https://ikaem.github.io/angry-chaired-blog/tags/typescript/"/>
+    
+    <category term="games" scheme="https://ikaem.github.io/angry-chaired-blog/tags/games/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Tic Tac Toe with TypeScript: Project Setup</title>
     <link href="https://ikaem.github.io/angry-chaired-blog/2020/tic-tac-toe-with-typescript-project-setup/"/>
     <id>https://ikaem.github.io/angry-chaired-blog/2020/tic-tac-toe-with-typescript-project-setup/</id>
     <published>2020-09-07T10:23:17.000Z</published>
-    <updated>2020-09-07T12:34:31.873Z</updated>
+    <updated>2020-09-07T13:31:26.755Z</updated>
     
     
     <summary type="html">&lt;!-- Step Content Start --&gt;
@@ -464,31 +487,6 @@
     <summary type="html">&lt;!-- Step Content Start --&gt;
 
 &lt;h4 id=&quot;Part-2-of-8-in-Hexo-Blog&quot;&gt;&lt;a href=&quot;#Part-2-of-8-in-Hexo-Blog&quot; class=&quot;headerlink&quot; title=&quot;Part 2 of 8 in Hexo Blog&quot;&gt;&lt;/a&gt;Part 2 of 8 in Hexo Blog&lt;/h4&gt;&lt;p&gt;Hexo can use Markdown to create blog content. We will create few new posts, a page and a draft, and then see how Hexo scaffolds can help us to prepare an outline of our content and make its creation simpler. &lt;/p&gt;</summary>
-    
-    
-    
-    <category term="hexo blog" scheme="https://ikaem.github.io/angry-chaired-blog/categories/hexo-blog/"/>
-    
-    
-    <category term="hexo" scheme="https://ikaem.github.io/angry-chaired-blog/tags/hexo/"/>
-    
-    <category term="blog" scheme="https://ikaem.github.io/angry-chaired-blog/tags/blog/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo Blog: Create Hexo Projext</title>
-    <link href="https://ikaem.github.io/angry-chaired-blog/2020/hexo-blog-create-hexo-projext/"/>
-    <id>https://ikaem.github.io/angry-chaired-blog/2020/hexo-blog-create-hexo-projext/</id>
-    <published>2020-08-17T06:31:18.000Z</published>
-    <updated>2020-08-17T06:43:45.782Z</updated>
-    
-    
-    <summary type="html">&lt;!-- Step Content Start --&gt;
-
-&lt;h4 id=&quot;Part-1-of-8-in-Hexo-Blog&quot;&gt;&lt;a href=&quot;#Part-1-of-8-in-Hexo-Blog&quot; class=&quot;headerlink&quot; title=&quot;Part 1 of 8 in Hexo Blog&quot;&gt;&lt;/a&gt;Part 1 of 8 in Hexo Blog&lt;/h4&gt;&lt;p&gt;I wanted to try Hexo to move away from Wordpress. It is that simple.&lt;br&gt;Wordpress is big, there are tons of options, and they require lots of clicking.&lt;br&gt;I just need a simple blog, and Wordpress seems to be aimed for much more than that.&lt;/p&gt;
-&lt;p&gt;I did try Hexo before, and I just didn’t find it interesting. Right now, though, I had a reson to dig deeper. Hexo generates static files, so that is cool. It uses Markdown, and it supports themes and plugins. So I decided to give it another shot. &lt;/p&gt;
-&lt;p&gt;That’s pretty much it. I don’t have any big idea here, but I have instead decided to follow its &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;, and add features that I find interesting. &lt;/p&gt;</summary>
     
     
     

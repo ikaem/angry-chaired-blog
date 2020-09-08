@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="Inexperienced and curious pokes into the sprawling world of web development "/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="kaem"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Tic Tac Toe: Coding the Game"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Inexperienced and curious pokes into the sprawling world of web development "/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Angry Chaired Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://ikaem.github.io/angry-chaired-blog/angry-chaired-blog/images/header-image.jpg"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://ikaem.github.io/angry-chaired-blog/angry-chaired-blog/images/header-image.jpg"/>
+    
+
+    <!-- Title -->
+    
+    <title>Tic Tac Toe: Coding the Game - Angry Chaired Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/angry-chaired-blog/css/style.css">
+
+    
+<link rel="stylesheet" href="/angry-chaired-blog/css/custom-style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+    <link rel="icon" href="/angry-chaired-blog/images/favicon.ico"/>
+    
+
+<meta name="generator" content="Hexo 5.0.2"><link rel="alternate" href="/angry-chaired-blog/atom.xml" title="Angry Chaired Blog" type="application/atom+xml">
+</head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/angry-chaired-blog/">Angry Chaired Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/about">
+                            
+                                About
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a target="_blank" rel="noopener" href="https://angrychaired.surge.sh">
+                            
+                                <i class="fa fa-user fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a target="_blank" rel="noopener" href="https://github.com/ikaem/">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a href="/angry-chaired-blog/atom.xml">
+                            
+                                <i class="fa fa-rss fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('caleb-dow-XclEjQqLFLU-unsplash.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Tic Tac Toe: Coding the Game</h1>
+
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            07/09/2020
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/angry-chaired-blog/categories/ts-tic-tac-toe/">ts tic tac toe</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <!-- Step Content Start -->
+
+<h4 id="Part-2-of-3-in-Tic-Tac-Toe-with-TypeScript"><a href="#Part-2-of-3-in-Tic-Tac-Toe-with-TypeScript" class="headerlink" title="Part 2 of 3 in Tic Tac Toe with TypeScript"></a>Part 2 of 3 in Tic Tac Toe with TypeScript</h4><p>Thus starts the hard (and long) part. To get the game running, we will use the class we have already created. There is not much more to say. Let’s do this.</p>
+<a id="more"></a>
+
+<h4 id="See-Project-Information"><a href="#See-Project-Information" class="headerlink" title="See Project Information"></a>See <a href="#Project-Information">Project Information</a></h4><p>We will go build the code this imaginging that we are playing the game. We place our mark, we wait for the code to check if we won, and then we see what the code tells us about the game.<br>When checking the game status in the corresponding method, we will approach it in a way that will have use leave the method as soon as possible. If there is not enough moves to determine the winner, leave the method. If there is a winner, announce them and leave the method, and if there is another move to make, make it possible and leave the method.</p>
+<h2 id="Step-2-Code-the-game"><a href="#Step-2-Code-the-game" class="headerlink" title="Step 2: Code the game"></a>Step 2: Code the game</h2><p>This post is divided into:</p>
+<ol>
+<li>Inserting player icon into game grid</li>
+<li>Checking game status</li>
+<li>Displaying game status</li>
+<li>Updating game score</li>
+<li>Starting new game</li>
+<li>Resetting game score</li>
+<li>Defining helper methods</li>
+</ol>
+<h3 id="Inserting-player-icon-into-game-grid"><a href="#Inserting-player-icon-into-game-grid" class="headerlink" title="Inserting player icon into game grid"></a>Inserting player icon into game grid</h3><p>We will start with defining how the game will mark a grid cell when a player clicks on it.</p>
+<p>To do so, first we have to set an an event listener on each cell that the player can click on.<br>Since we already have a selector for all grid cells, we will loop over them, place a click event listener on each one.</p>
+<figure class="highlight ts"><figcaption><span>app.ts - Placing click event listener on each grid cell</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> exoxGame = <span class="keyword">new</span> Exox(playerXScore, playerOScore, gameStatusScreen);</span><br><span class="line"><span class="comment">// ...</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> playGridCells = <span class="built_in">document</span>.querySelectorAll(<span class="string">&quot;[data-game-cell]&quot;</span>);</span><br><span class="line"><span class="comment">// ...</span></span><br><span class="line"></span><br><span class="line">playGridCells.forEach(<span class="function">(<span class="params">cell</span>) =&gt;</span> &#123;</span><br><span class="line">  cell.addEventListener(<span class="string">&quot;click&quot;</span>, <span class="function">(<span class="params">event</span>) =&gt;</span> &#123;</span><br><span class="line">    exoxGame.insertIcon(event.currentTarget <span class="keyword">as</span> HTMLDivElement);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>Note that we are calling the <strong>insertIcon</strong> method from the event listener, and passing it the current target of the event. The <strong>currentTarget</strong> property on the event refers to the element on which the event listener was actually placed.<br>This means that even if there was an elemenet inside the cell, the event listener would always pass the grid cell to the <strong>insertIcon</strong> method.</p>
+<p>Speaking of the element inside the grid cell, we only want to be able to click on the grid cell if there is nothing in it. We do so in order to insert an icon in it. If there already is an icon in the cell, we don’t want to allow the method to insert anything inside.</p>
+<p>To get this behavior, we will move to the <strong>inserIcon</strong> method in the class, and have it return if there is some kind of content on the target that was passed to it.</p>
+<p>The <strong>hasChildNodes()</strong> method will do just fine for this purpose.<br>We will that if the target that was passed to this method has any child nodes, we will return from the method.<br>Since we are here, we will say that if the game control variable is not true, we will also return.</p>
+<figure class="highlight ts"><figcaption><span>app.ts Not allowing placemenet of icons on the grid</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Exox &#123;</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">  insertIcon = <span class="function">(<span class="params">target: HTMLDivElement</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (!<span class="built_in">this</span>.isGameOn) <span class="keyword">return</span>;</span><br><span class="line">    <span class="keyword">if</span> (target.hasChildNodes()) <span class="keyword">return</span>;</span><br><span class="line">  &#125;;</span><br><span class="line">  <span class="comment">//   ...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Nice.<br>Now, what happens if we pass both checks? Then we need to place the current’s player icon in the grid cell.<br>Since our class has a property that tells us which player is on the move, we could just enter that property into the cell via <strong>textContent</strong> property on the event target.</p>
+<p>For styling and organization purposes, however, I decided to create a <strong>span</strong> element which will render the said property.<br>This <strong>span</strong> element is a string returned by a method in the game class, as follows:</p>
+<figure class="highlight ts"><figcaption><span>app.ts Function that returns stringified span element rendering current player on the move</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// helper function</span></span><br><span class="line">createPlayerIcon = <span class="function">() =&gt;</span></span><br><span class="line">  <span class="string">`&lt;span data-player-icon class=&quot;player-icon&quot;&gt;<span class="subst">$&#123;<span class="built_in">this</span>.playerOnMove&#125;</span>&lt;/span&gt;`</span>;</span><br></pre></td></tr></table></figure>
+
+<p>Now, we can use the <strong>innerHTML</strong> method on the event target, and pass it the string returned by the helper function. This will effectively place the current player’s icon onto the grid.</p>
+<figure class="highlight ts"><figcaption><span>App.ts - inserting player's icon into a grid cell</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">target.innerHTML = <span class="built_in">this</span>.createPlayerIcon();</span><br></pre></td></tr></table></figure>
+
+<p>Lovely.<br>Finally, we want to let the game know that the current player made their move.<br>We do so by pushing the value of the <strong>playerOnMove</strong> property into the <strong>gameMoves</strong> array.</p>
+<p>Here is the complete <strong>insertIcon</strong> method, together with the said push:</p>
+<figure class="highlight ts"><figcaption><span>App.ts - Complete "insertIcon" method</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">insertIcon = <span class="function">(<span class="params">target: HTMLDivElement</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">if</span> (!<span class="built_in">this</span>.isGameOn) <span class="keyword">return</span>;</span><br><span class="line">  <span class="keyword">if</span> (target.hasChildNodes()) <span class="keyword">return</span>;</span><br><span class="line"></span><br><span class="line">  target.innerHTML = <span class="built_in">this</span>.playerIcon;</span><br><span class="line">  <span class="built_in">this</span>.gameMoves.push(<span class="built_in">this</span>.playerOnMove);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>Very cool. Now go ahead and try clicking on that grid. You should be placing those “X” icons like a boss.</p>
+<h3 id="Checking-game-status"><a href="#Checking-game-status" class="headerlink" title="Checking game status"></a>Checking game status</h3><p>But, we don’t want to be working only with the Xs, do we? Let’s fix that in the <strong>checkGameStatus</strong> method.</p>
+<p>First thing we need to do is to actually call this method. We will call it from the event listener on that same grid cell we already worked with.<br>We do so after the <strong>insertIcon</strong> method returns, to make sure we can work with fresh <strong>gameMoves</strong> data.</p>
+<figure class="highlight ts"><figcaption><span>app.ts - Calling "checkGameStatus" method from the event listener of grid cells</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ...</span></span><br><span class="line">playGridCells.forEach(<span class="function">(<span class="params">cell</span>) =&gt;</span> &#123;</span><br><span class="line">  cell.addEventListener(<span class="string">&quot;click&quot;</span>, <span class="function">(<span class="params">event</span>) =&gt;</span> &#123;</span><br><span class="line">    exoxGame.insertIcon(event.currentTarget <span class="keyword">as</span> HTMLDivElement);</span><br><span class="line">    exoxGame.checkGameStatus();</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>Ok now. Before we enter the method, we want to make sure that the game is on.<br>Then, we want to check if the current game state qualifies for a win check.<br>Since the primary criteria for winning a game is that player has made three moves, we will test for that.</p>
+<p>We will go over the <strong>gameMoves</strong> array, and see if there are three elements in it that correspond to the current player that is on the move.<br>Remember, the <strong>playerOnMove</strong> property still hasn’t changed.</p>
+<p>I checked the <strong>gameMoves</strong> array with the <strong>filter</strong> method on the <strong>gameMoves</strong> array. This generates a new array that holds values equal to the current <strong>playerOnMove</strong> value.<br>Then, if the filtered array has less than three elements, we will change the player, and return from the method.<br>This continues the game, and the other player can place their icon.</p>
+<figure class="highlight ts"><figcaption><span>app.ts - "checkGameStatus" method checks if enough moves for win</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">checkGameStatus = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">if</span> (!<span class="built_in">this</span>.isGameOn) <span class="keyword">return</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> currentPlayerMoves = <span class="built_in">this</span>.gameMoves.filter(</span><br><span class="line">    (move) =&gt; move === <span class="built_in">this</span>.playerOnMove</span><br><span class="line">  );</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> (currentPlayerMoves.length !== <span class="number">3</span>) &#123;</span><br><span class="line">    <span class="built_in">this</span>.playerOnMove = <span class="built_in">this</span>.playerOnMove === <span class="string">&quot;X&quot;</span> ? <span class="string">&quot;O&quot;</span> : <span class="string">&quot;X&quot;</span>;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>Very cool.<br>What if, however, the player has already made three moves?<br>Well, this is where the show starts. We can already start checking for a win.</p>
+<p>First, we want to check the current cell’s column. Then, we want to check if there are any other icons in the same column. If there are, we want to check if their content is the same as the current <strong>playerOnMove</strong> value.</p>
+<p>If there is no win after this check, we do the same thing for rows.<br>If there is no win after this check either, we check for diagonal wins.</p>
+<p>There is a caveat with the diagonal wins, though. Not every cell is on a valid diagonal, so we have to check if the current cell is on a diagonal first.</p>
+<p>Right.<br>Before we go into checking, we do have to make two small adjustments to the existing code.</p>
+<p>First one is that we have to pass the current cell’s data attributes to the <strong>checkGameStatus</strong> method. This way the method will have data to work with.<br>The data attribute values are stored in the <strong>dataset</strong> object on HTML elements, so we will pass that one as an argument to the <strong>checkGameStatus</strong>.</p>
+<figure class="highlight ts"><figcaption><span>app.ts - Passing "dataset" argument to the "checkGameStatus" method</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ...</span></span><br><span class="line">cell.addEventListener(<span class="string">&quot;click&quot;</span>, <span class="function">(<span class="params">event</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">  exoxGame.checkGameStatus(event.currentTarget.dataset);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>And we have to support this argument in the method’s definition, too:</p>
+<figure class="highlight ts"><figcaption><span>app.ts - Accepting a "dataset" argument in the "checkGameStatus" method</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">checkGameStatus = <span class="function">(<span class="params">dataset: CellLocation</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="comment">/* ... */</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>Notice the <strong>CellLocation</strong> type for the <strong>dataset</strong> argument.<br>I wanted to have typed those data attributes for columns, rows and diagonals that exist in the <strong>dataset</strong> object on each of the grid cells.<br>Because of this I defined an interface that extends the <strong>DOMStringMap</strong>, which is the type of <strong>dataset</strong> object.</p>
+<figure class="highlight ts"><figcaption><span>Interface used to type "dataset" object</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">interface</span> CellLocation <span class="keyword">extends</span> DOMStringMap &#123;</span><br><span class="line">  cellCol: <span class="built_in">string</span>;</span><br><span class="line">  cellRow: <span class="built_in">string</span>;</span><br><span class="line">  cellDg1: <span class="built_in">string</span>;</span><br><span class="line">  cellDg2: <span class="built_in">string</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Then, I also cast the argument passed to the <strong>checkGameStatus</strong> as an object of <strong>CellLocation</strong> shape:</p>
+<figure class="highlight ts"><figcaption><span>app.ts - The "dataset" object cast as object with shape of "CellLocation" interface</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ...</span></span><br><span class="line">cell.addEventListener(<span class="string">&quot;click&quot;</span>, <span class="function">(<span class="params">event</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">  exoxGame.checkGameStatus(</span><br><span class="line">    (event.currentTarget <span class="keyword">as</span> HTMLDivElement).dataset <span class="keyword">as</span> CellLocation</span><br><span class="line">  );</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>Right.</p>
+<p>Let’s go back to checking if our player won.<br>We have an object with information about the current cell’s location, so let’s see if there are any other cells with the same location.</p>
+<p>We start with columns.<br>First, we will select all DOM elements that have same column data attribute as the current cell.</p>
+<figure class="highlight ts"><figcaption><span>app.ts - Searching for cells in the same column as the curren cell</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">checkGameStatus = <span class="function">(<span class="params">dataset: CellLocation</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="comment">/* ... */</span></span><br><span class="line">  <span class="keyword">const</span> columnElements = <span class="built_in">document</span>.querySelectorAll(</span><br><span class="line">    <span class="string">`[data-cell-col=&#x27;<span class="subst">$&#123;dataset.cellCol&#125;</span>&#x27;]`</span></span><br><span class="line">  );</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>Nice. The <strong>columnElements</strong> property is a list that now holds all elements with the same <strong>data-cell-col</strong> data attribute. Which means that any element in this list is in the same column as our current cell.</p>
+<p>However, the <strong>columnElements</strong> property is of the <strong>NodeList</strong> type. While this item is iterable, we cannot use methods like <strong>filter</strong> and <strong>map</strong> on it.<br>Since I very much want to use <strong>filter</strong> here, I will convert the <strong>columnElements</strong> to an array, and then will filter all items inside it to find those that have same content as the current <strong>playerOnMove</strong> value.<br>Again, remember that at this point we still haven’t changed the <strong>playerOnMove</strong> value.</p>
+<p>We convert the <strong>columnElements</strong> to an array with the <strong>Array.from()</strong> method, and immedaitely use <strong>filter</strong> method on it.</p>
+<figure class="highlight ts"><figcaption><span>app.ts - Converting to an array and filtering "NodeList" list</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">checkGameStatus = <span class="function">(<span class="params">dataset: CellLocation</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="comment">/* ... */</span></span><br><span class="line">  <span class="keyword">const</span> columnElements = <span class="built_in">document</span>.querySelectorAll(</span><br><span class="line">    <span class="string">`[data-cell-col=&#x27;<span class="subst">$&#123;dataset.cellCol&#125;</span>&#x27;]`</span></span><br><span class="line">  );</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> currentPlayerColumnCells = <span class="built_in">Array</span>.from(columnCells).filter(</span><br><span class="line">    (cell) =&gt; cell.textContent?.trim() === <span class="built_in">this</span>.playerOnMove</span><br><span class="line">  );</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>Very cool. Ideally, the <strong>currentPlayerColumnCells</strong> holds all cells that are in the same column and have same text content as the current <strong>playerToMove</strong>.</p>
+<p>Let’s check that. If indeed there are three items in there, we have a winner.</p>
+<figure class="highlight ts"><figcaption><span>app.ts - Check if three items in the "currentPlayerColumnCells" array</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">checkGameStatus = <span class="function">(<span class="params">dataset: CellLocation</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="comment">/* ... */</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> currentPlayerColumnCells = <span class="built_in">Array</span>.from(columnCells).filter(</span><br><span class="line">    (cell) =&gt; cell.textContent?.trim() === <span class="built_in">this</span>.playerOnMove</span><br><span class="line">  );</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> (currentPlayerColumnCells.length === <span class="number">3</span>) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;we have a winner&quot;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>We should probably do a bit more to celebrate the winner, than just logging a string.</p>
+<p>We will create a new class property to hold the current winner. We give give this property a value of the current <strong>playerOnMove</strong>, and we push it into another new array we create in the class: the <strong>totalScore</strong> array.<br>Later, we will use <strong>totalScore</strong> to get both players’ scores.</p>
+<p>Then, we turn the game off by setting the <strong>isGameOn</strong> property to false.<br>We also call the <strong>displayGameScore</strong> method to actually render players’s scores. We will define this method a bit later.</p>
+<p>Finally, we <strong>return</strong> to make sure no more code is executed in the <strong>checkGameStatus</strong> method.</p>
+<p>Here is the whole thing:</p>
+<figure class="highlight ts"><figcaption><span>app.ts - Proclaiming a game winner</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Exox &#123;</span><br><span class="line">  roundWinner = <span class="string">&quot;&quot;</span>;</span><br><span class="line">  totalScore: <span class="built_in">string</span>[] = [];</span><br><span class="line">  <span class="comment">//   ...</span></span><br><span class="line">  checkGameStatus = <span class="function">(<span class="params">dataset: CellLocation</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">/* ... */</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (currentPlayerColumnCells.length === <span class="number">3</span>) &#123;</span><br><span class="line">      <span class="built_in">this</span>.roundWinner = <span class="built_in">this</span>.playerOnMove;</span><br><span class="line">      <span class="built_in">this</span>.totalScore.push(<span class="built_in">this</span>.roundWinner);</span><br><span class="line">      <span class="built_in">this</span>.isGameOn = <span class="literal">false</span>;</span><br><span class="line">      <span class="built_in">this</span>.displayGameScore();</span><br><span class="line">      <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>What if we don’t find the winner? Well, we <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=AWvRcWDr5y8&feature=youtu.be&t=87">keep moving</a>. We check rows, and if no win, and we check the diagonals.</p>
+<p>For the sake of brevity, I include only the code for for the first diagonal, the top-left to bottom-right one. Logic is the same. The only difference that we make an if-check to check for a win only if the cell is on a diagonal.</p>
+<figure class="highlight ts"><figcaption><span>app.ts - Checking for a win when a cell is on a diagonal</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">checkGameStatus = <span class="function">(<span class="params">dataset: CellLocation</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="comment">/* ... */</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> (<span class="built_in">Boolean</span>(dataset.cellDg1)) &#123;</span><br><span class="line">    <span class="keyword">const</span> currentPlayerDiagonal1Cells = <span class="built_in">Array</span>.from(</span><br><span class="line">      <span class="built_in">document</span>.querySelectorAll(<span class="string">&quot;[data-cell-dg1=&#x27;true&#x27;]&quot;</span>)</span><br><span class="line">    ).filter(<span class="function">(<span class="params">cell</span>) =&gt;</span> cell.textContent?.trim() === <span class="built_in">this</span>.playerOnMove);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (currentPlayerDiagonal1Cells.length === <span class="number">3</span>) &#123;</span><br><span class="line">      <span class="built_in">this</span>.roundWinner = <span class="built_in">this</span>.playerOnMove;</span><br><span class="line">      <span class="built_in">this</span>.totalScore.push(<span class="built_in">this</span>.roundWinner);</span><br><span class="line">      <span class="built_in">this</span>.isGameOn = <span class="literal">false</span>;</span><br><span class="line">      <span class="built_in">this</span>.displayGameScore();</span><br><span class="line">      <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>Hopefully, by now we have a win. But, what if we dont? Well, since at this point we know that the current player has no more moves left, there are two options:</p>
+<ol>
+<li>Other player might have a move left</li>
+<li>Other player might not have a move left, in which case we have a tie.</li>
+</ol>
+<p>Let’s get the first option out of the way. If the other player still has a move left, then the <strong>gameMoves</strong> array should have only five elements inside.<br>In this case, we will change the <strong>playerToMove</strong> to the other player, and return. The game goes on.</p>
+<figure class="highlight ts"><figcaption><span>app.ts - Check if there is one more move left in the game</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">checkGameStatus = <span class="function">(<span class="params">dataset: CellLocation</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="comment">/* ... */</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> (<span class="built_in">this</span>.gameMoves.length &lt; <span class="number">6</span>)</span><br><span class="line">    <span class="keyword">return</span> (<span class="built_in">this</span>.playerOnMove = <span class="built_in">this</span>.playerOnMove === <span class="string">&quot;X&quot;</span> ? <span class="string">&quot;O&quot;</span> : <span class="string">&quot;X&quot;</span>);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>Finally, if this doesn’t work, there is only one option left. We have a tie.<br>We don’t need to make any checks. We will just finish the game, and return</p>
+<figure class="highlight ts"><figcaption><span>app.ts - The game is a tie</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">checkGameStatus = <span class="function">(<span class="params">dataset: CellLocation</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="comment">/* ... */</span></span><br><span class="line"></span><br><span class="line">  <span class="built_in">this</span>.isGameOn = <span class="literal">false</span>;</span><br><span class="line">  <span class="keyword">return</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>That’s it. This should work.</p>
+<h3 id="Displaying-game-status"><a href="#Displaying-game-status" class="headerlink" title="Displaying game status"></a>Displaying game status</h3><p>The way we imagined the game, it should provide visual information on its status on every move. Let’s set this up.</p>
+<p>We will accomplish this functionality with the <strong>displayGameStatus</strong> that we outlined in the first post.<br>Since we want visual information on every move, we will have this function called from the same event listener that called the previous two functions:</p>
+<figure class="highlight ts"><figcaption><span>app.ts - Calling "displaGameStatus" method from even listener on grid cells</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ...</span></span><br><span class="line">cell.addEventListener(<span class="string">&quot;click&quot;</span>, <span class="function">(<span class="params">event</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">  exoxGame.displayGameStatus();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>The method itself deals with three possible options:</p>
+<ul>
+<li>It renders current move in case the game is on</li>
+<li>It renders “Game Over” string in case the game is off, but there is no winner</li>
+<li>It renders a win message if there is a winner (and the game is off)</li>
+</ul>
+<p>Here is the method checking all the possible cases.<br>When a case matches, the method inserts a corresponding stringified HTML content into DOM. To do this, it uses <strong>innerHTML</strong> method, the same one we previously used in the <strong>insertIcon</strong> method.<br>Depending on the case, a corresponding string is inserted into the stringified HTML.</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">displayGameStatus = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="comment">// regular move</span></span><br><span class="line">  <span class="keyword">if</span> (<span class="built_in">this</span>.isGameOn)</span><br><span class="line">    <span class="keyword">return</span> <span class="string">`</span></span><br><span class="line"><span class="string">        &lt;span id=&quot;winner-icon&quot; class=&quot;player-icon <span class="subst">$&#123;</span></span></span><br><span class="line"><span class="string"><span class="subst">          <span class="built_in">this</span>.roundWinner &amp;&amp; <span class="string">&quot;win-icon&quot;</span></span></span></span><br><span class="line"><span class="string"><span class="subst">        &#125;</span> hidden&quot;&gt;<span class="subst">$&#123;<span class="built_in">this</span>.playerOnMove&#125;</span>&lt;/span&gt;</span></span><br><span class="line"><span class="string">        &lt;span</span></span><br><span class="line"><span class="string">          id=&quot;game-message&quot;</span></span><br><span class="line"><span class="string">          class=&quot;text-white text-4xl text-shadow font-black&quot;</span></span><br><span class="line"><span class="string">          &gt;<span class="subst">$&#123;<span class="string">&quot;to move&quot;</span>&#125;</span>&lt;/span</span></span><br><span class="line"><span class="string">        &gt;`</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// game is not on and no winner</span></span><br><span class="line">  <span class="keyword">if</span> (!<span class="built_in">this</span>.roundWinner)</span><br><span class="line">    <span class="keyword">return</span> <span class="string">`</span></span><br><span class="line"><span class="string">        &lt;span id=&quot;winner-icon&quot; class=&quot;player-icon <span class="subst">$&#123;</span></span></span><br><span class="line"><span class="string"><span class="subst">          <span class="built_in">this</span>.roundWinner &amp;&amp; <span class="string">&quot;win-icon&quot;</span></span></span></span><br><span class="line"><span class="string"><span class="subst">        &#125;</span> hidden&quot;&gt;<span class="subst">$&#123;<span class="built_in">this</span>.playerOnMove&#125;</span>&lt;/span&gt;</span></span><br><span class="line"><span class="string">        &lt;span</span></span><br><span class="line"><span class="string">          id=&quot;game-message&quot;</span></span><br><span class="line"><span class="string">          class=&quot;text-white text-4xl text-shadow font-black&quot;</span></span><br><span class="line"><span class="string">          &gt;<span class="subst">$&#123;<span class="string">&quot;Game Over&quot;</span>&#125;</span>&lt;/span</span></span><br><span class="line"><span class="string">        &gt;`</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// game is not on and we have a winner</span></span><br><span class="line">  <span class="keyword">return</span> <span class="string">`</span></span><br><span class="line"><span class="string">    &lt;span id=&quot;winner-icon&quot; class=&quot;player-icon <span class="subst">$&#123;</span></span></span><br><span class="line"><span class="string"><span class="subst">      <span class="built_in">this</span>.roundWinner &amp;&amp; <span class="string">&quot;win-icon&quot;</span></span></span></span><br><span class="line"><span class="string"><span class="subst">    &#125;</span> hidden&quot;&gt;<span class="subst">$&#123;<span class="built_in">this</span>.playerOnMove&#125;</span>&lt;/span&gt;</span></span><br><span class="line"><span class="string">    &lt;span</span></span><br><span class="line"><span class="string">        id=&quot;game-message&quot;</span></span><br><span class="line"><span class="string">        class=&quot;text-white text-4xl text-shadow font-black&quot;</span></span><br><span class="line"><span class="string">        &gt;<span class="subst">$&#123;<span class="string">&quot;wins!&quot;</span>&#125;</span>&lt;/span</span></span><br><span class="line"><span class="string">    &gt;`</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>With this setup, every time players make a move, this method will be called. Then, it will check the current status of the game (set by the previously defined method, <strong>checkGameStatus</strong>), and it will output a corresponding message.</p>
+<p>Don’t mind the conditional class assignment in the first stringified <strong>span</strong> element. We will not be dealing with styling in this series.</p>
+<h3 id="Displaying-game-score"><a href="#Displaying-game-score" class="headerlink" title="Displaying game score"></a>Displaying game score</h3><p>We have previously called the <strong>displayGameScore</strong> method, in order to provide visual information on the current score.</p>
+<p>Let’s define it now.<br>This method relies on the <strong>totalScore</strong> array to get players’ scores.<br>The <strong>totalScore</strong> array is added a new element, <strong>“X”</strong> or <strong>“O”</strong>, every time a game round ends in a win.</p>
+<p>We want the method to calculate how many times each of these two values repeats in the array.<br>Then, it should use <strong>textContent</strong> property on each player’s score container to ouput these two numbers to the screen.</p>
+<p>We use <strong>reduce</strong> method to get the two scores from the array:</p>
+<figure class="highlight ts"><figcaption><span>app.ts Rending current game score</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">displayGameScore = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> xWins = <span class="built_in">this</span>.totalScore.reduce(<span class="function">(<span class="params">acc, val</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (val === <span class="string">&quot;X&quot;</span>) <span class="keyword">return</span> acc + <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">return</span> acc;</span><br><span class="line">  &#125;, <span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> oWins = <span class="built_in">this</span>.totalScore.reduce(<span class="function">(<span class="params">acc, val</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (val === <span class="string">&quot;O&quot;</span>) <span class="keyword">return</span> acc + <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">return</span> acc;</span><br><span class="line">  &#125;, <span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">  <span class="built_in">this</span>.xScore.textContent = xWins.toString();</span><br><span class="line">  <span class="built_in">this</span>.oScore.textContent = oWins.toString();</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Starting-new-game"><a href="#Starting-new-game" class="headerlink" title="Starting new game"></a>Starting new game</h3><p>Very good. What about starting a new game?<br>The idea was to use this option to interrupt the current game and start a new one, as well as to start a new game after the previous one is finished.</p>
+<p>To start a new game, few things are required:</p>
+<ul>
+<li>The game control variable has to be <strong>true</strong></li>
+<li><strong>gameMoves</strong> array has to be empty, so we can store new moves inside</li>
+<li>We have to clean the grid, removing all existing icons from it</li>
+<li>We have to reset the <strong>playerOnMove</strong> to <strong>“X”</strong></li>
+<li>We have to reset the <strong>roundWinner</strong> to an empty string</li>
+<li>We also want to call the <strong>displayGameStatus</strong> method, to render current player on the move</li>
+</ul>
+<p>Let’s start with clearing out the grid.<br>We can do this in multiple ways. Here are two:</p>
+<ol>
+<li>We could select the entire grid container, empty it of its cells, and then insert new cells.</li>
+<li>We could loop over existing cells and remove icons from each one.</li>
+</ol>
+<p>The second one seems simpler, so we do that. Later, we will see that this actually contributes to a bug in our game, but for now this works.</p>
+<p>To clear icons from each grid cell, we need to pass the cells to the <strong>startNewGame</strong> via the event listener set on the <strong>newGameBtn</strong> selector variable.<br>The cells, of course, is our good old friend, the <strong>playGridCells</strong> selector variable, which holds a <strong>NodeList</strong> type of a list.</p>
+<figure class="highlight ts"><figcaption><span>app.ts - Passing grid cells to the "startNewGame" method</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// event listeners</span></span><br><span class="line">newGameBtn.addEventListener(<span class="string">&quot;click&quot;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  exoxGame.startNewGame(playGridCells);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>Right on.<br>In the <strong>startNewGame</strong> method, we accept this argument, and then iterate over the cell list, removing html content from each cell:</p>
+<figure class="highlight ts"><figcaption><span>app.ts - Start a new game</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">startNewGame = <span class="function">(<span class="params">gameCells: NodeListOf&lt;Element&gt;</span>) =&gt;</span> &#123;</span><br><span class="line">  gameCells.forEach(<span class="function">(<span class="params">cell</span>) =&gt;</span> &#123;</span><br><span class="line">    cell.innerHTML = <span class="string">&quot;&quot;</span>;</span><br><span class="line">  &#125;);</span><br><span class="line">  <span class="built_in">this</span>.isGameOn = <span class="literal">true</span>;</span><br><span class="line">  <span class="built_in">this</span>.gameMoves = [];</span><br><span class="line">  <span class="built_in">this</span>.playerOnMove = <span class="string">`X`</span>;</span><br><span class="line">  <span class="built_in">this</span>.roundWinner = <span class="string">&quot;&quot;</span>;</span><br><span class="line">  <span class="built_in">this</span>.displayGameStatus();</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>In addition to emptying content from each grid cell, we have also fulfilled other criteria needed to start a new game.<br>The game is now on, there are no moves in the <strong>gameMoves</strong> array, and there is no winner of the current round.<br>We also set the current player on the move to be <strong>“X”</strong>, which is then used by the <strong>displayGameStatus</strong> method to provide players with visual information.</p>
+<h3 id="Resetting-game-score"><a href="#Resetting-game-score" class="headerlink" title="Resetting game score"></a>Resetting game score</h3><p>Resetting game score is just an expanded <strong>startNewGame</strong> method. It adds two actions to it:</p>
+<ul>
+<li>It clears the <strong>totalScore</strong> array in order to reset the score.</li>
+<li>It calls the <strong>displayGameScore</strong> method to output new score (0 - 0) to the screen</li>
+</ul>
+<p>Here is the full method:</p>
+<figure class="highlight ts"><figcaption><span>app.ts - Reset the game score</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">resetGame = <span class="function">(<span class="params">gameCells: NodeListOf&lt;Element&gt;</span>) =&gt;</span> &#123;</span><br><span class="line">  gameCells.forEach(<span class="function">(<span class="params">cell</span>) =&gt;</span> &#123;</span><br><span class="line">    cell.innerHTML = <span class="string">&quot;&quot;</span>;</span><br><span class="line">  &#125;);</span><br><span class="line">  <span class="built_in">this</span>.isGameOn = <span class="literal">true</span>;</span><br><span class="line">  <span class="built_in">this</span>.gameMoves = [];</span><br><span class="line">  <span class="built_in">this</span>.playerOnMove = <span class="string">`X`</span>;</span><br><span class="line">  <span class="built_in">this</span>.roundWinner = <span class="string">&quot;&quot;</span>;</span><br><span class="line">  <span class="built_in">this</span>.totalScore = [];</span><br><span class="line"></span><br><span class="line">  <span class="built_in">this</span>.displayGameStatus();</span><br><span class="line">  <span class="built_in">this</span>.displayGameScore();</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>Of course, this method is called by the event listener on the <strong>resetScoreBtn</strong> selector, and we already know how to do that.</p>
+<p>A new thing is that we will call this method from the class constructor. Since <strong>resetGame</strong> resets everything about the game, we can use it to set a clean new game when the class instantiates.</p>
+<figure class="highlight ts"><figcaption><span>app.ts - Starting fresh game from the class constructor</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Exox &#123;</span><br><span class="line">  <span class="keyword">constructor</span>(<span class="params"></span></span><br><span class="line"><span class="params">    <span class="keyword">public</span> xScore: HTMLSpanElement,</span></span><br><span class="line"><span class="params">    <span class="keyword">public</span> oScore: HTMLSpanElement,</span></span><br><span class="line"><span class="params">    <span class="keyword">public</span> gameStatusBox: HTMLDivElement</span></span><br><span class="line"><span class="params">  </span>) &#123;</span><br><span class="line">    <span class="built_in">this</span>.resetGame();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Very good. This makes the game ready to work.</p>
+<h3 id="Defining-helper-methods"><a href="#Defining-helper-methods" class="headerlink" title="Defining helper methods"></a>Defining helper methods</h3><p>While our game works now, I want to tidy up some code to make. To be specific, I want to create few helper functions that would hold repeating blocks of code we currently have.</p>
+<p>We will do so with:</p>
+<ul>
+<li>Changing player</li>
+<li>Proclaim game winner</li>
+<li>Output game status</li>
+</ul>
+<h4 id="Changing-player"><a href="#Changing-player" class="headerlink" title="Changing player"></a>Changing player</h4><p>At the moment we have use this code whenever we want to change player:</p>
+<figure class="highlight ts"><figcaption><span>app.ts - Changing player</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">this</span>.playerOnMove = <span class="built_in">this</span>.playerOnMove === <span class="string">&quot;X&quot;</span> ? <span class="string">&quot;O&quot;</span> : <span class="string">&quot;X&quot;</span>;</span><br></pre></td></tr></table></figure>
+
+<p>Lets put this into a helper function, and call it whenever we need to change player</p>
+<figure class="highlight ts"><figcaption><span>app.ts - Change player helper function</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">changePlayer = <span class="function">() =&gt;</span></span><br><span class="line">  (<span class="built_in">this</span>.playerOnMove = <span class="built_in">this</span>.playerOnMove === <span class="string">&quot;X&quot;</span> ? <span class="string">&quot;O&quot;</span> : <span class="string">&quot;X&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// ...</span></span><br><span class="line">checkGameStatus = <span class="function">(<span class="params">dataset: CellLocation</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> (currentPlayerMoves.length &lt; <span class="number">3</span>) &#123;</span><br><span class="line">    <span class="built_in">this</span>.changePlayer();</span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h4 id="Proclaim-game-winner"><a href="#Proclaim-game-winner" class="headerlink" title="Proclaim game winner"></a>Proclaim game winner</h4><p>We have four places where we execute same code in order to set a game win.<br>Let’s put that code in a function, and call it when needed</p>
+<figure class="highlight ts"><figcaption><span>app.ts - Proclaim winner helper function</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">proclaimWinner = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">this</span>.roundWinner = <span class="built_in">this</span>.playerOnMove;</span><br><span class="line">  <span class="built_in">this</span>.totalScore.push(<span class="built_in">this</span>.roundWinner);</span><br><span class="line">  <span class="built_in">this</span>.isGameOn = <span class="literal">false</span>;</span><br><span class="line">  <span class="built_in">this</span>.displayGameScore();</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// ...</span></span><br><span class="line">checkGameStatus = <span class="function">(<span class="params">dataset: CellLocation</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> (currentPlayerRowCells.length === <span class="number">3</span>) &#123;</span><br><span class="line">    <span class="built_in">this</span>.proclaimWinner();</span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h4 id="Output-game-status"><a href="#Output-game-status" class="headerlink" title="Output game status"></a>Output game status</h4><p>Finally, the <strong>displayGameStatus</strong> renders pretty much the same <strong>span</strong> element, no matter the condition.<br>Since the only difference is the message shown, lets create a function that takes that message as an argument, and returns the said string</p>
+<figure class="highlight ts"><figcaption><span>app.ts - Output message helper function</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">createMessageBox = <span class="function">(<span class="params">message: <span class="built_in">string</span></span>) =&gt;</span></span><br><span class="line">  <span class="string">`</span></span><br><span class="line"><span class="string">      &lt;span id=&quot;winner-icon&quot; class=&quot;player-icon <span class="subst">$&#123;</span></span></span><br><span class="line"><span class="string"><span class="subst">        <span class="built_in">this</span>.roundWinner &amp;&amp; <span class="string">&quot;win-icon&quot;</span></span></span></span><br><span class="line"><span class="string"><span class="subst">      &#125;</span> hidden&quot;&gt;<span class="subst">$&#123;<span class="built_in">this</span>.playerOnMove&#125;</span>&lt;/span&gt;</span></span><br><span class="line"><span class="string">      &lt;span</span></span><br><span class="line"><span class="string">        id=&quot;game-message&quot;</span></span><br><span class="line"><span class="string">        class=&quot;text-white text-4xl text-shadow font-black&quot;</span></span><br><span class="line"><span class="string">        &gt;<span class="subst">$&#123;message&#125;</span>&lt;/span</span></span><br><span class="line"><span class="string">      &gt;`</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// ...</span></span><br><span class="line">  displayGameStatus = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// regular move</span></span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">this</span>.isGameOn)</span><br><span class="line">      <span class="keyword">return</span> (<span class="built_in">this</span>.gameStatusBox.innerHTML = <span class="built_in">this</span>.createMessageBox(<span class="string">&quot;to move&quot;</span>));</span><br><span class="line"></span><br><span class="line">    <span class="comment">// game is not on and no winner</span></span><br><span class="line">    <span class="keyword">if</span> (!<span class="built_in">this</span>.roundWinner)</span><br><span class="line">      <span class="keyword">return</span> (<span class="built_in">this</span>.gameStatusBox.innerHTML = <span class="built_in">this</span>.createMessageBox(</span><br><span class="line">        <span class="string">&quot;Game Over&quot;</span></span><br><span class="line">      ));</span><br><span class="line"></span><br><span class="line">    <span class="comment">// game is not on and we have a winner</span></span><br><span class="line">    <span class="keyword">return</span> (<span class="built_in">this</span>.gameStatusBox.innerHTML = <span class="built_in">this</span>.createMessageBox(<span class="string">&quot;Wins!&quot;</span>));</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>Alright. That’s it. The game is ok. We have players able to put their marks on the game grid, and we have methods tracking their moves and calculating whether they won, if the game is over, or if it goes on.<br>We have also set game to visually inform players on their scores, as well as the game status. </p>
+<p>We do have a issue however. With the current setup, clicking on the same game cell will cause the game to go crazy. While no icons will be placed on the grid, the <strong>checkGameStatus</strong> will register new clicks, and will execute code inside.<br>We will fix that in the next post.</p>
+<!-- End Step Content -->
+
+<!-- Project Information -->
+
+<h2 id="Project-Information"><a href="#Project-Information" class="headerlink" title="Project Information"></a>Project Information</h2><h3 id="Available-at"><a href="#Available-at" class="headerlink" title="Available at"></a>Available at</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/ikaem/exox">Github repository</a></li>
+<li><a target="_blank" rel="noopener" href="http://kaem.freecluster.eu/apps/exox/">Live website</a></li>
+</ul>
+<h3 id="Goals"><a href="#Goals" class="headerlink" title="Goals"></a>Goals</h3><ol>
+<li>Create a simple Tic Tac Toe game for two persons</li>
+</ol>
+<h3 id="Steps"><a href="#Steps" class="headerlink" title="Steps"></a>Steps</h3><ol>
+<li>Set up the project</li>
+<li><strong>Code the game</strong></li>
+<li>Insert player fields from the game class</li>
+</ol>
+<h3 id="Tech-and-Tools"><a href="#Tech-and-Tools" class="headerlink" title="Tech and Tools"></a>Tech and Tools</h3><ol>
+<li>TypeScript</li>
+<li>Tailwind</li>
+<li>Webpack</li>
+</ol>
+<h3 id="Experience-with-Tech-amp-Tools"><a href="#Experience-with-Tech-amp-Tools" class="headerlink" title="Experience with Tech &amp; Tools"></a>Experience with Tech &amp; Tools</h3><p>I guess I am ok with all of the tools used. Main reason I am doing this is to work on my logic skills. In the last project I couldn’t fully figure out the logic of the calculator by mayself, so I wanted to do it now to make myself feel better :)</p>
+<h2 id="DISCLAIMER"><a href="#DISCLAIMER" class="headerlink" title="DISCLAIMER"></a>DISCLAIMER</h2><p>Don’t take any of this seriously and as a matter-of-fact. These are my notes. It might look like I am trying to teach something to someone. I am not.</p>
+
+
+                
+
+
+                <!-- Cover image credit -->
+                
+                    <p class="image-credit-link">
+                        Cover image by <strong>
+                            <a target="_blank" rel="noopener" href="https://unsplash.com/@calebscamera?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
+                                Caleb Dow
+                            </a>
+                        </strong>
+                    </p>
+
+                
+
+  
+
+            </div>
+            
+            <!-- Custom placed tags -->
+            <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                
+                    
+
+
+<a href="/angry-chaired-blog/tags/typescript/">#typescript</a> <a href="/angry-chaired-blog/tags/games/">#games</a>
+
+
+                
+            </div>
+            <!--  -->
+
+
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+
+            <!-- Hyvor comments -->
+
+            <!-- End of Hyvor comments -->
+        </div>
+    </div>
+</article>
+
+
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2020 kaem<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
