@@ -337,10 +337,16 @@ surge login
 
 The command will take us through short registration process
 
+Next up is building static files for the website:
+
+```bash
+gatsby build
+```
+
 Finally, we deploy the site:
 
 ```bash
-gatsby public
+surge public
 ```
 
 Once the deployment starts, we can define the domain, or we can let surge generate a random one. 
