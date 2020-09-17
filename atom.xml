@@ -6,7 +6,7 @@
   <link href="https://ikaem.github.io/angry-chaired-blog/atom.xml" rel="self"/>
   
   <link href="https://ikaem.github.io/angry-chaired-blog/"/>
-  <updated>2020-09-08T10:43:32.494Z</updated>
+  <updated>2020-09-17T06:51:07.008Z</updated>
   <id>https://ikaem.github.io/angry-chaired-blog/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>WhatsApp Clone with React and Webpack: The Setup</title>
+    <link href="https://ikaem.github.io/angry-chaired-blog/2020/whatsapp-clone-with-react-and-webpack-the-setup/"/>
+    <id>https://ikaem.github.io/angry-chaired-blog/2020/whatsapp-clone-with-react-and-webpack-the-setup/</id>
+    <published>2020-09-16T08:14:57.000Z</published>
+    <updated>2020-09-17T06:51:07.008Z</updated>
+    
+    
+    <summary type="html">&lt;!-- Step Content Start --&gt;
+
+&lt;h4 id=&quot;Part-1-of-6-in-Whatsapp-Clone-with-React-and-Webpack&quot;&gt;&lt;a href=&quot;#Part-1-of-6-in-Whatsapp-Clone-with-React-and-Webpack&quot; class=&quot;headerlink&quot; title=&quot;Part 1 of 6 in Whatsapp Clone with React and Webpack&quot;&gt;&lt;/a&gt;Part 1 of 6 in Whatsapp Clone with React and Webpack&lt;/h4&gt;&lt;p&gt;We are going to build a React app that wants to be Whatsapp. Good luck with that, right? Yeah… We will use something called Socket.io to make messaging between people possible. And that is all we need to know for now.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="ts webpack calculator" scheme="https://ikaem.github.io/angry-chaired-blog/categories/ts-webpack-calculator/"/>
+    
+    
+    <category term="typescript" scheme="https://ikaem.github.io/angry-chaired-blog/tags/typescript/"/>
+    
+    <category term="react" scheme="https://ikaem.github.io/angry-chaired-blog/tags/react/"/>
+    
+    <category term="webpack" scheme="https://ikaem.github.io/angry-chaired-blog/tags/webpack/"/>
+    
+    <category term="babel" scheme="https://ikaem.github.io/angry-chaired-blog/tags/babel/"/>
+    
+    <category term="tailwing" scheme="https://ikaem.github.io/angry-chaired-blog/tags/tailwing/"/>
+    
+    <category term="eslint" scheme="https://ikaem.github.io/angry-chaired-blog/tags/eslint/"/>
+    
+  </entry>
   
   <entry>
     <title>Tic Tac Toe with TypeScript: The Bug</title>
@@ -464,29 +495,6 @@
     <summary type="html">&lt;!-- Step Content Start --&gt;
 
 &lt;h4 id=&quot;Part-4-of-8-in-Hexo-Blog&quot;&gt;&lt;a href=&quot;#Part-4-of-8-in-Hexo-Blog&quot; class=&quot;headerlink&quot; title=&quot;Part 4 of 8 in Hexo Blog&quot;&gt;&lt;/a&gt;Part 4 of 8 in Hexo Blog&lt;/h4&gt;&lt;p&gt;Hexo makes it very simple to adjust the post content. We will add image and code files to our posts, and will see how we can show post excerpts on the home page, so users know what to expect from a post. While most of these things are possible with the usual Markdown syntax, Hexo offers few tools to make post customization more effective.&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="hexo blog" scheme="https://ikaem.github.io/angry-chaired-blog/categories/hexo-blog/"/>
-    
-    
-    <category term="hexo" scheme="https://ikaem.github.io/angry-chaired-blog/tags/hexo/"/>
-    
-    <category term="blog" scheme="https://ikaem.github.io/angry-chaired-blog/tags/blog/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo Blog: Configuring the Blog</title>
-    <link href="https://ikaem.github.io/angry-chaired-blog/2020/hexo-blog-configuring-the-blog/"/>
-    <id>https://ikaem.github.io/angry-chaired-blog/2020/hexo-blog-configuring-the-blog/</id>
-    <published>2020-08-17T06:56:24.000Z</published>
-    <updated>2020-08-17T07:00:40.776Z</updated>
-    
-    
-    <summary type="html">&lt;!-- Step Content Start --&gt;
-
-&lt;h4 id=&quot;Part-3-of-8-in-Hexo-Blog&quot;&gt;&lt;a href=&quot;#Part-3-of-8-in-Hexo-Blog&quot; class=&quot;headerlink&quot; title=&quot;Part 3 of 8 in Hexo Blog&quot;&gt;&lt;/a&gt;Part 3 of 8 in Hexo Blog&lt;/h4&gt;&lt;p&gt;In this post we will configure our new blog with the &lt;strong&gt;_config.yml&lt;/strong&gt; file. Hexo’s configuration file helps with SEO and prepares the website for deployment. It is also used to configure permalinks, installed plugins, themes, and much more. &lt;/p&gt;</summary>
     
     
     
