@@ -391,6 +391,14 @@
 <figure class="highlight css"><figcaption><span>src/assets/styles</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@tailwind</span> base;</span><br><span class="line"><span class="keyword">@tailwind</span> components;</span><br><span class="line"><span class="keyword">@tailwind</span> utilities;</span><br></pre></td></tr></table></figure>
 
 <p>We will also create <strong>main.css</strong> file in the same folder. This is the file where Tailwind styling rules will be output to.</p>
+<p>Even if we don’t do actual styling in this series, I still needed a Tailwind configuration file to modify and extend Tailwind styles.</p>
+<p>I like to have both default configuration file and the extending one in the project.<br>I create the default one with:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npx tailwindcss init --full</span><br></pre></td></tr></table></figure>
+
+<p>The generated file, <strong>tailwind.config.js</strong>, I rename to <strong>tailwind-default.config.js</strong>, and then I generate another, emtpy config file with:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npx tailwindcss init</span><br></pre></td></tr></table></figure>
+
+<p>This one I use for extending Tailwind’s default styles.</p>
 <p>Next part is creating a PostCSS configuration file. We call it <strong>postcss.config.js</strong> (yes, a JS file), and place it in the root of the project.<br>Inside, we require <strong>tailwindcss</strong> and <strong>autoprefixer</strong> packages, and add them to the <strong>plugins</strong> array that is exported from the file</p>
 <figure class="highlight js"><figcaption><span>postcss.config.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  plugins: [<span class="built_in">require</span>(<span class="string">&quot;tailwindcss&quot;</span>), <span class="built_in">require</span>(<span class="string">&quot;autoprefixer&quot;</span>)],</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
@@ -433,7 +441,7 @@
 <li>Deploy Webpack React app to Heroku</li>
 </ol>
 <h3 id="Steps"><a href="#Steps" class="headerlink" title="Steps"></a>Steps</h3><ol>
-<li>Create a React app with Webpack</li>
+<li><strong>Create a React app with Webpack</strong></li>
 <li>Set up backend</li>
 <li>Organize the React app</li>
 <li>Set up Socket.io communication between frontend and backend</li>
@@ -478,7 +486,7 @@
                     
 
 
-<a href="/angry-chaired-blog/tags/typescript/">#typescript</a> <a href="/angry-chaired-blog/tags/react/">#react</a> <a href="/angry-chaired-blog/tags/webpack/">#webpack</a> <a href="/angry-chaired-blog/tags/babel/">#babel</a> <a href="/angry-chaired-blog/tags/tailwing/">#tailwing</a> <a href="/angry-chaired-blog/tags/eslint/">#eslint</a>
+<a href="/angry-chaired-blog/tags/typescript/">#typescript</a> <a href="/angry-chaired-blog/tags/react/">#react</a> <a href="/angry-chaired-blog/tags/webpack/">#webpack</a> <a href="/angry-chaired-blog/tags/socketio/">#socketio</a> <a href="/angry-chaired-blog/tags/tailwind/">#tailwind</a> <a href="/angry-chaired-blog/tags/babel/">#babel</a> <a href="/angry-chaired-blog/tags/eslint/">#eslint</a>
 
 
                 

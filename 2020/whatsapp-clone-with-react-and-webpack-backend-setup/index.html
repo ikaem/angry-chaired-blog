@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="Inexperienced and curious pokes into the sprawling world of web development "/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="kaem"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="WhatsApp Clone with React and Webpack: Backend Setup"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Inexperienced and curious pokes into the sprawling world of web development "/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Angry Chaired Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://ikaem.github.io/angry-chaired-blog/angry-chaired-blog/images/header-image.jpg"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://ikaem.github.io/angry-chaired-blog/angry-chaired-blog/images/header-image.jpg"/>
+    
+
+    <!-- Title -->
+    
+    <title>WhatsApp Clone with React and Webpack: Backend Setup - Angry Chaired Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/angry-chaired-blog/css/style.css">
+
+    
+<link rel="stylesheet" href="/angry-chaired-blog/css/custom-style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+    <link rel="icon" href="/angry-chaired-blog/images/favicon.ico"/>
+    
+
+<meta name="generator" content="Hexo 5.0.2"><link rel="alternate" href="/angry-chaired-blog/atom.xml" title="Angry Chaired Blog" type="application/atom+xml">
+</head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/angry-chaired-blog/">Angry Chaired Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/about">
+                            
+                                About
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a target="_blank" rel="noopener" href="https://angrychaired.surge.sh">
+                            
+                                <i class="fa fa-user fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a target="_blank" rel="noopener" href="https://github.com/ikaem/">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a href="/angry-chaired-blog/atom.xml">
+                            
+                                <i class="fa fa-rss fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('joss-woodhead-3wFRlwS91yk-unsplash.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>WhatsApp Clone with React and Webpack: Backend Setup</h1>
+
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            17/09/2020
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/angry-chaired-blog/categories/whatsapp-react-webpack/">whatsapp react webpack</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <!-- Step Content Start -->
+
+<h4 id="Part-2-of-6-in-Whatsapp-Clone-with-React-and-Webpack"><a href="#Part-2-of-6-in-Whatsapp-Clone-with-React-and-Webpack" class="headerlink" title="Part 2 of 6 in Whatsapp Clone with React and Webpack"></a>Part 2 of 6 in Whatsapp Clone with React and Webpack</h4><p>To get our chat app working, we need to set up Socket.io on the app’s backend. To do that, we need a backend. This is where we do it.</p>
+<a id="more"></a>
+
+<h4 id="See-Project-Information"><a href="#See-Project-Information" class="headerlink" title="See Project Information"></a>See <a href="#Project-Information">Project Information</a></h4><p>Backend that we are creating is fairly simple. We will use it only to access two routes, and to attach a Socket.io server to.<br>We will create the Socket.io server in a separated module, and we will have it use methods from another module that will keep track of users and rooms that exist in our chat.</p>
+<h2 id="Step-2-Set-up-backend"><a href="#Step-2-Set-up-backend" class="headerlink" title="Step 2: Set up backend"></a>Step 2: Set up backend</h2><p>Here is what we do in this post:</p>
+<ol>
+<li>Set up an Express server</li>
+<li>Set up a Socket.io server</li>
+<li>Create a “rooms” module</li>
+</ol>
+<h3 id="Set-up-an-Express-server"><a href="#Set-up-an-Express-server" class="headerlink" title="Set up an Express server"></a>Set up an Express server</h3><p>We have to start with initializing the project.<br>We can do so with initializing the <strong>package.json</strong> with npm:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm init -y</span><br></pre></td></tr></table></figure>
+
+<p>As usual, we will use TypeScript on the backend too. So let’s start with setting that up.<br>First, we have to install <strong>typescript</strong> locally for this project. We install it as a dev dependency:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i -D typescript</span><br></pre></td></tr></table></figure>
+
+<p>Then, we create two folders: <strong>src</strong> and <strong>build</strong>. As usual, <strong>src</strong> will be used for actual work on the project (in TypeScript), while <strong>dist</strong> will be used to hold the project JS files.</p>
+<p>We can immediately create a <strong>server.ts</strong> file in the <strong>src</strong> folder. This will be our main TS file in TypeScript.</p>
+<p>Next, we generate a <strong>tsconfig.json</strong> file to be able to configure TypeScript behavior for this project.<br>We do so with command:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tsc -init</span><br></pre></td></tr></table></figure>
+
+<p>Here is the configuration in <strong>tsconfig.json</strong>. We won’t go over each option as we have already done that with previous series.</p>
+<figure class="highlight js"><figcaption><span>tsconfig.json</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;compilerOptions&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;target&quot;</span>: <span class="string">&quot;es2018&quot;</span>,                          <span class="comment">/* Specify ECMAScript target version: &#x27;ES3&#x27; (default), &#x27;ES5&#x27;, &#x27;ES2015&#x27;, &#x27;ES2016&#x27;, &#x27;ES2017&#x27;, &#x27;ES2018&#x27;, &#x27;ES2019&#x27;, &#x27;ES2020&#x27;, or &#x27;ESNEXT&#x27;. */</span></span><br><span class="line">    <span class="string">&quot;module&quot;</span>: <span class="string">&quot;commonjs&quot;</span>,                     <span class="comment">/* Specify module code generation: &#x27;none&#x27;, &#x27;commonjs&#x27;, &#x27;amd&#x27;, &#x27;system&#x27;, &#x27;umd&#x27;, &#x27;es2015&#x27;, &#x27;es2020&#x27;, or &#x27;ESNext&#x27;. */</span></span><br><span class="line">    <span class="string">&quot;outDir&quot;</span>: <span class="string">&quot;./dist&quot;</span>,                        <span class="comment">/* Redirect output structure to the directory. */</span></span><br><span class="line">    <span class="string">&quot;rootDir&quot;</span>: <span class="string">&quot;./src&quot;</span>,                       <span class="comment">/* Specify the root directory of input files. Use to control the output directory structure with --outDir. */</span></span><br><span class="line">    <span class="string">&quot;strict&quot;</span>: <span class="literal">true</span>,                           <span class="comment">/* Enable all strict type-checking options. */</span></span><br><span class="line">    <span class="string">&quot;noEmitOnError&quot;</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="string">&quot;moduleResolution&quot;</span>: <span class="string">&quot;node&quot;</span>,            <span class="comment">/* Specify module resolution strategy: &#x27;node&#x27; (Node.js) or &#x27;classic&#x27; (TypeScript pre-1.6). */</span></span><br><span class="line">    <span class="string">&quot;esModuleInterop&quot;</span>: <span class="literal">true</span>,                  <span class="comment">/* Enables emit interoperability between CommonJS and ES Modules via creation of namespace objects for all imports. Implies &#x27;allowSyntheticDefaultImports&#x27;. */</span></span><br><span class="line">    <span class="string">&quot;skipLibCheck&quot;</span>: <span class="literal">true</span>,                     <span class="comment">/* Skip type checking of declaration files. */</span></span><br><span class="line">    <span class="string">&quot;forceConsistentCasingInFileNames&quot;</span>: <span class="literal">true</span>  <span class="comment">/* Disallow inconsistently-cased references to the same file. */</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>In short, though: We are specifying target JS to be of version <strong>es2018</strong>, setting output director to be the <strong>dist</strong> folder, and the root directory of the project to be <strong>src</strong>.</p>
+<p>This should do it for TypeScript, so let’s move on to the server dependencies.</p>
+<p>We will work with Express, so we install that. We also need CORS to allow our fronted to access resources on the server.<br>Let’s install these:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i express cors</span><br></pre></td></tr></table></figure>
+
+<p>We need few other development dependencies.<br>We will install Nodemon to be get automatic restarts of our development server on any code changes. We will also install TS types for Node, Express, and CORS.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i -D nodemon @types/cors @types/node @types/express</span><br></pre></td></tr></table></figure>
+
+<p>With this installed, we can create our server in <strong>src/server.ts</strong>.</p>
+<figure class="highlight ts"><figcaption><span>server.ts</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> express <span class="keyword">from</span> <span class="string">&quot;express&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> cors <span class="keyword">from</span> <span class="string">&quot;cors&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> http <span class="keyword">from</span> <span class="string">&quot;http&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> PORT = process.env.PORT || <span class="number">5000</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> app = express();</span><br><span class="line"></span><br><span class="line">app.use(cors());</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> server = http.createServer(app);</span><br><span class="line"></span><br><span class="line">server.listen(PORT, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&quot;Server is listening on port&quot;</span>, PORT);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>Few things about he server:</p>
+<ul>
+<li>We are defining <strong>PORT</strong> as an environment variable, or <strong>5000</strong>. We are using the <strong>process.env.PORT</strong> value for when our server gets deployed and has access to this specific environment variable.</li>
+<li>We create the server by passing the instantiated <strong>express()</strong> object to <strong>http</strong>‘s <strong>createServer</strong> method. We do this to be able to pass the server as an argument to <strong>socket-io</strong> server later in the post.</li>
+</ul>
+<p>To start the server, we first have to compile TS to JS. We can do so with:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tsc -w</span><br></pre></td></tr></table></figure>
+
+<p>This will start TypeScript compiler in watch mode. TS will copy folder structure from <strong>src</strong> to <strong>dist</strong> folder, and will compile all <strong>.ts</strong> files to <strong>.js</strong> ones, and add it to the <strong>dist</strong> folder.</p>
+<p>Next, we can modify <strong>package.json</strong> to set a script that will start the server.<br>We will use <strong>Nodemon</strong> to do so, by serving the compiled <strong>server.js</strong> file</p>
+<figure class="highlight js"><figcaption><span>package.json</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ...</span></span><br><span class="line"><span class="string">&quot;description&quot;</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line"><span class="string">&quot;main&quot;</span>: <span class="string">&quot;dist/server.js&quot;</span>,</span><br><span class="line"><span class="string">&quot;scripts&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;test&quot;</span>: <span class="string">&quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;</span>,</span><br><span class="line">    <span class="string">&quot;start&quot;</span>: <span class="string">&quot;nodemon dist/server.js&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>If we call the <strong>start</strong> script now, assuming that TS has compiled TS files, we will have our server running and listening on port 5000.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm start</span><br></pre></td></tr></table></figure>
+
+<p>Great. Now, lets create those two routes, and import them into the server module.<br>We create a new file in the <strong>src</strong> folder, and call it <strong>router.ts</strong>. Inside, we import <strong>Router</strong> from <strong>“express”</strong>, and instantiate it.<br>At the end of the module, we export the instantiated router.</p>
+<figure class="highlight ts"><figcaption><span>router.ts</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; Router &#125; <span class="keyword">from</span> <span class="string">&quot;express&quot;</span>;</span><br><span class="line"><span class="keyword">const</span> router = Router();</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> router;</span><br></pre></td></tr></table></figure>
+
+<p>Next, we will create two routes: a <strong>GET</strong> route for <strong>“/“</strong> path, and <strong>POST</strong> route for <strong>“/join”</strong> path.<br>I wanted to create the first one just for convenience - I want to see some content in the browser when I visit URL where the server lives.<br>The second one will be used to join a user to the chat. Its callback function will check if user’s username is already in user, and will send an appropriate answer.</p>
+<p>For now, though, we will just return simple JSON string saying that a route was successfully accessed.</p>
+<figure class="highlight ts"><figcaption><span>router.ts</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; Router &#125; <span class="keyword">from</span> <span class="string">&quot;express&quot;</span>;</span><br><span class="line"><span class="keyword">const</span> router = Router();</span><br><span class="line"></span><br><span class="line">router.get(<span class="string">&quot;/&quot;</span>, <span class="keyword">async</span> (req, res) =&gt; &#123;</span><br><span class="line">  res.json(<span class="string">&quot;This is get - root&quot;</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">router.post(<span class="string">&quot;/join&quot;</span>, <span class="keyword">async</span> (req, res) =&gt; &#123;</span><br><span class="line">  res.json(<span class="string">&quot;This is post - join&quot;</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> router;</span><br></pre></td></tr></table></figure>
+
+<p>Now we need to import and use the router module in the server module.</p>
+<figure class="highlight ts"><figcaption><span>server.ts</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> routes <span class="keyword">from</span> <span class="string">&quot;./router&quot;</span>;</span><br><span class="line"><span class="comment">// ...</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> app = express();</span><br><span class="line">app.use(routes);</span><br><span class="line"></span><br><span class="line"><span class="comment">// ...</span></span><br></pre></td></tr></table></figure>
+
+<p>Since we are here, we will use an Express middleware for parsing incoming request data.<br>We will use <strong>express.json()</strong> to make sure that JSON data that will be sent to the server when a user joins is actually recognized as such.</p>
+<figure class="highlight ts"><figcaption><span>server.ts</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ...</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> app = express();</span><br><span class="line">app.use(express.json());</span><br><span class="line"></span><br><span class="line"><span class="comment">// ...</span></span><br></pre></td></tr></table></figure>
+
+<p>Great. At this point we should have a functional server that can be accessed via two routes.<br>We can access the server at <strong>localhost:5000</strong> and we should see the text returned by the GET rout’s callback:</p>
+<p>“This is get - root”</p>
+<h3 id="Set-up-a-Socket-io-server"><a href="#Set-up-a-Socket-io-server" class="headerlink" title="Set up a Socket.io server"></a>Set up a Socket.io server</h3><p>Now, we will implement Socket.io in our server.</p>
+<p>Before we do that, we need to install the <strong>socket.io</strong> package, as well as its TS types.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i socket.io</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i -D @types/socket.io</span><br></pre></td></tr></table></figure>
+
+<p>We will create a new module that will export a function returning an instance of the Socket.io server.</p>
+<p>So let’s create a new folder in <strong>src</strong> folder and call it <strong>socket-io</strong>. Inside, we create a new module and call it <strong>server.ts</strong>.<br>The module imports <strong>socketio</strong> from <strong>“socket.io”</strong>, as well as <strong>http</strong> from <strong>“http”</strong>. We need the <strong>http</strong> module to be able to type argument to the function that creates Socket.io server.</p>
+<figure class="highlight ts"><figcaption><span>src/socket-io/server.ts</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> socketio <span class="keyword">from</span> <span class="string">&quot;socket.io&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> http <span class="keyword">from</span> <span class="string">&quot;http&quot;</span>;</span><br></pre></td></tr></table></figure>
+
+<p>Now we create the function that creates the server.<br>The socket accepts an argument of type <strong>http.Server</strong>, and then attaches a Socket.io server to it.<br>The, we return the function from the module.</p>
+<p>Here is the code:</p>
+<figure class="highlight ts"><figcaption><span>src/socket-io/server.ts</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> ioServer = <span class="function">(<span class="params">server: http.Server</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> io = socketio(server);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> ioServer;</span><br></pre></td></tr></table></figure>
+
+<p>At this point, our Socket.io server wouldn’t do anything. So let’s have it at least log a confirmation message when a client connects and disconnects from it.</p>
+<p>To do this, we can use the <strong>on</strong> method that exists on the server instance. The <strong>on</strong> method is basically an event listener: it waits for a certain event, and then reacts to it by way of the callback function provided to it as an argument.</p>
+<p>Here is an example using <strong>“connect”</strong> event:</p>
+<figure class="highlight ts"><figcaption><span>src/socket-io/server.ts</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> ioServer = <span class="function">(<span class="params">server: http.Server</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> io = socketio(server);</span><br><span class="line"></span><br><span class="line">  io.on(<span class="string">&quot;connect&quot;</span>, <span class="function">(<span class="params">socket</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;We have a connection from socket nr.&quot;</span>, socket.id);</span><br><span class="line"></span><br><span class="line">    socket.emit(<span class="string">&quot;adminMessage&quot;</span>, &#123;</span><br><span class="line">      user: <span class="string">&quot;admin&quot;</span>,</span><br><span class="line">      message: <span class="string">`Dear random user with socket id, <span class="subst">$&#123;socket.id&#125;</span>, welcome to the chat`</span>,</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> ioServer;</span><br></pre></td></tr></table></figure>
+
+<p>So what is going on here?</p>
+<ul>
+<li>In the beginning, we have the server react to the <strong>“connect”</strong> event by logging a message that includes something called <strong>socket.id</strong>. Socket is basically a connection with a single client (I like to think of as the client itself), and <strong>id</strong> is a unique id associated with this connection.</li>
+<li>The <strong>socket</strong> argument is automatically passed to the callback function of the <strong>on</strong> method when called on the server instance - <strong>io</strong> in this case.</li>
+<li>We can use <strong>socket</strong> object to communicate with the actual client that established this connection with the server. In our case, we use the <strong>emit</strong> method on the <strong>socket</strong> object to emit an event and some data from the server back to this same socket. Specifically, the event in this case is <strong>adminMessage</strong>, and the data is an object holding name of the user and the message sent to the client.</li>
+<li>While this might sound techical, in reality we are just reacting to a connection to the Socket.io server by sending a welcome message to the client that just connected.</li>
+<li>While we defined the <strong>adminMessage</strong> event ourselves, the <strong>connect</strong> event is defined by Socket.io, and is sent by the connecting socket by default.</li>
+</ul>
+<p>This solves the connection event. Let’s also do something when a client disconnects from the Socket.io server.</p>
+<p>Similar to the <strong>connect</strong> event, the there is also a <strong>disconnect</strong> event when a client disconnects.<br>The difference, though, is that this event is recived by the actual socket object.</p>
+<p>Let’s react to it by logging the id of the disconnecting client:</p>
+<figure class="highlight ts"><figcaption><span>src/socket-io/server.ts</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> ioServer = <span class="function">(<span class="params">server: http.Server</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> io = socketio(server);</span><br><span class="line"></span><br><span class="line">  <span class="comment">// connection established on io server object</span></span><br><span class="line">  io.on(<span class="string">&quot;connect&quot;</span>, <span class="function">(<span class="params">socket</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;We have a connection from socket nr.&quot;</span>, socket.id);</span><br><span class="line"></span><br><span class="line">    socket.emit(<span class="string">&quot;adminMessage&quot;</span>, &#123;</span><br><span class="line">      user: <span class="string">&quot;admin&quot;</span>,</span><br><span class="line">      message: <span class="string">`Dear random user with socket id, <span class="subst">$&#123;socket.id&#125;</span>, welcome to the chat`</span>,</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// disconnect event received on the socket object</span></span><br><span class="line">    socket.on(<span class="string">&quot;disconnect&quot;</span>, <span class="function">(<span class="params">data</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">&quot;User with id of&quot;</span>, socket.id, <span class="string">&quot;has disconnected&quot;</span>);</span><br><span class="line">      socket.disconnect(<span class="literal">true</span>);</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> ioServer;</span><br></pre></td></tr></table></figure>
+
+<p>Do note few things:</p>
+<ul>
+<li>The <strong>data</strong> object passed to the callback of the <strong>on</strong> method on <strong>socket</strong> object is not a socket object. This makes sense, because we are already working with a socket object. Instead, this is data that is emmited from the client as part of the event. We will get to this later.</li>
+<li>We call <strong>disconnect()</strong> method on the <strong>socket</strong> object. This closes the connection with the socket.</li>
+</ul>
+<p>Very cool. If at any point we have a client connect to our Socket.io server, we will know its id.</p>
+<p>We still have to start the Socket.io server, so let’s do that.<br>We import the module’s default export into the Express server module.<br>Then, we pass it the actual Express server as an argument, and that should be it.</p>
+<figure class="highlight ts"><figcaption><span>src/server.ts</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ...</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> ioServer <span class="keyword">from</span> <span class="string">&quot;./socket-io/server&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> app = express();</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> server = http.createServer(app);</span><br><span class="line"></span><br><span class="line">server.listen(PORT, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&quot;Server is listening on port&quot;</span>, PORT);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">ioServer(server);</span><br></pre></td></tr></table></figure>
+
+<h3 id="Create-a-“rooms”-module"><a href="#Create-a-“rooms”-module" class="headerlink" title="Create a “rooms” module"></a>Create a “rooms” module</h3><p>Creating a rooms module might seem abstract at this point. Indeed, it has nothing to do with either Socket.io or the Express server.<br>Instead, we will use it as a provisional database for now.</p>
+<p>I want to create two arrays inside:</p>
+<p>One will hold objects that represent users. Each will hold a user’s name, their socket id, and an array of rooms that the user has joined.<br>The other array is an array of room objects. Each one holds a name of the room, a room id, and an array of objects that hold messages data.</p>
+<p>We will create this module in the <strong>socket-io</strong> folder as well, and call it <strong>rooms.ts</strong>.</p>
+<p>I created the <strong>users</strong> array as an empty array, as I don’t want any users joined the chat by default.<br>The rooms array is different. I want the <strong>lobby</strong> room to exist by default, and have all users enter this room automatically when they join the chat.</p>
+<figure class="highlight ts"><figcaption><span>src/socket-io/users.ts</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> users: &#123; username: <span class="built_in">string</span>; socketID: <span class="built_in">string</span>; rooms: <span class="built_in">string</span>[] &#125;[] = [];</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> rooms = [</span><br><span class="line">  &#123;</span><br><span class="line">    name: <span class="string">&quot;lobby&quot;</span>,</span><br><span class="line">    id: <span class="number">1</span>,</span><br><span class="line">    messages: [&#123; author: <span class="string">&quot;admin&quot;</span>, content: <span class="string">&quot;have fun everyone&quot;</span> &#125;],</span><br><span class="line">  &#125;,</span><br><span class="line">];</span><br></pre></td></tr></table></figure>
+
+<p>As we build the app, we will be creating methods that manipulate these arrays: adding and removing users, creating rooms and so on.</p>
+<p>Alright, that is it. We have a simple but functional Express server. We also created and instantiated a Socket.io server. Finally, we made two arrays that will hold information about users, rooms and messages that exist in our app.<br>Good times.</p>
+<p>In the next post we will go back to React. We will figure out how to organize our application - the data flow, needed components and dependencies, and such.<br>See you soon.</p>
+<!-- End Step Content -->
+
+<!-- Project Information -->
+
+<h2 id="Project-Information"><a href="#Project-Information" class="headerlink" title="Project Information"></a>Project Information</h2><h3 id="Available-at"><a href="#Available-at" class="headerlink" title="Available at"></a>Available at</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/ikaem/shima-api">Github repository - api</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/ikaem/shima-react-webpack">Github repository - frontend</a></li>
+<li><a target="_blank" rel="noopener" href="https://shima-react-webpack.herokuapp.com/">Live website</a></li>
+</ul>
+<h3 id="Goals"><a href="#Goals" class="headerlink" title="Goals"></a>Goals</h3><ol>
+<li>Use Socket.io to create a chat app</li>
+<li>Use Webpack, Babel, and TypeScript with React</li>
+<li>Deploy Webpack React app to Heroku</li>
+</ol>
+<h3 id="Steps"><a href="#Steps" class="headerlink" title="Steps"></a>Steps</h3><ol>
+<li>Create a React app with Webpack</li>
+<li><strong>Set up backend</strong></li>
+<li>Organize the React app</li>
+<li>Set up Socket.io communication between frontend and backend</li>
+<li>Build the app</li>
+<li>Deploy and known issues</li>
+</ol>
+<h3 id="Tech-and-Tools"><a href="#Tech-and-Tools" class="headerlink" title="Tech and Tools"></a>Tech and Tools</h3><ul>
+<li>React</li>
+<li>Tailwind</li>
+<li>Webpack</li>
+<li>Babel</li>
+<li>TypeScript</li>
+<li>Socket.io</li>
+<li>Express</li>
+</ul>
+<h3 id="Experience-with-Tech-amp-Tools"><a href="#Experience-with-Tech-amp-Tools" class="headerlink" title="Experience with Tech &amp; Tools"></a>Experience with Tech &amp; Tools</h3><p>I have done few smaller apps with Webpack, as described on this blog, so I have basic understanding of what Webpack is used for and how it does what it does. I also did a very small app with Socket.io on one occasion before, to see what it is all about. Babel I am completely unfamiliar with, so let’s see what it is.<br>Rest of the tech is familiar, and I shouldn’t have bigger problems using those.</p>
+<h2 id="DISCLAIMER"><a href="#DISCLAIMER" class="headerlink" title="DISCLAIMER"></a>DISCLAIMER</h2><p>Don’t take any of this seriously and as a matter-of-fact. These are my notes. It might look like I am trying to teach something to someone. I am not.</p>
+
+
+                
+
+
+                <!-- Cover image credit -->
+                
+                    <p class="image-credit-link">
+                        Cover image by <strong>
+                            <a target="_blank" rel="noopener" href="https://unsplash.com/@josswoodhead?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
+                                Joss Woodhead
+                            </a>
+                        </strong>
+                    </p>
+
+                
+
+  
+
+            </div>
+            
+            <!-- Custom placed tags -->
+            <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                
+                    
+
+
+<a href="/angry-chaired-blog/tags/typescript/">#typescript</a> <a href="/angry-chaired-blog/tags/express/">#express</a> <a href="/angry-chaired-blog/tags/node/">#node</a> <a href="/angry-chaired-blog/tags/socketio/">#socketio</a>
+
+
+                
+            </div>
+            <!--  -->
+
+
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+
+            <!-- Hyvor comments -->
+
+            <!-- End of Hyvor comments -->
+        </div>
+    </div>
+</article>
+
+
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2020 kaem<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

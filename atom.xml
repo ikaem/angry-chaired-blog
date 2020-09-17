@@ -6,7 +6,7 @@
   <link href="https://ikaem.github.io/angry-chaired-blog/atom.xml" rel="self"/>
   
   <link href="https://ikaem.github.io/angry-chaired-blog/"/>
-  <updated>2020-09-17T06:52:09.644Z</updated>
+  <updated>2020-09-17T12:15:31.038Z</updated>
   <id>https://ikaem.github.io/angry-chaired-blog/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>WhatsApp Clone with React and Webpack: Backend Setup</title>
+    <link href="https://ikaem.github.io/angry-chaired-blog/2020/whatsapp-clone-with-react-and-webpack-backend-setup/"/>
+    <id>https://ikaem.github.io/angry-chaired-blog/2020/whatsapp-clone-with-react-and-webpack-backend-setup/</id>
+    <published>2020-09-17T07:19:51.000Z</published>
+    <updated>2020-09-17T12:15:31.038Z</updated>
+    
+    
+    <summary type="html">&lt;!-- Step Content Start --&gt;
+
+&lt;h4 id=&quot;Part-2-of-6-in-Whatsapp-Clone-with-React-and-Webpack&quot;&gt;&lt;a href=&quot;#Part-2-of-6-in-Whatsapp-Clone-with-React-and-Webpack&quot; class=&quot;headerlink&quot; title=&quot;Part 2 of 6 in Whatsapp Clone with React and Webpack&quot;&gt;&lt;/a&gt;Part 2 of 6 in Whatsapp Clone with React and Webpack&lt;/h4&gt;&lt;p&gt;To get our chat app working, we need to set up Socket.io on the app’s backend. To do that, we need a backend. This is where we do it.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="whatsapp react webpack" scheme="https://ikaem.github.io/angry-chaired-blog/categories/whatsapp-react-webpack/"/>
+    
+    
+    <category term="typescript" scheme="https://ikaem.github.io/angry-chaired-blog/tags/typescript/"/>
+    
+    <category term="express" scheme="https://ikaem.github.io/angry-chaired-blog/tags/express/"/>
+    
+    <category term="node" scheme="https://ikaem.github.io/angry-chaired-blog/tags/node/"/>
+    
+    <category term="socketio" scheme="https://ikaem.github.io/angry-chaired-blog/tags/socketio/"/>
+    
+  </entry>
+  
+  <entry>
     <title>WhatsApp Clone with React and Webpack: The Setup</title>
     <link href="https://ikaem.github.io/angry-chaired-blog/2020/whatsapp-clone-with-react-and-webpack-the-setup/"/>
     <id>https://ikaem.github.io/angry-chaired-blog/2020/whatsapp-clone-with-react-and-webpack-the-setup/</id>
     <published>2020-09-16T08:14:57.000Z</published>
-    <updated>2020-09-17T06:52:09.644Z</updated>
+    <updated>2020-09-17T09:38:56.455Z</updated>
     
     
     <summary type="html">&lt;!-- Step Content Start --&gt;
@@ -39,9 +66,11 @@
     
     <category term="webpack" scheme="https://ikaem.github.io/angry-chaired-blog/tags/webpack/"/>
     
-    <category term="babel" scheme="https://ikaem.github.io/angry-chaired-blog/tags/babel/"/>
+    <category term="socketio" scheme="https://ikaem.github.io/angry-chaired-blog/tags/socketio/"/>
     
-    <category term="tailwing" scheme="https://ikaem.github.io/angry-chaired-blog/tags/tailwing/"/>
+    <category term="tailwind" scheme="https://ikaem.github.io/angry-chaired-blog/tags/tailwind/"/>
+    
+    <category term="babel" scheme="https://ikaem.github.io/angry-chaired-blog/tags/babel/"/>
     
     <category term="eslint" scheme="https://ikaem.github.io/angry-chaired-blog/tags/eslint/"/>
     
@@ -376,9 +405,9 @@
     
     <category term="landbot" scheme="https://ikaem.github.io/angry-chaired-blog/tags/landbot/"/>
     
-    <category term="html" scheme="https://ikaem.github.io/angry-chaired-blog/tags/html/"/>
-    
     <category term="css" scheme="https://ikaem.github.io/angry-chaired-blog/tags/css/"/>
+    
+    <category term="html" scheme="https://ikaem.github.io/angry-chaired-blog/tags/html/"/>
     
     <category term="figma" scheme="https://ikaem.github.io/angry-chaired-blog/tags/figma/"/>
     
@@ -472,29 +501,6 @@
     <summary type="html">&lt;!-- Step Content Start --&gt;
 
 &lt;h4 id=&quot;Part-5-of-8-in-Hexo-Blog&quot;&gt;&lt;a href=&quot;#Part-5-of-8-in-Hexo-Blog&quot; class=&quot;headerlink&quot; title=&quot;Part 5 of 8 in Hexo Blog&quot;&gt;&lt;/a&gt;Part 5 of 8 in Hexo Blog&lt;/h4&gt;&lt;p&gt;For me, the default theme that Hexo comes with, is both bad and good. It looks bad, plain and simple. But, to be honest, I don’t find other available themes very beginner friendly, so I stuck with this one. The good thing is that it is very simple in terms of configuration and technology it uses, so we can fix some of it.&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="hexo blog" scheme="https://ikaem.github.io/angry-chaired-blog/categories/hexo-blog/"/>
-    
-    
-    <category term="hexo" scheme="https://ikaem.github.io/angry-chaired-blog/tags/hexo/"/>
-    
-    <category term="blog" scheme="https://ikaem.github.io/angry-chaired-blog/tags/blog/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo Blog: Customizing Posts</title>
-    <link href="https://ikaem.github.io/angry-chaired-blog/2020/hexo-blog-customizing-posts/"/>
-    <id>https://ikaem.github.io/angry-chaired-blog/2020/hexo-blog-customizing-posts/</id>
-    <published>2020-08-17T07:01:29.000Z</published>
-    <updated>2020-08-17T07:30:38.608Z</updated>
-    
-    
-    <summary type="html">&lt;!-- Step Content Start --&gt;
-
-&lt;h4 id=&quot;Part-4-of-8-in-Hexo-Blog&quot;&gt;&lt;a href=&quot;#Part-4-of-8-in-Hexo-Blog&quot; class=&quot;headerlink&quot; title=&quot;Part 4 of 8 in Hexo Blog&quot;&gt;&lt;/a&gt;Part 4 of 8 in Hexo Blog&lt;/h4&gt;&lt;p&gt;Hexo makes it very simple to adjust the post content. We will add image and code files to our posts, and will see how we can show post excerpts on the home page, so users know what to expect from a post. While most of these things are possible with the usual Markdown syntax, Hexo offers few tools to make post customization more effective.&lt;/p&gt;</summary>
     
     
     
