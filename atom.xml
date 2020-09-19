@@ -6,7 +6,7 @@
   <link href="https://ikaem.github.io/angry-chaired-blog/atom.xml" rel="self"/>
   
   <link href="https://ikaem.github.io/angry-chaired-blog/"/>
-  <updated>2020-09-19T07:56:06.467Z</updated>
+  <updated>2020-09-19T07:59:58.848Z</updated>
   <id>https://ikaem.github.io/angry-chaired-blog/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://ikaem.github.io/angry-chaired-blog/2020/whatsapp-clone-with-react-and-webpack-planning-the-app/"/>
     <id>https://ikaem.github.io/angry-chaired-blog/2020/whatsapp-clone-with-react-and-webpack-planning-the-app/</id>
     <published>2020-09-18T05:03:08.000Z</published>
-    <updated>2020-09-19T07:56:06.467Z</updated>
+    <updated>2020-09-19T07:59:58.848Z</updated>
     
     
     <summary type="html">&lt;!-- Step Content Start --&gt;
@@ -95,9 +95,9 @@
     
     <category term="socketio" scheme="https://ikaem.github.io/angry-chaired-blog/tags/socketio/"/>
     
-    <category term="babel" scheme="https://ikaem.github.io/angry-chaired-blog/tags/babel/"/>
-    
     <category term="tailwind" scheme="https://ikaem.github.io/angry-chaired-blog/tags/tailwind/"/>
+    
+    <category term="babel" scheme="https://ikaem.github.io/angry-chaired-blog/tags/babel/"/>
     
     <category term="eslint" scheme="https://ikaem.github.io/angry-chaired-blog/tags/eslint/"/>
     
@@ -432,13 +432,13 @@
     
     <category term="landbot" scheme="https://ikaem.github.io/angry-chaired-blog/tags/landbot/"/>
     
-    <category term="figma" scheme="https://ikaem.github.io/angry-chaired-blog/tags/figma/"/>
-    
-    <category term="design" scheme="https://ikaem.github.io/angry-chaired-blog/tags/design/"/>
-    
     <category term="html" scheme="https://ikaem.github.io/angry-chaired-blog/tags/html/"/>
     
     <category term="css" scheme="https://ikaem.github.io/angry-chaired-blog/tags/css/"/>
+    
+    <category term="figma" scheme="https://ikaem.github.io/angry-chaired-blog/tags/figma/"/>
+    
+    <category term="design" scheme="https://ikaem.github.io/angry-chaired-blog/tags/design/"/>
     
   </entry>
   
