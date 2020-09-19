@@ -6,7 +6,7 @@
   <link href="https://ikaem.github.io/angry-chaired-blog/atom.xml" rel="self"/>
   
   <link href="https://ikaem.github.io/angry-chaired-blog/"/>
-  <updated>2020-09-17T12:55:02.515Z</updated>
+  <updated>2020-09-19T07:56:06.467Z</updated>
   <id>https://ikaem.github.io/angry-chaired-blog/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>WhatsApp Clone with React and Webpack: Planning the App</title>
+    <link href="https://ikaem.github.io/angry-chaired-blog/2020/whatsapp-clone-with-react-and-webpack-planning-the-app/"/>
+    <id>https://ikaem.github.io/angry-chaired-blog/2020/whatsapp-clone-with-react-and-webpack-planning-the-app/</id>
+    <published>2020-09-18T05:03:08.000Z</published>
+    <updated>2020-09-19T07:56:06.467Z</updated>
+    
+    
+    <summary type="html">&lt;!-- Step Content Start --&gt;
+
+&lt;h4 id=&quot;Part-3-of-6-in-Whatsapp-Clone-with-React-and-Webpack&quot;&gt;&lt;a href=&quot;#Part-3-of-6-in-Whatsapp-Clone-with-React-and-Webpack&quot; class=&quot;headerlink&quot; title=&quot;Part 3 of 6 in Whatsapp Clone with React and Webpack&quot;&gt;&lt;/a&gt;Part 3 of 6 in Whatsapp Clone with React and Webpack&lt;/h4&gt;&lt;p&gt;In previous posts we set up both frontend and backend. Now its time to figure out how our app is going to work. We will create all necessary components, install dependencies, and then pu them all together.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="whatsapp react webpack" scheme="https://ikaem.github.io/angry-chaired-blog/categories/whatsapp-react-webpack/"/>
+    
+    
+    <category term="typescript" scheme="https://ikaem.github.io/angry-chaired-blog/tags/typescript/"/>
+    
+    <category term="react" scheme="https://ikaem.github.io/angry-chaired-blog/tags/react/"/>
+    
+    <category term="socketio" scheme="https://ikaem.github.io/angry-chaired-blog/tags/socketio/"/>
+    
+    <category term="react-router" scheme="https://ikaem.github.io/angry-chaired-blog/tags/react-router/"/>
+    
+  </entry>
+  
+  <entry>
     <title>WhatsApp Clone with React and Webpack: Backend Setup</title>
     <link href="https://ikaem.github.io/angry-chaired-blog/2020/whatsapp-clone-with-react-and-webpack-backend-setup/"/>
     <id>https://ikaem.github.io/angry-chaired-blog/2020/whatsapp-clone-with-react-and-webpack-backend-setup/</id>
     <published>2020-09-17T07:19:51.000Z</published>
-    <updated>2020-09-17T12:55:02.515Z</updated>
+    <updated>2020-09-18T05:03:13.694Z</updated>
     
     
     <summary type="html">&lt;!-- Step Content Start --&gt;
@@ -48,7 +75,7 @@
     <link href="https://ikaem.github.io/angry-chaired-blog/2020/whatsapp-clone-with-react-and-webpack-the-setup/"/>
     <id>https://ikaem.github.io/angry-chaired-blog/2020/whatsapp-clone-with-react-and-webpack-the-setup/</id>
     <published>2020-09-16T08:14:57.000Z</published>
-    <updated>2020-09-17T09:38:56.455Z</updated>
+    <updated>2020-09-18T07:27:03.310Z</updated>
     
     
     <summary type="html">&lt;!-- Step Content Start --&gt;
@@ -68,9 +95,9 @@
     
     <category term="socketio" scheme="https://ikaem.github.io/angry-chaired-blog/tags/socketio/"/>
     
-    <category term="tailwind" scheme="https://ikaem.github.io/angry-chaired-blog/tags/tailwind/"/>
-    
     <category term="babel" scheme="https://ikaem.github.io/angry-chaired-blog/tags/babel/"/>
+    
+    <category term="tailwind" scheme="https://ikaem.github.io/angry-chaired-blog/tags/tailwind/"/>
     
     <category term="eslint" scheme="https://ikaem.github.io/angry-chaired-blog/tags/eslint/"/>
     
@@ -405,13 +432,13 @@
     
     <category term="landbot" scheme="https://ikaem.github.io/angry-chaired-blog/tags/landbot/"/>
     
-    <category term="html" scheme="https://ikaem.github.io/angry-chaired-blog/tags/html/"/>
-    
-    <category term="css" scheme="https://ikaem.github.io/angry-chaired-blog/tags/css/"/>
-    
     <category term="figma" scheme="https://ikaem.github.io/angry-chaired-blog/tags/figma/"/>
     
     <category term="design" scheme="https://ikaem.github.io/angry-chaired-blog/tags/design/"/>
+    
+    <category term="html" scheme="https://ikaem.github.io/angry-chaired-blog/tags/html/"/>
+    
+    <category term="css" scheme="https://ikaem.github.io/angry-chaired-blog/tags/css/"/>
     
   </entry>
   
@@ -478,29 +505,6 @@
     <summary type="html">&lt;!-- Step Content Start --&gt;
 
 &lt;h4 id=&quot;Part-6-of-8-in-Hexo-Blog&quot;&gt;&lt;a href=&quot;#Part-6-of-8-in-Hexo-Blog&quot; class=&quot;headerlink&quot; title=&quot;Part 6 of 8 in Hexo Blog&quot;&gt;&lt;/a&gt;Part 6 of 8 in Hexo Blog&lt;/h4&gt;&lt;p&gt;Hexo lists a selection of themes on their &lt;a href=&quot;https://hexo.io/docs/helpers.html&quot;&gt;website&lt;/a&gt;. These seem to be made by its community, so one can see modern looking themes combined with those looking like they were from 2000s.&lt;br&gt;Themes are also made with various technologies, some have bugs, and some seem to be forgotten. &lt;/p&gt;</summary>
-    
-    
-    
-    <category term="hexo blog" scheme="https://ikaem.github.io/angry-chaired-blog/categories/hexo-blog/"/>
-    
-    
-    <category term="hexo" scheme="https://ikaem.github.io/angry-chaired-blog/tags/hexo/"/>
-    
-    <category term="blog" scheme="https://ikaem.github.io/angry-chaired-blog/tags/blog/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo Blog: Customizing Default Theme</title>
-    <link href="https://ikaem.github.io/angry-chaired-blog/2020/hexo-blog-customizing-default-theme/"/>
-    <id>https://ikaem.github.io/angry-chaired-blog/2020/hexo-blog-customizing-default-theme/</id>
-    <published>2020-08-17T07:18:45.000Z</published>
-    <updated>2020-08-17T07:28:54.514Z</updated>
-    
-    
-    <summary type="html">&lt;!-- Step Content Start --&gt;
-
-&lt;h4 id=&quot;Part-5-of-8-in-Hexo-Blog&quot;&gt;&lt;a href=&quot;#Part-5-of-8-in-Hexo-Blog&quot; class=&quot;headerlink&quot; title=&quot;Part 5 of 8 in Hexo Blog&quot;&gt;&lt;/a&gt;Part 5 of 8 in Hexo Blog&lt;/h4&gt;&lt;p&gt;For me, the default theme that Hexo comes with, is both bad and good. It looks bad, plain and simple. But, to be honest, I don’t find other available themes very beginner friendly, so I stuck with this one. The good thing is that it is very simple in terms of configuration and technology it uses, so we can fix some of it.&lt;/p&gt;</summary>
     
     
     

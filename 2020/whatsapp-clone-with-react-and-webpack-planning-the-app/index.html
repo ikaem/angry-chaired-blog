@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="Inexperienced and curious pokes into the sprawling world of web development "/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="kaem"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="WhatsApp Clone with React and Webpack: Planning the App"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Inexperienced and curious pokes into the sprawling world of web development "/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Angry Chaired Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://ikaem.github.io/angry-chaired-blog/angry-chaired-blog/images/header-image.jpg"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://ikaem.github.io/angry-chaired-blog/angry-chaired-blog/images/header-image.jpg"/>
+    
+
+    <!-- Title -->
+    
+    <title>WhatsApp Clone with React and Webpack: Planning the App - Angry Chaired Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/angry-chaired-blog/css/style.css">
+
+    
+<link rel="stylesheet" href="/angry-chaired-blog/css/custom-style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+    <link rel="icon" href="/angry-chaired-blog/images/favicon.ico"/>
+    
+
+<meta name="generator" content="Hexo 5.0.2"><link rel="alternate" href="/angry-chaired-blog/atom.xml" title="Angry Chaired Blog" type="application/atom+xml">
+</head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/angry-chaired-blog/">Angry Chaired Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/about">
+                            
+                                About
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a target="_blank" rel="noopener" href="https://angrychaired.surge.sh">
+                            
+                                <i class="fa fa-user fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a target="_blank" rel="noopener" href="https://github.com/ikaem/">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a href="/angry-chaired-blog/atom.xml">
+                            
+                                <i class="fa fa-rss fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('ales-krivec-lf25pgbeizo-unsplash.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>WhatsApp Clone with React and Webpack: Planning the App</h1>
+
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            18/09/2020
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/angry-chaired-blog/categories/whatsapp-react-webpack/">whatsapp react webpack</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <!-- Step Content Start -->
+
+<h4 id="Part-3-of-6-in-Whatsapp-Clone-with-React-and-Webpack"><a href="#Part-3-of-6-in-Whatsapp-Clone-with-React-and-Webpack" class="headerlink" title="Part 3 of 6 in Whatsapp Clone with React and Webpack"></a>Part 3 of 6 in Whatsapp Clone with React and Webpack</h4><p>In previous posts we set up both frontend and backend. Now its time to figure out how our app is going to work. We will create all necessary components, install dependencies, and then pu them all together.</p>
+<a id="more"></a>
+
+<h4 id="See-Project-Information"><a href="#See-Project-Information" class="headerlink" title="See Project Information"></a>See <a href="#Project-Information">Project Information</a></h4><h2 id="Step-3-Organize-the-React-app"><a href="#Step-3-Organize-the-React-app" class="headerlink" title="Step 3: Organize the React app"></a>Step 3: Organize the React app</h2><p>Here is what we do in this part:</p>
+<ol>
+<li>Come up with the plan</li>
+<li>Install dependencies and create services</li>
+<li>The App Component</li>
+<li>Create pages</li>
+<li>Create containers</li>
+<li>Create components</li>
+<li>Create context</li>
+</ol>
+<h3 id="The-plan"><a href="#The-plan" class="headerlink" title="The plan"></a>The plan</h3><p>Ok, here is what I want the app to be able to do:</p>
+<ol>
+<li>Add a user to the chat</li>
+<li>Join every user to the default “lobby” room</li>
+<li>List and switch between available rooms</li>
+<li>Send message functionality</li>
+<li>Show all room messages</li>
+<li>Create new room</li>
+<li>Join user to a room</li>
+<li>Show if a new message arrived in a room that is not viewed at the moment</li>
+<li>Disconnect user from the chat</li>
+</ol>
+<p>Let’s see how we can do these things.</p>
+<p><strong>Add a user to the chat</strong></p>
+<p>We will have a simple <strong>Join</strong> component (page) with a HTML form. After user enters their username and submits the form, we will send a POST request to the backend to see if this username is taken. If not, we respond that the username is ok, and we set a simple logged user state on the frontend. With help of React Router, we redirect the user to the <strong>“/chat/room/lobby”</strong> path.</p>
+<p><strong>Join every user to a default “lobby” room</strong></p>
+<p>When the user reaches the <strong>“/chat”</strong> route, we want to do few things. First, we want to connect to the Socket.io server. For this we will use React Context Provider component. This component will do so immediately on its mount. Second, we want the user to join the <strong>“lobby”</strong> room. Assuming we successfully connected to the server, we will emit an event to join this default room. After a check that this user has not already joined this room, we add the user to the room and send few admin welcome messages.</p>
+<p><strong>List and switch between available rooms</strong></p>
+<p>In a Context Provider’s <strong>useEffect</strong> hook, we will set an event listener for incoming room messages. Once we receive one, we will add it to a communication object state - an array of objects holding information about each room that the user is part of.<br>This state is passed to a component that renders brief information about each room. It also uses React Router to alow navigation to full room conversations by clicking on each brief room info.</p>
+<p><strong>Send message functionality</strong></p>
+<p>We will create a function in the above-mentioned Context component to help us with this. The function will emit a message event using an establish Soket.io connection. It will also be passed to a child component dealing with message form data.<br>After the child component validates the message input, the context function emits the event with new message to the backend.</p>
+<p><strong>Show all room messages</strong></p>
+<p>Assuming the new message event arrived to backend successfully, socket.io server emit its own event back to all users that have joined the room in which the message was created.<br>On the frontend, an event listener reacts to this, and adds message from the event to the messages state. This causes re-render of the component which serves as a room in question, and results in the new message being shown which to all users in the room.</p>
+<p><strong>Create new room</strong></p>
+<p>To get this functionality, we will create a new component and put a form in it and a form handler function. We will also create a new emit function inside the Context Provider, and pass it down to the form component. This emit function is called by the handler function, and emits a join event to the socket-io server, together with the user’s name.<br>On the backend, the socket-io server accepts this event. It checks if the both the user and room exist. If the room does not exist, a new room object is added to the rooms array, and to the User’s room’s array. The socket-io server uses its callback function (a new thing which we will get to) to confirm that all is good. It then joins the user to this room and sends few admin welcome messages.<br>On frontend, the handler function waits for the callback function to return. If the return is positive, the handler function redirects the user to a path containing the name of the newly created room.<br>Meanwhile, an event listener in the Context Provider reacts to those admin messages. It adds them to the state, causing a re-render of the app, and outputing a new room</p>
+<p><strong>Join user to a room</strong></p>
+<p>This functionality is pretty the same one as above. We still have a form component that submits name of the room. Backend checks to see if the room exists and if the user hasn’t joined that room already. If all good, the join is performed and confirmed. Frontend both adds room messages to the state, and redirects the user to the joined room.</p>
+<p><strong>Show if a new message arrived in a room that is not viewed at the moment</strong></p>
+<p>If a message arrives to a room that the user is not viewing at the moment, we want the brief room info (introduced sa the app functionality number 3) to be colored in red.<br>We do this by having a <strong>seen</strong> field on each room object in the communication objects state. Each time a new message arrives to the app, this field is set to <strong>false</strong>. And if the current URL path matches the room name in the brief room info, this property changes to <strong>true</strong>. Otherwise, it stays false, conditionally rendering the information in red color.</p>
+<p><strong>Disconnect user from the chat</strong></p>
+<p>When a user navigates away from the app, we want to do few things again. First, we want to perform a cleanup on the frontend. This means that we want to return a function from a useEffect hook on which the Socket.io connection was made. In the returned function we want to close the socket-io connection.<br>Second thing is to do similar thing on the backend. We want to register a <strong>“disconnect”</strong> event on the socket, and then find the username that belonged to that socket. We want to remove that user from the <strong>users</strong> array to make this username available for other users. Then, we also want to close the connection with this particular socket.</p>
+<h3 id="Install-dependencies-and-create-services"><a href="#Install-dependencies-and-create-services" class="headerlink" title="Install dependencies and create services"></a>Install dependencies and create services</h3><p>At this point, the only dependency we need is React Router. We will use React Router to redirect a user when they join the chat, move them from one room to another one, and render join and create room components.</p>
+<p>So let’s install react-router-dom, which is a React Router implementation for browsers:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i react-router-dom</span><br></pre></td></tr></table></figure>
+
+<p>We also need TS types, so let’s install those as a dev dependency:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i -D @types/react-router-dom</span><br></pre></td></tr></table></figure>
+
+<p>Finally, let’s add the React Router’s <strong>BrowserRouter</strong> component as a wrapper around the <strong>App Component</strong> in <strong>index.tsx</strong>. This way we will be able to use React Router’s features everywhere in the application.</p>
+<figure class="highlight plain"><figcaption><span>index.tsx</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">import React from &quot;react&quot;;</span><br><span class="line">import ReactDOM from &quot;react-dom&quot;;</span><br><span class="line">import &#123; BrowserRouter as Router &#125; from &quot;react-router-dom&quot;;</span><br><span class="line"></span><br><span class="line">import &quot;.&#x2F;assets&#x2F;styles&#x2F;main.css&quot;;</span><br><span class="line"></span><br><span class="line">const App &#x3D; () &#x3D;&gt; &lt;h1&gt;Hello React Webpack App&lt;&#x2F;h1&gt;;</span><br><span class="line"></span><br><span class="line">ReactDOM.render(</span><br><span class="line">  &lt;Router&gt;</span><br><span class="line">    &lt;App &#x2F;&gt;</span><br><span class="line">  &lt;&#x2F;Router&gt;,</span><br><span class="line">  document.getElementById(&quot;root&quot;)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<p>As for the services, we only need to create one. By “services”, I mean functions that connect to an api. In this case, we will need to connect to our backend server to join the chat.<br>This will be done via regular POST request.</p>
+<p>So let’s create a folder called <strong>services</strong> in the <strong>src</strong> folder, and place a file called <strong>httpService.ts</strong> inside.</p>
+<p>We will only prepare the function for now, and will define it completely in the next post.</p>
+<figure class="highlight plain"><figcaption><span>src/services/httpService.ts</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">const ENDPOINT &#x3D; &quot;http:&#x2F;&#x2F;localhost:5000&quot;;</span><br><span class="line"></span><br><span class="line">export const httpJoinChat &#x3D; async (username: string): Promise&lt;void&gt; &#x3D;&gt; &#123;</span><br><span class="line">  console.log(&quot;This is the service&quot;);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>As you can see, we have defined the <strong>ENDPOINT</strong> variable, giving it a value of the URL on which our backend server runs.<br>We will use this value in the <strong>httpJoinChat</strong> function to reach a path on which we can join the chat.</p>
+<p>The function itself is an async one, as inside we will be using <strong>fetch</strong> API and <strong>await</strong> keyword to resolve the data returned by the server.<br>At the moment we only log a message, and return a Promise which resolved to <strong>void</strong>.</p>
+<h3 id="The-App-Component"><a href="#The-App-Component" class="headerlink" title="The App Component"></a>The App Component</h3><p>It is time to put the App Component into its own module. Let’s do that with <strong>app.tsx</strong>, and have it live in the <strong>src</strong> folder.</p>
+<figure class="highlight plain"><figcaption><span>src/app.tsx</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">import React from &quot;react&quot;;</span><br><span class="line"></span><br><span class="line">import Layout from &quot;.&#x2F;components&#x2F;layout.component&quot;;</span><br><span class="line"></span><br><span class="line">const App: React.FC &#x3D; () &#x3D;&gt; &#123;</span><br><span class="line">  return (</span><br><span class="line">    &lt;Layout&gt;</span><br><span class="line">      &lt;h1&gt;Hello App Component&lt;&#x2F;h1&gt;</span><br><span class="line">    &lt;&#x2F;Layout&gt;</span><br><span class="line">  );</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">export default App;</span><br></pre></td></tr></table></figure>
+
+<p>Let’s import it in the <strong>index.tsx</strong> module, and remove the previous App component that was defined in that module:</p>
+<figure class="highlight plain"><figcaption><span>src/index.tsx</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">import React from &quot;react&quot;;</span><br><span class="line">import ReactDOM from &quot;react-dom&quot;;</span><br><span class="line">import &#123; BrowserRouter as Router &#125; from &quot;react-router-dom&quot;;</span><br><span class="line"></span><br><span class="line">import &quot;.&#x2F;assets&#x2F;styles&#x2F;main.css&quot;;</span><br><span class="line"></span><br><span class="line">import App from &quot;.&#x2F;app&quot;;</span><br><span class="line"></span><br><span class="line">ReactDOM.render(</span><br><span class="line">  &lt;Router&gt;</span><br><span class="line">    &lt;App &#x2F;&gt;</span><br><span class="line">  &lt;&#x2F;Router&gt;,</span><br><span class="line">  document.getElementById(&quot;root&quot;)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<p>We will use the App Component as a container for all other components.<br>It’s pretty bare at the moment, but we will update it in this post to add it a state, other components, and React Router paths.<br>Don’t mind the Layout component sitting inside the App component. It contains just a bit of styling, to mimic the looks of the WhatsApp Web app.</p>
+<h3 id="Create-pages"><a href="#Create-pages" class="headerlink" title="Create pages"></a>Create pages</h3><p>Alright, we are on fire.<br>We will create pages now. Pages will be used as the top level containers for the app functionality. They are top level components that are rendered on a specific path set by React Router’s Route components.</p>
+<p>In our app we only have two of those pages:</p>
+<ol>
+<li>Join page - rendered when the path matches <strong>“/join”</strong></li>
+<li>Chat page - rendered when the path matches <strong>“/chat”</strong></li>
+</ol>
+<p>Both of these sit in <strong>src/pages</strong> folder.</p>
+<h4 id="Join-page"><a href="#Join-page" class="headerlink" title="Join page"></a>Join page</h4><p>The Join pages is basically a form component. Its form is used to submit a user’s username for a check. If the username is valid (not in use), the Join page informs the App Component that the user has joined, and sets App’s loggedUser state to the desired username.<br>On successful join, the page also redirects the user to the <strong>“/chat”</strong> route, specifically to the <strong>lobby</strong> room.</p>
+<p>Here is just an outline of the component, with logic being added in the next post:</p>
+<figure class="highlight typescript"><figcaption><span>src/pages/join.page.tsx</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">&quot;react&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">interface</span> JoinProps &#123;</span><br><span class="line">  setLoggedUser: React.Dispatch&lt;React.SetStateAction&lt;<span class="built_in">string</span>&gt;&gt;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> Join: React.FC&lt;JoinProps&gt; = <span class="function">(<span class="params">&#123; setLoggedUser &#125;</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> loginInputRef = useRef&lt;HTMLInputElement&gt;(<span class="literal">null</span>);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    &lt;div className=<span class="string">&quot;mx-auto max-w-screen-xl w-full relative bg-gray-200 xl:my-5 py-32&quot;</span>&gt;</span><br><span class="line">      &lt;form className=<span class="string">&quot;flex flex-col w-8/12 px-4 mx-auto items-center h-32 justify-between&quot;</span>&gt;</span><br><span class="line">        &lt;label htmlFor=<span class="string">&quot;&quot;</span> className=<span class="string">&quot;&quot;</span>&gt;</span><br><span class="line">          Choose your username:</span><br><span class="line">        &lt;/label&gt;</span><br><span class="line">        &lt;input</span><br><span class="line">          <span class="keyword">type</span>=<span class="string">&quot;text&quot;</span></span><br><span class="line">          className=<span class="string">&quot;rounded-lg px-4 py-2 text-center outline-none text-gray-600&quot;</span></span><br><span class="line">          required</span><br><span class="line">          ref=&#123;loginInputRef&#125;</span><br><span class="line">        /&gt;</span><br><span class="line">        &lt;button className=<span class="string">&quot;bg-green-300 py-2 px-8 rounded-lg outline-none&quot;</span>&gt;</span><br><span class="line">          Join</span><br><span class="line">        &lt;/button&gt;</span><br><span class="line">      &lt;/form&gt;</span><br><span class="line">      &lt;p className=<span class="string">&quot;mt-8 px-4 text-center text-orange-900&quot;</span>&gt;</span><br><span class="line">        &#123;<span class="string">&quot;Potential error message here&quot;</span>&#125;</span><br><span class="line">      &lt;/p&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  );</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> Join;</span><br></pre></td></tr></table></figure>
+
+<p>Note a few things:</p>
+<ul>
+<li>The component accepts a prop that sets <strong>loggedUser</strong> state. This state lives in the <strong>App</strong> component which provides the setter to the <strong>Join</strong> page</li>
+<li>We use the <strong>useRef</strong> hook to get value from the form input. We could use state and bind it to the input, but I decided to use reference because the form is very simple.</li>
+<li>We make a placeholder for potential error message coming back from the server.</li>
+<li>Don’t mind the Tailwind styling classes</li>
+</ul>
+<h4 id="Chat-Page"><a href="#Chat-Page" class="headerlink" title="Chat Page"></a>Chat Page</h4><p>The <strong>Chat</strong> page is the one holding containers that interact with the socket-io server. Since we don’t have any containers yet, we won’t include them in the page.</p>
+<p>We will, however, import the <strong>useRouteMatch</strong> hook from <strong>react-router-dom</strong>. We need it to access the current path that the app is on, which is always <strong>“/chat”</strong> when this page is rendered (we could hardcode this path when time comes to use it, but I like to be able to access it dynamically).<br>We will also immediately import and use React Router’s <strong>Switch</strong> component.</p>
+<p>Here is the page’s current shape:</p>
+<figure class="highlight plain"><figcaption><span>src/pages/chat.page.tsx</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">import React from &quot;react&quot;;</span><br><span class="line"></span><br><span class="line">import &#123; Switch, useRouteMatch &#125; from &quot;react-router-dom&quot;;</span><br><span class="line"></span><br><span class="line">const Chat: React.FC &#x3D; () &#x3D;&gt; &#123;</span><br><span class="line">  const &#123; path &#125; &#x3D; useRouteMatch();</span><br><span class="line"></span><br><span class="line">  return (</span><br><span class="line">    &lt;div className&#x3D;&quot;app-container grid grid-cols-app-mobile sm:grid-cols-app-desktop grid-rows-app mx-auto max-w-screen-xl w-full relative bg-gray-200 xl:my-5 h-screen&quot;&gt;</span><br><span class="line">      &lt;Switch&gt;</span><br><span class="line">        &lt;h1&gt;The Chat component here&lt;&#x2F;h1&gt;</span><br><span class="line">      &lt;&#x2F;Switch&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">  );</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">export default Chat;</span><br></pre></td></tr></table></figure>
+
+<p>Again, don’t mind the Tailwind classes on the <strong>div</strong>. We only use it to create a grid layout and position future components inside the page.</p>
+<p>Now that we have both pages created, we can import and render them in the App component.<br>We will use React Router’s <strong>Route</strong> component to specify paths on which each component should be rendered.<br>I also set an empty <strong>Route</strong> component with no <strong>path</strong> prop defined. I set it to render React Router’s <strong>Redirect</strong> component, and had its path point to <strong>“/join”</strong>. This will redirect any non-existing path to the <strong>Join</strong> component.</p>
+<figure class="highlight plain"><figcaption><span>src/app.tsx</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">import React, &#123; useState &#125; from &quot;react&quot;;</span><br><span class="line">import &#123; Switch, Route, Redirect &#125; from &quot;react-router-dom&quot;;</span><br><span class="line"></span><br><span class="line">import Layout from &quot;.&#x2F;components&#x2F;layout.component&quot;;</span><br><span class="line"></span><br><span class="line">import Join from &quot;.&#x2F;pages&#x2F;join.page&quot;;</span><br><span class="line">import Chat from &quot;.&#x2F;pages&#x2F;chat.page&quot;;</span><br><span class="line"></span><br><span class="line">const App: React.FC &#x3D; () &#x3D;&gt; &#123;</span><br><span class="line">  const [loggedUser, setLoggedUser] &#x3D; useState&lt;string&gt;(&quot;&quot;);</span><br><span class="line"></span><br><span class="line">  return (</span><br><span class="line">    &lt;Layout&gt;</span><br><span class="line">      &lt;Switch&gt;</span><br><span class="line">        &lt;Route path&#x3D;&quot;&#x2F;join&quot; exact&gt;</span><br><span class="line">          &lt;Join setLoggedUser&#x3D;&#123;setLoggedUser&#125; &#x2F;&gt;</span><br><span class="line">        &lt;&#x2F;Route&gt;</span><br><span class="line">        &lt;Route path&#x3D;&quot;&#x2F;chat&quot;&gt;</span><br><span class="line">          &lt;Chat &#x2F;&gt;</span><br><span class="line">        &lt;&#x2F;Route&gt;</span><br><span class="line">        &lt;Route&gt;</span><br><span class="line">          &lt;Redirect to&#x3D;&quot;&#x2F;join&quot; &#x2F;&gt;</span><br><span class="line">        &lt;&#x2F;Route&gt;</span><br><span class="line">      &lt;&#x2F;Switch&gt;</span><br><span class="line">    &lt;&#x2F;Layout&gt;</span><br><span class="line">  );</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">export default App;</span><br></pre></td></tr></table></figure>
+
+<p>Note that we added state to the App component, and passed its setter to the <strong>Join</strong> component. We are not doing anything with either of those at the moment. Soon, though.</p>
+<h3 id="Create-containers"><a href="#Create-containers" class="headerlink" title="Create containers"></a>Create containers</h3><p>Containers are component that deal only with logic, and leave view business to regular components. That’s an ideal situation. In reality, this is a vague distinction, and I mostly use it to organize the app into components that are, in some not entirely clear way, higher in hierarchy.</p>
+<p>In our app, we have three such components.</p>
+<ul>
+<li>Communication</li>
+<li>Contacts</li>
+<li>Header</li>
+</ul>
+<p>All of these components are rendered by the <strong>Chat</strong> component.<br>We put all three of them in <strong>src/containers</strong> folder.</p>
+<h4 id="Communication-container"><a href="#Communication-container" class="headerlink" title="Communication container"></a>Communication container</h4><p>The Communication container will eventually hold three other components, to render communication header, individual messages, and new message form.</p>
+<p>For now, though, we create it only with basic JSX.</p>
+<figure class="highlight plain"><figcaption><span>src/containers/communication.container.tsx</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">import React from &quot;react&quot;;</span><br><span class="line"></span><br><span class="line">const Communication: React.FC &#x3D; () &#x3D;&gt; &#123;</span><br><span class="line">  return (</span><br><span class="line">    &lt;main className&#x3D;&quot;row-span-2 flex flex-col h-full&quot;&gt;</span><br><span class="line">      &lt;div&gt;FUTURE COMMUNICATION HEADER&lt;&#x2F;div&gt;</span><br><span class="line">      &lt;div className&#x3D;&quot;custom-scrollbar overflow-y-scroll bg-message-box-pattern h-full w-full p-4&quot;&gt;</span><br><span class="line">        &lt;ul className&#x3D;&quot;w-full flex flex-col justify-start sm:w-10&#x2F;12 sm:mx-auto&quot;&gt;</span><br><span class="line">          &#123;[].map((val) &#x3D;&gt; (</span><br><span class="line">            &lt;li&gt;FUTURE MESSAGE&lt;&#x2F;li&gt;</span><br><span class="line">          ))&#125;</span><br><span class="line">        &lt;&#x2F;ul&gt;</span><br><span class="line">      &lt;&#x2F;div&gt;</span><br><span class="line">      &lt;div&gt;FUTURE NEW MESSAGE COMPONENT&lt;&#x2F;div&gt;</span><br><span class="line">    &lt;&#x2F;main&gt;</span><br><span class="line">  );</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">export default Communication;</span><br></pre></td></tr></table></figure>
+
+<p>Note that currently we loop over an empty array to render a future message item. Later we will add a state to hold messages that match the room currently in the view. We will then loop over that state.</p>
+<h4 id="Contacts"><a href="#Contacts" class="headerlink" title="Contacts"></a>Contacts</h4><p>We use <strong>Contacts</strong> container to loop over a list of communication elements, and output a single contact item component for each element.</p>
+<p>At the moment we will loop over an empty array, to make it clear what is it that this container does.</p>
+<p>Here is the container in its simplest form:</p>
+<figure class="highlight plain"><figcaption><span>src/containers/contacts.container.tsx</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">import React from &quot;react&quot;;</span><br><span class="line"></span><br><span class="line">const Contacts: React.FC &#x3D; () &#x3D;&gt; &#123;</span><br><span class="line">  return (</span><br><span class="line">    &lt;div className&#x3D;&quot;bg-white custom-scrollbar overflow-y-scroll px-4&quot;&gt;</span><br><span class="line">      &lt;ul className&#x3D;&quot;w-full&quot;&gt;</span><br><span class="line">        &#123;[].map((val) &#x3D;&gt;</span><br><span class="line">            &lt;div&gt;FUTURE CONTACT ITEM&lt;&#x2F;div&gt;</span><br><span class="line">      &lt;&#x2F;ul&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">  );</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">export default Contacts;</span><br></pre></td></tr></table></figure>
+
+<h4 id="Header"><a href="#Header" class="headerlink" title="Header"></a>Header</h4><p>The <strong>Header</strong> container sits in the top left of the <strong>Chat</strong> page. It holds user’s avatar (not at the moment, though - we will not be implementing this feature in the current series), buttons to access join and create room features, and search form (this part will wait another series, too)</p>
+<p>Avatar and the buttons will be a part of <strong>HeaderNavigation</strong> component, added in this post.</p>
+<figure class="highlight plain"><figcaption><span>src/containers/header.container.tsx</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">import React from &quot;react&quot;;</span><br><span class="line"></span><br><span class="line">const Header: React.FC &#x3D; () &#x3D;&gt; &#123;</span><br><span class="line">  return (</span><br><span class="line">    &lt;header className&#x3D;&quot;flex flex-col&quot;&gt;</span><br><span class="line">      &lt;div&gt;FUTURE HEADER NAVIGATION COMPONENT&lt;&#x2F;div&gt;</span><br><span class="line">      &lt;div&gt;FUTURE HEADER SEARCH COMPONENT&lt;&#x2F;div&gt;</span><br><span class="line">    &lt;&#x2F;header&gt;</span><br><span class="line">  );</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">export default Header;</span><br></pre></td></tr></table></figure>
+
+<p>Nice. Now we can put these containers inside the <strong>Chat</strong> page.</p>
+<p>We will render <strong>Header</strong> and <strong>Concatcs</strong> component normally, by just including them in the <strong>return()</strong> of the page. This makes these two components always present on the page.<br>The <strong>Communication</strong> container, however, will be rendered by the React Router’s <strong>Route</strong> component.</p>
+<p>Here is how I imagined it:</p>
+<figure class="highlight plain"><figcaption><span>src/pages/chat.page.tsx</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">import React from &quot;react&quot;;</span><br><span class="line">import &#123; Switch, Route, useRouteMatch &#125; from &quot;react-router-dom&quot;;</span><br><span class="line"></span><br><span class="line">import Header from &quot;..&#x2F;containers&#x2F;header.container&quot;;</span><br><span class="line">import Communication from &quot;..&#x2F;containers&#x2F;communication.container&quot;;</span><br><span class="line">import Contacts from &quot;..&#x2F;containers&#x2F;contacts.container&quot;;</span><br><span class="line"></span><br><span class="line">const Chat: React.FC &#x3D; () &#x3D;&gt; &#123;</span><br><span class="line">  const &#123; path &#125; &#x3D; useRouteMatch();</span><br><span class="line"></span><br><span class="line">  return (</span><br><span class="line">    &lt;div className&#x3D;&quot;app-container grid grid-cols-app-mobile sm:grid-cols-app-desktop grid-rows-app mx-auto max-w-screen-xl w-full relative bg-gray-200 xl:my-5 h-screen&quot;&gt;</span><br><span class="line">      &lt;Header &#x2F;&gt;</span><br><span class="line">      &lt;Switch&gt;</span><br><span class="line">        &lt;Route path&#x3D;&#123;&#96;$&#123;path&#125;&#x2F;&#96;&#125; exact&gt;</span><br><span class="line">          &lt;Redirect to&#x3D;&#123;&#96;$&#123;path&#125;&#x2F;room&#x2F;lobby&#96;&#125; &#x2F;&gt;</span><br><span class="line">        &lt;&#x2F;Route&gt;</span><br><span class="line">        &lt;Route path&#x3D;&#123;&#96;$&#123;path&#125;&#x2F;room&#x2F;:id&#96;&#125;&gt;</span><br><span class="line">          &lt;Communication &#x2F;&gt;</span><br><span class="line">        &lt;&#x2F;Route&gt;</span><br><span class="line">      &lt;&#x2F;Switch&gt;</span><br><span class="line">      &lt;Contacts &#x2F;&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">  );</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">export default Chat;</span><br></pre></td></tr></table></figure>
+
+<p>So what is going on here?</p>
+<ul>
+<li>We use the <strong>path</strong> variable a lot. Since it holds the current path (“/chat”) that renders the <strong>Chat</strong> page, we use it to assemble nested routes.</li>
+<li>First <strong>Route</strong> component reacts to <strong>/chat/</strong> path. If the path matches this, it will redirect the user to the <strong>lobby</strong> room which always exists for every user.</li>
+<li>Second <strong>Route</strong> component reacts to <strong>/chat/room/</strong> path in case when there is a dynamic <strong>id</strong> parameter added to the path. In this case, the whole <strong>Communication</strong> container is rendered.</li>
+</ul>
+<p>Very cool. Let’s move on.</p>
+<h3 id="Create-components"><a href="#Create-components" class="headerlink" title="Create components"></a>Create components</h3><p>The components. Ideally, components deal with the view. They just render the UI, while containers handle the logic. Ideally. Sometimes it is hard to make a clear distinction.</p>
+<p>We will start with header components, do contacts components, and finish with communication components.</p>
+<h4 id="Header-components"><a href="#Header-components" class="headerlink" title="Header components"></a>Header components</h4><p>In this series we will only deal with one header component - <strong>HeaderNavigation</strong>.</p>
+<p>There is really not much to it. We use it only to link to the “lobby” room (or to user profile in future), and to components that allow users to join and create a room.<br>We also use React Router’s <strong>Link</strong> component to link to app’s components without refreshing the entire website.</p>
+<p>Here is the full component:</p>
+<figure class="highlight plain"><figcaption><span>src/components/header-navigation.component.tsx</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line">import React from &quot;react&quot;;</span><br><span class="line">import &#123; Link &#125; from &quot;react-router-dom&quot;;</span><br><span class="line"></span><br><span class="line">const HeaderNavigation: React.FC &#x3D; () &#x3D;&gt; &#123;</span><br><span class="line">  return (</span><br><span class="line">    &lt;nav className&#x3D;&quot;flex flex-col sm:flex-row sm:h-16 items-center px-4 pt-3 sm:pt-0 justify-between&quot;&gt;</span><br><span class="line">      &lt;Link</span><br><span class="line">        to&#x3D;&quot;&#x2F;chat&#x2F;room&#x2F;lobby&quot;</span><br><span class="line">        className&#x3D;&quot;w-10 h-10 rounded-full overflow-hidden&quot;</span><br><span class="line">      &gt;</span><br><span class="line">        &lt;img</span><br><span class="line">          src&#x3D;&quot;https:&#x2F;&#x2F;source.unsplash.com&#x2F;105x105&#x2F;?portrait&quot;</span><br><span class="line">          alt&#x3D;&quot;&quot;</span><br><span class="line">          className&#x3D;&quot;w-full&quot;</span><br><span class="line">        &#x2F;&gt;</span><br><span class="line">      &lt;&#x2F;Link&gt;</span><br><span class="line">      &lt;Link</span><br><span class="line">        title&#x3D;&quot;Join a room&quot;</span><br><span class="line">        to&#x3D;&quot;&#x2F;chat&#x2F;join-room&quot;</span><br><span class="line">        className&#x3D;&quot;mt-4 sm:my-4 sm:ml-auto  text-gray-600&quot;</span><br><span class="line">      &gt;</span><br><span class="line">        &lt;svg</span><br><span class="line">          className&#x3D;&quot;w-6 h-6&quot;</span><br><span class="line">          fill&#x3D;&quot;none&quot;</span><br><span class="line">          stroke&#x3D;&quot;currentColor&quot;</span><br><span class="line">          viewBox&#x3D;&quot;0 0 24 24&quot;</span><br><span class="line">          xmlns&#x3D;&quot;http:&#x2F;&#x2F;www.w3.org&#x2F;2000&#x2F;svg&quot;</span><br><span class="line">        &gt;</span><br><span class="line">          &lt;path</span><br><span class="line">            strokeLinecap&#x3D;&quot;round&quot;</span><br><span class="line">            strokeLinejoin&#x3D;&quot;round&quot;</span><br><span class="line">            strokeWidth&#x3D;&quot;2&quot;</span><br><span class="line">            d&#x3D;&quot;M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z&quot;</span><br><span class="line">          &gt;&lt;&#x2F;path&gt;</span><br><span class="line">        &lt;&#x2F;svg&gt;</span><br><span class="line">      &lt;&#x2F;Link&gt;</span><br><span class="line">      &lt;Link</span><br><span class="line">        title&#x3D;&quot;Create a room&quot;</span><br><span class="line">        to&#x3D;&quot;&#x2F;chat&#x2F;new-room&quot;</span><br><span class="line">        className&#x3D;&quot;my-4 sm:ml-4 text-gray-600&quot;</span><br><span class="line">      &gt;</span><br><span class="line">        &lt;svg</span><br><span class="line">          className&#x3D;&quot;w-6 h-6&quot;</span><br><span class="line">          fill&#x3D;&quot;none&quot;</span><br><span class="line">          stroke&#x3D;&quot;currentColor&quot;</span><br><span class="line">          viewBox&#x3D;&quot;0 0 24 24&quot;</span><br><span class="line">          xmlns&#x3D;&quot;http:&#x2F;&#x2F;www.w3.org&#x2F;2000&#x2F;svg&quot;</span><br><span class="line">        &gt;</span><br><span class="line">          &lt;path</span><br><span class="line">            strokeLinecap&#x3D;&quot;round&quot;</span><br><span class="line">            strokeLinejoin&#x3D;&quot;round&quot;</span><br><span class="line">            strokeWidth&#x3D;&quot;2&quot;</span><br><span class="line">            d&#x3D;&quot;M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z&quot;</span><br><span class="line">          &gt;&lt;&#x2F;path&gt;</span><br><span class="line">        &lt;&#x2F;svg&gt;</span><br><span class="line">      &lt;&#x2F;Link&gt;</span><br><span class="line">    &lt;&#x2F;nav&gt;</span><br><span class="line">  );</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">export default HeaderNavigation;</span><br></pre></td></tr></table></figure>
+
+<p>With the component created, we can include it in the <strong>Header</strong> container.</p>
+<figure class="highlight plain"><figcaption><span>src/containers/header.container.tsx</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">import React from &quot;react&quot;;</span><br><span class="line"></span><br><span class="line">import HeaderNavigation from &quot;..&#x2F;components&#x2F;header-navigation.component&quot;;</span><br><span class="line"></span><br><span class="line">const Header: React.FC &#x3D; () &#x3D;&gt; &#123;</span><br><span class="line">  return (</span><br><span class="line">    &lt;header className&#x3D;&quot;flex flex-col&quot;&gt;</span><br><span class="line">      &lt;HeaderNavigation &#x2F;&gt;</span><br><span class="line">      &lt;div&gt;FUTURE HEADER SEARCH COMPONENT&lt;&#x2F;div&gt;</span><br><span class="line">    &lt;&#x2F;header&gt;</span><br><span class="line">  );</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">export default Header;</span><br></pre></td></tr></table></figure>
+
+<h4 id="Contacts-components"><a href="#Contacts-components" class="headerlink" title="Contacts components"></a>Contacts components</h4><h4 id="Header-components-1"><a href="#Header-components-1" class="headerlink" title="Header components"></a>Header components</h4><p>We have one contacts component, too. It is the <strong>ContactItem</strong> component.<br>It holds information about each room that the user has joined (Yeah, naming could be better): room avatar, room name, and the last message sent to the room.<br>The component will eventually get this data from the <strong>Contacts</strong> container, but at the moment we will just render it by looping over an empty array in the container (or not render it, ha!).</p>
+<p>This component is pretty bare at the moment too, but in future it will do all sorts of things like taking a user to its room’s messages, or switch color of its contents to tell user they have an unread message.</p>
+<figure class="highlight plain"><figcaption><span>src/components/contact-item.component.tsx</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">import React from &quot;react&quot;;</span><br><span class="line"></span><br><span class="line">const ContactItem: React.FC&lt;ContactItemProps&gt; &#x3D; () &#x3D;&gt; &#123;</span><br><span class="line">  return (</span><br><span class="line">    &lt;li className&#x3D;&quot;flex justify-start py-4 border-b w-full&quot;&gt;</span><br><span class="line">      &lt;div className&#x3D;&quot;w-12&quot;&gt;</span><br><span class="line">        &lt;img</span><br><span class="line">          src&#x3D;&quot;https:&#x2F;&#x2F;source.unsplash.com&#x2F;100x100&#x2F;?portrait&quot;</span><br><span class="line">          alt&#x3D;&quot;&quot;</span><br><span class="line">          className&#x3D;&quot;w-full rounded-full&quot;</span><br><span class="line">        &#x2F;&gt;</span><br><span class="line">      &lt;&#x2F;div&gt;</span><br><span class="line">      &lt;div className&#x3D;&quot;sm:flex justify-start flex-wrap ml-4 w-4&#x2F;6 items-center hidden&quot;&gt;</span><br><span class="line">        &lt;span className&#x3D;&quot;&quot;&gt;&#123;&quot;room name&quot;&#125;&lt;&#x2F;span&gt;</span><br><span class="line"></span><br><span class="line">        &lt;span className&#x3D;&quot;text-xs ml-auto text-gray-500&quot;&gt;</span><br><span class="line">          &#123;&quot; &quot;&#125;</span><br><span class="line">          &#123;&quot;Last message date&quot;&#125;&#123;&quot; &quot;&#125;</span><br><span class="line">        &lt;&#x2F;span&gt;</span><br><span class="line">        &lt;p className&#x3D;&#123;&#96;text-sm w-full text-gray-600&#96;&#125;&gt;</span><br><span class="line">          &#123;&quot;author name&quot;&#125;: &#123;&quot;last message content&quot;&#125;</span><br><span class="line">        &lt;&#x2F;p&gt;</span><br><span class="line">      &lt;&#x2F;div&gt;</span><br><span class="line">    &lt;&#x2F;li&gt;</span><br><span class="line">  );</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">export default ContactItem;</span><br></pre></td></tr></table></figure>
+
+<p>Cool. We include this component into its containers JSX:</p>
+<figure class="highlight plain"><figcaption><span>src/containers/contacts.container.tsx</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">import React from &quot;react&quot;;</span><br><span class="line">import ContactItem from &quot;..&#x2F;components&#x2F;contact-item.component&quot;;</span><br><span class="line"></span><br><span class="line">const Contacts: React.FC &#x3D; () &#x3D;&gt; &#123;</span><br><span class="line">  return (</span><br><span class="line">    &lt;div className&#x3D;&quot;bg-white custom-scrollbar overflow-y-scroll px-4&quot;&gt;</span><br><span class="line">      &lt;ul className&#x3D;&quot;w-full&quot;&gt;</span><br><span class="line">        &#123;[].map((val, index) &#x3D;&gt; &lt;ContactItem key&#x3D;&#123;index&#125;&#x2F;&gt;</span><br><span class="line">      &lt;&#x2F;ul&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">  );</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">export default Contacts;</span><br></pre></td></tr></table></figure>
+
+<p>Note that we are using the array’s <strong>index</strong> property as the <strong>key</strong> value. This is just provisional, and will change in future.</p>
+<h4 id="Communication-Components"><a href="#Communication-Components" class="headerlink" title="Communication Components"></a>Communication Components</h4><p>Ok, now there is more of these:</p>
+<ul>
+<li>CommunicationHeader</li>
+<li>CommunicationMessage</li>
+<li>CommunicationNewMessage</li>
+<li>NewRoom</li>
+<li>JoinRoom</li>
+</ul>
+<p><strong>CommunicationHeader</strong></p>
+<p>This is the component that lives at the top of the <strong>CommunicationHeader</strong>. We use it to render name of the room, time when the room was last active (a future feature), and to search through room messages (another future feature).</p>
+<p>In this series we won’t be doing much with it, except providing it with the viewed room name and avatar. Because of it, we can immediately add and type its single prop:</p>
+<figure class="highlight plain"><figcaption><span>src/components/communication-header.component.tsx</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">import React from &quot;react&quot;;</span><br><span class="line"></span><br><span class="line">interface CommunicationHeaderProps &#123;</span><br><span class="line">  roomName: string;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">const CommunicationHeader: React.FC&lt;CommunicationHeaderProps&gt; &#x3D; (&#123;</span><br><span class="line">  roomName,</span><br><span class="line">&#125;) &#x3D;&gt; &#123;</span><br><span class="line">  return (</span><br><span class="line">    &lt;header className&#x3D;&quot;px-4 py-2 border-l min-h-comm-header-height flex items-center&quot;&gt;</span><br><span class="line">      &lt;a href&#x3D;&quot;#&quot; className&#x3D;&quot;w-10 h-10 rounded-full overflow-hidden&quot;&gt;</span><br><span class="line">        &lt;img</span><br><span class="line">          src&#x3D;&quot;https:&#x2F;&#x2F;source.unsplash.com&#x2F;100x100&#x2F;?portrait&quot;</span><br><span class="line">          alt&#x3D;&quot;&quot;</span><br><span class="line">          className&#x3D;&quot;w-full&quot;</span><br><span class="line">        &#x2F;&gt;</span><br><span class="line">      &lt;&#x2F;a&gt;</span><br><span class="line"></span><br><span class="line">      &lt;div className&#x3D;&quot;flex flex-col justify-center ml-4&quot;&gt;</span><br><span class="line">        &lt;span className&#x3D;&quot;&quot;&gt;&#123;roomName&#125;&lt;&#x2F;span&gt;</span><br><span class="line">        &lt;span className&#x3D;&quot;text-xs text-gray-700&quot;&gt;Last seen today at 13:33&lt;&#x2F;span&gt;</span><br><span class="line">      &lt;&#x2F;div&gt;</span><br><span class="line">      &lt;div&gt;FUTURE SEARCH FORM&lt;&#x2F;div&gt;</span><br><span class="line">    &lt;&#x2F;header&gt;</span><br><span class="line">  );</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">export default CommunicationHeader;</span><br></pre></td></tr></table></figure>
+
+<p><strong>CommunicationMessage</strong></p>
+<p>The <strong>CommuinicationMessage</strong> component is used to render a single message that belongs to a particular room. It renders author’s name and time when the message was made.<br>Future features will include message date (simple really, but will wait next series), and that blue tick WhatsApp does when your room mate sees your message.</p>
+<p>The component also does some conditional styling, to position messages on left and right sides of the container, depending on their authors. We will get to that in due time.</p>
+<p>Ok, here is the component in its simple form, with no props:</p>
+<figure class="highlight plain"><figcaption><span>src/components/communication-message.component.tsx</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">import React from &quot;react&quot;;</span><br><span class="line"></span><br><span class="line">const CommunicationMessage: React.FC &#x3D; () &#x3D;&gt; &#123;</span><br><span class="line">  return (</span><br><span class="line">    &lt;li className&#x3D;&#123;&#96;my-message&#96;&#125;&gt;</span><br><span class="line">      &lt;span className&#x3D;&#123;&#96;text-gray-600 mb-2 font-semibold&#96;&#125;&gt;</span><br><span class="line">        &#123;&quot;Author name&quot;&#125;</span><br><span class="line">      &lt;&#x2F;span&gt;</span><br><span class="line">      &lt;p className&#x3D;&quot;text-sm text-gray-900&quot;&gt;&#123;&quot;Message content&quot;&#125;&lt;&#x2F;p&gt;</span><br><span class="line">      &lt;div className&#x3D;&quot;text-xs mt-2 self-end text-gray-600 flex place-items-center&quot;&gt;</span><br><span class="line">        &lt;span className&#x3D;&quot;&quot;&gt;&#123;&quot;22&#x2F;08&#x2F;2020&quot;&#125;&lt;&#x2F;span&gt;</span><br><span class="line">        &lt;svg</span><br><span class="line">          className&#x3D;&quot;w-5 h-5 inline text-blue-400&quot;</span><br><span class="line">          fill&#x3D;&quot;none&quot;</span><br><span class="line">          stroke&#x3D;&quot;currentColor&quot;</span><br><span class="line">          viewBox&#x3D;&quot;0 0 24 24&quot;</span><br><span class="line">          xmlns&#x3D;&quot;http:&#x2F;&#x2F;www.w3.org&#x2F;2000&#x2F;svg&quot;</span><br><span class="line">        &gt;</span><br><span class="line">          &lt;path</span><br><span class="line">            strokeLinecap&#x3D;&quot;round&quot;</span><br><span class="line">            strokeLinejoin&#x3D;&quot;round&quot;</span><br><span class="line">            strokeWidth&#x3D;&quot;2&quot;</span><br><span class="line">            d&#x3D;&quot;M5 13l4 4L19 7&quot;</span><br><span class="line">          &gt;&lt;&#x2F;path&gt;</span><br><span class="line">        &lt;&#x2F;svg&gt;</span><br><span class="line">      &lt;&#x2F;div&gt;</span><br><span class="line">    &lt;&#x2F;li&gt;</span><br><span class="line">  );</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">export default CommunicationMessage;</span><br></pre></td></tr></table></figure>
+
+<p><strong>CommunicationNewMessage</strong></p>
+<p>If it is not obvious from the name, this component wants to create new messages.<br>Because the message form is very simple (only one input), we will use a reference object on the input to get its value. This reference is a prop passed to the component by its parent, the <strong>Communication</strong> container.<br>This component will be submitting its messages with the <strong>Enter</strong> key, like WhatsApp does it. We will get to it when we deal with the component’s logic.</p>
+<figure class="highlight plain"><figcaption><span>src/components/communication-new-message.component.tsx</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">import React, &#123; RefObject &#125; from &quot;react&quot;;</span><br><span class="line"></span><br><span class="line">interface CommunicationNewMessageProps &#123;</span><br><span class="line">  newMessageRef: RefObject&lt;HTMLTextAreaElement&gt;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">const CommunicationNewMessage: React.FC&lt;CommunicationNewMessageProps&gt; &#x3D; (&#123;</span><br><span class="line">  newMessageRef,</span><br><span class="line">&#125;) &#x3D;&gt; &#123;</span><br><span class="line">  return (</span><br><span class="line">    &lt;form className&#x3D;&quot;mt-auto pl-2 pr-4 py-2 h-16 flex items-center justify-center&quot;&gt;</span><br><span class="line">      &lt;label htmlFor&#x3D;&quot;&quot; hidden&gt;</span><br><span class="line">        New message</span><br><span class="line">      &lt;&#x2F;label&gt;</span><br><span class="line">      &lt;textarea</span><br><span class="line">        name&#x3D;&quot;&quot;</span><br><span class="line">        id&#x3D;&quot;&quot;</span><br><span class="line">        cols&#x3D;&#123;30&#125;</span><br><span class="line">        rows&#x3D;&#123;2&#125;</span><br><span class="line">        placeholder&#x3D;&quot;Write a message&quot;</span><br><span class="line">        className&#x3D;&quot;custom-scrollbar h-full w-full rounded-full p-3 text-gray-800 outline-none&quot;</span><br><span class="line">        ref&#x3D;&#123;newMessageRef&#125;</span><br><span class="line">        style&#x3D;&#123;&#123; resize: &quot;none&quot; &#125;&#125;</span><br><span class="line">      &#x2F;&gt;</span><br><span class="line">    &lt;&#x2F;form&gt;</span><br><span class="line">  );</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">export default CommunicationNewMessage;</span><br></pre></td></tr></table></figure>
+
+<p>Few things:</p>
+<ul>
+<li>We could use the <strong>useRef</strong> hook in this component, and set the reference object that way. However, then we would have to create another handler function that would eventually call submit function defined in the parent, and also reset the current reference object. This way, we have all of that done by a single submit function defined in the parent.</li>
+<li>We prevent user from resizing the new message input (and messing up the styling) by adding inline styling <strong>{ resize: “none” }</strong> on the input itself.</li>
+</ul>
+<p><strong>JoinRoom</strong></p>
+<p>We have reached two components that technically are not part of the <strong>Communicataion</strong> container - <strong>JoinRoom</strong> and <strong>NewRoom</strong>, but are instead rendered in place of the container when URL demands it.<br>Still, these two also deal with communication and create context for the container, so we include it here.</p>
+<p>We deal with <strong>JoinRoom</strong> first.<br>Eventually, the component will call a function coming from the Context Provider to submit name of the room to be joined. If all is good, the component will redirect the browser to the joined room’s path.<br>At the moment, though, we only define the component’s reference object (to get the room’s name from the input) and JSX to render the UI.</p>
+<figure class="highlight plain"><figcaption><span>src/components/join-room.component.tsx</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">import React, &#123; useRef &#125; from &quot;react&quot;;</span><br><span class="line"></span><br><span class="line">const JoinRoom: React.FC &#x3D; () &#x3D;&gt; &#123;</span><br><span class="line">  const joinedRoomInputRef &#x3D; useRef&lt;HTMLInputElement&gt;(null);</span><br><span class="line"></span><br><span class="line">  return (</span><br><span class="line">    &lt;div className&#x3D;&quot; row-span-2 w-full bg-gray-200 py-32&quot;&gt;</span><br><span class="line">      &lt;form className&#x3D;&quot;flex flex-col w-8&#x2F;12 px-4 mx-auto items-center h-32 justify-between&quot;&gt;</span><br><span class="line">        &lt;label htmlFor&#x3D;&quot;&quot; className&#x3D;&quot;&quot;&gt;</span><br><span class="line">          Join room:</span><br><span class="line">        &lt;&#x2F;label&gt;</span><br><span class="line">        &lt;input</span><br><span class="line">          type&#x3D;&quot;text&quot;</span><br><span class="line">          className&#x3D;&quot;rounded-lg px-4 py-2 text-center outline-none text-gray-600&quot;</span><br><span class="line">          required</span><br><span class="line">          ref&#x3D;&#123;joinedRoomInputRef&#125;</span><br><span class="line">        &#x2F;&gt;</span><br><span class="line">        &lt;button className&#x3D;&quot;bg-green-300 py-2 px-8 rounded-lg outline-none&quot;&gt;</span><br><span class="line">          Join</span><br><span class="line">        &lt;&#x2F;button&gt;</span><br><span class="line">      &lt;&#x2F;form&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">  );</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">export default JoinRoom;</span><br></pre></td></tr></table></figure>
+
+<p><strong>NewRoom</strong></p>
+<p>Apart from using a different Context Provider’s function, and different names for its state (later in the series for both points), the <strong>NewRoom</strong> component is identical to the previous one.<br>It does beg a question of why not sharing the component between the two features, and this is is definitely something to be considered.</p>
+<p>At the moment, though, it is a separate component.<br>Here it is:</p>
+<figure class="highlight plain"><figcaption><span>src/components/communication-new-room.component.tsx</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">import React, &#123; useRef &#125; from &quot;react&quot;;</span><br><span class="line"></span><br><span class="line">const NewRoom: React.FC &#x3D; () &#x3D;&gt; &#123;</span><br><span class="line">  const newRoomInputRef &#x3D; useRef&lt;HTMLInputElement&gt;(null);</span><br><span class="line"></span><br><span class="line">  return (</span><br><span class="line">    &lt;div className&#x3D;&quot; row-span-2 w-full bg-gray-200 py-32&quot;&gt;</span><br><span class="line">      &lt;form className&#x3D;&quot;flex flex-col w-8&#x2F;12 px-4 mx-auto items-center h-32 justify-between&quot;&gt;</span><br><span class="line">        &lt;label htmlFor&#x3D;&quot;&quot; className&#x3D;&quot;&quot;&gt;</span><br><span class="line">          Name your room:</span><br><span class="line">        &lt;&#x2F;label&gt;</span><br><span class="line">        &lt;input</span><br><span class="line">          type&#x3D;&quot;text&quot;</span><br><span class="line">          className&#x3D;&quot;rounded-lg px-4 py-2 text-center outline-none text-gray-600&quot;</span><br><span class="line">          required</span><br><span class="line">          ref&#x3D;&#123;newRoomInputRef&#125;</span><br><span class="line">        &#x2F;&gt;</span><br><span class="line">        &lt;button className&#x3D;&quot;bg-green-300 py-2 px-8 rounded-lg outline-none&quot;&gt;</span><br><span class="line">          Create room</span><br><span class="line">        &lt;&#x2F;button&gt;</span><br><span class="line">      &lt;&#x2F;form&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">  );</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">export default NewRoom;</span><br></pre></td></tr></table></figure>
+
+<p>Now when we created the communication components, we can add them to the <strong>Communicaiton</strong> container.</p>
+<figure class="highlight plain"><figcaption><span>src/containers/communication.container.tsx</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">import React, &#123; useRef &#125; from &quot;react&quot;;</span><br><span class="line"></span><br><span class="line">import CommunicationHeader from &quot;..&#x2F;components&#x2F;communication-header.component&quot;;</span><br><span class="line">import CommunicationMessage from &quot;..&#x2F;components&#x2F;communication-message.component&quot;;</span><br><span class="line">import CommunicationNewMessage from &quot;..&#x2F;components&#x2F;communication-new-message.component&quot;;</span><br><span class="line"></span><br><span class="line">const Communication: React.FC &#x3D; () &#x3D;&gt; &#123;</span><br><span class="line">  const newMessageRef &#x3D; useRef&lt;HTMLTextAreaElement&gt;(null);</span><br><span class="line"></span><br><span class="line">  return (</span><br><span class="line">    &lt;main className&#x3D;&quot;row-span-2 flex flex-col h-full&quot;&gt;</span><br><span class="line">      &lt;CommunicationHeader roomName&#x3D;&#123;&quot;Hardcoded room name&quot;&#125; &#x2F;&gt;</span><br><span class="line">      &lt;div className&#x3D;&quot;custom-scrollbar overflow-y-scroll bg-message-box-pattern h-full w-full p-4&quot;&gt;</span><br><span class="line">        &lt;ul className&#x3D;&quot;w-full flex flex-col justify-start sm:w-10&#x2F;12 sm:mx-auto&quot;&gt;</span><br><span class="line">          &#123;[].map((val) &#x3D;&gt; (</span><br><span class="line">            &lt;CommunicationMessage &#x2F;&gt;</span><br><span class="line">          ))&#125;</span><br><span class="line">        &lt;&#x2F;ul&gt;</span><br><span class="line">      &lt;&#x2F;div&gt;</span><br><span class="line">      &lt;CommunicationNewMessage newMessageRef&#x3D;&#123;newMessageRef&#125; &#x2F;&gt;</span><br><span class="line">    &lt;&#x2F;main&gt;</span><br><span class="line">  );</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">export default Communication;</span><br></pre></td></tr></table></figure>
+
+<p>Few things to note:</p>
+<ul>
+<li>We are passing a hardcoded room name to the <strong>CommunicationHeader</strong> because we still don’t have a room object passed down to the container. We will get there.</li>
+<li>For the same reason, we are looping over an empty array to render the <strong>CommunicationMessage</strong> component.</li>
+<li>We create the <strong>newMessageRef</strong> reference object in the <strong>Communication</strong> container, and pass it to the <strong>CommunicationNewMessage</strong> component. We do it for getting the value of the new message input, and because we already included the reference object prop in the component.</li>
+</ul>
+<p><strong>JoinRoom</strong> and <strong>NewRoom</strong> components (which could easily be containers, too) are rendered higher in the app tree - by the <strong>Chat</strong> page.<br>The app uses React Router to render these, depending on the current URL.</p>
+<p>Here are both of them added to the <strong>Chat</strong> page:</p>
+<figure class="highlight plain"><figcaption><span>src/pages/chat.page.tsx</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">import React from &quot;react&quot;;</span><br><span class="line">import &#123; Switch, Route, useRouteMatch, Redirect &#125; from &quot;react-router-dom&quot;;</span><br><span class="line"></span><br><span class="line">import Header from &quot;..&#x2F;containers&#x2F;header.container&quot;;</span><br><span class="line">import Communication from &quot;..&#x2F;containers&#x2F;communication.container&quot;;</span><br><span class="line">import Contacts from &quot;..&#x2F;containers&#x2F;contacts.container&quot;;</span><br><span class="line">import NewRoom from &quot;..&#x2F;components&#x2F;communication-new-room.component&quot;;</span><br><span class="line">import JoinRoom from &quot;..&#x2F;components&#x2F;communication-join-room.component&quot;;</span><br><span class="line"></span><br><span class="line">const Chat: React.FC &#x3D; () &#x3D;&gt; &#123;</span><br><span class="line">  const &#123; path &#125; &#x3D; useRouteMatch();</span><br><span class="line"></span><br><span class="line">  return (</span><br><span class="line">    &lt;div className&#x3D;&quot;app-container grid grid-cols-app-mobile sm:grid-cols-app-desktop grid-rows-app mx-auto max-w-screen-xl w-full relative bg-gray-200 xl:my-5 h-screen&quot;&gt;</span><br><span class="line">      &lt;Header &#x2F;&gt;</span><br><span class="line">      &lt;Switch&gt;</span><br><span class="line">        &lt;Route path&#x3D;&#123;&#96;$&#123;path&#125;&#x2F;&#96;&#125; exact&gt;</span><br><span class="line">          &lt;Redirect to&#x3D;&#123;&#96;$&#123;path&#125;&#x2F;room&#x2F;lobby&#96;&#125; &#x2F;&gt;</span><br><span class="line">        &lt;&#x2F;Route&gt;</span><br><span class="line">        &lt;Route path&#x3D;&#123;&#96;$&#123;path&#125;&#x2F;room&#x2F;:id&#96;&#125;&gt;</span><br><span class="line">          &lt;Communication &#x2F;&gt;</span><br><span class="line">        &lt;&#x2F;Route&gt;</span><br><span class="line">        &lt;Route path&#x3D;&#123;&#96;$&#123;path&#125;&#x2F;new-room&#96;&#125;&gt;</span><br><span class="line">          &lt;NewRoom &#x2F;&gt;</span><br><span class="line">        &lt;&#x2F;Route&gt;</span><br><span class="line">        &lt;Route path&#x3D;&#123;&#96;$&#123;path&#125;&#x2F;join-room&#96;&#125;&gt;</span><br><span class="line">          &lt;JoinRoom &#x2F;&gt;</span><br><span class="line">        &lt;&#x2F;Route&gt;</span><br><span class="line">      &lt;&#x2F;Switch&gt;</span><br><span class="line">      &lt;Contacts &#x2F;&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">  );</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">export default Chat;</span><br></pre></td></tr></table></figure>
+
+<p>There is not much here. Same as before, <strong>path</strong> variable will evaluate to <strong>“/chat”</strong> when the <strong>Chat</strong> page mounts.</p>
+<p>Ok, that is it. We are through with outlining the components to be used in the project. Next up is the most important of all components in this app - the <strong>Context Provider</strong>.</p>
+<h3 id="Create-context"><a href="#Create-context" class="headerlink" title="Create context"></a>Create context</h3><p>React Context is a way to provide data to components lower in the component tree. It is similar to using props, but it doesn’t require props (data) to pass each component on the way to the lowest component of the app. Instead, we can just call Context data from any component in the app.</p>
+<p>In our app, we will create React Context to provide messages and messaging functions to other components.<br>We will do it via a custom provider component that will wrap other components, and use the Context’s own <strong>Provider</strong> component to make those messaging props available.<br>The provider that we make will be a regular React component, with a messages state and few <strong>useEffect</strong> hooks. In this custom component we will make a connection with Socket.io server, send and receive messages from it, and manipulate the messages state.<br>Sounds confusing? Yeah…</p>
+<p>Ok, so let’s create that React Context first.<br>We do it <strong>src/contexts</strong> folder, in a file called <strong>messages.context</strong>.</p>
+<p>We will be creating a React component here, so let’s import <strong>React</strong>, few hooks, and the <strong>createContext</strong> method needed to create the context.</p>
+<figure class="highlight plain"><figcaption><span>src/contexts/messages.context</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">import React, &#123; useState, useEffect, useRef, createContext &#125; from &quot;react&quot;;</span><br><span class="line"></span><br><span class="line">export const MessagesContext &#x3D; createContext&lt;null&gt;(null);</span><br></pre></td></tr></table></figure>
+
+<p>Few things:</p>
+<ul>
+<li>We create context by calling the <strong>createContext</strong> and assigning it to a variable. The created cntext gets initialized with the value passed to the the method, but we don’t need have any values for it at the moment, so we initialize it as <strong>null</strong></li>
+<li>We also want to export the created context, as we will need to import this exact context into every component that want’s to use its values.</li>
+</ul>
+<p>That’s it, pretty simple.</p>
+<p>Now, let’s create a component that will distribute Context data to other components. This component will wrap components that need this data, and will render them as <strong>children</strong></p>
+<p>We are creating a regular React component, and defining its props to be only <strong>children</strong> for now.<br>Note the name of the created component - convention has it that React components that provide Context data have <strong>“Provider”</strong> as part of their name. So there.</p>
+<figure class="highlight plain"><figcaption><span>src/contexts/messages.context</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">import React, &#123; useState, useEffect, useRef, createContext &#125; from &quot;react&quot;;</span><br><span class="line"></span><br><span class="line">export const MessagesContext &#x3D; createContext&lt;null&gt;(null);</span><br><span class="line"></span><br><span class="line">interface MessagesProvideProps &#123;</span><br><span class="line">  children: React.ReactNode;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">const MessagesProvider: React.FC&lt;MessagesProvideProps&gt; &#x3D; (&#123; children &#125;) &#x3D;&gt; &#123;</span><br><span class="line">  return &lt;div&gt;&#123;children&#125;&lt;&#x2F;div&gt;;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">export default MessagesProvider;</span><br></pre></td></tr></table></figure>
+
+<p>Ok, but how we provide data to other components? And where is that data, anyway?</p>
+<p>Well, every React Context comes with its own <strong>Provider</strong> component. This component has a <strong>value</strong> prop, an object to which we add data to be made available to children components.</p>
+<p>So the only thing we need to do is return this Context <strong>Provider</strong> component from our custom <strong>MessagesProvider</strong> component, and pass some data to the <strong>value</strong> prop.</p>
+<p>Here it is:</p>
+<figure class="highlight plain"><figcaption><span>src/contexts/messages.context</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; ...</span><br><span class="line"></span><br><span class="line">const MessagesProvider: React.FC&lt;MessagesProvideProps&gt; &#x3D; (&#123; children &#125;) &#x3D;&gt; &#123;</span><br><span class="line">  return (</span><br><span class="line">    &lt;MessagesContext.Provider</span><br><span class="line">      value&#x3D;&#123;&#123; contextDataForDistribution: &quot;Hello children components!&quot; &#125;&#125;</span><br><span class="line">    &gt;</span><br><span class="line">      &#123;children&#125;</span><br><span class="line">    &lt;&#x2F;MessagesContext.Provider&gt;</span><br><span class="line">  );</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">export default MessagesProvider;</span><br></pre></td></tr></table></figure>
+
+<p>The <strong>value</strong> prop is actually the one that puts data inside our context. With the <strong>value</strong> prop being set to an object:</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  contextDataForDistribution: <span class="string">&quot;Hello children components!&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>, our context is no longer <strong>null</strong>.<br>We need to account for that, by typing the context as a union type now:</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> MessagesContext = createContext&lt;&#123;</span><br><span class="line">  contextDataForDistribution: <span class="built_in">string</span>;</span><br><span class="line">&#125; | <span class="literal">null</span>&gt;(<span class="literal">null</span>);</span><br></pre></td></tr></table></figure>
+
+<p>This will be our pattern when we work with the context in this series: we add data to the <strong>value</strong> prop, and then we type the context to know this data.</p>
+<p>Ok. Now we have both React Context and its provider created. We need to include it into the app now.</p>
+<p>I do it in the <strong>App</strong> component, by wrapping the <strong>MessagesProvider</strong> around the <strong>Chat</strong> page. Since I want the messaging functionality and Socket.io connection to exist only when the user reaches <strong>“/chat”</strong> path, this makes sense to me.</p>
+<figure class="highlight plain"><figcaption><span>src/app.tsx</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; ...</span><br><span class="line"></span><br><span class="line">const App: React.FC &#x3D; () &#x3D;&gt; &#123;</span><br><span class="line">  const [loggedUser, setLoggedUser] &#x3D; useState&lt;string&gt;(&quot;&quot;);</span><br><span class="line"></span><br><span class="line">  return (</span><br><span class="line">    &#x2F;&#x2F; ...</span><br><span class="line">    &lt;Route path&#x3D;&quot;&#x2F;chat&quot;&gt;</span><br><span class="line">      &lt;MessagesProvider loggedUser&#x3D;&#123;loggedUser&#125;&gt;</span><br><span class="line">        &lt;Chat &#x2F;&gt;</span><br><span class="line">      &lt;&#x2F;MessagesProvider&gt;</span><br><span class="line">    &lt;&#x2F;Route&gt;</span><br><span class="line">    &#x2F;&#x2F; ...</span><br><span class="line">  );</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>Note that now we pass the <strong>loggedUser</strong> prop to <strong>MessagesProvider</strong> instead of <strong>Chat</strong> page. I do it to be able to easily send logged user’s name to the Socket.io server, and to prevent connecting to Socket.io server in case there is no logged user</p>
+<p>To account for this prop, we have to type and accept it in the <strong>MessagesProvider</strong> component:</p>
+<figure class="highlight plain"><figcaption><span>src/contexts/messages.context</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">interface MessagesProvideProps &#123;</span><br><span class="line">  children: React.ReactNode;</span><br><span class="line">  loggedUser: string;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">const MessagesProvider: React.FC&lt;MessagesProvideProps&gt; &#x3D; (&#123;</span><br><span class="line">  children,</span><br><span class="line">  loggedUser,</span><br><span class="line">&#125;) &#x3D;&gt; &#123;</span><br><span class="line">  return &lt;div&gt;&#123;children&#125;&lt;&#x2F;div&gt;;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">export default MessagesProvider;</span><br></pre></td></tr></table></figure>
+
+<p>That’s it. That should do it.</p>
+<p>Well, alright. That was long. VSC shows 1000+ lines of Markdown content. In it, we figured out what we want our app to do, and how we want to do it. We created components that will get the job done, and we installed a dependency that will help them with it.<br>We also created React Context, to make sure our chat app has a simple access to messaging properties.</p>
+<p>In the next post, hopefully much shorter, we will set up a Socket.io connection between our frontend and backend parts. We will do a few test runs to see how events and data get transmitted between Socket.io client and server, how to join users into rooms, and how to send acknowledgments between the ends to inform other side about event resolution status. Plenty? Only if it goes over 1000 lines… See you there.</p>
+<!-- End Step Content -->
+
+<!-- Project Information -->
+
+<h2 id="Project-Information"><a href="#Project-Information" class="headerlink" title="Project Information"></a>Project Information</h2><h3 id="Available-at"><a href="#Available-at" class="headerlink" title="Available at"></a>Available at</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/ikaem/shima-api">Github repository - api</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/ikaem/shima-react-webpack">Github repository - frontend</a></li>
+<li><a target="_blank" rel="noopener" href="https://shima-react-webpack.herokuapp.com/">Live website</a></li>
+</ul>
+<h3 id="Goals"><a href="#Goals" class="headerlink" title="Goals"></a>Goals</h3><ol>
+<li>Use Socket.io to create a chat app</li>
+<li>Use Webpack, Babel, and TypeScript with React</li>
+<li>Deploy Webpack React app to Heroku</li>
+</ol>
+<h3 id="Steps"><a href="#Steps" class="headerlink" title="Steps"></a>Steps</h3><ol>
+<li>Create a React app with Webpack</li>
+<li>Set up backend</li>
+<li><strong>Organize the React app</strong></li>
+<li>Set up Socket.io communication between frontend and backend</li>
+<li>Build the app</li>
+<li>Deploy and known issues</li>
+</ol>
+<h3 id="Tech-and-Tools"><a href="#Tech-and-Tools" class="headerlink" title="Tech and Tools"></a>Tech and Tools</h3><ul>
+<li>React</li>
+<li>Tailwind</li>
+<li>Webpack</li>
+<li>Babel</li>
+<li>TypeScript</li>
+<li>Socket.io</li>
+<li>Express</li>
+</ul>
+<h3 id="Experience-with-Tech-amp-Tools"><a href="#Experience-with-Tech-amp-Tools" class="headerlink" title="Experience with Tech &amp; Tools"></a>Experience with Tech &amp; Tools</h3><p>I have done few smaller apps with Webpack, as described on this blog, so I have basic understanding of what Webpack is used for and how it does what it does. I also did a very small app with Socket.io on one occasion before, to see what it is all about. Babel I am completely unfamiliar with, so let’s see what it is.<br>Rest of the tech is familiar, and I shouldn’t have bigger problems using those.</p>
+<h2 id="DISCLAIMER"><a href="#DISCLAIMER" class="headerlink" title="DISCLAIMER"></a>DISCLAIMER</h2><p>Don’t take any of this seriously and as a matter-of-fact. These are my notes. It might look like I am trying to teach something to someone. I am not.</p>
+
+
+                
+
+
+                <!-- Cover image credit -->
+                
+                    <p class="image-credit-link">
+                        Cover image by <strong>
+                            <a target="_blank" rel="noopener" href="https://unsplash.com/@aleskrivec?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
+                                Ales Krivec
+                            </a>
+                        </strong>
+                    </p>
+
+                
+
+  
+
+            </div>
+            
+            <!-- Custom placed tags -->
+            <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                
+                    
+
+
+<a href="/angry-chaired-blog/tags/typescript/">#typescript</a> <a href="/angry-chaired-blog/tags/react/">#react</a> <a href="/angry-chaired-blog/tags/socketio/">#socketio</a> <a href="/angry-chaired-blog/tags/react-router/">#react-router</a>
+
+
+                
+            </div>
+            <!--  -->
+
+
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+
+            <!-- Hyvor comments -->
+
+            <!-- End of Hyvor comments -->
+        </div>
+    </div>
+</article>
+
+
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2020 kaem<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
