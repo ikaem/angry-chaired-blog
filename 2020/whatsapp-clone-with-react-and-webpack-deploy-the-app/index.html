@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="Inexperienced and curious pokes into the sprawling world of web development "/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="kaem"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="WhatsApp Clone with React and Webpack: Deploy the App"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Inexperienced and curious pokes into the sprawling world of web development "/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Angry Chaired Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://ikaem.github.io/angry-chaired-blog/angry-chaired-blog/images/header-image.jpg"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://ikaem.github.io/angry-chaired-blog/angry-chaired-blog/images/header-image.jpg"/>
+    
+
+    <!-- Title -->
+    
+    <title>WhatsApp Clone with React and Webpack: Deploy the App - Angry Chaired Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/angry-chaired-blog/css/style.css">
+
+    
+<link rel="stylesheet" href="/angry-chaired-blog/css/custom-style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+    <link rel="icon" href="/angry-chaired-blog/images/favicon.ico"/>
+    
+
+<meta name="generator" content="Hexo 5.0.2"><link rel="alternate" href="/angry-chaired-blog/atom.xml" title="Angry Chaired Blog" type="application/atom+xml">
+</head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/angry-chaired-blog/">Angry Chaired Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/about">
+                            
+                                About
+                            
+                        </a>
+                    </li>
+                
+                    <li class="">
+                        <a href="/angry-chaired-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a target="_blank" rel="noopener" href="https://angrychaired.surge.sh">
+                            
+                                <i class="fa fa-user fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a target="_blank" rel="noopener" href="https://github.com/ikaem/">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+                    <li class="icon-label">
+                        <a href="/angry-chaired-blog/atom.xml">
+                            
+                                <i class="fa fa-rss fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('lim-eng-fsLDdUqDPNo-unsplash.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>WhatsApp Clone with React and Webpack: Deploy the App</h1>
+
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            22/09/2020
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/angry-chaired-blog/categories/whatsapp-react-webpack/">whatsapp react webpack</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <!-- Step Content Start -->
+
+<h4 id="Part-5-of-5-in-WhatsApp-Clone-with-React-and-Webpack"><a href="#Part-5-of-5-in-WhatsApp-Clone-with-React-and-Webpack" class="headerlink" title="Part 5 of 5 in WhatsApp Clone with React and Webpack"></a>Part 5 of 5 in WhatsApp Clone with React and Webpack</h4><p>We reached the final part of the series. Left to do is to put this baby online. In this part we will deploy both ends to Heroku.</p>
+<a id="more"></a>
+
+<h4 id="See-Project-Information"><a href="#See-Project-Information" class="headerlink" title="See Project Information"></a>See <a href="#Project-Information">Project Information</a></h4><p>We will do one more thing in addition to the deployment. I wanted so see how to get environment variables working with React Webpack app. I knew that <strong>create-react-app</strong> projects can work with environment variables out of the box. But how to do it here? Let see.</p>
+<h2 id="Step-5-Deploy-the-app"><a href="#Step-5-Deploy-the-app" class="headerlink" title="Step 5: Deploy the app"></a>Step 5: Deploy the app</h2><p>Here is what we will do in this part:</p>
+<ol>
+<li>Implement environment variables into the React app</li>
+<li>Deploy backend</li>
+<li>Deploy frontend</li>
+<li>List known issues</li>
+</ol>
+<h3 id="Implement-environment-variables-into-the-React-app"><a href="#Implement-environment-variables-into-the-React-app" class="headerlink" title="Implement environment variables into the React app"></a>Implement environment variables into the React app</h3><p>I wanted to have environment variables in the app to be able to seamlessly switch between development and production api URLs, and not having to change those manually when I prepare the app for production deployment.<br>For instance, I want my <strong>const ENDPOINT</strong> to point to <strong>“localhost:5000</strong> while I develop the app, and to <strong>onlineapiaddress.herokuapp.com</strong> when the app is already deployed. And I don’t want to switch these things manually.</p>
+<p>React apps created with <strong>create-react-app</strong> have support for environment variables ready out of the box. An <strong>.env.production</strong> and <strong>.env.developoment</strong> files need to be placed in the project root, and any key inside these with a name pattern of <strong>“REACT<em>APP</em><VARIABLE_NAME>“</strong> makes its value available as an environment variable.<br>Here, we don’t have that.</p>
+<p>Important thing that is, well, important apparently, is that client app cannot really use custom environment variables in a way that a Node.js app can. Node.js is an environment on which its app runs, and which can provide these variables to the app. A client app runs in a browser, and we cannot set our custom variables into someone else’s browser.<br>For this reason, environment variables for client apps need to be embedded into code during the build time.<br>That’s as far as my understanding of it goes.</p>
+<p>So how do we do this?</p>
+<ul>
+<li>We need <strong>dotenv</strong> installed from NPM</li>
+<li>We need to create files that hold data to be used as environment variables</li>
+<li>We need to instruct Webpack to define the excution environment for every bundle it builds</li>
+<li>We need to extract data from these files and embedd it into our Webpack bundle as environment variables, depending on the environment in which the app is being executed</li>
+</ul>
+<p>So let’s do it.</p>
+<h4 id="Install-“dotenv”-package"><a href="#Install-“dotenv”-package" class="headerlink" title="Install “dotenv” package"></a>Install “dotenv” package</h4><p>The package we are installing is a tool that will load data from <strong>.env</strong> files, and insert it into <strong>process.env</strong>.</p>
+<p>So let’s install that as a dev dependency:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i -D dotenv</span><br></pre></td></tr></table></figure>
+
+<p>And now we import the package into the <strong>webpack.config.ts</strong> module in our React project:</p>
+<figure class="highlight ts"><figcaption><span>webpack.config.ts</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> dotenv <span class="keyword">from</span> <span class="string">&quot;dotenv&quot;</span>;</span><br></pre></td></tr></table></figure>
+
+<h4 id="Create-files-with-environment-variables-data"><a href="#Create-files-with-environment-variables-data" class="headerlink" title="Create files with environment variables data"></a>Create files with environment variables data</h4><p>Ideally, we would have a two separate sets of environment variables: one for production, and one for development phase.</p>
+<p>Let’s create two files in the project root that will hold data for these two phases.<br>We name one <strong>“.env.production”</strong>, and other <strong>“.env.development”</strong>.</p>
+<p>Since I need environment variables only for accessing a correct endpoint for either of the builds, I need just one entry in each file.</p>
+<figure class="highlight txt"><figcaption><span>.env.production - envirnomnet variables for production phase</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">API_ENDPOINT = https://shima-api.herokuapp.com/</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight txt"><figcaption><span>.env.development - envirnomnet variables for development phase</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">API_ENDPOINT = http://localhost:5000/</span><br></pre></td></tr></table></figure>
+
+<p>Both of these future environment variables have the same name, but they have different values.<br>The development one points to the development api, here at my own computer.<br>The production one points to the backend build deployed on Heroku (we will get to this part).</p>
+<p>Since environment variables are often used to hold confidential information, we don’t want to keep them online, in a Github repositry.<br>For this reason, we should make sure these are added to the <strong>.gitignore</strong> file, so as not to be commited to Github.</p>
+<figure class="highlight yml"><figcaption><span>.gitignore</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># ...</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># dotenv environment variables file</span></span><br><span class="line"><span class="string">.env*</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="Instruct-Webpack-to-define-excution-environment-for-every-bundle-it-builds"><a href="#Instruct-Webpack-to-define-excution-environment-for-every-bundle-it-builds" class="headerlink" title="Instruct Webpack to define excution environment for every bundle it builds"></a>Instruct Webpack to define excution environment for every bundle it builds</h4><p>We can instruct Webpack to define an environment each time it builds a bundle. Based on this defined environment, we can have Webpack extract data from either of the two <strong>.env</strong> files, and store them into <strong>process.env</strong>.</p>
+<p>To define an environemnt for the development build, we go to <strong>package.json</strong> and modify its scripts.<br>I adjusted the development server to be run with <strong>start-dev</strong> script, and defined it as follows:</p>
+<figure class="highlight js"><figcaption><span>package.json</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ...</span></span><br><span class="line">  <span class="string">&quot;scripts&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;start-dev&quot;</span>: <span class="string">&quot;npm run build-css &amp;&amp; webpack-dev-server --env.ENVIRONMENT=development&quot;</span>,</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">  &#125;,</span><br><span class="line"><span class="comment">// ...</span></span><br></pre></td></tr></table></figure>
+
+<p>With this, we set the <strong>ENVIRONMENT</strong> property on the global <strong>env</strong> object to have a value of <strong>“development”</strong> when creating a bundle for the development server</p>
+<p>Likewise, we set the same property to <strong>“production”</strong> in cases we build a bundle for production:</p>
+<figure class="highlight js"><figcaption><span>package.json</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ...</span></span><br><span class="line">  <span class="string">&quot;scripts&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;build&quot;</span>: <span class="string">&quot;npm run build-css &amp;&amp; webpack --env.ENVIRONMENT=production --mode production&quot;</span>,</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">  &#125;,</span><br><span class="line"><span class="comment">// ...</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="Extract-data-from-env-files-into-environment-variables"><a href="#Extract-data-from-env-files-into-environment-variables" class="headerlink" title="Extract data from .env files into environment variables"></a>Extract data from .env files into environment variables</h4><p>Now we do business.<br>Since we have an environment defined for each <strong>bundle</strong> that Webpack builds, lets have it use this environment.</p>
+<p>To do this, we need to wrap the entire <strong>default export</strong> from <strong>webpack.config.js</strong> into a functin, and then return the configuration from it.</p>
+<p>Here is how it looks now, with non-pertitent code cut out:</p>
+<figure class="highlight ts"><figcaption><span>webpack.config.ts</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ...</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> config = (env: NodeJS.ProcessEnv): webpack.Configuration =&gt; &#123;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    entry: <span class="string">&quot;./src/index.tsx&quot;</span>,</span><br><span class="line">    &#123; <span class="comment">/* .. rest of the webpack configuration */</span> &#125;</span><br><span class="line"></span><br><span class="line">  &#125;;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> config;</span><br></pre></td></tr></table></figure>
+
+<p>Note the <strong>env</strong> argument passed to the <strong>config</strong> function. This is the <strong>env</strong> object we set the <strong>ENVIRONMENT</strong> property on during the bundle build.<br>We can test this object to check the current environment and use the appropriate <strong>.env</strong> file.</p>
+<p>So let’s do that.<br>We will be creating a path to an <strong>.env</strong> file depending on the current environment.</p>
+<p>Firt, we want to create the current path. The base path is our working directory, the root of the project. We can get that with the <strong>join()</strong> method on Node.js’s <strong>path</strong> module. We pass it the current directory in which we are working, and the <strong>join</strong> method will return it as a path:</p>
+<figure class="highlight ts"><figcaption><span>webpack.config.ts</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ...</span></span><br><span class="line"><span class="keyword">import</span> path <span class="keyword">from</span> <span class="string">&quot;path&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> config = (env: NodeJS.ProcessEnv): webpack.Configuration =&gt; &#123;</span><br><span class="line">  <span class="comment">// getting current path</span></span><br><span class="line">  <span class="keyword">const</span> currentPath = path.join(__dirname);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    <span class="comment">/* ... */</span></span><br><span class="line">  &#125;;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> config;</span><br></pre></td></tr></table></figure>
+
+<p>Next, we create a base path. The base path to our <strong>.env</strong> files always looks like <strong>“/currentpath/.env</strong>, becase both of our <strong>.env</strong> files start with the <strong>.env</strong> prefix.<br>So here is the base path:</p>
+<figure class="highlight ts"><figcaption><span>webpack.config.ts</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ...</span></span><br><span class="line"><span class="keyword">import</span> path <span class="keyword">from</span> <span class="string">&quot;path&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> config = (env: NodeJS.ProcessEnv): webpack.Configuration =&gt; &#123;</span><br><span class="line">  <span class="keyword">const</span> currentPath = path.join(__dirname);</span><br><span class="line">  <span class="keyword">const</span> basePath = currentPath + <span class="string">&quot;/.env&quot;</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    <span class="comment">/* ... */</span></span><br><span class="line">  &#125;;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> config;</span><br></pre></td></tr></table></figure>
+
+<p>Now we need to create a path to the <strong>.env</strong> file that we actually need. To do this, we simply concatanate the value of the <strong>env.ENVIRONMENT</strong> property to the <strong>basePath</strong> variable:</p>
+<figure class="highlight ts"><figcaption><span>webpack.config.ts</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ...</span></span><br><span class="line"><span class="keyword">import</span> path <span class="keyword">from</span> <span class="string">&quot;path&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> config = (env: NodeJS.ProcessEnv): webpack.Configuration =&gt; &#123;</span><br><span class="line">  <span class="keyword">const</span> currentPath = path.join(__dirname);</span><br><span class="line">  <span class="keyword">const</span> basePath = currentPath + <span class="string">&quot;/.env&quot;</span>;</span><br><span class="line">  <span class="keyword">const</span> finalPath = basePath + <span class="string">&quot;.&quot;</span> + env.ENVIRONMENT;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    <span class="comment">/* ... */</span></span><br><span class="line">  &#125;;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> config;</span><br></pre></td></tr></table></figure>
+
+<p>At this point, our <strong>envPath</strong> is either <strong>“/currentpath/.env.production</strong> or <strong>“/currentpath/.env.development</strong> for production and development environments, respectively.</p>
+<p>Since we are now able to point to a correct <strong>.env</strong> file, we can use it to create environemnt variables.<br>We do it with <strong>config()</strong> method on the <strong>dotenv</strong> module that we imported into <strong>webpack.config.ts</strong>.</p>
+<p>The method accepts an object whose <strong>path</strong> property points to an <strong>.env</strong> file.<br>We will use our <strong>finalPath</strong> variable to provide this value, and then use <strong>parsed</strong> property on the returned object to get a JS object.</p>
+<figure class="highlight ts"><figcaption><span>webpack.config.ts</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ...</span></span><br><span class="line"><span class="keyword">import</span> path <span class="keyword">from</span> <span class="string">&quot;path&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> config = (env: NodeJS.ProcessEnv): webpack.Configuration =&gt; &#123;</span><br><span class="line">  <span class="keyword">const</span> currentPath = path.join(__dirname);</span><br><span class="line">  <span class="keyword">const</span> basePath = currentPath + <span class="string">&quot;/.env&quot;</span>;</span><br><span class="line">  <span class="keyword">const</span> finalPath = basePath + <span class="string">&quot;.&quot;</span> + env.ENVIRONMENT;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> enver = dotenv.config(&#123;</span><br><span class="line">    path: finalPath,</span><br><span class="line">  &#125;).parsed <span class="keyword">as</span> &#123; [name: <span class="built_in">string</span>]: <span class="built_in">string</span> &#125;;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    <span class="comment">/* ... */</span></span><br><span class="line">  &#125;;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> config;</span><br></pre></td></tr></table></figure>
+
+<p>Note that we cast the <strong>parsed</strong> object as an object whole keys and values are both strings. This is important as we will now loop over the object’s keys and used them to name our environment variables.</p>
+<p>In fact, we will be creating an object that takes key name of each field in the <strong>enver</strong> object and concatanates it to <strong>“process.env”</strong>, to set the resulting value as the property name.<br>We do this with the <strong>reduce</strong> function:</p>
+<figure class="highlight ts"><figcaption><span>webpack.config.ts</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ...</span></span><br><span class="line"><span class="keyword">import</span> path <span class="keyword">from</span> <span class="string">&quot;path&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> config = (env: NodeJS.ProcessEnv): webpack.Configuration =&gt; &#123;</span><br><span class="line">  <span class="keyword">const</span> currentPath = path.join(__dirname);</span><br><span class="line">  <span class="keyword">const</span> basePath = currentPath + <span class="string">&quot;/.env&quot;</span>;</span><br><span class="line">  <span class="keyword">const</span> finalPath = basePath + <span class="string">&quot;.&quot;</span> + env.ENVIRONMENT;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> enver = dotenv.config(&#123;</span><br><span class="line">    path: finalPath,</span><br><span class="line">  &#125;).parsed <span class="keyword">as</span> &#123; [name: <span class="built_in">string</span>]: <span class="built_in">string</span> &#125;;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> envKeys = <span class="built_in">Object</span>.keys(enver).reduce(<span class="function">(<span class="params">acc, val</span>) =&gt;</span> &#123;</span><br><span class="line">    acc[<span class="string">`process.env.<span class="subst">$&#123;val&#125;</span>`</span>] = <span class="built_in">JSON</span>.stringify(enver[val]);</span><br><span class="line">    <span class="keyword">return</span> acc;</span><br><span class="line">  &#125;, &#123;&#125; <span class="keyword">as</span> &#123; [name: <span class="built_in">string</span>]: <span class="built_in">string</span> &#125;);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    <span class="comment">/* ... */</span></span><br><span class="line">  &#125;;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> config;</span><br></pre></td></tr></table></figure>
+
+<p>What happens here?:</p>
+<ul>
+<li>We use the <strong>accumulator</strong> property passed to the callback of the <strong>reduce</strong> method to create a new object with its properties’ keys having pattern of <strong>“process.env<NAME_OF_VARIABLE>“</strong></li>
+<li>The <strong>accumulator</strong> starts as an empty object, typed with index types identical to those of the <strong>enver</strong> object.</li>
+<li>With every loop iteration, a new field is created on the object, having its key generated from the original object’s key.</li>
+</ul>
+<p>The created object, <strong>envKeys</strong>, is of shape:</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">&quot;process.env.ENDPOINT&quot;</span>: <span class="string">&quot;value here&quot;</span>,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Great. Now we have our object ready.<br>The thing to do now is to actually have Webpack use this object, and embed it into the bundle it creates.</p>
+<p>We do this in the <strong>plugins</strong> array of the actual object that is returned by the <strong>config</strong> function.<br>We just call the <strong>definePlugin</strong> on the <strong>webpack</strong> module, and pass it the <strong>envKeys</strong> object we just created:</p>
+<figure class="highlight ts"><figcaption><span>webpack.config.ts</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ...</span></span><br><span class="line"><span class="keyword">import</span> path <span class="keyword">from</span> <span class="string">&quot;path&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> config = (env: NodeJS.ProcessEnv): webpack.Configuration =&gt; &#123;</span><br><span class="line">  <span class="keyword">const</span> currentPath = path.join(__dirname);</span><br><span class="line">  <span class="keyword">const</span> basePath = currentPath + <span class="string">&quot;/.env&quot;</span>;</span><br><span class="line">  <span class="keyword">const</span> finalPath = basePath + <span class="string">&quot;.&quot;</span> + env.ENVIRONMENT;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> enver = dotenv.config(&#123;</span><br><span class="line">    path: finalPath,</span><br><span class="line">  &#125;).parsed <span class="keyword">as</span> &#123; [name: <span class="built_in">string</span>]: <span class="built_in">string</span> &#125;;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> envKeys = <span class="built_in">Object</span>.keys(enver).reduce(<span class="function">(<span class="params">acc, val</span>) =&gt;</span> &#123;</span><br><span class="line">    acc[<span class="string">`process.env.<span class="subst">$&#123;val&#125;</span>`</span>] = <span class="built_in">JSON</span>.stringify(enver[val]);</span><br><span class="line">    <span class="keyword">return</span> acc;</span><br><span class="line">  &#125;, &#123;&#125; <span class="keyword">as</span> &#123; [name: <span class="built_in">string</span>]: <span class="built_in">string</span> &#125;);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    <span class="comment">/* ... */</span></span><br><span class="line">    plugins: [</span><br><span class="line">      <span class="comment">/* ... */</span></span><br><span class="line">      <span class="keyword">new</span> webpack.DefinePlugin(envKeys),</span><br><span class="line">    ],</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> config;</span><br></pre></td></tr></table></figure>
+
+<p>And that’s it. Our app can now use environment variables.</p>
+<h3 id="Deploy-backend"><a href="#Deploy-backend" class="headerlink" title="Deploy backend"></a>Deploy backend</h3><p>It is time to deploy the backend. Normally, with JS, I would just push the app to Heroku repository and be done with it. This time though, we have a TS project.</p>
+<p>The idea is to push the TS project to Heroku, and have Heroku make the JS build and then serve it.</p>
+<p>First thing to do is to disable calling <strong>nodemon</strong> with the <strong>start</strong> script. Instead, we want to call <strong>Node</strong> on the <strong>server.js</strong> file.</p>
+<figure class="highlight js"><figcaption><span>package.json</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ...</span></span><br><span class="line"><span class="string">&quot;scripts&quot;</span>: &#123;</span><br><span class="line">    <span class="comment">//   ...</span></span><br><span class="line">    <span class="string">&quot;start&quot;</span>: <span class="string">&quot;node dist/server.js&quot;</span>,</span><br><span class="line">&#125;,</span><br><span class="line"><span class="comment">// ...</span></span><br></pre></td></tr></table></figure>
+
+<p>Next, we want Heroku to create the production build once it finishes installing dependencies of the project.<br>We do so by adding a <strong>postInstall</strong> script to <strong>package.json</strong>, and calling <strong>tsc</strong> in it. This will compile all TS data in <strong>src</strong> folder, and output it to <strong>dist</strong> folder:</p>
+<figure class="highlight js"><figcaption><span>package.json</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ...</span></span><br><span class="line"><span class="string">&quot;scripts&quot;</span>: &#123;</span><br><span class="line">    <span class="comment">//   ...</span></span><br><span class="line">    <span class="string">&quot;postinstall&quot;</span>: <span class="string">&quot;tsc&quot;</span></span><br><span class="line">&#125;,</span><br><span class="line"><span class="comment">// ...</span></span><br></pre></td></tr></table></figure>
+
+<p>And that is it.<br>Now we need to create a Heroku app with <strong>heroku create</strong> command, and then push our project to Heroku with <strong>git push heroku master</strong> after we commited all our changes to git first.</p>
+<h3 id="Deploy-frontend"><a href="#Deploy-frontend" class="headerlink" title="Deploy frontend"></a>Deploy frontend</h3><p>Deploying frontend is a bit more involved.<br>In includes creating a simple server that will serve our application, that gets a deployed together with the app.</p>
+<p>I did have small issues (or big, but I was not aware of it) with the server code syntax and getting my environment variables included in the code. I did find workarounds, but I suspect they are not the best solutions, so I will try to find better ones for the next series.</p>
+<p>In any case, lets move on with the deployment.</p>
+<p>We want to:</p>
+<ul>
+<li>Create the server that will serve our application</li>
+<li>Adjust the app’s deployment options</li>
+<li>Send the app on its merry way to Heroku</li>
+</ul>
+<h4 id="Create-the-server-that-will-serve-our-application"><a href="#Create-the-server-that-will-serve-our-application" class="headerlink" title="Create the server that will serve our application"></a>Create the server that will serve our application</h4><p>The server to serve the React app is a simple one. It uses Express to serve data, and needs to specify where that data is.</p>
+<p>I made the server module in the project room. Here is the code:</p>
+<figure class="highlight ts"><figcaption><span>server.ts</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* eslint @typescript-eslint/no-var-requires: &quot;off&quot; */</span></span><br><span class="line"><span class="keyword">import</span> express = <span class="built_in">require</span>(<span class="string">&quot;express&quot;</span>);</span><br><span class="line"><span class="keyword">import</span> path = <span class="built_in">require</span>(<span class="string">&quot;path&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> PORT = process.env.PORT || <span class="number">8500</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> app = express();</span><br><span class="line"></span><br><span class="line"><span class="comment">// Set directory from which we will server static files. in this case, it is build folder</span></span><br><span class="line">app.use(express.static(path.join(__dirname, <span class="string">&quot;build&quot;</span>), &#123; index: <span class="literal">false</span> &#125;));</span><br><span class="line"></span><br><span class="line"><span class="comment">// Serve index.html despite the  server url to which request arrives</span></span><br><span class="line">app.get(<span class="string">&quot;*&quot;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">req, res</span>) </span>&#123;</span><br><span class="line">  res.sendFile(path.resolve(__dirname, <span class="string">&quot;./public/index.html&quot;</span>));</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">app.listen(PORT);</span><br></pre></td></tr></table></figure>
+
+<p>What interesting things do we have here?</p>
+<ul>
+<li>First, I disabled linting for the “no-var-requires” rule. The JS compiled from this TS module uses <strong>require</strong> syntax to import other modules. For some reason, ESLint doesn’t allow that. I’m still figuring this out.</li>
+<li>We have a weird import syntax to get <strong>express</strong> and <strong>path</strong> modules. If we used the regular ES6 import sytnax, compiled JS module results in <strong>express</strong> and <strong>path</strong> being appended the <strong>[default]</strong>. It seems that these modules don’t have this property to export. I assume this has to do with <strong>tsconfig</strong>, but I cannot figure this one out either.</li>
+<li>Now what I can figure out. To server our app, we have to specify a folder from which static data will be used. In our case, we use Express’ <strong>“static()”</strong> method to point to <strong>build</strong> folder where <strong>bundle.js</strong> lives. Also, we use <strong>join()</strong> method to generate a path to this folder, and include <strong>__dirname</strong> to generate absolute path to this directory. We use <strong>{index: false}</strong> option to disable directory indexing.</li>
+<li>Next thing is serving the actual <strong>index.html</strong> file. We want to send this file (resolved to its absolute path) as a response no matter the URL which was used to access the server.</li>
+<li>Finally, we start the server. Note that I had the remove the callback function passed to the <strong>listen()</strong> method, as the deployment seemed to halt logging the message from the callback.</li>
+</ul>
+<p>We can start this server ourselves, on port 8500 at the moment, and, provided that <strong>bundle.js</strong> is built, the server should serve the app.</p>
+<h4 id="Adjust-the-app’s-deployment-options"><a href="#Adjust-the-app’s-deployment-options" class="headerlink" title="Adjust the app’s deployment options"></a>Adjust the app’s deployment options</h4><p>We have created our server to serve the app. Now, we need to adjust <strong>package.json</strong> before we actually deply the app.</p>
+<ul>
+<li>We want to specify version if Node that our server can work on</li>
+<li>Set script to specify what Heroku should do after Heroku installs needed dependencies</li>
+</ul>
+<p>We specify Node engine version as follows:</p>
+<figure class="highlight js"><figcaption><span>package.json</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ...</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;name&quot;</span>: <span class="string">&quot;shima&quot;</span>,</span><br><span class="line">  <span class="string">&quot;version&quot;</span>: <span class="string">&quot;0.0.1&quot;</span>,</span><br><span class="line">  <span class="string">&quot;engines&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;node&quot;</span>: <span class="string">&quot;10.x&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<p>The second task is done again by the <strong>postinstall</strong> script.<br>Here we see that the script will call the <strong>build</strong> script to build the app, and then will compile <strong>server.ts</strong> file.<br>Following that, Heroku will automatically run <strong>start</strong> script, which will have Node execute the compiled <strong>server.js</strong> module which starts our server.</p>
+<figure class="highlight js"><figcaption><span>package.json</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ...</span></span><br><span class="line"><span class="string">&quot;scripts&quot;</span>: &#123;</span><br><span class="line"><span class="string">&quot;build&quot;</span>: <span class="string">&quot;npm run build-css &amp;&amp; webpack --env.ENVIRONMENT=production --mode production&quot;</span>,</span><br><span class="line"><span class="string">&quot;build-css&quot;</span>: <span class="string">&quot;postcss src/assets/styles/styles.css -o src/assets/styles/main.css&quot;</span>,</span><br><span class="line"><span class="string">&quot;start&quot;</span>: <span class="string">&quot;node server.js&quot;</span>,</span><br><span class="line"><span class="string">&quot;postinstall&quot;</span>: <span class="string">&quot;npm run build &amp;&amp; tsc server.ts&quot;</span></span><br><span class="line">&#125;,</span><br><span class="line"><span class="comment">// ...</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="Deploy-the-app"><a href="#Deploy-the-app" class="headerlink" title="Deploy the app"></a>Deploy the app</h4><p>To deploy the app to Heroku, we do the same thing as always:</p>
+<ol>
+<li>Create Heroku app with <strong>heroku create</strong></li>
+<li>Push the project to Heroku with <strong>git push heroku master</strong> after we commited current changeds to Git.</li>
+</ol>
+<h3 id="List-of-known-issues"><a href="#List-of-known-issues" class="headerlink" title="List of known issues"></a>List of known issues</h3><p>Here is just a short list off issues that bothered me. There was plenty more I think, but I can’t remember them now.<br>I will try to get back to all of these and deal with them for the next series.</p>
+<ol>
+<li>First one is the environment variables. At the moment, I have to actually push the .env file to Github, to have it available on Heroku too, where the app gets built.</li>
+<li>Ideally, I would deploy an already built app - the <strong>build</strong> folder with JS code instead of TS project. We will try to do that in the next series for both ends.</li>
+<li>The whole React deplyoment seems clumsy, with weird syntaxt, server module separate compilation, and disabling linting, among other things. There has to be a simpler way.</li>
+</ol>
+<p>And that is it. We have the app running. Our goals are completed, for the most part. In this post we set the environment variables in a React Webpack app, and we deployed both app ends built with TS to Heroku.<br>Good times.</p>
+<p>See you in the next series.</p>
+<!-- End Step Content -->
+
+<!-- Project Information -->
+
+<h2 id="Project-Information"><a href="#Project-Information" class="headerlink" title="Project Information"></a>Project Information</h2><h3 id="Available-at"><a href="#Available-at" class="headerlink" title="Available at"></a>Available at</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/ikaem/shima-api">Github repository - api</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/ikaem/shima-react-webpack">Github repository - frontend</a></li>
+<li><a target="_blank" rel="noopener" href="https://shima-react-webpack.herokuapp.com/">Live website</a></li>
+</ul>
+<h3 id="Goals"><a href="#Goals" class="headerlink" title="Goals"></a>Goals</h3><ol>
+<li>Use Socket.io to create a chat app</li>
+<li>Use Webpack, Babel, and TypeScript with React</li>
+<li>Deploy Webpack React app to Heroku</li>
+</ol>
+<h3 id="Steps"><a href="#Steps" class="headerlink" title="Steps"></a>Steps</h3><ol>
+<li>Create a React app with Webpack</li>
+<li>Set up backend</li>
+<li>Organize the React app</li>
+<li>Building the app</li>
+<li><strong>Deployment and known issues</strong></li>
+</ol>
+<h3 id="Tech-and-Tools"><a href="#Tech-and-Tools" class="headerlink" title="Tech and Tools"></a>Tech and Tools</h3><ul>
+<li>React</li>
+<li>Tailwind</li>
+<li>Webpack</li>
+<li>Babel</li>
+<li>TypeScript</li>
+<li>Socket.io</li>
+<li>Express</li>
+</ul>
+<h3 id="Experience-with-Tech-amp-Tools"><a href="#Experience-with-Tech-amp-Tools" class="headerlink" title="Experience with Tech &amp; Tools"></a>Experience with Tech &amp; Tools</h3><p>I have done few smaller apps with Webpack, as described on this blog, so I have basic understanding of what Webpack is used for and how it does what it does. I also did a very small app with Socket.io on one occasion before, to see what it is all about. Babel I am completely unfamiliar with, so let’s see what it is.<br>Rest of the tech is familiar, and I shouldn’t have bigger problems using those.</p>
+<h2 id="DISCLAIMER"><a href="#DISCLAIMER" class="headerlink" title="DISCLAIMER"></a>DISCLAIMER</h2><p>Don’t take any of this seriously and as a matter-of-fact. These are my notes. It might look like I am trying to teach something to someone. I am not.</p>
+<p>Also, this post, and the whole blog, is not meant for a codealong. This is my notebook, and I learn these things by writing about them.<br>While I try to structure posts and organize them in a way that they build on previous posts’ progress, I can’t promise that they will include all details needed for the code to work. There is just too much of it, and I might omit things for brevity sake, or because I forgot something, or because I am not well organized, or because I changed my mind and reworked the code at the end of a blog series.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+                
+
+
+                <!-- Cover image credit -->
+                
+                    <p class="image-credit-link">
+                        Cover image by <strong>
+                            <a target="_blank" rel="noopener" href="https://unsplash.com/@shadoweng93?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
+                                LIM ENG
+                            </a>
+                        </strong>
+                    </p>
+
+                
+
+  
+
+            </div>
+            
+            <!-- Custom placed tags -->
+            <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                
+                    
+
+
+<a href="/angry-chaired-blog/tags/typescript/">#typescript</a> <a href="/angry-chaired-blog/tags/express/">#express</a> <a href="/angry-chaired-blog/tags/react/">#react</a> <a href="/angry-chaired-blog/tags/webpack/">#webpack</a> <a href="/angry-chaired-blog/tags/socketio/">#socketio</a>
+
+
+                
+            </div>
+            <!--  -->
+
+
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+
+            <!-- Hyvor comments -->
+
+            <!-- End of Hyvor comments -->
+        </div>
+    </div>
+</article>
+
+
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2020 kaem<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

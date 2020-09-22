@@ -6,7 +6,7 @@
   <link href="https://ikaem.github.io/angry-chaired-blog/atom.xml" rel="self"/>
   
   <link href="https://ikaem.github.io/angry-chaired-blog/"/>
-  <updated>2020-09-21T11:06:33.210Z</updated>
+  <updated>2020-09-22T09:35:18.315Z</updated>
   <id>https://ikaem.github.io/angry-chaired-blog/</id>
   
   <author>
@@ -17,11 +17,40 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>WhatsApp Clone with React and Webpack: Deploy the App</title>
+    <link href="https://ikaem.github.io/angry-chaired-blog/2020/whatsapp-clone-with-react-and-webpack-deploy-the-app/"/>
+    <id>https://ikaem.github.io/angry-chaired-blog/2020/whatsapp-clone-with-react-and-webpack-deploy-the-app/</id>
+    <published>2020-09-22T05:21:23.000Z</published>
+    <updated>2020-09-22T09:35:18.315Z</updated>
+    
+    
+    <summary type="html">&lt;!-- Step Content Start --&gt;
+
+&lt;h4 id=&quot;Part-5-of-5-in-WhatsApp-Clone-with-React-and-Webpack&quot;&gt;&lt;a href=&quot;#Part-5-of-5-in-WhatsApp-Clone-with-React-and-Webpack&quot; class=&quot;headerlink&quot; title=&quot;Part 5 of 5 in WhatsApp Clone with React and Webpack&quot;&gt;&lt;/a&gt;Part 5 of 5 in WhatsApp Clone with React and Webpack&lt;/h4&gt;&lt;p&gt;We reached the final part of the series. Left to do is to put this baby online. In this part we will deploy both ends to Heroku.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="whatsapp react webpack" scheme="https://ikaem.github.io/angry-chaired-blog/categories/whatsapp-react-webpack/"/>
+    
+    
+    <category term="typescript" scheme="https://ikaem.github.io/angry-chaired-blog/tags/typescript/"/>
+    
+    <category term="express" scheme="https://ikaem.github.io/angry-chaired-blog/tags/express/"/>
+    
+    <category term="react" scheme="https://ikaem.github.io/angry-chaired-blog/tags/react/"/>
+    
+    <category term="webpack" scheme="https://ikaem.github.io/angry-chaired-blog/tags/webpack/"/>
+    
+    <category term="socketio" scheme="https://ikaem.github.io/angry-chaired-blog/tags/socketio/"/>
+    
+  </entry>
+  
+  <entry>
     <title>WhatsApp Clone with React and Webpack: Building the App</title>
     <link href="https://ikaem.github.io/angry-chaired-blog/2020/whatsapp-clone-with-react-and-webpack-building-the-app/"/>
     <id>https://ikaem.github.io/angry-chaired-blog/2020/whatsapp-clone-with-react-and-webpack-building-the-app/</id>
     <published>2020-09-19T08:35:51.000Z</published>
-    <updated>2020-09-21T11:06:33.210Z</updated>
+    <updated>2020-09-22T05:21:48.844Z</updated>
     
     
     <summary type="html">&lt;!-- Step Content Start --&gt;
@@ -124,9 +153,9 @@
     
     <category term="socketio" scheme="https://ikaem.github.io/angry-chaired-blog/tags/socketio/"/>
     
-    <category term="tailwind" scheme="https://ikaem.github.io/angry-chaired-blog/tags/tailwind/"/>
-    
     <category term="babel" scheme="https://ikaem.github.io/angry-chaired-blog/tags/babel/"/>
+    
+    <category term="tailwind" scheme="https://ikaem.github.io/angry-chaired-blog/tags/tailwind/"/>
     
     <category term="eslint" scheme="https://ikaem.github.io/angry-chaired-blog/tags/eslint/"/>
     
@@ -495,31 +524,6 @@
     <category term="blog" scheme="https://ikaem.github.io/angry-chaired-blog/tags/blog/"/>
     
     <category term="github pages" scheme="https://ikaem.github.io/angry-chaired-blog/tags/github-pages/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo Blog: Add Comments to the Blog</title>
-    <link href="https://ikaem.github.io/angry-chaired-blog/2020/hexo-blog-add-comments-to-the-blog/"/>
-    <id>https://ikaem.github.io/angry-chaired-blog/2020/hexo-blog-add-comments-to-the-blog/</id>
-    <published>2020-08-17T07:42:13.000Z</published>
-    <updated>2020-08-17T07:48:59.595Z</updated>
-    
-    
-    <summary type="html">&lt;!-- Step Content Start --&gt;
-
-&lt;h4 id=&quot;Part-7-of-8-in-Hexo-Blog&quot;&gt;&lt;a href=&quot;#Part-7-of-8-in-Hexo-Blog&quot; class=&quot;headerlink&quot; title=&quot;Part 7 of 8 in Hexo Blog&quot;&gt;&lt;/a&gt;Part 7 of 8 in Hexo Blog&lt;/h4&gt;&lt;p&gt;Most Hexo themes, including the default one, come with a support for &lt;a href=&quot;https://dustinpfister.github.io/2018/06/14/hexo-disqus/&quot;&gt;Disqus&lt;/a&gt; comments.&lt;br&gt;However, we will use another option, &lt;a href=&quot;https://groups.hyvor.com/HyvorTalk/463/adding-comments-to-your-hexo-blog&quot;&gt;Hyvor&lt;/a&gt;, to add comments to our blog.&lt;br&gt;It is a pretty straightforward setup, and the comment containers looks nice too&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="hexo blog" scheme="https://ikaem.github.io/angry-chaired-blog/categories/hexo-blog/"/>
-    
-    
-    <category term="hexo" scheme="https://ikaem.github.io/angry-chaired-blog/tags/hexo/"/>
-    
-    <category term="blog" scheme="https://ikaem.github.io/angry-chaired-blog/tags/blog/"/>
-    
-    <category term="hyvor" scheme="https://ikaem.github.io/angry-chaired-blog/tags/hyvor/"/>
     
   </entry>
   
