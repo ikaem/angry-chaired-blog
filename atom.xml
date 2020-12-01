@@ -6,7 +6,7 @@
   <link href="https://ikaem.github.io/angry-chaired-blog/atom.xml" rel="self"/>
   
   <link href="https://ikaem.github.io/angry-chaired-blog/"/>
-  <updated>2020-09-22T09:35:18.315Z</updated>
+  <updated>2020-12-01T10:11:49.539Z</updated>
   <id>https://ikaem.github.io/angry-chaired-blog/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>React Testing with Jest &amp; Enzyme: Unit Testing</title>
+    <link href="https://ikaem.github.io/angry-chaired-blog/2020/react-testing-with-jest-enzyme-unit-testing/"/>
+    <id>https://ikaem.github.io/angry-chaired-blog/2020/react-testing-with-jest-enzyme-unit-testing/</id>
+    <published>2020-11-28T07:04:23.000Z</published>
+    <updated>2020-12-01T10:11:49.539Z</updated>
+    
+    
+    <summary type="html">&lt;!-- Step Content Start --&gt;
+
+&lt;h4 id=&quot;Part-1-of-2-in-React-Testing-with-Jest-amp-Enzyme&quot;&gt;&lt;a href=&quot;#Part-1-of-2-in-React-Testing-with-Jest-amp-Enzyme&quot; class=&quot;headerlink&quot; title=&quot;Part 1 of 2 in React Testing with Jest &amp;amp; Enzyme&quot;&gt;&lt;/a&gt;Part 1 of 2 in React Testing with Jest &amp;amp; Enzyme&lt;/h4&gt;&lt;p&gt;I have been learning React testing lately. I wanted to see what all this ‘Test driven development’ thing was, and maybe use it in future projects. This short series is my first attempt to do so, after going over couple tutorials and articles on how to apply it to web development with React.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="react test driven development with jest &amp; enzyme" scheme="https://ikaem.github.io/angry-chaired-blog/categories/react-test-driven-development-with-jest-enzyme/"/>
+    
+    
+    <category term="react" scheme="https://ikaem.github.io/angry-chaired-blog/tags/react/"/>
+    
+    <category term="testing" scheme="https://ikaem.github.io/angry-chaired-blog/tags/testing/"/>
+    
+    <category term="jest" scheme="https://ikaem.github.io/angry-chaired-blog/tags/jest/"/>
+    
+    <category term="enzyme" scheme="https://ikaem.github.io/angry-chaired-blog/tags/enzyme/"/>
+    
+    <category term="test driven development" scheme="https://ikaem.github.io/angry-chaired-blog/tags/test-driven-development/"/>
+    
+  </entry>
   
   <entry>
     <title>WhatsApp Clone with React and Webpack: Deploy the App</title>
@@ -153,9 +182,9 @@
     
     <category term="socketio" scheme="https://ikaem.github.io/angry-chaired-blog/tags/socketio/"/>
     
-    <category term="babel" scheme="https://ikaem.github.io/angry-chaired-blog/tags/babel/"/>
-    
     <category term="tailwind" scheme="https://ikaem.github.io/angry-chaired-blog/tags/tailwind/"/>
+    
+    <category term="babel" scheme="https://ikaem.github.io/angry-chaired-blog/tags/babel/"/>
     
     <category term="eslint" scheme="https://ikaem.github.io/angry-chaired-blog/tags/eslint/"/>
     
@@ -490,40 +519,13 @@
     
     <category term="landbot" scheme="https://ikaem.github.io/angry-chaired-blog/tags/landbot/"/>
     
-    <category term="html" scheme="https://ikaem.github.io/angry-chaired-blog/tags/html/"/>
-    
-    <category term="css" scheme="https://ikaem.github.io/angry-chaired-blog/tags/css/"/>
-    
     <category term="figma" scheme="https://ikaem.github.io/angry-chaired-blog/tags/figma/"/>
     
     <category term="design" scheme="https://ikaem.github.io/angry-chaired-blog/tags/design/"/>
     
-  </entry>
-  
-  <entry>
-    <title>Hexo Blog: Deploy to Github Pages</title>
-    <link href="https://ikaem.github.io/angry-chaired-blog/2020/hexo-blog-deploy-to-github-pages/"/>
-    <id>https://ikaem.github.io/angry-chaired-blog/2020/hexo-blog-deploy-to-github-pages/</id>
-    <published>2020-08-17T07:50:09.000Z</published>
-    <updated>2020-08-17T07:54:39.156Z</updated>
+    <category term="html" scheme="https://ikaem.github.io/angry-chaired-blog/tags/html/"/>
     
-    
-    <summary type="html">&lt;!-- Step Content Start --&gt;
-
-&lt;h4 id=&quot;Part-Part-8-of-8-in-Hexo-Blog&quot;&gt;&lt;a href=&quot;#Part-Part-8-of-8-in-Hexo-Blog&quot; class=&quot;headerlink&quot; title=&quot;Part Part 8 of 8 in Hexo Blog&quot;&gt;&lt;/a&gt;Part Part 8 of 8 in Hexo Blog&lt;/h4&gt;&lt;p&gt;Finally, we reached the deployment part. We will deploy to Github Pages, and we will use the &lt;a href=&quot;https://hexo.io/docs/github-pages#One-command-deployment&quot;&gt;One-command deployment option&lt;/a&gt;.&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="hexo blog" scheme="https://ikaem.github.io/angry-chaired-blog/categories/hexo-blog/"/>
-    
-    
-    <category term="deploy" scheme="https://ikaem.github.io/angry-chaired-blog/tags/deploy/"/>
-    
-    <category term="hexo" scheme="https://ikaem.github.io/angry-chaired-blog/tags/hexo/"/>
-    
-    <category term="blog" scheme="https://ikaem.github.io/angry-chaired-blog/tags/blog/"/>
-    
-    <category term="github pages" scheme="https://ikaem.github.io/angry-chaired-blog/tags/github-pages/"/>
+    <category term="css" scheme="https://ikaem.github.io/angry-chaired-blog/tags/css/"/>
     
   </entry>
   
