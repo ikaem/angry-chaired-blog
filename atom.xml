@@ -6,7 +6,7 @@
   <link href="https://ikaem.github.io/angry-chaired-blog/atom.xml" rel="self"/>
   
   <link href="https://ikaem.github.io/angry-chaired-blog/"/>
-  <updated>2020-12-01T10:11:49.539Z</updated>
+  <updated>2020-12-06T15:57:04.840Z</updated>
   <id>https://ikaem.github.io/angry-chaired-blog/</id>
   
   <author>
@@ -17,11 +17,40 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>React Testing with Jest &amp; Enzyme: Integration Testing</title>
+    <link href="https://ikaem.github.io/angry-chaired-blog/2020/react-testing-with-jest-enzyme-integration-testing/"/>
+    <id>https://ikaem.github.io/angry-chaired-blog/2020/react-testing-with-jest-enzyme-integration-testing/</id>
+    <published>2020-12-01T10:17:29.000Z</published>
+    <updated>2020-12-06T15:57:04.840Z</updated>
+    
+    
+    <summary type="html">&lt;!-- Step Content Start --&gt;
+
+&lt;h4 id=&quot;Part-2-of-2-in-React-Testing-with-Jest-amp-Enzyme&quot;&gt;&lt;a href=&quot;#Part-2-of-2-in-React-Testing-with-Jest-amp-Enzyme&quot; class=&quot;headerlink&quot; title=&quot;Part 2 of 2 in React Testing with Jest &amp;amp; Enzyme&quot;&gt;&lt;/a&gt;Part 2 of 2 in React Testing with Jest &amp;amp; Enzyme&lt;/h4&gt;&lt;p&gt;We continue with our React app created in TDD approach. In the &lt;a href=&quot;/angry-chaired-blog/2020/react-testing-with-jest-enzyme-unit-testing/&quot; title=&quot;previous post&quot;&gt;previous post&lt;/a&gt; we got introduced to TDD and Enzyme, and we wrote unit tests for components in our React app.&lt;br&gt;In this post we will write integration tests, to make sure our components work well together.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="react test driven development with jest &amp; enzyme" scheme="https://ikaem.github.io/angry-chaired-blog/categories/react-test-driven-development-with-jest-enzyme/"/>
+    
+    
+    <category term="react" scheme="https://ikaem.github.io/angry-chaired-blog/tags/react/"/>
+    
+    <category term="testing" scheme="https://ikaem.github.io/angry-chaired-blog/tags/testing/"/>
+    
+    <category term="jest" scheme="https://ikaem.github.io/angry-chaired-blog/tags/jest/"/>
+    
+    <category term="enzyme" scheme="https://ikaem.github.io/angry-chaired-blog/tags/enzyme/"/>
+    
+    <category term="test driven development" scheme="https://ikaem.github.io/angry-chaired-blog/tags/test-driven-development/"/>
+    
+  </entry>
+  
+  <entry>
     <title>React Testing with Jest &amp; Enzyme: Unit Testing</title>
     <link href="https://ikaem.github.io/angry-chaired-blog/2020/react-testing-with-jest-enzyme-unit-testing/"/>
     <id>https://ikaem.github.io/angry-chaired-blog/2020/react-testing-with-jest-enzyme-unit-testing/</id>
     <published>2020-11-28T07:04:23.000Z</published>
-    <updated>2020-12-01T10:11:49.539Z</updated>
+    <updated>2020-12-02T13:04:34.903Z</updated>
     
     
     <summary type="html">&lt;!-- Step Content Start --&gt;
@@ -182,9 +211,9 @@
     
     <category term="socketio" scheme="https://ikaem.github.io/angry-chaired-blog/tags/socketio/"/>
     
-    <category term="tailwind" scheme="https://ikaem.github.io/angry-chaired-blog/tags/tailwind/"/>
-    
     <category term="babel" scheme="https://ikaem.github.io/angry-chaired-blog/tags/babel/"/>
+    
+    <category term="tailwind" scheme="https://ikaem.github.io/angry-chaired-blog/tags/tailwind/"/>
     
     <category term="eslint" scheme="https://ikaem.github.io/angry-chaired-blog/tags/eslint/"/>
     
@@ -497,35 +526,6 @@
     <category term="figma" scheme="https://ikaem.github.io/angry-chaired-blog/tags/figma/"/>
     
     <category term="design" scheme="https://ikaem.github.io/angry-chaired-blog/tags/design/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Copying Landbot.io: The Framework</title>
-    <link href="https://ikaem.github.io/angry-chaired-blog/2020/copying-landbot-io-the-framework/"/>
-    <id>https://ikaem.github.io/angry-chaired-blog/2020/copying-landbot-io-the-framework/</id>
-    <published>2020-08-21T19:01:14.000Z</published>
-    <updated>2020-08-23T12:18:42.811Z</updated>
-    
-    
-    <summary type="html">&lt;!-- Step Content Start --&gt;
-
-&lt;h4 id=&quot;Part-1-of-4-in-Copying-Landbot-io&quot;&gt;&lt;a href=&quot;#Part-1-of-4-in-Copying-Landbot-io&quot; class=&quot;headerlink&quot; title=&quot;Part 1 of 4 in Copying Landbot.io&quot;&gt;&lt;/a&gt;Part 1 of 4 in Copying Landbot.io&lt;/h4&gt;&lt;p&gt;I wanted to start a little ongoing project to copy website design. Ideally, I would like to find a nice website, and then copy it to make it simpler in terms of HTML and CSS. Because that is what I am about, simple :).&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="copy web" scheme="https://ikaem.github.io/angry-chaired-blog/categories/copy-web/"/>
-    
-    
-    <category term="landbot" scheme="https://ikaem.github.io/angry-chaired-blog/tags/landbot/"/>
-    
-    <category term="figma" scheme="https://ikaem.github.io/angry-chaired-blog/tags/figma/"/>
-    
-    <category term="design" scheme="https://ikaem.github.io/angry-chaired-blog/tags/design/"/>
-    
-    <category term="html" scheme="https://ikaem.github.io/angry-chaired-blog/tags/html/"/>
-    
-    <category term="css" scheme="https://ikaem.github.io/angry-chaired-blog/tags/css/"/>
     
   </entry>
   
